@@ -1,0 +1,65 @@
+---
+import { getFilms, getPicks, getGuests } from '../lib/data';
+
+const films = getFilms();
+const picks = getPicks();
+const guests = getGuests();
+
+// Build a serializable data structure for client-side JS
+const randomData = picks
+  .filter(p => p.quote)
+  .map(p => {
+    const film = films.find(f => f.slug === p.film_slug);
+    const guest = guests.find(g => g.slug === p.guest_slug);
+    return {
+      filmTitle: film?.title || '',
+      filmSlug: film?.slug || '',
+      filmDirector: film?.director || '',
+      filmYear: film?.year || 0,
+      guestName: guest?.name || '',
+      guestSlug: guest?.slug || '',
+      quote: p.quote,
+      timestampUrl: p.youtube_timestamp_url,
+    };
+  });
+---
+<div class="random-container">
+  <button class="random-button" id="random-pick-btn">Surprise me</button>
+  <div class="random-result" id="random-result" style="display: none;"></div>
+</div>
+
+<script define:vars={{ randomData }}>
+  const btn = document.getElementById('random-pick-btn');
+  const result = document.getElementById('random-result');
+
+  btn?.addEventListener('click', () => {
+    if (randomData.length === 0) return;
+
+    const pick = randomData[Math.floor(Math.random() * randomData.length)];
+
+    if (result) {
+      result.style.display = 'block';
+      result.innerHTML = `
+        <h3 style="margin-top: 0;">
+          <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
+        </h3>
+        <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+          ${pick.filmDirector}, ${pick.filmYear}
+        </p>
+        <blockquote>
+          <p>&ldquo;${pick.quote}&rdquo;</p>
+        </blockquote>
+        <p class="quote-attribution">
+          &mdash; <a href="/guests/${pick.guestSlug}/">${pick.guestName}</a>
+        </p>
+        ${pick.timestampUrl ? `
+          <p style="margin-top: 0.25rem;">
+            <a href="${pick.timestampUrl}" class="quote-timestamp" target="_blank" rel="noopener noreferrer">
+              Watch this moment &rarr;
+            </a>
+          </p>
+        ` : ''}
+      `;
+    }
+  });
+</script>

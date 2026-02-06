@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  director: string;
+  year: number;
+  spineNumber: number | null;
+  posterUrl: string | null;
+  pickCount: number;
+}
+
+const { title, slug, director, year, spineNumber, posterUrl, pickCount } = Astro.props;
+---
+<div class="card">
+  <a href={`/films/${slug}/`} class="card-link">
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      {posterUrl ? (
+        <img src={posterUrl} alt={title} class="film-poster" loading="lazy" />
+      ) : spineNumber ? (
+        <div class="spine-placeholder">#{spineNumber}</div>
+      ) : (
+        <div class="spine-placeholder">&mdash;</div>
+      )}
+      <div>
+        <h3 style="margin-top: 0;">{title}</h3>
+        <span class="text-secondary" style="font-size: 0.9rem;">
+          {director}, {year}
+        </span>
+        <br />
+        <span class="badge" style="margin-top: 0.5rem;">
+          Picked by {pickCount} {pickCount === 1 ? 'guest' : 'guests'}
+        </span>
+      </div>
+    </div>
+  </a>
+</div>

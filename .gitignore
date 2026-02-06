@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (contains API keys)
+.env
+
+# Raw transcripts (large, regenerable)
+data/transcripts/
+
+# Pipeline checkpoint files (regenerable)
+data/.extraction_progress.json
+data/.letterboxd_progress.json
+data/.criterion_scrape_progress.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Astro generated types
+.astro/

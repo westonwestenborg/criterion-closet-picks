@@ -1,0 +1,48 @@
+---
+interface Props {
+  filters: string[];
+  filterKey: string;
+  label?: string;
+}
+
+const { filters, filterKey, label } = Astro.props;
+---
+<div class="filter-panel" data-filter-key={filterKey}>
+  {label && <span class="text-muted" style="font-size: 0.85rem; align-self: center; margin-right: 0.25rem;">{label}:</span>}
+  <button class="filter-chip active" data-filter-value="all">All</button>
+  {filters.map((filter) => (
+    <button class="filter-chip" data-filter-value={filter.toLowerCase()}>
+      {filter}
+    </button>
+  ))}
+</div>
+
+<script>
+  document.querySelectorAll('.filter-panel').forEach((panel) => {
+    const filterKey = panel.getAttribute('data-filter-key');
+    const chips = panel.querySelectorAll('.filter-chip');
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        // Update active state
+        chips.forEach((c) => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const value = (chip as HTMLElement).dataset.filterValue || 'all';
+
+        // Filter cards
+        const cards = document.querySelectorAll(`[data-${filterKey}]`);
+        cards.forEach((card) => {
+          const el = card as HTMLElement;
+          if (value === 'all') {
+            el.style.display = '';
+          } else {
+            // Support comma-separated values for genres
+            const cardValues = (el.dataset[filterKey] || '').toLowerCase().split(',');
+            el.style.display = cardValues.some(v => v.trim() === value) ? '' : 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

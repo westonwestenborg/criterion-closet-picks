@@ -1,0 +1,60 @@
+---
+interface Props {
+  placeholder?: string;
+}
+
+const { placeholder = 'Search films, guests, quotes...' } = Astro.props;
+---
+<div class="search-container" id="search">
+  <input
+    type="text"
+    class="search-input"
+    placeholder={placeholder}
+    id="pagefind-search-input"
+    autocomplete="off"
+  />
+  <div id="pagefind-results"></div>
+</div>
+
+<script is:inline>
+  // Pagefind integration
+  // When Pagefind is built (npx pagefind --site dist), it generates
+  // /pagefind/pagefind.js which we load here at runtime.
+  // Using is:inline to prevent Vite from trying to resolve the import at build time.
+  async function initPagefindSearch() {
+    try {
+      const pagefind = await import('/pagefind/pagefind.js');
+      await pagefind.init();
+
+      const input = document.getElementById('pagefind-search-input');
+      const results = document.getElementById('pagefind-results');
+      if (!input || !results) return;
+
+      input.addEventListener('input', async function(e) {
+        const query = e.target.value;
+        if (!query) {
+          results.innerHTML = '';
+          return;
+        }
+
+        const search = await pagefind.search(query);
+        const items = await Promise.all(
+          search.results.slice(0, 8).map(function(r) { return r.data(); })
+        );
+
+        results.innerHTML = items
+          .map(function(item) {
+            return '<div style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0d8;">' +
+              '<a href="' + item.url + '" style="font-size: 1rem;">' + (item.meta && item.meta.title ? item.meta.title : item.url) + '</a>' +
+              '<p style="font-size: 0.85rem; color: #555; margin: 0.25rem 0 0;">' + (item.excerpt || '') + '</p>' +
+              '</div>';
+          })
+          .join('');
+      });
+    } catch (e) {
+      // Pagefind not yet built -- search is a no-op during dev
+    }
+  }
+
+  initPagefindSearch();
+</script>

@@ -1,0 +1,260 @@
+{
+  "generated_at": "2026-02-05T21:31:27",
+  "catalog": {
+    "stats": {
+      "total": 1304,
+      "with_tmdb_id": 109,
+      "with_poster": 108,
+      "with_imdb_id": 107,
+      "with_genres": 107,
+      "with_year": 108,
+      "with_director": 0,
+      "duplicate_spines": [],
+      "missing_title": 0
+    },
+    "issues": []
+  },
+  "guests": {
+    "stats": {
+      "total": 10,
+      "with_youtube_video": 9,
+      "with_transcript": 8,
+      "with_profession": 10,
+      "with_photo": 10,
+      "with_letterboxd_url": 10,
+      "with_episode_date": 0
+    },
+    "issues": [
+      {
+        "type": "missing_transcript",
+        "guest": "Bong Joon-ho",
+        "video_id": "qBgZQCkUp7E"
+      },
+      {
+        "type": "no_youtube_video",
+        "guest": "Park Chan-wook"
+      }
+    ]
+  },
+  "picks": {
+    "stats": {
+      "total": 164,
+      "with_quote": 59,
+      "with_timestamp": 59,
+      "with_youtube_url": 59,
+      "with_catalog_spine": 130,
+      "confidence_high": 57,
+      "confidence_medium": 2,
+      "confidence_low": 0,
+      "confidence_none": 105,
+      "guests_represented": 8,
+      "unique_films": 150
+    },
+    "issues": []
+  },
+  "picks_raw": {
+    "stats": {
+      "total": 220,
+      "with_catalog_spine": 156,
+      "match_methods": {
+        "fuzzy_83": 2,
+        "null": 64,
+        "exact": 137,
+        "fuzzy_100": 3,
+        "fuzzy_94": 1,
+        "fuzzy_97": 8,
+        "fuzzy_82": 2,
+        "fuzzy_79": 1,
+        "fuzzy_77": 1,
+        "fuzzy_76": 1
+      },
+      "guests": {
+        "barry-jenkins": 51,
+        "guillermo-del-toro": 9,
+        "bill-hader": 6,
+        "denis-villeneuve": 14,
+        "bong-joon-ho": 17,
+        "ayo-edebiri": 9,
+        "charli-xcx": 4,
+        "andrew-garfield": 10,
+        "park-chan-wook": 28,
+        "cate-blanchett": 72
+      },
+      "unique_guests": 10,
+      "catalog_match_rate_pct": 70.9
+    },
+    "issues": []
+  },
+  "per_guest": [
+    {
+      "name": "Barry Jenkins",
+      "slug": "barry-jenkins",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 51,
+      "catalog_matched": 36,
+      "catalog_match_rate_pct": 70.6,
+      "enriched_picks": 42,
+      "with_quote": 7,
+      "confidence_high": 7,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 35,
+      "high_confidence_rate_pct": 16.7
+    },
+    {
+      "name": "Guillermo del Toro",
+      "slug": "guillermo-del-toro",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 9,
+      "catalog_matched": 9,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 9,
+      "with_quote": 2,
+      "confidence_high": 2,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 7,
+      "high_confidence_rate_pct": 22.2
+    },
+    {
+      "name": "Bill Hader",
+      "slug": "bill-hader",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 6,
+      "catalog_matched": 6,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 6,
+      "with_quote": 3,
+      "confidence_high": 3,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 3,
+      "high_confidence_rate_pct": 50.0
+    },
+    {
+      "name": "Denis Villeneuve",
+      "slug": "denis-villeneuve",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 14,
+      "catalog_matched": 10,
+      "catalog_match_rate_pct": 71.4,
+      "enriched_picks": 14,
+      "with_quote": 10,
+      "confidence_high": 8,
+      "confidence_medium": 2,
+      "confidence_low": 0,
+      "confidence_none": 4,
+      "high_confidence_rate_pct": 57.1
+    },
+    {
+      "name": "Bong Joon-ho",
+      "slug": "bong-joon-ho",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 17,
+      "catalog_matched": 12,
+      "catalog_match_rate_pct": 70.6,
+      "enriched_picks": 0,
+      "with_quote": 0,
+      "confidence_high": 0,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 0
+    },
+    {
+      "name": "Ayo Edebiri",
+      "slug": "ayo-edebiri",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 9,
+      "catalog_matched": 9,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 9,
+      "with_quote": 9,
+      "confidence_high": 9,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Charli XCX",
+      "slug": "charli-xcx",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 4,
+      "catalog_matched": 3,
+      "catalog_match_rate_pct": 75.0,
+      "enriched_picks": 4,
+      "with_quote": 4,
+      "confidence_high": 4,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Andrew Garfield",
+      "slug": "andrew-garfield",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 10,
+      "catalog_matched": 10,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 10,
+      "with_quote": 10,
+      "confidence_high": 10,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Park Chan-wook",
+      "slug": "park-chan-wook",
+      "profession": "director",
+      "has_video": false,
+      "has_transcript": false,
+      "raw_picks": 28,
+      "catalog_matched": 14,
+      "catalog_match_rate_pct": 50.0,
+      "enriched_picks": 0,
+      "with_quote": 0,
+      "confidence_high": 0,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 0
+    },
+    {
+      "name": "Cate Blanchett",
+      "slug": "cate-blanchett",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 72,
+      "catalog_matched": 47,
+      "catalog_match_rate_pct": 65.3,
+      "enriched_picks": 70,
+      "with_quote": 14,
+      "confidence_high": 14,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 56,
+      "high_confidence_rate_pct": 20.0
+    }
+  ]
+}

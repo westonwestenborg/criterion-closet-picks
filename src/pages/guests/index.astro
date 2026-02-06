@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuestCard from '../../components/GuestCard.astro';
+import FilterPanel from '../../components/FilterPanel.astro';
+import { getGuests, getAllProfessions } from '../../lib/data';
+
+const guests = getGuests().sort((a, b) => a.name.localeCompare(b.name));
+const professions = getAllProfessions();
+---
+<BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more.">
+  <h1>Guests</h1>
+  <p>
+    Every guest who has visited the Criterion Closet, filterable by profession.
+  </p>
+
+  <FilterPanel filters={professions} filterKey="profession" label="Profession" />
+
+  <div class="grid">
+    {guests.map((guest) => (
+      <GuestCard
+        name={guest.name}
+        slug={guest.slug}
+        profession={guest.profession}
+        photoUrl={guest.photo_url}
+        pickCount={guest.pick_count}
+      />
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilmCard from '../../components/FilmCard.astro';
+import FilterPanel from '../../components/FilterPanel.astro';
+import { getFilms, getAllDecades, getAllGenres } from '../../lib/data';
+
+const films = getFilms().sort((a, b) => a.title.localeCompare(b.title));
+const decades = getAllDecades();
+const genres = getAllGenres();
+---
+<BaseLayout title="Films" description="Browse all films from the Criterion Closet Picks series — filterable by decade and genre.">
+  <h1>Films</h1>
+  <p>
+    Every film picked from the Criterion Closet, filterable by decade and genre.
+  </p>
+
+  <FilterPanel filters={decades} filterKey="decade" label="Decade" />
+  <FilterPanel filters={genres} filterKey="genre" label="Genre" />
+
+  <div class="grid">
+    {films.map((film) => {
+      const decade = `${Math.floor(film.year / 10) * 10}s`;
+      const genreStr = film.genres.join(',');
+      return (
+        <div data-decade={decade.toLowerCase()} data-genre={genreStr.toLowerCase()}>
+          <FilmCard
+            title={film.title}
+            slug={film.slug}
+            director={film.director}
+            year={film.year}
+            spineNumber={film.criterion_spine_number}
+            posterUrl={film.poster_url}
+            pickCount={film.pick_count}
+          />
+        </div>
+      );
+    })}
+  </div>
+</BaseLayout>

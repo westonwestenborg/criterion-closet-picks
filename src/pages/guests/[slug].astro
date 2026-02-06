@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteBlock from '../../components/QuoteBlock.astro';
+import { getGuests, getGuestBySlug, getPicksForGuest } from '../../lib/data';
+
+export function getStaticPaths() {
+  const guests = getGuests();
+  return guests.map((guest) => ({
+    params: { slug: guest.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const guest = getGuestBySlug(slug!);
+
+if (!guest) {
+  return Astro.redirect('/guests/');
+}
+
+const picks = getPicksForGuest(guest.slug);
+const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
+---
+<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${guest.pick_count} films picked.`}>
+  <div class="detail-page">
+    <div class="detail-header">
+      {guest.photo_url ? (
+        <img src={guest.photo_url} alt={guest.name} class="guest-photo" style="width: 120px; height: 120px;" />
+      ) : (
+        <div class="guest-initial" style="width: 120px; height: 120px; font-size: 3rem;">
+          {guest.name.charAt(0)}
+        </div>
+      )}
+      <div class="detail-meta">
+        <h1 style="margin-top: 0;">{guest.name}</h1>
+        <p class="small-caps text-secondary" style="margin-bottom: 0.5rem;">
+          {guest.profession}
+        </p>
+        {episodeYear && (
+          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+            Episode: {episodeYear}
+          </p>
+        )}
+        <div class="detail-links">
+          {guest.youtube_video_url && (
+            <a href={guest.youtube_video_url} target="_blank" rel="noopener noreferrer">
+              Full Video
+            </a>
+          )}
+          {guest.letterboxd_list_url && (
+            <a href={guest.letterboxd_list_url} target="_blank" rel="noopener noreferrer">
+              Letterboxd List
+            </a>
+          )}
+          {guest.criterion_page_url && (
+            <a href={guest.criterion_page_url} target="_blank" rel="noopener noreferrer">
+              Criterion Page
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    {guest.youtube_video_id && (
+      <div class="video-embed">
+        <iframe
+          src={`https://www.youtube.com/embed/${guest.youtube_video_id}`}
+          title={`${guest.name} - Criterion Closet Picks`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    )}
+
+    <h2>{guest.pick_count} Picks</h2>
+
+    <div class="picks-list">
+      {picks.map((pick) => (
+        <div>
+          <div class="pick-film-info">
+            <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+              {pick.film?.title || pick.film_slug}
+            </a>
+            {pick.film && (
+              <span class="pick-film-meta">
+                {' '}&mdash; {pick.film.director}, {pick.film.year}
+                {pick.film.criterion_spine_number && (
+                  <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+                )}
+              </span>
+            )}
+            {pick.is_box_set && pick.box_set_name && (
+              <span class="box-set-tag">Part of {pick.box_set_name}</span>
+            )}
+          </div>
+          <QuoteBlock
+            quote={pick.quote}
+            attribution={`${guest.name} on ${pick.film?.title || pick.film_slug}`}
+            timestampUrl={pick.youtube_timestamp_url}
+            timestampLabel={`Watch ${guest.name} talk about this film`}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

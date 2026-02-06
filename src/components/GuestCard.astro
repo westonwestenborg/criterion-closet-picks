@@ -1,0 +1,29 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  profession: string;
+  photoUrl: string | null;
+  pickCount: number;
+}
+
+const { name, slug, profession, photoUrl, pickCount } = Astro.props;
+const initial = name.charAt(0);
+---
+<div class="card" data-profession={profession}>
+  <a href={`/guests/${slug}/`} class="card-link">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      {photoUrl ? (
+        <img src={photoUrl} alt={name} class="guest-photo" loading="lazy" />
+      ) : (
+        <div class="guest-initial">{initial}</div>
+      )}
+      <div>
+        <h3 style="margin-top: 0;">{name}</h3>
+        <span class="small-caps text-secondary">{profession}</span>
+        <br />
+        <span class="text-muted" style="font-size: 0.85rem;">{pickCount} picks</span>
+      </div>
+    </div>
+  </a>
+</div>

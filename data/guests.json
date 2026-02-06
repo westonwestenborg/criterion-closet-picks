@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Barry Jenkins",
+    "slug": "barry-jenkins",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/6nld5eQwiJmuLmyesk4EUeCaoo3.jpg",
+    "youtube_video_id": "R7HLpe65fHY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=R7HLpe65fHY",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/barry-jenkins-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/470-barry-jenkins-s-closet-picks",
+    "pick_count": 43
+  },
+  {
+    "name": "Guillermo del Toro",
+    "slug": "guillermo-del-toro",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/gldeyCtKcaqnK1v4Vu9vqayhzUQ.jpg",
+    "youtube_video_id": "CcscEY2KoS8",
+    "youtube_video_url": "https://www.youtube.com/watch?v=CcscEY2KoS8",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/guillermo-del-toros-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
+    "pick_count": 9
+  },
+  {
+    "name": "Bill Hader",
+    "slug": "bill-hader",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/qyT50vQ9PQIEctE1IxDTEsBKstU.jpg",
+    "youtube_video_id": "y2TK8IHWIcY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=y2TK8IHWIcY",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/bill-haders-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
+    "pick_count": 6
+  },
+  {
+    "name": "Denis Villeneuve",
+    "slug": "denis-villeneuve",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/zdDx9Xs93UIrJFWYApYR28J8M6b.jpg",
+    "youtube_video_id": "UrgucAPeqIs",
+    "youtube_video_url": "https://www.youtube.com/watch?v=UrgucAPeqIs",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/denis-villeneuves-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/771-denis-villeneuve-s-closet-picks",
+    "pick_count": 14
+  },
+  {
+    "name": "Bong Joon-ho",
+    "slug": "bong-joon-ho",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/stwnTvZAoD8gEJEDHpDQyLCyDy5.jpg",
+    "youtube_video_id": "qBgZQCkUp7E",
+    "youtube_video_url": "https://www.youtube.com/watch?v=qBgZQCkUp7E",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/bong-joon-hos-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/530-bong-joon-ho-s-closet-picks",
+    "pick_count": 17
+  },
+  {
+    "name": "Ayo Edebiri",
+    "slug": "ayo-edebiri",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/zkTexmrBr5it1Xkm3XYE00hERHb.jpg",
+    "youtube_video_id": "7LvIlPvrjGk",
+    "youtube_video_url": "https://www.youtube.com/watch?v=7LvIlPvrjGk",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ayo-edebiris-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/666-ayo-edebiri-s-closet-picks",
+    "pick_count": 9
+  },
+  {
+    "name": "Charli XCX",
+    "slug": "charli-xcx",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/mUGMrA4PZg5QEBNtj5BfTsTJM8g.jpg",
+    "youtube_video_id": "-93R-4Dqzd0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=-93R-4Dqzd0",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charli-xcxs-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/924-charli-xcx-s-closet-picks",
+    "pick_count": 4
+  },
+  {
+    "name": "Andrew Garfield",
+    "slug": "andrew-garfield",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg",
+    "youtube_video_id": "3tH0irhiQVg",
+    "youtube_video_url": "https://www.youtube.com/watch?v=3tH0irhiQVg",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/andrew-garfields-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/730-andrew-garfield-s-closet-picks",
+    "pick_count": 10
+  },
+  {
+    "name": "Park Chan-wook",
+    "slug": "park-chan-wook",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/jsSFCVB7MhuVbSLwTgESiXEiNjt.jpg",
+    "youtube_video_id": null,
+    "youtube_video_url": null,
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/park-chan-wooks-criterion-closet-picks/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/575-park-chan-wook-s-closet-picks",
+    "pick_count": 28
+  },
+  {
+    "name": "Cate Blanchett",
+    "slug": "cate-blanchett",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/vUuEHiAR0eD3XEJhg2DWIjymUAA.jpg",
+    "youtube_video_id": "K_rAKw7q6RY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=K_rAKw7q6RY",
+    "episode_date": null,
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/cate-blanchett-and-todd-fields-criterion/",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/486-cate-blanchett-and-todd-field-s-closet-picks",
+    "pick_count": 71
+  }
+]

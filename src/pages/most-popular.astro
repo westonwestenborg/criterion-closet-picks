@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getFilmsSortedByPickCount } from '../lib/data';
+
+const films = getFilmsSortedByPickCount();
+---
+<BaseLayout title="Most Popular" description="The most-picked films from the Criterion Closet, ranked by number of guests who chose them.">
+  <h1>Most Popular</h1>
+  <p>
+    Films ranked by how many Closet Picks guests chose them. The ultimate peer-reviewed film recommendations.
+  </p>
+
+  <div class="ranked-list">
+    {films.map((film, index) => (
+      <div class="ranked-item">
+        <div class="rank-number">{index + 1}</div>
+        <div style="display: flex; gap: 1rem; align-items: flex-start; flex: 1;">
+          {film.poster_url ? (
+            <img src={film.poster_url} alt={film.title} class="film-poster" loading="lazy" />
+          ) : film.criterion_spine_number ? (
+            <div class="spine-placeholder">#{film.criterion_spine_number}</div>
+          ) : null}
+          <div class="ranked-content">
+            <h3 style="margin-top: 0;">
+              <a href={`/films/${film.slug}/`}>{film.title}</a>
+            </h3>
+            <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              {film.director}, {film.year}
+            </p>
+            {film.criterion_spine_number && (
+              <span class="badge-subtle" style="margin-right: 0.5rem;">
+                <span class="spine-number">#{film.criterion_spine_number}</span>
+              </span>
+            )}
+            <span class="badge">
+              Picked by {film.pick_count} {film.pick_count === 1 ? 'guest' : 'guests'}
+            </span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Barry Jenkins",
+    "slug": "barry-jenkins",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/jMJBsarMaAtc5cIG0n84I1GBPuU.jpg",
+    "youtube_video_id": "R7HLpe65fHY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=R7HLpe65fHY",
+    "episode_date": "2017-11-15",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/barry-jenkinss-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 5
+  },
+  {
+    "name": "Guillermo del Toro",
+    "slug": "guillermo-del-toro",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/uGBVj3bEbwIay1H4GnEOCfOxFJ3.jpg",
+    "youtube_video_id": "dQw4w9WgXcQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "episode_date": "2013-06-20",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/guillermo-del-toros-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 4
+  },
+  {
+    "name": "Greta Gerwig",
+    "slug": "greta-gerwig",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/3MXkmxvMIbZStYMsY6iZ4gNjgLO.jpg",
+    "youtube_video_id": "abc123def45",
+    "youtube_video_url": "https://www.youtube.com/watch?v=abc123def45",
+    "episode_date": "2018-03-10",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/greta-gerwigs-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 4
+  },
+  {
+    "name": "Bill Hader",
+    "slug": "bill-hader",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/oJPR7RxfpHOVmeI1JxqjfNUqvp8.jpg",
+    "youtube_video_id": "xyz789abc12",
+    "youtube_video_url": "https://www.youtube.com/watch?v=xyz789abc12",
+    "episode_date": "2019-04-22",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/bill-haders-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 5
+  },
+  {
+    "name": "Ayo Edebiri",
+    "slug": "ayo-edebiri",
+    "profession": "actor",
+    "photo_url": null,
+    "youtube_video_id": "def456ghi78",
+    "youtube_video_url": "https://www.youtube.com/watch?v=def456ghi78",
+    "episode_date": "2024-01-15",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ayo-edebiris-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 3
+  },
+  {
+    "name": "Charli XCX",
+    "slug": "charli-xcx",
+    "profession": "musician",
+    "photo_url": null,
+    "youtube_video_id": "ghi012jkl34",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ghi012jkl34",
+    "episode_date": "2024-08-05",
+    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charli-xcxs-closet-picks/",
+    "criterion_page_url": null,
+    "pick_count": 3
+  }
+]

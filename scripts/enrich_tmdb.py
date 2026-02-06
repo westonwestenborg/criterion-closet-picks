@@ -1,0 +1,276 @@
+#!/usr/bin/env python3
+"""
+Enrich films and guests via TMDB API.
+Films: genres, posters, IMDB IDs, year, director.
+Guests: profession, photo.
+
+Output: updated criterion_catalog.json + guests.json
+"""
+
+import argparse
+import sys
+import time
+
+import requests
+from tqdm import tqdm
+
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
+from scripts.utils import (
+    CATALOG_FILE,
+    GUESTS_FILE,
+    PICKS_FILE,
+    PILOT_GUESTS,
+    load_json,
+    save_json,
+    log,
+    get_env,
+    slugify,
+)
+
+
+TMDB_BASE = "https://api.themoviedb.org/3"
+TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p"
+
+# Map TMDB known_for_department to our profession enum
+DEPARTMENT_MAP = {
+    "Directing": "director",
+    "Acting": "actor",
+    "Writing": "writer",
+    "Sound": "musician",
+    "Production": "producer",
+    "Camera": "cinematographer",
+    "Editing": "editor",
+}
+
+
+class TMDBClient:
+    """TMDB API client with rate limiting."""
+
+    def __init__(self):
+        self.token = get_env("TMDB_READ_ACCESS_TOKEN")
+        self.headers = {
+            "Authorization": f"Bearer {self.token}",
+            "Accept": "application/json",
+        }
+        self._genre_cache = {}
+        self._last_request = 0
+
+    def _rate_limit(self):
+        """Ensure at least 50ms between requests (~20 req/s)."""
+        elapsed = time.time() - self._last_request
+        if elapsed < 0.05:
+            time.sleep(0.05 - elapsed)
+        self._last_request = time.time()
+
+    def _get(self, endpoint: str, params: dict = None) -> dict | None:
+        """Make a GET request to the TMDB API."""
+        self._rate_limit()
+        url = f"{TMDB_BASE}{endpoint}"
+        try:
+            resp = requests.get(url, headers=self.headers, params=params, timeout=15)
+            if resp.status_code == 200:
+                return resp.json()
+            elif resp.status_code == 429:
+                # Rate limited, wait and retry
+                time.sleep(2)
+                resp = requests.get(url, headers=self.headers, params=params, timeout=15)
+                if resp.status_code == 200:
+                    return resp.json()
+            return None
+        except Exception as e:
+            log(f"  TMDB error: {e}")
+            return None
+
+    def get_genres(self) -> dict:
+        """Fetch genre ID -> name mapping."""
+        if self._genre_cache:
+            return self._genre_cache
+        data = self._get("/genre/movie/list")
+        if data:
+            self._genre_cache = {g["id"]: g["name"] for g in data.get("genres", [])}
+        return self._genre_cache
+
+    def search_movie(self, title: str, year: int = None) -> dict | None:
+        """Search for a movie by title and optionally year."""
+        params = {"query": title}
+        if year:
+            params["year"] = year
+        data = self._get("/search/movie", params)
+        if data and data.get("results"):
+            return data["results"][0]
+        # Try without year if year search failed
+        if year:
+            data = self._get("/search/movie", {"query": title})
+            if data and data.get("results"):
+                return data["results"][0]
+        return None
+
+    def get_movie_external_ids(self, tmdb_id: int) -> dict | None:
+        """Get external IDs (IMDB) for a movie."""
+        return self._get(f"/movie/{tmdb_id}/external_ids")
+
+    def search_person(self, name: str) -> dict | None:
+        """Search for a person by name."""
+        data = self._get("/search/person", {"query": name})
+        if data and data.get("results"):
+            return data["results"][0]
+        return None
+
+    def get_person(self, person_id: int) -> dict | None:
+        """Get person details."""
+        return self._get(f"/person/{person_id}")
+
+
+def enrich_film(client: TMDBClient, film: dict, genres: dict) -> dict:
+    """Enrich a single film with TMDB data."""
+    title = film.get("title", "")
+    year = film.get("year")
+
+    # Skip if already enriched
+    if film.get("tmdb_id") and film.get("poster_url"):
+        return film
+
+    result = client.search_movie(title, year)
+    if not result:
+        return film
+
+    tmdb_id = result.get("id")
+    film["tmdb_id"] = tmdb_id
+
+    # Year from TMDB (if missing)
+    if not film.get("year"):
+        release_date = result.get("release_date", "")
+        if release_date and len(release_date) >= 4:
+            film["year"] = int(release_date[:4])
+
+    # Genres
+    genre_ids = result.get("genre_ids", [])
+    film["genres"] = [genres.get(gid, "") for gid in genre_ids if gid in genres]
+
+    # Poster
+    poster_path = result.get("poster_path")
+    if poster_path:
+        film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{poster_path}"
+
+    # IMDB ID
+    if tmdb_id and not film.get("imdb_id"):
+        ext_ids = client.get_movie_external_ids(tmdb_id)
+        if ext_ids:
+            film["imdb_id"] = ext_ids.get("imdb_id")
+
+    return film
+
+
+def enrich_guest(client: TMDBClient, guest: dict) -> dict:
+    """Enrich a guest with TMDB person data."""
+    name = guest.get("name", "")
+
+    # Skip if already enriched
+    if guest.get("profession") and guest.get("photo_url"):
+        return guest
+
+    result = client.search_person(name)
+    if not result:
+        return guest
+
+    # Profession
+    department = result.get("known_for_department", "")
+    guest["profession"] = DEPARTMENT_MAP.get(department, "other")
+
+    # Photo
+    profile_path = result.get("profile_path")
+    if profile_path:
+        guest["photo_url"] = f"{TMDB_IMAGE_BASE}/w185{profile_path}"
+
+    return guest
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Enrich data via TMDB")
+    parser.add_argument("--pilot", action="store_true", help="Only enrich pilot data")
+    parser.add_argument("--films-only", action="store_true", help="Only enrich films")
+    parser.add_argument("--guests-only", action="store_true", help="Only enrich guests")
+    parser.add_argument("--limit", type=int, default=0, help="Limit items to enrich")
+    args = parser.parse_args()
+
+    client = TMDBClient()
+    genres = client.get_genres()
+    log(f"Loaded {len(genres)} genre mappings")
+
+    do_films = not args.guests_only
+    do_guests = not args.films_only
+
+    # Enrich films
+    if do_films:
+        catalog = load_json(CATALOG_FILE)
+        picks = load_json(PICKS_FILE)
+
+        if args.pilot:
+            # Only enrich films in pilot guests' picks
+            pilot_slugs = {slugify(n) for n in PILOT_GUESTS}
+            pilot_film_ids = set()
+            for p in picks:
+                if p.get("guest_slug") in pilot_slugs:
+                    if p.get("catalog_spine"):
+                        pilot_film_ids.add(p["catalog_spine"])
+
+            films_to_enrich = [c for c in catalog if c["spine_number"] in pilot_film_ids]
+            log(f"Enriching {len(films_to_enrich)} pilot films")
+        else:
+            films_to_enrich = catalog
+            log(f"Enriching all {len(films_to_enrich)} films")
+
+        if args.limit:
+            films_to_enrich = films_to_enrich[:args.limit]
+
+        enriched_count = 0
+        for film in tqdm(films_to_enrich, desc="Enriching films"):
+            before = (film.get("tmdb_id"), film.get("poster_url"))
+            film = enrich_film(client, film, genres)
+            after = (film.get("tmdb_id"), film.get("poster_url"))
+            if before != after:
+                enriched_count += 1
+
+        save_json(CATALOG_FILE, catalog)
+        log(f"Enriched {enriched_count} films, saved to {CATALOG_FILE}")
+
+        # Summary
+        with_tmdb = sum(1 for c in catalog if c.get("tmdb_id"))
+        with_poster = sum(1 for c in catalog if c.get("poster_url"))
+        with_imdb = sum(1 for c in catalog if c.get("imdb_id"))
+        with_genres = sum(1 for c in catalog if c.get("genres"))
+        with_year = sum(1 for c in catalog if c.get("year"))
+        log(f"  TMDB IDs: {with_tmdb}, Posters: {with_poster}, IMDB: {with_imdb}")
+        log(f"  Genres: {with_genres}, Years: {with_year}")
+
+    # Enrich guests
+    if do_guests:
+        guests = load_json(GUESTS_FILE)
+
+        if args.pilot:
+            pilot_slugs = {slugify(n) for n in PILOT_GUESTS}
+            guests_to_enrich = [g for g in guests if g["slug"] in pilot_slugs]
+        else:
+            guests_to_enrich = guests
+
+        if args.limit:
+            guests_to_enrich = guests_to_enrich[:args.limit]
+
+        log(f"Enriching {len(guests_to_enrich)} guests")
+        enriched_count = 0
+        for guest in tqdm(guests_to_enrich, desc="Enriching guests"):
+            before = (guest.get("profession"), guest.get("photo_url"))
+            guest = enrich_guest(client, guest)
+            after = (guest.get("profession"), guest.get("photo_url"))
+            if before != after:
+                enriched_count += 1
+
+        save_json(GUESTS_FILE, guests)
+        log(f"Enriched {enriched_count} guests, saved to {GUESTS_FILE}")
+
+        for g in guests_to_enrich:
+            log(f"  {g['name']}: {g.get('profession', '?')}, photo={'yes' if g.get('photo_url') else 'no'}")
+
+
+if __name__ == "__main__":
+    main()

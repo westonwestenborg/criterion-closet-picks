@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBar from '../components/SearchBar.astro';
+import { getStats } from '../lib/data';
+
+const stats = getStats();
+---
+<BaseLayout title="Closet Picks">
+  <h1>Closet Picks</h1>
+  <p>
+    A searchable database of every pick from the Criterion Collection's
+    <a href="https://www.youtube.com/playlist?list=PLkLimRXN6NKxQNkePsdMFMRaKFGJMuSaW" target="_blank" rel="noopener noreferrer">Closet Picks</a>
+    YouTube series &mdash; with verbatim quotes, timestamped video links, and connections between guests and films.
+  </p>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-number">{stats.totalGuests}</span>
+      <span class="stat-label">guests</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">{stats.totalFilms}</span>
+      <span class="stat-label">films</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">{stats.totalPicks}</span>
+      <span class="stat-label">picks</span>
+    </div>
+  </div>
+
+  <SearchBar />
+
+  <div class="quick-links">
+    <a href="/guests/" class="quick-link">Browse Guests</a>
+    <a href="/films/" class="quick-link">Browse Films</a>
+    <a href="/most-popular/" class="quick-link">Most Popular</a>
+    <a href="/random/" class="quick-link">Random Pick</a>
+    <a href="/llm-export/" class="quick-link">LLM Export</a>
+  </div>
+</BaseLayout>

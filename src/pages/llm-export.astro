@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getGuests, getFilms, getPicks, getStats } from '../lib/data';
+
+const guests = getGuests().sort((a, b) => a.name.localeCompare(b.name));
+const films = getFilms();
+const picks = getPicks();
+const stats = getStats();
+
+const buildDate = new Date().toISOString().split('T')[0];
+
+// Generate the markdown content
+let markdown = `# Criterion Closet Picks - Complete Database\n`;
+markdown += `Generated: ${buildDate} | ${stats.totalGuests} guests | ${stats.totalFilms} films | ${stats.totalPicks} picks\n\n`;
+
+for (const guest of guests) {
+  const guestPicks = picks.filter(p => p.guest_slug === guest.slug);
+  const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : 'Unknown';
+
+  markdown += `## ${guest.name} (${guest.profession})\n`;
+  markdown += `Episode: ${episodeYear}`;
+  if (guest.youtube_video_url) markdown += ` | [Full Video](${guest.youtube_video_url})`;
+  if (guest.letterboxd_list_url) markdown += ` | [Letterboxd](${guest.letterboxd_list_url})`;
+  if (guest.criterion_page_url) markdown += ` | [Criterion Page](${guest.criterion_page_url})`;
+  markdown += `\n\n`;
+
+  for (const pick of guestPicks) {
+    const film = films.find(f => f.slug === pick.film_slug);
+    if (!film) continue;
+
+    const spineStr = film.criterion_spine_number ? ` - Spine #${film.criterion_spine_number}` : '';
+    markdown += `- **${film.title}** (${film.year}) - ${film.director}${spineStr}`;
+    if (film.criterion_url) markdown += ` - [Criterion](${film.criterion_url})`;
+    if (film.imdb_url) markdown += ` - [IMDB](${film.imdb_url})`;
+    markdown += `\n`;
+
+    if (pick.quote) {
+      markdown += `  > "${pick.quote}"\n`;
+      if (pick.youtube_timestamp_url) {
+        markdown += `  [Watch this moment](${pick.youtube_timestamp_url})\n`;
+      }
+    }
+    markdown += `\n`;
+  }
+}
+---
+<BaseLayout title="LLM Export" description="Machine-readable markdown export of all Criterion Closet Picks data.">
+  <div class="llm-export">
+    <h1>LLM Export</h1>
+    <p>
+      A machine-readable export of the complete Criterion Closet Picks database.
+      Intended for use with LLMs and AI tools.
+    </p>
+
+    <p>
+      <a
+        class="download-link"
+        id="download-md"
+        href="#"
+      >
+        Download as Markdown
+      </a>
+    </p>
+
+    <pre><code>{markdown}</code></pre>
+  </div>
+
+  <script define:vars={{ markdown }}>
+    const downloadBtn = document.getElementById('download-md');
+    if (downloadBtn) {
+      const blob = new Blob([markdown], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      downloadBtn.setAttribute('href', url);
+      downloadBtn.setAttribute('download', 'criterion-closet-picks.md');
+    }
+  </script>
+</BaseLayout>

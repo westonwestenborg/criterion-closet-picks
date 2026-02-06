@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteBlock from '../../components/QuoteBlock.astro';
+import { getFilms, getFilmBySlug, getPicksForFilm } from '../../lib/data';
+
+export function getStaticPaths() {
+  const films = getFilms();
+  return films.map((film) => ({
+    params: { slug: film.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const film = getFilmBySlug(slug!);
+
+if (!film) {
+  return Astro.redirect('/films/');
+}
+
+const picks = getPicksForFilm(film.slug);
+---
+<BaseLayout title={film.title} description={`${film.title} (${film.year}) directed by ${film.director} — picked by ${film.pick_count} Criterion Closet guests.`}>
+  <div class="detail-page">
+    <div class="detail-header">
+      {film.poster_url ? (
+        <img src={film.poster_url} alt={film.title} class="film-poster-large" loading="lazy" />
+      ) : film.criterion_spine_number ? (
+        <div class="spine-placeholder" style="width: 185px; height: 278px; font-size: 2rem;">
+          #{film.criterion_spine_number}
+        </div>
+      ) : null}
+      <div class="detail-meta">
+        <h1 style="margin-top: 0;">{film.title}</h1>
+        <p class="text-secondary" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+          {film.director}, {film.year}
+        </p>
+        {film.criterion_spine_number && (
+          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+            Spine <span class="spine-number">#{film.criterion_spine_number}</span>
+          </p>
+        )}
+        <p style="margin-bottom: 0.5rem;">
+          <span class="badge">
+            Picked by {film.pick_count} {film.pick_count === 1 ? 'guest' : 'guests'}
+          </span>
+        </p>
+        {film.genres.length > 0 && (
+          <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+            {film.genres.join(' / ')}
+          </p>
+        )}
+        <div class="detail-links">
+          {film.criterion_url && (
+            <a href={film.criterion_url} target="_blank" rel="noopener noreferrer">
+              Criterion
+            </a>
+          )}
+          {film.imdb_url && (
+            <a href={film.imdb_url} target="_blank" rel="noopener noreferrer">
+              IMDB
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <h2>Picked by</h2>
+
+    <div class="picks-list">
+      {picks.map((pick) => (
+        <div>
+          <div class="pick-guest-header">
+            {pick.guest?.photo_url ? (
+              <img src={pick.guest.photo_url} alt={pick.guest.name} class="guest-photo-small" loading="lazy" />
+            ) : (
+              <div class="guest-initial-small">
+                {pick.guest?.name?.charAt(0) || '?'}
+              </div>
+            )}
+            <div>
+              <a href={`/guests/${pick.guest_slug}/`} style="font-size: 1.05rem;">
+                {pick.guest?.name || pick.guest_slug}
+              </a>
+              {pick.guest?.profession && (
+                <span class="small-caps text-secondary" style="margin-left: 0.5rem; font-size: 0.85rem;">
+                  {pick.guest.profession}
+                </span>
+              )}
+            </div>
+          </div>
+          {pick.is_box_set && pick.box_set_name && (
+            <p class="box-set-tag" style="margin-bottom: 0.25rem;">Part of {pick.box_set_name}</p>
+          )}
+          <QuoteBlock
+            quote={pick.quote}
+            attribution={`${pick.guest?.name || pick.guest_slug}`}
+            timestampUrl={pick.youtube_timestamp_url}
+            timestampLabel={`Watch ${pick.guest?.name || 'this guest'} talk about ${film.title}`}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
