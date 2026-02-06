@@ -3,7 +3,7 @@ interface Props {
   title: string;
   slug: string;
   director: string;
-  year: number;
+  year: number | null;
   spineNumber: number | null;
   posterUrl: string | null;
   pickCount: number;
@@ -22,9 +22,9 @@ const { title, slug, director, year, spineNumber, posterUrl, pickCount } = Astro
         <div class="spine-placeholder">&mdash;</div>
       )}
       <div>
-        <h3 style="margin-top: 0;">{title}</h3>
+        <h3 class="card-title">{title}</h3>
         <span class="text-secondary" style="font-size: 0.9rem;">
-          {director ? `${director}, ${year}` : year}
+          {director && year ? `${director}, ${year}` : director || year || ''}
         </span>
         <br />
         <span class="badge" style="margin-top: 0.5rem;">

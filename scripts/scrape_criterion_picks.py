@@ -12,6 +12,7 @@ Each collection page lists the films a guest picked. This script:
 Usage:
   python scripts/scrape_criterion_picks.py              # Scrape all collections
   python scripts/scrape_criterion_picks.py --index-only  # Just update criterion_page_url
+  python scripts/scrape_criterion_picks.py --videos-only # Extract YouTube video IDs from collection pages
   python scripts/scrape_criterion_picks.py --guest "Cate Blanchett"  # Single guest
   python scripts/scrape_criterion_picks.py --limit 10    # Limit collections
 
@@ -59,6 +60,87 @@ def create_scraper():
     return cloudscraper.create_scraper(
         browser={"browser": "chrome", "platform": "darwin", "mobile": False}
     )
+
+
+# ---------------------------------------------------------------------------
+# YouTube video extraction
+# ---------------------------------------------------------------------------
+
+def extract_youtube_video_id(soup: BeautifulSoup) -> str | None:
+    """
+    Extract YouTube video ID from a Criterion collection page.
+    Looks for YouTube embed iframes in the parsed HTML.
+    """
+    # Look for YouTube embeds in iframes
+    for iframe in soup.select('iframe[src*="youtube.com/embed/"]'):
+        src = iframe.get("src", "")
+        m = re.search(r"youtube\.com/embed/([a-zA-Z0-9_-]{11})", src)
+        if m:
+            return m.group(1)
+
+    # Also check for youtube-nocookie.com embeds
+    for iframe in soup.select('iframe[src*="youtube-nocookie.com/embed/"]'):
+        src = iframe.get("src", "")
+        m = re.search(r"youtube-nocookie\.com/embed/([a-zA-Z0-9_-]{11})", src)
+        if m:
+            return m.group(1)
+
+    # Fallback: regex search in raw HTML for any youtube embed URL
+    raw_html = str(soup)
+    m = re.search(r"youtube(?:-nocookie)?\.com/embed/([a-zA-Z0-9_-]{11})", raw_html)
+    if m:
+        return m.group(1)
+
+    return None
+
+
+def extract_videos_from_criterion_pages(scraper, existing_guests: list[dict]) -> int:
+    """
+    For guests with criterion_page_url but no youtube_video_id,
+    fetch the collection page and extract the YouTube video ID.
+    Returns count of updated guests.
+    """
+    candidates = [
+        g for g in existing_guests
+        if g.get("criterion_page_url") and not g.get("youtube_video_id")
+    ]
+
+    if not candidates:
+        log("No guests need YouTube video extraction")
+        return 0
+
+    log(f"Checking {len(candidates)} guests for YouTube embeds...")
+    updated = 0
+
+    for guest in tqdm(candidates, desc="Extracting YouTube videos"):
+        url = guest["criterion_page_url"]
+        log(f"  Checking {guest['name']}: {url}")
+
+        try:
+            resp = scraper.get(url, timeout=30)
+            if resp.status_code != 200:
+                log(f"    HTTP {resp.status_code}")
+                time.sleep(REQUEST_DELAY)
+                continue
+        except Exception as e:
+            log(f"    Error: {e}")
+            time.sleep(REQUEST_DELAY)
+            continue
+
+        soup = BeautifulSoup(resp.text, "lxml")
+        video_id = extract_youtube_video_id(soup)
+
+        if video_id:
+            guest["youtube_video_id"] = video_id
+            guest["youtube_video_url"] = f"https://www.youtube.com/watch?v={video_id}"
+            log(f"    Found video: {video_id}")
+            updated += 1
+        else:
+            log(f"    No YouTube embed found")
+
+        time.sleep(REQUEST_DELAY)
+
+    return updated
 
 
 # ---------------------------------------------------------------------------
@@ -685,6 +767,11 @@ def main():
         help="Only scrape the index to update criterion_page_url for existing guests",
     )
     parser.add_argument(
+        "--videos-only",
+        action="store_true",
+        help="Only extract YouTube video IDs from Criterion collection pages",
+    )
+    parser.add_argument(
         "--guest",
         type=str,
         default=None,
@@ -731,6 +818,14 @@ def main():
         updated = update_index_only(collections, existing_guests)
         save_json(GUESTS_FILE, existing_guests)
         log(f"Updated {updated} guests with criterion_page_url")
+        log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
+        return
+
+    # Videos-only mode: extract YouTube video IDs from Criterion pages
+    if args.videos_only:
+        updated = extract_videos_from_criterion_pages(scraper, existing_guests)
+        save_json(GUESTS_FILE, existing_guests)
+        log(f"Updated {updated} guests with YouTube video IDs")
         log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
         return
 

@@ -72,10 +72,13 @@ Scripts are run in order. Each writes to `data/`:
 ```bash
 python scripts/build_catalog.py       # Step 1: Build Criterion catalog reference
 python scripts/scrape_letterboxd.py   # Step 2: Scrape guest picks from Letterboxd
+python scripts/scrape_criterion_picks.py  # Step 2b: Supplement with Criterion.com data
 python scripts/match_youtube.py       # Step 3: Match YouTube videos + pull transcripts
 python scripts/extract_quotes.py      # Step 4: LLM quote extraction via Gemini Flash
-python scripts/enrich_tmdb.py         # Step 5: TMDB enrichment (genres, posters, IMDB IDs)
+python scripts/backfill_films.py      # Step 5: Backfill missing films + propagate Criterion URLs
+python scripts/enrich_tmdb.py         # Step 6: TMDB enrichment (genres, posters, IMDB IDs)
 python scripts/validate.py            # Validate data and generate reports
+python scripts/test_data.py           # Run data integrity tests (also: npm run validate)
 ```
 
 For processing a single new video:
@@ -106,21 +109,25 @@ The site is deployed to GitHub Pages via GitHub Actions on every push to `main`.
 criterion-closet-picks/
 ├── .github/workflows/deploy.yml   # GitHub Actions: build + deploy to Pages
 ├── data/                           # JSON data files (committed to repo)
-│   ├── criterion_catalog.json      # All Criterion titles with metadata
+│   ├── criterion_catalog.json      # All Criterion titles with metadata (+ backfilled non-catalog films)
 │   ├── guests.json                 # All guests with metadata
 │   ├── picks.json                  # All picks with quotes + timestamps
+│   ├── picks_raw.json              # Raw picks from Letterboxd/Criterion (no quotes)
 │   ├── transcripts/                # Raw transcripts (gitignored, regenerable)
 │   └── validation/                 # Validation reports
 ├── scripts/                        # Python data pipeline
 │   ├── requirements.txt
 │   ├── build_catalog.py            # Criterion catalog scraper
 │   ├── scrape_letterboxd.py        # Letterboxd guest picks scraper
+│   ├── scrape_criterion_picks.py   # Criterion.com collection page scraper
 │   ├── match_youtube.py            # YouTube video matching + transcripts
 │   ├── extract_quotes.py           # Gemini Flash quote extraction
+│   ├── backfill_films.py           # Backfill missing films + propagate Criterion URLs
 │   ├── enrich_tmdb.py              # TMDB API enrichment
 │   ├── process_video.py            # Single video processing workflow
 │   ├── process_all.py              # Batch processing workflow
-│   └── validate.py                 # Data validation + reporting
+│   ├── validate.py                 # Data validation + reporting
+│   └── test_data.py                # Data integrity tests (unittest)
 ├── src/                            # Astro site source
 │   ├── layouts/BaseLayout.astro
 │   ├── pages/
@@ -144,7 +151,7 @@ criterion-closet-picks/
 
 ## Key Conventions
 
-- **Data source of truth for picks:** Letterboxd @closetpicks account (440 curated lists). Transcripts are used only for quotes/timestamps.
+- **Data source of truth for picks:** Letterboxd @closetpicks account (440 curated lists), supplemented by Criterion.com collection pages. Transcripts are used only for quotes/timestamps.
 - **Static site:** Everything is pre-rendered at build time. No server-side code in production.
 - **Pagefind search:** Client-side static search, index generated post-build.
 - **TMDB attribution required:** Footer must include TMDB logo and disclaimer per API terms.
@@ -152,3 +159,6 @@ criterion-closet-picks/
 - **Data pipeline is manual:** Run scripts locally, commit JSON data files, push to trigger rebuild.
 - **Transcripts are gitignored:** Large and regenerable. Only processed quote data in `picks.json` is committed.
 - **Film matching uses fuzzy search:** `thefuzz` library handles title variations between sources.
+- **Data integrity tests:** Run `python scripts/test_data.py` (or `npm run validate`) to verify data quality after pipeline runs. Tests check film coverage, URL validity, box set structure, guest coverage, and year validity.
+- **Backfill step:** `backfill_films.py` creates catalog entries for films that appear in picks but not in the Criterion catalog, and propagates canonical Criterion URLs from picks_raw into the catalog.
+- **Guests without videos:** Guests who have picks but no YouTube video/transcript get their picks from `picks_raw.json` as a fallback (displayed without quotes).

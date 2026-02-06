@@ -8,10 +8,13 @@ Output: updated criterion_catalog.json + guests.json
 """
 
 import argparse
+import re
 import sys
 import time
 
+import cloudscraper
 import requests
+from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
@@ -19,6 +22,7 @@ from scripts.utils import (
     CATALOG_FILE,
     GUESTS_FILE,
     PICKS_FILE,
+    PICKS_RAW_FILE,
     PILOT_GUESTS,
     load_json,
     save_json,
@@ -41,6 +45,100 @@ DEPARTMENT_MAP = {
     "Camera": "cinematographer",
     "Editing": "editor",
 }
+
+
+# ---------------------------------------------------------------------------
+# Criterion URL helpers
+# ---------------------------------------------------------------------------
+
+# Cache for Criterion page year lookups (criterion_url -> year or None)
+_criterion_year_cache: dict[str, int | None] = {}
+_criterion_scraper = None
+CRITERION_REQUEST_DELAY = 1.5
+
+
+def _get_criterion_scraper():
+    """Lazy-init a cloudscraper instance for Criterion.com."""
+    global _criterion_scraper
+    if _criterion_scraper is None:
+        _criterion_scraper = cloudscraper.create_scraper(
+            browser={"browser": "chrome", "platform": "darwin", "mobile": False}
+        )
+    return _criterion_scraper
+
+
+def get_year_from_criterion_url(criterion_url: str) -> int | None:
+    """
+    Scrape a Criterion film page to extract the release year.
+    Criterion film pages show year in the page title or metadata area.
+    Results are cached to avoid re-scraping.
+    """
+    if not criterion_url:
+        return None
+
+    if criterion_url in _criterion_year_cache:
+        return _criterion_year_cache[criterion_url]
+
+    scraper = _get_criterion_scraper()
+    year = None
+
+    try:
+        resp = scraper.get(criterion_url, timeout=30)
+        if resp.status_code == 200:
+            soup = BeautifulSoup(resp.text, "lxml")
+
+            # Method 1: Look for year in <h2 class="film-year"> or similar
+            for el in soup.select("h2.film-year, .film-year, .release-year"):
+                text = el.get_text(strip=True)
+                m = re.search(r"\b(19\d{2}|20\d{2})\b", text)
+                if m:
+                    year = int(m.group(1))
+                    break
+
+            # Method 2: Look for year in the page title (e.g. "Crash (1996)")
+            if not year:
+                title_tag = soup.select_one("title")
+                if title_tag:
+                    m = re.search(r"\((\d{4})\)", title_tag.get_text())
+                    if m:
+                        year = int(m.group(1))
+
+            # Method 3: Look for year in meta description or og tags
+            if not year:
+                for meta in soup.select('meta[name="description"], meta[property="og:title"]'):
+                    content = meta.get("content", "")
+                    m = re.search(r"\b(19\d{2}|20\d{2})\b", content)
+                    if m:
+                        year = int(m.group(1))
+                        break
+
+            # Method 4: Look for year in any <p> or <span> near the title area
+            if not year:
+                for el in soup.select(".film-info, .film-details, .film-meta"):
+                    text = el.get_text()
+                    m = re.search(r"\b(19\d{2}|20\d{2})\b", text)
+                    if m:
+                        year = int(m.group(1))
+                        break
+
+        time.sleep(CRITERION_REQUEST_DELAY)
+
+    except Exception as e:
+        log(f"  Error scraping Criterion URL {criterion_url}: {e}")
+
+    _criterion_year_cache[criterion_url] = year
+    return year
+
+
+def build_criterion_url_lookup(picks_raw: list[dict]) -> dict[str, str]:
+    """Build film_id -> criterion_film_url from picks_raw entries."""
+    url_map: dict[str, str] = {}
+    for p in picks_raw:
+        fid = p.get("film_id")
+        url = p.get("criterion_film_url")
+        if fid and url and fid not in url_map:
+            url_map[fid] = url
+    return url_map
 
 
 class TMDBClient:
@@ -125,8 +223,14 @@ class TMDBClient:
         return self._get(f"/movie/{tmdb_id}/credits")
 
 
-def enrich_film(client: TMDBClient, film: dict, genres: dict) -> dict:
-    """Enrich a single film with TMDB data."""
+def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_lookup: dict = None) -> dict:
+    """Enrich a single film with TMDB data.
+
+    Args:
+        criterion_url_lookup: Optional dict of film_id -> criterion_film_url
+            from picks_raw.json. Used to find criterion URLs for films that
+            don't have one in the catalog yet.
+    """
     title = film.get("title", "")
     year = film.get("year")
 
@@ -136,20 +240,41 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict) -> dict:
 
     tmdb_id = film.get("tmdb_id")
 
+    # --- Criterion URL disambiguation ---
+    # If we have no year, try to get one from the Criterion film page
+    criterion_url = film.get("criterion_url")
+    if not criterion_url and criterion_url_lookup:
+        criterion_url = criterion_url_lookup.get(film.get("film_id", ""))
+
+    if not year and criterion_url:
+        criterion_year = get_year_from_criterion_url(criterion_url)
+        if criterion_year:
+            log(f"  Got year {criterion_year} from Criterion page for '{title}'")
+            year = criterion_year
+            film["year"] = year
+
     # Search TMDB if we don't have a tmdb_id yet
     if not tmdb_id:
         result = client.search_movie(title, year)
         if not result:
             return film
 
+        # Cross-validate TMDB result against Criterion year
+        tmdb_release_date = result.get("release_date", "")
+        tmdb_year = None
+        if tmdb_release_date and len(tmdb_release_date) >= 4:
+            tmdb_year = int(tmdb_release_date[:4])
+
+        if year and tmdb_year and abs(year - tmdb_year) > 2:
+            log(f"  TMDB mismatch for '{title}': Criterion year={year}, TMDB year={tmdb_year} — skipping")
+            return film
+
         tmdb_id = result.get("id")
         film["tmdb_id"] = tmdb_id
 
         # Year from TMDB (if missing)
-        if not film.get("year"):
-            release_date = result.get("release_date", "")
-            if release_date and len(release_date) >= 4:
-                film["year"] = int(release_date[:4])
+        if not film.get("year") and tmdb_year:
+            film["year"] = tmdb_year
 
         # Genres
         genre_ids = result.get("genre_ids", [])
@@ -242,6 +367,11 @@ def main():
         catalog = load_json(CATALOG_FILE)
         picks = load_json(PICKS_FILE)
 
+        # Load picks_raw for criterion URL lookup (disambiguation)
+        picks_raw = load_json(PICKS_RAW_FILE)
+        criterion_url_lookup = build_criterion_url_lookup(picks_raw)
+        log(f"Loaded {len(criterion_url_lookup)} criterion URLs from picks_raw")
+
         if args.pilot:
             # Only enrich films in pilot guests' picks
             pilot_slugs = {slugify(n) for n in PILOT_GUESTS}
@@ -263,7 +393,7 @@ def main():
         enriched_count = 0
         for film in tqdm(films_to_enrich, desc="Enriching films"):
             before = (film.get("tmdb_id"), film.get("poster_url"))
-            film = enrich_film(client, film, genres)
+            film = enrich_film(client, film, genres, criterion_url_lookup)
             after = (film.get("tmdb_id"), film.get("poster_url"))
             if before != after:
                 enriched_count += 1

@@ -16,6 +16,10 @@ const randomData = picks
       filmSlug: film?.slug || '',
       filmDirector: film?.director || '',
       filmYear: film?.year || 0,
+      posterUrl: film?.poster_url || '',
+      criterionUrl: film?.criterion_url || '',
+      tmdbUrl: film?.tmdb_url || '',
+      spineNumber: film?.criterion_spine_number || null,
       guestName: guest?.name || '',
       guestSlug: guest?.slug || '',
       quote: p.quote,
@@ -38,6 +42,21 @@ const initialPick = randomData.length > 0
         <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
           {initialPick.filmDirector ? `${initialPick.filmDirector}, ${initialPick.filmYear}` : initialPick.filmYear}
         </p>
+        {initialPick.posterUrl ? (
+          <img src={initialPick.posterUrl} alt={initialPick.filmTitle} class="film-poster" loading="lazy" style="max-width: 185px;" />
+        ) : initialPick.spineNumber ? (
+          <div class="spine-placeholder">#{initialPick.spineNumber}</div>
+        ) : null}
+        {(initialPick.criterionUrl || initialPick.tmdbUrl) && (
+          <div class="detail-links" style="margin-bottom: 0.75rem;">
+            {initialPick.criterionUrl && (
+              <a href={initialPick.criterionUrl} target="_blank" rel="noopener noreferrer">Criterion</a>
+            )}
+            {initialPick.tmdbUrl && (
+              <a href={initialPick.tmdbUrl} target="_blank" rel="noopener noreferrer">TMDB</a>
+            )}
+          </div>
+        )}
         <blockquote>
           {initialPick.timestampUrl ? (
             <a href={initialPick.timestampUrl} class="quote-link" target="_blank" rel="noopener noreferrer">
@@ -71,6 +90,20 @@ const initialPick = randomData.length > 0
       ? `<a href="${pick.timestampUrl}" class="quote-link" target="_blank" rel="noopener noreferrer"><p>\u201C${pick.quote}\u201D</p></a>`
       : `<p>\u201C${pick.quote}\u201D</p>`;
 
+    let posterHtml = '';
+    if (pick.posterUrl) {
+      posterHtml = `<img src="${pick.posterUrl}" alt="${pick.filmTitle}" class="film-poster" loading="lazy" style="max-width: 185px;" />`;
+    } else if (pick.spineNumber) {
+      posterHtml = `<div class="spine-placeholder">#${pick.spineNumber}</div>`;
+    }
+
+    let linksHtml = '';
+    if (pick.criterionUrl || pick.tmdbUrl) {
+      const criterionLink = pick.criterionUrl ? `<a href="${pick.criterionUrl}" target="_blank" rel="noopener noreferrer">Criterion</a>` : '';
+      const tmdbLink = pick.tmdbUrl ? `<a href="${pick.tmdbUrl}" target="_blank" rel="noopener noreferrer">TMDB</a>` : '';
+      linksHtml = `<div class="detail-links" style="margin-bottom: 0.75rem;">${criterionLink}${tmdbLink}</div>`;
+    }
+
     result.innerHTML = `
       <h3 style="margin-top: 0;">
         <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
@@ -78,6 +111,8 @@ const initialPick = randomData.length > 0
       <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
         ${directorYear}
       </p>
+      ${posterHtml}
+      ${linksHtml}
       <blockquote>
         ${quoteHtml}
       </blockquote>

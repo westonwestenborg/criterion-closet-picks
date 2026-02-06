@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
-import { getGuests, getGuestBySlug, getPicksForGuest } from '../../lib/data';
+import { getGuests, getGuestBySlug, getPicksForGuest, getRawPicksForGuest, getFilmBySlug } from '../../lib/data';
 
 export function getStaticPaths() {
   const guests = getGuests();
@@ -17,7 +17,17 @@ if (!guest) {
   return Astro.redirect('/guests/');
 }
 
-const picks = getPicksForGuest(guest.slug);
+const allPicks = getPicksForGuest(guest.slug);
+// Hide individual box set picks that have no meaningful quote (they're covered by the aggregate entry)
+const picks = allPicks.filter(p => !(p.is_box_set && !p.box_set_film_count && (!p.quote || p.extraction_confidence === 'none')));
+const hasQuotes = picks.some(p => p.quote);
+
+// Fallback: load raw picks for guests without processed quotes
+const rawPicks = picks.length === 0 ? getRawPicksForGuest(guest.slug).map(rp => ({
+  ...rp,
+  film: getFilmBySlug(rp.film_slug),
+})) : [];
+
 const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
 ---
 <BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${guest.pick_count} films picked.`}>
@@ -41,11 +51,15 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
           </p>
         )}
         <div class="detail-links">
-          {guest.youtube_video_url && (
+          {guest.youtube_video_url ? (
             <a href={guest.youtube_video_url} target="_blank" rel="noopener noreferrer">
               Full Video
             </a>
-          )}
+          ) : guest.vimeo_video_id ? (
+            <a href={`https://vimeo.com/${guest.vimeo_video_id}`} target="_blank" rel="noopener noreferrer">
+              Full Video
+            </a>
+          ) : null}
           {guest.letterboxd_list_url && (
             <a href={guest.letterboxd_list_url} target="_blank" rel="noopener noreferrer">
               Letterboxd List
@@ -60,7 +74,7 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
       </div>
     </div>
 
-    {guest.youtube_video_id && (
+    {guest.youtube_video_id ? (
       <div class="video-embed">
         <iframe
           src={`https://www.youtube.com/embed/${guest.youtube_video_id}`}
@@ -69,63 +83,136 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
           allowfullscreen
         ></iframe>
       </div>
-    )}
+    ) : guest.vimeo_video_id ? (
+      <div class="video-embed">
+        <iframe
+          src={`https://player.vimeo.com/video/${guest.vimeo_video_id}`}
+          title={`${guest.name} - Criterion Closet Picks`}
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    ) : null}
 
     <h2>{guest.pick_count} Picks</h2>
 
-    <div class="picks-list">
-      {picks.map((pick) => (
-        <div>
-          {pick.box_set_film_count ? (
-            <div class="pick-film-info">
-              {pick.box_set_criterion_url ? (
-                <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
-                  {pick.box_set_name}
-                </a>
-              ) : (
-                <span class="pick-film-title">{pick.box_set_name}</span>
-              )}
-              <span class="pick-film-meta">
-                {' '}&mdash; {pick.box_set_film_count} films
-              </span>
-              {pick.box_set_film_titles && (
-                <details class="box-set-details">
-                  <summary class="text-muted">Show films</summary>
-                  <ul class="box-set-film-list">
-                    {pick.box_set_film_titles.map((title: string) => (
-                      <li>{title}</li>
-                    ))}
-                  </ul>
-                </details>
-              )}
-            </div>
-          ) : (
-            <div class="pick-film-info">
-              <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
-                {pick.film?.title || pick.film_slug}
-              </a>
-              {pick.film && (
+    {!hasQuotes && picks.length > 0 && (
+      <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+        No transcript data available for this episode. Films from Letterboxd list:
+      </p>
+    )}
+
+    {picks.length > 0 ? (
+      <div class="picks-list">
+        {picks.map((pick) => (
+          <div>
+            {pick.box_set_film_count ? (
+              <div class="pick-film-info">
+                {pick.box_set_criterion_url ? (
+                  <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+                    {pick.box_set_name}
+                  </a>
+                ) : (
+                  <span class="pick-film-title">{pick.box_set_name}</span>
+                )}
                 <span class="pick-film-meta">
-                  {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
-                  {pick.film.criterion_spine_number && (
-                    <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
-                  )}
+                  {' '}&mdash; {pick.box_set_film_count} films
                 </span>
-              )}
-              {pick.is_box_set && pick.box_set_name && (
-                <span class="box-set-tag">Part of {pick.box_set_name}</span>
-              )}
+                {pick.box_set_film_titles && (
+                  <details class="box-set-details">
+                    <summary class="text-muted">Show films</summary>
+                    <ul class="box-set-film-list">
+                      {pick.box_set_film_titles.map((title: string) => (
+                        <li>{title}</li>
+                      ))}
+                    </ul>
+                  </details>
+                )}
+              </div>
+            ) : (
+              <div class="pick-with-poster">
+                <a href={`/films/${pick.film_slug}/`} style="border-bottom: none;">
+                  {pick.film?.poster_url ? (
+                    <img src={pick.film.poster_url} alt={pick.film.title} class="film-poster-thumb" loading="lazy" />
+                  ) : pick.film?.criterion_spine_number ? (
+                    <div class="spine-placeholder-thumb">
+                      #{pick.film.criterion_spine_number}
+                    </div>
+                  ) : null}
+                </a>
+                <div class="pick-content">
+                  <div class="pick-film-info">
+                    <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+                      {pick.film?.title || pick.film_slug}
+                    </a>
+                    {pick.film && (
+                      <span class="pick-film-meta">
+                        {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
+                        {pick.film.criterion_spine_number && (
+                          <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+                        )}
+                      </span>
+                    )}
+                    {pick.is_box_set && pick.box_set_name && (
+                      <span class="box-set-tag">Part of {pick.box_set_name}</span>
+                    )}
+                  </div>
+                  {pick.quote && (
+                    <QuoteBlock
+                      quote={pick.quote}
+                      timestampUrl={pick.youtube_timestamp_url}
+                      hideAttribution={true}
+                    />
+                  )}
+                </div>
+              </div>
+            )}
+            {pick.box_set_film_count > 0 && pick.quote && (
+              <QuoteBlock
+                quote={pick.quote}
+                timestampUrl={pick.youtube_timestamp_url}
+                hideAttribution={true}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    ) : rawPicks.length > 0 ? (
+      <div class="picks-list">
+        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+          No transcript data available for this episode. Films from Letterboxd list:
+        </p>
+        {rawPicks.map((rp) => (
+          <div class="pick-with-poster">
+            <a href={`/films/${rp.film_slug}/`} style="border-bottom: none;">
+              {rp.film?.poster_url ? (
+                <img src={rp.film.poster_url} alt={rp.film.title || rp.film_title} class="film-poster-thumb" loading="lazy" />
+              ) : rp.film?.criterion_spine_number ? (
+                <div class="spine-placeholder-thumb">
+                  #{rp.film.criterion_spine_number}
+                </div>
+              ) : null}
+            </a>
+            <div class="pick-content">
+              <div class="pick-film-info">
+                <a href={`/films/${rp.film_slug}/`} class="pick-film-title">
+                  {rp.film?.title || rp.film_title || rp.film_slug}
+                </a>
+                {rp.film && (
+                  <span class="pick-film-meta">
+                    {rp.film.director ? ` — ${rp.film.director}` : ''}{rp.film.year ? `, ${rp.film.year}` : ''}
+                    {rp.film.criterion_spine_number && (
+                      <span> &middot; <span class="spine-number">#{rp.film.criterion_spine_number}</span></span>
+                    )}
+                  </span>
+                )}
+              </div>
             </div>
-          )}
-          {!pick.box_set_film_count && (
-            <QuoteBlock
-              quote={pick.quote}
-              timestampUrl={pick.youtube_timestamp_url}
-              hideAttribution={true}
-            />
-          )}
-        </div>
-      ))}
-    </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="text-muted">No picks data available for this guest.</p>
+    )}
   </div>
 </BaseLayout>

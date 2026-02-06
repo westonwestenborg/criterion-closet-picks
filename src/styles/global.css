@@ -140,6 +140,14 @@ a:hover {
   border-bottom: none;
 }
 
+.card-title {
+  margin-top: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* Grid layouts */
 .grid {
   display: grid;
@@ -431,6 +439,38 @@ blockquote p {
   flex-shrink: 0;
 }
 
+/* Pick with poster thumbnail */
+.pick-with-poster {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.film-poster-thumb {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.spine-placeholder-thumb {
+  width: 60px;
+  height: 90px;
+  background: #111;
+  color: #fffff8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.pick-content {
+  flex: 1;
+  min-width: 0;
+}
+
 /* Detail page layout */
 .detail-page {
   max-width: 650px;
@@ -500,11 +540,6 @@ blockquote p {
 .pick-item {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #e0e0d8;
-}
-
-.pick-item:last-child {
-  border-bottom: none;
 }
 
 .pick-film-info {

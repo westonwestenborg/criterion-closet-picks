@@ -19,7 +19,7 @@ const genres = getAllGenres();
 
   <div class="grid">
     {films.map((film) => {
-      const decade = `${Math.floor(film.year / 10) * 10}s`;
+      const decade = film.year ? `${Math.floor(film.year / 10) * 10}s` : '';
       const genreStr = film.genres.join(',');
       return (
         <div data-decade={decade.toLowerCase()} data-genre={genreStr.toLowerCase()}>

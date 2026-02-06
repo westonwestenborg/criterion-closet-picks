@@ -9,6 +9,7 @@ export interface Guest {
   photo_url: string | null;
   youtube_video_id: string;
   youtube_video_url: string;
+  vimeo_video_id: string | null;
   episode_date: string;
   letterboxd_list_url: string;
   criterion_page_url: string | null;
@@ -20,7 +21,7 @@ export interface Film {
   slug: string;
   criterion_spine_number: number | null;
   director: string;
-  year: number;
+  year: number | null;
   country: string;
   genres: string[];
   criterion_url: string;
@@ -89,10 +90,10 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       slug,
       criterion_spine_number: f.criterion_spine_number ?? f.spine_number ?? null,
       director: f.director ?? '',
-      year: f.year ?? 0,
+      year: f.year ?? null,
       country: f.country ?? '',
       genres: f.genres ?? [],
-      criterion_url: f.criterion_url || `https://www.criterion.com/shop/browse?q=${encodeURIComponent(f.title ?? '')}`,
+      criterion_url: f.criterion_url || '',
       imdb_id: f.imdb_id ?? null,
       imdb_url: f.imdb_url ?? (f.imdb_id ? `https://www.imdb.com/title/${f.imdb_id}/` : null),
       tmdb_id: f.tmdb_id ?? null,
@@ -125,8 +126,9 @@ export function getFilms(): Film[] {
   const picks = getPicks();
   const pickCounts = new Map<string, number>();
   for (const p of picks) {
-    // Skip box set aggregate entries from pick counts
+    // Skip box set aggregate entries and individual box set picks with no real quote
     if (p.box_set_film_count) continue;
+    if (p.is_box_set && (!p.quote || p.extraction_confidence === 'none')) continue;
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
   }
 
@@ -188,10 +190,21 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
 export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | undefined })[] {
   const guests = getGuests();
   return getPicks()
-    .filter(p => p.film_slug === filmSlug && !p.box_set_film_count)
+    .filter(p => p.film_slug === filmSlug && !p.box_set_film_count && !(p.is_box_set && (!p.quote || p.extraction_confidence === 'none')))
     .map(p => ({
       ...p,
       guest: guests.find(g => g.slug === p.guest_slug),
+    }));
+}
+
+export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string }[] {
+  const raw = loadRawJSON('picks_raw.json');
+  return raw
+    .filter((p: any) => p.guest_slug === guestSlug)
+    .map((p: any) => ({
+      film_slug: p.film_id ?? '',
+      film_title: p.film_title ?? '',
+      guest_slug: p.guest_slug,
     }));
 }
 
@@ -206,7 +219,7 @@ export function getAllProfessions(): string[] {
 
 export function getAllDecades(): string[] {
   const decades = new Set(
-    getFilms().map(f => `${Math.floor(f.year / 10) * 10}s`)
+    getFilms().filter(f => f.year).map(f => `${Math.floor(f.year! / 10) * 10}s`)
   );
   return [...decades].sort();
 }
