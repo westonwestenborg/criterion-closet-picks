@@ -394,6 +394,10 @@ def scrape_all_lists(scraper, catalog: list[dict], limit: int = 0) -> tuple[list
         if not guest_name:
             continue
 
+        # Strip base URL if href is absolute (defensive)
+        if href.startswith(LETTERBOXD_BASE):
+            href = href[len(LETTERBOXD_BASE):]
+
         films = scrape_list_films(scraper, href)
         if not films:
             continue

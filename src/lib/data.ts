@@ -27,8 +27,16 @@ export interface Film {
   imdb_id: string | null;
   imdb_url: string | null;
   tmdb_id: number | null;
+  tmdb_url: string | null;
   poster_url: string | null;
   pick_count: number;
+  credits?: {
+    directors: { name: string; tmdb_id: number }[];
+    writers: { name: string; tmdb_id: number }[];
+    cinematographers: { name: string; tmdb_id: number }[];
+    editors: { name: string; tmdb_id: number }[];
+    cast: { name: string; tmdb_id: number; character: string }[];
+  };
 }
 
 export interface Pick {
@@ -40,6 +48,9 @@ export interface Pick {
   extraction_confidence: 'high' | 'medium' | 'low' | 'none';
   is_box_set?: boolean;
   box_set_name?: string;
+  box_set_film_count?: number;
+  box_set_film_titles?: string[];
+  box_set_criterion_url?: string;
 }
 
 const dataDir = join(process.cwd(), 'data');
@@ -63,6 +74,9 @@ function normalizePicks(raw: any[]): Pick[] {
     extraction_confidence: p.extraction_confidence ?? 'none',
     is_box_set: p.is_box_set ?? false,
     box_set_name: p.box_set_name ?? undefined,
+    box_set_film_count: p.box_set_film_count ?? undefined,
+    box_set_film_titles: p.box_set_film_titles ?? undefined,
+    box_set_criterion_url: p.box_set_criterion_url ?? undefined,
   }));
 }
 
@@ -78,12 +92,14 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       year: f.year ?? 0,
       country: f.country ?? '',
       genres: f.genres ?? [],
-      criterion_url: f.criterion_url ?? '',
+      criterion_url: f.criterion_url || `https://www.criterion.com/shop/browse?q=${encodeURIComponent(f.title ?? '')}`,
       imdb_id: f.imdb_id ?? null,
       imdb_url: f.imdb_url ?? (f.imdb_id ? `https://www.imdb.com/title/${f.imdb_id}/` : null),
       tmdb_id: f.tmdb_id ?? null,
+      tmdb_url: f.tmdb_id ? `https://www.themoviedb.org/movie/${f.tmdb_id}` : null,
       poster_url: f.poster_url ?? null,
       pick_count: f.pick_count ?? pickCounts.get(slug) ?? 0,
+      credits: f.credits ?? undefined,
     };
   });
 }
@@ -109,6 +125,8 @@ export function getFilms(): Film[] {
   const picks = getPicks();
   const pickCounts = new Map<string, number>();
   for (const p of picks) {
+    // Skip box set aggregate entries from pick counts
+    if (p.box_set_film_count) continue;
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
   }
 
@@ -141,6 +159,18 @@ export function getGuestBySlug(slug: string): Guest | undefined {
   return getGuests().find(g => g.slug === slug);
 }
 
+let _guestNameMap: Map<string, string> | null = null;
+export function getGuestByName(name: string): Guest | undefined {
+  if (!_guestNameMap) {
+    _guestNameMap = new Map();
+    for (const g of getGuests()) {
+      _guestNameMap.set(g.name.toLowerCase(), g.slug);
+    }
+  }
+  const slug = _guestNameMap.get(name.toLowerCase());
+  return slug ? getGuestBySlug(slug) : undefined;
+}
+
 export function getFilmBySlug(slug: string): Film | undefined {
   return getFilms().find(f => f.slug === slug);
 }
@@ -158,7 +188,7 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
 export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | undefined })[] {
   const guests = getGuests();
   return getPicks()
-    .filter(p => p.film_slug === filmSlug)
+    .filter(p => p.film_slug === filmSlug && !p.box_set_film_count)
     .map(p => ({
       ...p,
       guest: guests.find(g => g.slug === p.guest_slug),

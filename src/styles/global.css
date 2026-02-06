@@ -175,9 +175,43 @@ a:hover {
   font-size: 0.75rem;
   font-style: italic;
   padding: 0.1rem 0.5rem;
-  border-radius: 3px;
   margin-left: 0.5rem;
   border-radius: 2px;
+}
+
+.box-set-details {
+  margin-top: 0.5rem;
+}
+
+.box-set-details summary {
+  font-size: 0.85rem;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  display: inline;
+}
+
+.box-set-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.box-set-details summary::before {
+  content: "+ ";
+}
+
+.box-set-details[open] summary::before {
+  content: "- ";
+}
+
+.box-set-film-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  columns: 2;
+  column-gap: 2rem;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 /* Blockquote / Quote blocks */
@@ -200,15 +234,23 @@ blockquote p {
   margin-top: 0.5rem;
 }
 
-.quote-timestamp {
-  font-size: 0.85rem;
-  color: #2b5797;
-  border-bottom: 1px solid #2b5797;
+.quote-link {
+  color: inherit;
+  border-bottom: none;
+  text-decoration: none;
 }
 
-.quote-timestamp:hover {
-  color: #111;
-  border-bottom-color: #111;
+.quote-link:hover {
+  border-bottom: none;
+}
+
+.quote-link p {
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.15s ease;
+}
+
+.quote-link:hover p {
+  border-bottom-color: #777;
 }
 
 /* Stats bar */
@@ -415,6 +457,22 @@ blockquote p {
 .detail-links a {
   font-size: 0.85rem;
   color: #555;
+}
+
+/* Film credits */
+.film-credits {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.film-credits p {
+  margin: 0.25rem 0;
+}
+
+.credit-label {
+  color: #888;
+  font-size: 0.85rem;
 }
 
 /* YouTube embed */

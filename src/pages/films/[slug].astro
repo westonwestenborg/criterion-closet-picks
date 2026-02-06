@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
-import { getFilms, getFilmBySlug, getPicksForFilm } from '../../lib/data';
+import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName } from '../../lib/data';
 
 export function getStaticPaths() {
   const films = getFilms();
@@ -32,7 +32,7 @@ const picks = getPicksForFilm(film.slug);
       <div class="detail-meta">
         <h1 style="margin-top: 0;">{film.title}</h1>
         <p class="text-secondary" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-          {film.director}, {film.year}
+          {film.director ? `${film.director}, ${film.year}` : film.year}
         </p>
         {film.criterion_spine_number && (
           <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
@@ -55,14 +55,89 @@ const picks = getPicksForFilm(film.slug);
               Criterion
             </a>
           )}
-          {film.imdb_url && (
-            <a href={film.imdb_url} target="_blank" rel="noopener noreferrer">
-              IMDB
+          {film.tmdb_url && (
+            <a href={film.tmdb_url} target="_blank" rel="noopener noreferrer">
+              TMDB
             </a>
           )}
         </div>
       </div>
     </div>
+
+    {film.credits && (
+      <div class="film-credits">
+        {film.credits.directors.length > 0 && (
+          <p>
+            <span class="credit-label">Directed by</span>{' '}
+            {film.credits.directors.map((d, i) => {
+              const guest = getGuestByName(d.name);
+              return (
+                <>
+                  {i > 0 && ', '}
+                  {guest ? <a href={`/guests/${guest.slug}/`}>{d.name}</a> : d.name}
+                </>
+              );
+            })}
+          </p>
+        )}
+        {film.credits.writers.length > 0 && (
+          <p>
+            <span class="credit-label">Written by</span>{' '}
+            {film.credits.writers.map((w, i) => {
+              const guest = getGuestByName(w.name);
+              return (
+                <>
+                  {i > 0 && ', '}
+                  {guest ? <a href={`/guests/${guest.slug}/`}>{w.name}</a> : w.name}
+                </>
+              );
+            })}
+          </p>
+        )}
+        {film.credits.cinematographers.length > 0 && (
+          <p>
+            <span class="credit-label">Cinematography</span>{' '}
+            {film.credits.cinematographers.map((c, i) => {
+              const guest = getGuestByName(c.name);
+              return (
+                <>
+                  {i > 0 && ', '}
+                  {guest ? <a href={`/guests/${guest.slug}/`}>{c.name}</a> : c.name}
+                </>
+              );
+            })}
+          </p>
+        )}
+        {film.credits.editors.length > 0 && (
+          <p>
+            <span class="credit-label">Edited by</span>{' '}
+            {film.credits.editors.map((e, i) => {
+              const guest = getGuestByName(e.name);
+              return (
+                <>
+                  {i > 0 && ', '}
+                  {guest ? <a href={`/guests/${guest.slug}/`}>{e.name}</a> : e.name}
+                </>
+              );
+            })}
+          </p>
+        )}
+        {film.credits.cast.length > 0 && (
+          <p>
+            <span class="credit-label">Cast</span>{' '}
+            {film.credits.cast.map((c, i) => {
+              const guest = getGuestByName(c.name);
+              return (
+                <>
+                  {i > 0 && ', '}
+                  {guest ? <a href={`/guests/${guest.slug}/`}>{c.name}</a> : c.name}
+                </>
+              );
+            })}
+          </p>
+        )}
+      </div>
+    )}
 
     <h2>Picked by</h2>
 
@@ -95,7 +170,6 @@ const picks = getPicksForFilm(film.slug);
             quote={pick.quote}
             attribution={`${pick.guest?.name || pick.guest_slug}`}
             timestampUrl={pick.youtube_timestamp_url}
-            timestampLabel={`Watch ${pick.guest?.name || 'this guest'} talk about ${film.title}`}
           />
         </div>
       ))}

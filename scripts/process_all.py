@@ -44,7 +44,7 @@ def run_step(name: str, cmd: list[str], step_num: int, total_steps: int) -> bool
         result = subprocess.run(
             cmd,
             cwd=str(SCRIPTS_DIR.parent),
-            timeout=600,  # 10 min max per step
+            timeout=7200,  # 2 hour max per step
         )
         elapsed = time.time() - start
         if result.returncode == 0:
@@ -54,7 +54,7 @@ def run_step(name: str, cmd: list[str], step_num: int, total_steps: int) -> bool
             log(f"  FAILED with return code {result.returncode} after {elapsed:.1f}s")
             return False
     except subprocess.TimeoutExpired:
-        log(f"  TIMED OUT after 600s")
+        log(f"  TIMED OUT after 7200s")
         return False
     except Exception as e:
         log(f"  ERROR: {e}")

@@ -10,8 +10,9 @@ Run the data pipeline to discover and process new Closet Picks episodes.
 ## Prerequisites
 
 - Working directory: the criterion-closet-picks repo root
-- Python venv at `.venv/` with dependencies installed
+- Python venv at `.venv/` with dependencies installed (`pip install -r scripts/requirements.txt`)
 - `.env` file with TMDB_READ_ACCESS_TOKEN, TMDB_API_KEY, GEMINI_API_KEY
+- `cloudscraper` is a required dependency (used to bypass Cloudflare on Criterion.com and Letterboxd)
 
 ## Workflow
 

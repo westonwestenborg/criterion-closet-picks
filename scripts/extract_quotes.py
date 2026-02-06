@@ -17,6 +17,7 @@ from tqdm import tqdm
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
 from scripts.utils import (
+    CATALOG_FILE,
     GUESTS_FILE,
     PICKS_RAW_FILE,
     PICKS_FILE,
@@ -93,7 +94,7 @@ def get_gemini_model():
     genai.configure(api_key=api_key)
 
     model = genai.GenerativeModel(
-        "gemini-2.0-flash",
+        "gemini-3-flash-preview",
         generation_config={
             "temperature": 0.1,
             "response_mime_type": "application/json",
@@ -334,6 +335,20 @@ def main():
 
     # Save all picks
     all_picks = list(existing_pick_index.values())
+
+    # Post-process: clean up quotes
+    from scripts.clean_quotes import clean_quote, build_title_map
+    catalog = load_json(CATALOG_FILE)
+    title_map = build_title_map(catalog)
+    cleaned_count = 0
+    for pick in all_picks:
+        if pick.get("quote"):
+            original = pick["quote"]
+            pick["quote"] = clean_quote(original, title_map)
+            if pick["quote"] != original:
+                cleaned_count += 1
+    log(f"Cleaned {cleaned_count} quotes")
+
     save_json(PICKS_FILE, all_picks)
     log(f"Saved {len(all_picks)} picks to {PICKS_FILE}")
 

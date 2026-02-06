@@ -24,7 +24,7 @@ const { title, slug, director, year, spineNumber, posterUrl, pickCount } = Astro
       <div>
         <h3 style="margin-top: 0;">{title}</h3>
         <span class="text-secondary" style="font-size: 0.9rem;">
-          {director}, {year}
+          {director ? `${director}, ${year}` : year}
         </span>
         <br />
         <span class="badge" style="margin-top: 0.5rem;">

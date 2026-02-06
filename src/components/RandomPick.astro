@@ -7,7 +7,7 @@ const guests = getGuests();
 
 // Build a serializable data structure for client-side JS
 const randomData = picks
-  .filter(p => p.quote)
+  .filter(p => p.quote && !p.box_set_film_count)
   .map(p => {
     const film = films.find(f => f.slug === p.film_slug);
     const guest = guests.find(g => g.slug === p.guest_slug);
@@ -22,44 +22,75 @@ const randomData = picks
       timestampUrl: p.youtube_timestamp_url,
     };
   });
+
+// Pick one at build time for initial render (SSG)
+const initialPick = randomData.length > 0
+  ? randomData[Math.floor(Math.random() * randomData.length)]
+  : null;
 ---
-<div class="random-container">
-  <button class="random-button" id="random-pick-btn">Surprise me</button>
-  <div class="random-result" id="random-result" style="display: none;"></div>
+<div class="random-container" style="text-align: left; max-width: 650px;">
+  <div class="random-result" id="random-result">
+    {initialPick && (
+      <Fragment>
+        <h3 style="margin-top: 0;">
+          <a href={`/films/${initialPick.filmSlug}/`}>{initialPick.filmTitle}</a>
+        </h3>
+        <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+          {initialPick.filmDirector ? `${initialPick.filmDirector}, ${initialPick.filmYear}` : initialPick.filmYear}
+        </p>
+        <blockquote>
+          {initialPick.timestampUrl ? (
+            <a href={initialPick.timestampUrl} class="quote-link" target="_blank" rel="noopener noreferrer">
+              <p>&ldquo;{initialPick.quote}&rdquo;</p>
+            </a>
+          ) : (
+            <p>&ldquo;{initialPick.quote}&rdquo;</p>
+          )}
+        </blockquote>
+        <p class="quote-attribution">
+          &mdash; <a href={`/guests/${initialPick.guestSlug}/`}>{initialPick.guestName}</a>
+        </p>
+      </Fragment>
+    )}
+  </div>
+  <div style="margin-top: 2rem;">
+    <button class="random-button" id="random-pick-btn">Another</button>
+  </div>
 </div>
 
 <script define:vars={{ randomData }}>
-  const btn = document.getElementById('random-pick-btn');
-  const result = document.getElementById('random-result');
+  function renderPick(pick) {
+    const result = document.getElementById('random-result');
+    if (!result) return;
 
+    const directorYear = pick.filmDirector
+      ? `${pick.filmDirector}, ${pick.filmYear}`
+      : pick.filmYear;
+
+    const quoteHtml = pick.timestampUrl
+      ? `<a href="${pick.timestampUrl}" class="quote-link" target="_blank" rel="noopener noreferrer"><p>\u201C${pick.quote}\u201D</p></a>`
+      : `<p>\u201C${pick.quote}\u201D</p>`;
+
+    result.innerHTML = `
+      <h3 style="margin-top: 0;">
+        <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
+      </h3>
+      <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+        ${directorYear}
+      </p>
+      <blockquote>
+        ${quoteHtml}
+      </blockquote>
+      <p class="quote-attribution">
+        &mdash; <a href="/guests/${pick.guestSlug}/">${pick.guestName}</a>
+      </p>
+    `;
+  }
+
+  const btn = document.getElementById('random-pick-btn');
   btn?.addEventListener('click', () => {
     if (randomData.length === 0) return;
-
     const pick = randomData[Math.floor(Math.random() * randomData.length)];
-
-    if (result) {
-      result.style.display = 'block';
-      result.innerHTML = `
-        <h3 style="margin-top: 0;">
-          <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
-        </h3>
-        <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
-          ${pick.filmDirector}, ${pick.filmYear}
-        </p>
-        <blockquote>
-          <p>&ldquo;${pick.quote}&rdquo;</p>
-        </blockquote>
-        <p class="quote-attribution">
-          &mdash; <a href="/guests/${pick.guestSlug}/">${pick.guestName}</a>
-        </p>
-        ${pick.timestampUrl ? `
-          <p style="margin-top: 0.25rem;">
-            <a href="${pick.timestampUrl}" class="quote-timestamp" target="_blank" rel="noopener noreferrer">
-              Watch this moment &rarr;
-            </a>
-          </p>
-        ` : ''}
-      `;
-    }
+    renderPick(pick);
   });
 </script>

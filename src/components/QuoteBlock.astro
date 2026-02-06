@@ -1,31 +1,32 @@
 ---
 interface Props {
   quote: string;
-  attribution: string;
+  attribution?: string;
   attributionUrl?: string;
   timestampUrl?: string;
-  timestampLabel?: string;
+  hideAttribution?: boolean;
 }
 
-const { quote, attribution, attributionUrl, timestampUrl, timestampLabel } = Astro.props;
+const { quote, attribution, attributionUrl, timestampUrl, hideAttribution } = Astro.props;
 ---
 {quote && (
   <div class="pick-item">
     <blockquote>
-      <p>&ldquo;{quote}&rdquo;</p>
-    </blockquote>
-    <div class="quote-attribution">
-      {attributionUrl ? (
-        <a href={attributionUrl}>{attribution}</a>
-      ) : (
-        <span>{attribution}</span>
-      )}
-    </div>
-    {timestampUrl && (
-      <div style="margin-top: 0.25rem;">
-        <a href={timestampUrl} class="quote-timestamp" target="_blank" rel="noopener noreferrer">
-          {timestampLabel || 'Watch this moment'} &rarr;
+      {timestampUrl ? (
+        <a href={timestampUrl} class="quote-link" target="_blank" rel="noopener noreferrer">
+          <p>&ldquo;{quote}&rdquo;</p>
         </a>
+      ) : (
+        <p>&ldquo;{quote}&rdquo;</p>
+      )}
+    </blockquote>
+    {!hideAttribution && attribution && (
+      <div class="quote-attribution">
+        {attributionUrl ? (
+          <a href={attributionUrl}>{attribution}</a>
+        ) : (
+          <span>{attribution}</span>
+        )}
       </div>
     )}
   </div>

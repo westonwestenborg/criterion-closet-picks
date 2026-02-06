@@ -76,28 +76,54 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
     <div class="picks-list">
       {picks.map((pick) => (
         <div>
-          <div class="pick-film-info">
-            <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
-              {pick.film?.title || pick.film_slug}
-            </a>
-            {pick.film && (
+          {pick.box_set_film_count ? (
+            <div class="pick-film-info">
+              {pick.box_set_criterion_url ? (
+                <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+                  {pick.box_set_name}
+                </a>
+              ) : (
+                <span class="pick-film-title">{pick.box_set_name}</span>
+              )}
               <span class="pick-film-meta">
-                {' '}&mdash; {pick.film.director}, {pick.film.year}
-                {pick.film.criterion_spine_number && (
-                  <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
-                )}
+                {' '}&mdash; {pick.box_set_film_count} films
               </span>
-            )}
-            {pick.is_box_set && pick.box_set_name && (
-              <span class="box-set-tag">Part of {pick.box_set_name}</span>
-            )}
-          </div>
-          <QuoteBlock
-            quote={pick.quote}
-            attribution={`${guest.name} on ${pick.film?.title || pick.film_slug}`}
-            timestampUrl={pick.youtube_timestamp_url}
-            timestampLabel={`Watch ${guest.name} talk about this film`}
-          />
+              {pick.box_set_film_titles && (
+                <details class="box-set-details">
+                  <summary class="text-muted">Show films</summary>
+                  <ul class="box-set-film-list">
+                    {pick.box_set_film_titles.map((title: string) => (
+                      <li>{title}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </div>
+          ) : (
+            <div class="pick-film-info">
+              <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+                {pick.film?.title || pick.film_slug}
+              </a>
+              {pick.film && (
+                <span class="pick-film-meta">
+                  {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
+                  {pick.film.criterion_spine_number && (
+                    <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+                  )}
+                </span>
+              )}
+              {pick.is_box_set && pick.box_set_name && (
+                <span class="box-set-tag">Part of {pick.box_set_name}</span>
+              )}
+            </div>
+          )}
+          {!pick.box_set_film_count && (
+            <QuoteBlock
+              quote={pick.quote}
+              timestampUrl={pick.youtube_timestamp_url}
+              hideAttribution={true}
+            />
+          )}
         </div>
       ))}
     </div>

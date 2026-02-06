@@ -120,43 +120,80 @@ class TMDBClient:
         """Get person details."""
         return self._get(f"/person/{person_id}")
 
+    def get_movie_credits(self, tmdb_id: int) -> dict | None:
+        """Get cast and crew credits for a movie."""
+        return self._get(f"/movie/{tmdb_id}/credits")
+
 
 def enrich_film(client: TMDBClient, film: dict, genres: dict) -> dict:
     """Enrich a single film with TMDB data."""
     title = film.get("title", "")
     year = film.get("year")
 
-    # Skip if already enriched
-    if film.get("tmdb_id") and film.get("poster_url"):
+    # Skip if already fully enriched (including credits)
+    if film.get("tmdb_id") and film.get("poster_url") and film.get("credits"):
         return film
 
-    result = client.search_movie(title, year)
-    if not result:
-        return film
+    tmdb_id = film.get("tmdb_id")
 
-    tmdb_id = result.get("id")
-    film["tmdb_id"] = tmdb_id
+    # Search TMDB if we don't have a tmdb_id yet
+    if not tmdb_id:
+        result = client.search_movie(title, year)
+        if not result:
+            return film
 
-    # Year from TMDB (if missing)
-    if not film.get("year"):
-        release_date = result.get("release_date", "")
-        if release_date and len(release_date) >= 4:
-            film["year"] = int(release_date[:4])
+        tmdb_id = result.get("id")
+        film["tmdb_id"] = tmdb_id
 
-    # Genres
-    genre_ids = result.get("genre_ids", [])
-    film["genres"] = [genres.get(gid, "") for gid in genre_ids if gid in genres]
+        # Year from TMDB (if missing)
+        if not film.get("year"):
+            release_date = result.get("release_date", "")
+            if release_date and len(release_date) >= 4:
+                film["year"] = int(release_date[:4])
 
-    # Poster
-    poster_path = result.get("poster_path")
-    if poster_path:
-        film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{poster_path}"
+        # Genres
+        genre_ids = result.get("genre_ids", [])
+        film["genres"] = [genres.get(gid, "") for gid in genre_ids if gid in genres]
+
+        # Poster
+        poster_path = result.get("poster_path")
+        if poster_path:
+            film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{poster_path}"
 
     # IMDB ID
     if tmdb_id and not film.get("imdb_id"):
         ext_ids = client.get_movie_external_ids(tmdb_id)
         if ext_ids:
             film["imdb_id"] = ext_ids.get("imdb_id")
+
+    # Credits (director, writer, cinematographer, editor, cast)
+    if tmdb_id and not film.get("credits"):
+        credits_data = client.get_movie_credits(tmdb_id)
+        if credits_data:
+            crew = credits_data.get("crew", [])
+            cast = credits_data.get("cast", [])
+
+            def crew_by_job(*jobs):
+                return [
+                    {"name": c["name"], "tmdb_id": c["id"]}
+                    for c in crew
+                    if c.get("job") in jobs
+                ]
+
+            film["credits"] = {
+                "directors": crew_by_job("Director"),
+                "writers": crew_by_job("Writer", "Screenplay"),
+                "cinematographers": crew_by_job("Director of Photography"),
+                "editors": crew_by_job("Editor"),
+                "cast": [
+                    {"name": c["name"], "tmdb_id": c["id"], "character": c.get("character", "")}
+                    for c in cast[:8]  # Top 8 billed
+                ],
+            }
+
+            # Also set director if not already set
+            if not film.get("director") and film["credits"]["directors"]:
+                film["director"] = film["credits"]["directors"][0]["name"]
 
     return film
 
