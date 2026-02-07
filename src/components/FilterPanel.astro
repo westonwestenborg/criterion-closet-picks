@@ -18,30 +18,60 @@ const { filters, filterKey, label } = Astro.props;
 </div>
 
 <script>
+  // Shared filter state across all panels on the page
+  if (!(window as any).__filterState) {
+    (window as any).__filterState = {} as Record<string, string>;
+  }
+  const _filterState: Record<string, string> = (window as any).__filterState;
+
+  function applyFilters() {
+    const grid = document.querySelector('.grid');
+    if (!grid) return;
+    const searchQuery = ((window as any).__searchQuery || '').toLowerCase();
+
+    for (const card of grid.children) {
+      const el = card as HTMLElement;
+      let visible = true;
+
+      // Text search against data-search attribute
+      if (searchQuery) {
+        const searchText = (el.dataset.search || '').toLowerCase();
+        if (!searchText.includes(searchQuery)) {
+          visible = false;
+        }
+      }
+
+      // Chip filters
+      if (visible) {
+        for (const [key, value] of Object.entries(_filterState)) {
+          if (value === 'all') continue;
+          const cardValues = (el.dataset[key] || '').toLowerCase().split(',');
+          if (!cardValues.some(v => v.trim() === value)) {
+            visible = false;
+            break;
+          }
+        }
+      }
+
+      el.style.display = visible ? '' : 'none';
+    }
+  }
+  (window as any).applyFilters = applyFilters;
+
   document.querySelectorAll('.filter-panel').forEach((panel) => {
     const filterKey = panel.getAttribute('data-filter-key');
+    if (!filterKey) return;
     const chips = panel.querySelectorAll('.filter-chip');
+
+    _filterState[filterKey] = 'all';
 
     chips.forEach((chip) => {
       chip.addEventListener('click', () => {
-        // Update active state
         chips.forEach((c) => c.classList.remove('active'));
         chip.classList.add('active');
 
-        const value = (chip as HTMLElement).dataset.filterValue || 'all';
-
-        // Filter cards
-        const cards = document.querySelectorAll(`[data-${filterKey}]`);
-        cards.forEach((card) => {
-          const el = card as HTMLElement;
-          if (value === 'all') {
-            el.style.display = '';
-          } else {
-            // Support comma-separated values for genres
-            const cardValues = (el.dataset[filterKey] || '').toLowerCase().split(',');
-            el.style.display = cardValues.some(v => v.trim() === value) ? '' : 'none';
-          }
-        });
+        _filterState[filterKey] = (chip as HTMLElement).dataset.filterValue || 'all';
+        applyFilters();
       });
     });
   });

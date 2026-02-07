@@ -13,17 +13,45 @@ const professions = getAllProfessions();
     Every guest who has visited the Criterion Closet, filterable by profession.
   </p>
 
+  <input type="text" class="search-input" placeholder="Search guests..." autocomplete="off" />
+
   <FilterPanel filters={professions} filterKey="profession" label="Profession" />
 
   <div class="grid">
     {guests.map((guest) => (
-      <GuestCard
-        name={guest.name}
-        slug={guest.slug}
-        profession={guest.profession}
-        photoUrl={guest.photo_url}
-        pickCount={guest.pick_count}
-      />
+      <div data-profession={guest.profession} data-search={guest.name.toLowerCase()}>
+        <GuestCard
+          name={guest.name}
+          slug={guest.slug}
+          profession={guest.profession}
+          photoUrl={guest.photo_url}
+          pickCount={guest.pick_count}
+        />
+      </div>
     ))}
   </div>
 </BaseLayout>
+
+<script>
+  document.querySelector('.search-input')?.addEventListener('input', (e) => {
+    (window as any).__searchQuery = (e.target as HTMLInputElement).value;
+    (window as any).applyFilters?.();
+  });
+</script>
+
+<style>
+  .search-input {
+    font-family: et-book, Palatino, Georgia, serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    background: #fffff8;
+    width: 100%;
+    max-width: 24rem;
+    margin-bottom: 0.5rem;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: #888;
+  }
+</style>

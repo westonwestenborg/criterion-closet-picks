@@ -14,15 +14,31 @@ const genres = getAllGenres();
     Every film picked from the Criterion Closet, filterable by decade and genre.
   </p>
 
+  <input type="text" class="search-input" placeholder="Search films..." autocomplete="off" />
+
   <FilterPanel filters={decades} filterKey="decade" label="Decade" />
   <FilterPanel filters={genres} filterKey="genre" label="Genre" />
+
+  <div class="sort-controls">
+    <span class="text-muted" style="font-size: 0.85rem; margin-right: 0.25rem;">Sort:</span>
+    <button class="filter-chip active" data-sort="title" data-dir="asc">Title <span class="sort-arrow">&#9650;</span></button>
+    <button class="filter-chip" data-sort="year" data-dir="desc">Year</button>
+    <button class="filter-chip" data-sort="picks" data-dir="desc">Most Picked</button>
+  </div>
 
   <div class="grid">
     {films.map((film) => {
       const decade = film.year ? `${Math.floor(film.year / 10) * 10}s` : '';
       const genreStr = film.genres.join(',');
       return (
-        <div data-decade={decade.toLowerCase()} data-genre={genreStr.toLowerCase()}>
+        <div
+          data-decade={decade.toLowerCase()}
+          data-genre={genreStr.toLowerCase()}
+          data-search={`${film.title} ${film.director || ''}`.toLowerCase()}
+          data-title={film.title.toLowerCase()}
+          data-year={film.year || 0}
+          data-picks={film.pick_count}
+        >
           <FilmCard
             title={film.title}
             slug={film.slug}
@@ -37,3 +53,90 @@ const genres = getAllGenres();
     })}
   </div>
 </BaseLayout>
+
+<script>
+  const sortButtons = document.querySelectorAll('.sort-controls .filter-chip');
+  const grid = document.querySelector('.grid');
+
+  function sortGrid(sortKey: string, dir: string) {
+    if (!grid) return;
+    const items = Array.from(grid.children) as HTMLElement[];
+    const mult = dir === 'asc' ? 1 : -1;
+
+    items.sort((a, b) => {
+      if (sortKey === 'title') {
+        return mult * (a.dataset.title || '').localeCompare(b.dataset.title || '');
+      }
+      const aVal = parseInt(a.dataset[sortKey] || '0') || 0;
+      const bVal = parseInt(b.dataset[sortKey] || '0') || 0;
+      return mult * (aVal - bVal);
+    });
+
+    items.forEach((item) => grid.appendChild(item));
+  }
+
+  sortButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const el = btn as HTMLElement;
+      const isActive = el.classList.contains('active');
+
+      if (isActive) {
+        // Toggle direction
+        el.dataset.dir = el.dataset.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortButtons.forEach((b) => {
+          b.classList.remove('active');
+          // Clear arrow text from inactive buttons
+          const arrow = b.querySelector('.sort-arrow');
+          if (arrow) arrow.remove();
+        });
+        el.classList.add('active');
+      }
+
+      // Update arrow indicator
+      let arrow = el.querySelector('.sort-arrow');
+      if (!arrow) {
+        arrow = document.createElement('span');
+        arrow.className = 'sort-arrow';
+        el.appendChild(arrow);
+      }
+      arrow.innerHTML = el.dataset.dir === 'asc' ? '&#9650;' : '&#9660;';
+
+      sortGrid(el.dataset.sort!, el.dataset.dir!);
+    });
+  });
+
+  document.querySelector('.search-input')?.addEventListener('input', (e) => {
+    (window as any).__searchQuery = (e.target as HTMLInputElement).value;
+    (window as any).applyFilters?.();
+  });
+</script>
+
+<style>
+  .sort-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem;
+    align-items: center;
+  }
+  .search-input {
+    font-family: et-book, Palatino, Georgia, serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    background: #fffff8;
+    width: 100%;
+    max-width: 24rem;
+    margin-bottom: 0.5rem;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: #888;
+  }
+  .sort-arrow {
+    font-size: 0.6em;
+    margin-left: 0.25em;
+    vertical-align: middle;
+  }
+</style>
