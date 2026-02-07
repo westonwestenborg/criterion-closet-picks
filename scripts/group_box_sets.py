@@ -296,6 +296,95 @@ def group_picks_for_guest(
     return merged_picks
 
 
+def infer_box_set_membership(picks: list[dict]) -> int:
+    """
+    Infer box set membership for untagged, no-quote picks by correlating with
+    aggregate box set picks across guests.
+
+    Algorithm:
+    1. Build box_set_guests: box_set_name -> set of guest slugs (from aggregate picks)
+    2. Build box_set_urls: box_set_name -> criterion URL (from aggregates)
+    3. Build film_noquote_guests: film_id -> set of guest slugs (from untagged, no-quote,
+       non-aggregate picks)
+    4. For each (film_id, box_set_name) pair, compute overlap. If overlap >= 3 AND
+       overlap / box_set_guests >= 0.6, tag those picks.
+    5. When multiple box sets match a film, prefer the one with a URL, then most guests.
+
+    Returns the number of picks tagged.
+    """
+    # Step 1: box_set_name -> guest slugs from aggregate picks
+    box_set_guests: dict[str, set[str]] = defaultdict(set)
+    box_set_urls: dict[str, str] = {}
+    for p in picks:
+        if p.get("box_set_film_count") and p.get("box_set_name"):
+            bs_name = p["box_set_name"]
+            box_set_guests[bs_name].add(p["guest_slug"])
+            if not box_set_urls.get(bs_name) and p.get("box_set_criterion_url"):
+                box_set_urls[bs_name] = p["box_set_criterion_url"]
+
+    if not box_set_guests:
+        return 0
+
+    # Step 2: film_id -> guest slugs from untagged, no-quote, non-aggregate picks
+    film_noquote_guests: dict[str, set[str]] = defaultdict(set)
+    # Index picks for tagging: (film_id, guest_slug) -> list of pick indices
+    pick_index: dict[tuple[str, str], list[int]] = defaultdict(list)
+    for i, p in enumerate(picks):
+        if p.get("is_box_set") or p.get("box_set_film_count"):
+            continue
+        if p.get("quote", "").strip():
+            continue
+        film_id = p.get("film_id", "")
+        if not film_id:
+            continue
+        guest = p["guest_slug"]
+        film_noquote_guests[film_id].add(guest)
+        pick_index[(film_id, guest)].append(i)
+
+    # Step 3: For each film, find best matching box set
+    film_best_match: dict[str, tuple[str, set[str]]] = {}  # film_id -> (box_set_name, overlap_guests)
+    for film_id, film_guests in film_noquote_guests.items():
+        best_name = None
+        best_overlap: set[str] = set()
+        for bs_name, bs_guests in box_set_guests.items():
+            overlap = film_guests & bs_guests
+            if len(overlap) < 3:
+                continue
+            if len(overlap) / len(bs_guests) < 0.6:
+                continue
+            # Prefer: has URL > more guests > alphabetical
+            if best_name is None:
+                best_name = bs_name
+                best_overlap = overlap
+            else:
+                cur_has_url = bool(box_set_urls.get(bs_name))
+                best_has_url = bool(box_set_urls.get(best_name))
+                if (cur_has_url and not best_has_url) or \
+                   (cur_has_url == best_has_url and len(overlap) > len(best_overlap)):
+                    best_name = bs_name
+                    best_overlap = overlap
+        if best_name:
+            film_best_match[film_id] = (best_name, best_overlap)
+
+    # Step 4: Tag matching picks
+    tagged = 0
+    for film_id, (bs_name, overlap_guests) in film_best_match.items():
+        for guest in overlap_guests:
+            for idx in pick_index.get((film_id, guest), []):
+                picks[idx]["is_box_set"] = True
+                picks[idx]["box_set_name"] = bs_name
+                if box_set_urls.get(bs_name):
+                    picks[idx]["box_set_criterion_url"] = box_set_urls[bs_name]
+                tagged += 1
+
+    if tagged > 0:
+        log(f"\nBox set inference: tagged {tagged} picks across {len(film_best_match)} films")
+        for film_id, (bs_name, overlap) in sorted(film_best_match.items()):
+            log(f"  {film_id} -> {bs_name} ({len(overlap)} guests)")
+
+    return tagged
+
+
 def main():
     parser = argparse.ArgumentParser(description="Group box set films")
     parser.add_argument("--dry-run", action="store_true", help="Preview without saving")
@@ -344,6 +433,9 @@ def main():
         all_grouped.extend(grouped)
 
     log(f"\nTotal: {len(picks)} -> {len(all_grouped)} picks ({total_collapsed} collapsed)")
+
+    # Infer box set membership for untagged no-quote picks
+    infer_box_set_membership(all_grouped)
 
     if not args.dry_run:
         save_json(PICKS_FILE, all_grouped)

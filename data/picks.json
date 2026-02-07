@@ -45,7 +45,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -210,7 +213,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -225,7 +231,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -240,7 +249,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -255,7 +267,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -285,7 +300,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "barry-jenkins",
@@ -2583,7 +2601,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "jodie-foster",
@@ -2778,7 +2799,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "atom-egoyan",
@@ -2793,7 +2817,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "atom-egoyan",
@@ -2823,7 +2850,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "atom-egoyan",
@@ -2838,7 +2868,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "atom-egoyan",
@@ -2868,7 +2901,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "atom-egoyan",
@@ -3044,7 +3080,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "stellan-skarsgard",
@@ -3534,7 +3573,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "will-arnett",
@@ -7079,7 +7121,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7094,7 +7139,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7124,7 +7172,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7139,7 +7190,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7154,7 +7208,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7169,7 +7226,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7184,7 +7244,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7199,7 +7262,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7214,7 +7280,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7229,7 +7298,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7244,7 +7316,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7259,7 +7334,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7274,7 +7352,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7289,7 +7370,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7304,7 +7388,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7319,7 +7406,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7349,7 +7439,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7364,7 +7457,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7379,7 +7475,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7394,7 +7493,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "nia-dacosta",
@@ -7849,7 +7951,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "wagner-moura",
@@ -7864,7 +7969,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "wagner-moura",
@@ -7894,7 +8002,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "wagner-moura",
@@ -7909,7 +8020,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "wagner-moura",
@@ -7924,7 +8038,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "wagner-moura",
@@ -9141,7 +9258,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "cillian-murphy",
@@ -10216,7 +10336,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10231,7 +10354,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10261,7 +10387,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10276,7 +10405,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10291,7 +10423,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10306,7 +10441,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10321,7 +10459,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10351,7 +10492,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10366,7 +10510,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10381,7 +10528,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10396,7 +10546,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10411,7 +10564,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10426,7 +10582,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10441,7 +10600,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10456,7 +10618,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10471,7 +10636,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10486,7 +10654,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10501,7 +10672,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10516,7 +10690,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -10531,7 +10708,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "marion-cotillard",
@@ -11019,7 +11199,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "david-byrne",
@@ -11034,7 +11217,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "david-byrne",
@@ -11064,7 +11250,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "david-byrne",
@@ -11305,7 +11494,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "matt-dillon",
@@ -11320,7 +11512,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "matt-dillon",
@@ -11350,7 +11545,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "matt-dillon",
@@ -11365,7 +11563,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "matt-dillon",
@@ -11395,7 +11596,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "matt-dillon",
@@ -11883,7 +12087,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "rza",
@@ -13761,7 +13968,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13776,7 +13986,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13806,7 +14019,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13821,7 +14037,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13836,7 +14055,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13851,7 +14073,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13866,7 +14091,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13881,7 +14109,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13896,7 +14127,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13911,7 +14145,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13926,7 +14163,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13941,7 +14181,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13956,7 +14199,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13971,7 +14217,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -13986,7 +14235,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14001,7 +14253,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14016,7 +14271,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14031,7 +14289,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14046,7 +14307,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14061,7 +14325,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -14076,7 +14343,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "bowen-yang",
@@ -15949,7 +16219,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "barbie-ferreira",
@@ -18187,7 +18460,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18202,7 +18478,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18217,7 +18496,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18232,7 +18514,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18247,7 +18532,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18262,7 +18550,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "matias-pineiro",
@@ -18620,7 +18911,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18635,7 +18929,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18755,7 +19052,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18770,7 +19070,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18785,7 +19088,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18800,7 +19106,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18815,7 +19124,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -18830,7 +19142,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -19558,7 +19873,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19573,7 +19891,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19603,7 +19924,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19618,7 +19942,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19633,7 +19960,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19648,7 +19978,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19663,7 +19996,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19678,7 +20014,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19693,7 +20032,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19708,7 +20050,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19723,7 +20068,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19738,7 +20086,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19753,7 +20104,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19768,7 +20122,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19783,7 +20140,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19798,7 +20158,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19813,7 +20176,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19828,7 +20194,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19843,7 +20212,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19858,7 +20230,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19873,7 +20248,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosamund-pike",
@@ -19961,7 +20339,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -19976,7 +20357,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20006,7 +20390,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20021,7 +20408,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20036,7 +20426,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20051,7 +20444,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20066,7 +20462,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20081,7 +20480,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20096,7 +20498,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20111,7 +20516,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20126,7 +20534,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20156,7 +20567,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20171,7 +20585,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20186,7 +20603,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20201,7 +20621,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20216,7 +20639,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20231,7 +20657,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20261,7 +20690,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -20276,7 +20708,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -21283,7 +21718,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -21298,7 +21736,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -21313,7 +21754,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -21328,7 +21772,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -21343,7 +21790,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -21358,7 +21808,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "carrie-coon",
@@ -22251,7 +22704,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "julia-garner",
@@ -22611,7 +23067,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "brady-corbet",
@@ -22626,7 +23085,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "brady-corbet",
@@ -22656,7 +23118,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "brady-corbet",
@@ -22671,7 +23136,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "brady-corbet",
@@ -22701,7 +23169,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "brady-corbet",
@@ -25050,7 +25521,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "john-lithgow",
@@ -25080,7 +25554,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Jacques Tati box"
   },
   {
     "guest_slug": "john-lithgow",
@@ -25095,7 +25571,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "john-lithgow",
@@ -25231,7 +25710,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25246,7 +25728,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25276,7 +25761,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25291,7 +25779,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25321,7 +25812,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25531,7 +26025,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25561,7 +26058,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25591,7 +26091,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -25621,7 +26124,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "juliette-binoche-ralph-fiennes",
@@ -26130,7 +26636,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "winona-ryder",
@@ -27139,7 +27648,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "barry-levinson",
@@ -27316,7 +27828,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "mike-leigh",
@@ -28155,7 +28670,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28170,7 +28688,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28185,7 +28706,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28200,7 +28724,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28215,7 +28742,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28230,7 +28760,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "christian-petzold",
@@ -28967,7 +29500,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -28982,7 +29518,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29012,7 +29551,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29027,7 +29569,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29057,7 +29602,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Pasolini 101",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29102,7 +29650,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29117,7 +29668,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29132,7 +29686,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Jacques Tati box"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29147,7 +29703,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -29806,7 +30365,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29821,7 +30383,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29836,7 +30401,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29851,7 +30419,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29866,7 +30437,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29881,7 +30455,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29896,7 +30473,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29941,7 +30521,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29956,7 +30539,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -29986,7 +30572,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30001,7 +30590,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30016,7 +30608,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30046,7 +30641,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30076,7 +30674,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30196,7 +30797,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30226,7 +30830,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30241,7 +30848,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30271,7 +30881,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30286,7 +30899,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30301,7 +30917,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30316,7 +30935,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30331,7 +30953,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30346,7 +30971,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30391,7 +31019,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30421,7 +31052,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30436,7 +31070,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30451,7 +31088,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30496,7 +31136,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30511,7 +31154,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30526,7 +31172,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30541,7 +31190,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30601,7 +31253,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -30616,7 +31271,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "kleber-mendonca-filho",
@@ -31573,7 +32231,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31588,7 +32249,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31618,7 +32282,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31648,7 +32315,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31663,7 +32333,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31678,7 +32351,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31693,7 +32369,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31708,7 +32387,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31723,7 +32405,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31738,7 +32423,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31768,7 +32456,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31783,7 +32474,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31798,7 +32492,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31813,7 +32510,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31828,7 +32528,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31843,7 +32546,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31858,7 +32564,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31873,7 +32582,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -31888,7 +32600,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "callum-turner",
@@ -32777,7 +33492,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32792,7 +33510,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32837,7 +33558,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32852,7 +33576,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32867,7 +33594,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32882,7 +33612,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32897,7 +33630,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32912,7 +33648,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32927,7 +33666,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32942,7 +33684,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32957,7 +33702,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32972,7 +33720,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -32987,7 +33738,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33002,7 +33756,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33017,7 +33774,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33032,7 +33792,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33047,7 +33810,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33062,7 +33828,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33077,7 +33846,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33092,7 +33864,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "annie-baker",
@@ -33312,7 +34087,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Dietrich box"
   },
   {
     "guest_slug": "jerry-schatzberg",
@@ -33760,7 +34537,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "carol-kane",
@@ -34491,7 +35271,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34506,7 +35289,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34536,7 +35322,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34566,7 +35355,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34581,7 +35373,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34596,7 +35391,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34611,7 +35409,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34626,7 +35427,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34641,7 +35445,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34656,7 +35463,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34671,7 +35481,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34686,7 +35499,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34701,7 +35517,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34716,7 +35535,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34731,7 +35553,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34746,7 +35571,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34761,7 +35589,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34776,7 +35607,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34791,7 +35625,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -34806,7 +35643,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "agnieszka-holland",
@@ -35800,7 +36640,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35815,7 +36658,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35860,7 +36706,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35875,7 +36724,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35890,7 +36742,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35905,7 +36760,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35920,7 +36778,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35935,7 +36796,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35950,7 +36814,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35965,7 +36832,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35980,7 +36850,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -35995,7 +36868,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36010,7 +36886,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36025,7 +36904,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36040,7 +36922,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36055,7 +36940,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36070,7 +36958,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36100,7 +36991,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36115,7 +37009,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "jr",
@@ -36130,7 +37027,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "jr",
@@ -37202,7 +38102,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Dietrich box"
   },
   {
     "guest_slug": "mark-mothersbaugh-gerald-casale",
@@ -37911,7 +38813,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -37926,7 +38831,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -37941,7 +38849,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -37956,7 +38867,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -37971,7 +38885,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -37986,7 +38903,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38001,7 +38921,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38061,7 +38984,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38076,7 +39002,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38106,7 +39035,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38121,7 +39053,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38136,7 +39071,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38151,7 +39089,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38166,7 +39107,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38181,7 +39125,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38196,7 +39143,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38211,7 +39161,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38226,7 +39179,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38241,7 +39197,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38256,7 +39215,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38271,7 +39233,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38286,7 +39251,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38301,7 +39269,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38316,7 +39287,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38331,7 +39305,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38346,7 +39323,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38361,7 +39341,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38376,7 +39359,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -38614,7 +39600,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "jane-schoenbrun",
@@ -38629,7 +39618,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "jane-schoenbrun",
@@ -38659,7 +39651,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "jane-schoenbrun",
@@ -39067,7 +40062,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Dietrich box"
   },
   {
     "guest_slug": "molly-ringwald",
@@ -39294,7 +40291,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "molly-ringwald",
@@ -41055,7 +42055,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "gregg-araki",
@@ -42358,7 +43361,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "elegance-bratton",
@@ -43571,7 +44577,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43586,7 +44595,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43616,7 +44628,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43631,7 +44646,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43646,7 +44664,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43661,7 +44682,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43676,7 +44700,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43691,7 +44718,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43706,7 +44736,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43721,7 +44754,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43736,7 +44772,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43751,7 +44790,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43766,7 +44808,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43781,7 +44826,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43796,7 +44844,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43811,7 +44862,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43826,7 +44880,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43841,7 +44898,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43856,7 +44916,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -43871,7 +44934,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Films of Agnès Varda",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
   },
   {
     "guest_slug": "sara-dosa",
@@ -44863,7 +45929,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "carl-franklin",
@@ -44878,7 +45947,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "carl-franklin",
@@ -44908,7 +45980,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "carl-franklin",
@@ -44923,7 +45998,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "carl-franklin",
@@ -44938,7 +46016,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Martin Scorsese's World Cinema Project No. 3",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
   },
   {
     "guest_slug": "carl-franklin",
@@ -46478,7 +47559,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Dietrich box"
   },
   {
     "guest_slug": "alessandro-borghi-felix-van-groeningen",
@@ -47307,7 +48390,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "gina-prince-bythewood",
@@ -47487,7 +48573,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47502,7 +48591,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47517,7 +48609,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47532,7 +48627,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47547,7 +48645,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47562,7 +48663,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -47577,7 +48681,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "john-darnielle",
@@ -48082,7 +49189,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "kim-cattrall",
@@ -48097,7 +49207,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "kim-cattrall",
@@ -48112,7 +49225,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Jacques Tati box"
   },
   {
     "guest_slug": "kim-cattrall",
@@ -48127,7 +49242,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "kim-cattrall",
@@ -48591,7 +49709,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "saul-williams",
@@ -48606,7 +49727,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "saul-williams",
@@ -49250,7 +50374,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49265,7 +50392,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49280,7 +50410,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49295,7 +50428,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49310,7 +50446,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49325,7 +50464,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49340,7 +50482,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Signifyin' Works of Marlon Riggs",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs"
   },
   {
     "guest_slug": "garrett-bradley",
@@ -49979,7 +51124,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "jenni-olson",
@@ -50009,7 +51157,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "jenni-olson",
@@ -50039,7 +51190,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "jenni-olson",
@@ -50069,7 +51223,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "jenni-olson",
@@ -50571,7 +51728,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "paul-dano",
@@ -50586,7 +51746,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "paul-dano",
@@ -50791,7 +51954,9 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Jacques Tati box"
   },
   {
     "guest_slug": "terry-gilliam",
@@ -54247,7 +55412,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "the-wolfpack",
@@ -56085,7 +57253,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56100,7 +57271,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Essential Jacques Demy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56235,7 +57409,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56250,7 +57427,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56265,7 +57445,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56280,7 +57463,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56295,7 +57481,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -56310,7 +57499,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Six Moral Tales",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales"
   },
   {
     "guest_slug": "joachim-trier",
@@ -57857,7 +59049,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "laurie-anderson",
@@ -57872,7 +59067,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Trilogy of Life",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life"
   },
   {
     "guest_slug": "laurie-anderson",
@@ -58306,7 +59504,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes"
   },
   {
     "guest_slug": "robert-downey-sr",
@@ -71878,7 +73079,10 @@
     "quote": "",
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4&t=10",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "that-one-time-five-comics-raided-the-criterion-closet",
@@ -71893,7 +73097,10 @@
     "quote": "",
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4&t=10",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "that-one-time-five-comics-raided-the-criterion-closet",
@@ -71908,7 +73115,9 @@
     "quote": "",
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4&t=10",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Jacques Tati box"
   },
   {
     "guest_slug": "that-one-time-five-comics-raided-the-criterion-closet",
@@ -71923,7 +73132,10 @@
     "quote": "",
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4&t=10",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "The Complete Jacques Tati",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati"
   },
   {
     "guest_slug": "that-one-time-five-comics-raided-the-criterion-closet",
@@ -72359,7 +73571,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "brothers-quay-criterion-closet-picks",
@@ -72389,7 +73604,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "brothers-quay-criterion-closet-picks",
@@ -72419,7 +73637,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "brothers-quay-criterion-closet-picks",
@@ -72449,7 +73670,10 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle"
   },
   {
     "guest_slug": "brothers-quay-criterion-closet-picks",

@@ -130,9 +130,10 @@ export function getFilms(): Film[] {
   const picks = getPicks();
   const pickCounts = new Map<string, number>();
   for (const p of picks) {
-    // Skip box set aggregate entries and individual box set picks with no real quote
+    // Only count picks with actual quotes
+    if (!p.quote || p.extraction_confidence === 'none') continue;
+    // Skip box set aggregate entries (they count toward the box set, not individual films)
     if (p.box_set_film_count) continue;
-    if (p.is_box_set && (!p.quote || p.extraction_confidence === 'none')) continue;
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
   }
 
@@ -227,12 +228,43 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
 
 export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | undefined })[] {
   const guests = getGuests();
-  return getPicks()
-    .filter(p => p.film_slug === filmSlug && !p.box_set_film_count && !(p.is_box_set && (!p.quote || p.extraction_confidence === 'none')))
-    .map(p => ({
-      ...p,
-      guest: guests.find(g => g.slug === p.guest_slug),
-    }));
+  const allPicks = getPicks();
+
+  // Find box set names that contain this film (from tagged individual picks)
+  const boxSetNames = new Set<string>();
+  for (const p of allPicks) {
+    if (p.film_slug === filmSlug && p.is_box_set && p.box_set_name) {
+      boxSetNames.add(p.box_set_name);
+    }
+  }
+
+  const results: Pick[] = [];
+  const seenGuests = new Set<string>();
+
+  // Direct picks with quotes for this film
+  for (const p of allPicks) {
+    if (p.film_slug !== filmSlug) continue;
+    if (p.box_set_film_count) continue; // skip aggregates (handled below)
+    if (!p.quote || p.extraction_confidence === 'none') continue; // skip no-quote
+    if (seenGuests.has(p.guest_slug)) continue;
+    seenGuests.add(p.guest_slug);
+    results.push(p);
+  }
+
+  // Aggregate box set picks with quotes (guest talked about the box set)
+  for (const p of allPicks) {
+    if (!p.box_set_film_count || !p.box_set_name) continue;
+    if (!boxSetNames.has(p.box_set_name)) continue;
+    if (!p.quote || p.extraction_confidence === 'none') continue;
+    if (seenGuests.has(p.guest_slug)) continue;
+    seenGuests.add(p.guest_slug);
+    results.push(p);
+  }
+
+  return results.map(p => ({
+    ...p,
+    guest: guests.find(g => g.slug === p.guest_slug),
+  }));
 }
 
 export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string }[] {
@@ -244,6 +276,66 @@ export function getRawPicksForGuest(guestSlug: string): { film_slug: string; fil
       film_title: p.film_title ?? '',
       guest_slug: p.guest_slug,
     }));
+}
+
+export interface BoxSetInfo {
+  name: string;
+  criterion_url: string | null;
+  guest_count: number;
+  guest_slugs: string[];
+}
+
+export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
+  const allPicks = getPicks();
+
+  // Find box set names that contain this film
+  const boxSetNames = new Set<string>();
+  const boxSetUrls = new Map<string, string>();
+  for (const p of allPicks) {
+    if (p.film_slug === filmSlug && p.is_box_set && p.box_set_name) {
+      boxSetNames.add(p.box_set_name);
+      if (!boxSetUrls.has(p.box_set_name) && p.box_set_criterion_url) {
+        boxSetUrls.set(p.box_set_name, p.box_set_criterion_url);
+      }
+    }
+  }
+
+  // Collect guests who picked the box set but have NO quote
+  // (guests with quotes are already shown in the main picks list via getPicksForFilm)
+  const byBoxSet = new Map<string, Set<string>>();
+  for (const bs of boxSetNames) {
+    const noQuoteGuests = new Set<string>();
+
+    // From aggregate picks without quotes
+    for (const p of allPicks) {
+      if (p.box_set_name === bs && p.box_set_film_count) {
+        if (p.quote && p.extraction_confidence !== 'none') continue;
+        noQuoteGuests.add(p.guest_slug);
+        if (!boxSetUrls.has(bs) && p.box_set_criterion_url) {
+          boxSetUrls.set(bs, p.box_set_criterion_url);
+        }
+      }
+    }
+
+    // From individual tagged picks without quotes
+    for (const p of allPicks) {
+      if (p.film_slug === filmSlug && p.is_box_set && p.box_set_name === bs && !p.box_set_film_count) {
+        if (p.quote && p.extraction_confidence !== 'none') continue;
+        noQuoteGuests.add(p.guest_slug);
+      }
+    }
+
+    if (noQuoteGuests.size > 0) {
+      byBoxSet.set(bs, noQuoteGuests);
+    }
+  }
+
+  return Array.from(boxSetNames).map((name) => ({
+    name,
+    criterion_url: boxSetUrls.get(name) || null,
+    guest_count: byBoxSet.get(name)?.size || 0,
+    guest_slugs: [...(byBoxSet.get(name) || [])],
+  }));
 }
 
 export function getFilmsSortedByPickCount(): Film[] {

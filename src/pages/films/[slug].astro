@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
-import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName } from '../../lib/data';
+import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug } from '../../lib/data';
 
 export function getStaticPaths() {
   const films = getFilms();
@@ -17,7 +17,10 @@ if (!film) {
   return Astro.redirect('/films/');
 }
 
-const picks = getPicksForFilm(film.slug);
+const allPicks = getPicksForFilm(film.slug);
+const directPicks = allPicks.filter(p => !p.box_set_film_count);
+const boxSetPicks = allPicks.filter(p => p.box_set_film_count);
+const boxSetInfo = getBoxSetInfoForFilm(film.slug);
 ---
 <BaseLayout title={film.title} description={`${film.title} (${film.year}) directed by ${film.director} — picked by ${film.pick_count} Criterion Closet guests.`}>
   <div class="detail-page">
@@ -49,6 +52,15 @@ const picks = getPicksForFilm(film.slug);
             {film.genres.join(' / ')}
           </p>
         )}
+        {boxSetInfo.length > 0 && boxSetInfo.map((bs) => (
+          <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+            Part of {bs.criterion_url ? (
+              <a href={bs.criterion_url} target="_blank" rel="noopener noreferrer">{bs.name}</a>
+            ) : (
+              <span>{bs.name}</span>
+            )}
+          </p>
+        ))}
         <div class="detail-links">
           {film.criterion_url && (
             <a href={film.criterion_url} target="_blank" rel="noopener noreferrer">
@@ -142,7 +154,7 @@ const picks = getPicksForFilm(film.slug);
     <h2>Picked by</h2>
 
     <div class="picks-list">
-      {picks.map((pick) => (
+      {directPicks.map((pick) => (
         <div>
           <div class="pick-guest-header">
             {pick.guest?.photo_url ? (
@@ -163,16 +175,72 @@ const picks = getPicksForFilm(film.slug);
               )}
             </div>
           </div>
-          {pick.is_box_set && pick.box_set_name && (
-            <p class="box-set-tag" style="margin-bottom: 0.25rem;">Part of {pick.box_set_name}</p>
-          )}
           <QuoteBlock
             quote={pick.quote}
             attribution={`${pick.guest?.name || pick.guest_slug}`}
-            timestampUrl={pick.youtube_timestamp_url}
+            timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
           />
         </div>
       ))}
     </div>
+
+    {boxSetInfo.map((bs) => {
+      const bsPicks = boxSetPicks.filter(p => p.box_set_name === bs.name);
+      const noQuoteGuests = bs.guest_slugs.map(s => getGuestBySlug(s)).filter(Boolean);
+      const totalBoxSetGuests = bsPicks.length + bs.guest_count;
+      return totalBoxSetGuests > 0 ? (
+        <div style="margin-top: 2rem;">
+          <h3 style="font-size: 1.1rem;">
+            Also mentioned as part of {bs.criterion_url ? (
+              <a href={bs.criterion_url} target="_blank" rel="noopener noreferrer">{bs.name}</a>
+            ) : bs.name}
+          </h3>
+          {bsPicks.length > 0 && (
+            <div class="picks-list">
+              {bsPicks.map((pick) => (
+                <div>
+                  <div class="pick-guest-header">
+                    {pick.guest?.photo_url ? (
+                      <img src={pick.guest.photo_url} alt={pick.guest.name} class="guest-photo-small" loading="lazy" />
+                    ) : (
+                      <div class="guest-initial-small">
+                        {pick.guest?.name?.charAt(0) || '?'}
+                      </div>
+                    )}
+                    <div>
+                      <a href={`/guests/${pick.guest_slug}/`} style="font-size: 1.05rem;">
+                        {pick.guest?.name || pick.guest_slug}
+                      </a>
+                      {pick.guest?.profession && (
+                        <span class="small-caps text-secondary" style="margin-left: 0.5rem; font-size: 0.85rem;">
+                          {pick.guest.profession}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <QuoteBlock
+                    quote={pick.quote}
+                    attribution={`${pick.guest?.name || pick.guest_slug}`}
+                    timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+          {noQuoteGuests.length > 0 && (
+            <details class="box-set-details" style="margin-top: 0.5rem;">
+              <summary class="text-muted">
+                {bs.guest_count} more {bs.guest_count === 1 ? 'guest' : 'guests'} picked this box set without comment
+              </summary>
+              <ul class="box-set-film-list" style="margin-top: 0.5rem;">
+                {noQuoteGuests.map((g) => (
+                  <li><a href={`/guests/${g!.slug}/`}>{g!.name}</a></li>
+                ))}
+              </ul>
+            </details>
+          )}
+        </div>
+      ) : null;
+    })}
   </div>
 </BaseLayout>
