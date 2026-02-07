@@ -22,11 +22,14 @@ const allPicks = getPicksForGuest(guest.slug);
 const picks = allPicks.filter(p => !(p.is_box_set && !p.box_set_film_count && (!p.quote || p.extraction_confidence === 'none')));
 const hasQuotes = picks.some(p => p.quote);
 
-// Fallback: load raw picks for guests without processed quotes
-const rawPicks = picks.length === 0 ? getRawPicksForGuest(guest.slug).map(rp => ({
-  ...rp,
-  film: getFilmBySlug(rp.film_slug),
-})) : [];
+// Load raw picks not already covered by processed picks (e.g. multi-visit guests where only one visit has quotes)
+const processedFilmSlugs = new Set(picks.map(p => p.film_slug));
+const rawPicks = getRawPicksForGuest(guest.slug)
+  .filter(rp => !processedFilmSlugs.has(rp.film_slug))
+  .map(rp => ({
+    ...rp,
+    film: getFilmBySlug(rp.film_slug),
+  }));
 
 const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
 
@@ -135,15 +138,15 @@ const allCriterionUrls = isMultiVisit
       </div>
     ) : null}
 
-    <h2>{picks.length || rawPicks.length} Picks</h2>
+    <h2>{picks.length + rawPicks.length} Picks</h2>
 
-    {!hasQuotes && picks.length > 0 && (
+    {!hasQuotes && picks.length > 0 && rawPicks.length === 0 && (
       <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
         No transcript data available for this episode. Films from Letterboxd list:
       </p>
     )}
 
-    {picks.length > 0 ? (
+    {picks.length > 0 && (
       <div class="picks-list">
         {picks.map((pick) => (
           <div>
@@ -234,11 +237,20 @@ const allCriterionUrls = isMultiVisit
           </div>
         ))}
       </div>
-    ) : rawPicks.length > 0 ? (
+    )}
+
+    {rawPicks.length > 0 && (
       <div class="picks-list">
-        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-          No transcript data available for this episode. Films from Letterboxd list:
-        </p>
+        {picks.length > 0 && (
+          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Additional picks from Letterboxd:
+          </p>
+        )}
+        {picks.length === 0 && (
+          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+            No transcript data available for this episode. Films from Letterboxd list:
+          </p>
+        )}
         {rawPicks.map((rp) => (
           <div class="pick-with-poster">
             <a href={`/films/${rp.film_slug}/`} style="border-bottom: none;">
@@ -268,7 +280,9 @@ const allCriterionUrls = isMultiVisit
           </div>
         ))}
       </div>
-    ) : (
+    )}
+
+    {picks.length === 0 && rawPicks.length === 0 && (
       <p class="text-muted">No picks data available for this guest.</p>
     )}
   </div>
