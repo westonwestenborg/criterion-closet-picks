@@ -31,6 +31,7 @@ export interface Film {
   tmdb_url: string | null;
   poster_url: string | null;
   pick_count: number;
+  is_box_set?: boolean;
   credits?: {
     directors: { name: string; tmdb_id: number }[];
     writers: { name: string; tmdb_id: number }[];
@@ -46,6 +47,7 @@ export interface Pick {
   quote: string;
   start_timestamp_seconds: number;
   youtube_timestamp_url: string;
+  vimeo_timestamp_url?: string;
   extraction_confidence: 'high' | 'medium' | 'low' | 'none';
   is_box_set?: boolean;
   box_set_name?: string;
@@ -72,6 +74,7 @@ function normalizePicks(raw: any[]): Pick[] {
     quote: p.quote ?? '',
     start_timestamp_seconds: p.start_timestamp_seconds ?? p.start_timestamp ?? 0,
     youtube_timestamp_url: p.youtube_timestamp_url ?? '',
+    vimeo_timestamp_url: p.vimeo_timestamp_url ?? undefined,
     extraction_confidence: p.extraction_confidence ?? 'none',
     is_box_set: p.is_box_set ?? false,
     box_set_name: p.box_set_name ?? undefined,
@@ -100,6 +103,7 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       tmdb_url: f.tmdb_id ? `https://www.themoviedb.org/movie/${f.tmdb_id}` : null,
       poster_url: f.poster_url ?? null,
       pick_count: f.pick_count ?? pickCounts.get(slug) ?? 0,
+      is_box_set: f.is_box_set ?? false,
       credits: f.credits ?? undefined,
     };
   });
@@ -140,11 +144,21 @@ export function getFilms(): Film[] {
   const allFilms = normalizeFilms(raw, pickCounts);
 
   // If loading from full catalog (1000+ entries), filter to only picked films
+  // Exclude box sets unless they're referenced as individual films (not aggregates)
+  const individualFilmSlugs = new Set(
+    picks.filter((p) => !p.box_set_film_count).map((p) => p.film_slug)
+  );
   if (allFilms.length > 500) {
     const pickedSlugs = new Set(picks.map((p) => p.film_slug));
-    _films = allFilms.filter((f) => pickedSlugs.has(f.slug));
+    _films = allFilms.filter((f) => {
+      if (!pickedSlugs.has(f.slug)) return false;
+      if ((f.is_box_set || f.criterion_url?.includes('/boxsets/')) && !individualFilmSlugs.has(f.slug)) return false;
+      return true;
+    });
   } else {
-    _films = allFilms;
+    _films = allFilms.filter((f) =>
+      !(f.is_box_set || f.criterion_url?.includes('/boxsets/')) || individualFilmSlugs.has(f.slug)
+    );
   }
   return _films;
 }
@@ -177,14 +191,38 @@ export function getFilmBySlug(slug: string): Film | undefined {
   return getFilms().find(f => f.slug === slug);
 }
 
+// Cache for box set catalog entries (excluded from getFilms() but needed for poster lookup)
+let _boxSetFilms: Film[] | null = null;
+function getBoxSetFilms(): Film[] {
+  if (_boxSetFilms) return _boxSetFilms;
+  const raw = loadRawJSON('criterion_catalog.json');
+  const pickCounts = new Map<string, number>();
+  _boxSetFilms = normalizeFilms(raw, pickCounts).filter(
+    (f) => f.is_box_set || f.criterion_url?.includes('/boxsets/')
+  );
+  return _boxSetFilms;
+}
+
 export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
   const films = getFilms();
+  const boxSetFilms = getBoxSetFilms();
   return getPicks()
     .filter(p => p.guest_slug === guestSlug)
-    .map(p => ({
-      ...p,
-      film: films.find(f => f.slug === p.film_slug),
-    }));
+    .map(p => {
+      let film: Film | undefined;
+      // For box set aggregate picks, look up the box set catalog entry (for poster/metadata)
+      if (p.box_set_film_count) {
+        if (p.box_set_criterion_url) {
+          film = boxSetFilms.find(f => f.criterion_url === p.box_set_criterion_url);
+        }
+        if (!film && p.box_set_name) {
+          film = boxSetFilms.find(f => f.title === p.box_set_name);
+        }
+      } else {
+        film = films.find(f => f.slug === p.film_slug);
+      }
+      return { ...p, film };
+    });
 }
 
 export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | undefined })[] {

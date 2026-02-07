@@ -81,13 +81,14 @@ def build_film_info(picks: list[dict], picks_raw: list[dict]) -> dict[str, dict]
 def make_synthetic_entry(film_id: str, meta: dict) -> dict:
     """Create a catalog entry for a film not in the original catalog."""
     title = meta.get("film_title") or meta.get("catalog_title") or film_id.replace("-", " ").title()
-    return {
+    url = meta.get("criterion_film_url", "")
+    entry = {
         "spine_number": meta.get("catalog_spine"),
         "title": title,
         "director": "",
         "year": meta.get("film_year"),
         "country": "",
-        "criterion_url": meta.get("criterion_film_url", ""),
+        "criterion_url": url,
         "film_id": film_id,
         "imdb_id": None,
         "tmdb_id": None,
@@ -95,6 +96,9 @@ def make_synthetic_entry(film_id: str, meta: dict) -> dict:
         "poster_url": None,
         "credits": None,
     }
+    if "/boxsets/" in url:
+        entry["is_box_set"] = True
+    return entry
 
 
 def main() -> None:
@@ -131,6 +135,16 @@ def main() -> None:
             propagated += 1
 
     log(f"Propagated criterion_url to {propagated} catalog entries")
+
+    # --- Task 3: Flag box set entries ---
+    flagged = 0
+    for entry in catalog:
+        url = entry.get("criterion_url", "") or ""
+        if "/boxsets/" in url and not entry.get("is_box_set"):
+            entry["is_box_set"] = True
+            flagged += 1
+    if flagged:
+        log(f"Flagged {flagged} catalog entries as is_box_set")
 
     # --- Save ---
     save_json(CATALOG_FILE, catalog)

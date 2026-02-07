@@ -3,16 +3,17 @@
 Group box set films into single entries per guest.
 
 Detection methods:
-1. Catalog parenthetical annotations (e.g., "Aparajito (Apu Trilogy)")
-2. Known large box sets defined by film title lists
-3. Consecutive-run heuristic: 5+ consecutive films in a guest's list that
-   share the same catalog-annotated box set name
+1. Picks already tagged with is_box_set/box_set_name from scrapers
+2. Catalog parenthetical annotations (e.g., "Aparajito (Apu Trilogy)")
+3. Known large box sets defined by film title lists
 
-When a guest has multiple films from the same box set:
-- Creates ONE box set entry with is_box_set=True
-- Films the guest specifically discussed (has a high/medium confidence quote)
-  stay as separate entries too, tagged with box_set_name
-- The box set entry aggregates the undiscussed films
+When a guest picked a box set as a unit (film_title == box_set_name):
+- Converted to an aggregate entry with quote preserved
+- box_set_film_count set from catalog/raw data or inferred from name
+
+When a guest picked individual films from a box set:
+- Films with high/medium confidence quotes stay as separate entries
+- Remaining films are collapsed into one aggregate entry
 
 Usage:
   python scripts/group_box_sets.py                  # Group box sets in picks.json
@@ -28,16 +29,14 @@ sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.par
 from scripts.utils import (
     CATALOG_FILE,
     PICKS_FILE,
+    PICKS_RAW_FILE,
     load_json,
     save_json,
     log,
 )
 
-# Minimum number of films to trigger consecutive-run box set detection
-RUN_THRESHOLD = 5
-
 # Known large box sets: title -> list of film titles
-# These are detected by matching film titles in a guest's picks
+# Supplemental to catalog annotations for sets with many films
 KNOWN_BOX_SETS = {
     "Ingmar Bergman's Cinema": [
         "Crisis", "A Ship to India", "Port of Call", "Thirst", "To Joy",
@@ -60,32 +59,76 @@ KNOWN_BOX_SETS = {
         "The Clowns", "Roma", "Amarcord", "And the Ship Sails On",
         "Intervista",
     ],
-    "Five Films by Cassavetes": [
+    "John Cassavetes: Five Films": [
         "Shadows", "Faces", "A Woman Under the Influence",
         "The Killing of a Chinese Bookie", "Opening Night",
     ],
+    "Godzilla: The Showa-Era Films, 1954\u20131975": [
+        "Godzilla", "Godzilla Raids Again", "King Kong vs. Godzilla",
+        "Mothra vs. Godzilla", "Ghidorah, the Three-Headed Monster",
+        "Invasion of Astro-Monster", "Ebirah, Horror of the Deep",
+        "Son of Godzilla", "Destroy All Monsters", "All Monsters Attack",
+        "Godzilla vs. Hedorah", "Godzilla vs. Gigan", "Godzilla vs. Megalon",
+        "Godzilla vs. Mechagodzilla", "Terror of Mechagodzilla",
+    ],
 }
 
-# Known Criterion box set URLs
-KNOWN_BOX_SET_URLS = {
-    "Ingmar Bergman's Cinema": "https://www.criterion.com/boxsets/2575-ingmar-bergman-s-cinema",
-    "Essential Fellini": "https://www.criterion.com/boxsets/2839-essential-fellini",
-    "Apu Trilogy": "https://www.criterion.com/boxsets/1702-the-apu-trilogy",
-    "Jacques Demy box": "https://www.criterion.com/boxsets/1477-the-essential-jacques-demy",
-    "The BRD Trilogy": "https://www.criterion.com/boxsets/389-the-brd-trilogy",
-    "A Film Trilogy by Ingmar Bergman": "https://www.criterion.com/boxsets/393-a-film-trilogy-by-ingmar-bergman",
-    "Roberto Rossellini's War Trilogy": "https://www.criterion.com/boxsets/1265-roberto-rossellini-s-war-trilogy",
-    "The Three Colors Trilogy": "https://www.criterion.com/boxsets/1538-three-colors",
-    "The Before Trilogy": "https://www.criterion.com/boxsets/2164-the-before-trilogy",
-    "Wim Wenders box": "https://www.criterion.com/boxsets/1872-wim-wenders-road-trilogy",
-    "Five Films by Cassavetes": "https://www.criterion.com/boxsets/298-five-films-by-john-cassavetes",
-    "World Cinema Project": "https://www.criterion.com/boxsets/1519-martin-scorsese-s-world-cinema-project",
-    "Fanny and Alexander Box Set": "https://www.criterion.com/films/28561-fanny-and-alexander",
-    "Melvin Van Peebles: Four Films box": "https://www.criterion.com/boxsets/3206-melvin-van-peebles-four-films",
-    "Monte Hellman set": "https://www.criterion.com/boxsets/1470-monte-hellman-two-by-two",
-    "Dietrich box": "https://www.criterion.com/boxsets/2320-dietrich-von-sternberg-in-hollywood",
-    "Marseille Trilogy": "https://www.criterion.com/boxsets/2182-the-marseille-trilogy",
-}
+
+def normalize_smart_quotes(text: str) -> str:
+    """Replace smart quotes with straight quotes."""
+    if not text:
+        return text
+    return (
+        text.replace("\u2018", "'")
+        .replace("\u2019", "'")
+        .replace("\u201c", '"')
+        .replace("\u201d", '"')
+    )
+
+
+def infer_film_count_from_name(name: str) -> int | None:
+    """Try to infer film count from box set name patterns."""
+    lower = name.lower()
+    word_to_num = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
+                   "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+
+    m = re.search(r"(\d+)\s+films?\b", lower)
+    if m:
+        return int(m.group(1))
+    for word, num in word_to_num.items():
+        if re.search(rf"\b{word}\s+films?\b", lower):
+            return num
+
+    if "trilogy" in lower:
+        return 3
+    if "double feature" in lower:
+        return 2
+
+    for word, num in word_to_num.items():
+        if lower.startswith(word + " "):
+            return num
+    m = re.match(r"(\d+)\s+", lower)
+    if m:
+        return int(m.group(1))
+
+    if "/" in name and "eclipse" not in lower:
+        parts = [p.strip() for p in name.split("/") if p.strip()]
+        if 2 <= len(parts) <= 3:
+            return len(parts)
+
+    return None
+
+
+def build_url_map(picks_raw: list[dict]) -> dict[str, str]:
+    """Build box_set_name -> criterion URL map from picks_raw.json."""
+    url_map: dict[str, str] = {}
+    for p in picks_raw:
+        url = p.get("criterion_film_url", "")
+        title = normalize_smart_quotes(p.get("film_title", ""))
+        if "/boxsets/" in url and title:
+            if title not in url_map:
+                url_map[title] = url
+    return url_map
 
 
 def extract_box_set_name(catalog_title: str) -> str | None:
@@ -95,7 +138,7 @@ def extract_box_set_name(catalog_title: str) -> str | None:
         name = m.group(1)
         box_keywords = ["trilogy", "box", "set", "double feature", "cinema project", "films"]
         if any(kw in name.lower() for kw in box_keywords):
-            return name
+            return normalize_smart_quotes(name)
     return None
 
 
@@ -126,12 +169,16 @@ def detect_box_set_for_pick(
     known_title_map: dict[str, str],
 ) -> str | None:
     """Determine if a pick belongs to a box set. Returns box set name or None."""
-    # Method 1: catalog annotation
+    # Already tagged by scrapers
+    if pick.get("is_box_set") and pick.get("box_set_name"):
+        return normalize_smart_quotes(pick["box_set_name"])
+
+    # Catalog annotation
     film_id = pick.get("film_id", "")
     if film_id in catalog_map:
         return catalog_map[film_id]
 
-    # Method 2: known box set by title
+    # Known box set by title
     film_title = pick.get("film_title", "").lower()
     if film_title in known_title_map:
         return known_title_map[film_title]
@@ -143,42 +190,63 @@ def group_picks_for_guest(
     guest_picks: list[dict],
     catalog_map: dict[str, str],
     known_title_map: dict[str, str],
+    url_map: dict[str, str],
+    catalog_by_id: dict[str, dict],
 ) -> list[dict]:
     """
     Group a guest's picks, collapsing box set films into single entries.
     Films with high/medium confidence quotes stay as separate entries.
+    Unit picks (film_title == box_set_name) become aggregates with quotes preserved.
     """
-    # Tag each pick with its box set (if any)
-    box_set_groups = defaultdict(list)
-    standalone_picks = []
+    box_set_groups: dict[str, list[dict]] = defaultdict(list)
+    standalone_picks: list[dict] = []
 
     for pick in guest_picks:
         box_set_name = detect_box_set_for_pick(pick, catalog_map, known_title_map)
+        ft = normalize_smart_quotes(pick.get("film_title", ""))
+
+        # Unit pick: guest picked the whole box set
+        if box_set_name and ft == box_set_name:
+            pick["is_box_set"] = True
+            pick["box_set_name"] = box_set_name
+            # Already an aggregate or convert to one
+            if not pick.get("box_set_film_count"):
+                count = infer_film_count_from_name(box_set_name)
+                pick["box_set_film_count"] = count or -1
+            # Propagate URL
+            if not pick.get("box_set_criterion_url"):
+                url = url_map.get(box_set_name)
+                if not url:
+                    fid = pick.get("film_id", "")
+                    if fid in catalog_by_id:
+                        cat_url = catalog_by_id[fid].get("criterion_url", "")
+                        if "/boxsets/" in cat_url:
+                            url = cat_url
+                if url:
+                    pick["box_set_criterion_url"] = url
+            # Quote is preserved (not cleared)
+            standalone_picks.append(pick)
+            continue
 
         has_quote = bool(pick.get("quote", "").strip())
         has_confidence = pick.get("extraction_confidence") in ("high", "medium")
 
         if box_set_name and not (has_quote and has_confidence):
-            # Part of a box set, not individually discussed -> group
             box_set_groups[box_set_name].append(pick)
         else:
-            # Keep as standalone
             if box_set_name:
                 pick["is_box_set"] = True
                 pick["box_set_name"] = box_set_name
             standalone_picks.append(pick)
 
-    # Only create box set summary entries if we actually grouped films
-    # (if threshold not met, put them back as standalone)
+    # Create aggregate entries for grouped films
     for box_set_name, grouped_picks in box_set_groups.items():
         if len(grouped_picks) < 2:
-            # Not enough to justify grouping, keep as standalone
             standalone_picks.extend(grouped_picks)
             continue
 
         film_titles = [p.get("film_title", "") for p in grouped_picks]
 
-        # Use the first pick as template for the box set entry
         template = grouped_picks[0].copy()
         template["is_box_set"] = True
         template["box_set_name"] = box_set_name
@@ -189,14 +257,43 @@ def group_picks_for_guest(
         template["extraction_confidence"] = "none"
         template["youtube_timestamp_url"] = ""
 
-        # Criterion URL for this box set
-        box_url = KNOWN_BOX_SET_URLS.get(box_set_name)
-        if box_url:
-            template["box_set_criterion_url"] = box_url
+        url = url_map.get(box_set_name)
+        if url:
+            template["box_set_criterion_url"] = url
 
         standalone_picks.append(template)
 
-    return standalone_picks
+    # Merge duplicate box set entries (unit pick + collapsed aggregate for same set)
+    seen_box_sets: dict[str, int] = {}
+    merged_picks: list[dict] = []
+    for pick in standalone_picks:
+        bs_name = pick.get("box_set_name")
+        if bs_name and pick.get("box_set_film_count"):
+            if bs_name in seen_box_sets:
+                # Merge into the existing entry
+                existing = merged_picks[seen_box_sets[bs_name]]
+                # Keep the quote from whichever has one
+                if not existing.get("quote") and pick.get("quote"):
+                    existing["quote"] = pick["quote"]
+                    existing["start_timestamp"] = pick.get("start_timestamp", 0)
+                    existing["extraction_confidence"] = pick.get("extraction_confidence", "none")
+                    for url_key in ("youtube_timestamp_url", "vimeo_timestamp_url"):
+                        if pick.get(url_key):
+                            existing[url_key] = pick[url_key]
+                # Take the higher film count (collapsed count is more accurate than -1)
+                if (pick.get("box_set_film_count") or 0) > (existing.get("box_set_film_count") or 0):
+                    existing["box_set_film_count"] = pick["box_set_film_count"]
+                # Combine film titles
+                if pick.get("box_set_film_titles") and not existing.get("box_set_film_titles"):
+                    existing["box_set_film_titles"] = pick["box_set_film_titles"]
+                # Take URL if missing
+                if not existing.get("box_set_criterion_url") and pick.get("box_set_criterion_url"):
+                    existing["box_set_criterion_url"] = pick["box_set_criterion_url"]
+                continue
+            seen_box_sets[bs_name] = len(merged_picks)
+        merged_picks.append(pick)
+
+    return merged_picks
 
 
 def main():
@@ -206,14 +303,18 @@ def main():
 
     catalog = load_json(CATALOG_FILE)
     picks = load_json(PICKS_FILE)
+    picks_raw = load_json(PICKS_RAW_FILE)
 
     if not picks:
         log("No picks to process")
         return
 
     catalog_map = build_catalog_box_set_map(catalog)
+    catalog_by_id = {c["film_id"]: c for c in catalog}
     known_title_map = build_known_box_set_map()
+    url_map = build_url_map(picks_raw)
     log(f"Catalog-annotated: {len(catalog_map)} films, Known box sets: {len(known_title_map)} films")
+    log(f"URL map: {len(url_map)} box set URLs from picks_raw")
 
     # Group by guest
     picks_by_guest = defaultdict(list)
@@ -225,14 +326,14 @@ def main():
 
     for guest_slug, guest_picks in picks_by_guest.items():
         before_count = len(guest_picks)
-        grouped = group_picks_for_guest(guest_picks, catalog_map, known_title_map)
+        grouped = group_picks_for_guest(guest_picks, catalog_map, known_title_map, url_map, catalog_by_id)
         after_count = len(grouped)
         collapsed = before_count - after_count
 
         if collapsed > 0:
             total_collapsed += collapsed
             box_sets_found = [
-                f"{p['box_set_name']} ({p['box_set_film_count']} films)"
+                f"{p['box_set_name']} ({p.get('box_set_film_count', '?')} films)"
                 for p in grouped
                 if p.get("is_box_set") and p.get("box_set_film_count")
             ]

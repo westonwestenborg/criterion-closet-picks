@@ -245,7 +245,8 @@ def main():
     guests_to_process = []
     for guest in guests:
         slug = guest["slug"]
-        video_id = guest.get("youtube_video_id")
+        video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
+        video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
         guest_picks = picks_by_guest.get(slug, [])
 
         if not video_id:
@@ -279,7 +280,8 @@ def main():
 
     for guest, guest_picks, transcript_path in tqdm(guests_to_process, desc="Extracting quotes"):
         slug = guest["slug"]
-        video_id = guest["youtube_video_id"]
+        video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
+        video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
         log(f"  Processing {guest['name']} ({len(guest_picks)} picks)")
 
         # Load transcript
@@ -314,9 +316,14 @@ def main():
                 pick["start_timestamp"] = quote_match["start_timestamp"]
                 pick["extraction_confidence"] = quote_match["confidence"]
                 if video_id and quote_match["start_timestamp"]:
-                    pick["youtube_timestamp_url"] = (
-                        f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
-                    )
+                    if video_source == "vimeo":
+                        pick["vimeo_timestamp_url"] = (
+                            f"https://vimeo.com/{video_id}#t={quote_match['start_timestamp']}s"
+                        )
+                    else:
+                        pick["youtube_timestamp_url"] = (
+                            f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
+                        )
 
             # Update existing picks index
             key = (slug, title)

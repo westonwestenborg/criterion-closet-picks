@@ -25,6 +25,22 @@ for (const guest of guests) {
   markdown += `\n\n`;
 
   for (const pick of guestPicks) {
+    // Box set aggregate entries
+    if (pick.box_set_film_count) {
+      const countStr = pick.box_set_film_count > 0 ? ` (${pick.box_set_film_count} films)` : '';
+      markdown += `- **${pick.box_set_name}**${countStr} [Box Set]`;
+      if (pick.box_set_criterion_url) markdown += ` - [Criterion](${pick.box_set_criterion_url})`;
+      markdown += `\n`;
+      if (pick.quote) {
+        markdown += `  > "${pick.quote}"\n`;
+        if (pick.youtube_timestamp_url) {
+          markdown += `  [Watch this moment](${pick.youtube_timestamp_url})\n`;
+        }
+      }
+      markdown += `\n`;
+      continue;
+    }
+
     const film = films.find(f => f.slug === pick.film_slug);
     if (!film) continue;
 

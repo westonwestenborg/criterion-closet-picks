@@ -133,7 +133,34 @@ def main():
             step_num,
         ))
 
-    # Step 6: Enrich via TMDB
+    # Step 6: Backfill missing films + propagate URLs + flag box sets
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Backfill Films & Propagate URLs",
+            [python, str(SCRIPTS_DIR / "backfill_films.py")],
+            step_num,
+        ))
+
+    # Step 7: Group box set films
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Group Box Set Films",
+            [python, str(SCRIPTS_DIR / "group_box_sets.py")],
+            step_num,
+        ))
+
+    # Step 8: Scrape box set images (only for entries missing posters)
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Scrape Box Set Images",
+            [python, str(SCRIPTS_DIR / "scrape_box_set_images.py")],
+            step_num,
+        ))
+
+    # Step 9: Enrich via TMDB
     step_num += 1
     if not args.skip_enrich and args.from_step <= step_num:
         steps.append((
@@ -142,7 +169,7 @@ def main():
             step_num,
         ))
 
-    # Step 7: Validate
+    # Step 10: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

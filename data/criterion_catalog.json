@@ -8587,12 +8587,13 @@
     "director": "",
     "year": null,
     "country": "",
-    "criterion_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy",
+    "criterion_url": "https://www.criterion.com/boxsets/138-the-brd-trilogy",
     "film_id": "the-brd-trilogy",
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1945-23da7bdafe273dbec66ce60e6dd58658/V5oY4ZalkXBF5sf9sEHmGPVjlZjmps_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 204,
@@ -8960,7 +8961,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1938-86e4176cc4262e3524935d83d5870456/4hx4crqXk77qBf3SJxMwbw6Mz2sDUg_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 209,
@@ -10786,8 +10788,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2055-c9812d001708a6e844bc16be4b7c5d16/DcMM1I3Mce4WYCzldIxjVA8JxwJudD_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 233,
@@ -11358,7 +11361,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1871-b497c6ca9fe76597e465ae063f33cf92/ZOLgPj9zTnYgjLm6sE0LHOBVKS9aAT_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 242,
@@ -12098,7 +12102,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1872-a1193fec634c922ab53d68f8c156ee20/En2M1rQdo8KTHEDM6IF3wCzKIDV7GU_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 251,
@@ -12896,7 +12901,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1879-ddf9f0d1ce4179a8d951c0d9565fd7b6/p9zD6ZURSPmDBhod3yL2aDID2gMRQD_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 262,
@@ -19462,7 +19468,8 @@
           "character": "Sam"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 343,
@@ -21226,7 +21233,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1874-1783a5b7ab030641aab494f13c026174/ahGfceaQ9idYzYJHUy4cVjH4aRnxZo_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 365,
@@ -23077,7 +23085,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1863-d6916651f0f3ead148ffd869331459b7/oQoeqXYr3XiuO5vvu3J6PphWl19PlW_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 388,
@@ -25292,7 +25301,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1856-70cb6699a8cee4d1285949a3f86c813d/NxYyVlcajs0ng5eCLjUz0H5LgGSk7Z_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 419,
@@ -29652,7 +29662,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1855-d1af5d0a5e3d807a317f3cc4e9c52f38/vdPxhXhBYsJOygUcZ3XqUkDiS3dZOl_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 472,
@@ -31845,7 +31856,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1852-f20e8f5bdc458777cda90775598ef89c/G2jPTXWEYclcKFXC7LYWoNEj5D7V7l_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 501,
@@ -32477,7 +32489,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1851-dba6177f0bd538f868c12a4c87760e83/tLbF78x2hqXHJGqSbQ5j7qW9izcNvg_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 509,
@@ -33194,7 +33207,8 @@
       "cinematographers": [],
       "editors": [],
       "cast": []
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 519,
@@ -33915,7 +33929,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1844-c9cb634fa3b22393408e64804c4b045c/u8zW5OazrYxQD3wNBZLu8H9zaj8mTx_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 529,
@@ -37940,7 +37955,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1843-6e179857a2b22f6fff1aee72814e6e1f/ucDdSNidzRCUS9xrmSXHu8tdlizbxG_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 579,
@@ -38931,7 +38947,8 @@
           "character": "Record Dealer"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 591,
@@ -39980,7 +39997,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1840-088af0518384d0cd3ade371a9be9adad/HA6lPFqR7TccJBZskcnpzNd3SgtQAz_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 604,
@@ -42182,7 +42200,7 @@
     "genres": [
       "Documentary"
     ],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1839-b0e33c60c0fef04ebd79f8b275c00439/0z4n2qVrtfnIckCIIHgJmQHaXzQR5g_large.jpg",
     "credits": {
       "directors": [
         {
@@ -42199,7 +42217,8 @@
       "cinematographers": [],
       "editors": [],
       "cast": []
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 632,
@@ -42784,8 +42803,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1837-6d63f856dbe4a02bd6c8e0fb5705faf0/WElxowomsGYQjFojxmDr1GWbnfPgXq_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 640,
@@ -44160,7 +44180,8 @@
           "character": "Self"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 656,
@@ -45524,7 +45545,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1832-5224e9ac2c95fb1ffa85d5fd11ddef38/6gMrpMnUAzE3BYCL3Zs6wRKUzyNZLM_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 673,
@@ -48527,7 +48549,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1827-340d95a9dc4160151fad3b6ee59da757/g1SkfwOWOBrY9ryHCbnk9w9KcU5iJW_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 714,
@@ -49349,7 +49372,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1826-74abafd9cdfb81dc87d1738ec3c99693/VZ6wkU3rR5LF2srqIn918sRLIBPOl8_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 730,
@@ -53195,7 +53219,8 @@
           "character": "Self"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 783,
@@ -55599,7 +55624,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1773-3e4219a9f27e8402b68c2d685584258a/qVsCeiFh9PYaWkZhYXFAMnpoAI0MUF_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 814,
@@ -63995,7 +64021,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1913-aa161a0f125c18e184c759f4e6fa4d86/ne8EBMDiHqGQ5vJDvaBUV6wzuwbT3d_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 931,
@@ -69161,7 +69188,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1953-0d1595bafe2ba6d32c5f5e1bc6215555/bG4INWRMocURqMHZl7ZgyVgw1O47Tx_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1001,
@@ -70296,7 +70324,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1956-0767cdadbf8c0578f1b4f81605aa41c6/MYbyvbiii831cGR0Uq3QJe7VCzheKq_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1017,
@@ -71749,7 +71778,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1957-f90d4c48a2f932ffe7df386499f9477e/73k4EkSiXEfsdi097fieFBGdb39vlg_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1037,
@@ -74982,8 +75012,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2057-0346dd3f7bff4745d911c8b0be776a60/v6oy4a3LuTk6JN5NCdlz7LOhbe1qnX_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 1081,
@@ -75175,14 +75206,15 @@
     "imdb_id": null,
     "tmdb_id": 1499711,
     "genres": [],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1979-b50ddf05e790d45f0d3452882a1c5104/Yz5hb3zePSR6H1BFKoUnt0dQHSxzSj_large.jpg",
     "credits": {
       "directors": [],
       "writers": [],
       "cinematographers": [],
       "editors": [],
       "cast": []
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": 1083,
@@ -82473,7 +82505,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2022-fd54c40083a2873609bbba1a92d9b2e6/QZZJB3HQoa7RPubci7i5t2c471gU8U_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1187,
@@ -82658,7 +82691,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2070-45ba7005cee5d86f3d398045d47c04ae/nlM7OBVZLrLsZE5IWRKpRHvpmh67jy_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1190,
@@ -82983,7 +83017,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2030-ba7eefa3ad5a2a35a6f5275ed961aba8/hOZoF4bCF7IzDcERWmpFpAgST1yAxY_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1195,
@@ -83165,7 +83200,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2035-00397dc6a40239b317f24adf0c86b430/55pTNrIGtsH7uG8kEDAoe9PZu76jZu_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1198,
@@ -83554,7 +83590,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2042-2f7db434e5c209b4ee1cd9f076605cba/ZadPfeme4Y97VAeWUh4j0Yn8jJfjus_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1204,
@@ -83738,7 +83775,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2047-1ab3d6ac27a9108676d9f0bfc7fd598c/PmRRgkyht2tDRV1jbOi6F8V7mAlKby_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1207,
@@ -84655,7 +84693,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2052-ba01382dd60c8332caec522da182b732/csDyqiAqrOJgCze9HjJXZR4sJdi6yF_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1218,
@@ -90538,7 +90577,8 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1961-3b7b159a9ae3d500459e38e69c96a917/9P9MeXzolFQyY5OhK2XcwZ02e0Y0ZC_large.jpg",
+    "is_box_set": true
   },
   {
     "spine_number": 1297,
@@ -94096,8 +94136,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1864-79581df36332f7a1f027b81311c9e0f9/j8fKXLhpRU7m0dGwebBdwZLgrXaO26_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -94244,8 +94285,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1880-d84b68ccfdfdb7ef19d89946ab43b5cb/XxW9C5BcXk4DjYmbLD9UBavXz6xwa0_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99489,8 +99531,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1787-b0c0c8cb24d6733eadfa012453ea8076/XsYEpttZ77keADoQ0wqmXPgNX7Lb7k_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99503,8 +99546,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1916-dfbddaafe1aff758946babd2864c09b5/GKwtbmlAN9QlTf7n6KeyUHD1L88ZzH_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99517,8 +99561,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1944-5a7d21b7e4f89930b67e3804e42ff1b5/IhmrJ9KB68dQtY9ejACUGeDfs0b9BW_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99531,8 +99576,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1778-b9b79b1b4fb9fe3ac2fe668420267eec/2kV3166j2XTHS3wGEDCK4JeCRXqzM8_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99545,8 +99591,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1799-fcaac95edb35eab1748fd0aa854780a9/uv1on3L75tq2TTgNYXA1xJJMo4tbSi_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99559,8 +99606,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1800-f100e87b531cd636a626ca5ba0cfc68f/LyPLSTAelMNwm5qImS7wgCpOZVthhM_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99573,8 +99621,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1801-f20f53bb95aa5f59c515e4ee49da6b9a/6qXfc82MIMrd3BPizcOOdvAgk7LkrV_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99587,8 +99636,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1802-0b6ef2ca0e60aa1698b7a2fc348d7d5c/Wdi6a0lzldizjlpRV2l8C5AxMUbnt9_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99601,8 +99651,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1805-20ea90ca5dd4192605c8592660180de0/mD3Hcvh7QvvNLghVU3Ba1T74LZ4YRB_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99615,8 +99666,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1779-889dd689f449e84385c45e50a557fdd3/qBw2xZtx2JP3mRP1gv7mAldOH5cnde_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99629,8 +99681,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1806-35b06113390d41a36d70ffe8de10aa12/eLhsC5N4a1JC3PhUkaT0Im806G2oqL_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99643,8 +99696,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1807-e9ce4851ff3adf87a31f37a65e9db390/FCDO0zQT8T0oT5QPB7tUs8IP0DvEqR_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99657,8 +99711,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1809-a4a8b84c4cbcababe9073629fd726b50/S4JbdHupEZur0VszttgXmG8hjRdrG2_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99671,8 +99726,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1781-c1a9cab8c217f2548be90ed2a4f82591/AEzOAcQoH6LkVsoBEmkX3jWIcbBjRJ_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99685,8 +99741,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2114-e7917f3044ca2eb266180e9c884d12a3/r0D3bVbgZlBj3F5r0ijqkaSTqsRuYH_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -99699,8 +99756,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1785-ea36640f37f5031e401e5c2606f2d3e3/lcgS1E1uR77UUNHEn5iQQQfSoWEr6m_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -100397,8 +100455,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1970-d88f2a72d695ba37007f5bfe1edbcbd9/rzzMOoJGbRuzPAk7LD9GjUJ1AiPtVp_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -103357,8 +103416,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2062-3dec234579713afc97637fac6435f122/FTh01r10Eke6ESEc9Qln3Yisc386RY_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -104564,7 +104624,8 @@
           "character": "Self"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -105578,8 +105639,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1929-4d592bff5abc636d45619dfd6d997edd/tKFKOgGoH5bF64n2r7YLfezGOkZBvO_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -107413,8 +107475,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2011-56152184b016c544d3f61f96fcef75fe/Zj0fvEob29WzDReklwonasnoK0piqt_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -109247,8 +109310,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2051-2e5878dbf42dbc3bc38a366ea7edfe69/DbHGtYWgXdQOMYs9kIUCkl6I3kPift_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -109298,8 +109362,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2009-46bc1ecea630ef7b76a3e80d470a2030/6EX3I9CYEVUjkZHbjDanM9LFPqGhBq_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 111,
@@ -112711,8 +112776,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2021-e9a488654dbd7efec099b42a1e2fe9cb/rqIQUOw8U3ShHLe8PLAq7PEh9PVNgx_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -113657,7 +113723,8 @@
           "character": "Policeman"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -114479,7 +114546,8 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -116406,14 +116474,15 @@
     "imdb_id": null,
     "tmdb_id": 1533099,
     "genres": [],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2018-d520eca5b1cb982d9024d513aa2b9923/wcCz67EYijqwFUBu5e6pd5HyimhqwC_large.jpg",
     "credits": {
       "directors": [],
       "writers": [],
       "cinematographers": [],
       "editors": [],
       "cast": []
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -118319,8 +118388,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1958-60bad70091eaab48ce960c49b1f07d94/zQHE891LazZ0Sw7jE3PnOSXsdP3yew_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -118333,8 +118403,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1845-db3c5bcb75d32e794daaab2880a9cefc/oRg21cXVbdpJhR5WR3oZFrGDkJXY37_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 146,
@@ -118845,7 +118916,8 @@
           "character": "Self"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -120463,7 +120535,8 @@
           "character": "Lee Sum Yee"
         }
       ]
-    }
+    },
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -121689,8 +121762,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2039-5159ae10de718a98162dd5477f1f03df/3ypqxNpO5CYzhOFtphfmaQVhvSEI2M_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -122176,8 +122250,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1825-04e3d2d4acd7c045eac391acab04c475/B0mzfrIweiO9rb6yExev2yDv2VNgM8_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -123201,8 +123276,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2085-51259520a591e486478292d7c44d25ed/vTjIL84GfnnUQPTOxsv6pDReCUHiCH_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -123818,8 +123894,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2093-7f75c27677afcda7208391225569ba24/ogZZlkwdgtYBc7is2AyO8fqN2TivW0_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": 189,
@@ -124407,8 +124484,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1971-8bf270dbda2ba38f701838f9b6fb9588/DCb7MEVHrWs8er62Ch9mVNgMnYkZB2_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -124421,8 +124499,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2015-486ad5f4e00146f32a621a56550213f9/OxH8iQUS4kUbBV2SSNnb8S7TkGsDiT_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -126939,8 +127018,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1974-30add17a73e2f15da4d8134bd4b540c8/cavn6hiKSTnZl3w0DnPvHDk7jQ61CR_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -127146,8 +127226,9 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
-    "credits": null
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2074-edf13269086937f56523999060b6c2e4/uHEOVxOpnDB7l8Wpxi1nUEt66D5IUd_large.jpg",
+    "credits": null,
+    "is_box_set": true
   },
   {
     "spine_number": null,
@@ -129119,5 +129200,106 @@
         }
       ]
     }
+  },
+  {
+    "spine_number": null,
+    "title": "Carl Th. Dreyer: My Metier",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "carl-th-dreyer-my-metier",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Carl Theodor Dreyer",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/254-carl-theodor-dreyer",
+    "film_id": "carl-theodor-dreyer",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Eclipse Series 14: Rossellini’s History Films—Renaissance and Enlightenment",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/582-eclipse-series-14-rossellini-s-history-films-renaissance-and-enlightenment",
+    "film_id": "eclipse-series-14-rossellinis-history-filmsrenaissance-and-enlightenment",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Eclipse Series 32: Pearls of the Czech New Wave",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/870-eclipse-series-32-pearls-of-the-czech-new-wave",
+    "film_id": "eclipse-series-32-pearls-of-the-czech-new-wave",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Godzilla vs. Gigan",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "godzilla-vs-gigan",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Lynch/Oz",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "lynchoz",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Trouble in Paradise",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "trouble-in-paradise",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
   }
 ]

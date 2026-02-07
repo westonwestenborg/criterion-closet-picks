@@ -30,7 +30,7 @@ const rawPicks = picks.length === 0 ? getRawPicksForGuest(guest.slug).map(rp => 
 
 const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
 ---
-<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${guest.pick_count} films picked.`}>
+<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length || rawPicks.length} films picked.`}>
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (
@@ -94,7 +94,7 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
       </div>
     ) : null}
 
-    <h2>{guest.pick_count} Picks</h2>
+    <h2>{picks.length || rawPicks.length} Picks</h2>
 
     {!hasQuotes && picks.length > 0 && (
       <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
@@ -107,27 +107,50 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
         {picks.map((pick) => (
           <div>
             {pick.box_set_film_count ? (
-              <div class="pick-film-info">
+              <div class="pick-with-poster">
                 {pick.box_set_criterion_url ? (
-                  <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
-                    {pick.box_set_name}
+                  <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
+                    {pick.film?.poster_url ? (
+                      <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                    ) : null}
                   </a>
-                ) : (
-                  <span class="pick-film-title">{pick.box_set_name}</span>
-                )}
-                <span class="pick-film-meta">
-                  {' '}&mdash; {pick.box_set_film_count} films
-                </span>
-                {pick.box_set_film_titles && (
-                  <details class="box-set-details">
-                    <summary class="text-muted">Show films</summary>
-                    <ul class="box-set-film-list">
-                      {pick.box_set_film_titles.map((title: string) => (
-                        <li>{title}</li>
-                      ))}
-                    </ul>
-                  </details>
-                )}
+                ) : pick.film?.poster_url ? (
+                  <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                ) : null}
+                <div class="pick-content">
+                  <div class="pick-film-info">
+                    {pick.box_set_criterion_url ? (
+                      <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+                        {pick.box_set_name}
+                      </a>
+                    ) : (
+                      <span class="pick-film-title">{pick.box_set_name}</span>
+                    )}
+                    {pick.box_set_film_count > 0 && (
+                      <span class="pick-film-meta">
+                        {' '}&mdash; {pick.box_set_film_count} films
+                      </span>
+                    )}
+                    <span class="box-set-tag">Box Set</span>
+                    {pick.box_set_film_titles && (
+                      <details class="box-set-details">
+                        <summary class="text-muted">Show films</summary>
+                        <ul class="box-set-film-list">
+                          {pick.box_set_film_titles.map((title: string) => (
+                            <li>{title}</li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </div>
+                  {pick.quote && (
+                    <QuoteBlock
+                      quote={pick.quote}
+                      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                      hideAttribution={true}
+                    />
+                  )}
+                </div>
               </div>
             ) : (
               <div class="pick-with-poster">
@@ -160,19 +183,12 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
                   {pick.quote && (
                     <QuoteBlock
                       quote={pick.quote}
-                      timestampUrl={pick.youtube_timestamp_url}
+                      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
                       hideAttribution={true}
                     />
                   )}
                 </div>
               </div>
-            )}
-            {pick.box_set_film_count > 0 && pick.quote && (
-              <QuoteBlock
-                quote={pick.quote}
-                timestampUrl={pick.youtube_timestamp_url}
-                hideAttribution={true}
-              />
             )}
           </div>
         ))}
