@@ -2,6 +2,15 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 // Types matching the frontend expectations
+export interface GuestVisit {
+  youtube_video_id: string | null;
+  youtube_video_url: string | null;
+  vimeo_video_id: string | null;
+  episode_date: string | null;
+  letterboxd_list_url: string | null;
+  criterion_page_url: string | null;
+}
+
 export interface Guest {
   name: string;
   slug: string;
@@ -14,6 +23,8 @@ export interface Guest {
   letterboxd_list_url: string;
   criterion_page_url: string | null;
   pick_count: number;
+  visits?: GuestVisit[];
+  guest_type?: 'person' | 'group' | 'character' | 'event';
 }
 
 export interface Film {

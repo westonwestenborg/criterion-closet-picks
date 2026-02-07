@@ -19,9 +19,21 @@ for (const guest of guests) {
 
   markdown += `## ${guest.name} (${guest.profession})\n`;
   markdown += `Episode: ${episodeYear}`;
-  if (guest.youtube_video_url) markdown += ` | [Full Video](${guest.youtube_video_url})`;
-  if (guest.letterboxd_list_url) markdown += ` | [Letterboxd](${guest.letterboxd_list_url})`;
-  if (guest.criterion_page_url) markdown += ` | [Criterion Page](${guest.criterion_page_url})`;
+
+  const guestVisits = (guest as any).visits as any[] | undefined;
+  if (guestVisits && guestVisits.length >= 2) {
+    for (let vi = 0; vi < guestVisits.length; vi++) {
+      const v = guestVisits[vi];
+      const vLabel = `Visit ${vi + 1}`;
+      if (v.youtube_video_url) markdown += ` | [${vLabel} Video](${v.youtube_video_url})`;
+      else if (v.youtube_video_id) markdown += ` | [${vLabel} Video](https://www.youtube.com/watch?v=${v.youtube_video_id})`;
+      if (v.letterboxd_list_url) markdown += ` | [${vLabel} Letterboxd](${v.letterboxd_list_url})`;
+    }
+  } else {
+    if (guest.youtube_video_url) markdown += ` | [Full Video](${guest.youtube_video_url})`;
+    if (guest.letterboxd_list_url) markdown += ` | [Letterboxd](${guest.letterboxd_list_url})`;
+    if (guest.criterion_page_url) markdown += ` | [Criterion Page](${guest.criterion_page_url})`;
+  }
   markdown += `\n\n`;
 
   for (const pick of guestPicks) {

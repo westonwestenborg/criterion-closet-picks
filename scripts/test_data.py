@@ -165,5 +165,87 @@ class TestFilmPageLinks(unittest.TestCase):
         )
 
 
+class TestNoDuplicateVideoIds(unittest.TestCase):
+    """No two guests should share the same YouTube video ID."""
+
+    def test_no_duplicate_video_ids(self):
+        """Each youtube_video_id should appear at most once across guests."""
+        video_map: dict[str, list[str]] = {}
+        for g in guests:
+            vid = g.get("youtube_video_id")
+            if vid:
+                video_map.setdefault(vid, []).append(g["slug"])
+        dupes = {vid: slugs for vid, slugs in video_map.items() if len(slugs) > 1}
+        self.assertEqual(
+            dupes, {},
+            f"Duplicate youtube_video_id assignments:\n"
+            + "\n".join(f"  {vid}: {slugs}" for vid, slugs in dupes.items()),
+        )
+
+
+class TestNoNameArtifacts(unittest.TestCase):
+    """Guest names should not contain scraping artifacts."""
+
+    def test_no_name_artifacts(self):
+        """No person guest name should contain 'Closet', 'Criterion', or 'Picks'."""
+        bad = [
+            f"{g['name']} ({g['slug']})"
+            for g in guests
+            if g.get("guest_type", "person") == "person"
+            and any(word in g["name"] for word in ["Closet", "Criterion", "Picks"])
+        ]
+        self.assertEqual(
+            bad, [],
+            f"Guests with name artifacts:\n" + "\n".join(bad),
+        )
+
+
+class TestNoRepeatVisitSuffixes(unittest.TestCase):
+    """Guest names should not contain visit markers."""
+
+    def test_no_repeat_visit_suffixes(self):
+        """No guest name should contain '(2nd Visit)', '(3rd Visit)', etc."""
+        import re
+        bad = [
+            f"{g['name']} ({g['slug']})"
+            for g in guests
+            if re.search(r"\(\d+\w+\s+Visit\)", g["name"])
+        ]
+        self.assertEqual(
+            bad, [],
+            f"Guests with repeat visit suffixes:\n" + "\n".join(bad),
+        )
+
+
+class TestPickCountAccuracy(unittest.TestCase):
+    """Guest pick counts should match actual picks in data files."""
+
+    def test_pick_count_accuracy(self):
+        """pick_count should match the number of picks for each guest."""
+        picks_count: dict[str, int] = {}
+        for p in picks:
+            slug = p["guest_slug"]
+            picks_count[slug] = picks_count.get(slug, 0) + 1
+
+        raw_count: dict[str, int] = {}
+        for p in picks_raw:
+            slug = p["guest_slug"]
+            raw_count[slug] = raw_count.get(slug, 0) + 1
+
+        mismatches = []
+        for g in guests:
+            slug = g["slug"]
+            actual = picks_count.get(slug, raw_count.get(slug, 0))
+            declared = g.get("pick_count", 0)
+            if actual != declared:
+                mismatches.append(
+                    f"{g['name']} ({slug}): declared={declared}, actual={actual}"
+                )
+        self.assertEqual(
+            mismatches, [],
+            f"pick_count mismatches:\n" + "\n".join(mismatches),
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

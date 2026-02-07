@@ -29,6 +29,18 @@ const rawPicks = picks.length === 0 ? getRawPicksForGuest(guest.slug).map(rp => 
 })) : [];
 
 const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
+
+// Multi-visit support
+const visits = guest.visits ?? [];
+const isMultiVisit = visits.length >= 2;
+
+// Gather all unique links from visits (or fall back to top-level)
+const allLetterboxdUrls = isMultiVisit
+  ? visits.map(v => v.letterboxd_list_url).filter(Boolean) as string[]
+  : [guest.letterboxd_list_url].filter(Boolean) as string[];
+const allCriterionUrls = isMultiVisit
+  ? visits.map(v => v.criterion_page_url).filter(Boolean) as string[]
+  : [guest.criterion_page_url].filter(Boolean) as string[];
 ---
 <BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length || rawPicks.length} films picked.`}>
   <div class="detail-page">
@@ -51,7 +63,7 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
           </p>
         )}
         <div class="detail-links">
-          {guest.youtube_video_url ? (
+          {!isMultiVisit && (guest.youtube_video_url ? (
             <a href={guest.youtube_video_url} target="_blank" rel="noopener noreferrer">
               Full Video
             </a>
@@ -59,22 +71,51 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
             <a href={`https://vimeo.com/${guest.vimeo_video_id}`} target="_blank" rel="noopener noreferrer">
               Full Video
             </a>
-          ) : null}
-          {guest.letterboxd_list_url && (
-            <a href={guest.letterboxd_list_url} target="_blank" rel="noopener noreferrer">
-              Letterboxd List
+          ) : null)}
+          {allLetterboxdUrls.map((url, i) => (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {allLetterboxdUrls.length > 1 ? `Letterboxd (Visit ${i + 1})` : 'Letterboxd List'}
             </a>
-          )}
-          {guest.criterion_page_url && (
-            <a href={guest.criterion_page_url} target="_blank" rel="noopener noreferrer">
-              Criterion Page
+          ))}
+          {allCriterionUrls.map((url, i) => (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {allCriterionUrls.length > 1 ? `Criterion (Visit ${i + 1})` : 'Criterion Page'}
             </a>
-          )}
+          ))}
         </div>
       </div>
     </div>
 
-    {guest.youtube_video_id ? (
+    {isMultiVisit ? (
+      visits.filter(v => v.youtube_video_id || v.vimeo_video_id).map((visit, i) => {
+        const visitYear = visit.episode_date ? new Date(visit.episode_date).getFullYear() : null;
+        const label = visitYear ? `Visit ${i + 1} (${visitYear})` : `Visit ${i + 1}`;
+        return (
+          <div>
+            <h3>{label}</h3>
+            {visit.youtube_video_id ? (
+              <div class="video-embed">
+                <iframe
+                  src={`https://www.youtube.com/embed/${visit.youtube_video_id}`}
+                  title={`${guest.name} - ${label}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            ) : visit.vimeo_video_id ? (
+              <div class="video-embed">
+                <iframe
+                  src={`https://player.vimeo.com/video/${visit.vimeo_video_id}`}
+                  title={`${guest.name} - ${label}`}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            ) : null}
+          </div>
+        );
+      })
+    ) : guest.youtube_video_id ? (
       <div class="video-embed">
         <iframe
           src={`https://www.youtube.com/embed/${guest.youtube_video_id}`}
