@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchBar from '../components/SearchBar.astro';
-import { getStats } from '../lib/data';
+import GuestCard from '../components/GuestCard.astro';
+import { getStats, getRecentGuests } from '../lib/data';
 
 const stats = getStats();
+const recentGuests = getRecentGuests(3);
 ---
 <BaseLayout title="Closet Picks">
   <h1>Closet Picks</h1>
@@ -30,11 +32,20 @@ const stats = getStats();
 
   <SearchBar />
 
+  <h2>Recent Guests</h2>
+  <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+    {recentGuests.map((guest) => (
+      <GuestCard
+        name={guest.name}
+        slug={guest.slug}
+        profession={guest.profession}
+        photoUrl={guest.photo_url}
+        pickCount={guest.pick_count}
+      />
+    ))}
+  </div>
+
   <div class="quick-links">
-    <a href="/guests/" class="quick-link">Browse Guests</a>
-    <a href="/films/" class="quick-link">Browse Films</a>
-    <a href="/most-popular/" class="quick-link">Most Popular</a>
     <a href="/random/" class="quick-link">Random Pick</a>
-    <a href="/llm-export/" class="quick-link">LLM Export</a>
   </div>
 </BaseLayout>

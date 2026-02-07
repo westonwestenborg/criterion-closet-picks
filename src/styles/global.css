@@ -115,7 +115,7 @@ a:hover {
 
 /* Cards */
 .card {
-  background: #fff;
+  background: #fffff8;
   border: 1px solid #e0e0d8;
   padding: 1.5rem;
   transition: border-color 0.2s ease;
@@ -299,7 +299,7 @@ blockquote p {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid #e0e0d8;
-  background: #fff;
+  background: #fffff8;
   color: #111;
   outline: none;
   transition: border-color 0.2s ease;
@@ -360,7 +360,7 @@ blockquote p {
   letter-spacing: 0.05em;
   padding: 0.5rem 1rem;
   border: 1px solid #e0e0d8;
-  background: #fff;
+  background: #fffff8;
   color: #111;
   text-decoration: none;
   border-bottom: 1px solid #e0e0d8;
@@ -629,7 +629,7 @@ blockquote p {
 }
 
 .llm-export pre {
-  background: #fff;
+  background: #fffff8;
   border: 1px solid #e0e0d8;
   padding: 1.5rem;
   overflow-x: auto;

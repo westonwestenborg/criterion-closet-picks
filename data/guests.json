@@ -48,7 +48,7 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/denis-villeneuves-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/771-denis-villeneuve-s-closet-picks",
-    "pick_count": 19,
+    "pick_count": 33,
     "vimeo_video_id": null
   },
   {
@@ -87,7 +87,7 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charli-xcxs-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/924-charli-xcx-s-closet-picks",
-    "pick_count": 4,
+    "pick_count": 8,
     "vimeo_video_id": null
   },
   {
@@ -166,19 +166,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jodie-fosters-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/920-jodie-foster-s-closet-picks",
     "pick_count": 36,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Charli xcx’s Criterion Closet Picks",
-    "slug": "charli-xcxs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charli-xcxs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 4,
     "vimeo_video_id": null
   },
   {
@@ -273,8 +260,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Mary Steenburgen and Ted Danson’s Criterion Closet Picks",
-    "slug": "mary-steenburgen-and-ted-dansons-criterion-closet-picks",
+    "name": "Mary Steenburgen and Ted Danson",
+    "slug": "mary-steenburgen-and-ted-danson",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "SpX9zqU9YI8",
@@ -286,8 +273,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Guillermo del Toro's Second Criterion Closet Picks",
-    "slug": "guillermo-del-toros-second-criterion-closet-picks",
+    "name": "Guillermo del Toro (2nd Visit)",
+    "slug": "guillermo-del-toros-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -377,8 +364,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Yorgos Lanthimos' Second Criterion Closet Picks",
-    "slug": "yorgos-lanthimos-second-criterion-closet-picks",
+    "name": "Yorgos Lanthimos (2nd Visit)",
+    "slug": "yorgos-lanthimos-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -403,8 +390,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Ari Aster's Second Criterion Closet Picks",
-    "slug": "ari-asters-second-criterion-closet-picks",
+    "name": "Ari Aster (2nd Visit)",
+    "slug": "ari-asters-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -520,21 +507,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Claire Danes' Criterion Closet Picks",
-    "slug": "claire-danes-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/claire-danes-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Edgar Wright's Second Criterion Closet Picks",
-    "slug": "edgar-wrights-second-criterion-closet-picks",
+    "name": "Edgar Wright (2nd Visit)",
+    "slug": "edgar-wrights-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -598,8 +572,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Benny Safdie's Second Criterion Closet Picks",
-    "slug": "benny-safdies-second-criterion-closet-picks",
+    "name": "Benny Safdie (2nd Visit)",
+    "slug": "benny-safdies-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -611,8 +585,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Tracy Letts' Criterion Closet Picks",
-    "slug": "tracy-letts-criterion-closet-picks",
+    "name": "Tracy Letts",
+    "slug": "tracy-letts",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -621,32 +595,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/tracy-letts-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 16,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ethel Cain’s Criterion Closet Picks",
-    "slug": "ethel-cains-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ethel-cains-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Luca Guadagnino’s Criterion Closet Picks",
-    "slug": "luca-guadagninos-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/luca-guadagninos-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -715,32 +663,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Mark Duplass' Criterion Closet Picks",
-    "slug": "mark-duplass-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/mark-duplass-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 21,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Jay Duplass' Criterion Closet Picks",
-    "slug": "jay-duplass-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jay-duplass-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 5,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Alicia Silverstone",
     "slug": "alicia-silverstone",
     "profession": "actor",
@@ -767,19 +689,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Wyclef Jean’s Criterion Closet Picks",
-    "slug": "wyclef-jeans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/wyclef-jeans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Judd Apatow",
     "slug": "judd-apatow",
     "profession": "director",
@@ -790,19 +699,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/judd-apatows-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/865-judd-apatow-s-closet-picks",
     "pick_count": 19,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Kristin Scott Thomas’ Criterion Closet Picks",
-    "slug": "kristin-scott-thomas-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/kristin-scott-thomas-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 18,
     "vimeo_video_id": null
   },
   {
@@ -858,19 +754,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Jamie Lee Curtis' Criterion Closet Picks",
-    "slug": "jamie-lee-curtis-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jamie-lee-curtis-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Margaret Qualley",
     "slug": "margaret-qualley",
     "profession": "actor",
@@ -881,32 +764,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/margaret-qualleys-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/860-margaret-qualley-s-closet-picks",
     "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Joseph Kosinski’s Criterion Closet Picks",
-    "slug": "joseph-kosinskis-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/joseph-kosinskis-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ronan Farrow’s Criterion Closet Picks",
-    "slug": "ronan-farrows-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ronan-farrows-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 7,
     "vimeo_video_id": null
   },
   {
@@ -1001,19 +858,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Daniels' Criterion Closet Picks",
-    "slug": "daniels-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "ZpZXgO_3vN4",
-    "youtube_video_url": "https://www.youtube.com/watch?v=ZpZXgO_3vN4",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/daniels-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 31,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Alicia Malone",
     "slug": "alicia-malone",
     "profession": "actor",
@@ -1092,19 +936,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Paul W. Downs' Criterion Closet Picks",
-    "slug": "paul-w-downs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/paul-w-downs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 5,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Lena Dunham",
     "slug": "lena-dunham",
     "profession": "director",
@@ -1157,8 +988,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "François Girard’s Criterion Closet Picks",
-    "slug": "francois-girards-criterion-closet-picks",
+    "name": "François Girard",
+    "slug": "francois-girard",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1166,7 +997,7 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/francois-girards-criterion-closet-picks/",
     "criterion_page_url": null,
-    "pick_count": 16,
+    "pick_count": 26,
     "vimeo_video_id": null
   },
   {
@@ -1209,8 +1040,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Seth Myers' Criterion Closet Picks",
-    "slug": "seth-myers-criterion-closet-picks",
+    "name": "Seth Myers",
+    "slug": "seth-myers",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1261,8 +1092,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Michael Cera's Second Criterion Closet Picks",
-    "slug": "michael-ceras-second-criterion-closet-picks",
+    "name": "Michael Cera (2nd Visit)",
+    "slug": "michael-ceras-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1300,19 +1131,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Diego Luna’s Criterion Closet Picks",
-    "slug": "diego-lunas-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/diego-lunas-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 11,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Natasha Lyonne",
     "slug": "natasha-lyonne",
     "profession": "actor",
@@ -1323,19 +1141,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/natasha-lyonnes-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/820-natasha-lyonne-s-closet-picks",
     "pick_count": 37,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Aimee Lou Wood’s Criterion Closet Picks",
-    "slug": "aimee-lou-woods-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/aimee-lou-woods-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 11,
     "vimeo_video_id": null
   },
   {
@@ -1378,8 +1183,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Joel Potrykus' Criterion Closet Picks",
-    "slug": "joel-potrykus-criterion-closet-picks",
+    "name": "Joel Potrykus",
+    "slug": "joel-potrykus",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1443,8 +1248,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Franklin Leonard’s Criterion Closet Picks",
-    "slug": "franklin-leonards-criterion-closet-picks",
+    "name": "Franklin Leonard",
+    "slug": "franklin-leonard",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1482,8 +1287,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Griffin Dunne's Second Criterion Closet Picks",
-    "slug": "griffin-dunnes-second-criterion-closet-picks",
+    "name": "Griffin Dunne (2nd Visit)",
+    "slug": "griffin-dunnes-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1495,8 +1300,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Hans Zimmer’s Criterion Closet Picks",
-    "slug": "hans-zimmers-criterion-closet-picks",
+    "name": "Hans Zimmer",
+    "slug": "hans-zimmer",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1505,19 +1310,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/hans-zimmers-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 25,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Alain Guiraudie’s Criterion Closet Picks",
-    "slug": "alain-guiraudies-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/alain-guiraudies-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 8,
     "vimeo_video_id": null
   },
   {
@@ -1586,19 +1378,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Azazel Jacobs' Criterion Closet Picks",
-    "slug": "azazel-jacobs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/azazel-jacobs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Brady Corbet",
     "slug": "brady-corbet",
     "profession": "actor",
@@ -1625,8 +1404,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Todd Haynes' Criterion Closet Picks",
-    "slug": "todd-haynes-criterion-closet-picks",
+    "name": "Todd Haynes",
+    "slug": "todd-haynes",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1635,19 +1414,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/todd-haynes-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 21,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Zeinabu irene Davis’s Criterion Closet Picks",
-    "slug": "zeinabu-irene-daviss-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/zeinabu-irene-daviss-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 19,
     "vimeo_video_id": null
   },
   {
@@ -1677,8 +1443,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "John David Washington & Malcolm Washington’s Criterion Closet Picks",
-    "slug": "john-david-washington-malcolm-washingtons-criterion-closet-picks",
+    "name": "John David Washington & Malcolm Washington",
+    "slug": "john-david-washington-malcolm-washington",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "-Tc0JZz6hFM",
@@ -1716,32 +1482,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Payal Kapadia’s Criterion Closet Picks",
-    "slug": "payal-kapadias-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/payal-kapadias-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 46,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Gints Zilbalodis' Criterion Closet Picks",
-    "slug": "gints-zilbalodis-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/gints-zilbalodis-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Mikey Madison",
     "slug": "mikey-madison",
     "profession": "actor",
@@ -1755,21 +1495,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "RaMell Ross' Criterion Closet Picks",
-    "slug": "ramell-ross-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ramell-ross-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 24,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Isabelle Huppert's Second Criterion Closet Picks",
-    "slug": "isabelle-hupperts-second-criterion-closet-picks",
+    "name": "Isabelle Huppert (2nd Visit)",
+    "slug": "isabelle-hupperts-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1778,19 +1505,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/isabelle-hupperts-second-criterion-closet/",
     "criterion_page_url": null,
     "pick_count": 15,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Nathalie Emmanuel’s Criterion Closet Picks",
-    "slug": "nathalie-emmanuels-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/nathalie-emmanuels-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 9,
     "vimeo_video_id": null
   },
   {
@@ -1859,8 +1573,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "James Watkins' Criterion Closet Picks",
-    "slug": "james-watkins-criterion-closet-picks",
+    "name": "James Watkins",
+    "slug": "james-watkins",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1898,8 +1612,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Mackenzie Davis' Criterion Closet Picks",
-    "slug": "mackenzie-davis-criterion-closet-picks",
+    "name": "Mackenzie Davis",
+    "slug": "mackenzie-davis",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -1937,19 +1651,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Denis Villeneuve’s Criterion Closet Picks",
-    "slug": "denis-villeneuves-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/denis-villeneuves-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 14,
-    "vimeo_video_id": null
-  },
-  {
     "name": "JT Mollner",
     "slug": "jt-mollner",
     "profession": "director",
@@ -1963,8 +1664,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "India Donaldson and Lily Collias' Criterion Closet Picks",
-    "slug": "india-donaldson-and-lily-collias-criterion-closet-picks",
+    "name": "India Donaldson and Lily Collias",
+    "slug": "india-donaldson-and-lily-collias",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2012,32 +1713,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/tatsuya-fujis-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 2,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Francis Ford Coppola’s Criterion Closet Picks",
-    "slug": "francis-ford-coppolas-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/francis-ford-coppolas-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 14,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ken Burns' Criterion Closet Picks",
-    "slug": "ken-burns-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ken-burns-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 20,
     "vimeo_video_id": null
   },
   {
@@ -2106,8 +1781,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Barry Jenkins' Second Criterion Closet Picks",
-    "slug": "barry-jenkins-second-criterion-closet-picks",
+    "name": "Barry Jenkins (2nd Visit)",
+    "slug": "barry-jenkins-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2158,8 +1833,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Robert Eggers’ Criterion Closet Picks",
-    "slug": "robert-eggers-criterion-closet-picks",
+    "name": "Robert Eggers",
+    "slug": "robert-eggers",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2184,21 +1859,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Jacques Audiard’s Criterion Closet Picks",
-    "slug": "jacques-audiards-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jacques-audiards-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 22,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Pablo Larraín’s Criterion Closet Picks",
-    "slug": "pablo-larrains-criterion-closet-picks",
+    "name": "Pablo Larraín",
+    "slug": "pablo-larran",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2207,19 +1869,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/pablo-larrains-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 17,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Walter Salles' Criterion Closet Picks",
-    "slug": "walter-salles-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "std013XVxSk",
-    "youtube_video_url": "https://www.youtube.com/watch?v=std013XVxSk",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/walter-salles-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
     "vimeo_video_id": null
   },
   {
@@ -2249,8 +1898,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Andrew Stanton’s Criterion Closet Picks",
-    "slug": "andrew-stantons-criterion-closet-picks",
+    "name": "Andrew Stanton",
+    "slug": "andrew-stanton",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2272,19 +1921,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/barry-levinsons-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 11,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Norman Reedus' Criterion Closet Picks",
-    "slug": "norman-reedus-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/norman-reedus-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 41,
     "vimeo_video_id": null
   },
   {
@@ -2327,19 +1963,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Jason Schwartzman’s Criterion Closet Picks",
-    "slug": "jason-schwartzmans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jason-schwartzmans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 16,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Hideo Kojima",
     "slug": "hideo-kojima",
     "profession": "cinematographer",
@@ -2363,19 +1986,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/patton-oswalts-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 9,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Julio Torres' Criterion Closet Picks",
-    "slug": "julio-torres-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/julio-torres-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 13,
     "vimeo_video_id": null
   },
   {
@@ -2457,8 +2067,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Mark Bridges’ Criterion Closet Picks",
-    "slug": "mark-bridges-criterion-closet-picks",
+    "name": "Mark Bridges",
+    "slug": "mark-bridges",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2480,45 +2090,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/luis-guzmans-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/585--luis-guzman-s-closet-picks",
     "pick_count": 7,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Alden Ehrenreich’s Criterion Closet Picks",
-    "slug": "alden-ehrenreichs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/alden-ehrenreichs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 19,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Rosine Mbakam’s Criterion Closet Picks",
-    "slug": "rosine-mbakams-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/rosine-mbakams-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 5,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Nuri Bilge Ceylan’s Criterion Closet Picks",
-    "slug": "nuri-bilge-ceylans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/nuri-bilge-ceylans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 54,
     "vimeo_video_id": null
   },
   {
@@ -2574,34 +2145,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Matteo Garrone’s Criterion Closet Picks",
-    "slug": "matteo-garrones-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/matteo-garrones-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Brit Marling and Zal Batmanglij’s Criterion Closet Picks",
-    "slug": "brit-marling-and-zal-batmanglijs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "1gRDJYgoYd4",
-    "youtube_video_url": "https://www.youtube.com/watch?v=1gRDJYgoYd4",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/brit-marling-and-zal-batmanglijs-criterion/",
-    "criterion_page_url": null,
-    "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Lila Avilés’ Criterion Closet Picks",
-    "slug": "lila-aviles-criterion-closet-picks",
+    "name": "Lila Avilés",
+    "slug": "lila-aviles",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2609,12 +2154,12 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/lila-aviles-criterion-closet-picks/",
     "criterion_page_url": null,
-    "pick_count": 9,
+    "pick_count": 16,
     "vimeo_video_id": null
   },
   {
-    "name": "Hlynur Pálmason’s Criterion Closet Picks",
-    "slug": "hlynur-palmasons-criterion-closet-picks",
+    "name": "Hlynur Pálmason",
+    "slug": "hlynur-palmason",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2622,7 +2167,7 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/hlynur-palmasons-criterion-closet-picks/",
     "criterion_page_url": null,
-    "pick_count": 11,
+    "pick_count": 21,
     "vimeo_video_id": null
   },
   {
@@ -2639,8 +2184,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Gael García Bernal’s Criterion Closet Picks",
-    "slug": "gael-garcia-bernals-criterion-closet-picks",
+    "name": "Gael García Bernal",
+    "slug": "gael-garca-bernal",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2662,32 +2207,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ben-gibbards-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/638-ben-gibbards-s-closet-picks",
     "pick_count": 18,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Dan Levy’s Criterion Closet Picks",
-    "slug": "dan-levys-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/dan-levys-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Charles Melton’s Criterion Closet Picks",
-    "slug": "charles-meltons-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charles-meltons-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -2873,21 +2392,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Lee Daniels' Criterion Closet Picks",
-    "slug": "lee-daniels-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "ZpZXgO_3vN4",
-    "youtube_video_url": "https://www.youtube.com/watch?v=ZpZXgO_3vN4",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/lee-daniels-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 21,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Janelle Monáe’s Criterion Closet Picks",
-    "slug": "janelle-monaes-criterion-closet-picks",
+    "name": "Janelle Monáe",
+    "slug": "janelle-monae",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2895,7 +2401,7 @@
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/janelle-monaes-criterion-closet-picks/",
     "criterion_page_url": null,
-    "pick_count": 5,
+    "pick_count": 10,
     "vimeo_video_id": null
   },
   {
@@ -2964,8 +2470,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Bill Hader's Second Criterion Closet Picks",
-    "slug": "bill-haders-second-criterion-closet-picks",
+    "name": "Bill Hader (2nd Visit)",
+    "slug": "bill-haders-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -2990,19 +2496,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Jeremy Thomas' Criterion Closet Picks",
-    "slug": "jeremy-thomas-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jeremy-thomas-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 16,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Viggo Mortensen",
     "slug": "viggo-mortensen",
     "profession": "actor",
@@ -3013,19 +2506,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/viggo-mortensens-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 12,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Bill and Turner Ross' Criterion Closet Picks",
-    "slug": "bill-and-turner-ross-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/bill-and-turner-ross-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 39,
     "vimeo_video_id": null
   },
   {
@@ -3068,8 +2548,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Lynne Sachs' Criterion Closet Picks",
-    "slug": "lynne-sachs-criterion-closet-picks",
+    "name": "Lynne Sachs",
+    "slug": "lynne-sachs",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3117,19 +2597,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/john-greysons-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Jeremy O. Harris' Criterion Closet Picks",
-    "slug": "jeremy-o-harris-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/jeremy-o-harris-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 22,
     "vimeo_video_id": null
   },
   {
@@ -3198,8 +2665,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Caitlin Cronenberg Criterion Closet Picks",
-    "slug": "caitlin-cronenberg-criterion-closet-picks",
+    "name": "Caitlin Cronenberg",
+    "slug": "caitlin-cronenberg",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3211,8 +2678,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Justin Kuritzkes' Criterion Closet Picks",
-    "slug": "justin-kuritzkes-criterion-closet-picks",
+    "name": "Justin Kuritzkes",
+    "slug": "justin-kuritzkes",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3263,8 +2730,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Ryusuke Hamaguchi’s Criterion Closet Picks",
-    "slug": "ryusuke-hamaguchis-criterion-closet-picks",
+    "name": "Ryusuke Hamaguchi",
+    "slug": "ryusuke-hamaguchi",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3302,19 +2769,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Kyle MacLachlan’s Criterion Closet Picks",
-    "slug": "kyle-maclachlans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/kyle-maclachlans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 7,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Kerry Condon",
     "slug": "kerry-condon",
     "profession": "actor",
@@ -3341,19 +2795,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Bertrand Bonello’s Criterion Closet Picks",
-    "slug": "bertrand-bonellos-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/bertrand-bonellos-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Ena Sendijarević",
     "slug": "ena-sendijarevic",
     "profession": "director",
@@ -3367,8 +2808,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Yong-man Kim' Criterion Closet Picks",
-    "slug": "yong-man-kim-criterion-closet-picks",
+    "name": "Yong-man Kim",
+    "slug": "yong-man-kim",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3380,8 +2821,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Frederick Elmes' Criterion Closet Picks",
-    "slug": "frederick-elmes-criterion-closet-picks",
+    "name": "Frederick Elmes",
+    "slug": "frederick-elmes",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3432,8 +2873,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Wim Wenders' Second Criterion Closet Picks",
-    "slug": "wim-wenders-second-criterion-closet-picks",
+    "name": "Wim Wenders (2nd Visit)",
+    "slug": "wim-wenders-second",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "6dXSH9n2aC4",
@@ -3445,8 +2886,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Wim Wenders' Criterion Closet Picks",
-    "slug": "wim-wenders-criterion-closet-picks",
+    "name": "Wim Wenders",
+    "slug": "wim-wenders",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "6dXSH9n2aC4",
@@ -3549,8 +2990,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Zelda Williams' Criterion Closet Picks",
-    "slug": "zelda-williams-criterion-closet-picks",
+    "name": "Zelda Williams",
+    "slug": "zelda-williams",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -3783,19 +3224,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Lav Diaz' Criterion Closet Picks",
-    "slug": "lav-diaz-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/lav-diaz-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 2,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Guy Nattiv",
     "slug": "guy-nattiv",
     "profession": "director",
@@ -4017,8 +3445,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Oliver Hermanus' Criterion Closet Picks",
-    "slug": "oliver-hermanus-criterion-closet-picks",
+    "name": "Oliver Hermanus",
+    "slug": "oliver-hermanus",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -4069,19 +3497,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Vicky Krieps' Criterion Closet Picks",
-    "slug": "vicky-krieps-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/vicky-krieps-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 7,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Sally Potter",
     "slug": "sally-potter",
     "profession": "director",
@@ -4092,19 +3507,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/sally-potters-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/510-sally-potter-s-closet-picks",
     "pick_count": 9,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Charlotte Wells' Criterion Closet Picks",
-    "slug": "charlotte-wells-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charlotte-wells-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 11,
     "vimeo_video_id": null
   },
   {
@@ -4147,8 +3549,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Pauline Chalamet’s Criterion Closet Picks",
-    "slug": "pauline-chalamets-criterion-closet-picks",
+    "name": "Pauline Chalamet",
+    "slug": "pauline-chalamet",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -4238,19 +3640,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Susanna Hoffs' Criterion Closet Picks",
-    "slug": "susanna-hoffs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/susanna-hoffs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Charlie Day",
     "slug": "charlie-day",
     "profession": "actor",
@@ -4290,19 +3679,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Rickie Lee Jones' Criterion Closet Picks",
-    "slug": "rickie-lee-jones-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/rickie-lee-jones-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 21,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Benjamin Millepied",
     "slug": "benjamin-millepied",
     "profession": "actor",
@@ -4313,19 +3689,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/benjamin-millepieds-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/550-benjamin-millepied-s-closet-picks",
     "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ethan Hawke and Jonathan Marc Sherman’s Criterion Closet Picks",
-    "slug": "ethan-hawke-and-jonathan-marc-shermans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "ETrJUaoa1Zc",
-    "youtube_video_url": "https://www.youtube.com/watch?v=ETrJUaoa1Zc",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ethan-hawke-and-jonathan-marc-shermans-criterion/",
-    "criterion_page_url": null,
-    "pick_count": 21,
     "vimeo_video_id": null
   },
   {
@@ -4342,21 +3705,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Trace Lysette’s Criterion Closet Picks",
-    "slug": "trace-lysettes-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/trace-lysettes-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 12,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Roger and James Deakins' Criterion Closet Picks",
-    "slug": "roger-and-james-deakins-criterion-closet-picks",
+    "name": "Roger and James Deakins",
+    "slug": "roger-and-james-deakins",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -4394,19 +3744,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Barbara Sukowa’s Criterion Closet Picks",
-    "slug": "barbara-sukowas-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/barbara-sukowas-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Joel Edgerton",
     "slug": "joel-edgertons-criterion-closet-picks",
     "profession": null,
@@ -4417,19 +3754,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/joel-edgertons-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 21,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Desiree Akhavan’s Criterion Closet Picks",
-    "slug": "desiree-akhavans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/desiree-akhavans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -4459,8 +3783,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Jean-Pierre and Luc Dardenne’s Criterion Closet Picks",
-    "slug": "jean-pierre-and-luc-dardennes-criterion-closet-picks",
+    "name": "Jean-Pierre and Luc Dardenne",
+    "slug": "jean-pierre-and-luc-dardenne",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "6sTDUur1III",
@@ -4485,66 +3809,14 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Hari Nef’s Criterion Closet Picks",
-    "slug": "hari-nefs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/hari-nefs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Udo Kier’s Criterion Closet Picks",
-    "slug": "udo-kiers-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/udo-kiers-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 4,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Anton Corbijn’s Criterion Closet Picks",
-    "slug": "anton-corbijns-criterion-closet-picks",
+    "name": "Anton Corbijn",
+    "slug": "anton-corbijn",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
     "youtube_video_url": null,
     "episode_date": null,
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/anton-corbijns-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 12,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Lucrecia Martel’s Criterion Closet Picks",
-    "slug": "lucrecia-martels-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/lucrecia-martels-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 11,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Elvis Mitchell’s Criterion Closet Picks",
-    "slug": "elvis-mitchells-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/elvis-mitchells-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 12,
     "vimeo_video_id": null
@@ -4560,19 +3832,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/philip-kaufmans-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/606-philip-kaufman-s-closet-picks",
     "pick_count": 10,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Barry Jenkins' Criterion Closet Picks",
-    "slug": "barry-jenkins-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/barry-jenkins-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 42,
     "vimeo_video_id": null
   },
   {
@@ -4615,32 +3874,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Frederick Wiseman’s Criterion Closet Picks",
-    "slug": "frederick-wisemans-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/frederick-wisemans-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 5,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ron Shelton’s Criterion Closet Picks",
-    "slug": "ron-sheltons-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ron-sheltons-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Saul Williams",
     "slug": "saul-williams",
     "profession": "actor",
@@ -4651,19 +3884,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/saul-williams-and-anisia-uzeymans-criterion/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/494-saul-williams-and-anisia-uzeyman-s-closet-picks",
     "pick_count": 11,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Wilco’s Criterion Closet Picks",
-    "slug": "wilcos-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/wilcos-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 18,
     "vimeo_video_id": null
   },
   {
@@ -4693,45 +3913,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Charlotte Gainsbourg’s Criterion Closet Picks",
-    "slug": "charlotte-gainsbourgs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/charlotte-gainsbourgs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 27,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Sarita Choudhury’s Criterion Closet Picks",
-    "slug": "sarita-choudhurys-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/sarita-choudhurys-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 11,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Theodore Witcher’s Criterion Closet Picks",
-    "slug": "theodore-witchers-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/theodore-witchers-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Garrett Bradley",
     "slug": "garrett-bradley",
     "profession": "musician",
@@ -4742,45 +3923,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/garrett-bradleys-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/481-garrett-bradley-s-closet-picks",
     "pick_count": 37,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Kemp Powers' Criterion Closet Picks",
-    "slug": "kemp-powers-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/kemp-powers-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 7,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Colin Quinn’s Criterion Closet Picks",
-    "slug": "colin-quinns-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/colin-quinns-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 9,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Joanna Hogg’s Criterion Closet Picks",
-    "slug": "joanna-hoggs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/joanna-hoggs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 6,
     "vimeo_video_id": null
   },
   {
@@ -4797,45 +3939,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Isabel Sandoval’s Criterion Closet Picks",
-    "slug": "isabel-sandovals-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/isabel-sandovals-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 52,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "James L. Brooks’s Criterion Closet Picks",
-    "slug": "james-l-brookss-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/james-l-brookss-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 14,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "John Dwyer’s Criterion Closet Picks",
-    "slug": "john-dwyers-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/john-dwyers-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 7,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Jenni Olson",
     "slug": "jenni-olson",
     "profession": "director",
@@ -4849,8 +3952,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Karina Longworth’s Criterion Closet Picks",
-    "slug": "karina-longworths-criterion-closet-picks",
+    "name": "Karina Longworth",
+    "slug": "karina-longworth",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -4859,19 +3962,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/karina-longworths-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ben Sinclair’s Criterion Closet Picks",
-    "slug": "ben-sinclairs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ben-sinclairs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 9,
     "vimeo_video_id": null
   },
   {
@@ -4888,19 +3978,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Euzhan Palcy’s Criterion Closet Picks",
-    "slug": "euzhan-palcys-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/euzhan-palcys-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 17,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Peter Sarsgaard",
     "slug": "peter-sarsgaard",
     "profession": "actor",
@@ -4914,21 +3991,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Leslie Harris' Criterion Closet Picks",
-    "slug": "leslie-harris-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/leslie-harris-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 9,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "John Sayles' Criterion Closet Picks",
-    "slug": "john-sayles-criterion-closet-picks",
+    "name": "John Sayles",
+    "slug": "john-sayles",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "std013XVxSk",
@@ -4937,19 +4001,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/john-sayles-criterion-closet-picks/",
     "criterion_page_url": null,
     "pick_count": 4,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "John Waters' Criterion Closet Picks",
-    "slug": "john-waters-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "std013XVxSk",
-    "youtube_video_url": "https://www.youtube.com/watch?v=std013XVxSk",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/john-waters-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 5,
     "vimeo_video_id": null
   },
   {
@@ -5044,19 +4095,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Flying Lotus' Criterion Closet Picks",
-    "slug": "flying-lotus-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/flying-lotus-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 15,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Alexander Payne",
     "slug": "alexander-payne",
     "profession": "actor",
@@ -5122,19 +4160,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Tim Robbins' Criterion Closet Picks",
-    "slug": "tim-robbins-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/tim-robbins-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 13,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Amy Heckerling",
     "slug": "amy-heckerling",
     "profession": "director",
@@ -5158,19 +4183,6 @@
     "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ben-wheatleys-criterion-closet-picks/",
     "criterion_page_url": "https://www.criterion.com/shop/collection/471-ben-wheatley-s-closet-picks",
     "pick_count": 36,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Ira Sachs' Criterion Closet Picks",
-    "slug": "ira-sachs-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/ira-sachs-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 15,
     "vimeo_video_id": null
   },
   {
@@ -5382,32 +4394,6 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Claire Denis’s Criterion Closet Picks",
-    "slug": "claire-deniss-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": null,
-    "youtube_video_url": null,
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/claire-deniss-criterion-closet-picks/",
-    "criterion_page_url": null,
-    "pick_count": 8,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "M.I.A. and Stephen Loveridge’s Criterion Closet Picks",
-    "slug": "mia-and-stephen-loveridges-criterion-closet-picks",
-    "profession": null,
-    "photo_url": null,
-    "youtube_video_id": "08UA7zgLanc",
-    "youtube_video_url": "https://www.youtube.com/watch?v=08UA7zgLanc",
-    "episode_date": null,
-    "letterboxd_list_url": "https://letterboxd.com/closetpicks/list/mia-and-stephen-loveridges-criterion-closet/",
-    "criterion_page_url": null,
-    "pick_count": 6,
-    "vimeo_video_id": null
-  },
-  {
     "name": "Tavi Gevinson",
     "slug": "tavi-gevinson",
     "profession": "actor",
@@ -5577,8 +4563,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Michael K. Williams' Criterion Closet Picks",
-    "slug": "michael-k-williams-criterion-closet-picks",
+    "name": "Michael K. Williams",
+    "slug": "michael-k-williams",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": "JJiL6ps8hZQ",
@@ -5590,8 +4576,8 @@
     "vimeo_video_id": null
   },
   {
-    "name": "Harris Savides' Criterion Closet Picks",
-    "slug": "harris-savides-criterion-closet-picks",
+    "name": "Harris Savides",
+    "slug": "harris-savides",
     "profession": null,
     "photo_url": null,
     "youtube_video_id": null,
@@ -5690,7 +4676,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/581-udo-kier-s-closet-picks",
-    "pick_count": 4,
+    "pick_count": 8,
     "vimeo_video_id": null
   },
   {
@@ -5729,7 +4715,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/878-ethel-cain-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -5742,7 +4728,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/877-luca-guadagnino-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 21,
     "vimeo_video_id": null
   },
   {
@@ -5781,7 +4767,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/866-wyclef-jean-s-closet-picks",
-    "pick_count": 5,
+    "pick_count": 11,
     "vimeo_video_id": null
   },
   {
@@ -5807,7 +4793,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/864-kristin-scott-thomas-s-closet-picks",
-    "pick_count": 10,
+    "pick_count": 28,
     "vimeo_video_id": null
   },
   {
@@ -5833,7 +4819,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/853-ronan-farrow-s-closet-picks",
-    "pick_count": 5,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -5846,7 +4832,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/859-joseph-kosinski-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -5872,20 +4858,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/808-aimee-lou-wood-s-closet-picks",
-    "pick_count": 9,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "François Girard",
-    "slug": "francois-girard",
-    "profession": "director",
-    "photo_url": "https://image.tmdb.org/t/p/w185/djxaEAgKaYS2MAzQm5B5yHZeCqr.jpg",
-    "youtube_video_id": "frNkePt5Eac",
-    "youtube_video_url": "https://www.youtube.com/watch?v=frNkePt5Eac",
-    "episode_date": null,
-    "letterboxd_list_url": null,
-    "criterion_page_url": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
-    "pick_count": 10,
+    "pick_count": 20,
     "vimeo_video_id": null
   },
   {
@@ -5898,7 +4871,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/821-diego-luna-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 19,
     "vimeo_video_id": null
   },
   {
@@ -5937,7 +4910,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/792-alain-guiraudie-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -5963,7 +4936,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/774-zeinabu-irene-davis-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 27,
     "vimeo_video_id": null
   },
   {
@@ -6002,7 +4975,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/763-francis-ford-coppola-s-closet-picks",
-    "pick_count": 4,
+    "pick_count": 18,
     "vimeo_video_id": null
   },
   {
@@ -6015,7 +4988,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/737-payal-kapadia-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 54,
     "vimeo_video_id": null
   },
   {
@@ -6028,7 +5001,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/764-jacques-audiard-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 31,
     "vimeo_video_id": null
   },
   {
@@ -6106,20 +5079,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/738-nathalie-emmanuel-s-closet-picks",
-    "pick_count": 5,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Janelle Monáe",
-    "slug": "janelle-monae",
-    "profession": "actor",
-    "photo_url": "https://image.tmdb.org/t/p/w185/axTIbPz6ZbqlcCwkNBgD59gY3lx.jpg",
-    "youtube_video_id": "iBpffnfc3AI",
-    "youtube_video_url": "https://www.youtube.com/watch?v=iBpffnfc3AI",
-    "episode_date": null,
-    "letterboxd_list_url": null,
-    "criterion_page_url": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
-    "pick_count": 5,
+    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -6171,7 +5131,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/619-dan-levy-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 19,
     "vimeo_video_id": null
   },
   {
@@ -6197,11 +5157,11 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/595-jason-schwartzman-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 24,
     "vimeo_video_id": null
   },
   {
-    "name": "John Waters’",
+    "name": "John Waters",
     "slug": "john-waters",
     "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/4foU1kJ24CJwz2RVZgyc7oxMs4i.jpg",
@@ -6210,7 +5170,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/422-john-waters-closet-picks",
-    "pick_count": 5,
+    "pick_count": 10,
     "vimeo_video_id": null
   },
   {
@@ -6223,7 +5183,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/487-kyle-maclachlan-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -6236,7 +5196,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/483-sarita-choudhury-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 20,
     "vimeo_video_id": null
   },
   {
@@ -6262,7 +5222,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/482-charlotte-gainsbourg-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 33,
     "vimeo_video_id": null
   },
   {
@@ -6288,7 +5248,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/630-nuri-bilge-ceylan-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 61,
     "vimeo_video_id": null
   },
   {
@@ -6314,7 +5274,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/633-matteo-garrone-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 16,
     "vimeo_video_id": null
   },
   {
@@ -6327,20 +5287,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/621-charles-melton-s-closet-picks",
-    "pick_count": 14,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Lila Avilés",
-    "slug": "lila-aviles",
-    "profession": "director",
-    "photo_url": "https://image.tmdb.org/t/p/w185/nbk1zLRcE3AAdEe5dDOJmCU8L5f.jpg",
-    "youtube_video_id": "0PMTo4SK__s",
-    "youtube_video_url": "https://www.youtube.com/watch?v=0PMTo4SK__s",
-    "episode_date": null,
-    "letterboxd_list_url": null,
-    "criterion_page_url": "https://www.criterion.com/shop/collection/620-lila-aviles-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 28,
     "vimeo_video_id": null
   },
   {
@@ -6353,7 +5300,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/611-brit-marling-and-zal-batmanglij-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -6366,20 +5313,20 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/594-hari-nef-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 19,
     "vimeo_video_id": null
   },
   {
-    "name": "Daniels’",
+    "name": "Daniels",
     "slug": "daniels",
     "profession": "actor",
     "photo_url": "https://image.tmdb.org/t/p/w185/1SCR6im2maiASfTD5h7r0g9dU78.jpg",
-    "youtube_video_id": "dqNtp1bAI8o",
-    "youtube_video_url": "https://www.youtube.com/watch?v=dqNtp1bAI8o",
+    "youtube_video_id": "ZpZXgO_3vN4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ZpZXgO_3vN4",
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
-    "pick_count": 6,
+    "pick_count": 37,
     "vimeo_video_id": null
   },
   {
@@ -6392,20 +5339,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/622-rosine-mbakam-s-closet-picks",
-    "pick_count": 4,
-    "vimeo_video_id": null
-  },
-  {
-    "name": "Hlynur Pálmason",
-    "slug": "hlynur-palmason",
-    "profession": "director",
-    "photo_url": "https://image.tmdb.org/t/p/w185/y6QNxWW8Z7DBr0hBOeqeCxJ2khc.jpg",
-    "youtube_video_id": "gowVPl5YriI",
-    "youtube_video_url": "https://www.youtube.com/watch?v=gowVPl5YriI",
-    "episode_date": null,
-    "letterboxd_list_url": null,
-    "criterion_page_url": "https://www.criterion.com/shop/collection/612-hlynur-palmason-s-closet-picks",
-    "pick_count": 10,
+    "pick_count": 9,
     "vimeo_video_id": null
   },
   {
@@ -6457,7 +5391,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/555-trace-lysette-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 21,
     "vimeo_video_id": null
   },
   {
@@ -6470,7 +5404,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/514-frederick-wiseman-s-closet-picks",
-    "pick_count": 5,
+    "pick_count": 10,
     "vimeo_video_id": null
   },
   {
@@ -6509,7 +5443,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/493-wilco-s-closet-picks",
-    "pick_count": 10,
+    "pick_count": 28,
     "vimeo_video_id": null
   },
   {
@@ -6535,7 +5469,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/426-colin-quinn-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 17,
     "vimeo_video_id": null
   },
   {
@@ -6548,7 +5482,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/515-elvis-mitchell-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 19,
     "vimeo_video_id": null
   },
   {
@@ -6561,7 +5495,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/441-isabel-sandoval-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 61,
     "vimeo_video_id": null
   },
   {
@@ -6574,7 +5508,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/433-john-dwyer-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 14,
     "vimeo_video_id": null
   },
   {
@@ -6587,11 +5521,11 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/439-lucrecia-martel-s-closet-picks",
-    "pick_count": 11,
+    "pick_count": 22,
     "vimeo_video_id": null
   },
   {
-    "name": "Claire Denis’",
+    "name": "Claire Denis",
     "slug": "claire-denis",
     "profession": "actor",
     "photo_url": null,
@@ -6600,7 +5534,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/428-claire-denis-closet-picks",
-    "pick_count": 7,
+    "pick_count": 15,
     "vimeo_video_id": null
   },
   {
@@ -6613,7 +5547,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/437-james-l-brooks-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 20,
     "vimeo_video_id": null
   },
   {
@@ -6626,7 +5560,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/423-m-i-a-and-stephen-loveridge-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -6652,7 +5586,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/480-theodore-witcher-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 20,
     "vimeo_video_id": null
   },
   {
@@ -6665,7 +5599,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/440-euzhan-palcy-s-closet-picks",
-    "pick_count": 11,
+    "pick_count": 28,
     "vimeo_video_id": null
   },
   {
@@ -6678,7 +5612,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/435-desiree-akhavan-s-closet-picks",
-    "pick_count": 11,
+    "pick_count": 23,
     "vimeo_video_id": null
   },
   {
@@ -6691,7 +5625,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/419-joanna-hogg-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {
@@ -6704,7 +5638,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/424-ben-sinclair-s-closet-picks",
-    "pick_count": 9,
+    "pick_count": 18,
     "vimeo_video_id": null
   },
   {
@@ -6756,7 +5690,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/446-ethan-hawke-and-jonathan-marc-sherman-s-closet-picks",
-    "pick_count": 14,
+    "pick_count": 35,
     "vimeo_video_id": null
   },
   {
@@ -6782,7 +5716,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/627-barbara-sukowa-s-closet-picks",
-    "pick_count": 7,
+    "pick_count": 15,
     "vimeo_video_id": null
   },
   {
@@ -6795,7 +5729,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/587-alden-ehrenreich-s-closet-picks",
-    "pick_count": 8,
+    "pick_count": 27,
     "vimeo_video_id": null
   },
   {
@@ -6808,7 +5742,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/640-bertrand-bonello-s-closet-picks",
-    "pick_count": 5,
+    "pick_count": 18,
     "vimeo_video_id": null
   },
   {
@@ -6821,7 +5755,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/511-ron-shelton-s-closet-picks",
-    "pick_count": 6,
+    "pick_count": 12,
     "vimeo_video_id": null
   },
   {

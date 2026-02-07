@@ -229,6 +229,13 @@ export function getAllGenres(): string[] {
   return [...genres].sort();
 }
 
+export function getRecentGuests(count: number = 3): Guest[] {
+  return [...getGuests()]
+    .filter(g => g.episode_date)
+    .sort((a, b) => new Date(b.episode_date).getTime() - new Date(a.episode_date).getTime())
+    .slice(0, count);
+}
+
 export function getStats() {
   return {
     totalGuests: getGuests().length,

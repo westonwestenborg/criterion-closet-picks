@@ -19,9 +19,14 @@ const randomData = picks
       posterUrl: film?.poster_url || '',
       criterionUrl: film?.criterion_url || '',
       tmdbUrl: film?.tmdb_url || '',
+      imdbUrl: film?.imdb_url || '',
       spineNumber: film?.criterion_spine_number || null,
+      genres: film?.genres || [],
+      credits: film?.credits || null,
       guestName: guest?.name || '',
       guestSlug: guest?.slug || '',
+      guestProfession: guest?.profession || '',
+      guestPhotoUrl: guest?.photo_url || '',
       quote: p.quote,
       timestampUrl: p.youtube_timestamp_url,
     };
@@ -31,44 +36,98 @@ const randomData = picks
 const initialPick = randomData.length > 0
   ? randomData[Math.floor(Math.random() * randomData.length)]
   : null;
+
 ---
-<div class="random-container" style="text-align: left; max-width: 650px;">
-  <div class="random-result" id="random-result">
+<div style="max-width: 650px;">
+  <div id="random-result">
     {initialPick && (
       <Fragment>
-        <h3 style="margin-top: 0;">
-          <a href={`/films/${initialPick.filmSlug}/`}>{initialPick.filmTitle}</a>
-        </h3>
-        <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
-          {initialPick.filmDirector ? `${initialPick.filmDirector}, ${initialPick.filmYear}` : initialPick.filmYear}
-        </p>
-        {initialPick.posterUrl ? (
-          <img src={initialPick.posterUrl} alt={initialPick.filmTitle} class="film-poster" loading="lazy" style="max-width: 185px;" />
-        ) : initialPick.spineNumber ? (
-          <div class="spine-placeholder">#{initialPick.spineNumber}</div>
-        ) : null}
-        {(initialPick.criterionUrl || initialPick.tmdbUrl) && (
-          <div class="detail-links" style="margin-bottom: 0.75rem;">
-            {initialPick.criterionUrl && (
-              <a href={initialPick.criterionUrl} target="_blank" rel="noopener noreferrer">Criterion</a>
+        <div class="detail-header">
+          {initialPick.posterUrl ? (
+            <img src={initialPick.posterUrl} alt={initialPick.filmTitle} class="film-poster-large" loading="lazy" />
+          ) : initialPick.spineNumber ? (
+            <div class="spine-placeholder" style="width: 185px; height: 278px; font-size: 2rem;">
+              #{initialPick.spineNumber}
+            </div>
+          ) : null}
+          <div class="detail-meta">
+            <h3 style="margin-top: 0;">
+              <a href={`/films/${initialPick.filmSlug}/`}>{initialPick.filmTitle}</a>
+            </h3>
+            <p class="text-secondary" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+              {initialPick.filmDirector ? `${initialPick.filmDirector}, ${initialPick.filmYear}` : initialPick.filmYear}
+            </p>
+            {initialPick.spineNumber && (
+              <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+                Spine <span class="spine-number">#{initialPick.spineNumber}</span>
+              </p>
             )}
-            {initialPick.tmdbUrl && (
-              <a href={initialPick.tmdbUrl} target="_blank" rel="noopener noreferrer">TMDB</a>
+            {initialPick.genres.length > 0 && (
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                {initialPick.genres.join(' / ')}
+              </p>
+            )}
+            <div class="detail-links">
+              {initialPick.criterionUrl && (
+                <a href={initialPick.criterionUrl} target="_blank" rel="noopener noreferrer">Criterion</a>
+              )}
+              {initialPick.tmdbUrl && (
+                <a href={initialPick.tmdbUrl} target="_blank" rel="noopener noreferrer">TMDB</a>
+              )}
+              {initialPick.imdbUrl && (
+                <a href={initialPick.imdbUrl} target="_blank" rel="noopener noreferrer">IMDB</a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {initialPick.credits && (
+          <div class="film-credits">
+            {initialPick.credits.directors?.length > 0 && (
+              <p><span class="credit-label">Directed by</span> {initialPick.credits.directors.map(d => d.name).join(', ')}</p>
+            )}
+            {initialPick.credits.writers?.length > 0 && (
+              <p><span class="credit-label">Written by</span> {initialPick.credits.writers.map(w => w.name).join(', ')}</p>
+            )}
+            {initialPick.credits.cinematographers?.length > 0 && (
+              <p><span class="credit-label">Cinematography</span> {initialPick.credits.cinematographers.map(c => c.name).join(', ')}</p>
+            )}
+            {initialPick.credits.cast?.length > 0 && (
+              <p><span class="credit-label">Cast</span> {initialPick.credits.cast.map(c => c.name).join(', ')}</p>
             )}
           </div>
         )}
-        <blockquote>
-          {initialPick.timestampUrl ? (
-            <a href={initialPick.timestampUrl} class="quote-link" target="_blank" rel="noopener noreferrer">
+
+        <div style="margin-top: 1.5rem;">
+          <div class="pick-guest-header">
+            {initialPick.guestPhotoUrl ? (
+              <img src={initialPick.guestPhotoUrl} alt={initialPick.guestName} class="guest-photo-small" loading="lazy" />
+            ) : (
+              <div class="guest-initial-small">
+                {initialPick.guestName?.charAt(0) || '?'}
+              </div>
+            )}
+            <div>
+              <a href={`/guests/${initialPick.guestSlug}/`} style="font-size: 1.05rem;">
+                {initialPick.guestName}
+              </a>
+              {initialPick.guestProfession && (
+                <span class="small-caps text-secondary" style="margin-left: 0.5rem; font-size: 0.85rem;">
+                  {initialPick.guestProfession}
+                </span>
+              )}
+            </div>
+          </div>
+          <blockquote>
+            {initialPick.timestampUrl ? (
+              <a href={initialPick.timestampUrl} class="quote-link" target="_blank" rel="noopener noreferrer">
+                <p>&ldquo;{initialPick.quote}&rdquo;</p>
+              </a>
+            ) : (
               <p>&ldquo;{initialPick.quote}&rdquo;</p>
-            </a>
-          ) : (
-            <p>&ldquo;{initialPick.quote}&rdquo;</p>
-          )}
-        </blockquote>
-        <p class="quote-attribution">
-          &mdash; <a href={`/guests/${initialPick.guestSlug}/`}>{initialPick.guestName}</a>
-        </p>
+            )}
+          </blockquote>
+        </div>
       </Fragment>
     )}
   </div>
@@ -86,39 +145,90 @@ const initialPick = randomData.length > 0
       ? `${pick.filmDirector}, ${pick.filmYear}`
       : pick.filmYear;
 
+    let posterHtml = '';
+    if (pick.posterUrl) {
+      posterHtml = `<img src="${pick.posterUrl}" alt="${pick.filmTitle}" class="film-poster-large" loading="lazy" />`;
+    } else if (pick.spineNumber) {
+      posterHtml = `<div class="spine-placeholder" style="width: 185px; height: 278px; font-size: 2rem;">#${pick.spineNumber}</div>`;
+    }
+
+    const spineHtml = pick.spineNumber
+      ? `<p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">Spine <span class="spine-number">#${pick.spineNumber}</span></p>`
+      : '';
+
+    const genresHtml = pick.genres && pick.genres.length > 0
+      ? `<p class="text-muted" style="font-size: 0.85rem; margin-bottom: 0.5rem;">${pick.genres.join(' / ')}</p>`
+      : '';
+
+    let linksHtml = '';
+    const links = [];
+    if (pick.criterionUrl) links.push(`<a href="${pick.criterionUrl}" target="_blank" rel="noopener noreferrer">Criterion</a>`);
+    if (pick.tmdbUrl) links.push(`<a href="${pick.tmdbUrl}" target="_blank" rel="noopener noreferrer">TMDB</a>`);
+    if (pick.imdbUrl) links.push(`<a href="${pick.imdbUrl}" target="_blank" rel="noopener noreferrer">IMDB</a>`);
+    if (links.length > 0) {
+      linksHtml = `<div class="detail-links">${links.join('')}</div>`;
+    }
+
+    let creditsHtml = '';
+    if (pick.credits) {
+      const parts = [];
+      if (pick.credits.directors && pick.credits.directors.length > 0) {
+        parts.push(`<p><span class="credit-label">Directed by</span> ${pick.credits.directors.map(d => d.name).join(', ')}</p>`);
+      }
+      if (pick.credits.writers && pick.credits.writers.length > 0) {
+        parts.push(`<p><span class="credit-label">Written by</span> ${pick.credits.writers.map(w => w.name).join(', ')}</p>`);
+      }
+      if (pick.credits.cinematographers && pick.credits.cinematographers.length > 0) {
+        parts.push(`<p><span class="credit-label">Cinematography</span> ${pick.credits.cinematographers.map(c => c.name).join(', ')}</p>`);
+      }
+      if (pick.credits.cast && pick.credits.cast.length > 0) {
+        parts.push(`<p><span class="credit-label">Cast</span> ${pick.credits.cast.map(c => c.name).join(', ')}</p>`);
+      }
+      if (parts.length > 0) {
+        creditsHtml = `<div class="film-credits">${parts.join('')}</div>`;
+      }
+    }
+
     const quoteHtml = pick.timestampUrl
       ? `<a href="${pick.timestampUrl}" class="quote-link" target="_blank" rel="noopener noreferrer"><p>\u201C${pick.quote}\u201D</p></a>`
       : `<p>\u201C${pick.quote}\u201D</p>`;
 
-    let posterHtml = '';
-    if (pick.posterUrl) {
-      posterHtml = `<img src="${pick.posterUrl}" alt="${pick.filmTitle}" class="film-poster" loading="lazy" style="max-width: 185px;" />`;
-    } else if (pick.spineNumber) {
-      posterHtml = `<div class="spine-placeholder">#${pick.spineNumber}</div>`;
-    }
+    const guestPhotoHtml = pick.guestPhotoUrl
+      ? `<img src="${pick.guestPhotoUrl}" alt="${pick.guestName}" class="guest-photo-small" loading="lazy" />`
+      : `<div class="guest-initial-small">${pick.guestName ? pick.guestName.charAt(0) : '?'}</div>`;
 
-    let linksHtml = '';
-    if (pick.criterionUrl || pick.tmdbUrl) {
-      const criterionLink = pick.criterionUrl ? `<a href="${pick.criterionUrl}" target="_blank" rel="noopener noreferrer">Criterion</a>` : '';
-      const tmdbLink = pick.tmdbUrl ? `<a href="${pick.tmdbUrl}" target="_blank" rel="noopener noreferrer">TMDB</a>` : '';
-      linksHtml = `<div class="detail-links" style="margin-bottom: 0.75rem;">${criterionLink}${tmdbLink}</div>`;
-    }
+    const professionHtml = pick.guestProfession
+      ? `<span class="small-caps text-secondary" style="margin-left: 0.5rem; font-size: 0.85rem;">${pick.guestProfession}</span>`
+      : '';
 
     result.innerHTML = `
-      <h3 style="margin-top: 0;">
-        <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
-      </h3>
-      <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.75rem;">
-        ${directorYear}
-      </p>
-      ${posterHtml}
-      ${linksHtml}
-      <blockquote>
-        ${quoteHtml}
-      </blockquote>
-      <p class="quote-attribution">
-        &mdash; <a href="/guests/${pick.guestSlug}/">${pick.guestName}</a>
-      </p>
+      <div class="detail-header">
+        ${posterHtml}
+        <div class="detail-meta">
+          <h3 style="margin-top: 0;">
+            <a href="/films/${pick.filmSlug}/">${pick.filmTitle}</a>
+          </h3>
+          <p class="text-secondary" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+            ${directorYear}
+          </p>
+          ${spineHtml}
+          ${genresHtml}
+          ${linksHtml}
+        </div>
+      </div>
+      ${creditsHtml}
+      <div style="margin-top: 1.5rem;">
+        <div class="pick-guest-header">
+          ${guestPhotoHtml}
+          <div>
+            <a href="/guests/${pick.guestSlug}/" style="font-size: 1.05rem;">${pick.guestName}</a>
+            ${professionHtml}
+          </div>
+        </div>
+        <blockquote>
+          ${quoteHtml}
+        </blockquote>
+      </div>
     `;
   }
 
