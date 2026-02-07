@@ -21,6 +21,9 @@ __pycache__/
 .venv/
 venv/
 
+# Working docs/plans
+docs/
+
 # OS
 .DS_Store
 
