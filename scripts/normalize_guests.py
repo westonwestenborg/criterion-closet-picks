@@ -74,6 +74,52 @@ NAME_FIXES = {
     "Katya Zamolodchikova's Closet Picks": "Katya Zamolodchikova",
 }
 
+# Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2 = newer)
+# Scraped from criterion.com/shop#collection-closet-picks index
+VISIT_CRITERION_URLS = {
+    "bill-hader": [
+        "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011",
+        "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
+    ],
+    "guillermo-del-toro": [
+        "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
+        "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
+    ],
+    "ari-aster": [
+        "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
+        "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks",
+    ],
+    "michael-cera": [
+        "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014",
+        "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks",
+    ],
+    "yorgos-lanthimos": [
+        "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks",
+        "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks",
+    ],
+    "edgar-wright": [
+        "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks",
+        "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks",
+    ],
+    "benny-safdie": [
+        "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks",
+        "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks",
+    ],
+    # Single-page guests: assign to visit 1 only
+    "barry-jenkins": [
+        "https://www.criterion.com/shop/collection/470-barry-jenkins-s-closet-picks",
+    ],
+    "isabelle-huppert": [
+        "https://www.criterion.com/shop/collection/741-isabelle-huppert-s-closet-picks",
+    ],
+    "griffin-dunne": [
+        "https://www.criterion.com/shop/collection/795-griffin-dunne-s-closet-picks",
+    ],
+    "wim-wenders": [
+        "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
+    ],
+}
+
 # Non-person tagging
 GUEST_TYPE_TAGS = {
     "that-one-time-five-comics-raided-the-criterion-closet": "group",
@@ -366,7 +412,32 @@ def normalize(dry_run: bool = False):
         else:
             log(f"  Skip guest type tag: '{slug}' not found")
 
-    # --- 8. Dedup picks ---
+    # --- 8. Fix Criterion page URLs per visit ---
+    for slug, urls in VISIT_CRITERION_URLS.items():
+        g = guest_by_slug(guests, slug)
+        if not g:
+            log(f"  Skip criterion URL fix: '{slug}' not found")
+            continue
+
+        changed = False
+
+        # Set top-level criterion_page_url to visit 1 (oldest)
+        if g.get("criterion_page_url") != urls[0]:
+            g["criterion_page_url"] = urls[0]
+            changed = True
+
+        # Update visits array if present
+        if g.get("visits"):
+            for i, visit in enumerate(g["visits"]):
+                url = urls[i] if i < len(urls) else None
+                if visit.get("criterion_page_url") != url:
+                    visit["criterion_page_url"] = url
+                    changed = True
+
+        if changed:
+            log(f"  Criterion URL fix: '{g['name']}' — {len(urls)} page(s)")
+
+    # --- 9. Dedup picks ---
     before_picks = len(picks)
     picks = dedup_picks(picks)
     after_picks = len(picks)
