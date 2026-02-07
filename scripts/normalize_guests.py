@@ -68,10 +68,57 @@ WRONG_VIDEO_FIXES = {
     "lee-daniels": "dqNtp1bAI8o",          # Daniel Roher's video
 }
 
+# Slug fixes: rename slug (and update picks) to fix matching issues
+SLUG_FIXES = {
+    "seth-myers": "seth-meyers",  # Typo: enables match to "Seth Meyers's Closet Picks"
+}
+
+# Known video IDs: set youtube_video_id for guests where we know the correct video
+# These are orphan transcripts or research-confirmed videos that fuzzy matching missed
+KNOWN_VIDEO_IDS = {
+    # Orphan transcripts already on disk
+    "francois-girard": {"youtube_video_id": "frNkePt5Eac"},
+    "janelle-monae": {"youtube_video_id": "iBpffnfc3AI"},
+    "roger-and-james-deakins": {"youtube_video_id": "juhiRVORJ8o"},
+    "lila-aviles": {"youtube_video_id": "0PMTo4SK__s"},
+    "hlynur-palmason": {"youtube_video_id": "gowVPl5YriI"},
+    # Research-confirmed unmatched playlist videos
+    "tracy-letts": {"youtube_video_id": "EQ7jDVdL5Ko"},
+    "seth-meyers": {"youtube_video_id": "-pfZlhfY4JM"},
+    "franklin-leonard": {"youtube_video_id": "5YfyrBaAWpE"},
+}
+
+# Known Criterion page URLs for guests missing them
+KNOWN_CRITERION_URLS = {
+    "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
+    "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
+    "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",
+    "tracy-letts": None,  # Unknown
+    "seth-meyers": None,  # Unknown
+    "franklin-leonard": None,  # Unknown
+    "robert-eggers": "https://www.criterion.com/shop/collection/769-robert-eggers-s-closet-picks",
+    "todd-haynes": "https://www.criterion.com/shop/collection/591-todd-haynes-s-closet-picks",
+    "hans-zimmer": "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
+    "ryusuke-hamaguchi": "https://www.criterion.com/shop/collection/652-ryusuke-hamaguchi-s-closet-picks",
+    "gael-garca-bernal": "https://www.criterion.com/shop/collection/616-gael-garcia-bernal-s-closet-picks",
+    "karina-longworth": "https://www.criterion.com/shop/collection/455-karina-longworth-s-closet-picks",
+    "anton-corbijn": "https://www.criterion.com/shop/collection/571-anton-corbijn-s-closet-picks",
+    "joel-potrykus": "https://www.criterion.com/shop/collection/806-joel-potrykus-s-closet-picks",
+    "coralie-fargeat": None,  # Unknown
+    "isabella-rossellini": None,  # Unknown
+    "pablo-larran": "https://www.criterion.com/shop/collection/766-pablo-larrain-s-closet-picks",
+    "pauline-chalamet": "https://www.criterion.com/shop/collection/536-pauline-chalamets-closet-picks",
+    "india-donaldson-and-lily-collias": None,  # Unknown
+    "tracy-letts": "https://www.criterion.com/shop/collection/879-tracy-letts-s-closet-picks",
+    "franklin-leonard": "https://www.criterion.com/shop/collection/802-franklin-leonard-s-closet-picks",
+    "lee-daniels": "https://www.criterion.com/shop/collection/682-lee-daniels-s-closet-picks",
+}
+
 # Name cleanup
 NAME_FIXES = {
     "David and Nathan Zellner's Criterion Picks": "David and Nathan Zellner",
     "Katya Zamolodchikova's Closet Picks": "Katya Zamolodchikova",
+    "Seth Myers": "Seth Meyers",  # Fix corresponding name
 }
 
 # Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2 = newer)
@@ -253,6 +300,17 @@ def normalize(dry_run: bool = False):
         "raw_picks_reassigned": 0,
     }
 
+    # --- 0. Slug fixes (do first so everything else uses correct slugs) ---
+    for old_slug, new_slug in SLUG_FIXES.items():
+        g = guest_by_slug(guests, old_slug)
+        if g:
+            log(f"  Slug fix: '{old_slug}' -> '{new_slug}'")
+            g["slug"] = new_slug
+            n = update_picks_guest_slug(picks, old_slug, new_slug)
+            stats["picks_reassigned"] += n
+            n = update_picks_guest_slug(picks_raw, old_slug, new_slug)
+            stats["raw_picks_reassigned"] += n
+
     # --- 1. Name cleanup (do first so merges work on clean names) ---
     for g in guests:
         if g["name"] in NAME_FIXES:
@@ -287,6 +345,15 @@ def normalize(dry_run: bool = False):
             for v in primary["visits"]
         ):
             primary["visits"].append(visit2)
+
+        # Detect and clear duplicate video IDs across visits
+        if len(primary.get("visits", [])) >= 2:
+            v1_vid = primary["visits"][0].get("youtube_video_id")
+            v2_vid = primary["visits"][1].get("youtube_video_id")
+            if v1_vid and v1_vid == v2_vid:
+                log(f"  Dedup video: '{primary['name']}' visit 2 had same video as visit 1, clearing")
+                primary["visits"][1]["youtube_video_id"] = None
+                primary["visits"][1]["youtube_video_url"] = None
 
         merge_guest_fields(primary, secondary)
 
@@ -400,6 +467,34 @@ def normalize(dry_run: bool = False):
             log(f"  Skip wrong video fix: '{g['name']}' already has no video")
         else:
             log(f"  Skip wrong video fix: '{g['name']}' has different video '{g.get('youtube_video_id')}'")
+
+    # --- 6b. Known video ID fixes ---
+    for slug, video_info in KNOWN_VIDEO_IDS.items():
+        g = guest_by_slug(guests, slug)
+        if not g:
+            log(f"  Skip known video fix: '{slug}' not found")
+            continue
+        if g.get("youtube_video_id"):
+            continue  # Already has a video, don't overwrite
+
+        yt_id = video_info.get("youtube_video_id")
+        if yt_id:
+            g["youtube_video_id"] = yt_id
+            g["youtube_video_url"] = f"https://www.youtube.com/watch?v={yt_id}"
+            log(f"  Known video fix: '{g['name']}' -> {yt_id}")
+
+    # --- 6c. Known Criterion page URL fixes ---
+    for slug, url in KNOWN_CRITERION_URLS.items():
+        if not url:
+            continue
+        g = guest_by_slug(guests, slug)
+        if not g:
+            log(f"  Skip known criterion URL: '{slug}' not found")
+            continue
+        if g.get("criterion_page_url"):
+            continue  # Already has a URL, don't overwrite
+        g["criterion_page_url"] = url
+        log(f"  Known criterion URL: '{g['name']}' -> {url}")
 
     # --- 7. Non-person tagging ---
     for slug, guest_type in GUEST_TYPE_TAGS.items():

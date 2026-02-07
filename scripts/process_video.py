@@ -35,19 +35,27 @@ from scripts.utils import (
 
 
 def find_guest(guests: list[dict], slug: str = None, video_id: str = None) -> dict | None:
-    """Find a guest by slug or video ID."""
+    """Find a guest by slug or video ID (YouTube or Vimeo)."""
     for g in guests:
         if slug and g["slug"] == slug:
             return g
         if video_id and g.get("youtube_video_id") == video_id:
             return g
+        if video_id and g.get("vimeo_video_id") == video_id:
+            return g
     return None
 
 
 def step_fetch_transcript(guest: dict) -> bool:
-    """Fetch transcript for the guest's video."""
+    """Fetch transcript for the guest's video (YouTube or Vimeo)."""
     video_id = guest.get("youtube_video_id")
+    video_source = "youtube"
+
     if not video_id:
+        vimeo_id = guest.get("vimeo_video_id")
+        if vimeo_id:
+            log(f"Guest {guest['name']} has Vimeo video ({vimeo_id}) — no transcript API available for Vimeo")
+            return False
         log(f"No video ID for {guest['name']}, cannot fetch transcript")
         return False
 
@@ -81,7 +89,8 @@ def step_extract_quotes(guest: dict, force: bool = False) -> bool:
     )
 
     slug = guest["slug"]
-    video_id = guest.get("youtube_video_id")
+    video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
+    video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
 
     if not video_id:
         log(f"No video ID for {guest['name']}")
@@ -139,9 +148,14 @@ def step_extract_quotes(guest: dict, force: bool = False) -> bool:
             pick["start_timestamp"] = quote_match["start_timestamp"]
             pick["extraction_confidence"] = quote_match["confidence"]
             if video_id and quote_match["start_timestamp"]:
-                pick["youtube_timestamp_url"] = (
-                    f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
-                )
+                if video_source == "vimeo":
+                    pick["vimeo_timestamp_url"] = (
+                        f"https://vimeo.com/{video_id}#t={quote_match['start_timestamp']}s"
+                    )
+                else:
+                    pick["youtube_timestamp_url"] = (
+                        f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
+                    )
         existing_index[(slug, title)] = pick
 
     # Save all picks

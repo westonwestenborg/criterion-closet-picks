@@ -185,7 +185,17 @@ def match_videos_to_guests(
         target_names = {g["name"] for g in guests}
 
     # First pass: collect all potential matches for each guest
-    guest_candidates: dict[str, list[tuple[dict, int]]] = {g["slug"]: [] for g in guests}
+    # Skip guests that already have a video ID (set by Criterion page extraction)
+    guests_needing_video = []
+    for guest in guests:
+        if guest.get("youtube_video_id") or guest.get("vimeo_video_id"):
+            log(f"  Skipping {guest['name']}: already has video ID")
+            continue
+        guests_needing_video.append(guest)
+
+    log(f"  {len(guests) - len(guests_needing_video)} guests already have video IDs, matching {len(guests_needing_video)}")
+
+    guest_candidates: dict[str, list[tuple[dict, int]]] = {g["slug"]: [] for g in guests_needing_video}
 
     for video in videos:
         # Only consider actual Closet Picks videos
@@ -195,7 +205,7 @@ def match_videos_to_guests(
         parsed_name = parse_guest_name_from_video_title(video["title"])
         parsed_norm = _normalize_name(parsed_name)
 
-        for guest in guests:
+        for guest in guests_needing_video:
             if pilot_only and guest["name"] not in target_names:
                 continue
 
@@ -217,9 +227,9 @@ def match_videos_to_guests(
 
     # Second pass: pick the best video per guest
     matches = []
-    matched_guest_slugs = set()
+    matched_video_ids = set()
 
-    for guest in guests:
+    for guest in guests_needing_video:
         if pilot_only and guest["name"] not in target_names:
             continue
 
@@ -233,14 +243,140 @@ def match_videos_to_guests(
         best_video, best_score = candidates[0]
         log(f"  Matched: {guest['name']} -> '{best_video['title']}' (score: {best_score})")
         matches.append((best_video, guest))
-        matched_guest_slugs.add(guest["slug"])
+        matched_video_ids.add(best_video["video_id"])
 
-    return matches
+    return matches, matched_video_ids
+
+
+def match_second_visit_videos(
+    videos: list[dict],
+    guests: list[dict],
+    matched_video_ids: set[str],
+) -> list[tuple[dict, dict, int]]:
+    """
+    Match second-visit YouTube videos for multi-visit guests.
+    Returns list of (video, guest, visit_index) tuples.
+
+    Strategy A: Criterion page URL -> extract video ID directly
+    Strategy B: Fuzzy title match against unmatched playlist videos
+    """
+    # Collect already-consumed video IDs (from primary matching + existing guests)
+    consumed_ids = set(matched_video_ids)
+    for g in guests:
+        if g.get("youtube_video_id"):
+            consumed_ids.add(g["youtube_video_id"])
+        for v in g.get("visits", []):
+            vid = v.get("youtube_video_id")
+            if vid:
+                consumed_ids.add(vid)
+
+    # Identify multi-visit guests with missing video IDs on some visits
+    candidates = []
+    for guest in guests:
+        visits = guest.get("visits", [])
+        if len(visits) < 2:
+            continue
+        for i, visit in enumerate(visits):
+            if not visit.get("youtube_video_id") and not visit.get("vimeo_video_id"):
+                candidates.append((guest, i))
+
+    if not candidates:
+        log("No multi-visit guests need second video matching")
+        return []
+
+    log(f"Matching second-visit videos for {len(candidates)} visit(s)...")
+    results = []
+
+    # Strategy A: Use Criterion page URL to extract video ID
+    for guest, visit_idx in candidates[:]:
+        visit = guest["visits"][visit_idx]
+        criterion_url = visit.get("criterion_page_url")
+        if not criterion_url:
+            continue
+
+        # Try importing from scrape_criterion_picks
+        try:
+            from scripts.scrape_criterion_picks import (
+                create_scraper,
+                extract_video_ids as extract_video_ids_from_page,
+            )
+        except ImportError:
+            break
+
+        log(f"  Strategy A: {guest['name']} visit {visit_idx + 1} — fetching {criterion_url}")
+        try:
+            scraper = create_scraper()
+            resp = scraper.get(criterion_url, timeout=30)
+            if resp.status_code == 200:
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(resp.text, "lxml")
+                page_video_ids = extract_video_ids_from_page(soup)
+                yt_id = page_video_ids.get("youtube_video_id")
+                vim_id = page_video_ids.get("vimeo_video_id")
+
+                if yt_id and yt_id not in consumed_ids:
+                    log(f"    Found YouTube: {yt_id}")
+                    # Find the matching video in playlist for upload_date
+                    matched_video = next((v for v in videos if v["video_id"] == yt_id), None)
+                    if not matched_video:
+                        matched_video = {"video_id": yt_id, "title": f"{guest['name']} visit {visit_idx + 1}", "upload_date": ""}
+                    results.append((matched_video, guest, visit_idx))
+                    consumed_ids.add(yt_id)
+                    candidates.remove((guest, visit_idx))
+                elif vim_id and vim_id not in consumed_ids:
+                    log(f"    Found Vimeo: {vim_id}")
+                    visit["vimeo_video_id"] = vim_id
+                    consumed_ids.add(vim_id)
+                    candidates.remove((guest, visit_idx))
+                else:
+                    log(f"    No new video found (or already consumed)")
+            time.sleep(1.5)
+        except Exception as e:
+            log(f"    Error fetching Criterion page: {e}")
+
+    # Strategy B: Fuzzy title match against unmatched playlist videos
+    unmatched_videos = [v for v in videos if v["video_id"] not in consumed_ids and _is_closet_picks_video(v["title"])]
+
+    for guest, visit_idx in candidates:
+        guest_norm = _normalize_name(guest["name"])
+        video_matches = []
+
+        for video in unmatched_videos:
+            parsed_name = parse_guest_name_from_video_title(video["title"])
+            parsed_norm = _normalize_name(parsed_name)
+            score = fuzzy_match_score(parsed_norm, guest_norm)
+
+            # Also try compound name parts
+            if " and " in parsed_name.lower():
+                parts = parsed_name.lower().split(" and ")
+                for part in parts:
+                    part_score = fuzzy_match_score(part.strip(), guest_norm)
+                    score = max(score, part_score)
+
+            if score >= 70:
+                video_matches.append((video, score))
+
+        if not video_matches:
+            log(f"  Strategy B: No match for {guest['name']} visit {visit_idx + 1}")
+            continue
+
+        # Sort by score, then by upload_date (newest first for visit 2)
+        video_matches.sort(key=lambda x: (x[1], x[0].get("upload_date", "")), reverse=True)
+        best_video, best_score = video_matches[0]
+
+        log(f"  Strategy B: {guest['name']} visit {visit_idx + 1} -> '{best_video['title']}' (score: {best_score})")
+        results.append((best_video, guest, visit_idx))
+        consumed_ids.add(best_video["video_id"])
+        # Remove from unmatched so it can't be double-assigned
+        unmatched_videos = [v for v in unmatched_videos if v["video_id"] != best_video["video_id"]]
+
+    return results
 
 
 def fetch_transcript(video_id: str) -> list[dict] | None:
     """
     Fetch transcript for a YouTube video using youtube-transcript-api.
+    Tries English first, then auto-generated English variants, then any available language.
     Returns list of {text, start, duration} or None if unavailable.
     """
     try:
@@ -253,10 +389,9 @@ def fetch_transcript(video_id: str) -> list[dict] | None:
         log("youtube-transcript-api not installed")
         return None
 
-    try:
-        ytt_api = YouTubeTranscriptApi()
-        transcript = ytt_api.fetch(video_id, languages=["en"])
-        # Convert to list of dicts
+    ytt_api = YouTubeTranscriptApi()
+
+    def _to_segments(transcript) -> list[dict]:
         segments = []
         for entry in transcript:
             segments.append({
@@ -265,6 +400,34 @@ def fetch_transcript(video_id: str) -> list[dict] | None:
                 "duration": entry.duration if hasattr(entry, 'duration') else float(entry.get('duration', 0)),
             })
         return segments
+
+    # Try English first
+    try:
+        transcript = ytt_api.fetch(video_id, languages=["en"])
+        log(f"  Transcript language: en")
+        return _to_segments(transcript)
+    except (NoTranscriptFound, Exception):
+        pass
+
+    # Try auto-generated English variants
+    try:
+        transcript = ytt_api.fetch(video_id, languages=["en-US", "en-GB"])
+        log(f"  Transcript language: en-US/en-GB")
+        return _to_segments(transcript)
+    except (NoTranscriptFound, Exception):
+        pass
+
+    # Accept any available language
+    try:
+        transcript = ytt_api.fetch(video_id)
+        # Try to detect what language we got
+        lang = "unknown"
+        if hasattr(transcript, 'language'):
+            lang = transcript.language
+        elif hasattr(transcript, '_language'):
+            lang = transcript._language
+        log(f"  Transcript language: {lang} (non-English fallback)")
+        return _to_segments(transcript)
     except Exception as e:
         log(f"  Transcript error for {video_id}: {type(e).__name__}: {e}")
         return None
@@ -292,7 +455,7 @@ def main():
 
     # Match videos to guests
     log("Matching videos to guests...")
-    matches = match_videos_to_guests(videos, guests, pilot_only=args.pilot)
+    matches, matched_video_ids = match_videos_to_guests(videos, guests, pilot_only=args.pilot)
     log(f"Matched {len(matches)} videos to guests")
 
     if args.limit:
@@ -335,16 +498,59 @@ def main():
         if transcript:
             success_count += 1
 
-    # Save updated guests
+    # Save updated guests (intermediate save before multi-visit matching)
     save_json(GUESTS_FILE, guests)
     log(f"Updated {GUESTS_FILE}")
     log(f"Transcripts fetched: {success_count}/{len(matches)}")
 
-    # Report
+    # Report primary matches
     for video, guest in matches:
         has_transcript = (TRANSCRIPTS_DIR / f"{video['video_id']}.json").exists()
         status = "OK" if has_transcript else "NO TRANSCRIPT"
         log(f"  {guest['name']}: {video['video_id']} [{status}]")
+
+    # Multi-visit second video matching
+    if not args.pilot:
+        log("\nMatching second-visit videos...")
+        visit_matches = match_second_visit_videos(videos, guests, matched_video_ids)
+        log(f"Matched {len(visit_matches)} second-visit videos")
+
+        for video, guest, visit_idx in visit_matches:
+            video_id = video["video_id"]
+            visit = guest["visits"][visit_idx]
+
+            # Set video ID on the visit
+            visit["youtube_video_id"] = video_id
+            visit["youtube_video_url"] = f"https://www.youtube.com/watch?v={video_id}"
+
+            # Set episode_date from upload_date on this visit
+            upload_date = video.get("upload_date", "")
+            if upload_date and len(upload_date) == 8:
+                visit["episode_date"] = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:8]}"
+
+            # Fetch transcript
+            transcript_path = TRANSCRIPTS_DIR / f"{video_id}.json"
+            if transcript_path.exists():
+                log(f"  Transcript already exists: {video_id}")
+            else:
+                log(f"  Fetching transcript: {video_id} ({guest['name']} visit {visit_idx + 1})")
+                transcript = fetch_transcript(video_id)
+                time.sleep(0.5)
+
+                if transcript:
+                    save_json(transcript_path, {
+                        "video_id": video_id,
+                        "guest_name": guest["name"],
+                        "visit": visit_idx + 1,
+                        "segments": transcript,
+                    })
+                    log(f"  Saved transcript: {len(transcript)} segments")
+                else:
+                    log(f"  No transcript available for {video_id}")
+
+        # Save with multi-visit updates
+        save_json(GUESTS_FILE, guests)
+        log(f"Saved multi-visit updates to {GUESTS_FILE}")
 
 
 if __name__ == "__main__":

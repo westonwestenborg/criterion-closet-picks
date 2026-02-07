@@ -340,6 +340,93 @@ def main():
         processed += 1
         time.sleep(6)  # Rate limit: ~10 RPM for Gemini
 
+    # --- Multi-visit second pass ---
+    # For multi-visit guests, check if visit 2 has a transcript we can use
+    # to fill in picks that still have confidence "none"
+    multi_visit_processed = 0
+    for guest in guests:
+        slug = guest["slug"]
+        visits = guest.get("visits", [])
+        if len(visits) < 2:
+            continue
+
+        # Check if this guest has "none" confidence picks that might benefit
+        guest_picks_in_index = [
+            p for key, p in existing_pick_index.items()
+            if key[0] == slug and p.get("extraction_confidence") in ("none", None)
+        ]
+        if not guest_picks_in_index:
+            continue
+
+        # Try each visit's transcript (skip visit 0 which was already processed above)
+        for visit_idx in range(1, len(visits)):
+            visit = visits[visit_idx]
+            visit_video_id = visit.get("youtube_video_id") or visit.get("vimeo_video_id")
+            if not visit_video_id:
+                continue
+
+            visit_transcript_path = TRANSCRIPTS_DIR / f"{visit_video_id}.json"
+            if not visit_transcript_path.exists():
+                continue
+
+            # Check checkpoint for visit-specific processing
+            visit_checkpoint_key = f"{slug}_visit{visit_idx + 1}"
+            if not args.force and visit_checkpoint_key in checkpoint:
+                continue
+
+            visit_transcript_data = load_json(visit_transcript_path)
+            visit_segments = visit_transcript_data.get("segments", [])
+            if not visit_segments:
+                continue
+
+            # Get the raw picks for this guest (for the prompt)
+            guest_raw_picks = picks_by_guest.get(slug, [])
+            # Only send picks that have no quote yet
+            none_picks = [p for p in guest_raw_picks if p.get("extraction_confidence") in ("none", None) or not p.get("quote")]
+            if not none_picks:
+                continue
+
+            log(f"  Multi-visit pass: {guest['name']} visit {visit_idx + 1} — {len(none_picks)} picks without quotes")
+            quotes = extract_quotes_for_guest(model, guest, none_picks, visit_segments)
+
+            if quotes:
+                visit_video_source = "youtube" if visit.get("youtube_video_id") else "vimeo"
+                quotes_by_title = {q["film_title"].lower(): q for q in quotes}
+                new_quotes_found = 0
+
+                for pick in none_picks:
+                    title = pick["film_title"]
+                    quote_match = quotes_by_title.get(title.lower())
+                    if quote_match and quote_match.get("quote") and quote_match["confidence"] != "none":
+                        pick["quote"] = quote_match["quote"]
+                        pick["start_timestamp"] = quote_match["start_timestamp"]
+                        pick["extraction_confidence"] = quote_match["confidence"]
+                        if visit_video_id and quote_match["start_timestamp"]:
+                            if visit_video_source == "vimeo":
+                                pick["vimeo_timestamp_url"] = (
+                                    f"https://vimeo.com/{visit_video_id}#t={quote_match['start_timestamp']}s"
+                                )
+                            else:
+                                pick["youtube_timestamp_url"] = (
+                                    f"https://www.youtube.com/watch?v={visit_video_id}&t={quote_match['start_timestamp']}"
+                                )
+                        existing_pick_index[(slug, title)] = pick
+                        new_quotes_found += 1
+
+                log(f"    Found {new_quotes_found} new quotes from visit {visit_idx + 1}")
+                multi_visit_processed += 1
+
+            checkpoint[visit_checkpoint_key] = {
+                "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "quotes_count": len(quotes) if quotes else 0,
+                "picks_count": len(none_picks),
+            }
+            save_json(CHECKPOINT_FILE, checkpoint)
+            time.sleep(6)
+
+    if multi_visit_processed:
+        log(f"Multi-visit pass: processed {multi_visit_processed} additional transcripts")
+
     # Save all picks
     all_picks = list(existing_pick_index.values())
 

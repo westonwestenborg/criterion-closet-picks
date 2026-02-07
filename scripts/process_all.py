@@ -7,17 +7,21 @@ Steps:
   1. Build/update Criterion catalog (build_catalog.py)
   2. Scrape Letterboxd picks (scrape_letterboxd.py)
   3. Scrape Criterion.com picks (scrape_criterion_picks.py) [fallback/supplement]
-  4. Match YouTube videos + fetch transcripts (match_youtube.py)
-  5. Extract quotes via Gemini (extract_quotes.py)
-  6. Enrich via TMDB (enrich_tmdb.py)
-  7. Validate (validate.py)
+  4. Normalize guest data (normalize_guests.py)
+  5. Match YouTube videos + fetch transcripts (match_youtube.py)
+  6. Extract quotes via Gemini (extract_quotes.py)
+  7. Backfill films & propagate URLs (backfill_films.py)
+  8. Group box set films (group_box_sets.py)
+  9. Scrape box set images (scrape_box_set_images.py)
+  10. Enrich via TMDB (enrich_tmdb.py)
+  11. Validate (validate.py)
 
 Usage:
   python scripts/process_all.py --pilot          # 10-video pilot
   python scripts/process_all.py                   # Full pipeline
   python scripts/process_all.py --skip-catalog    # Skip catalog rebuild
   python scripts/process_all.py --skip-criterion  # Skip Criterion.com scraping
-  python scripts/process_all.py --from-step 4     # Resume from step 4
+  python scripts/process_all.py --from-step 5     # Resume from step 5
 """
 
 import argparse
@@ -70,8 +74,9 @@ def main():
     parser.add_argument("--skip-youtube", action="store_true", help="Skip YouTube matching")
     parser.add_argument("--skip-quotes", action="store_true", help="Skip quote extraction")
     parser.add_argument("--skip-enrich", action="store_true", help="Skip TMDB enrichment")
+    parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
-    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-7)")
+    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-11)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
 
@@ -115,7 +120,16 @@ def main():
             step_num,
         ))
 
-    # Step 4: Match YouTube + transcripts
+    # Step 4: Normalize guest data
+    step_num += 1
+    if not args.skip_normalize and args.from_step <= step_num:
+        steps.append((
+            "Normalize Guest Data",
+            [python, str(SCRIPTS_DIR / "normalize_guests.py")],
+            step_num,
+        ))
+
+    # Step 5: Match YouTube + transcripts
     step_num += 1
     if not args.skip_youtube and args.from_step <= step_num:
         steps.append((
@@ -124,7 +138,7 @@ def main():
             step_num,
         ))
 
-    # Step 5: Extract quotes
+    # Step 6: Extract quotes
     step_num += 1
     if not args.skip_quotes and args.from_step <= step_num:
         steps.append((
@@ -133,7 +147,7 @@ def main():
             step_num,
         ))
 
-    # Step 6: Backfill missing films + propagate URLs + flag box sets
+    # Step 7: Backfill missing films + propagate URLs + flag box sets
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -142,7 +156,7 @@ def main():
             step_num,
         ))
 
-    # Step 7: Group box set films
+    # Step 8: Group box set films
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -151,7 +165,7 @@ def main():
             step_num,
         ))
 
-    # Step 8: Scrape box set images (only for entries missing posters)
+    # Step 9: Scrape box set images (only for entries missing posters)
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -160,7 +174,7 @@ def main():
             step_num,
         ))
 
-    # Step 9: Enrich via TMDB
+    # Step 10: Enrich via TMDB
     step_num += 1
     if not args.skip_enrich and args.from_step <= step_num:
         steps.append((
@@ -169,7 +183,7 @@ def main():
             step_num,
         ))
 
-    # Step 10: Validate
+    # Step 11: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

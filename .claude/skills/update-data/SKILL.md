@@ -64,11 +64,13 @@ If new videos were found, run the full pipeline (skipping catalog rebuild unless
 
 This will:
 1. Scrape Letterboxd for any new guest lists
-2. Scrape Criterion.com for new collection pages
-3. Match new YouTube videos to guests and fetch transcripts
-4. Extract quotes via Gemini Flash
-5. Enrich new films/guests via TMDB
-6. Run validation
+2. Scrape Criterion.com for new collection pages (+ extract video IDs)
+3. Normalize guest data (merge duplicates, fix names, build visits)
+4. Match YouTube videos to guests and fetch transcripts (incl. multi-visit)
+5. Extract quotes via Gemini Flash (incl. multi-visit second transcripts)
+6. Backfill films, group box sets, scrape box set images
+7. Enrich new films/guests via TMDB
+8. Run validation
 
 ### Step 3: Rebuild the site
 

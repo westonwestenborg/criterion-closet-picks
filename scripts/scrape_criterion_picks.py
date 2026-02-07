@@ -94,53 +94,128 @@ def extract_youtube_video_id(soup: BeautifulSoup) -> str | None:
     return None
 
 
-def extract_videos_from_criterion_pages(scraper, existing_guests: list[dict]) -> int:
+def extract_vimeo_video_id(soup: BeautifulSoup) -> str | None:
     """
-    For guests with criterion_page_url but no youtube_video_id,
-    fetch the collection page and extract the YouTube video ID.
-    Returns count of updated guests.
+    Extract Vimeo video ID from a Criterion collection page.
+    Looks for Vimeo embed iframes in the parsed HTML.
     """
-    candidates = [
-        g for g in existing_guests
-        if g.get("criterion_page_url") and not g.get("youtube_video_id")
-    ]
+    # Look for Vimeo embeds in iframes (src)
+    for iframe in soup.select('iframe[src*="player.vimeo.com/video/"]'):
+        src = iframe.get("src", "")
+        m = re.search(r"player\.vimeo\.com/video/(\d+)", src)
+        if m:
+            return m.group(1)
 
-    if not candidates:
-        log("No guests need YouTube video extraction")
-        return 0
+    # Also check lazy-loaded iframes (data-src)
+    for iframe in soup.select('iframe[data-src*="player.vimeo.com/video/"]'):
+        src = iframe.get("data-src", "")
+        m = re.search(r"player\.vimeo\.com/video/(\d+)", src)
+        if m:
+            return m.group(1)
 
-    log(f"Checking {len(candidates)} guests for YouTube embeds...")
-    updated = 0
+    # Fallback: regex search in raw HTML
+    raw_html = str(soup)
+    m = re.search(r"player\.vimeo\.com/video/(\d+)", raw_html)
+    if m:
+        return m.group(1)
 
-    for guest in tqdm(candidates, desc="Extracting YouTube videos"):
-        url = guest["criterion_page_url"]
-        log(f"  Checking {guest['name']}: {url}")
+    return None
 
-        try:
-            resp = scraper.get(url, timeout=30)
-            if resp.status_code != 200:
-                log(f"    HTTP {resp.status_code}")
-                time.sleep(REQUEST_DELAY)
-                continue
-        except Exception as e:
-            log(f"    Error: {e}")
-            time.sleep(REQUEST_DELAY)
-            continue
 
-        soup = BeautifulSoup(resp.text, "lxml")
-        video_id = extract_youtube_video_id(soup)
+def extract_video_ids(soup: BeautifulSoup) -> dict[str, str | None]:
+    """Extract both YouTube and Vimeo video IDs from a page."""
+    return {
+        "youtube_video_id": extract_youtube_video_id(soup),
+        "vimeo_video_id": extract_vimeo_video_id(soup),
+    }
 
-        if video_id:
-            guest["youtube_video_id"] = video_id
-            guest["youtube_video_url"] = f"https://www.youtube.com/watch?v={video_id}"
-            log(f"    Found video: {video_id}")
-            updated += 1
-        else:
-            log(f"    No YouTube embed found")
 
-        time.sleep(REQUEST_DELAY)
+def _apply_video_ids_to_target(target: dict, video_ids: dict, label: str) -> bool:
+    """Apply discovered video IDs to a guest or visit dict. Returns True if updated."""
+    updated = False
+    yt_id = video_ids.get("youtube_video_id")
+    vim_id = video_ids.get("vimeo_video_id")
+
+    if yt_id and not target.get("youtube_video_id"):
+        target["youtube_video_id"] = yt_id
+        target["youtube_video_url"] = f"https://www.youtube.com/watch?v={yt_id}"
+        log(f"    Found YouTube video for {label}: {yt_id}")
+        updated = True
+
+    if vim_id and not target.get("vimeo_video_id"):
+        target["vimeo_video_id"] = vim_id
+        log(f"    Found Vimeo video for {label}: {vim_id}")
+        updated = True
 
     return updated
+
+
+def extract_videos_from_criterion_pages(scraper, existing_guests: list[dict]) -> int:
+    """
+    For guests with criterion_page_url but no video IDs (YouTube or Vimeo),
+    fetch the collection page and extract video IDs.
+    Also checks multi-visit guests' per-visit criterion_page_urls.
+    Returns count of updated guests.
+    """
+    # Build list of (guest, url, target_dict) tuples to check
+    targets: list[tuple[dict, str, dict, str]] = []  # (guest, url, target, label)
+
+    for g in existing_guests:
+        # Top-level: check if guest has no video at all
+        if g.get("criterion_page_url") and not g.get("youtube_video_id") and not g.get("vimeo_video_id"):
+            targets.append((g, g["criterion_page_url"], g, g["name"]))
+
+        # Per-visit: check each visit with a criterion URL but no video
+        for i, visit in enumerate(g.get("visits", [])):
+            visit_url = visit.get("criterion_page_url")
+            if visit_url and not visit.get("youtube_video_id") and not visit.get("vimeo_video_id"):
+                targets.append((g, visit_url, visit, f"{g['name']} visit {i + 1}"))
+
+    if not targets:
+        log("No guests need video extraction from Criterion pages")
+        return 0
+
+    # Deduplicate by URL (same page shouldn't be fetched twice)
+    seen_urls: dict[str, dict] = {}
+    deduped_targets: list[tuple[dict, str, dict, str]] = []
+    for guest, url, target, label in targets:
+        if url not in seen_urls:
+            seen_urls[url] = None  # Will be populated with video_ids
+            deduped_targets.append((guest, url, target, label))
+        else:
+            deduped_targets.append((guest, url, target, label))
+
+    log(f"Checking {len(set(t[1] for t in deduped_targets))} unique Criterion pages for video embeds...")
+    updated_guests = set()
+
+    for guest, url, target, label in tqdm(deduped_targets, desc="Extracting video IDs"):
+        # Use cached result if we already fetched this URL
+        if url in seen_urls and seen_urls[url] is not None:
+            video_ids = seen_urls[url]
+        else:
+            log(f"  Checking {label}: {url}")
+            try:
+                resp = scraper.get(url, timeout=30)
+                if resp.status_code != 200:
+                    log(f"    HTTP {resp.status_code}")
+                    seen_urls[url] = {"youtube_video_id": None, "vimeo_video_id": None}
+                    time.sleep(REQUEST_DELAY)
+                    continue
+            except Exception as e:
+                log(f"    Error: {e}")
+                seen_urls[url] = {"youtube_video_id": None, "vimeo_video_id": None}
+                time.sleep(REQUEST_DELAY)
+                continue
+
+            soup = BeautifulSoup(resp.text, "lxml")
+            video_ids = extract_video_ids(soup)
+            seen_urls[url] = video_ids
+            time.sleep(REQUEST_DELAY)
+
+        if _apply_video_ids_to_target(target, video_ids, label):
+            updated_guests.add(guest["slug"])
+
+    return len(updated_guests)
 
 
 # ---------------------------------------------------------------------------
@@ -256,14 +331,16 @@ def scrape_index(scraper) -> list[dict]:
 # Collection page scraping
 # ---------------------------------------------------------------------------
 
-def scrape_collection_page(scraper, collection_url: str) -> list[dict]:
+def scrape_collection_page(scraper, collection_url: str) -> tuple[list[dict], dict[str, str | None]]:
     """
-    Scrape a single Criterion collection page for film links.
-    Handles pagination. Returns list of film dicts.
+    Scrape a single Criterion collection page for film links and video embeds.
+    Handles pagination. Returns (films, video_ids) where video_ids has
+    youtube_video_id and vimeo_video_id extracted from the first page.
     """
     films = []
     seen_film_ids = set()
     page = 1
+    video_ids = {"youtube_video_id": None, "vimeo_video_id": None}
 
     while True:
         if page == 1:
@@ -285,6 +362,11 @@ def scrape_collection_page(scraper, collection_url: str) -> list[dict]:
             break
 
         soup = BeautifulSoup(resp.text, "lxml")
+
+        # Extract video IDs from the first page only (no extra HTTP request)
+        if page == 1:
+            video_ids = extract_video_ids(soup)
+
         page_films = _extract_films_from_page(soup, seen_film_ids)
 
         if not page_films:
@@ -311,7 +393,7 @@ def scrape_collection_page(scraper, collection_url: str) -> list[dict]:
         else:
             break
 
-    return films
+    return films, video_ids
 
 
 def _extract_films_from_page(soup: BeautifulSoup, seen_film_ids: set) -> list[dict]:
@@ -660,7 +742,7 @@ def scrape_all_collections(
 
         log(f"  Scraping: {coll['name']} ({url})")
 
-        films = scrape_collection_page(scraper, url)
+        films, video_ids = scrape_collection_page(scraper, url)
         log(f"    Found {len(films)} films")
 
         if not films:
@@ -685,6 +767,8 @@ def scrape_all_collections(
             # Update criterion_page_url
             if not existing_guest.get("criterion_page_url"):
                 existing_guest["criterion_page_url"] = url
+            # Apply discovered video IDs if guest has none
+            _apply_video_ids_to_target(existing_guest, video_ids, guest_name)
             # Use the existing slug for consistency
             guest_slug = existing_guest["slug"]
             guest_name = existing_guest["name"]
@@ -695,8 +779,12 @@ def scrape_all_collections(
                 "slug": guest_slug,
                 "profession": None,
                 "photo_url": None,
-                "youtube_video_id": None,
-                "youtube_video_url": None,
+                "youtube_video_id": video_ids.get("youtube_video_id"),
+                "youtube_video_url": (
+                    f"https://www.youtube.com/watch?v={video_ids['youtube_video_id']}"
+                    if video_ids.get("youtube_video_id") else None
+                ),
+                "vimeo_video_id": video_ids.get("vimeo_video_id"),
                 "episode_date": None,
                 "letterboxd_list_url": None,
                 "criterion_page_url": url,
