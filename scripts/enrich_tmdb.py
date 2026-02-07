@@ -323,26 +323,69 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
     return film
 
 
-def enrich_guest(client: TMDBClient, guest: dict) -> dict:
-    """Enrich a guest with TMDB person data."""
+def clean_name_for_tmdb(name: str) -> list[str]:
+    """Extract searchable individual names from a guest name.
+
+    Returns a list of names to try in TMDB search order:
+    - For multi-person names (contains " and " or " & "), returns individual names
+    - Strips suffixes like "'s Closet Picks", "'s Criterion Picks"
+    - Strips "(2nd Visit)", "(3rd Visit)", etc.
+    """
+    # Strip possessive suffixes
+    name = re.sub(r"'s\s+(Closet|Criterion)\s+(Picks|Criterion Picks)$", "", name).strip()
+    # Strip visit markers
+    name = re.sub(r"\s*\(\d+\w+\s+Visit\)", "", name).strip()
+
+    # Split multi-person names
+    for sep in [" and ", " & "]:
+        if sep in name:
+            parts = [p.strip() for p in name.split(sep) if p.strip()]
+            if len(parts) >= 2:
+                return parts
+
+    return [name] if name else []
+
+
+def enrich_guest(client: TMDBClient, guest: dict, force: bool = False) -> dict:
+    """Enrich a guest with TMDB person data.
+
+    Args:
+        force: If True, re-enrich guests missing either profession or photo
+               (normally skips if BOTH exist).
+    """
     name = guest.get("name", "")
 
-    # Skip if already enriched
-    if guest.get("profession") and guest.get("photo_url"):
+    # Skip non-person guests
+    if guest.get("guest_type") and guest["guest_type"] != "person":
         return guest
 
-    result = client.search_person(name)
-    if not result:
+    # Skip if already fully enriched (unless force)
+    if not force and guest.get("profession") and guest.get("photo_url"):
         return guest
 
-    # Profession
-    department = result.get("known_for_department", "")
-    guest["profession"] = DEPARTMENT_MAP.get(department, "other")
+    names_to_try = clean_name_for_tmdb(name)
+    if not names_to_try:
+        return guest
 
-    # Photo
-    profile_path = result.get("profile_path")
-    if profile_path:
-        guest["photo_url"] = f"{TMDB_IMAGE_BASE}/w185{profile_path}"
+    for try_name in names_to_try:
+        result = client.search_person(try_name)
+        if not result:
+            continue
+
+        # Profession (don't overwrite if already set)
+        if not guest.get("profession"):
+            department = result.get("known_for_department", "")
+            guest["profession"] = DEPARTMENT_MAP.get(department, "other")
+
+        # Photo (don't overwrite if already set)
+        if not guest.get("photo_url"):
+            profile_path = result.get("profile_path")
+            if profile_path:
+                guest["photo_url"] = f"{TMDB_IMAGE_BASE}/w185{profile_path}"
+
+        # Stop if we found both
+        if guest.get("profession") and guest.get("photo_url"):
+            break
 
     return guest
 
@@ -353,6 +396,8 @@ def main():
     parser.add_argument("--films-only", action="store_true", help="Only enrich films")
     parser.add_argument("--guests-only", action="store_true", help="Only enrich guests")
     parser.add_argument("--limit", type=int, default=0, help="Limit items to enrich")
+    parser.add_argument("--force-guests", action="store_true",
+                        help="Re-enrich guests missing either profession or photo")
     args = parser.parse_args()
 
     client = TMDBClient()
@@ -423,11 +468,11 @@ def main():
         if args.limit:
             guests_to_enrich = guests_to_enrich[:args.limit]
 
-        log(f"Enriching {len(guests_to_enrich)} guests")
+        log(f"Enriching {len(guests_to_enrich)} guests" + (" (force mode)" if args.force_guests else ""))
         enriched_count = 0
         for guest in tqdm(guests_to_enrich, desc="Enriching guests"):
             before = (guest.get("profession"), guest.get("photo_url"))
-            guest = enrich_guest(client, guest)
+            guest = enrich_guest(client, guest, force=args.force_guests)
             after = (guest.get("profession"), guest.get("photo_url"))
             if before != after:
                 enriched_count += 1
