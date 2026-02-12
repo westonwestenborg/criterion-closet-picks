@@ -3,18 +3,21 @@
 Batch orchestrator for the Criterion Closet Picks data pipeline.
 Runs all pipeline steps in order, with optional --pilot flag for the 10-video test.
 
+Criterion.com is the sole primary data source (Letterboxd removed).
+
 Steps:
   1. Build/update Criterion catalog (build_catalog.py)
-  2. Scrape Letterboxd picks (scrape_letterboxd.py)
-  3. Scrape Criterion.com picks (scrape_criterion_picks.py) [fallback/supplement]
-  4. Normalize guest data (normalize_guests.py)
-  5. Match YouTube videos + fetch transcripts (match_youtube.py)
-  6. Extract quotes via Gemini (extract_quotes.py)
-  7. Backfill films & propagate URLs (backfill_films.py)
-  8. Group box set films (group_box_sets.py)
-  9. Scrape box set images (scrape_box_set_images.py)
+  2. Scrape Criterion.com picks as primary source (scrape_criterion_picks.py --primary)
+  3. Normalize guest data (normalize_guests.py)
+  4. Match YouTube videos + fetch transcripts (match_youtube.py)
+  5. Extract quotes via Gemini (extract_quotes.py)
+  6. Backfill films & propagate URLs (backfill_films.py)
+  7. Group box set films (group_box_sets.py)
+  8. Scrape box set images (scrape_box_set_images.py)
+  9. Migrate source/visit metadata (migrate_source_visit.py)
   10. Enrich via TMDB (enrich_tmdb.py)
-  11. Validate (validate.py)
+  11. Normalize guest data - second pass (normalize_guests.py)
+  12. Validate (validate.py + test_data.py)
 
 Usage:
   python scripts/process_all.py --pilot          # 10-video pilot
@@ -69,14 +72,13 @@ def main():
     parser = argparse.ArgumentParser(description="Run the full data pipeline")
     parser.add_argument("--pilot", action="store_true", help="Only process 10 pilot guests")
     parser.add_argument("--skip-catalog", action="store_true", help="Skip catalog rebuild")
-    parser.add_argument("--skip-letterboxd", action="store_true", help="Skip Letterboxd scraping")
     parser.add_argument("--skip-criterion", action="store_true", help="Skip Criterion.com scraping")
     parser.add_argument("--skip-youtube", action="store_true", help="Skip YouTube matching")
     parser.add_argument("--skip-quotes", action="store_true", help="Skip quote extraction")
     parser.add_argument("--skip-enrich", action="store_true", help="Skip TMDB enrichment")
     parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
-    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-11)")
+    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-12)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
 
@@ -102,25 +104,16 @@ def main():
             step_num,
         ))
 
-    # Step 2: Scrape Letterboxd
-    step_num += 1
-    if not args.skip_letterboxd and args.from_step <= step_num:
-        steps.append((
-            "Scrape Letterboxd Picks",
-            [python, str(SCRIPTS_DIR / "scrape_letterboxd.py")] + pilot_flag + limit_flag,
-            step_num,
-        ))
-
-    # Step 3: Scrape Criterion.com picks (fallback/supplement)
+    # Step 2: Scrape Criterion.com picks (primary source)
     step_num += 1
     if not args.skip_criterion and args.from_step <= step_num:
         steps.append((
-            "Scrape Criterion.com Picks",
-            [python, str(SCRIPTS_DIR / "scrape_criterion_picks.py")] + limit_flag,
+            "Scrape Criterion.com Picks (Primary)",
+            [python, str(SCRIPTS_DIR / "scrape_criterion_picks.py"), "--primary"] + limit_flag,
             step_num,
         ))
 
-    # Step 4: Normalize guest data
+    # Step 3: Normalize guest data
     step_num += 1
     if not args.skip_normalize and args.from_step <= step_num:
         steps.append((
@@ -129,7 +122,7 @@ def main():
             step_num,
         ))
 
-    # Step 5: Match YouTube + transcripts
+    # Step 4: Match YouTube + transcripts
     step_num += 1
     if not args.skip_youtube and args.from_step <= step_num:
         steps.append((
@@ -138,7 +131,7 @@ def main():
             step_num,
         ))
 
-    # Step 6: Extract quotes
+    # Step 5: Extract quotes
     step_num += 1
     if not args.skip_quotes and args.from_step <= step_num:
         steps.append((
@@ -147,7 +140,7 @@ def main():
             step_num,
         ))
 
-    # Step 7: Backfill missing films + propagate URLs + flag box sets
+    # Step 6: Backfill missing films + propagate URLs + flag box sets
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -156,7 +149,7 @@ def main():
             step_num,
         ))
 
-    # Step 8: Group box set films
+    # Step 7: Group box set films
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -165,12 +158,21 @@ def main():
             step_num,
         ))
 
-    # Step 9: Scrape box set images (only for entries missing posters)
+    # Step 8: Scrape box set images (only for entries missing posters)
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
             "Scrape Box Set Images",
             [python, str(SCRIPTS_DIR / "scrape_box_set_images.py")],
+            step_num,
+        ))
+
+    # Step 9: Migrate source/visit metadata
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Migrate Source/Visit Metadata",
+            [python, str(SCRIPTS_DIR / "migrate_source_visit.py")],
             step_num,
         ))
 
@@ -183,7 +185,16 @@ def main():
             step_num,
         ))
 
-    # Step 11: Validate
+    # Step 11: Normalize guest data (second pass - after enrichment)
+    step_num += 1
+    if not args.skip_normalize and args.from_step <= step_num:
+        steps.append((
+            "Normalize Guest Data (Second Pass)",
+            [python, str(SCRIPTS_DIR / "normalize_guests.py")],
+            step_num,
+        ))
+
+    # Step 12: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

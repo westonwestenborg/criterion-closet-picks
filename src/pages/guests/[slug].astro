@@ -39,9 +39,6 @@ if (isMultiVisit) {
   visitGroups.set(1, picks);
 }
 // Gather all unique links from visits (or fall back to top-level)
-const allLetterboxdUrls = isMultiVisit
-  ? visits.map(v => v.letterboxd_list_url).filter(Boolean) as string[]
-  : [guest.letterboxd_list_url].filter(Boolean) as string[];
 const allCriterionUrls = isMultiVisit
   ? visits.map(v => v.criterion_page_url).filter(Boolean) as string[]
   : [guest.criterion_page_url].filter(Boolean) as string[];
@@ -87,11 +84,6 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
               Full Video
             </a>
           ) : null)}
-          {allLetterboxdUrls.map((url, i) => (
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {allLetterboxdUrls.length > 1 ? `Letterboxd (Visit ${i + 1})` : 'Letterboxd List'}
-            </a>
-          ))}
           {allCriterionUrls.map((url, i) => (
             <a href={url} target="_blank" rel="noopener noreferrer">
               {allCriterionUrls.length > 1 ? `Criterion (Visit ${i + 1})` : 'Criterion Page'}

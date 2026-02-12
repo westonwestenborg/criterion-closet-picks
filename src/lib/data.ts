@@ -7,7 +7,6 @@ export interface GuestVisit {
   youtube_video_url: string | null;
   vimeo_video_id: string | null;
   episode_date: string | null;
-  letterboxd_list_url: string | null;
   criterion_page_url: string | null;
 }
 
@@ -20,7 +19,6 @@ export interface Guest {
   youtube_video_url: string;
   vimeo_video_id: string | null;
   episode_date: string;
-  letterboxd_list_url: string;
   criterion_page_url: string | null;
   pick_count: number;
   visits?: GuestVisit[];
@@ -146,7 +144,7 @@ export function getFilms(): Film[] {
   const pickCounts = new Map<string, number>();
   for (const p of picks) {
     // Only count picks with actual quotes
-    if (!p.quote || p.extraction_confidence === 'none') continue;
+    if (p.source !== 'criterion' && (!p.quote || p.extraction_confidence === 'none')) continue;
     // Skip box set aggregate entries (they count toward the box set, not individual films)
     if (p.box_set_film_count) continue;
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
@@ -260,7 +258,7 @@ export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | unde
   for (const p of allPicks) {
     if (p.film_slug !== filmSlug) continue;
     if (p.box_set_film_count) continue; // skip aggregates (handled below)
-    if (!p.quote || p.extraction_confidence === 'none') continue; // skip no-quote
+    if (p.source !== 'criterion' && (!p.quote || p.extraction_confidence === 'none')) continue; // skip no-quote unless criterion-sourced
     if (seenGuests.has(p.guest_slug)) continue;
     seenGuests.add(p.guest_slug);
     results.push(p);
@@ -270,7 +268,7 @@ export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | unde
   for (const p of allPicks) {
     if (!p.box_set_film_count || !p.box_set_name) continue;
     if (!boxSetNames.has(p.box_set_name)) continue;
-    if (!p.quote || p.extraction_confidence === 'none') continue;
+    if (p.source !== 'criterion' && (!p.quote || p.extraction_confidence === 'none')) continue;
     if (seenGuests.has(p.guest_slug)) continue;
     seenGuests.add(p.guest_slug);
     results.push(p);

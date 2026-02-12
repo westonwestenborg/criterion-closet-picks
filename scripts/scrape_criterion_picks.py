@@ -897,6 +897,11 @@ def main():
         action="store_true",
         help="Don't resume from checkpoint; re-scrape all collections",
     )
+    parser.add_argument(
+        "--primary",
+        action="store_true",
+        help="Run as primary source: start with empty guests/picks_raw (no Letterboxd)",
+    )
     args = parser.parse_args()
 
     # Load catalog for matching
@@ -906,9 +911,15 @@ def main():
         sys.exit(1)
     log(f"Loaded catalog with {len(catalog)} entries")
 
-    # Load existing data
-    existing_guests = load_json(GUESTS_FILE)
-    existing_picks = load_json(PICKS_RAW_FILE)
+    # Load existing data (or start fresh in --primary mode)
+    if args.primary:
+        existing_guests = []
+        existing_picks = []
+        save_json(CHECKPOINT_FILE, {"completed_urls": []})
+        log("Primary mode: starting with empty guests and picks")
+    else:
+        existing_guests = load_json(GUESTS_FILE)
+        existing_picks = load_json(PICKS_RAW_FILE)
     log(f"Existing data: {len(existing_guests)} guests, {len(existing_picks)} picks")
 
     # Create scraper

@@ -27,11 +27,9 @@ for (const guest of guests) {
       const vLabel = `Visit ${vi + 1}`;
       if (v.youtube_video_url) markdown += ` | [${vLabel} Video](${v.youtube_video_url})`;
       else if (v.youtube_video_id) markdown += ` | [${vLabel} Video](https://www.youtube.com/watch?v=${v.youtube_video_id})`;
-      if (v.letterboxd_list_url) markdown += ` | [${vLabel} Letterboxd](${v.letterboxd_list_url})`;
     }
   } else {
     if (guest.youtube_video_url) markdown += ` | [Full Video](${guest.youtube_video_url})`;
-    if (guest.letterboxd_list_url) markdown += ` | [Letterboxd](${guest.letterboxd_list_url})`;
     if (guest.criterion_page_url) markdown += ` | [Criterion Page](${guest.criterion_page_url})`;
   }
   markdown += `\n\n`;
