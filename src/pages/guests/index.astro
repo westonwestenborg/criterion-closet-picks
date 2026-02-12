@@ -2,9 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestCard from '../../components/GuestCard.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
-import { getGuests, getAllProfessions } from '../../lib/data';
+import { getPublishableGuests, getAllProfessions } from '../../lib/data';
 
-const guests = getGuests().sort((a, b) => a.name.localeCompare(b.name));
+const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const professions = getAllProfessions();
 ---
 <BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more.">

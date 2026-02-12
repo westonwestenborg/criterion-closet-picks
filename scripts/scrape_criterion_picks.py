@@ -728,10 +728,11 @@ def scrape_all_collections(
     if limit:
         collections = collections[:limit]
 
-    # Build lookup for existing picks for dedup
-    existing_pick_keys = {
-        (p["guest_slug"], p["film_id"]) for p in existing_picks
-    }
+    # Build lookup for existing picks: (guest_slug, film_id) -> index in existing_picks
+    existing_pick_index: dict[tuple, int] = {}
+    for i, p in enumerate(existing_picks):
+        key = (p["guest_slug"], p.get("film_id", ""))
+        existing_pick_index[key] = i
 
     for coll in tqdm(collections, desc="Scraping Criterion collections"):
         url = coll["collection_url"]
@@ -772,8 +773,16 @@ def scrape_all_collections(
             # Use the existing slug for consistency
             guest_slug = existing_guest["slug"]
             guest_name = existing_guest["name"]
+
+            # Determine visit_index from collection URL for multi-visit guests
+            visit_index = 1
+            for i, visit in enumerate(existing_guest.get("visits", [])):
+                if visit.get("criterion_page_url") == url:
+                    visit_index = i + 1
+                    break
         else:
             # New guest (not in Letterboxd data)
+            visit_index = 1
             new_guest = {
                 "name": guest_name,
                 "slug": guest_slug,
@@ -793,12 +802,22 @@ def scrape_all_collections(
             existing_guests.append(new_guest)
             new_guests.append(new_guest)
 
-        # Add picks (dedup against existing)
+        # Add or update picks
         for film in films:
             film_id = film.get("film_id", make_film_id(film["title"], None))
             key = (guest_slug, film_id)
 
-            if key in existing_pick_keys:
+            if key in existing_pick_index:
+                # Update existing entry with Criterion metadata
+                idx = existing_pick_index[key]
+                existing = existing_picks[idx]
+                if not existing.get("criterion_film_url"):
+                    existing["criterion_film_url"] = film.get("criterion_film_url", "")
+                existing["source"] = "criterion"
+                if existing_guest and len(existing_guest.get("visits", [])) >= 2:
+                    # Keep the earliest visit_index (lowest number) for overlapping films
+                    if not existing.get("visit_index") or visit_index < existing["visit_index"]:
+                        existing["visit_index"] = visit_index
                 continue
 
             pick = {
@@ -812,6 +831,8 @@ def scrape_all_collections(
                 "match_method": film.get("match_method"),
                 "letterboxd_url": "",
                 "criterion_film_url": film.get("criterion_film_url", ""),
+                "source": "criterion",
+                "visit_index": visit_index if existing_guest else 1,
                 "is_box_set": film.get("is_box_set", False),
                 "box_set_name": film.get("box_set_name"),
                 "quote": "",
@@ -821,7 +842,7 @@ def scrape_all_collections(
             }
             existing_picks.append(pick)
             new_picks.append(pick)
-            existing_pick_keys.add(key)
+            existing_pick_index[key] = len(existing_picks) - 1
 
         # Update pick_count for existing guest
         if existing_guest:

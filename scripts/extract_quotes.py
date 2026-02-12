@@ -98,6 +98,7 @@ def get_gemini_model():
         generation_config={
             "temperature": 0.1,
             "response_mime_type": "application/json",
+            "max_output_tokens": 65536,
         },
     )
     return model
@@ -125,26 +126,17 @@ def format_picks_list(picks: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def extract_quotes_for_guest(
+BATCH_SIZE = 20  # Max picks per API call to avoid output truncation
+
+
+def _extract_single_batch(
     model,
-    guest: dict,
+    guest_name: str,
     picks: list[dict],
-    transcript_segments: list[dict],
+    transcript: str,
 ) -> list[dict]:
-    """
-    Send transcript + picks to Gemini and extract quotes.
-    Returns list of quote objects.
-    """
-    guest_name = guest["name"]
+    """Extract quotes for a single batch of picks."""
     picks_list = format_picks_list(picks)
-    transcript = format_transcript(transcript_segments)
-
-    # Truncate transcript if too long (Gemini has ~1M token context)
-    # Each segment is roughly 10-20 words, so 500 segments = ~10K words
-    if len(transcript_segments) > 1000:
-        transcript = format_transcript(transcript_segments[:1000])
-        log(f"  Truncated transcript to 1000 segments")
-
     prompt = EXTRACTION_PROMPT.format(
         guest_name=guest_name,
         picks_list=picks_list,
@@ -155,7 +147,6 @@ def extract_quotes_for_guest(
         response = model.generate_content(prompt)
         response_text = response.text.strip()
 
-        # Parse JSON response
         # Handle markdown code blocks if present
         if response_text.startswith("```"):
             response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
@@ -188,6 +179,45 @@ def extract_quotes_for_guest(
     except Exception as e:
         log(f"  Gemini error: {type(e).__name__}: {e}")
         return []
+
+
+def extract_quotes_for_guest(
+    model,
+    guest: dict,
+    picks: list[dict],
+    transcript_segments: list[dict],
+) -> list[dict]:
+    """
+    Send transcript + picks to Gemini and extract quotes.
+    Batches large pick lists to avoid output truncation.
+    Returns list of quote objects.
+    """
+    guest_name = guest["name"]
+    transcript = format_transcript(transcript_segments)
+
+    # Truncate transcript if too long (Gemini has ~1M token context)
+    if len(transcript_segments) > 1000:
+        transcript = format_transcript(transcript_segments[:1000])
+        log(f"  Truncated transcript to 1000 segments")
+
+    # Batch large pick lists to avoid output token truncation
+    if len(picks) <= BATCH_SIZE:
+        return _extract_single_batch(model, guest_name, picks, transcript)
+
+    all_quotes = []
+    num_batches = (len(picks) + BATCH_SIZE - 1) // BATCH_SIZE
+    log(f"  Splitting {len(picks)} picks into {num_batches} batches")
+
+    for i in range(0, len(picks), BATCH_SIZE):
+        batch = picks[i : i + BATCH_SIZE]
+        batch_num = i // BATCH_SIZE + 1
+        log(f"  Batch {batch_num}/{num_batches}: {len(batch)} picks")
+        batch_quotes = _extract_single_batch(model, guest_name, batch, transcript)
+        all_quotes.extend(batch_quotes)
+        if batch_num < num_batches:
+            time.sleep(6)  # Rate limit between batches
+
+    return all_quotes
 
 
 def main():
@@ -286,7 +316,10 @@ def main():
 
         # Load transcript
         transcript_data = load_json(transcript_path)
-        segments = transcript_data.get("segments", [])
+        if isinstance(transcript_data, list):
+            segments = transcript_data
+        else:
+            segments = transcript_data.get("segments", [])
 
         if not segments:
             log(f"  Empty transcript for {guest['name']}")
@@ -315,6 +348,8 @@ def main():
                 pick["quote"] = quote_match["quote"]
                 pick["start_timestamp"] = quote_match["start_timestamp"]
                 pick["extraction_confidence"] = quote_match["confidence"]
+                # Tag with visit_index 1 (primary pass = first visit)
+                pick["visit_index"] = 1
                 if video_id and quote_match["start_timestamp"]:
                     if video_source == "vimeo":
                         pick["vimeo_timestamp_url"] = (
@@ -401,6 +436,8 @@ def main():
                         pick["quote"] = quote_match["quote"]
                         pick["start_timestamp"] = quote_match["start_timestamp"]
                         pick["extraction_confidence"] = quote_match["confidence"]
+                        # Tag with visit_index (1-based: visit_idx 1 = visit 2)
+                        pick["visit_index"] = visit_idx + 1
                         if visit_video_id and quote_match["start_timestamp"]:
                             if visit_video_source == "vimeo":
                                 pick["vimeo_timestamp_url"] = (

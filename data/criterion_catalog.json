@@ -8585,7 +8585,7 @@
     "spine_number": 203,
     "title": "The BRD Trilogy",
     "director": "",
-    "year": null,
+    "year": 1977,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/138-the-brd-trilogy",
     "film_id": "the-brd-trilogy",
@@ -129204,22 +129204,90 @@
   {
     "spine_number": null,
     "title": "Carl Th. Dreyer: My Metier",
-    "director": "",
-    "year": null,
+    "director": "Torben Skjødt Jensen",
+    "year": 1995,
     "country": "",
     "criterion_url": "",
     "film_id": "carl-th-dreyer-my-metier",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null,
-    "credits": null
+    "imdb_id": "tt0112631",
+    "tmdb_id": 66133,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/aTrrGTlWqGXOMec6FaieAvnaVY4.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Torben Skjødt Jensen",
+          "tmdb_id": 544710
+        }
+      ],
+      "writers": [
+        {
+          "name": "Prami Larsen",
+          "tmdb_id": 2058067
+        },
+        {
+          "name": "Torben Skjødt Jensen",
+          "tmdb_id": 544710
+        }
+      ],
+      "cinematographers": [],
+      "editors": [
+        {
+          "name": "Ghita Beckendorff",
+          "tmdb_id": 1150821
+        }
+      ],
+      "cast": [
+        {
+          "name": "Henning Jensen",
+          "tmdb_id": 64125,
+          "character": "Dreyer's Voice"
+        },
+        {
+          "name": "Henning Bendtsen",
+          "tmdb_id": 56885,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Helene Falconetti",
+          "tmdb_id": 2016824,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Birgitte Federspiel",
+          "tmdb_id": 47155,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Preben Lerdorff Rye",
+          "tmdb_id": 142906,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Lisbeth Movin",
+          "tmdb_id": 142907,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Baard Owe",
+          "tmdb_id": 558254,
+          "character": "Interview Subject"
+        },
+        {
+          "name": "Jørgen Roos",
+          "tmdb_id": 1126205,
+          "character": "Interview Subject"
+        }
+      ]
+    }
   },
   {
     "spine_number": null,
     "title": "Carl Theodor Dreyer",
     "director": "",
-    "year": null,
+    "year": 1995,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/254-carl-theodor-dreyer",
     "film_id": "carl-theodor-dreyer",
@@ -129249,7 +129317,7 @@
     "spine_number": null,
     "title": "Eclipse Series 32: Pearls of the Czech New Wave",
     "director": "",
-    "year": null,
+    "year": 1966,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/870-eclipse-series-32-pearls-of-the-czech-new-wave",
     "film_id": "eclipse-series-32-pearls-of-the-czech-new-wave",
@@ -129263,43 +129331,253 @@
   {
     "spine_number": null,
     "title": "Godzilla vs. Gigan",
-    "director": "",
-    "year": null,
+    "director": "Jun Fukuda",
+    "year": 1972,
     "country": "",
     "criterion_url": "",
     "film_id": "godzilla-vs-gigan",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null,
-    "credits": null
+    "imdb_id": "tt0068371",
+    "tmdb_id": 19336,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/8D6uWyXqPpfYsbNJyoR2vV64DxN.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Jun Fukuda",
+          "tmdb_id": 30561
+        }
+      ],
+      "writers": [
+        {
+          "name": "Shinichi Sekizawa",
+          "tmdb_id": 18611
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Kiyoshi Hasegawa",
+          "tmdb_id": 571552
+        }
+      ],
+      "editors": [
+        {
+          "name": "Yoshio Tamura",
+          "tmdb_id": 1418629
+        }
+      ],
+      "cast": [
+        {
+          "name": "Hiroshi Ishikawa",
+          "tmdb_id": 2563472,
+          "character": "Gengo Odaka"
+        },
+        {
+          "name": "Tomoko Umeda",
+          "tmdb_id": 239047,
+          "character": "Machiko Shima"
+        },
+        {
+          "name": "Yuriko Hishimi",
+          "tmdb_id": 239044,
+          "character": "Tomoko Tomoe"
+        },
+        {
+          "name": "Minoru Takashima",
+          "tmdb_id": 239046,
+          "character": "Shosaku Takasugi"
+        },
+        {
+          "name": "Zan Fujita",
+          "tmdb_id": 1270026,
+          "character": "Chairman Fumio Sudo"
+        },
+        {
+          "name": "Toshiaki Nishizawa",
+          "tmdb_id": 1156129,
+          "character": "Director Kubota"
+        },
+        {
+          "name": "Kunio Murai",
+          "tmdb_id": 240009,
+          "character": "Takeshi Shima"
+        },
+        {
+          "name": "Gen Shimizu",
+          "tmdb_id": 552187,
+          "character": "Commander of Defense Forces"
+        }
+      ]
+    }
   },
   {
     "spine_number": null,
     "title": "Lynch/Oz",
-    "director": "",
-    "year": null,
+    "director": "Alexandre O. Philippe",
+    "year": 2023,
     "country": "",
     "criterion_url": "",
     "film_id": "lynchoz",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null,
-    "credits": null
+    "imdb_id": "tt15399286",
+    "tmdb_id": 965400,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/utMuIiigJPVQZXvpkyGL1mPw9Ib.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Alexandre O. Philippe",
+          "tmdb_id": 1821621
+        }
+      ],
+      "writers": [
+        {
+          "name": "Alexandre O. Philippe",
+          "tmdb_id": 1821621
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Robert Muratore",
+          "tmdb_id": 74146
+        }
+      ],
+      "editors": [
+        {
+          "name": "David Lawrence",
+          "tmdb_id": 2298922
+        }
+      ],
+      "cast": [
+        {
+          "name": "Amy Nicholson",
+          "tmdb_id": 1197420,
+          "character": "Host (Chapter 1: 'Wind') (voice)"
+        },
+        {
+          "name": "Rodney Ascher",
+          "tmdb_id": 930706,
+          "character": "Host (Chapter 2: 'Membranes') (voice)"
+        },
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367,
+          "character": "Host (Chapter 3: 'Kindred') (voice)"
+        },
+        {
+          "name": "Karyn Kusama",
+          "tmdb_id": 54025,
+          "character": "Host (Chapter 4: 'Multitudes') (voice)"
+        },
+        {
+          "name": "Justin Benson",
+          "tmdb_id": 1074560,
+          "character": "Host (Chapter 5: 'Judy') (voice)"
+        },
+        {
+          "name": "Aaron Moorhead",
+          "tmdb_id": 583479,
+          "character": "Host (Chapter 5: 'Judy') (voice)"
+        },
+        {
+          "name": "David Lowery",
+          "tmdb_id": 592493,
+          "character": "Host (Chapter 6: 'Dig') (voice)"
+        },
+        {
+          "name": "David Lynch",
+          "tmdb_id": 5602,
+          "character": "self (archival footage)"
+        }
+      ]
+    }
   },
   {
     "spine_number": null,
     "title": "Trouble in Paradise",
-    "director": "",
-    "year": null,
+    "director": "Di Drew",
+    "year": 1989,
     "country": "",
     "criterion_url": "",
     "film_id": "trouble-in-paradise",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null,
-    "credits": null
+    "imdb_id": "tt0096312",
+    "tmdb_id": 321241,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "TV Movie"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/rGYdC3KLtobYQrMCNFcu74gOUVd.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Di Drew",
+          "tmdb_id": 166740
+        }
+      ],
+      "writers": [
+        {
+          "name": "Robert Sherman",
+          "tmdb_id": 190755
+        },
+        {
+          "name": "Ben Marshall",
+          "tmdb_id": 2487809
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "David Connell",
+          "tmdb_id": 38658
+        }
+      ],
+      "editors": [
+        {
+          "name": "John Scott",
+          "tmdb_id": 30461
+        }
+      ],
+      "cast": [
+        {
+          "name": "Raquel Welch",
+          "tmdb_id": 21462,
+          "character": "Rachel Baxley"
+        },
+        {
+          "name": "Jack Thompson",
+          "tmdb_id": 12536,
+          "character": "Jake"
+        },
+        {
+          "name": "Nicholas Hammond",
+          "tmdb_id": 29095,
+          "character": "Arthur"
+        },
+        {
+          "name": "John Gregg",
+          "tmdb_id": 152518,
+          "character": "Seth"
+        },
+        {
+          "name": "Anthony Brandon Wong",
+          "tmdb_id": 930817,
+          "character": "Ringe"
+        },
+        {
+          "name": "Ralph Cotterill",
+          "tmdb_id": 97331,
+          "character": "Hughes"
+        },
+        {
+          "name": "Adrian Brown",
+          "tmdb_id": 1419606,
+          "character": "Gang Han"
+        }
+      ]
+    }
   }
 ]

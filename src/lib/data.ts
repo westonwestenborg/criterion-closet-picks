@@ -60,6 +60,8 @@ export interface Pick {
   youtube_timestamp_url: string;
   vimeo_timestamp_url?: string;
   extraction_confidence: 'high' | 'medium' | 'low' | 'none';
+  source?: 'criterion' | 'letterboxd';
+  visit_index?: number;
   is_box_set?: boolean;
   box_set_name?: string;
   box_set_film_count?: number;
@@ -87,6 +89,8 @@ function normalizePicks(raw: any[]): Pick[] {
     youtube_timestamp_url: p.youtube_timestamp_url ?? '',
     vimeo_timestamp_url: p.vimeo_timestamp_url ?? undefined,
     extraction_confidence: p.extraction_confidence ?? 'none',
+    source: p.source ?? undefined,
+    visit_index: p.visit_index ?? undefined,
     is_box_set: p.is_box_set ?? false,
     box_set_name: p.box_set_name ?? undefined,
     box_set_film_count: p.box_set_film_count ?? undefined,
@@ -278,7 +282,7 @@ export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | unde
   }));
 }
 
-export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string }[] {
+export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string; source?: 'criterion' | 'letterboxd'; visit_index?: number }[] {
   const raw = loadRawJSON('picks_raw.json');
   return raw
     .filter((p: any) => p.guest_slug === guestSlug)
@@ -286,6 +290,8 @@ export function getRawPicksForGuest(guestSlug: string): { film_slug: string; fil
       film_slug: p.film_id ?? '',
       film_title: p.film_title ?? '',
       guest_slug: p.guest_slug,
+      source: p.source ?? undefined,
+      visit_index: p.visit_index ?? undefined,
     }));
 }
 
@@ -349,6 +355,79 @@ export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
   }));
 }
 
+/**
+ * Check if a guest should have a page generated.
+ * A guest is publishable if they have a criterion page URL or a video.
+ */
+export function isGuestPublishable(guest: Guest): boolean {
+  if (guest.criterion_page_url) return true;
+  if (guest.youtube_video_id || guest.vimeo_video_id) return true;
+  // Check visits for video
+  if (guest.visits?.some(v => v.youtube_video_id || v.vimeo_video_id)) return true;
+  return false;
+}
+
+/**
+ * Get all displayable picks for a guest, merging picks.json and picks_raw.json.
+ * Display rule: show if source === 'criterion' OR pick has a quote.
+ */
+export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
+  const films = getFilms();
+  const boxSetFilms = getBoxSetFilms();
+  const processedPicks = getPicks().filter(p => p.guest_slug === guestSlug);
+
+  // Raw picks not covered by processed picks
+  const processedFilmSlugs = new Set(processedPicks.map(p => p.film_slug));
+  const rawPicks = getRawPicksForGuest(guestSlug)
+    .filter(rp => !processedFilmSlugs.has(rp.film_slug));
+
+  // Convert raw picks to Pick format
+  const rawAsPicks: Pick[] = rawPicks.map(rp => ({
+    guest_slug: rp.guest_slug,
+    film_slug: rp.film_slug,
+    quote: '',
+    start_timestamp_seconds: 0,
+    youtube_timestamp_url: '',
+    extraction_confidence: 'none' as const,
+    source: rp.source,
+    visit_index: rp.visit_index,
+  }));
+
+  const allPicks = [...processedPicks, ...rawAsPicks];
+
+  // Filter to displayable: source === 'criterion' OR has a quote
+  const displayable = allPicks.filter(p => {
+    // Hide individual box set picks with no quote (covered by aggregate entry)
+    if (p.is_box_set && !p.box_set_film_count && (!p.quote || p.extraction_confidence === 'none')) {
+      return false;
+    }
+    // Display rule: criterion-sourced OR has a quote
+    if (p.source === 'criterion') return true;
+    if (p.quote && p.quote.trim() !== '') return true;
+    return false;
+  });
+
+  // Attach film metadata
+  return displayable.map(p => {
+    let film: Film | undefined;
+    if (p.box_set_film_count) {
+      if (p.box_set_criterion_url) {
+        film = boxSetFilms.find(f => f.criterion_url === p.box_set_criterion_url);
+      }
+      if (!film && p.box_set_name) {
+        film = boxSetFilms.find(f => f.title === p.box_set_name);
+      }
+    } else {
+      film = films.find(f => f.slug === p.film_slug);
+    }
+    return { ...p, film };
+  });
+}
+
+export function getPublishableGuests(): Guest[] {
+  return getGuests().filter(isGuestPublishable);
+}
+
 export function getFilmsSortedByPickCount(): Film[] {
   return [...getFilms()].sort((a, b) => b.pick_count - a.pick_count);
 }
@@ -379,7 +458,7 @@ export function getRecentGuests(count: number = 3): Guest[] {
 
 export function getStats() {
   return {
-    totalGuests: getGuests().length,
+    totalGuests: getPublishableGuests().length,
     totalFilms: getFilms().length,
     totalPicks: getPicks().length,
   };

@@ -250,14 +250,19 @@ def dedup_picks(picks: list[dict]) -> list[dict]:
 
 
 def dedup_picks_raw(picks_raw: list[dict]) -> list[dict]:
-    """Deduplicate raw picks by (guest_slug, film_id)."""
-    seen: set[tuple] = set()
+    """Deduplicate raw picks by (guest_slug, film_id). Prefer criterion-sourced entries."""
+    seen: dict[tuple, int] = {}
     result = []
     for p in picks_raw:
         key = (p["guest_slug"], p.get("film_id", ""))
         if key not in seen:
-            seen.add(key)
+            seen[key] = len(result)
             result.append(p)
+        else:
+            # Prefer criterion-sourced entry over letterboxd
+            existing_idx = seen[key]
+            if p.get("source") == "criterion" and result[existing_idx].get("source") != "criterion":
+                result[existing_idx] = p
     return result
 
 

@@ -221,25 +221,49 @@ class TestPickCountAccuracy(unittest.TestCase):
     """Guest pick counts should match actual picks in data files."""
 
     def test_pick_count_accuracy(self):
-        """pick_count should match the number of picks for each guest."""
-        picks_count: dict[str, int] = {}
-        for p in picks:
-            slug = p["guest_slug"]
-            picks_count[slug] = picks_count.get(slug, 0) + 1
+        """pick_count should match the number of displayable picks for each guest.
 
-        raw_count: dict[str, int] = {}
+        Display rule: source === 'criterion' OR has a non-empty quote.
+        Mirrors getDisplayablePicksForGuest() in data.ts.
+        """
+        # Build per-guest picks.json and raw picks lookups
+        picks_by_guest: dict[str, list] = {}
+        for p in picks:
+            picks_by_guest.setdefault(p["guest_slug"], []).append(p)
+
+        raw_by_guest: dict[str, list] = {}
         for p in picks_raw:
-            slug = p["guest_slug"]
-            raw_count[slug] = raw_count.get(slug, 0) + 1
+            raw_by_guest.setdefault(p["guest_slug"], []).append(p)
 
         mismatches = []
         for g in guests:
             slug = g["slug"]
-            actual = picks_count.get(slug, raw_count.get(slug, 0))
+            guest_picks = picks_by_guest.get(slug, [])
+            guest_raw = raw_by_guest.get(slug, [])
+
+            # Count displayable processed picks
+            processed_slugs = set()
+            displayable = 0
+            for p in guest_picks:
+                film_key = p.get("film_slug") or p.get("film_id", "")
+                processed_slugs.add(film_key)
+                if p.get("source") == "criterion":
+                    displayable += 1
+                elif (p.get("quote") or "").strip():
+                    displayable += 1
+
+            # Add criterion-sourced raw picks not in processed
+            for rp in guest_raw:
+                film_key = rp.get("film_id", "")
+                if film_key in processed_slugs:
+                    continue
+                if rp.get("source") == "criterion":
+                    displayable += 1
+
             declared = g.get("pick_count", 0)
-            if actual != declared:
+            if displayable != declared:
                 mismatches.append(
-                    f"{g['name']} ({slug}): declared={declared}, actual={actual}"
+                    f"{g['name']} ({slug}): declared={declared}, actual={displayable}"
                 )
         self.assertEqual(
             mismatches, [],

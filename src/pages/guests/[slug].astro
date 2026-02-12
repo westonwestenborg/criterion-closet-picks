@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
-import { getGuests, getGuestBySlug, getPicksForGuest, getRawPicksForGuest, getFilmBySlug } from '../../lib/data';
+import { getGuestBySlug, getDisplayablePicksForGuest, getPublishableGuests } from '../../lib/data';
+import type { Pick, Film, GuestVisit } from '../../lib/data';
 
 export function getStaticPaths() {
-  const guests = getGuests();
+  const guests = getPublishableGuests();
   return guests.map((guest) => ({
     params: { slug: guest.slug },
   }));
@@ -17,19 +18,7 @@ if (!guest) {
   return Astro.redirect('/guests/');
 }
 
-const allPicks = getPicksForGuest(guest.slug);
-// Hide individual box set picks that have no meaningful quote (they're covered by the aggregate entry)
-const picks = allPicks.filter(p => !(p.is_box_set && !p.box_set_film_count && (!p.quote || p.extraction_confidence === 'none')));
-const hasQuotes = picks.some(p => p.quote);
-
-// Load raw picks not already covered by processed picks (e.g. multi-visit guests where only one visit has quotes)
-const processedFilmSlugs = new Set(picks.map(p => p.film_slug));
-const rawPicks = getRawPicksForGuest(guest.slug)
-  .filter(rp => !processedFilmSlugs.has(rp.film_slug))
-  .map(rp => ({
-    ...rp,
-    film: getFilmBySlug(rp.film_slug),
-  }));
+const picks = getDisplayablePicksForGuest(guest.slug);
 
 const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : null;
 
@@ -37,6 +26,18 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
 const visits = guest.visits ?? [];
 const isMultiVisit = visits.length >= 2;
 
+// Group picks by visit_index for multi-visit guests
+type PickWithFilm = Pick & { film: Film | undefined };
+const visitGroups: Map<number, PickWithFilm[]> = new Map();
+if (isMultiVisit) {
+  for (const pick of picks) {
+    const vi = pick.visit_index ?? 1;
+    if (!visitGroups.has(vi)) visitGroups.set(vi, []);
+    visitGroups.get(vi)!.push(pick);
+  }
+} else {
+  visitGroups.set(1, picks);
+}
 // Gather all unique links from visits (or fall back to top-level)
 const allLetterboxdUrls = isMultiVisit
   ? visits.map(v => v.letterboxd_list_url).filter(Boolean) as string[]
@@ -44,8 +45,19 @@ const allLetterboxdUrls = isMultiVisit
 const allCriterionUrls = isMultiVisit
   ? visits.map(v => v.criterion_page_url).filter(Boolean) as string[]
   : [guest.criterion_page_url].filter(Boolean) as string[];
+
+// Helper to render a single pick entry
+function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
+  if (visit.youtube_video_id) {
+    return { type: 'youtube' as const, id: visit.youtube_video_id, title: `${guestName} - ${label}` };
+  }
+  if (visit.vimeo_video_id) {
+    return { type: 'vimeo' as const, id: visit.vimeo_video_id, title: `${guestName} - ${label}` };
+  }
+  return null;
+}
 ---
-<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length || rawPicks.length} films picked.`}>
+<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length} films picked.`}>
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (
@@ -90,200 +102,254 @@ const allCriterionUrls = isMultiVisit
     </div>
 
     {isMultiVisit ? (
-      visits.filter(v => v.youtube_video_id || v.vimeo_video_id).map((visit, i) => {
-        const visitYear = visit.episode_date ? new Date(visit.episode_date).getFullYear() : null;
-        const label = visitYear ? `Visit ${i + 1} (${visitYear})` : `Visit ${i + 1}`;
+      /* Multi-visit layout: group by visit with separate video + picks per visit */
+      visits.map((visit, idx) => {
+        const vi = idx + 1;
+        const visitPicks = visitGroups.get(vi) || [];
+        if (visitPicks.length === 0) return null;
+        const visitYear = visit?.episode_date ? new Date(visit.episode_date).getFullYear() : null;
+        const label = visitYear ? `Visit ${vi} (${visitYear})` : `Visit ${vi}`;
+        const embed = getVideoEmbed(visit, label, guest.name);
+
         return (
-          <div>
-            <h3>{label}</h3>
-            {visit.youtube_video_id ? (
+          <div class="visit-section">
+            <h2>{label} &mdash; {visitPicks.length} Picks</h2>
+            {embed?.type === 'youtube' ? (
               <div class="video-embed">
                 <iframe
-                  src={`https://www.youtube.com/embed/${visit.youtube_video_id}`}
-                  title={`${guest.name} - ${label}`}
+                  src={`https://www.youtube.com/embed/${embed.id}`}
+                  title={embed.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
-            ) : visit.vimeo_video_id ? (
+            ) : embed?.type === 'vimeo' ? (
               <div class="video-embed">
                 <iframe
-                  src={`https://player.vimeo.com/video/${visit.vimeo_video_id}`}
-                  title={`${guest.name} - ${label}`}
+                  src={`https://player.vimeo.com/video/${embed.id}`}
+                  title={embed.title}
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
             ) : null}
-          </div>
-        );
-      })
-    ) : guest.youtube_video_id ? (
-      <div class="video-embed">
-        <iframe
-          src={`https://www.youtube.com/embed/${guest.youtube_video_id}`}
-          title={`${guest.name} - Criterion Closet Picks`}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    ) : guest.vimeo_video_id ? (
-      <div class="video-embed">
-        <iframe
-          src={`https://player.vimeo.com/video/${guest.vimeo_video_id}`}
-          title={`${guest.name} - Criterion Closet Picks`}
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    ) : null}
-
-    <h2>{picks.length + rawPicks.length} Picks</h2>
-
-    {!hasQuotes && picks.length > 0 && rawPicks.length === 0 && (
-      <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-        No transcript data available for this episode. Films from Letterboxd list:
-      </p>
-    )}
-
-    {picks.length > 0 && (
-      <div class="picks-list">
-        {picks.map((pick) => (
-          <div>
-            {pick.box_set_film_count ? (
-              <div class="pick-with-poster">
-                {pick.box_set_criterion_url ? (
-                  <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
-                    {pick.film?.poster_url ? (
-                      <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
-                    ) : null}
-                  </a>
-                ) : pick.film?.poster_url ? (
-                  <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
-                ) : null}
-                <div class="pick-content">
-                  <div class="pick-film-info">
-                    {pick.box_set_criterion_url ? (
-                      <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
-                        {pick.box_set_name}
-                      </a>
+            {visitPicks.length > 0 && (
+              <div class="picks-list">
+                {visitPicks.map((pick) => (
+                  <div>
+                    {pick.box_set_film_count ? (
+                      <div class="pick-with-poster">
+                        {pick.box_set_criterion_url ? (
+                          <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
+                            {pick.film?.poster_url ? (
+                              <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                            ) : null}
+                          </a>
+                        ) : pick.film?.poster_url ? (
+                          <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                        ) : null}
+                        <div class="pick-content">
+                          <div class="pick-film-info">
+                            {pick.box_set_criterion_url ? (
+                              <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+                                {pick.box_set_name}
+                              </a>
+                            ) : (
+                              <span class="pick-film-title">{pick.box_set_name}</span>
+                            )}
+                            {pick.box_set_film_count > 0 && (
+                              <span class="pick-film-meta">
+                                {' '}&mdash; {pick.box_set_film_count} films
+                              </span>
+                            )}
+                            <span class="box-set-tag">Box Set</span>
+                            {pick.box_set_film_titles && (
+                              <details class="box-set-details">
+                                <summary class="text-muted">Show films</summary>
+                                <ul class="box-set-film-list">
+                                  {pick.box_set_film_titles.map((title: string) => (
+                                    <li>{title}</li>
+                                  ))}
+                                </ul>
+                              </details>
+                            )}
+                          </div>
+                          {pick.quote && (
+                            <QuoteBlock
+                              quote={pick.quote}
+                              timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                              hideAttribution={true}
+                            />
+                          )}
+                        </div>
+                      </div>
                     ) : (
-                      <span class="pick-film-title">{pick.box_set_name}</span>
-                    )}
-                    {pick.box_set_film_count > 0 && (
-                      <span class="pick-film-meta">
-                        {' '}&mdash; {pick.box_set_film_count} films
-                      </span>
-                    )}
-                    <span class="box-set-tag">Box Set</span>
-                    {pick.box_set_film_titles && (
-                      <details class="box-set-details">
-                        <summary class="text-muted">Show films</summary>
-                        <ul class="box-set-film-list">
-                          {pick.box_set_film_titles.map((title: string) => (
-                            <li>{title}</li>
-                          ))}
-                        </ul>
-                      </details>
-                    )}
-                  </div>
-                  {pick.quote && (
-                    <QuoteBlock
-                      quote={pick.quote}
-                      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
-                      hideAttribution={true}
-                    />
-                  )}
-                </div>
-              </div>
-            ) : (
-              <div class="pick-with-poster">
-                <a href={`/films/${pick.film_slug}/`} style="border-bottom: none;">
-                  {pick.film?.poster_url ? (
-                    <img src={pick.film.poster_url} alt={pick.film.title} class="film-poster-thumb" loading="lazy" />
-                  ) : pick.film?.criterion_spine_number ? (
-                    <div class="spine-placeholder-thumb">
-                      #{pick.film.criterion_spine_number}
-                    </div>
-                  ) : null}
-                </a>
-                <div class="pick-content">
-                  <div class="pick-film-info">
-                    <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
-                      {pick.film?.title || pick.film_slug}
-                    </a>
-                    {pick.film && (
-                      <span class="pick-film-meta">
-                        {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
-                        {pick.film.criterion_spine_number && (
-                          <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
-                        )}
-                      </span>
-                    )}
-                    {pick.is_box_set && pick.box_set_name && (
-                      <span class="box-set-tag">Part of {pick.box_set_name}</span>
+                      <div class="pick-with-poster">
+                        <a href={`/films/${pick.film_slug}/`} style="border-bottom: none;">
+                          {pick.film?.poster_url ? (
+                            <img src={pick.film.poster_url} alt={pick.film?.title} class="film-poster-thumb" loading="lazy" />
+                          ) : pick.film?.criterion_spine_number ? (
+                            <div class="spine-placeholder-thumb">
+                              #{pick.film.criterion_spine_number}
+                            </div>
+                          ) : null}
+                        </a>
+                        <div class="pick-content">
+                          <div class="pick-film-info">
+                            <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+                              {pick.film?.title || pick.film_slug}
+                            </a>
+                            {pick.film && (
+                              <span class="pick-film-meta">
+                                {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
+                                {pick.film.criterion_spine_number && (
+                                  <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+                                )}
+                              </span>
+                            )}
+                            {pick.is_box_set && pick.box_set_name && (
+                              <span class="box-set-tag">Part of {pick.box_set_name}</span>
+                            )}
+                          </div>
+                          {pick.quote && (
+                            <QuoteBlock
+                              quote={pick.quote}
+                              timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                              hideAttribution={true}
+                            />
+                          )}
+                        </div>
+                      </div>
                     )}
                   </div>
-                  {pick.quote && (
-                    <QuoteBlock
-                      quote={pick.quote}
-                      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
-                      hideAttribution={true}
-                    />
-                  )}
-                </div>
+                ))}
               </div>
             )}
           </div>
-        ))}
-      </div>
-    )}
+        );
+      })
+    ) : (
+      /* Single-visit layout */
+      <Fragment>
+        {guest.youtube_video_id ? (
+          <div class="video-embed">
+            <iframe
+              src={`https://www.youtube.com/embed/${guest.youtube_video_id}`}
+              title={`${guest.name} - Criterion Closet Picks`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ) : guest.vimeo_video_id ? (
+          <div class="video-embed">
+            <iframe
+              src={`https://player.vimeo.com/video/${guest.vimeo_video_id}`}
+              title={`${guest.name} - Criterion Closet Picks`}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ) : null}
 
-    {rawPicks.length > 0 && (
-      <div class="picks-list">
+        <h2>{picks.length} Picks</h2>
+
         {picks.length > 0 && (
-          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-            Additional picks from Letterboxd:
-          </p>
-        )}
-        {picks.length === 0 && (
-          <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-            No transcript data available for this episode. Films from Letterboxd list:
-          </p>
-        )}
-        {rawPicks.map((rp) => (
-          <div class="pick-with-poster">
-            <a href={`/films/${rp.film_slug}/`} style="border-bottom: none;">
-              {rp.film?.poster_url ? (
-                <img src={rp.film.poster_url} alt={rp.film.title || rp.film_title} class="film-poster-thumb" loading="lazy" />
-              ) : rp.film?.criterion_spine_number ? (
-                <div class="spine-placeholder-thumb">
-                  #{rp.film.criterion_spine_number}
-                </div>
-              ) : null}
-            </a>
-            <div class="pick-content">
-              <div class="pick-film-info">
-                <a href={`/films/${rp.film_slug}/`} class="pick-film-title">
-                  {rp.film?.title || rp.film_title || rp.film_slug}
-                </a>
-                {rp.film && (
-                  <span class="pick-film-meta">
-                    {rp.film.director ? ` — ${rp.film.director}` : ''}{rp.film.year ? `, ${rp.film.year}` : ''}
-                    {rp.film.criterion_spine_number && (
-                      <span> &middot; <span class="spine-number">#{rp.film.criterion_spine_number}</span></span>
-                    )}
-                  </span>
+          <div class="picks-list">
+            {picks.map((pick) => (
+              <div>
+                {pick.box_set_film_count ? (
+                  <div class="pick-with-poster">
+                    {pick.box_set_criterion_url ? (
+                      <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
+                        {pick.film?.poster_url ? (
+                          <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                        ) : null}
+                      </a>
+                    ) : pick.film?.poster_url ? (
+                      <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+                    ) : null}
+                    <div class="pick-content">
+                      <div class="pick-film-info">
+                        {pick.box_set_criterion_url ? (
+                          <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+                            {pick.box_set_name}
+                          </a>
+                        ) : (
+                          <span class="pick-film-title">{pick.box_set_name}</span>
+                        )}
+                        {pick.box_set_film_count > 0 && (
+                          <span class="pick-film-meta">
+                            {' '}&mdash; {pick.box_set_film_count} films
+                          </span>
+                        )}
+                        <span class="box-set-tag">Box Set</span>
+                        {pick.box_set_film_titles && (
+                          <details class="box-set-details">
+                            <summary class="text-muted">Show films</summary>
+                            <ul class="box-set-film-list">
+                              {pick.box_set_film_titles.map((title: string) => (
+                                <li>{title}</li>
+                              ))}
+                            </ul>
+                          </details>
+                        )}
+                      </div>
+                      {pick.quote && (
+                        <QuoteBlock
+                          quote={pick.quote}
+                          timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                          hideAttribution={true}
+                        />
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div class="pick-with-poster">
+                    <a href={`/films/${pick.film_slug}/`} style="border-bottom: none;">
+                      {pick.film?.poster_url ? (
+                        <img src={pick.film.poster_url} alt={pick.film.title} class="film-poster-thumb" loading="lazy" />
+                      ) : pick.film?.criterion_spine_number ? (
+                        <div class="spine-placeholder-thumb">
+                          #{pick.film.criterion_spine_number}
+                        </div>
+                      ) : null}
+                    </a>
+                    <div class="pick-content">
+                      <div class="pick-film-info">
+                        <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+                          {pick.film?.title || pick.film_slug}
+                        </a>
+                        {pick.film && (
+                          <span class="pick-film-meta">
+                            {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
+                            {pick.film.criterion_spine_number && (
+                              <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+                            )}
+                          </span>
+                        )}
+                        {pick.is_box_set && pick.box_set_name && (
+                          <span class="box-set-tag">Part of {pick.box_set_name}</span>
+                        )}
+                      </div>
+                      {pick.quote && (
+                        <QuoteBlock
+                          quote={pick.quote}
+                          timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                          hideAttribution={true}
+                        />
+                      )}
+                    </div>
+                  </div>
                 )}
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    )}
+        )}
 
-    {picks.length === 0 && rawPicks.length === 0 && (
-      <p class="text-muted">No picks data available for this guest.</p>
+        {picks.length === 0 && (
+          <p class="text-muted">No picks data available for this guest.</p>
+        )}
+      </Fragment>
     )}
   </div>
 </BaseLayout>
