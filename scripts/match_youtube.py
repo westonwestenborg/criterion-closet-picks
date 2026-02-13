@@ -495,6 +495,12 @@ def main():
         if upload_date and len(upload_date) == 8:
             guest["episode_date"] = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:8]}"
 
+        # Propagate video info to visit 1 if visits array exists
+        if guest.get("visits") and len(guest["visits"]) > 0:
+            guest["visits"][0]["episode_date"] = guest["episode_date"]
+            guest["visits"][0]["youtube_video_id"] = video_id
+            guest["visits"][0]["youtube_video_url"] = guest.get("youtube_video_url")
+
         if transcript:
             success_count += 1
 
@@ -547,6 +553,68 @@ def main():
                     log(f"  Saved transcript: {len(transcript)} segments")
                 else:
                     log(f"  No transcript available for {video_id}")
+
+        # Ensure visit video assignments are in chronological order.
+        # Primary matching tends to find the newer video first, which gets
+        # assigned to visits[0]. But visits[0] is the older visit. Swap if needed.
+        # Collect video IDs that need date lookups
+        need_dates: dict[str, None] = {}  # video_id -> None (ordered set)
+        multi_visit_guests = []
+        for guest in guests:
+            gv = guest.get("visits", [])
+            if len(gv) < 2:
+                continue
+            v0_id = gv[0].get("youtube_video_id")
+            v1_id = gv[1].get("youtube_video_id")
+            if not v0_id or not v1_id:
+                continue
+            multi_visit_guests.append(guest)
+            if not gv[0].get("episode_date"):
+                need_dates[v0_id] = None
+            if not gv[1].get("episode_date"):
+                need_dates[v1_id] = None
+
+        # Fetch upload dates for videos missing episode_date
+        video_dates: dict[str, str] = {}
+        if need_dates:
+            log(f"Fetching upload dates for {len(need_dates)} multi-visit videos...")
+            for vid in need_dates:
+                try:
+                    r = subprocess.run(
+                        ["yt-dlp", "--print", "%(upload_date)s", "--no-warnings",
+                         f"https://www.youtube.com/watch?v={vid}"],
+                        capture_output=True, text=True, timeout=30,
+                    )
+                    date_str = r.stdout.strip()
+                    if date_str and len(date_str) == 8:
+                        video_dates[vid] = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
+                        log(f"  {vid}: {video_dates[vid]}")
+                except Exception as e:
+                    log(f"  {vid}: error fetching date: {e}")
+
+        for guest in multi_visit_guests:
+            gv = guest["visits"]
+            v0_date = gv[0].get("episode_date") or video_dates.get(gv[0]["youtube_video_id"], "")
+            v1_date = gv[1].get("episode_date") or video_dates.get(gv[1]["youtube_video_id"], "")
+
+            if v0_date and v1_date and v0_date > v1_date:
+                log(f"  Swapping visit video order for {guest['name']}: "
+                    f"v1={v0_date} > v2={v1_date}")
+                swap_keys = [
+                    "youtube_video_id", "youtube_video_url",
+                    "vimeo_video_id", "episode_date",
+                ]
+                for k in swap_keys:
+                    gv[0][k], gv[1][k] = gv[1].get(k), gv[0].get(k)
+                # Populate episode_dates from fetched dates after swap
+                for visit in gv:
+                    if not visit.get("episode_date"):
+                        visit["episode_date"] = video_dates.get(
+                            visit.get("youtube_video_id", ""), None)
+                # Update top-level to match visit 1
+                guest["youtube_video_id"] = gv[0].get("youtube_video_id")
+                guest["youtube_video_url"] = gv[0].get("youtube_video_url")
+                guest["episode_date"] = gv[0].get("episode_date")
 
         # Save with multi-visit updates
         save_json(GUESTS_FILE, guests)

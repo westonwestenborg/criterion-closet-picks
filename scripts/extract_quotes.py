@@ -220,6 +220,145 @@ def extract_quotes_for_guest(
     return all_quotes
 
 
+AUDIO_EXTRACTION_PROMPT = """You are extracting film commentary from a Criterion Closet Picks video.
+Listen to the audio and transcribe what the guest says. If the guest speaks a
+non-English language, translate their words to English and prefix quotes with
+"[Translated] ".
+
+CONTEXT: In these videos, guests visit the Criterion Collection's closet and
+physically pick up DVDs/Blu-rays while talking about why they love each film.
+
+GUEST: {guest_name}
+
+KNOWN PICKS (from curated data - these are the films they took home):
+{picks_list}
+
+YOUR TASK: Listen to the audio carefully and for each film in the known picks
+list, find what the guest says about that film. Return a JSON array with one
+object per film:
+
+{{
+  "film_title": "exact title from the known picks list",
+  "start_timestamp": 142,
+  "quote": "cleaned verbatim quote about this film",
+  "confidence": "high|medium|low|none"
+}}
+
+GUIDELINES:
+- If the guest speaks a non-English language, prefix translated quotes with "[Translated] "
+- For the quote: combine discussion segments about the same film into one flowing quote
+- Fix obvious misheard words but preserve the speaker's actual words and speech patterns
+- Some films may have very brief mentions ("I'll take this too") - include these
+- Some films may not be discussed at all - set confidence to "none" and quote to ""
+- confidence levels:
+  - "high": clear discussion, film identifiable from context
+  - "medium": probable match but some ambiguity
+  - "low": uncertain
+  - "none": no discussion found
+- start_timestamp should be the beginning of their discussion (seconds, integer)
+- Cap each quote at 500 characters maximum
+
+Return ONLY the JSON array, no other text."""
+
+
+def extract_quotes_from_audio(
+    model,
+    guest: dict,
+    picks: list[dict],
+    video_id: str,
+) -> list[dict]:
+    """
+    Extract quotes from a video by downloading audio and sending to Gemini.
+    Used for non-English guests who lack text transcripts.
+    Downloads audio via yt-dlp, uploads to Gemini, and extracts quotes.
+    """
+    import subprocess
+    import tempfile
+    import google.generativeai as genai
+
+    guest_name = guest["name"]
+    picks_list = format_picks_list(picks)
+
+    # Download audio to temp file
+    with tempfile.TemporaryDirectory() as tmpdir:
+        audio_path = f"{tmpdir}/{video_id}.mp3"
+        cmd = [
+            "yt-dlp",
+            "-x", "--audio-format", "mp3",
+            "--audio-quality", "5",
+            "-o", audio_path,
+            f"https://www.youtube.com/watch?v={video_id}",
+        ]
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+            if result.returncode != 0:
+                log(f"  yt-dlp audio download failed: {result.stderr[:200]}")
+                return []
+        except (subprocess.TimeoutExpired, FileNotFoundError) as e:
+            log(f"  yt-dlp audio error: {e}")
+            return []
+
+        import pathlib
+        if not pathlib.Path(audio_path).exists():
+            # yt-dlp may append different extension
+            import glob
+            candidates = glob.glob(f"{tmpdir}/{video_id}.*")
+            if candidates:
+                audio_path = candidates[0]
+            else:
+                log(f"  Audio file not found after download")
+                return []
+
+        log(f"  Downloaded audio: {audio_path}")
+
+        # Upload to Gemini
+        try:
+            audio_file = genai.upload_file(audio_path)
+            log(f"  Uploaded audio to Gemini")
+        except Exception as e:
+            log(f"  Gemini upload error: {e}")
+            return []
+
+    # Generate prompt
+    prompt = AUDIO_EXTRACTION_PROMPT.format(
+        guest_name=guest_name,
+        picks_list=picks_list,
+    )
+
+    try:
+        response = model.generate_content([prompt, audio_file])
+        response_text = response.text.strip()
+
+        # Handle markdown code blocks
+        if response_text.startswith("```"):
+            response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
+            response_text = re.sub(r"\s*```$", "", response_text)
+
+        quotes = json.loads(response_text)
+        if not isinstance(quotes, list):
+            log(f"  WARNING: Gemini returned non-list for audio extraction")
+            return []
+
+        cleaned = []
+        for q in quotes:
+            if not isinstance(q, dict):
+                continue
+            cleaned.append({
+                "film_title": q.get("film_title", ""),
+                "start_timestamp": int(q.get("start_timestamp", 0) or 0),
+                "quote": (q.get("quote", "") or "")[:500],
+                "confidence": q.get("confidence", "none"),
+            })
+        return cleaned
+
+    except json.JSONDecodeError as e:
+        log(f"  Audio JSON parse error: {e}")
+        return []
+    except Exception as e:
+        log(f"  Audio Gemini error: {type(e).__name__}: {e}")
+        return []
+
+
 def main():
     parser = argparse.ArgumentParser(description="Extract quotes via Gemini")
     parser.add_argument("--pilot", action="store_true", help="Only process pilot guests")
@@ -273,6 +412,7 @@ def main():
     errors = 0
 
     guests_to_process = []
+    audio_candidates = []
     for guest in guests:
         slug = guest["slug"]
         video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
@@ -291,8 +431,25 @@ def main():
 
         transcript_path = TRANSCRIPTS_DIR / f"{video_id}.json"
         if not transcript_path.exists():
-            log(f"  {guest['name']}: No transcript, skipping")
-            skipped += 1
+            # No text transcript — candidate for audio fallback
+            if video_source == "youtube":
+                if not args.force and f"{slug}_audio" in checkpoint:
+                    log(f"  {guest['name']}: Audio already processed (use --force)")
+                    skipped += 1
+                else:
+                    # For multi-visit guests, only send visit-1 picks to audio fallback
+                    # (visit-2 picks will be handled by the multi-visit second pass)
+                    audio_picks = guest_picks
+                    if len(guest.get("visits", [])) >= 2:
+                        audio_picks = [p for p in guest_picks if p.get("visit_index", 1) == 1]
+                        log(f"  {guest['name']}: No transcript for visit 1, queued for audio ({len(audio_picks)}/{len(guest_picks)} picks)")
+                    else:
+                        log(f"  {guest['name']}: No transcript, queued for audio fallback")
+                    if audio_picks:
+                        audio_candidates.append((guest, audio_picks, video_id))
+            else:
+                log(f"  {guest['name']}: No transcript (Vimeo, no audio fallback)")
+                skipped += 1
             continue
 
         # Check checkpoint
@@ -374,6 +531,56 @@ def main():
 
         processed += 1
         time.sleep(6)  # Rate limit: ~10 RPM for Gemini
+
+    # --- Audio fallback for non-English guests ---
+    if audio_candidates:
+        log(f"\nAudio fallback: {len(audio_candidates)} guest(s) without text transcripts")
+        for guest, guest_picks, video_id in audio_candidates:
+            slug = guest["slug"]
+            log(f"  Audio extraction: {guest['name']} ({len(guest_picks)} picks)")
+
+            quotes = extract_quotes_from_audio(model, guest, guest_picks, video_id)
+
+            if not quotes:
+                log(f"  No quotes from audio for {guest['name']}")
+                errors += 1
+                checkpoint[f"{slug}_audio"] = {
+                    "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "quotes_count": 0,
+                    "picks_count": len(guest_picks),
+                    "method": "audio",
+                }
+                save_json(CHECKPOINT_FILE, checkpoint)
+                time.sleep(6)
+                continue
+
+            log(f"  Extracted {len(quotes)} quotes from audio")
+            quotes_by_title = {q["film_title"].lower(): q for q in quotes}
+
+            for pick in guest_picks:
+                title = pick["film_title"]
+                quote_match = quotes_by_title.get(title.lower())
+                if quote_match:
+                    pick["quote"] = quote_match["quote"]
+                    pick["start_timestamp"] = quote_match["start_timestamp"]
+                    pick["extraction_confidence"] = quote_match["confidence"]
+                    pick["visit_index"] = 1
+                    if video_id and quote_match["start_timestamp"]:
+                        pick["youtube_timestamp_url"] = (
+                            f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
+                        )
+                key = (slug, title)
+                existing_pick_index[key] = pick
+
+            checkpoint[f"{slug}_audio"] = {
+                "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "quotes_count": len(quotes),
+                "picks_count": len(guest_picks),
+                "method": "audio",
+            }
+            save_json(CHECKPOINT_FILE, checkpoint)
+            processed += 1
+            time.sleep(6)
 
     # --- Multi-visit second pass ---
     # For multi-visit guests, check if visit 2 has a transcript we can use

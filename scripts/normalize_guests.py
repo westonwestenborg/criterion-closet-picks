@@ -71,6 +71,8 @@ WRONG_VIDEO_FIXES = {
 # Slug fixes: rename slug (and update picks) to fix matching issues
 SLUG_FIXES = {
     "seth-myers": "seth-meyers",  # Typo: enables match to "Seth Meyers's Closet Picks"
+    "waych-shopvince-staples": "vince-staples",  # Garbled overlay text
+    "watch-shop": "jeremy-pope",  # Garbled overlay text
 }
 
 # Known video IDs: set youtube_video_id for guests where we know the correct video
@@ -119,53 +121,14 @@ NAME_FIXES = {
     "David and Nathan Zellner's Criterion Picks": "David and Nathan Zellner",
     "Katya Zamolodchikova's Closet Picks": "Katya Zamolodchikova",
     "Seth Myers": "Seth Meyers",  # Fix corresponding name
+    "Waych & shopVince Staples": "Vince Staples",  # Garbled overlay text
+    "Watch& & shop": "Jeremy Pope",  # Garbled overlay text
+    "Claire Denis'": "Claire Denis",  # Trailing apostrophe from URL extraction
+    "Five Comics'": "Five Comics",  # Trailing apostrophe from URL extraction
 }
 
-# Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2 = newer)
-# Scraped from criterion.com/shop#collection-closet-picks index
-VISIT_CRITERION_URLS = {
-    "bill-hader": [
-        "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011",
-        "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
-    ],
-    "guillermo-del-toro": [
-        "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
-        "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
-    ],
-    "ari-aster": [
-        "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
-        "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks",
-    ],
-    "michael-cera": [
-        "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014",
-        "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks",
-    ],
-    "yorgos-lanthimos": [
-        "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks",
-        "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks",
-    ],
-    "edgar-wright": [
-        "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks",
-        "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks",
-    ],
-    "benny-safdie": [
-        "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks",
-        "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks",
-    ],
-    # Single-page guests: assign to visit 1 only
-    "barry-jenkins": [
-        "https://www.criterion.com/shop/collection/470-barry-jenkins-s-closet-picks",
-    ],
-    "isabelle-huppert": [
-        "https://www.criterion.com/shop/collection/741-isabelle-huppert-s-closet-picks",
-    ],
-    "griffin-dunne": [
-        "https://www.criterion.com/shop/collection/795-griffin-dunne-s-closet-picks",
-    ],
-    "wim-wenders": [
-        "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
-    ],
-}
+# Import multi-visit URLs from shared config
+from scripts.utils import VISIT_CRITERION_URLS
 
 # Non-person tagging
 GUEST_TYPE_TAGS = {
@@ -324,51 +287,67 @@ def normalize(dry_run: bool = False):
             log(f"  Name fix: '{old_name}' -> '{g['name']}'")
             stats["name_fixes"] += 1
 
-    # --- 2. Repeat visit merges ---
-    for primary_slug, secondary_slug in REPEAT_VISIT_MERGES.items():
-        primary = guest_by_slug(guests, primary_slug)
-        secondary = guest_by_slug(guests, secondary_slug)
-
-        if not primary:
-            log(f"  Skip repeat merge: primary '{primary_slug}' not found")
-            continue
-        if not secondary:
-            log(f"  Skip repeat merge: secondary '{secondary_slug}' not found")
+    # --- 2. Build visits arrays for multi-visit guests ---
+    for slug, urls in VISIT_CRITERION_URLS.items():
+        g = guest_by_slug(guests, slug)
+        if not g:
+            log(f"  Skip visits build: '{slug}' not found")
             continue
 
-        log(f"  Repeat merge: '{secondary['name']}' -> '{primary['name']}'")
+        if len(urls) < 2:
+            # Single-visit guest, just ensure criterion_page_url is set
+            if not g.get("criterion_page_url"):
+                g["criterion_page_url"] = urls[0]
+            continue
 
-        # Build visits array
-        visit1 = build_visit(primary)
-        visit2 = build_visit(secondary)
+        # Preserve existing visit data (e.g., video IDs set by match_youtube)
+        existing_visits = g.get("visits", [])
 
-        # Use existing visits if already present (idempotency)
-        if "visits" not in primary:
-            primary["visits"] = [visit1, visit2]
-        elif not any(
-            v.get("letterboxd_list_url") == visit2.get("letterboxd_list_url")
-            for v in primary["visits"]
-        ):
-            primary["visits"].append(visit2)
+        # Build visit 1 from the guest's current data
+        visit1 = build_visit(g)
+        visit1["criterion_page_url"] = urls[0]
+        # Preserve visit 1 data if already populated
+        if existing_visits and existing_visits[0].get("episode_date"):
+            visit1["episode_date"] = existing_visits[0]["episode_date"]
+
+        # Build visit 2 — preserve existing if match_youtube already set video IDs
+        if len(existing_visits) > 1 and (existing_visits[1].get("youtube_video_id") or existing_visits[1].get("vimeo_video_id")):
+            visit2 = existing_visits[1].copy()
+            visit2["criterion_page_url"] = urls[1]
+        else:
+            visit2 = {
+                "youtube_video_id": None,
+                "youtube_video_url": None,
+                "vimeo_video_id": None,
+                "episode_date": None,
+                "criterion_page_url": urls[1],
+            }
+
+        secondary_slug = REPEAT_VISIT_MERGES.get(slug)
+        if secondary_slug:
+            secondary = guest_by_slug(guests, secondary_slug)
+            if secondary:
+                log(f"  Repeat merge: '{secondary['name']}' -> '{g['name']}'")
+                visit2 = build_visit(secondary)
+                visit2["criterion_page_url"] = urls[1]
+                merge_guest_fields(g, secondary)
+                n = update_picks_guest_slug(picks, secondary_slug, slug)
+                stats["picks_reassigned"] += n
+                n = update_picks_guest_slug(picks_raw, secondary_slug, slug)
+                stats["raw_picks_reassigned"] += n
+                remove_guest(guests, secondary_slug)
 
         # Detect and clear duplicate video IDs across visits
-        if len(primary.get("visits", [])) >= 2:
-            v1_vid = primary["visits"][0].get("youtube_video_id")
-            v2_vid = primary["visits"][1].get("youtube_video_id")
-            if v1_vid and v1_vid == v2_vid:
-                log(f"  Dedup video: '{primary['name']}' visit 2 had same video as visit 1, clearing")
-                primary["visits"][1]["youtube_video_id"] = None
-                primary["visits"][1]["youtube_video_url"] = None
+        v1_vid = visit1.get("youtube_video_id")
+        v2_vid = visit2.get("youtube_video_id")
+        if v1_vid and v1_vid == v2_vid:
+            log(f"  Dedup video: '{g['name']}' visit 2 had same video as visit 1, clearing")
+            visit2["youtube_video_id"] = None
+            visit2["youtube_video_url"] = None
 
-        merge_guest_fields(primary, secondary)
-
-        # Reassign picks
-        n = update_picks_guest_slug(picks, secondary_slug, primary_slug)
-        stats["picks_reassigned"] += n
-        n = update_picks_guest_slug(picks_raw, secondary_slug, primary_slug)
-        stats["raw_picks_reassigned"] += n
-
-        remove_guest(guests, secondary_slug)
+        g["visits"] = [visit1, visit2]
+        g["criterion_page_url"] = urls[0]
+        log(f"  Built visits for '{g['name']}': {len(urls)} visit(s)")
         stats["repeat_merges"] += 1
 
     # --- 3. Name-variant merges ---

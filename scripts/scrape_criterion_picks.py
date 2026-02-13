@@ -34,6 +34,7 @@ from scripts.utils import (
     DATA_DIR,
     GUESTS_FILE,
     PICKS_RAW_FILE,
+    VISIT_CRITERION_URLS,
     load_json,
     save_json,
     log,
@@ -99,6 +100,13 @@ def extract_vimeo_video_id(soup: BeautifulSoup) -> str | None:
     Extract Vimeo video ID from a Criterion collection page.
     Looks for Vimeo embed iframes in the parsed HTML.
     """
+    # Fancybox lightbox links (used by Criterion collection pages)
+    for a in soup.select('a[data-fancybox][href*="vimeo.com"]'):
+        href = a.get("href", "")
+        m = re.search(r"vimeo\.com/(?:video/)?(\d+)", href)
+        if m:
+            return m.group(1)
+
     # Look for Vimeo embeds in iframes (src)
     for iframe in soup.select('iframe[src*="player.vimeo.com/video/"]'):
         src = iframe.get("src", "")
@@ -113,9 +121,9 @@ def extract_vimeo_video_id(soup: BeautifulSoup) -> str | None:
         if m:
             return m.group(1)
 
-    # Fallback: regex search in raw HTML
+    # Fallback: regex search in raw HTML (broadened to match vimeo.com/ URLs too)
     raw_html = str(soup)
-    m = re.search(r"player\.vimeo\.com/video/(\d+)", raw_html)
+    m = re.search(r"vimeo\.com/(?:video/)?(\d+)", raw_html)
     if m:
         return m.group(1)
 
@@ -229,8 +237,9 @@ def _clean_link_text(text: str) -> str:
     "Watch & shop now", or "Quick Shop" prepended/appended to the actual title.
     """
     # Remove common overlay text (with optional trailing words like "now")
-    text = re.sub(r"^Watch\s*&\s*shop\s*(now\s*)?", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s*Watch\s*&\s*shop\s*(now\s*)?$", "", text, flags=re.IGNORECASE)
+    # Broadened to catch misspellings: "Waych", "Watch&" etc.
+    text = re.sub(r"^W[a-z]*ch\s*&\s*shop\s*(now\s*)?", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*W[a-z]*ch\s*&\s*shop\s*(now\s*)?$", "", text, flags=re.IGNORECASE)
     text = re.sub(r"^Quick\s*Shop\s*", "", text, flags=re.IGNORECASE)
     text = re.sub(r"\s*Quick\s*Shop\s*$", "", text, flags=re.IGNORECASE)
     return text.strip()
@@ -293,9 +302,6 @@ def scrape_index(scraper) -> list[dict]:
         href = a.get("href", "")
         text = _clean_link_text(a.get_text(strip=True))
 
-        if not text or len(text) < 3:
-            continue
-
         # Normalize to path only
         path = href
         if path.startswith("http"):
@@ -310,15 +316,32 @@ def scrape_index(scraper) -> list[dict]:
         if not re.match(r"/shop/collection/\d+-", path):
             continue
 
+        # If link text is empty (e.g., older visit links with just "Watch & shop"),
+        # extract guest name from URL slug
+        if not text or len(text) < 3:
+            m = re.match(r"/shop/collection/\d+-(.*?)(?:-s-closet|-closet)", path)
+            if m:
+                text = m.group(1).replace("-", " ").title()
+            else:
+                continue
+
         guest_name = parse_guest_name_from_link_text(text)
         if not guest_name:
             continue
 
         full_url = f"{CRITERION_BASE}{path}" if not href.startswith("http") else href
 
+        # Resolve canonical slug via VISIT_CRITERION_URLS for multi-visit guests
+        # (e.g., "yorgos-lanthimos-ariane-labed" -> "yorgos-lanthimos")
+        coll_slug = slugify(guest_name)
+        for canonical_slug, urls in VISIT_CRITERION_URLS.items():
+            if full_url in urls:
+                coll_slug = canonical_slug
+                break
+
         collections.append({
             "name": guest_name,
-            "slug": slugify(guest_name),
+            "slug": coll_slug,
             "collection_url": full_url,
             "collection_path": path,
         })
@@ -734,6 +757,14 @@ def scrape_all_collections(
         key = (p["guest_slug"], p.get("film_id", ""))
         existing_pick_index[key] = i
 
+    # Always re-scrape multi-visit URLs together so visit_index is assigned correctly
+    multi_visit_slugs = {slug for slug, urls in VISIT_CRITERION_URLS.items() if len(urls) >= 2}
+    multi_visit_urls = {url for urls in VISIT_CRITERION_URLS.values() if len(urls) >= 2 for url in urls}
+    completed_urls -= multi_visit_urls
+    for p in existing_picks:
+        if p["guest_slug"] in multi_visit_slugs:
+            p["visit_index"] = None
+
     for coll in tqdm(collections, desc="Scraping Criterion collections"):
         url = coll["collection_url"]
 
@@ -780,6 +811,11 @@ def scrape_all_collections(
                 if visit.get("criterion_page_url") == url:
                     visit_index = i + 1
                     break
+            else:
+                # Fallback: check VISIT_CRITERION_URLS when visits array doesn't exist yet
+                slug_urls = VISIT_CRITERION_URLS.get(guest_slug, [])
+                if url in slug_urls:
+                    visit_index = slug_urls.index(url) + 1
         else:
             # New guest (not in Letterboxd data)
             visit_index = 1
@@ -814,7 +850,8 @@ def scrape_all_collections(
                 if not existing.get("criterion_film_url"):
                     existing["criterion_film_url"] = film.get("criterion_film_url", "")
                 existing["source"] = "criterion"
-                if existing_guest and len(existing_guest.get("visits", [])) >= 2:
+                slug_urls = VISIT_CRITERION_URLS.get(guest_slug, [])
+                if len(slug_urls) >= 2 or (existing_guest and len(existing_guest.get("visits", [])) >= 2):
                     # Keep the earliest visit_index (lowest number) for overlapping films
                     if not existing.get("visit_index") or visit_index < existing["visit_index"]:
                         existing["visit_index"] = visit_index
@@ -832,7 +869,7 @@ def scrape_all_collections(
                 "letterboxd_url": "",
                 "criterion_film_url": film.get("criterion_film_url", ""),
                 "source": "criterion",
-                "visit_index": visit_index if existing_guest else 1,
+                "visit_index": visit_index,
                 "is_box_set": film.get("is_box_set", False),
                 "box_set_name": film.get("box_set_name"),
                 "quote": "",

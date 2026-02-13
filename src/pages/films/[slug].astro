@@ -175,11 +175,15 @@ const boxSetInfo = getBoxSetInfoForFilm(film.slug);
               )}
             </div>
           </div>
-          <QuoteBlock
-            quote={pick.quote}
-            attribution={`${pick.guest?.name || pick.guest_slug}`}
-            timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
-          />
+          {pick.quote ? (
+            <QuoteBlock
+              quote={pick.quote}
+              attribution={`${pick.guest?.name || pick.guest_slug}`}
+              timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+            />
+          ) : (
+            <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
+          )}
         </div>
       ))}
     </div>
@@ -218,11 +222,15 @@ const boxSetInfo = getBoxSetInfoForFilm(film.slug);
                       )}
                     </div>
                   </div>
-                  <QuoteBlock
-                    quote={pick.quote}
-                    attribution={`${pick.guest?.name || pick.guest_slug}`}
-                    timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
-                  />
+                  {pick.quote ? (
+                    <QuoteBlock
+                      quote={pick.quote}
+                      attribution={`${pick.guest?.name || pick.guest_slug}`}
+                      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+                    />
+                  ) : (
+                    <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
+                  )}
                 </div>
               ))}
             </div>

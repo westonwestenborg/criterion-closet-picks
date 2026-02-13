@@ -253,9 +253,30 @@ def group_picks_for_guest(
         template["box_set_film_count"] = len(grouped_picks)
         template["box_set_film_titles"] = film_titles
         template["film_title"] = box_set_name
-        template["quote"] = ""
-        template["extraction_confidence"] = "none"
-        template["youtube_timestamp_url"] = ""
+
+        # Find best available quote from grouped picks
+        best_quote = None
+        for p in grouped_picks:
+            if p.get("quote", "").strip() and p.get("extraction_confidence") in ("high", "medium"):
+                if p.get("film_title") == box_set_name:
+                    best_quote = p
+                    break  # Exact match: guest discussed the set itself
+                if not best_quote:
+                    best_quote = p
+
+        if best_quote:
+            template["quote"] = best_quote["quote"]
+            template["start_timestamp"] = best_quote.get("start_timestamp", 0)
+            template["extraction_confidence"] = best_quote.get("extraction_confidence", "none")
+            for k in ("youtube_timestamp_url", "vimeo_timestamp_url"):
+                if best_quote.get(k):
+                    template[k] = best_quote[k]
+                else:
+                    template[k] = ""
+        else:
+            template["quote"] = ""
+            template["extraction_confidence"] = "none"
+            template["youtube_timestamp_url"] = ""
 
         url = url_map.get(box_set_name)
         if url:
@@ -272,8 +293,12 @@ def group_picks_for_guest(
             if bs_name in seen_box_sets:
                 # Merge into the existing entry
                 existing = merged_picks[seen_box_sets[bs_name]]
-                # Keep the quote from whichever has one
-                if not existing.get("quote") and pick.get("quote"):
+                # Prefer higher confidence quote
+                conf_rank = {"high": 3, "medium": 2, "low": 1, "none": 0}
+                existing_conf = conf_rank.get(existing.get("extraction_confidence", "none"), 0)
+                pick_conf = conf_rank.get(pick.get("extraction_confidence", "none"), 0)
+                if (not existing.get("quote") and pick.get("quote")) or \
+                   (pick.get("quote") and pick_conf > existing_conf):
                     existing["quote"] = pick["quote"]
                     existing["start_timestamp"] = pick.get("start_timestamp", 0)
                     existing["extraction_confidence"] = pick.get("extraction_confidence", "none")

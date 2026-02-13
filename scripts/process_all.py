@@ -78,6 +78,7 @@ def main():
     parser.add_argument("--skip-enrich", action="store_true", help="Skip TMDB enrichment")
     parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
+    parser.add_argument("--fresh", action="store_true", help="Start fresh (pass --primary to scraper, clearing existing data)")
     parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-12)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
@@ -104,12 +105,15 @@ def main():
             step_num,
         ))
 
-    # Step 2: Scrape Criterion.com picks (primary source)
+    # Step 2: Scrape Criterion.com picks
     step_num += 1
     if not args.skip_criterion and args.from_step <= step_num:
+        scrape_cmd = [python, str(SCRIPTS_DIR / "scrape_criterion_picks.py")]
+        if args.fresh:
+            scrape_cmd.append("--primary")
         steps.append((
-            "Scrape Criterion.com Picks (Primary)",
-            [python, str(SCRIPTS_DIR / "scrape_criterion_picks.py"), "--primary"] + limit_flag,
+            "Scrape Criterion.com Picks",
+            scrape_cmd + limit_flag,
             step_num,
         ))
 

@@ -171,6 +171,57 @@ def log(msg: str) -> None:
 # Pilot guest list
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Multi-visit guest URLs
+# ---------------------------------------------------------------------------
+
+# Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2 = newer)
+# Scraped from criterion.com/shop#collection-closet-picks index
+VISIT_CRITERION_URLS = {
+    "bill-hader": [
+        "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011",
+        "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
+    ],
+    "guillermo-del-toro": [
+        "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
+        "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
+    ],
+    "ari-aster": [
+        "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
+        "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks",
+    ],
+    "michael-cera": [
+        "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014",
+        "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks",
+    ],
+    "yorgos-lanthimos": [
+        "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks",
+        "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks",
+    ],
+    "edgar-wright": [
+        "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks",
+        "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks",
+    ],
+    "benny-safdie": [
+        "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks",
+        "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks",
+    ],
+    # Single-page guests: assign to visit 1 only
+    "barry-jenkins": [
+        "https://www.criterion.com/shop/collection/470-barry-jenkins-s-closet-picks",
+    ],
+    "isabelle-huppert": [
+        "https://www.criterion.com/shop/collection/741-isabelle-huppert-s-closet-picks",
+    ],
+    "griffin-dunne": [
+        "https://www.criterion.com/shop/collection/795-griffin-dunne-s-closet-picks",
+    ],
+    "wim-wenders": [
+        "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
+    ],
+}
+
+
 PILOT_GUESTS = [
     "Barry Jenkins",
     "Guillermo del Toro",

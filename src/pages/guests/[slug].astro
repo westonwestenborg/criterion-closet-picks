@@ -203,12 +203,14 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
                               <span class="box-set-tag">Part of {pick.box_set_name}</span>
                             )}
                           </div>
-                          {pick.quote && (
+                          {pick.quote ? (
                             <QuoteBlock
                               quote={pick.quote}
                               timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
                               hideAttribution={true}
                             />
+                          ) : (
+                            <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
                           )}
                         </div>
                       </div>
@@ -323,12 +325,14 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
                           <span class="box-set-tag">Part of {pick.box_set_name}</span>
                         )}
                       </div>
-                      {pick.quote && (
+                      {pick.quote ? (
                         <QuoteBlock
                           quote={pick.quote}
                           timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
                           hideAttribution={true}
                         />
+                      ) : (
+                        <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
                       )}
                     </div>
                   </div>

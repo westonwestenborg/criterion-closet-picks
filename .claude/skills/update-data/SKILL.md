@@ -12,7 +12,7 @@ Run the data pipeline to discover and process new Closet Picks episodes.
 - Working directory: the criterion-closet-picks repo root
 - Python venv at `.venv/` with dependencies installed (`pip install -r scripts/requirements.txt`)
 - `.env` file with TMDB_READ_ACCESS_TOKEN, TMDB_API_KEY, GEMINI_API_KEY
-- `cloudscraper` is a required dependency (used to bypass Cloudflare on Criterion.com and Letterboxd)
+- `cloudscraper` is a required dependency (used to bypass Cloudflare on Criterion.com)
 
 ## Workflow
 
@@ -56,21 +56,24 @@ If no new videos, stop here and tell the user.
 
 ### Step 2: Run the pipeline for new videos
 
-If new videos were found, run the full pipeline (skipping catalog rebuild unless it's been >30 days):
+If new videos were found, run the full pipeline (incremental — merges into existing data):
 
 ```bash
-.venv/bin/python scripts/process_all.py --skip-catalog --from-step 2
+.venv/bin/python scripts/process_all.py --skip-catalog
 ```
 
 This will:
-1. Scrape Letterboxd for any new guest lists
-2. Scrape Criterion.com for new collection pages (+ extract video IDs)
-3. Normalize guest data (merge duplicates, fix names, build visits)
-4. Match YouTube videos to guests and fetch transcripts (incl. multi-visit)
-5. Extract quotes via Gemini Flash (incl. multi-visit second transcripts)
-6. Backfill films, group box sets, scrape box set images
+1. Scrape Criterion.com for new collection pages (+ extract video IDs, handles multi-visit guests)
+2. Normalize guest data (merge duplicates, fix names, build visits arrays)
+3. Match YouTube videos to guests and fetch transcripts (incl. multi-visit second videos)
+4. Extract quotes via Gemini Flash (parallel, 32 workers for throughput)
+5. Backfill films, group box sets, scrape box set images
+6. Migrate source/visit metadata
 7. Enrich new films/guests via TMDB
-8. Run validation
+8. Normalize guests (second pass), migrate again
+9. Run validation
+
+Note: The pipeline is incremental by default. It only re-scrapes multi-visit guest URLs (to keep visit_index accurate) and skips already-processed collections. Use `--fresh` flag to start from scratch.
 
 ### Step 3: Rebuild the site
 
@@ -85,6 +88,7 @@ After the pipeline completes, report:
 - How many new picks were extracted
 - Quote extraction confidence for new entries
 - Any validation issues
+- Multi-visit guest attribution (from migrate_source_visit output)
 
 Ask the user if they want to commit and push the updated data files.
 
@@ -100,7 +104,10 @@ git push
 
 ## Notes
 
+- **Criterion.com is the sole data source** (Letterboxd dropped Feb 2025)
 - The pipeline is idempotent: re-running won't duplicate data
 - Checkpoint files in `data/` track progress for resume capability
+- Multi-visit guests (Bill Hader, Guillermo del Toro, etc.) are handled automatically via `VISIT_CRITERION_URLS` config in `scripts/utils.py`
 - If Gemini quota is exhausted, use `--skip-quotes` and run quote extraction later
+- For parallel extraction: `python scripts/extract_quotes_parallel.py --workers 32`
 - For a single video: `python scripts/process_video.py --youtube-url "URL"`
