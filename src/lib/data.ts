@@ -182,6 +182,18 @@ export function getGuests(): Guest[] {
   let raw = loadRawJSON('guests.json');
   if (raw.length === 0) raw = loadRawJSON('mock_guests.json');
   _guests = raw as Guest[];
+
+  // Check for local photo overrides in public/photos/
+  const photosDir = join(process.cwd(), 'public', 'photos');
+  for (const g of _guests) {
+    if (!g.photo_url) {
+      const localPath = join(photosDir, `${g.slug}.jpg`);
+      if (existsSync(localPath)) {
+        g.photo_url = `/photos/${g.slug}.jpg`;
+      }
+    }
+  }
+
   return _guests;
 }
 
@@ -448,9 +460,15 @@ export function getAllGenres(): string[] {
 }
 
 export function getRecentGuests(count: number = 3): Guest[] {
+  // Extract the numeric collection ID from criterion_page_url (e.g., /shop/collection/928-...)
+  // These IDs are monotonically increasing and reflect publication order on Criterion.com.
+  const collectionId = (g: Guest): number => {
+    const m = g.criterion_page_url?.match(/\/shop\/collection\/(\d+)-/);
+    return m ? parseInt(m[1], 10) : 0;
+  };
   return [...getGuests()]
-    .filter(g => g.episode_date)
-    .sort((a, b) => new Date(b.episode_date).getTime() - new Date(a.episode_date).getTime())
+    .filter(g => g.criterion_page_url)
+    .sort((a, b) => collectionId(b) - collectionId(a))
     .slice(0, count);
 }
 
