@@ -38,10 +38,12 @@ def validate_catalog(catalog: list[dict]) -> dict:
         "with_year": 0,
         "with_director": 0,
         "duplicate_spines": [],
+        "duplicate_film_ids": [],
         "missing_title": 0,
     }
 
     seen_spines = {}
+    seen_film_ids = {}
     for film in catalog:
         spine = film.get("spine_number")
         title = film.get("title", "")
@@ -62,6 +64,18 @@ def validate_catalog(catalog: list[dict]) -> dict:
                 "titles": [seen_spines[spine], title],
             })
         seen_spines[spine] = title
+
+        # Check for duplicate film_ids
+        film_id = film.get("film_id", "")
+        if film_id and film_id in seen_film_ids:
+            stats["duplicate_film_ids"].append(film_id)
+            issues.append({
+                "type": "duplicate_film_id",
+                "film_id": film_id,
+                "spines": [seen_film_ids[film_id], spine],
+            })
+        if film_id:
+            seen_film_ids[film_id] = spine
 
         # Count enrichment coverage
         if film.get("tmdb_id"):
@@ -322,6 +336,8 @@ def print_report(
     print(f"  With IMDB ID: {cs['with_imdb_id']}")
     print(f"  With genres:  {cs['with_genres']}")
     print(f"  With year:    {cs['with_year']}")
+    if cs.get("duplicate_film_ids"):
+        print(f"  Duplicate film_ids: {cs['duplicate_film_ids']}")
     if catalog_result["issues"]:
         print(f"  Issues: {len(catalog_result['issues'])}")
 
