@@ -217,6 +217,23 @@ class TestNoRepeatVisitSuffixes(unittest.TestCase):
         )
 
 
+class TestNoDuplicateFilmIds(unittest.TestCase):
+    """Each film_id should be unique across the catalog."""
+
+    def test_no_duplicate_film_ids(self):
+        """No two catalog entries should share the same film_id."""
+        from collections import Counter
+        id_counts = Counter(f["film_id"] for f in catalog)
+        dupes = {fid: count for fid, count in id_counts.items() if count > 1}
+        if dupes:
+            details = []
+            for fid in sorted(dupes):
+                entries = [f for f in catalog if f["film_id"] == fid]
+                spines = [str(f.get("spine_number", "?")) for f in entries]
+                details.append(f"  {fid} ({dupes[fid]}x): spines {', '.join(spines)}")
+            self.fail(f"Duplicate film_ids found:\n" + "\n".join(details))
+
+
 class TestPickCountAccuracy(unittest.TestCase):
     """Guest pick counts should match actual picks in data files."""
 

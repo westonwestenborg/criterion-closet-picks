@@ -8593,7 +8593,27 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1945-23da7bdafe273dbec66ce60e6dd58658/V5oY4ZalkXBF5sf9sEHmGPVjlZjmps_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In 1977, German director Rainer Werner Fassbinder was thirty-two years old and had already directed more than twenty-five feature films. That summer, he embarked on a project to trace the postwar history of West Germany in a series of ﬁlms told from the perspectives of three remarkable women. Fassbinder’sThe Marriage of Maria Braun,Veronika Voss,andLola—The BRD Trilogy,which takes its title from the Bundesrepublik Deutschland—would garner him his greatest commercial success, both at home and abroad, and cement his position as one of the foremost figures of the New German Cinema.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/592-the-marriage-of-maria-braun",
+        "title": "The Marriage of Maria Braun",
+        "year": 1979,
+        "film_id": "the-marriage-of-maria-braun"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/593-veronika-voss",
+        "title": "Veronika Voss",
+        "year": 1982
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/595-lola",
+        "title": "Lola",
+        "year": 1981
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 204,
@@ -8962,7 +8982,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1938-86e4176cc4262e3524935d83d5870456/4hx4crqXk77qBf3SJxMwbw6Mz2sDUg_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In 1960, Swedish director Ingmar Bergman began work on three of his most powerful and representative films, eventually presented as a trilogy. Already a figure of international acclaim for such masterpieces asThe Seventh SealandThe Magician, Bergman turned his back on the expressionism of his fifties work to focus on a series of chamber dramas exploring belief and alienation in the modern age. Collaborating with the distinguished cinematographer Sven Nykvist, and eliciting searing performances from his refined cast of regulars—Harriet Andersson, Gunnar Björnstrand, Gunnel Lindblom, Ingrid Thulin, and Max Von Sydow among them—Bergman unleashedThrough a Glass Darkly,Winter Light, andThe Silencein rapid succession, exposing moviegoers worldwide to a new level of intellectual and emotional intensity. Drawing on Bergman’s own upbringing and ongoing spiritual crises, the films of the trilogy examine the necessity of religion and question the promise of faith.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/568-through-a-glass-darkly",
+        "title": "Through a Glass Darkly",
+        "year": 1961
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/569-winter-light",
+        "title": "Winter Light",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/570-the-silence",
+        "title": "The Silence",
+        "year": 1963
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 209,
@@ -10790,7 +10829,21 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2055-c9812d001708a6e844bc16be4b7c5d16/DcMM1I3Mce4WYCzldIxjVA8JxwJudD_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In 1959, Yasujiro Ozu remade his 1934 silent classicA Story of Floating Weedsin color with celebrated cinematographer Kazuo Miyagawa. Setting his later version in a seaside location, Ozu otherwise preserves the details of his elegantly simple plot wherein an aging actor returns to a small town with his troupe and reunites with his former lover and their son, a scenario that enrages his current mistress and results in heartbreak for all. Together, the films offer a unique glimpse into the evolution of one of cinema's greatest directors.A Story of Floating Weedsfinds Ozu in the midst of developing his mode of expression;Floating Weedsreveals his distinct style at its pinnacle. In each, the director captures the joy and sadness of everyday life.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/752-a-story-of-floating-weeds",
+        "title": "A Story of Floating Weeds",
+        "year": 1934
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/349-floating-weeds",
+        "title": "Floating Weeds",
+        "year": 1959
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": 233,
@@ -11362,7 +11415,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1871-b497c6ca9fe76597e465ae063f33cf92/ZOLgPj9zTnYgjLm6sE0LHOBVKS9aAT_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Near the end of his long and celebrated career, master filmmaker Jean Renoir indulged his lifelong obsession with life-as-theater and directedThe Golden Coach(1953),French Cancan(1955), andElena and Her Men(1956), three delirious films infatuated with the past, love, and artifice. Awash in jubilant Technicolor, each film interweaves public display and private feelings through the talents of three immortal film icons—Anna Magnani, Jean Gabin, and Ingrid Bergman. The Criterion Collection is proud to present these three majestic films by Jean Renoir for the first time on DVD.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/889-the-golden-coach",
+        "title": "The Golden Coach",
+        "year": 1953
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/891-french-cancan",
+        "title": "French Cancan",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/937-elena-and-her-men",
+        "title": "Elena and Her Men",
+        "year": 1956
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 242,
@@ -12103,7 +12175,45 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1872-a1193fec634c922ab53d68f8c156ee20/En2M1rQdo8KTHEDM6IF3wCzKIDV7GU_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "John Cassavetes was a genius, a visionary, and the progenitor of American independent film, but that doesn’t begin to get at the generosity of his art. A former theater actor fascinated by the power of improvisation, Cassavetes brought his search for truth in performance to the screen. The five films in this collection—all of which the director maintained total control over by financing them himself and making them outside the studio system—are electrifying and compassionate creations, populated by all manner of humanity: beatniks, hippies, businessmen, actors, housewives, strippers, club owners, gangsters, children. Cassavetes has often been called an actor’s director, but this body of work—even greater than the sum of its extraordinary parts—shows him to be an audience’s director.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/500-shadows",
+        "title": "Shadows",
+        "year": 1959,
+        "film_id": "shadows"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/915-faces",
+        "title": "Faces",
+        "year": 1968,
+        "film_id": "faces"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/510-a-woman-under-the-influence",
+        "title": "A Woman Under the Influence",
+        "year": 1974,
+        "film_id": "a-woman-under-the-influence"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/958-the-killing-of-a-chinese-bookie",
+        "title": "The Killing of a Chinese Bookie",
+        "year": 1976,
+        "film_id": "the-killing-of-a-chinese-bookie"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/957-opening-night",
+        "title": "Opening Night",
+        "year": 1977
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/956-a-constant-forge",
+        "title": "A Constant Forge",
+        "year": 2000
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 251,
@@ -12902,7 +13012,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1879-ddf9f0d1ce4179a8d951c0d9565fd7b6/p9zD6ZURSPmDBhod3yL2aDID2gMRQD_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Through the eyes of ten-year-old Alexander, we witness the delights and conflicts of the Ekdahl family, a sprawling bourgeois clan in turn-of-the-twentieth-century Sweden. Ingmar Bergman intendedFanny and Alexanderas his swan song, and it is the legendary director’s warmest and most autobiographical film, a four-time Academy Award–winning triumph that combines his trademark melancholy and emotional intensity with immense joy and sensuality. The Criterion Collection is proud to present both the theatrical release and the original five-hour television version of this great work. Also included in the box set is Bergman’s own feature-length documentaryThe Making of “Fanny and Alexander,”a unique glimpse into his creative process.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/201-fanny-and-alexander-theatrical-version",
+        "title": "Fanny and Alexander: Theatrical Version",
+        "year": 1982
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/626-fanny-and-alexander-television-version",
+        "title": "Fanny and Alexander: Television Version",
+        "year": 1983
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/627-the-making-of-fanny-and-alexander",
+        "title": "The Making of Fanny and Alexander",
+        "year": 1982
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 262,
@@ -19469,7 +19598,41 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The multifaceted, deeply personal work of Eric Rohmer has had an effect on cinema unlike any other. One of the founding critics of the history-makingCahiers du cinéma,Rohmer began translating his written manifestos to film in the 1960s, standing apart from his New Wave contemporaries with his patented brand of gently existential, hyperarticulate character studies set against vivid seasonal landscapes. This near genre unto itself was established with the audacious and wildly influential series Six Moral Tales. A succession of encounters between fragile men and the women who tempt them, Six Moral Tales unleashed on the film world a new voice, one that was at once sexy, philosophical, modern, daring, nonjudgmental, and liberating.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/786-the-bakery-girl-of-monceau",
+        "title": "The Bakery Girl of Monceau",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/787-suzanne-s-career",
+        "title": "Suzanne’s Career",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/791-my-night-at-maud-s",
+        "title": "My Night at Maud’s",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/792-la-collectionneuse",
+        "title": "La collectionneuse",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/793-claire-s-knee",
+        "title": "Claire’s Knee",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/794-love-in-the-afternoon",
+        "title": "Love in the Afternoon",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 343,
@@ -21234,7 +21397,31 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1874-1783a5b7ab030641aab494f13c026174/ahGfceaQ9idYzYJHUy4cVjH4aRnxZo_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Launching us from a grave past to a space-age future, these two thrilling double features, from producers Richard and Alex Gordon, spin classic tales of hair-raising homicidal mania and intrepid, death-defying exploration. Featuring Boris Karloff in two of his most horrifying roles (The Haunted StranglerandCorridors of Blood), and two classic sci-fi treats from the atomic age.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/804-the-atomic-submarine",
+        "title": "The Atomic Submarine",
+        "year": 1959
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/803-first-man-into-space",
+        "title": "First Man into Space",
+        "year": 1959
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/805-the-haunted-strangler",
+        "title": "The Haunted Strangler",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/806-corridors-of-blood",
+        "title": "Corridors of Blood",
+        "year": 1959
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": 365,
@@ -23086,7 +23273,21 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1863-d6916651f0f3ead148ffd869331459b7/oQoeqXYr3XiuO5vvu3J6PphWl19PlW_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One of the most influential, radical science-fiction films ever made and a mind-bending free-form travelogue:La JetéeandSans Soleilcouldn’t seem more different—but they’re the twin pillars of an unparalleled and uncompromising career in cinema. A filmmaker, poet, novelist, photographer, editor, and now videographer and digital multimedia artist, Chris Marker has been challenging moviegoers, philosophers, and himself for years with his investigations of time, memory, and the rapid advancement of life on this planet. These two films—a tale of time travel told in still images and a journey to Africa and Japan—remain his best-loved and most widely seen.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/329-la-jetee",
+        "title": "La Jetée",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/304-sans-soleil",
+        "title": "Sans Soleil",
+        "year": 1983
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": 388,
@@ -25302,7 +25503,32 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1856-70cb6699a8cee4d1285949a3f86c813d/NxYyVlcajs0ng5eCLjUz0H5LgGSk7Z_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Agnès Varda used the skills she honed early in her career as a photographer to create some of the most nuanced, thought-provoking films of the past fifty years. She is widely believed to have presaged the French new wave with her first film,La Pointe Courte, long before creating one of the movement's benchmarks,Cléo from 5 to 7(Cléo de 5 à 7). Later, withLe bonheurandVagabond(Sans toit ni loi), Varda further shook up art-house audiences, challenging bourgeois codes with her inscrutable characters and offering effortlessly beautiful compositions and editing. Now working largely as a documentarian, Varda remains one of the essential cinematic poets of our time and a true visionary.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/524-la-pointe-courte",
+        "title": "La Pointe Courte",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/244-cleo-from-5-to-7",
+        "title": "Cléo from 5 to 7",
+        "year": 1962,
+        "film_id": "cleo-from-5-to-7"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/525-le-bonheur",
+        "title": "Le bonheur",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/245-vagabond",
+        "title": "Vagabond",
+        "year": 1985
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": 419,
@@ -29663,7 +29889,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1855-d1af5d0a5e3d807a317f3cc4e9c52f38/vdPxhXhBYsJOygUcZ3XqUkDiS3dZOl_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the 1960s, Japanese filmmakers responded to a stale studio system by looking for fresh ways to tell stories, and Shohei Imamura was one of the leading figures of this new wave. With the three films in this set—Pigs and Battleships, The Insect Woman,andIntentions of Murder—Imamura truly emerged as an auteur, bringing to his national cinema an anthropological eye and a previously unseen taste for the irreverent. Claiming his interests lay in “the relationship of the lower part of the human body and the lower part of the social structure,” Imamura dotted the decade with earthy, juicy, idiosyncratic films featuring persevering, willful heroines. His remains a unique cinematic voice.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/1430-the-insect-woman",
+        "title": "The Insect Woman",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/1428-pigs-and-battleships",
+        "title": "Pigs and Battleships",
+        "year": 1962
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/1431-intentions-of-murder",
+        "title": "Intentions of Murder",
+        "year": 1964
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 472,
@@ -30100,18 +30345,11 @@
   {
     "spine_number": 477,
     "title": "Bergman Island",
-    "director": "Mia Hansen-Løve",
-    "year": 2021,
+    "director": "Marie Nyreröd",
+    "year": 2006,
     "country": "",
-    "criterion_url": "https://www.criterion.com/films/33380-bergman-island",
-    "film_id": "bergman-island",
-    "imdb_id": "tt6910282",
-    "tmdb_id": 477044,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/q8bQfC7SbaTDVKywhCiNL3ZVSyy.jpg",
+    "criterion_url": "https://www.criterion.com/films/556-bergman-island",
+    "film_id": "bergman-island-2006",
     "credits": {
       "directors": [
         {
@@ -31857,7 +32095,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1852-f20e8f5bdc458777cda90775598ef89c/G2jPTXWEYclcKFXC7LYWoNEj5D7V7l_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Roberto Rossellini is one of the most influential filmmakers of all time. And it was with his trilogy of films made during and after World War II—Rome Open City, Paisan,andGermany Year Zero—that he left his first transformative mark on cinema. With their stripped-down aesthetic, largely nonprofessional casts, and unorthodox approaches to storytelling, these intensely emotional works were international sensations and came to define the neorealist movement. Shot in battle-ravaged Italy and Germany, these three films are some of our most lasting, humane documents of devastated postwar Europe, containing universal images of both tragedy and hope.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/975-rome-open-city",
+        "title": "Rome Open City",
+        "year": 1945
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/2415-paisan",
+        "title": "Paisan",
+        "year": 1946
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/297-germany-year-zero",
+        "title": "Germany Year Zero",
+        "year": 1948
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 501,
@@ -32490,7 +32747,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1851-dba6177f0bd538f868c12a4c87760e83/tLbF78x2hqXHJGqSbQ5j7qW9izcNvg_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One of the most important artists on the international film scene today, Portuguese director Pedro Costa has been steadily building an impressive body of work since the late eighties. And these are the three films that put him on the map: spare, painterly portraits of battered, largely immigrant lives in the slums of Fontainhas, a neighborhood on the outskirts of Lisbon. Hypnotic, controlled works,Ossos, In Vanda’s Room,andColossal Youthconfirm Costa as a provocative new cinematic poet, one who locates beauty in the most unlikely of places.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/21942-ossos",
+        "title": "Ossos",
+        "year": 1997
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20820-in-vanda-s-room",
+        "title": "In Vanda’s Room",
+        "year": 2000
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/439-colossal-youth",
+        "title": "Colossal Youth",
+        "year": 2006
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 509,
@@ -33208,7 +33484,19 @@
       "editors": [],
       "cast": []
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Working outside the mainstream, the wildly prolific, visionary Stan Brakhage made more than 350 films over a half century. Challenging all taboos in his exploration of “birth, sex, death, and the search for God,” he turned his camera on explicit lovemaking, childbirth, even autopsy. Many of his most famous works pursue the nature of vision itself and transcend the act of filming. Some, including the legendaryMothlight,were created without using a camera at all, as he pioneered the art of making images directly on film, by drawing, painting, and scratching. With these two volumes, we present the definitive Brakhage collection—fifty-six of his works, from across his career, in high-definition digital transfers.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/731-by-brakhage-an-anthology-volume-one",
+        "title": "By Brakhage: An Anthology, Volume One"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/23953-by-brakhage-an-anthology-volume-two",
+        "title": "By Brakhage: An Anthology, Volume Two"
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": 519,
@@ -33930,7 +34218,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1844-c9cb634fa3b22393408e64804c4b045c/u8zW5OazrYxQD3wNBZLu8H9zaj8mTx_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Vienna-born, New York–raised Josef von Sternberg directed some of the most influential, stylish dramas ever to come out of Hollywood. Though best known for his star-making collaborations with Marlene Dietrich, von Sternberg began his career during the final years of the silent era, dazzling audiences and critics with his films’ dark visions and innovative cinematography. The titles in this collection, made on the cusp of the sound age, are three of von Sternberg’s greatest works, gritty evocations of gangster life (Underworld), the Russian Revolution (The Last Command), and working-class desperation (The Docks of New York) rendered as shadowy movie spectacle.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/21766-underworld",
+        "title": "Underworld",
+        "year": 1927
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/6721-the-last-command",
+        "title": "The Last Command",
+        "year": 1928
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/1942-the-docks-of-new-york",
+        "title": "The Docks of New York",
+        "year": 1928
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 529,
@@ -36795,19 +37102,11 @@
   {
     "spine_number": 563,
     "title": "Something Wild",
-    "director": "Jonathan Demme",
-    "year": 1986,
+    "director": "Jack Garfein",
+    "year": 1961,
     "country": "",
-    "criterion_url": "https://www.criterion.com/films/27603-something-wild",
-    "film_id": "something-wild",
-    "imdb_id": "tt0091983",
-    "tmdb_id": 11300,
-    "genres": [
-      "Crime",
-      "Comedy",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/344lhBozqFWKxBb4fp6azYQMLEy.jpg",
+    "criterion_url": "https://www.criterion.com/films/28777-something-wild",
+    "film_id": "something-wild-1961",
     "credits": {
       "directors": [
         {
@@ -37956,7 +38255,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1843-6e179857a2b22f6fff1aee72814e6e1f/ucDdSNidzRCUS9xrmSXHu8tdlizbxG_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Even among cinema’s legends, Jean Vigo stands apart. The son of a notorious anarchist, Vigo had a brief but brilliant career making poetic, lightly surrealist films before his life was cut tragically short by tuberculosis at age twenty-nine. Like the daring early works of his contemporaries Jean Cocteau and Luis Buñuel, Vigo’s films refused to play by the rules. This set includes all of Vigo’s titles:À propos de Nice,an absurdist, rhythmic slice of life from the bustling coastal city;Taris,an inventive short portrait of a swimming champion;Zéro de conduite,a radical, delightful tale of boarding-school rebellion that has influenced countless filmmakers; andL’Atalante,widely regarded as one of cinema’s finest achievements, about newlyweds beginning their life together on a canal barge. These are the witty, visually adventurous works of a pivotal film artist.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27752-a-propos-de-nice",
+        "title": "À propos de Nice",
+        "year": 1930
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27757-zero-de-conduite",
+        "title": "Zéro de conduite",
+        "year": 1933
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27758-l-atalante",
+        "title": "L’Atalante",
+        "year": 1934
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 579,
@@ -38948,7 +39266,26 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "This boldly cinematic trio of stories about love and loss, from Krzysztof Kieślowski, was a defining event of the art-house boom of the 1990s. The films are named for the colors of the French flag and stand for the tenets of the French Revolution—liberty, equality, and fraternity—but that hardly begins to explain their enigmatic beauty and rich humanity. Set in Paris, Warsaw, and Geneva, and ranging from tragedy to comedy,Blue, White,andRed(Kieślowski’s final film) examine with artistic clarity a group of ambiguously interconnected people experiencing profound personal disruptions. Marked by intoxicating cinematography and stirring performances by Juliette Binoche, Julie Delpy, Irène Jacob, and Jean-Louis Trintignant, Kieślowski’s Three Colors is a benchmark of contemporary cinema.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27731-three-colors-blue",
+        "title": "Three Colors: Blue",
+        "year": 1993
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27732-three-colors-white",
+        "title": "Three Colors: White",
+        "year": 1994
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27733-three-colors-red",
+        "title": "Three Colors: Red",
+        "year": 1994
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 591,
@@ -39998,7 +40335,32 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1840-088af0518384d0cd3ade371a9be9adad/HA6lPFqR7TccJBZskcnpzNd3SgtQAz_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the 1940s, the wit of playwright Noël Coward and the craft of filmmaker David Lean melded harmoniously in one of cinema’s greatest writer-director collaborations. With the wartime military drama sensationIn Which We Serve,Coward and Lean (along with producing partners Ronald Neame and Anthony Havelock-Allan) embarked on a series of literate, socially engaged, and enormously entertaining pictures that ranged from domestic epic (This Happy Breed) to whimsical comedy (Blithe Spirit) to poignant romance (Brief Encounter). These films created a lasting testament to Coward’s artistic legacy and introduced Lean’s visionary talents to the world.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/345-brief-encounter",
+        "title": "Brief Encounter",
+        "year": 1945,
+        "film_id": "brief-encounter"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28185-in-which-we-serve",
+        "title": "In Which We Serve",
+        "year": 1942
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28144-this-happy-breed",
+        "title": "This Happy Breed",
+        "year": 1944
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28156-blithe-spirit",
+        "title": "Blithe Spirit",
+        "year": 1945
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": 604,
@@ -41393,18 +41755,11 @@
   {
     "spine_number": 622,
     "title": "Weekend",
-    "director": "Andrew Haigh",
-    "year": 2011,
+    "director": "Jean-Luc Godard",
+    "year": 1967,
     "country": "",
-    "criterion_url": "https://www.criterion.com/films/27783-weekend",
-    "film_id": "weekend",
-    "imdb_id": "tt1714210",
-    "tmdb_id": 79120,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg",
+    "criterion_url": "https://www.criterion.com/films/28441-weekend",
+    "film_id": "weekend-1967",
     "credits": {
       "directors": [
         {
@@ -42218,7 +42573,26 @@
       "editors": [],
       "cast": []
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the early 1970s, the great Italian poet, philosopher, and filmmaker Pier Paolo Pasolini brought to the screen a trio of masterpieces of medieval literature—Giovanni Boccaccio’sThe Decameron,Geoffrey Chaucer’sThe Canterbury Tales,andThe Thousand and One Nights(often known asThe Arabian Nights)—and in doing so created his most uninhibited and extravagant work. In this brazen and bawdy triptych, the director set out to challenge modern consumer culture and celebrate the uncorrupted human body, while commenting on contemporary sexual and religious mores and hypocrisies. Filled with scatological humor and a rough-hewn sensuality that leave all modern standards of decency behind, these are carnal, provocative, and wildly entertaining films, all extraordinarily designed by Dante Ferretti and featuring evocative music by Ennio Morricone.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28105-the-decameron",
+        "title": "The Decameron",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28106-the-canterbury-tales",
+        "title": "The Canterbury Tales",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28374-arabian-nights",
+        "title": "Arabian Nights",
+        "year": 1974
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 632,
@@ -42442,14 +42816,7 @@
     "year": 2011,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/27783-weekend",
-    "film_id": "weekend",
-    "imdb_id": "tt1714210",
-    "tmdb_id": 79120,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg",
+    "film_id": "weekend-2011",
     "credits": {
       "directors": [
         {
@@ -42805,7 +43172,27 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1837-6d63f856dbe4a02bd6c8e0fb5705faf0/WElxowomsGYQjFojxmDr1GWbnfPgXq_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A singular artist and activist, Godfrey Reggio is best known for the galvanizing films ofThe Qatsi Trilogy.Astonishingly photographed, and featuring unforgettable, cascading scores by Philip Glass, these are immersive sensory experiences that meditate on the havoc humankind’s obsession with technological advancement has wreaked on our world. From 1983’sKoyaanisqatsito 1988’sPowaqqatsito 2002’sNaqoyqatsi,Reggio takes us on a journey from the ancient to the contemporary, from nature to industry, exploring life out of balance, in transformation, and as war, all the while keeping our eyes wide with wonder.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28034-koyaanisqatsi",
+        "title": "Koyaanisqatsi",
+        "year": 1983,
+        "film_id": "koyaanisqatsi"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28033-powaqqatsi",
+        "title": "Powaqqatsi",
+        "year": 1988
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28418-naqoyqatsi",
+        "title": "Naqoyqatsi",
+        "year": 2002
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 640,
@@ -44181,7 +44568,36 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A French comedy master whose films went unseen for decades as a result of legal tangles, director-actor Pierre Etaix is a treasure the cinematic world has rediscovered and embraced with relish. His work can be placed on the spectrum of classic physical comedy with that of Jacques Tati and Jerry Lewis, but it also stands alone in its good-natured delicacy. These films, influenced by Etaix’s experiences as a circus acrobat and clown and by the silent film comedies he adored, are elegantly deadpan, but as an on-screen presence, Etaix radiates warmth. This collection includes all of his films, five features,The Suitor,Yoyo, As Long as You’ve Got Your Health, Le grand amour,andLand of Milk and Honey—most of them collaborations with the great screenwriter Jean-Claude Carrière—and three shorts,Rupture,the Oscar-winningHappy Anniversary,andFeeling Good.Not one of these is anything less than a bracing and witty delight.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28395-the-suitor",
+        "title": "The Suitor",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28454-yoyo",
+        "title": "Yoyo",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28399-as-long-as-you-ve-got-your-health",
+        "title": "As Long as You’ve Got Your Health",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28398-le-grand-amour",
+        "title": "Le grand amour",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28397-land-of-milk-and-honey",
+        "title": "Land of Milk and Honey",
+        "year": 1971
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": 656,
@@ -45546,7 +45962,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1832-5224e9ac2c95fb1ffa85d5fd11ddef38/6gMrpMnUAzE3BYCL3Zs6wRKUzyNZLM_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the late 1940s, the incandescent Hollywood star Ingrid Bergman found herself so stirred by the revolutionary neorealist films of Roberto Rossellini that she sent the director a letter, introducing herself and offering her talents. The resulting collaboration produced a series of films that are works of both sociopolitical concern and metaphysical melodrama, each starring Bergman as a woman experiencing physical dislocation and psychic torment in postwar Italy. It also famously led to a scandalous affair and eventual marriage between filmmaker and star, and the focus on their personal lives in the press unfortunately overshadowed the extraordinary films they made together.Stromboli, Europe ’51,andJourney to Italyare intensely moving portraits that reveal the director at his most emotional and the glamorous actress at her most anguished, and that capture them and the world around them in transition.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28082-stromboli",
+        "title": "Stromboli",
+        "year": 1950
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28108-europe-51",
+        "title": "Europe ’51",
+        "year": 1952
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28081-journey-to-italy",
+        "title": "Journey to Italy",
+        "year": 1954
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 673,
@@ -46185,7 +46620,136 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The colossally popular Zatoichi films make up the longest-running action series in Japanese history and created one of the screen’s great heroes: an itinerant blind masseur who also happens to be a lightning-fast swordsman. As this iconic figure, the charismatic and earthy Shintaro Katsu became an instant superstar, lending a larger-than-life presence to the thrilling adventures of a man who lives staunchly by a code of honor and delivers justice in every town and village he enters. The films that feature him are variously pulse-pounding, hilarious, stirring, and completely off-the-wall. This deluxe set features the string of twenty-five Zatoichi films made between 1962 and 1973, collected in one package for the first time.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28300-the-tale-of-zatoichi",
+        "title": "The Tale of Zatoichi",
+        "year": 1962
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28301-the-tale-of-zatoichi-continues",
+        "title": "The Tale of Zatoichi Continues",
+        "year": 1962
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28302-new-tale-of-zatoichi",
+        "title": "New Tale of Zatoichi",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28303-zatoichi-the-fugitive",
+        "title": "Zatoichi the Fugitive",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28304-zatoichi-on-the-road",
+        "title": "Zatoichi on the Road",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28305-zatoichi-and-the-chest-of-gold",
+        "title": "Zatoichi and the Chest of Gold",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28306-zatoichi-s-flashing-sword",
+        "title": "Zatoichi’s Flashing Sword",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28307-fight-zatoichi-fight",
+        "title": "Fight, Zatoichi, Fight",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28308-adventures-of-zatoichi",
+        "title": "Adventures of Zatoichi",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28309-zatoichi-s-revenge",
+        "title": "Zatoichi’s Revenge",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28310-zatoichi-and-the-doomed-man",
+        "title": "Zatoichi and the Doomed Man",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28311-zatoichi-and-the-chess-expert",
+        "title": "Zatoichi and the Chess Expert",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28312-zatoichi-s-vengeance",
+        "title": "Zatoichi’s Vengeance",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28318-zatoichi-s-pilgrimage",
+        "title": "Zatoichi’s Pilgrimage",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28313-zatoichi-s-cane-sword",
+        "title": "Zatoichi’s Cane Sword",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28583-zatoichi-the-outlaw",
+        "title": "Zatoichi the Outlaw",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28314-zatoichi-challenged",
+        "title": "Zatoichi Challenged",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28315-zatoichi-and-the-fugitives",
+        "title": "Zatoichi and the Fugitives",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28316-samaritan-zatoichi",
+        "title": "Samaritan Zatoichi",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28582-zatoichi-meets-yojimbo",
+        "title": "Zatoichi Meets Yojimbo",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28584-zatoichi-goes-to-the-fire-festival",
+        "title": "Zatoichi Goes to the Fire Festival",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28585-zatoichi-meets-the-one-armed-swordsman",
+        "title": "Zatoichi Meets the One-Armed Swordsman",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28586-zatoichi-at-large",
+        "title": "Zatoichi at Large",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28587-zatoichi-in-desperation",
+        "title": "Zatoichi in Desperation",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28588-zatoichi-s-conspiracy",
+        "title": "Zatoichi’s Conspiracy",
+        "year": 1973
+      }
+    ],
+    "box_set_film_count": 25
   },
   {
     "spine_number": 680,
@@ -48551,7 +49115,42 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1827-340d95a9dc4160151fad3b6ee59da757/g1SkfwOWOBrY9ryHCbnk9w9KcU5iJW_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "French director Jacques Demy didn’t just make movies—he created an entire cinematic world. Demy launched his glorious feature filmmaking career in the sixties, a decade of astonishing invention in his national cinema. He stood out from the crowd of his fellow New Wavers, however, by filtering his self-conscious formalism through deeply emotional storytelling. Fate and coincidence, doomed love, and storybook romance surface throughout his films, many of which are further united by the intersecting lives of characters who appear or are referenced across titles. The works collected here—made from the sixties to the eighties and ranging from musical to melodrama to fantasia—are triumphs of visual and sound design, camera work, and music, and they are galvanized by the great stars of French cinema at their centers, including Anouk Aimée, Catherine Deneuve, and Jeanne Moreau.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27932-lola",
+        "title": "Lola",
+        "year": 1961
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27935-bay-of-angels",
+        "title": "Bay of Angels",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27933-the-umbrellas-of-cherbourg",
+        "title": "The Umbrellas of Cherbourg",
+        "year": 1964,
+        "film_id": "the-umbrellas-of-cherbourg-jacques-demy-box"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28615-the-young-girls-of-rochefort",
+        "title": "The Young Girls of Rochefort",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28605-donkey-skin",
+        "title": "Donkey Skin",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27936-une-chambre-en-ville",
+        "title": "Une chambre en ville",
+        "year": 1982
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 714,
@@ -49374,7 +49973,42 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1826-74abafd9cdfb81dc87d1738ec3c99693/VZ6wkU3rR5LF2srqIn918sRLIBPOl8_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Though he made only a handful of films, director, writer, and actor Jacques Tati ranks among the most beloved of all cinematic geniuses. With a background in music hall and mime performance, Tati steadily built an ever-more-ambitious movie career that ultimately raised sight-gag comedy to the level of high art. In the surrogate character of the sweet and bumbling, eternally umbrella-toting and pipe-smoking Monsieur Hulot, Tati invented a charming symbol of humanity lost in a relentlessly modernizing modern age. This set gathers his six hilarious features—Jour de fête, Monsieur Hulot’s Holiday, Mon oncle, PlayTime, Trafic,andParade—along with seven delightful Tati-related short films.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28114-jour-de-fete",
+        "title": "Jour de fête",
+        "year": 1949
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/360-monsieur-hulot-s-holiday",
+        "title": "Monsieur Hulot’s Holiday",
+        "year": 1953
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/650-mon-oncle",
+        "title": "Mon oncle",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/651-playtime",
+        "title": "PlayTime",
+        "year": 1967,
+        "film_id": "play-time"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/859-trafic",
+        "title": "Trafic",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28123-parade",
+        "title": "Parade",
+        "year": 1974
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 730,
@@ -53221,7 +53855,26 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A breathtaking milestone that broughtIndia into the golden age of international art-house film, Satyajit Ray’sThe Apu Trilogyfollows one indelible character, a free-spirited child in rural Bengal whomatures into an adolescent urban student and, finally, a sensitive man of the world. Ray’s delicate masterworks—Pather Panchali(Song of the Little Road),Aparajito(The Unvanquished), andApur Sansar(The World of Apu)—based on two books by Bibhutibhusan Banerjee, were shot over the course of five years, and each stands on its own as a tender, visually radiant journey. These films—whichhave risen from the ashes in meticulously reconstructed restorations, after the original negatives were burned in a fire—are among the most achingly beautiful, richly humane movies ever made.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28021-pather-panchali",
+        "title": "Pather Panchali",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28443-aparajito",
+        "title": "Aparajito",
+        "year": 1956
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27905-apur-sansar",
+        "title": "Apur Sansar",
+        "year": 1959
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 783,
@@ -55626,7 +56279,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1773-3e4219a9f27e8402b68c2d685584258a/qVsCeiFh9PYaWkZhYXFAMnpoAI0MUF_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the 1970s, Wim Wenders was among the first true international breakthrough artists of the revolutionary New German Cinema movement, a filmmaker whose fascination with the physical landscapes and emotional contours of the open road proved to be universal. In the middle of that decade, Wenders embarked on a three-film journey that took him from the wide roads of Germany to the endless highways of the United States and back again. Each starring Rüdiger Vogler as the director’s alter ego,Alice in the Cities, Wrong Move,andKings of the Roadare dramas of emotional transformation that follow their characters’ searches for themselves, all rendered with uncommon soulfulness and visual poetry.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27717-alice-in-the-cities",
+        "title": "Alice in the Cities",
+        "year": 1974
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28768-wrong-move",
+        "title": "Wrong Move",
+        "year": 1975
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28762-kings-of-the-road",
+        "title": "Kings of the Road",
+        "year": 1976
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 814,
@@ -58219,14 +58891,7 @@
     "year": 1972,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28039-roma",
-    "film_id": "roma",
-    "imdb_id": "tt0069191",
-    "tmdb_id": 11035,
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/rqK75R3tTz2iWU0AQ6tLz3KMOU1.jpg",
+    "film_id": "roma-1972",
     "credits": {
       "directors": [
         {
@@ -58395,15 +59060,7 @@
     "year": 1986,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/27603-something-wild",
-    "film_id": "something-wild",
-    "imdb_id": "tt0091983",
-    "tmdb_id": 11300,
-    "genres": [
-      "Crime",
-      "Comedy",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/344lhBozqFWKxBb4fp6azYQMLEy.jpg",
+    "film_id": "something-wild-1986",
     "credits": {
       "directors": [
         {
@@ -64023,7 +64680,42 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1913-aa161a0f125c18e184c759f4e6fa4d86/ne8EBMDiHqGQ5vJDvaBUV6wzuwbT3d_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Tasked by studio executives with finding the next great screen siren, visionary Hollywood director Josef von Sternberg joined forces with rising German actor Marlene Dietrich, kicking off what would become one of the most legendary partnerships in cinema history. Over the course of six films produced by Paramount in the 1930s, the pair refined their shared fantasy of pleasure, beauty, and excess. Dietrich’s coolly transgressive mystique was a perfect match for the provocative roles von Sternberg cast her in—including a sultry chanteuse, a cunning spy, and the hedonistic Catherine the Great—and the filmmaker captured her allure with chiaroscuro lighting and opulent design, conjuring fever-dream visions of exotic settings from Morocco to Shanghai. Suffused with frank sexuality and worldly irony, these deliriously entertaining masterpieces are landmarks of cinematic artifice.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28991-morocco",
+        "title": "Morocco",
+        "year": 1930
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28984-dishonored",
+        "title": "Dishonored",
+        "year": 1931
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28166-shanghai-express",
+        "title": "Shanghai Express",
+        "year": 1932
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28981-blonde-venus",
+        "title": "Blonde Venus",
+        "year": 1932
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/431-the-scarlet-empress",
+        "title": "The Scarlet Empress",
+        "year": 1934,
+        "film_id": "the-scarlet-empress"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28983-the-devil-is-a-woman",
+        "title": "The Devil Is a Woman",
+        "year": 1935
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 931,
@@ -69190,7 +69882,86 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1953-0d1595bafe2ba6d32c5f5e1bc6215555/bG4INWRMocURqMHZl7ZgyVgw1O47Tx_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In 1954, an enormous beast clawed its way out of the sea, destroying everything in its path—and changing movies forever. The arresting originalGodzillasoon gave rise to an entire monster-movie genre (kaiju eiga), but the King of the Monsters continued to reign supreme: in fourteen fiercely entertaining sequels over the next two decades, Godzilla defended its throne against a host of other formidable creatures, transforming from a terrifying symbol of nuclear annihilation into a benevolent (if still belligerent) Earth protector. Collected here for the first time are all fifteen Godzilla films of Japan’s Showa era, in a landmark set showcasing the technical wizardry, fantastical storytelling, and indomitable international appeal that established the most iconic giant monster the cinema has ever seen.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27755-godzilla",
+        "title": "Godzilla",
+        "year": 1954
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29338-godzilla-raids-again",
+        "title": "Godzilla Raids Again",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30209-king-kong-vs-godzilla",
+        "title": "King Kong vs. Godzilla",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29341-mothra-vs-godzilla",
+        "title": "Mothra vs. Godzilla",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29340-ghidorah-the-three-headed-monster",
+        "title": "Ghidorah, the Three-Headed Monster",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29344-invasion-of-astro-monster",
+        "title": "Invasion of Astro-Monster",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30101-ebirah-horror-of-the-deep",
+        "title": "Ebirah, Horror of the Deep",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29346-son-of-godzilla",
+        "title": "Son of Godzilla",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29347-destroy-all-monsters",
+        "title": "Destroy All Monsters",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29343-all-monsters-attack",
+        "title": "All Monsters Attack",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30102-godzilla-vs-hedorah",
+        "title": "Godzilla vs. Hedorah",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30103-godzilla-vs-gigan",
+        "title": "Godzilla vs. Gigan",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29349-godzilla-vs-megalon",
+        "title": "Godzilla vs. Megalon",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29348-godzilla-vs-mechagodzilla",
+        "title": "Godzilla vs. Mechagodzilla",
+        "year": 1974
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29345-terror-of-mechagodzilla",
+        "title": "Terror of Mechagodzilla",
+        "year": 1975
+      }
+    ],
+    "box_set_film_count": 15
   },
   {
     "spine_number": 1001,
@@ -70216,18 +70987,11 @@
   {
     "spine_number": 1014,
     "title": "Roma",
-    "director": "Federico Fellini",
-    "year": 1972,
+    "director": "Alfonso Cuarón",
+    "year": 2018,
     "country": "",
-    "criterion_url": "https://www.criterion.com/films/28039-roma",
-    "film_id": "roma",
-    "imdb_id": "tt0069191",
-    "tmdb_id": 11035,
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/rqK75R3tTz2iWU0AQ6tLz3KMOU1.jpg",
+    "criterion_url": "https://www.criterion.com/films/30124-roma",
+    "film_id": "roma-2018",
     "credits": {
       "directors": [
         {
@@ -70326,7 +71090,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1956-0767cdadbf8c0578f1b4f81605aa41c6/MYbyvbiii831cGR0Uq3QJe7VCzheKq_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A one-of-a-kind silver-screen illusionist, Czech filmmaker Karel Zeman devoted his career to transporting viewers to realms bey­ond their wildest imagining. The deft, breathtaking combin­ations of live action and animation techniques that he pioneered in the postwar years earned him comparisons to legends such as Georges Méliès, and an array of followers that includes Jan Švankmajer, Terry Gilliam, and Wes Anderson. Presented here are three of Zeman’s most enchanting fantasies—a boys’ adventure into the mists of prehistory, a Jules Verne–derived flight of fancy, and an exotic eighteenth-century tall tale—all of them treasure chests of wondrous sights, tactile textures, and headlong yarn-spinning that helped put Czechoslovak cinema on the international map.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30226-journey-to-the-beginning-of-time",
+        "title": "Journey to the Beginning of Time",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29654-invention-for-destruction",
+        "title": "Invention for Destruction",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29652-the-fabulous-baron-munchausen",
+        "title": "The Fabulous Baron Munchausen",
+        "year": 1962
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 1017,
@@ -71780,7 +72563,36 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1957-f90d4c48a2f932ffe7df386499f9477e/73k4EkSiXEfsdi097fieFBGdb39vlg_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the early 1970s, a kung-fu dynamo named Bruce Lee side-kicked his way onto the screen and straight into pop-culture immortality. With his magnetic screen presence, tightly coiled intensity, and superhuman martial-arts prowess, Lee was an icon who conquered both Hong Kong and Hollywood cinema and transformed the art of the action film in the process. This collection brings together the five films that define the Lee legend: furiously exciting fist-fliers propelled by his innovative choreography, unique martial-arts philosophy, and whirlwind fighting style. Though he completed only a handful of films while at the peak of his stardom before his untimely death at age thirty-two, Lee left behind a monumental legacy as both a consummate entertainer and a supremely disciplined artist who made Hong Kong action cinema a sensation the world over.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29553-the-big-boss",
+        "title": "The Big Boss",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29556-fist-of-fury",
+        "title": "Fist of Fury",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29554-the-way-of-the-dragon",
+        "title": "The Way of the Dragon",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30623-enter-the-dragon",
+        "title": "Enter the Dragon",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29555-game-of-death",
+        "title": "Game of Death",
+        "year": 1978
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": 1037,
@@ -74844,19 +75656,11 @@
   {
     "spine_number": 1078,
     "title": "Nightmare Alley",
-    "director": "Guillermo del Toro",
-    "year": 2021,
+    "director": "Edmund Goulding",
+    "year": 1947,
     "country": "",
     "criterion_url": "",
-    "film_id": "nightmare-alley",
-    "imdb_id": "tt7740496",
-    "tmdb_id": 597208,
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/vfn1feL0V9HNSXuLLpaxAW8O6LO.jpg",
+    "film_id": "nightmare-alley-1947",
     "credits": {
       "directors": [
         {
@@ -75015,7 +75819,22 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2057-0346dd3f7bff4745d911c8b0be776a60/v6oy4a3LuTk6JN5NCdlz7LOhbe1qnX_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In 1983, director Martin Bell, photographer Mary Ellen Mark, and journalist Cheryl McCall set out to tell the stories of homeless and runaway teenagers living on the margins in Seattle.Streetwisefollows an unforgettable group of kids who survive by hustling, panhandling, and dumpster diving. Its most haunting and enduring figure is iron-willed fourteen-year-old Erin Blackwell, a.k.a. Tiny; the project’s follow-up,Tiny: The Life of Erin Blackwell,completed thirty years later, draws on the filmmakers’ long relationship with their subject, now a mother of ten. Blackwell reflects with Mark on the journey they’ve experienced together, from Blackwell’s battles with addiction to her regrets to her dreams for her children, even as she sees them repeat her own struggles. Taken together, the two films create a devastatingly frank, empathetic portrait of lost youth growing up far too soon in a world that has failed them, and of a family trying to break free of the cycle of trauma—as well as a summation of the life’s work of Mark, an irreplaceable artistic voice.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29631-streetwise",
+        "title": "Streetwise",
+        "year": 1984,
+        "film_id": "streetwise"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29656-tiny-the-life-of-erin-blackwell",
+        "title": "Tiny: The Life of Erin Blackwell",
+        "year": 2016
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": 1081,
@@ -75215,7 +76034,46 @@
       "editors": [],
       "cast": []
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "There has never been a filmmaker like Marlon Riggs: an unapologetic gay Black man who defied a culture of silence and shame to speak his truth with resounding joy and conviction. An early adopter of video technology, Riggs employed a bold mix of documentary, performance, poetry, and music in order to confront the devastating legacy of racist stereotypes, the impact of AIDS on his community, and the very definition of what it means to be Black. Bringing together Riggs’s complete films—including his controversy-inciting queer landmarkTongues UntiedandBlack Is . . . Black Ain’t,the deeply personal swan song that was completed after his death at the age of thirty-seven—The Signifyin’ Works of Marlon Riggstraces the artistic and political evolution of a transformative filmmaker whose work is both an electrifying call for liberation and an invaluable historical document.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/31180-ethnic-notions",
+        "title": "Ethnic Notions",
+        "year": 1986
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31182-tongues-untied",
+        "title": "Tongues Untied",
+        "year": 1989
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31185-affirmations",
+        "title": "Affirmations",
+        "year": 1990
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31184-anthem",
+        "title": "Anthem",
+        "year": 1991
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31179-color-adjustment",
+        "title": "Color Adjustment",
+        "year": 1992
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31183-non-je-ne-regrette-rien-no-regret",
+        "title": "Non, Je Ne Regrette Rien (No Regret)",
+        "year": 1993
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31178-black-is-black-ain-t",
+        "title": "Black Is . . . Black Ain’t",
+        "year": 1995
+      }
+    ],
+    "box_set_film_count": 7
   },
   {
     "spine_number": 1083,
@@ -76634,7 +77492,36 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1987-beb71f216e96d1ff2d0f8231f5b8b975/44LVkvftLRcr5paF4enJfBFTe5mI2c_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One of the pinnacles of Hong Kong cinema’s 1990s golden age, theOnce Upon a Time in Chinaseries set a new standard for martial-arts spectacle and launched action star Jet Li to international fame. It brings to vivid life the colorful world of China in the late nineteenth century, an era of immense cultural and technological change, as Western imperialism clashed with tradition and public order was upended by the threats of foreign espionage and rising nationalism. Against this turbulent backdrop, one man—the real-life martial-arts master, physician, and folk hero Wong Fei-hung—emerges as a noble protector of Chinese values as the country hurtles toward modernity. Conceived by Hong Kong New Wave leader Tsui Hark, this epic cycle is not only a dazzling showcase for some of the most astonishing action set pieces ever committed to film but also a rousing celebration of Chinese identity, history, and culture.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30712-once-upon-a-time-in-china",
+        "title": "Once Upon a Time in China",
+        "year": 1991
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30711-once-upon-a-time-in-china-ii",
+        "title": "Once Upon a Time in China II",
+        "year": 1992
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30710-once-upon-a-time-in-china-iii",
+        "title": "Once Upon a Time in China III",
+        "year": 1993
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31784-once-upon-a-time-in-china-iv",
+        "title": "Once Upon a Time in China IV",
+        "year": 1993
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31785-once-upon-a-time-in-china-v",
+        "title": "Once Upon a Time in China V",
+        "year": 1994
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": 1104,
@@ -80780,27 +81667,12 @@
   {
     "spine_number": 1161,
     "title": "WALL•E",
-    "director": "Dominique Dubosc",
+    "director": "Andrew Stanton",
     "year": 2008,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/33246-wall-e",
     "film_id": "walle",
-    "imdb_id": null,
-    "tmdb_id": 1525542,
-    "genres": [],
-    "poster_url": null,
-    "credits": {
-      "directors": [
-        {
-          "name": "Dominique Dubosc",
-          "tmdb_id": 1210830
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": []
-    }
+    "tmdb_id": 10681
   },
   {
     "spine_number": 1162,
@@ -81276,14 +82148,7 @@
     "year": 2021,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/33380-bergman-island",
-    "film_id": "bergman-island",
-    "imdb_id": "tt6910282",
-    "tmdb_id": 477044,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/q8bQfC7SbaTDVKywhCiNL3ZVSyy.jpg",
+    "film_id": "bergman-island-2021",
     "credits": {
       "directors": [
         {
@@ -82508,7 +83373,36 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2022-fd54c40083a2873609bbba1a92d9b2e6/QZZJB3HQoa7RPubci7i5t2c471gU8U_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The five briskly entertaining, vividly performed westerns made by director Budd Boetticher and strapping star Randolph Scott in the second half of the 1950s transcend their B-movie origins to become rich, unexpectedly profound explorations of loyalty, greed, honor, and revenge. Often grouped under the name Ranown (after producer Harry Joe Brown and Scott’s production company) and colorfully scripted by Burt Kennedy and Charles Lang, these films seem to unfold in a world unto themselves, staking a claim between traditional westerns and the subversive genre revisionism of the 1960s—and representing the crowning achievement of the underappreciated auteur Boetticher.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/32215-the-tall-t",
+        "title": "The Tall T",
+        "year": 1957
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32212-decision-at-sundown",
+        "title": "Decision at Sundown",
+        "year": 1957
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32210-buchanan-rides-alone",
+        "title": "Buchanan Rides Alone",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32214-ride-lonesome",
+        "title": "Ride Lonesome",
+        "year": 1959
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32211-comanche-station",
+        "title": "Comanche Station",
+        "year": 1960
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": 1187,
@@ -82694,7 +83588,31 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2070-45ba7005cee5d86f3d398045d47c04ae/nlM7OBVZLrLsZE5IWRKpRHvpmh67jy_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Driven by a desire to forge a socially conscious Swedish cinema—one that broke with the inward-looking psychodrama of Ingmar Bergman to give dynamic expression to the everyday experiences of working-class Swedes—writer Bo Widerberg turned to filmmaking in the early 1960s, realizing his ambition in politically committed yet poetic works that merge social-realist themes with a refined, often breathtakingly beautiful visual sensibility. Dramatizing the struggles of ordinary people fighting to chart their own destiny, these four acclaimed, popular, and pivotal films from Widerberg’s most prolific period live and breathe with a rare vitality—and helped launch a new Swedish cinema.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30388-the-baby-carriage",
+        "title": "The Baby Carriage",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30387-raven-s-end",
+        "title": "Raven’s End",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30374-elvira-madigan",
+        "title": "Elvira Madigan",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30376-adalen-31",
+        "title": "Ådalen 31",
+        "year": 1969
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": 1190,
@@ -83020,7 +83938,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2030-ba7eefa3ad5a2a35a6f5275ed961aba8/hOZoF4bCF7IzDcERWmpFpAgST1yAxY_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The world is a carnival of criminality, corruption, and psychosexual strangeness in the twisted pre-Code shockers of Tod Browning. Early Hollywood’s edgiest auteur, Browning drew on his experiences as a circus performer to create subversive pulp entertainments set amid the world of traveling sideshows, which, with their air of the exotic and the disreputable, provided a pungent backdrop for his sordid tales of outcasts, cons, villains, and vagabonds. Bringing together two of his defining works (The UnknownandFreaks) and a long-unavailable rarity (The Mystic), this cabinet of curiosities reveals a master of the morbid whose ability to unsettle is matched only by his daring compassion for society’s most downtrodden.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29015-freaks",
+        "title": "Freaks",
+        "year": 1932
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31173-the-unknown",
+        "title": "The Unknown",
+        "year": 1927
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33989-the-mystic",
+        "title": "The Mystic",
+        "year": 1925
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 1195,
@@ -83203,7 +84140,41 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2035-00397dc6a40239b317f24adf0c86b430/55pTNrIGtsH7uG8kEDAoe9PZu76jZu_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Originally tapped as a potential successor to Bruce Lee, Hong Kong martial-arts phenom Jackie Chan soon established his own unique screen persona, blending goofball slapstick and bone-crunching kung fu into intricate feats of supercharged athleticism. Tracing his rise from breakout star to full-fledged auteur, these six unabashedly silly, unstoppably entertaining early-career highlights find Chan refining the lovably mischievous image that would make him a global icon, while also assuming greater creative control over his projects—first as his own martial-arts choreographer, and later as a writer-director who set a thrilling new standard for daredevil action comedy.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29549-half-a-loaf-of-kung-fu",
+        "title": "Half a Loaf of Kung Fu",
+        "year": 1978
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29550-spiritual-kung-fu",
+        "title": "Spiritual Kung Fu",
+        "year": 1978
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29551-the-fearless-hyena",
+        "title": "The Fearless Hyena",
+        "year": 1979
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29552-fearless-hyena-ii",
+        "title": "Fearless Hyena II",
+        "year": 1983
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29547-the-young-master",
+        "title": "The Young Master",
+        "year": 1980
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29548-my-lucky-stars",
+        "title": "My Lucky Stars",
+        "year": 1985
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 1198,
@@ -83593,7 +84564,57 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2042-2f7db434e5c209b4ee1cd9f076605cba/ZadPfeme4Y97VAeWUh4j0Yn8jJfjus_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the revolutionary first decade of her filmmaking career, Chantal Akerman devoted herself to nothing less than the total resculpting of cinematic time and space. Journeying between Europe and New York City, Akerman forged a highly personal style that fuses avant-garde influences with deeply human expressions of alienation, desire, and displacement—themes that she would explore in a series of increasingly ambitious shorts, documentaries, and features, including the toweringJeanne Dielman, 23, quai du Commerce, 1080 Bruxelles.With immersive rhythms that render the most minute details momentous, these landmarks of twentieth-century art continue to reveal new ways of experiencing cinema and framing reality.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28947-saute-ma-ville",
+        "title": "Saute ma ville",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/34122-l-enfant-aime-ou-je-joue-a-etre-une-femme-mariee",
+        "title": "L’enfant aimé ou Je joue à être une femme mariée",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20976-la-chambre",
+        "title": "La chambre",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20977-hotel-monterey",
+        "title": "Hotel Monterey",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/34123-le-15-8",
+        "title": "Le 15/8",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20962-je-tu-il-elle",
+        "title": "Je tu il elle",
+        "year": 1975
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/302-jeanne-dielman-23-quai-du-commerce-1080-bruxelles",
+        "title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+        "year": 1975,
+        "film_id": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20978-news-from-home",
+        "title": "News from Home",
+        "year": 1976
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20204-les-rendez-vous-d-anna",
+        "title": "Les rendez-vous d’Anna",
+        "year": 1978
+      }
+    ],
+    "box_set_film_count": 9
   },
   {
     "spine_number": 1204,
@@ -83778,7 +84799,31 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2047-1ab3d6ac27a9108676d9f0bfc7fd598c/PmRRgkyht2tDRV1jbOi6F8V7mAlKby_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The seasons may change, but the follies of the heart are constant in this ineffably lovely quartet of films by Eric Rohmer, one ofcinema’s most perceptive chroniclers of the pangs and perils of romance. Set throughout France, Tales of the Four Seasons is a cycle to stand alongside the director’s two earlier acclaimed film series, Six Moral Tales and Comedies and Proverbs. By turns comic and melancholic, breezy and richly philosophical, these bittersweet tales of love, longing, and the inevitable misunderstandings that shape human relationships probe the most complex of emotions with the utmost grace.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29648-a-tale-of-springtime",
+        "title": "A Tale of Springtime",
+        "year": 1990
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29649-a-tale-of-winter",
+        "title": "A Tale of Winter",
+        "year": 1992
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29650-a-tale-of-summer",
+        "title": "A Tale of Summer",
+        "year": 1996
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29651-a-tale-of-autumn",
+        "title": "A Tale of Autumn",
+        "year": 1998
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": 1207,
@@ -84696,7 +85741,26 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2052-ba01382dd60c8332caec522da182b732/csDyqiAqrOJgCze9HjJXZR4sJdi6yF_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Having blazed a trail for African filmmakers to tell their own stories on-screen, Senegalese auteur Ousmane Sembène took his career-long project—to unlock cinema’s potential as a vehicle for social change—in increasingly urgent and provocative directions in the 1970s. Searing critiques of colonialism, political corruption, patriarchal arrogance, and religious indoctrination, his three features from this decade—the radical call to resistanceEmitaï,the wickedly subversive satireXala,and the controversial historical epicCeddo—confirmed his standing as a fearless truth-teller for whom the camera was the ultimate weapon in the fight against oppression in all its forms.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29069-emitai",
+        "title": "Emitaï",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29070-xala",
+        "title": "Xala",
+        "year": 1975
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29071-ceddo",
+        "title": "Ceddo",
+        "year": 1977
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 1218,
@@ -89695,15 +90759,7 @@
     "year": 2021,
     "country": "",
     "criterion_url": "",
-    "film_id": "nightmare-alley",
-    "imdb_id": "tt7740496",
-    "tmdb_id": 597208,
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/vfn1feL0V9HNSXuLLpaxAW8O6LO.jpg",
+    "film_id": "nightmare-alley-2021",
     "credits": {
       "directors": [
         {
@@ -90580,7 +91636,41 @@
     "tmdb_id": null,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1961-3b7b159a9ae3d500459e38e69c96a917/9P9MeXzolFQyY5OhK2XcwZ02e0Y0ZC_large.jpg",
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Established by Martin Scorsese in 2007, The Film Foundation’s World Cinema Project has maintained a fierce commitment to preserving and presenting masterpieces from around the globe, with a growing roster of more than three dozen restorations that have introduced movie lovers to often-overlooked areas of cinema history. Presenting passionate stories of revolution, identity, agency, forgiveness, and exclusion, this collector’s set gathers six of those important works, from Brazil (Pixote), Cuba (Lucía), Indonesia (After the Curfew), Iran (Downpour), Mauritania (Soleil Ô), and Mexico (Dos monjes). Each title is a pathbreaking contribution to the art form and a window onto a filmmaking tradition that international audiences previously had limited opportunities to experience.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30298-lucia",
+        "title": "Lucía",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30304-after-the-curfew",
+        "title": "After the Curfew",
+        "year": 1954
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30307-pixote",
+        "title": "Pixote",
+        "year": 1980
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30306-dos-monjes",
+        "title": "Dos monjes",
+        "year": 1934
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30299-soleil-o",
+        "title": "Soleil Ô",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28601-downpour",
+        "title": "Downpour",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": 1297,
@@ -94140,7 +95230,49 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1864-79581df36332f7a1f027b81311c9e0f9/j8fKXLhpRU7m0dGwebBdwZLgrXaO26_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Like the rest of America, Hollywood was ripe for revolution in the late sixties. Cinema attendance was down; what had once worked seemed broken. Enter Bob Rafelson, Bert Schneider, and Steve Blauner, who knew that what Hollywood needed was new audiences—namely, young people—and that meant cultivating new talent and new ideas. Fueled by money from their invention of the superstar TV pop group the Monkees, they set off on a film-industry journey that would lead them to form BBS Productions, a company that was also a community. The innovative films produced by this team between 1968 and 1972 are collected in this box set—works that now range from the iconic (Easy Rider, Five Easy Pieces, The Last Picture Show) to the acclaimed (The King of Marvin Gardens) to the obscure (Head; Drive, He Said; A Safe Place), all created within the studio system but lifted right out of the countercultural id.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27527-head",
+        "title": "Head",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27528-easy-rider",
+        "title": "Easy Rider",
+        "year": 1969,
+        "film_id": "easy-rider"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27529-five-easy-pieces",
+        "title": "Five Easy Pieces",
+        "year": 1970,
+        "film_id": "five-easy-pieces"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27530-drive-he-said",
+        "title": "Drive, He Said",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27531-a-safe-place",
+        "title": "A Safe Place",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27533-the-last-picture-show",
+        "title": "The Last Picture Show",
+        "year": 1971,
+        "film_id": "the-last-picture-show"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27532-the-king-of-marvin-gardens",
+        "title": "The King of Marvin Gardens",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 7
   },
   {
     "spine_number": null,
@@ -94289,7 +95421,29 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1880-d84b68ccfdfdb7ef19d89946ab43b5cb/XxW9C5BcXk4DjYmbLD9UBavXz6xwa0_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "When André Gregory and Wallace Shawn—theater directors, writers, actors, and longtime friends—sat down for a stimulating meal in 1981’sMy Dinner with André,they not only ended up with one of cinema’s unlikeliest iconic scenarios but launched a film collaboration that would continue to pay creative dividends for decades. The subsequent projects they made together for the screen—1994’sVanya on 42nd Street,a passionate read-through of Anton Chekhov’sUncle Vanya,and 2014’s striking Henrik Ibsen interpretationA Master Builder—are penetrating works that exist on the boundary between theater and film, and that both emerged out of many years of rehearsals with loyal troupes of actors. Gregory and Shawn’s unique contributions to the cinematic landscape are shape-shifting, challenging, and entertaining works about the process of creation.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/1093-my-dinner-with-andre",
+        "title": "My Dinner with André",
+        "year": 1981,
+        "film_id": "my-dinner-with-andre"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28022-vanya-on-42nd-street",
+        "title": "Vanya on 42nd Street",
+        "year": 1994,
+        "film_id": "vanya-on-42nd-street"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28646-a-master-builder",
+        "title": "A Master Builder",
+        "year": 2014,
+        "film_id": "a-master-builder"
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99535,7 +100689,22 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1787-b0c0c8cb24d6733eadfa012453ea8076/XsYEpttZ77keADoQ0wqmXPgNX7Lb7k_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The career of Larisa Shepitko, an icon of sixties and seventies Soviet cinema, was tragically cut short when she was killed in a car crash at age forty, just as she was emerging on the international scene. The body of work she left behind, though small, is masterful, and her genius for visually evoking characters' interior worlds is never more striking than in her two greatest works:Wings, an intimate yet exhilarating portrait of a female fighter pilot turned provincial headmistress, andThe Ascent, a gripping, tragic wartime parable of betrayal and martyrdom. A true artist who had deftly used the Soviet film industry to make statements both personal and universal, Shepitko remains one of the greatest unsung filmmakers of all time.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/560-wings",
+        "title": "Wings",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/561-the-ascent",
+        "title": "The Ascent",
+        "year": 1977,
+        "film_id": "the-ascent"
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -99550,7 +100719,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1916-dfbddaafe1aff758946babd2864c09b5/GKwtbmlAN9QlTf7n6KeyUHD1L88ZzH_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The poignant, deadpan films of Aki Kaurismäki are pitched somewhere in the wintry nether lands between comedy and tragedy. And rarely in his body of work has the line separating those genres seemed thinner than in what is often identified as his \"Proletariat Trilogy,\"Shadows in Paradise, Ariel,andThe Match Factory Girl.In these three films, something like social-realist farces, Kaurismäki surveys the working-class outcasts of his native Finland with detached yet disarming amusement. Featuring commanding, off-key visual compositions and delightfully dour performances, the films in this triptych exemplify the talents of a unique and highly influential film artist.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/960-shadows-in-paradise",
+        "title": "Shadows in Paradise",
+        "year": 1986
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/959-ariel",
+        "title": "Ariel",
+        "year": 1988
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/961-the-match-factory-girl",
+        "title": "The Match Factory Girl",
+        "year": 1990
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99565,7 +100753,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1944-5a7d21b7e4f89930b67e3804e42ff1b5/IhmrJ9KB68dQtY9ejACUGeDfs0b9BW_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Over the past four decades, Belgian director Chantal Akerman (Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles) has created one of cinema’s most distinctive bodies of work—formally daring, often autobiographical films about people and places, time and space. In this collection, we present the early films that put her on the map: intensely personal, modernist investigations of cities, history, family, and sexuality, made in the 1970s in the United States and Europe and strongly influenced by the New York experimental film scene. Bold and iconoclastic, these five films pushed boundaries in their day and continue to have a profound influence on filmmakers all over the world.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/20976-la-chambre",
+        "title": "La chambre",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20977-hotel-monterey",
+        "title": "Hotel Monterey",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20978-news-from-home",
+        "title": "News from Home",
+        "year": 1976
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20962-je-tu-il-elle",
+        "title": "Je tu il elle",
+        "year": 1975
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/20204-les-rendez-vous-d-anna",
+        "title": "Les rendez-vous d’Anna",
+        "year": 1978
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -99580,7 +100797,46 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1778-b9b79b1b4fb9fe3ac2fe668420267eec/2kV3166j2XTHS3wGEDCK4JeCRXqzM8_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Over the course of a nearly forty-year career, Louis Malle forged a reputation as one of the world’s most versatile cinematic storytellers, with such widely acclaimed, and wide-ranging, masterpieces asElevator to the Gallows, My Dinner with Andre,andAu revoir les enfants. At the same time, however, with less fanfare, Malle was creating a parallel, even more personal body of work as a documentary filmmaker. With the discerning eye of a true artist and the investigatory skills of a great journalist, Malle takes us from a street corner in Paris to America’s heartland to the expanses of India in his astonishing epicPhantom India. These are some of the most engaging and fascinating nonfiction films ever made.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/670-vive-le-tour",
+        "title": "Vive le Tour",
+        "year": 1962
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/671-humain-trop-humain",
+        "title": "Humain, trop humain",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/672-place-de-la-republique",
+        "title": "Place de la République",
+        "year": 1974
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/673-phantom-india",
+        "title": "Phantom India",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/674-calcutta",
+        "title": "Calcutta",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/675-god-s-country",
+        "title": "God’s Country",
+        "year": 1985
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/676--and-the-pursuit-of-happiness",
+        "title": ". . . And the Pursuit of Happiness",
+        "year": 1986
+      }
+    ],
+    "box_set_film_count": 7
   },
   {
     "spine_number": null,
@@ -99595,7 +100851,31 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1799-fcaac95edb35eab1748fd0aa854780a9/uv1on3L75tq2TTgNYXA1xJJMo4tbSi_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Years before Akira Kurosawa changed the face of cinema with such iconic works asRashomon, Seven Samurai,andYojimbo,he made his start in the Japanese film industry with four popular and exceptional works, created as World War II raged. All gripping dramas, those rare first films—Sanshiro Sugata; The Most Beautiful; Sanshiro Sugata, Part Two;andThe Men Who Tread on the Tiger’s Tail—are collected here and include a two-part martial arts saga, a portrait of female volunteers helping the war effort, and a kabuki-derived tale of deception. These captivating films are a glorious introduction to a peerless career.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/12521-sanshiro-sugata",
+        "title": "Sanshiro Sugata",
+        "year": 1943
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/18790-the-most-beautiful",
+        "title": "The Most Beautiful",
+        "year": 1944
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/12522-sanshiro-sugata-part-two",
+        "title": "Sanshiro Sugata, Part Two",
+        "year": 1945
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/18763-the-men-who-tread-on-the-tiger-s-tail",
+        "title": "The Men Who Tread on the Tiger’s Tail",
+        "year": 1945
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": null,
@@ -99610,7 +100890,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1800-f100e87b531cd636a626ca5ba0cfc68f/LyPLSTAelMNwm5qImS7wgCpOZVthhM_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Canadian director Allan King is one of cinema’s best-kept secrets. Over the course of fifty years, he shuttled between features and shorts, big-screen cinema and episodic television, comedy and drama, fiction and nonfiction. It was with his cinema-verité-style documentaries, though—his “actuality dramas,” as he called them—that King left his greatest mark on film history. These startlingly intimate studies of people whose lives are in flux—damaged children, warring spouses, the terminally ill— always done without narration or interviews, are riveting and at times emotionally overwhelming. Humane, cathartic, and important, Allan King’s spontaneous portraits of the everyday demand to be seen.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27514-warrendale",
+        "title": "Warrendale",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27515-a-married-couple",
+        "title": "A Married Couple",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27516-come-on-children",
+        "title": "Come On Children",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27517-dying-at-grace",
+        "title": "Dying at Grace",
+        "year": 2003
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27518-memory-for-max-claire-ida-and-company",
+        "title": "Memory for Max, Claire, Ida and Company",
+        "year": 2005
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -99625,7 +100934,31 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1801-f20f53bb95aa5f59c515e4ee49da6b9a/6qXfc82MIMrd3BPizcOOdvAgk7LkrV_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "After mastering the mix of comedy, suspense, and horror that helped define the golden age of British cinema, Basil Dearden (along with his producing partner Michael Relph) left the legendary Ealing Studios and struck out on his own. In the late fifties and early sixties, he created a series of gripping, groundbreaking, even controversial films that dealt with racism, homophobia, and the lingering effects of World War II, noir-tinged dramas that burrowed into corners of London rarely seen on-screen. This set of elegantly crafted films brings this quintessential figure of British cinema out of the shadows.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27536-sapphire",
+        "title": "Sapphire",
+        "year": 1959
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27537-the-league-of-gentlemen",
+        "title": "The League of Gentlemen",
+        "year": 1960
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27538-victim",
+        "title": "Victim",
+        "year": 1961
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27539-all-night-long",
+        "title": "All Night Long",
+        "year": 1962
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": null,
@@ -99640,7 +100973,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1802-0b6ef2ca0e60aa1698b7a2fc348d7d5c/Wdi6a0lzldizjlpRV2l8C5AxMUbnt9_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Mikio Naruse is one of the most popular directors in the history of Japanese cinema, a crafter of heartrending melodramas often compared with the work of Yasujiro Ozu and Kenji Mizoguchi. From the outset of his career, with his silent films of the early thirties, Naruse focused on characters, mostly women—geisha, housewives, waitresses—carrying on despite the compromises and disappointments of confined daily lives, a subject that would continue to fascinate him for the next three decades. Though he made two dozen silent films, only five are known to exist today; these works—poignant, brilliantly photographed and edited dramas all—are collected here, on DVD for the first time and featuring new scores by noted musicians Robin Holcomb and Wayne Horvitz.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27544-flunky-work-hard",
+        "title": "Flunky, Work Hard",
+        "year": 1931
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27545-no-blood-relation",
+        "title": "No Blood Relation",
+        "year": 1932
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27546-apart-from-you",
+        "title": "Apart from You",
+        "year": 1933
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27547-every-night-dreams",
+        "title": "Every-Night Dreams",
+        "year": 1933
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27548-street-without-end",
+        "title": "Street Without End",
+        "year": 1934
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -99655,7 +101017,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1805-20ea90ca5dd4192605c8592660180de0/mD3Hcvh7QvvNLghVU3Ba1T74LZ4YRB_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the late eighties, Aki Kaurismäki, a master of the deadpan, fashioned a waggish fish-out-of-water tale about a U.S. tour by “the worst rock-and-roll band in the world.”Leningrad Cowboys Go America’s posse of fur-coated, outrageously pompadoured hipsters struck such a chord with international audiences that the fictional band became a genuine attraction, touring the world. Later, Kaurismäki created a sequel,Leningrad Cowboys Meet Moses,and filmed a gigantic outdoor concert that the band put on in Helsinki, for the rollicking documentaryTotal Balalaika Show.With this Eclipse series, we present all three crackpot musical and comic odysseys, along with five Leningrad Cowboys music videos also directed by Kaurismäki.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27793-leningrad-cowboys-go-america",
+        "title": "Leningrad Cowboys Go America",
+        "year": 1989
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27794-leningrad-cowboys-meet-moses",
+        "title": "Leningrad Cowboys Meet Moses",
+        "year": 1994
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27795-total-balalaika-show",
+        "title": "Total Balalaika Show",
+        "year": 1994
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99670,7 +101051,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1779-889dd689f449e84385c45e50a557fdd3/qBw2xZtx2JP3mRP1gv7mAldOH5cnde_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Master filmmaker Yasujiro Ozu directed fifty-three feature films over the course of his long career. Yet it was in the final decade of his life, his \"old master\" phase, that he entered his artistic prime. Centered more than ever on the modern sensibilities of the younger generation, these delicate family dramas are marked by an exquisite formal elegance and emotional sensitivity about birth and death, love and marriage, and all the accompanying joys and loneliness. Along with such better-known films asFloating WeedsandAn Autumn Afternoon, these five works illustrate the worldly wisdom of one of cinema’s great artists at the height of his powers.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/770-early-spring",
+        "title": "Early Spring",
+        "year": 1956
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/771-tokyo-twilight",
+        "title": "Tokyo Twilight",
+        "year": 1957
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/783-equinox-flower",
+        "title": "Equinox Flower",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/800-late-autumn",
+        "title": "Late Autumn",
+        "year": 1960
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/801-the-end-of-summer",
+        "title": "The End of Summer",
+        "year": 1961
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -99685,7 +101095,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1806-35b06113390d41a36d70ffe8de10aa12/eLhsC5N4a1JC3PhUkaT0Im806G2oqL_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the thirties and forties, the young Indian actor known as Sabu (born Selar Shaik) captured the hearts of moviegoers in Britain and the United States as a completely new kind of big-screen icon. Sabu was a maharaja’s elephant driver when he was cast  inElephant Boy,a Rudyard Kipling adaptation directed by documentary trailblazer Robert Flaherty and Zoltán Korda that would prove to be enormously popular. Sabu went on to headline a series of fantasies and adventures for the British film titans the Korda brothers, transcending the exoticism projected onto him by commanding the screen with effortless grace and humor. This series collects three of those lavish productions (which also included the classicThe Thief of Bagdad):Elephant Boy,the colonialist adventureThe Drum,and the timelessJungle Book.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27564-elephant-boy",
+        "title": "Elephant Boy",
+        "year": 1937
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27599-the-drum",
+        "title": "The Drum",
+        "year": 1938
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27649-jungle-book",
+        "title": "Jungle Book",
+        "year": 1942
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99700,7 +101129,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1807-e9ce4851ff3adf87a31f37a65e9db390/FCDO0zQT8T0oT5QPB7tUs8IP0DvEqR_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Jean-Pierre Gorin, widely known for his collaborations with Jean-Luc Godard in the Dziga Vertov Group (includingTout va bien), established his personal voice with this trio of fascinating, nontraditional documentaries. Made in Southern California after the filmmaker relocated there in the midseventies,Poto and Cabengo, Routine Pleasures,andMy Crasy Lifeilluminate hidden corners of our culture. With these films, Gorin revealed himself as a major chronicler of American life at its most hauntingly enigmatic.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27948-poto-and-cabengo",
+        "title": "Poto and Cabengo",
+        "year": 1980
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27947-routine-pleasures",
+        "title": "Routine Pleasures",
+        "year": 1986
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27946-my-crasy-life",
+        "title": "My Crasy Life",
+        "year": 1992
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99715,7 +101163,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1809-a4a8b84c4cbcababe9073629fd726b50/S4JbdHupEZur0VszttgXmG8hjRdrG2_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Rarely do landmark works of cinema seem so . . . wrong. Robert Downey Sr. emerged as one of the most irreverent filmmakers of the New York underground of the sixties, taking no prisoners in his rough-and-tumble treatises on politics, race, and consumer culture. In his midnight-movie mainstayPutney Swope,an advertising agency is turned on its head when a militant black man takes over. like Swope, Downey held nothing sacred. Presented here are five of his most raucous and outlandish films, dating from 1964 to 1975, each a unique mix of the hilariously crude and the fiercely experimental.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27938-babo-73",
+        "title": "Babo 73",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27939-chafed-elbows",
+        "title": "Chafed Elbows",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27940-no-more-excuses",
+        "title": "No More Excuses",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28358-putney-swope",
+        "title": "Putney Swope",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27941-two-tons-of-turquoise-to-taos-tonight",
+        "title": "Two Tons of Turquoise to Taos Tonight",
+        "year": 1975
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -99730,7 +101207,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1781-c1a9cab8c217f2548be90ed2a4f82591/AEzOAcQoH6LkVsoBEmkX3jWIcbBjRJ_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "His films have been called raw, outrageous, sensational, and daring. In four decades of directing, Samuel Fuller created a legendarily idiosyncratic oeuvre, examining U.S. history and mythmaking in westerns, film noirs, and war epics. And characteristically, it all began with a bang: after printing the legend with the elegant B-picturesI Shot Jesse JamesandThe Baron of Arizona,he got himself into hot water with the FBI onThe Steel Helmet,the first American movie to portray the Korean War. These three independent films showed off Fuller’s genre diversity, gutter wit, and subversive force, and pointed the way to a controversial career in studio moviemaking.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/882-i-shot-jesse-james",
+        "title": "I Shot Jesse James",
+        "year": 1949
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/881-the-baron-of-arizona",
+        "title": "The Baron of Arizona",
+        "year": 1950
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/445-the-steel-helmet",
+        "title": "The Steel Helmet",
+        "year": 1951
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -99745,7 +101241,31 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2114-e7917f3044ca2eb266180e9c884d12a3/r0D3bVbgZlBj3F5r0ijqkaSTqsRuYH_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Renowned as a silent-film pioneer and theman who refined Hollywood comedy with such masterpieces asTrouble in Paradise,The ShopAround the Corner,andTo Be or Not to Be,Ernst Lubitsch also had another claim to fame: he helped invent the modern movie musical. With the advent of sound, and with audiences clamoring for “talkies,” Lubitsch combined his love of European operettas and his mastery of cinema to develop this entirely new genre. These elegant, bawdy films, made before strictenforcement of the moralizing ProductionCode, feature some of the greatest stars of early Hollywood (Maurice Chevalier, Jeanette MacDonald, Claudette Colbert, Miriam Hopkins),as well as that elusive style of comedy that wouldthereafter be known as “the Lubitsch touch.”",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/898-the-love-parade",
+        "title": "The Love Parade",
+        "year": 1929
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/899-monte-carlo",
+        "title": "Monte Carlo",
+        "year": 1930
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/900-the-smiling-lieutenant",
+        "title": "The Smiling Lieutenant",
+        "year": 1931
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/901-one-hour-with-you",
+        "title": "One Hour with You",
+        "year": 1932
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": null,
@@ -99760,7 +101280,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1785-ea36640f37f5031e401e5c2606f2d3e3/lcgS1E1uR77UUNHEn5iQQQfSoWEr6m_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "William Klein's explosive New York street photography made him one of the most heralded artists of the sixties. An American expatriate in Paris, Klein has also been making challenging cinema for more than forty years, yet with the exception of his acclaimed documentaryMuhammad Ali, the Greatest, his film work is barely known in the United States. In his three fiction features—Who Are You, Polly Maggoo?, Mr. Freedom,andThe Model Couple—he skewers the fashion industry, American empire, and governmental mind control with hilarious, cutting aplomb. Today Klein's politically galvanizing social critiques seem even more acute than the works of the better-known New Wavers. These are colorful, surreal antidotes to all forms of social oppression.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/902-who-are-you-polly-maggoo",
+        "title": "Who Are You, Polly Maggoo?",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/903-mr-freedom",
+        "title": "Mr. Freedom",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/904-the-model-couple",
+        "title": "The Model Couple",
+        "year": 1977
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -100459,7 +101998,88 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1970-d88f2a72d695ba37007f5bfe1edbcbd9/rzzMOoJGbRuzPAk7LD9GjUJ1AiPtVp_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One hundred years after his birth, Federico Fellini still stands apart as a giant of the cinema. The Italian maestro is defined by his dualities: the sacred and the profane, the masculine and the feminine, the provincial and the urbane. He began his career working in the slice-of-life poetry of neorealism, and though he soon spun off on his own freewheeling creative axis, he never lost that grounding, evoking his dreams, memories, and obsessions in increasingly grand productions teeming with carnivalesque imagery and flights of phantasmagoric surrealism while maintaining an earthy, embodied connection to humanity. Bringing together fourteen of the director’s greatest spectacles, all beautifully restored, this centenary box set is a monument to an artist who conjured a cinematic universe all his own: a vision of the world as a three-ring circus in which his innermost infatuations, fears, and fantasies take center stage.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/620-variety-lights",
+        "title": "Variety Lights",
+        "year": 1950
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/374-the-white-sheik",
+        "title": "The White Sheik",
+        "year": 1952
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/966-i-vitelloni",
+        "title": "I vitelloni",
+        "year": 1953,
+        "film_id": "i-vitelloni"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/185-la-strada",
+        "title": "La strada",
+        "year": 1954,
+        "film_id": "la-strada"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28631-il-bidone",
+        "title": "Il bidone",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/243-nights-of-cabiria",
+        "title": "Nights of Cabiria",
+        "year": 1957
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28619-la-dolce-vita",
+        "title": "La dolce vita",
+        "year": 1960
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/150-8-1-2",
+        "title": "8½",
+        "year": 1963,
+        "film_id": "812"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/689-juliet-of-the-spirits",
+        "title": "Juliet of the Spirits",
+        "year": 1965,
+        "film_id": "juliet-of-the-spirits"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28038-fellini-satyricon",
+        "title": "Fellini Satyricon",
+        "year": 1969,
+        "film_id": "fellini-satyricon"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28039-roma",
+        "title": "Roma",
+        "year": 1972,
+        "film_id": "roma-1972"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/208-amarcord",
+        "title": "Amarcord",
+        "year": 1973,
+        "film_id": "amarcord"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/587-and-the-ship-sails-on",
+        "title": "And the Ship Sails On",
+        "year": 1983
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31034-intervista",
+        "title": "Intervista",
+        "year": 1987
+      }
+    ],
+    "box_set_film_count": 14
   },
   {
     "spine_number": null,
@@ -103408,7 +105028,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1233,
     "title": "Gregg Araki’s Teen Apocalypse Trilogy",
     "director": "",
     "year": null,
@@ -103420,7 +105040,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2062-3dec234579713afc97637fac6435f122/FTh01r10Eke6ESEc9Qln3Yisc386RY_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Take the conventions of the American teen movie, transpose them to Los Angeles’s freaky fringes, anchor them in an unapologetic vision of sexual fluidity, and top it all off with heavy doses of Gen X disillusionment, gonzo violence, and hallucinogenic surrealism, and you’ll end up with something like these audacious transgressions from New Queer Cinema renegade Gregg Araki. Gleefully mixing slacker irony with raw sincerity, Godardian cool with punk scuzz, the savagely subversive, hormone-fueled films that make up the Teen Apocalypse Trilogy pushed 1990s indie cinema into bold new aesthetic realms, while giving blistering expression to adolescent rage and libidinal desire.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30138-totally-f-ed-up",
+        "title": "Totally F***ed Up",
+        "year": 1993
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33820-the-doom-generation",
+        "title": "The Doom Generation",
+        "year": 1995
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/34330-nowhere",
+        "title": "Nowhere",
+        "year": 1997
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -104546,7 +106185,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 179,
     "title": "I Am Curious",
     "director": "Stig Björkman",
     "year": 1995,
@@ -104627,7 +106266,22 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Seized by customs upon entry to the United States, subject of a heated court battle, banned in cities across the United States, Vilgot Sjöman’sI Am Curious—Yellowis one of the most controversial films of all time. This landmark document of Swedish society during the sexual revolution has been declared both obscene and revolutionary. It tells the story of Lena (Lena Nyman), a searching and rebellious young woman, and her personal quest to understand the social and political conditions in 1960s Sweden, as well as her bold exploration of her own sexual identity. Shattering taboos as it freely traverses the lines between fact and fiction,I Am Curious—Yellowis presented here for the first time with its companion pieceI Am Curious—Blue,a parallel film featuring the same characters and in which the lines between documentary and fiction are even further blurred.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/728-i-am-curious-yellow",
+        "title": "I Am Curious—Yellow",
+        "year": 1967,
+        "film_id": "i-am-curious-yellow"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/729-i-am-curious-blue",
+        "title": "I Am Curious—Blue",
+        "year": 1967
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -105643,7 +107297,223 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1929-4d592bff5abc636d45619dfd6d997edd/tKFKOgGoH5bF64n2r7YLfezGOkZBvO_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In honor of Ingmar Bergman’s one hundredth birthday, the Criterion Collection is proud to present the most comprehensive collection of his films ever released on home video. One of the most revelatory voices to emerge from the postwar explosion of international art-house cinema, Bergman was a master storyteller who startled the world with his stark intensity and naked pursuit of the most profound metaphysical and spiritual questions. The struggles of faith and morality, the nature of dreams, and the agonies and ecstasies of human relationships—Bergman explored these subjects in films ranging from comedies whose lightness and complexity belie their brooding hearts to groundbreaking formal experiments and excruciatingly intimate explorations of family life.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/642-crisis",
+        "title": "Crisis",
+        "year": 1946
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29512-a-ship-to-india",
+        "title": "A Ship to India",
+        "year": 1947
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/643-port-of-call",
+        "title": "Port of Call",
+        "year": 1948
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/644-thirst",
+        "title": "Thirst",
+        "year": 1949
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/645-to-joy",
+        "title": "To Joy",
+        "year": 1950
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27782-summer-interlude",
+        "title": "Summer Interlude",
+        "year": 1951
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29513-waiting-women",
+        "title": "Waiting Women",
+        "year": 1952
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27638-summer-with-monika",
+        "title": "Summer with Monika",
+        "year": 1953,
+        "film_id": "summer-with-monika"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/842-sawdust-and-tinsel",
+        "title": "Sawdust and Tinsel",
+        "year": 1953
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27813-a-lesson-in-love",
+        "title": "A Lesson in Love",
+        "year": 1954
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28206-dreams",
+        "title": "Dreams",
+        "year": 1955,
+        "film_id": "dreams"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/849-smiles-of-a-summer-night",
+        "title": "Smiles of a Summer Night",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/173-the-seventh-seal",
+        "title": "The Seventh Seal",
+        "year": 1957,
+        "film_id": "the-seventh-seal"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/175-wild-strawberries",
+        "title": "Wild Strawberries",
+        "year": 1957,
+        "film_id": "wild-strawberries"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29442-brink-of-life",
+        "title": "Brink of Life",
+        "year": 1958
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27521-the-magician",
+        "title": "The Magician",
+        "year": 1958,
+        "film_id": "the-magician"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/372-the-virgin-spring",
+        "title": "The Virgin Spring",
+        "year": 1960,
+        "film_id": "the-virgin-spring"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28193-the-devil-s-eye",
+        "title": "The Devil’s Eye",
+        "year": 1960
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/568-through-a-glass-darkly",
+        "title": "Through a Glass Darkly",
+        "year": 1961
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/569-winter-light",
+        "title": "Winter Light",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/570-the-silence",
+        "title": "The Silence",
+        "year": 1963
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27671-all-these-women",
+        "title": "All These Women",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28491-persona",
+        "title": "Persona",
+        "year": 1966,
+        "film_id": "persona"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28876-hour-of-the-wolf",
+        "title": "Hour of the Wolf",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28877-shame",
+        "title": "Shame",
+        "year": 1968,
+        "film_id": "shame"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28417-the-rite",
+        "title": "The Rite",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28873-the-passion-of-anna",
+        "title": "The Passion of Anna",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29439-faro-document",
+        "title": "Fårö Document",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29440-the-touch",
+        "title": "The Touch",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/237-cries-and-whispers",
+        "title": "Cries and Whispers",
+        "year": 1972,
+        "film_id": "cries-and-whispers"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/710-scenes-from-a-marriage",
+        "title": "Scenes from a Marriage",
+        "year": 1973,
+        "film_id": "scenes-from-a-marriage"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/613-the-magic-flute",
+        "title": "The Magic Flute",
+        "year": 1975,
+        "film_id": "the-magic-flute"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29445-the-serpent-s-egg",
+        "title": "The Serpent’s Egg",
+        "year": 1977
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/605-autumn-sonata",
+        "title": "Autumn Sonata",
+        "year": 1978,
+        "film_id": "autumn-sonata"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27966-faro-document-1979",
+        "title": "Fårö Document 1979",
+        "year": 1979
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27806-from-the-life-of-the-marionettes",
+        "title": "From the Life of the Marionettes",
+        "year": 1980
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/201-fanny-and-alexander-theatrical-version",
+        "title": "Fanny and Alexander: Theatrical Version",
+        "year": 1982
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/626-fanny-and-alexander-television-version",
+        "title": "Fanny and Alexander: Television Version",
+        "year": 1983
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27963-after-the-rehearsal",
+        "title": "After the Rehearsal",
+        "year": 1984
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29444-saraband",
+        "title": "Saraband",
+        "year": 2003
+      }
+    ],
+    "box_set_film_count": 40
   },
   {
     "spine_number": null,
@@ -107467,7 +109337,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1168,
     "title": "Lars von Trier’s Europe Trilogy",
     "director": "",
     "year": null,
@@ -107479,7 +109349,27 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2011-56152184b016c544d3f61f96fcef75fe/Zj0fvEob29WzDReklwonasnoK0piqt_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "With his dazzling first three features, Lars von Trier sought nothing less than to map the soul of Europe—its troubled past, anxious present, and uncertain future. Linked by a fascination with hypnotic states and the mesmeric possibilities of cinema, the films that make up the Europe Trilogy—The Element of Crime, Epidemic,andEuropa—filter the continent’s turbulent history, guilt, and traumas through the Danish provocateur’s audacious deconstructions of genres including film noir, melodrama, horror, and science fiction. Above all, they are bravura showcases for von Trier’s hallucinatory visuals, with each shot a tour de force of technical invention and dark imagination.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/619-the-element-of-crime",
+        "title": "The Element of Crime",
+        "year": 1984
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28078-epidemic",
+        "title": "Epidemic",
+        "year": 1987
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/768-europa",
+        "title": "Europa",
+        "year": 1991,
+        "film_id": "europa"
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -109314,7 +111204,31 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2051-2e5878dbf42dbc3bc38a366ea7edfe69/DbHGtYWgXdQOMYs9kIUCkl6I3kPift_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Director, writer, composer, actor, and one-man creative revolutionary Melvin Van Peebles jolted American independent cinema to new life with his explosive stylistic energy and unfiltered expression of Black consciousness. Though he undeniably altered the course of film history with the anarchicSweet Sweetback’s Baadasssss Song,that pop-culture bombshell is just one piece of a remarkably varied career that has also encompassed forays into European art cinema (The Story of a Three Day Pass), mainstream Hollywood comedy (Watermelon Man), and Broadway musicals (Don’t Play Us Cheap). Each facet of Van Peebles’s renegade genius is on display in this collection of four films, a tribute to a transformative artist whose caustic social observation, radical formal innovation, and uncompromising vision established a new cinematic model for Black creative independence. Also included in the set isBaadasssss!,a chronicle of the production ofSweet Sweetbackmade by Van Peebles’s son Mario Van Peebles—and starring the younger Van Peebles as Melvin.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/31848-the-story-of-a-three-day-pass",
+        "title": "The Story of a Three Day Pass",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31629-watermelon-man",
+        "title": "Watermelon Man",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32000-sweet-sweetback-s-baadasssss-song",
+        "title": "Sweet Sweetback’s Baadasssss Song",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32013-don-t-play-us-cheap",
+        "title": "Don’t Play Us Cheap",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": null,
@@ -109354,7 +111268,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1163,
     "title": "Michael Haneke: Trilogy",
     "director": "",
     "year": null,
@@ -109366,7 +111280,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2009-46bc1ecea630ef7b76a3e80d470a2030/6EX3I9CYEVUjkZHbjDanM9LFPqGhBq_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One of contemporary cinema’s most original, provocative, and uncompromising filmmakers, Austrian auteur Michael Haneke dares viewers to stare into the void of modern existence. With his first three theatrical features,The Seventh Continent, Benny’s Video,and71 Fragments of a Chronology of Chance—a trilogy depicting a coldly bureaucratic society in which genuine human relationships have been supplanted by a deep-seated collective malaise—Haneke established the rigorous visual style and unsettling themes that would recur throughout his work. Exploring the relationship among consumerism, violence, mass media, and contemporary alienation, these brilliant, relentlessly probing films open up profound questions about the world in which we live while refusing the false comfort of easy answers.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28837-the-seventh-continent",
+        "title": "The Seventh Continent",
+        "year": 1989
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28839-benny-s-video",
+        "title": "Benny’s Video",
+        "year": 1992
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28838-71-fragments-of-a-chronology-of-chance",
+        "title": "71 Fragments of a Chronology of Chance",
+        "year": 1994
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": 111,
@@ -112780,7 +114713,58 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2021-e9a488654dbd7efec099b42a1e2fe9cb/rqIQUOw8U3ShHLe8PLAq7PEh9PVNgx_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "One of the most original and controversial thinkers of the twentieth century, Italian polymath Pier Paolo Pasolini embodied a multitude of often seemingly contradictory ideologies and identities—and he expressed them all in his provocative, lyrical, and indelible films. Relentlessly concerned with society’s downtrodden and marginalized, he elevated pimps, hustlers, sex workers, and vagabonds to the realm of saints, while depicting actual saints with a radical earthiness. Traversing the sacred and the profane, the ancient and the modern, the mythic and the personal, the nine uncompromising, often scandal-inciting features he made in the 1960s still stand—on this, the 101st anniversary of his birth—as a monument to his daring vision of cinema as a form of resistance.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/31431-accattone",
+        "title": "Accattone",
+        "year": 1961
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/375-mamma-roma",
+        "title": "Mamma Roma",
+        "year": 1962,
+        "film_id": "mamma-roma"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31432-love-meetings",
+        "title": "Love Meetings",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31440-the-gospel-according-to-matthew",
+        "title": "The Gospel According to Matthew",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31439-the-hawks-and-the-sparrows",
+        "title": "The Hawks and the Sparrows",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31433-oedipus-rex",
+        "title": "Oedipus Rex",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28660-teorema",
+        "title": "Teorema",
+        "year": 1968,
+        "film_id": "teorema"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32392-porcile",
+        "title": "Porcile",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33629-medea",
+        "title": "Medea",
+        "year": 1969
+      }
+    ],
+    "box_set_film_count": 9
   },
   {
     "spine_number": null,
@@ -113726,7 +115710,21 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The jaw-dropping set pieces fly fast and furious in Jackie Chan’s breathtakingly inventive action comedies, two smash hits that made him a worldwide icon of daredevil spectacle. The director/star/one-man stunt machine plays Ka-kui, a Hong Kong police inspector whose methods are, ahem, unorthodox; the phenomenal Maggie Cheung, in a star-making role, plays his much-put-upon girlfriend, May. Packed wall-to-wall with astoundingly acrobatic fight choreography, epic explosions, charmingly goofball slapstick, and awesomely 1980s electro soundtracks,Police StoryandPolice Story 2set a new standard for rock-’em, sock-’em mayhem that established Chan as a performer of unparalleled grace and daring and would influence a generation of filmmakers, from Hong Kong to Hollywood.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29544-police-story",
+        "title": "Police Story",
+        "year": 1985
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29545-police-story-2",
+        "title": "Police Story 2",
+        "year": 1988
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -116466,7 +118464,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1177,
     "title": "Small Axe",
     "director": "",
     "year": null,
@@ -116484,7 +118482,36 @@
       "editors": [],
       "cast": []
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "With the five films that make up hisSmall Axeanthology (Mangrove; Lovers Rock; Red, White and Blue; Alex Wheatle;andEducation), director Steve McQueen offers a richly evocative panorama of West Indian life in London from the late 1960s through the early ’80s—a time defined for the community by the terror of police violence, the empowering awakening of political consciousness, and the ecstatic escape of a vibrant reggae scene. Ranging in tone from tenderly impressionistic to devastatingly clear-eyed, these powerfully performed portraits of Black resistance, joy, creativity, and collective action—all sumptuously shot by Shabier Kirchner—form a revolutionary counterhistory of mid-twentieth-century Britain at a transformational moment.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/33630-mangrove",
+        "title": "Mangrove",
+        "year": 2020
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33631-lovers-rock",
+        "title": "Lovers Rock",
+        "year": 2020
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33632-red-white-and-blue",
+        "title": "Red, White and Blue",
+        "year": 2020
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33633-alex-wheatle",
+        "title": "Alex Wheatle",
+        "year": 2020
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/33634-education",
+        "title": "Education",
+        "year": 2020
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -118392,10 +120419,125 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1958-60bad70091eaab48ce960c49b1f07d94/zQHE891LazZ0Sw7jE3PnOSXsdP3yew_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A founder of the French New Wave who became an international art-house icon, Agnès Varda was a fiercely independent, restlessly curious visionary whose work was at once personal and passionately committed to the world around her. In an abundant career in which she never stopped expanding the notion of what a movie can be, Varda forged a unique cinematic vocabulary that frequently blurs the boundaries between narrative and documentary, and entwines loving portraits of her friends, her family, and her own inner world with a social consciousness that was closely attuned to the 1960s counterculture, the women’s liberation movement, the plight of the poor and socially marginalized, and the ecology of our planet. This comprehensive collection places Varda’s filmography in the context of her parallel work as a photographer and multimedia artist—all of it a testament to the radical vision, boundless imagination, and radiant spirit of a true original for whom every act of creation was a vital expression of her very being.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30210-varda-by-agnes",
+        "title": "Varda by Agnès",
+        "year": 2019
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/524-la-pointe-courte",
+        "title": "La Pointe Courte",
+        "year": 1955
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/244-cleo-from-5-to-7",
+        "title": "Cléo from 5 to 7",
+        "year": 1962,
+        "film_id": "cleo-from-5-to-7"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30111-daguerreotypes",
+        "title": "Daguerréotypes",
+        "year": 1975
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/525-le-bonheur",
+        "title": "Le bonheur",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30905-les-creatures",
+        "title": "Les créatures",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28626-uncle-yanco",
+        "title": "Uncle Yanco",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28627-black-panthers",
+        "title": "Black Panthers",
+        "year": 1970
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28628-lions-love-and-lies",
+        "title": "Lions Love (. . . and Lies)",
+        "year": 1969
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28629-mur-murs",
+        "title": "Mur Murs",
+        "year": 1981
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28630-documenteur",
+        "title": "Documenteur",
+        "year": 1981
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29436-one-sings-the-other-doesn-t",
+        "title": "One Sings, the Other Doesn’t",
+        "year": 1977
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/245-vagabond",
+        "title": "Vagabond",
+        "year": 1985
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30569-jane-b-par-agnes-v",
+        "title": "Jane B. par Agnès V.",
+        "year": 1988
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30570-kung-fu-master",
+        "title": "Kung-Fu Master!",
+        "year": 1988
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28625-jacquot-de-nantes",
+        "title": "Jacquot de Nantes",
+        "year": 1991
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30563-one-hundred-and-one-nights",
+        "title": "One Hundred and One Nights",
+        "year": 1995
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30368-the-gleaners-and-i",
+        "title": "The Gleaners and I",
+        "year": 2000
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30564-the-gleaners-and-i-two-years-later",
+        "title": "The Gleaners and I: Two Years Later",
+        "year": 2002
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30904-faces-places",
+        "title": "Faces Places",
+        "year": 2017
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30906-agnes-de-ci-de-la-varda",
+        "title": "Agnès de ci de là Varda",
+        "year": 2011
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30112-the-beaches-of-agnes",
+        "title": "The Beaches of Agnès",
+        "year": 2008
+      }
+    ],
+    "box_set_film_count": 22
   },
   {
-    "spine_number": null,
+    "spine_number": 167,
     "title": "The Complete Monterey Pop Festival",
     "director": null,
     "year": 1967,
@@ -118407,7 +120549,21 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1845-db3c5bcb75d32e794daaab2880a9cefc/oRg21cXVbdpJhR5WR3oZFrGDkJXY37_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "On a beautiful June weekend in 1967, at the beginning of the Summer of Love, the Monterey International Pop Festival roared forward, capturing a decade’s spirit and ushering in a new era of rock and roll. Monterey featured career-making performances by Jimi Hendrix, Janis Joplin, and Otis Redding, but they were just a few of the performers in a wildly diverse lineup that also included Simon and Garfunkel, the Mamas and the Papas, the Who, the Byrds, Hugh Masekela, and the extraordinary Ravi Shankar. With his characteristic vérité style—and a camera crew that included the likes of Albert Maysles and Richard Leacock—D. A. Pennebaker captured it all, immortalizing moments that have become legend: Pete Townshend smashing his guitar, Jimi Hendrixburninghis, Mama Cass watching Janis Joplin’s performance in awe. The Criterion Collection is proud to present the most comprehensive document of the Monterey Pop Festival ever produced, featuring the filmsMonterey Pop, Jimi Plays Monterey,andShake! Otis at Monterey,along with every available complete performance filmed by Pennebaker and his crew and additional rare outtakes.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/720-monterey-pop",
+        "title": "Monterey Pop",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/722-jimi-plays-monterey-shake-otis-at-monterey",
+        "title": "Jimi Plays Monterey & Shake! Otis at Monterey",
+        "year": 1986
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": 146,
@@ -118919,7 +121075,21 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "This monumental mid-nineteenth-century epic from Jan Troell charts, over the course of two films, a Swedish farming family’s voyage to America and their efforts to put down roots in this beautiful but forbidding new world. Movie legends Max von Sydow and Liv Ullmann give remarkably authentic performances as Karl Oskar and Kristina, a couple who meet with one physical and emotional trial after another on their arduous journey. The precise, minute detail with which Troell depicts the couple’s story—which is also that of countless other people who sought better lives across the Atlantic—is a wonder to behold. Engrossing at every step of the way, the duo ofThe EmigrantsandThe New Landmakes for perhaps the greatest screen drama about the settling of America.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28701-the-emigrants",
+        "title": "The Emigrants",
+        "year": 1971
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28702-the-new-land",
+        "title": "The New Land",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -120455,7 +122625,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1159,
     "title": "The Infernal Affairs Trilogy",
     "director": "Andrew Lau Wai-Keung",
     "year": 2004,
@@ -120538,7 +122708,26 @@
         }
       ]
     },
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "The Hong Kong crime drama was jolted to new life with the release of theInfernal Affairstrilogy, a bracing, explosively stylish critical and commercial triumph that introduced a dazzling level of narrative and thematic complexity to the genre with its gripping saga of two rival moles—played by superstars Tony Leung Chiu-wai and Andy Lau Tak-wah—who navigate slippery moral choices as they move between the intersecting territories of Hong Kong’s police force and its criminal underworld. Set during the uncertainty of the city-state’s handover from Britain to China and steeped in Buddhist philosophy, these ingeniously crafted tales of self-deception and betrayal mirror Hong Kong’s own fractured identity and the psychic schisms of life in a postcolonial purgatory.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/32453-infernal-affairs",
+        "title": "Infernal Affairs",
+        "year": 2002
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32454-infernal-affairs-ii",
+        "title": "Infernal Affairs II",
+        "year": 2003
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/32455-infernal-affairs-iii",
+        "title": "Infernal Affairs III",
+        "year": 2003
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -121754,7 +123943,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1200,
     "title": "The Red Balloon and Other Stories: Five Films by Albert Lamorisse",
     "director": "",
     "year": null,
@@ -121766,7 +123955,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2039-5159ae10de718a98162dd5477f1f03df/3ypqxNpO5CYzhOFtphfmaQVhvSEI2M_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Everyday life becomes an adventure in the wide-eyed fables and fantasies of Albert Lamorisse. Balancing imaginative whimsy with documentary-like authenticity, his beloved short filmsBim, the Little Donkey; White Mane;and the Academy Award–winningThe Red Balloonfind unforgettable emotional, spiritual, and moral resonance in the realms of children and animals, while his captivating but now rarely seen featuresStowaway in the SkyandCircus Angelexult in the glories of two of his greatest loves: nature and flight. With their astonishing cinematography and purity of spirit, these five enchanting works invite viewers of all ages to experience the wonder, mystery, and poignancy of the world anew.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/886-the-red-balloon",
+        "title": "The Red Balloon",
+        "year": 1956
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/943-white-mane",
+        "title": "White Mane",
+        "year": 1953
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31469-bim-the-little-donkey",
+        "title": "Bim, the Little Donkey",
+        "year": 1951
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31470-stowaway-in-the-sky",
+        "title": "Stowaway in the Sky",
+        "year": 1960
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/31471-circus-angel",
+        "title": "Circus Angel",
+        "year": 1965
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
@@ -122254,7 +124472,22 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1825-04e3d2d4acd7c045eac391acab04c475/B0mzfrIweiO9rb6yExev2yDv2VNgM8_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the midsixties, the maverick American director Monte Hellman conceived of two westerns at the same time. Dreamlike and gritty by turns, these films would prove their maker’s adeptness at brilliantly deconstructing genre. Shot back-to-back for famed producer Roger Corman, they feature overlapping casts and crews, including Jack Nicholson in two of his meatiest early roles.The Shooting,about a motley assortment of loners following a mysterious wanted man through a desolate frontier, andRide in the Whirlwind,about a group of cowhands pursued by vigilantes for crimes they did not commit, are rigorous, artful, and wholly unconventional journeys to the Old West.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/28580-the-shooting",
+        "title": "The Shooting",
+        "year": 1966,
+        "film_id": "the-shooting"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28581-ride-in-the-whirlwind",
+        "title": "Ride in the Whirlwind",
+        "year": 1966
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -123268,7 +125501,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 1263,
     "title": "The Three Musketeers / The Four Musketeers: Two Films by Richard Lester",
     "director": "",
     "year": null,
@@ -123280,7 +125513,21 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2085-51259520a591e486478292d7c44d25ed/vTjIL84GfnnUQPTOxsv6pDReCUHiCH_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Alexandre Dumas’s immortal tale of adventure and camaraderie received perhaps the finest of its numerous screen adaptations with this two-part swashbuckling spectacular fromA Hard Day’sNightdirector Richard Lester. Featuring Michael York, OliverReed, Frank Finlay, and Richard Chamberlain as the swaggering swordsmen, who thrust and parry their way through courtly intrigue in seventeenth-century France,The Three MusketeersandThe Four Musketeersare also graced with an all-star supporting cast that includes Raquel Welch, Faye Dunaway, Geraldine Chaplin, and Charlton Heston. Lester’s exuberant epic breathes new life into an oft-told classic through its boisterous slapstick invention, its meticulous attention to period detail, and a sense of pure, unbridled bravado that is thrilling to behold.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29909-the-three-musketeers",
+        "title": "The Three Musketeers",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29910-the-four-musketeers",
+        "title": "The Four Musketeers",
+        "year": 1974
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -123898,7 +126145,69 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2093-7f75c27677afcda7208391225569ba24/ogZZlkwdgtYBc7is2AyO8fqN2TivW0_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Wes Anderson’s first ten features represent twenty-five years of irrepressible creativity, an ongoing ode to outsiders and quixotic dreamers, and a world unto themselves, graced with a mischievous wit and a current of existential melancholy that flows through every captivating frame. This momentous twenty-disc collector’s set includes new 4K masters of the films, over twenty-five hours of special features, and ten illustrated books, presented in a deluxe clothbound edition.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/594-bottle-rocket",
+        "title": "Bottle Rocket",
+        "year": 1996,
+        "film_id": "bottle-rocket"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/333-rushmore",
+        "title": "Rushmore",
+        "year": 1998,
+        "film_id": "rushmore"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/230-the-royal-tenenbaums",
+        "title": "The Royal Tenenbaums",
+        "year": 2001,
+        "film_id": "the-royal-tenenbaums"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/741-the-life-aquatic-with-steve-zissou",
+        "title": "The Life Aquatic with Steve Zissou",
+        "year": 2004,
+        "film_id": "the-life-aquatic-with-steve-zissou"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27520-the-darjeeling-limited",
+        "title": "The Darjeeling Limited",
+        "year": 2007
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28565-fantastic-mr-fox",
+        "title": "Fantastic Mr. Fox",
+        "year": 2009,
+        "film_id": "fantastic-mr-fox"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28757-moonrise-kingdom",
+        "title": "Moonrise Kingdom",
+        "year": 2012,
+        "film_id": "moonrise-kingdom"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29601-the-grand-budapest-hotel",
+        "title": "The Grand Budapest Hotel",
+        "year": 2014,
+        "film_id": "the-grand-budapest-hotel"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/34340-isle-of-dogs",
+        "title": "Isle of Dogs",
+        "year": 2018
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/34339-the-french-dispatch-of-the-liberty-kansas-evening-sun",
+        "title": "The French Dispatch of the Liberty, Kansas Evening Sun",
+        "year": 2021,
+        "film_id": "the-french-dispatch-of-the-liberty-kansas-evening-sun"
+      }
+    ],
+    "box_set_film_count": 10
   },
   {
     "spine_number": 189,
@@ -124488,10 +126797,29 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1971-8bf270dbda2ba38f701838f9b6fb9588/DCb7MEVHrWs8er62Ch9mVNgMnYkZB2_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "More than four decades after he took a razor blade to an eyeball and shocked the world withUn chien andalou,arch-iconoclast Luis Buñuel capped his astonishing career with three final provocations—The Discreet Charm of the Bourgeoisie, The Phantom of Liberty,andThat Obscure Object of Desire—in which his renegade, free-associating surrealism reached its audacious, self-detonating endgame. Working with such key collaborators as screenwriter Jean-Claude Carrière and his own frequent on-screen alter ego Fernando Rey, Buñuel laced his scathing attacks on religion, class pretension, and moral hypocrisy with savage violence to create a trio of subversive, brutally funny masterpieces that explore the absurd randomness of existence. Among the director’s most radical works as well as some of his greatest international triumphs, these films cemented his legacy as cinema’s most incendiary revolutionary.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/310-the-discreet-charm-of-the-bourgeoisie",
+        "title": "The Discreet Charm of the Bourgeoisie",
+        "year": 1972
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/905-the-phantom-of-liberty",
+        "title": "The Phantom of Liberty",
+        "year": 1974
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/686-that-obscure-object-of-desire",
+        "title": "That Obscure Object of Desire",
+        "year": 1977
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
-    "spine_number": null,
+    "spine_number": 1162,
     "title": "Three Films by Mai Zetterling",
     "director": "",
     "year": null,
@@ -124503,7 +126831,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2015-486ad5f4e00146f32a621a56550213f9/OxH8iQUS4kUbBV2SSNnb8S7TkGsDiT_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "A fearlessly transgressive, long-overlooked pioneer of feminist cinema, the Swedish actor turned director Mai Zetterling ruffled the feathers of the patriarchal establishment with a string of bracingly modern, sexually frank, and politically incendiary films focused on female agency and the turbulent state of twentieth-century Europe. Her ability to render subjective psychological states with startling immediacy is on display in thesethree taboo-shattering works from the 1960s, featuring some of Swedish cinema’s most iconic stars. With their audacious narrative structures, their elaborate use of symbolism, and their willingness to delve into the most fraught realms of human experience, these are models of adventurous, passionately engaged filmmaking.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/30379-loving-couples",
+        "title": "Loving Couples",
+        "year": 1964
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30380-night-games",
+        "title": "Night Games",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/30381-the-girls",
+        "title": "The Girls",
+        "year": 1968
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -127022,7 +129369,47 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1974-30add17a73e2f15da4d8134bd4b540c8/cavn6hiKSTnZl3w0DnPvHDk7jQ61CR_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "With his lush and sensual visuals, pitch-perfect soundtracks, and soulful romanticism, Wong Kar Wai has established himself as one of the defining auteurs of contemporary cinema. Joined by such key collaborators as cinematographer Christopher Doyle; editor and production and costume designer William Chang Suk Ping; and actors Tony Leung Chiu Wai and Maggie Cheung Man Yuk, Wong (or WKW, as he is often known) has written and directed films that have enraptured audiences and critics worldwide and inspired countless other filmmakers with their poetic moods and music, narrative and stylistic daring, and potent themes of alienation and memory. Whether tragically romantic, soaked in blood, or quirkily comedic, the seven films collected here are an invitation into the unique and wistful world of a deeply influential artist.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/29478-as-tears-go-by",
+        "title": "As Tears Go By",
+        "year": 1988
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/29477-days-of-being-wild",
+        "title": "Days of Being Wild",
+        "year": 1990
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/226-chungking-express",
+        "title": "Chungking Express",
+        "year": 1994
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28842-fallen-angels",
+        "title": "Fallen Angels",
+        "year": 1995
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28843-happy-together",
+        "title": "Happy Together",
+        "year": 1997
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/198-in-the-mood-for-love",
+        "title": "In the Mood for Love",
+        "year": 2000,
+        "film_id": "fa-yeung-nin-wa"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/28847-2046",
+        "title": "2046",
+        "year": 2004
+      }
+    ],
+    "box_set_film_count": 7
   },
   {
     "spine_number": null,
@@ -127230,7 +129617,22 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2074-edf13269086937f56523999060b6c2e4/uHEOVxOpnDB7l8Wpxi1nUEt66D5IUd_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Thanks to perhaps the most indelible character in Akira Kurosawa’s oeuvre,Yojimbosurpassed evenSeven Samuraiin popularity when it was released. The masterless samurai Sanjuro, who slyly manipulates two warring clans to his own advantage in a small, dusty village, was so entertainingly embodied by the brilliant Toshiro Mifune that it was only a matter of time before he returned in a sequel. Made just one year later,SanjuromatchesYojimbo’s storytelling dexterity yet adds a layer of world-weary pragmatism that brings the two films to a thrilling and unforgettable conclusion.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/597-yojimbo",
+        "title": "Yojimbo",
+        "year": 1961,
+        "film_id": "yojimbo"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/598-sanjuro",
+        "title": "Sanjuro",
+        "year": 1962
+      }
+    ],
+    "box_set_film_count": 2
   },
   {
     "spine_number": null,
@@ -129286,7 +131688,7 @@
     }
   },
   {
-    "spine_number": null,
+    "spine_number": 124,
     "title": "Carl Theodor Dreyer",
     "director": "",
     "year": 1995,
@@ -129298,7 +131700,34 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1860-82b0f5807053a21a1cae335b8d477d7f/ZA7wOpAzBD7Xh0bDvZhFii5RQ8BD02_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Following the release of Carl Th. Dreyer’sThe Passion of Joan of Arc,the Criterion Collection renews its commitment to this major director with a special-edition box set of his sound films,Day of Wrath, Ordet,andGertrud.Each is an intense exploration of the clash between individual desire and social expectations, with Dreyer’s famously perfectionist attention to detail shining throughout. With brand new digital transfers supervised byGertruddirector of photography Henning Bendtsen, the Criterion Collection is proud to present these Dreyer masterpieces on DVD for the first time. The fourth disc in the set presents the masterful 1995 documentary on Dreyer by Danish filmmaker Torben Skødt Jensen,Carl Th. Dreyer—My Métier.Extensive interviews with collaborators and actors provide fresh insight into the life and work of one of cinema’s great masters.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/442-day-of-wrath",
+        "title": "Day of Wrath",
+        "year": 1943,
+        "film_id": "day-of-wrath"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/441-ordet",
+        "title": "Ordet",
+        "year": 1955,
+        "film_id": "ordet"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/443-gertrud",
+        "title": "Gertrud",
+        "year": 1964,
+        "film_id": "gertrud"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/667-carl-th-dreyer-my-metier",
+        "title": "Carl Th. Dreyer—My Metier",
+        "year": 1995
+      }
+    ],
+    "box_set_film_count": 4
   },
   {
     "spine_number": null,
@@ -129313,7 +131742,26 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1790-28ceda09f3ec8272b12ccae6e8948ccc/WQLQUtATQyb2uRwexodaagYnm8VL0y_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "In the final phase of his career, Italian master Roberto Rossellini embarked on a dramatic, daunting project: a series of television films about knowledge and history, made in an effort to teach, where contemporary media were failing. Looking at the Western world’s major figures and moments, yet focusing on the small details of daily life, Rossellini was determined not to recount history but to relive it, as it might have been, unadorned but full of the drama of the everyday. This selection of Rossellini’s history films presentsThe Age of the Medici,Cartesius, andBlaise Pascal—works that don’t just enliven the past but illuminate the ideas that brought us to where we are today.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/1025-the-age-of-the-medici",
+        "title": "The Age of the Medici",
+        "year": 1973
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/1026-cartesius",
+        "title": "Cartesius",
+        "year": 1974
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/1027-blaise-pascal",
+        "title": "Blaise Pascal",
+        "year": 1972
+      }
+    ],
+    "box_set_film_count": 3
   },
   {
     "spine_number": null,
@@ -129328,7 +131776,42 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1808-2d46a12c7b3bb2aca94ace66d3c9c0e9/nyO6RFFEuME4UWTQK8qfR39YzD6NJK_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Of all the cinematic New Waves that broke over the world in the 1960s, the one in Czechoslovakia was among the most fruitful, fascinating, and radical. With a wicked sense of humor and a healthy streak of surrealism, a group of fearless directors—including eventual Oscar winners Miloš Forman and Ján Kadár—began to use film to speak out about the hypocrisy and absurdity of the Communist state. A defining work was the 1966 omnibus filmPearls of the Deep,which introduced five of the movement’s essential voices: Věra Chytilová, Jaromil Jireš, Jiří Menzel, Jan Němec, and Evald Schorm. This series presents that title, along with five other crucial works that followed close on its heels, one from each of those filmmakers—some dazzlingly experimental, some arrestingly realistic, all singular expressions from a remarkable time and place.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/27858-pearls-of-the-deep",
+        "title": "Pearls of the Deep",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27854-daisies",
+        "title": "Daisies",
+        "year": 1966,
+        "film_id": "daisies"
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27877-a-report-on-the-party-and-guests",
+        "title": "A Report on the Party and Guests",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27859-return-of-the-prodigal-son",
+        "title": "Return of the Prodigal Son",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27852-capricious-summer",
+        "title": "Capricious Summer",
+        "year": 1968
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/27856-the-joke",
+        "title": "The Joke",
+        "year": 1969
+      }
+    ],
+    "box_set_film_count": 6
   },
   {
     "spine_number": null,
@@ -129595,7 +132078,36 @@
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1797-318501db88ee1da4d45bdd9068dd99a8/8Twx2mnxI1L1ge7GVsY2J76hB2CXjL_large.jpg",
     "credits": null,
-    "is_box_set": true
+    "is_box_set": true,
+    "description": "Often called the Godard of the East, Japanese director Nagisa Oshima was one of the most provocative film artists of the twentieth century, and his works challenged and shocked the cinematic world for decades. Following his rise to prominence at Shochiku, Oshima struck out to form his own production company, Sozo-sha, in the early sixties. That move ushered in the prolific period of his career that gave birth to the five films collected here. Unsurprisingly, this studio renegade was fascinated by stories of outsiders—serial killers, rabid hedonists, and stowaway misfits are just some of the social castoffs you’ll meet in these audacious, cerebral entries in the New Wave surge that made Japan a hub of truly daredevil moviemaking.",
+    "included_films": [
+      {
+        "criterion_url": "https://www.criterion.com/films/23954-pleasures-of-the-flesh",
+        "title": "Pleasures of the Flesh",
+        "year": 1965
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/22296-violence-at-noon",
+        "title": "Violence at Noon",
+        "year": 1966
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/21949-sing-a-song-of-sex",
+        "title": "Sing a Song of Sex",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/23955-japanese-summer-double-suicide",
+        "title": "Japanese Summer: Double Suicide",
+        "year": 1967
+      },
+      {
+        "criterion_url": "https://www.criterion.com/films/21952-three-resurrected-drunkards",
+        "title": "Three Resurrected Drunkards",
+        "year": 1968
+      }
+    ],
+    "box_set_film_count": 5
   },
   {
     "spine_number": null,
