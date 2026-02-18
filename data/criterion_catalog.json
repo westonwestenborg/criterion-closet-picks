@@ -30417,7 +30417,13 @@
           "character": "Berit"
         }
       ]
-    }
+    },
+    "tmdb_id": 106194,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/2evii15GjXjNROt6s96bbJNKY4d.jpg",
+    "imdb_id": "tt0469772"
   },
   {
     "spine_number": 478,
@@ -32397,85 +32403,90 @@
   {
     "spine_number": 504,
     "title": "Hunger",
-    "director": "Steven Hentges",
-    "year": 2009,
+    "director": "Steve McQueen",
+    "year": 2008,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/477-hunger",
     "film_id": "hunger",
-    "imdb_id": "tt1176252",
-    "tmdb_id": 173672,
-    "genres": [
-      "Horror"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/c90ogtGY5k90D38ynTUBu3KWWMp.jpg",
+    "tmdb_id": 10360,
+    "imdb_id": "tt0986233",
     "credits": {
       "directors": [
         {
-          "name": "Steven Hentges",
-          "tmdb_id": 127697
+          "name": "Steve McQueen",
+          "tmdb_id": 72757
         }
       ],
       "writers": [
         {
-          "name": "L.D. Goffigan",
-          "tmdb_id": 127699
+          "name": "Enda Walsh",
+          "tmdb_id": 150607
+        },
+        {
+          "name": "Steve McQueen",
+          "tmdb_id": 72757
         }
       ],
       "cinematographers": [
         {
-          "name": "John Sawyer",
-          "tmdb_id": 3107913
+          "name": "Sean Bobbitt",
+          "tmdb_id": 54926
         }
       ],
       "editors": [
         {
-          "name": "Jessica N. Kehrhahn",
-          "tmdb_id": 1099736
+          "name": "Joe Walker",
+          "tmdb_id": 999565
         }
       ],
       "cast": [
         {
-          "name": "Lori Heuring",
-          "tmdb_id": 15010,
-          "character": "Jordan"
+          "name": "Michael Fassbender",
+          "tmdb_id": 17288,
+          "character": "Bobby Sands"
         },
         {
-          "name": "Linden Ashby",
-          "tmdb_id": 57251,
-          "character": "Grant"
+          "name": "Stuart Graham",
+          "tmdb_id": 18993,
+          "character": "Ray Lohan"
         },
         {
-          "name": "Joe Egender",
-          "tmdb_id": 127701,
-          "character": "Luke"
+          "name": "Liam Cunningham",
+          "tmdb_id": 15498,
+          "character": "Priest"
         },
         {
-          "name": "Lea Kohl",
-          "tmdb_id": 585146,
-          "character": "Anna"
+          "name": "Helena Bereen",
+          "tmdb_id": 64916,
+          "character": "Raymond's Mother"
         },
         {
-          "name": "Julian Rojas",
-          "tmdb_id": 585147,
-          "character": "Alex"
+          "name": "Laine Megaw",
+          "tmdb_id": 150174,
+          "character": "Raymond's Wife"
         },
         {
-          "name": "Bjorn Johnson",
-          "tmdb_id": 61530,
-          "character": "The Scientist"
+          "name": "Brian Milligan",
+          "tmdb_id": 1728055,
+          "character": "Davey Gillen"
         },
         {
-          "name": "Britton Partain",
-          "tmdb_id": 585148,
-          "character": "Young Scientist"
+          "name": "Liam McMahon",
+          "tmdb_id": 210485,
+          "character": "Gerry Campbell"
         },
         {
-          "name": "Laura Albyn",
-          "tmdb_id": 127700,
-          "character": "Teenage Girl - Maggie"
+          "name": "Karen Hassan",
+          "tmdb_id": 1665371,
+          "character": "Gerry's Girlfriend"
         }
       ]
-    }
+    },
+    "poster_url": "https://image.tmdb.org/t/p/w185/84HdTM39G2MzyTl8N9R0wVU9I5b.jpg",
+    "genres": [
+      "Drama",
+      "History"
+    ]
   },
   {
     "spine_number": 505,
@@ -37174,7 +37185,13 @@
           "character": "Country Squire Bulldog"
         }
       ]
-    }
+    },
+    "tmdb_id": 82944,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/j6j4LQKevC8YPBowUxrPbMAGJIg.jpg",
+    "imdb_id": "tt0055464"
   },
   {
     "spine_number": 564,
@@ -41827,7 +41844,10 @@
           "character": "Damien"
         }
       ]
-    }
+    },
+    "tmdb_id": 651058,
+    "genres": [],
+    "imdb_id": null
   },
   {
     "spine_number": 623,
@@ -42884,7 +42904,14 @@
           "character": "Damien"
         }
       ]
-    }
+    },
+    "tmdb_id": 79120,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg",
+    "imdb_id": "tt1714210"
   },
   {
     "spine_number": 636,
@@ -58963,7 +58990,14 @@
           "character": "Fellini as a Child"
         }
       ]
-    }
+    },
+    "tmdb_id": 11035,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/rqK75R3tTz2iWU0AQ6tLz3KMOU1.jpg",
+    "imdb_id": "tt0069191"
   },
   {
     "spine_number": 849,
@@ -59128,7 +59162,15 @@
           "character": "Country Squire Bulldog"
         }
       ]
-    }
+    },
+    "tmdb_id": 11300,
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/344lhBozqFWKxBb4fp6azYQMLEy.jpg",
+    "imdb_id": "tt0091983"
   },
   {
     "spine_number": 851,
@@ -71063,7 +71105,13 @@
           "character": "Fellini as a Child"
         }
       ]
-    }
+    },
+    "tmdb_id": 426426,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/dtIIyQyALk57ko5bjac7hi01YQ.jpg",
+    "imdb_id": "tt6155172"
   },
   {
     "spine_number": 1015,
@@ -75732,7 +75780,15 @@
           "character": "Mrs. Kimball"
         }
       ]
-    }
+    },
+    "tmdb_id": 19169,
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/odlV13MZEswVyMBQ4fmmxLRHYT0.jpg",
+    "imdb_id": "tt0039661"
   },
   {
     "spine_number": 1079,
@@ -81672,7 +81728,94 @@
     "country": "",
     "criterion_url": "https://www.criterion.com/films/33246-wall-e",
     "film_id": "walle",
-    "tmdb_id": 10681
+    "tmdb_id": 10681,
+    "imdb_id": "tt0910970",
+    "credits": {
+      "directors": [
+        {
+          "name": "Andrew Stanton",
+          "tmdb_id": 7
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jim Reardon",
+          "tmdb_id": 15020
+        },
+        {
+          "name": "Andrew Stanton",
+          "tmdb_id": 7
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jeremy Lasky",
+          "tmdb_id": 7988
+        },
+        {
+          "name": "Danielle Feinberg",
+          "tmdb_id": 1830790
+        },
+        {
+          "name": "Martin Rosenberg",
+          "tmdb_id": 93044
+        }
+      ],
+      "editors": [
+        {
+          "name": "Stephen Schaffer",
+          "tmdb_id": 59363
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ben Burtt",
+          "tmdb_id": 670,
+          "character": "WALL·E / M-O (voice)"
+        },
+        {
+          "name": "Elissa Knight",
+          "tmdb_id": 72754,
+          "character": "EVE (voice)"
+        },
+        {
+          "name": "Jeff Garlin",
+          "tmdb_id": 60074,
+          "character": "Captain (voice)"
+        },
+        {
+          "name": "Fred Willard",
+          "tmdb_id": 20753,
+          "character": "Shelby Forthright, BnL CEO"
+        },
+        {
+          "name": "John Ratzenberger",
+          "tmdb_id": 7907,
+          "character": "John (voice)"
+        },
+        {
+          "name": "Kathy Najimy",
+          "tmdb_id": 11074,
+          "character": "Mary (voice)"
+        },
+        {
+          "name": "Sigourney Weaver",
+          "tmdb_id": 10205,
+          "character": "Ship's Computer (voice)"
+        },
+        {
+          "name": "Lori Alan",
+          "tmdb_id": 24358,
+          "character": "Additional Voices (voice)"
+        }
+      ]
+    },
+    "poster_url": "https://image.tmdb.org/t/p/w185/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Science Fiction"
+    ]
   },
   {
     "spine_number": 1162,
@@ -82216,7 +82359,14 @@
           "character": "Berit"
         }
       ]
-    }
+    },
+    "tmdb_id": 477044,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/q8bQfC7SbaTDVKywhCiNL3ZVSyy.jpg",
+    "imdb_id": "tt6910282"
   },
   {
     "spine_number": 1171,
@@ -90831,7 +90981,15 @@
           "character": "Mrs. Kimball"
         }
       ]
-    }
+    },
+    "tmdb_id": 597208,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/vfn1feL0V9HNSXuLLpaxAW8O6LO.jpg",
+    "imdb_id": "tt7740496"
   },
   {
     "spine_number": 1287,
