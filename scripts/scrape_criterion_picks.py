@@ -274,7 +274,15 @@ def parse_guest_name_from_link_text(text: str) -> str:
         if len(name) > 2:
             return name
 
-    return text.strip()
+    # If no "Closet Picks" pattern matched, this isn't a guest collection
+    # (e.g., promotional pages like "4K Discs 30% Off")
+    return ""
+
+
+# Non-guest collection URLs to skip (promos, sale pages, etc.)
+SKIP_COLLECTION_URLS = {
+    "https://www.criterion.com/shop/collection/498-4k-discs",
+}
 
 
 def scrape_index(scraper) -> list[dict]:
@@ -330,6 +338,9 @@ def scrape_index(scraper) -> list[dict]:
             continue
 
         full_url = f"{CRITERION_BASE}{path}" if not href.startswith("http") else href
+
+        if full_url in SKIP_COLLECTION_URLS:
+            continue
 
         # Resolve canonical slug via VISIT_CRITERION_URLS for multi-visit guests
         # (e.g., "yorgos-lanthimos-ariane-labed" -> "yorgos-lanthimos")

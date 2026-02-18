@@ -3372,7 +3372,7 @@
     "name": "Floyd Norman",
     "slug": "floyd-norman",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/7E3WRAAUHJGwaQijSVYdXlQy0Nj.jpg",
     "youtube_video_id": "mSuVyxoy6Hw",
     "youtube_video_url": "https://www.youtube.com/watch?v=mSuVyxoy6Hw",
     "vimeo_video_id": null,
@@ -3528,7 +3528,7 @@
     "name": "Laurie Anderson",
     "slug": "laurie-anderson",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/qzYxlXRWKJSa8Qbwt4bcaaUVtle.jpg",
     "youtube_video_id": "Kc9_lqHmNsg",
     "youtube_video_url": "https://www.youtube.com/watch?v=Kc9_lqHmNsg",
     "vimeo_video_id": null,
@@ -4485,5 +4485,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/519-elegance-bratton-s-closet-picks",
     "pick_count": 11
+  },
+  {
+    "name": "Diego Calva",
+    "slug": "diego-calva",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/k5khi8PwsYs2d7uL0uuO5zenL9R.jpg",
+    "youtube_video_id": "ZJF_asiGU3c",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ZJF_asiGU3c",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/929-diego-calva-s-closet-picks",
+    "pick_count": 16
   }
 ]
