@@ -232,10 +232,31 @@ const initialPick = randomData.length > 0
     `;
   }
 
+  const buttonTexts = [
+    'Another',
+    'One more',
+    "Let's try again",
+    'Keep going',
+    'Hit me',
+    'What else?',
+    'Once more',
+    'I promise this next one will be good..',
+    'Go again',
+    'The closet has spoken. Or has it?',
+    'Reroll',
+    'Again?',
+    'Are you kidding?',
+    'How long can this go on?',
+    'Alright, final answer..',
+  ];
+  let clickCount = 0;
+
   const btn = document.getElementById('random-pick-btn');
   btn?.addEventListener('click', () => {
     if (randomData.length === 0) return;
     const pick = randomData[Math.floor(Math.random() * randomData.length)];
     renderPick(pick);
+    clickCount++;
+    btn.textContent = buttonTexts[clickCount % buttonTexts.length];
   });
 </script>
