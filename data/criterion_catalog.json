@@ -10848,16 +10848,95 @@
   {
     "spine_number": 233,
     "title": "Stray Dog",
-    "director": null,
+    "director": "Sam Peckinpah",
     "year": 1971,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/730-straw-dogs",
     "film_id": "stray-dog",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0067800",
+    "tmdb_id": 994,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Sam Peckinpah",
+          "tmdb_id": 7767
+        }
+      ],
+      "writers": [
+        {
+          "name": "David Zelag Goodman",
+          "tmdb_id": 14941
+        },
+        {
+          "name": "Sam Peckinpah",
+          "tmdb_id": 7767
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "John Coquillon",
+          "tmdb_id": 14944
+        }
+      ],
+      "editors": [
+        {
+          "name": "Roger Spottiswoode",
+          "tmdb_id": 1724
+        },
+        {
+          "name": "Tony Lawson",
+          "tmdb_id": 12685
+        },
+        {
+          "name": "Paul Davies",
+          "tmdb_id": 2305998
+        }
+      ],
+      "cast": [
+        {
+          "name": "Dustin Hoffman",
+          "tmdb_id": 4483,
+          "character": "David Sumner"
+        },
+        {
+          "name": "Susan George",
+          "tmdb_id": 14947,
+          "character": "Amy"
+        },
+        {
+          "name": "Peter Vaughan",
+          "tmdb_id": 386,
+          "character": "Tom Hedden"
+        },
+        {
+          "name": "T. P. McKenna",
+          "tmdb_id": 14948,
+          "character": "Maj. John Scott"
+        },
+        {
+          "name": "Del Henney",
+          "tmdb_id": 14949,
+          "character": "Charlie Venner"
+        },
+        {
+          "name": "Jim Norton",
+          "tmdb_id": 14950,
+          "character": "Chris Cawsey"
+        },
+        {
+          "name": "Donald Webster",
+          "tmdb_id": 14951,
+          "character": "Riddaway"
+        },
+        {
+          "name": "Ken Hutchison",
+          "tmdb_id": 7194,
+          "character": "Norman Scutt"
+        }
+      ]
+    }
   },
   {
     "spine_number": 234,
@@ -11306,15 +11385,73 @@
   {
     "spine_number": 239,
     "title": "The Lower Depths (2 adaptations)",
-    "director": "",
+    "director": "Aleksandr Pankratov",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-lower-depths-2-adaptations",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0174052",
+    "tmdb_id": 1422021,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Aleksandr Pankratov",
+          "tmdb_id": 625688
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Igor Feldshtein",
+          "tmdb_id": 4443582
+        }
+      ],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Elena Kapitsa",
+          "tmdb_id": 2425597,
+          "character": ""
+        },
+        {
+          "name": "Evdokiya Germanova",
+          "tmdb_id": 238533,
+          "character": ""
+        },
+        {
+          "name": "Viktor Drevitski",
+          "tmdb_id": 1367959,
+          "character": ""
+        },
+        {
+          "name": "Aleksandr Filippenko",
+          "tmdb_id": 549037,
+          "character": ""
+        },
+        {
+          "name": "Lidiya Boyko",
+          "tmdb_id": 5197219,
+          "character": ""
+        },
+        {
+          "name": "Boris Bachurin",
+          "tmdb_id": 1854376,
+          "character": ""
+        },
+        {
+          "name": "Aleksandr Vigdorov",
+          "tmdb_id": 1118337,
+          "character": ""
+        },
+        {
+          "name": "Aleksandr Konyashin",
+          "tmdb_id": 1726007,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 240,
@@ -12812,7 +12949,7 @@
     "criterion_url": "https://www.criterion.com/films/952-tanner-88",
     "film_id": "tanner-88",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 1804,
     "genres": [],
     "poster_url": null
   },
@@ -24644,16 +24781,57 @@
   {
     "spine_number": 406,
     "title": "Martha Graham: Dance on Film",
-    "director": null,
+    "director": "Peter Glushanok",
     "year": 1959,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/835-martha-graham-dance-on-film",
     "film_id": "martha-graham-dance-on-film",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 1404798,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Peter Glushanok",
+          "tmdb_id": 1131266
+        },
+        {
+          "name": "Alexander Hammid",
+          "tmdb_id": 96814
+        }
+      ],
+      "writers": [
+        {
+          "name": "Martha Graham",
+          "tmdb_id": 1095414
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Martha Graham",
+          "tmdb_id": 1095414,
+          "character": ""
+        },
+        {
+          "name": "Helen McGehee",
+          "tmdb_id": 1131422,
+          "character": ""
+        },
+        {
+          "name": "Bertram Ross",
+          "tmdb_id": 1095415,
+          "character": ""
+        },
+        {
+          "name": "Ethel Winter",
+          "tmdb_id": 1131424,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 407,
@@ -28411,15 +28589,95 @@
   {
     "spine_number": 453,
     "title": "Chungking Express(2025 BD)",
-    "director": "",
+    "director": "Wong Kar-Wai",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "chungking-express2025-bd",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0109424",
+    "tmdb_id": 11104,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Wong Kar-Wai",
+          "tmdb_id": 12453
+        }
+      ],
+      "writers": [
+        {
+          "name": "Wong Kar-Wai",
+          "tmdb_id": 12453
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Christopher Doyle",
+          "tmdb_id": 1357
+        },
+        {
+          "name": "Andrew Lau Wai-Keung",
+          "tmdb_id": 65994
+        }
+      ],
+      "editors": [
+        {
+          "name": "Hai Kit-Wai",
+          "tmdb_id": 68030
+        },
+        {
+          "name": "Eric Kwong Chi-Leung",
+          "tmdb_id": 64490
+        },
+        {
+          "name": "William Chang Suk-Ping",
+          "tmdb_id": 45818
+        }
+      ],
+      "cast": [
+        {
+          "name": "Brigitte Lin",
+          "tmdb_id": 56830,
+          "character": "Woman in Blonde Wig"
+        },
+        {
+          "name": "Takeshi Kaneshiro",
+          "tmdb_id": 43661,
+          "character": "He Zhiwu / Cop 223"
+        },
+        {
+          "name": "Tony Leung Chiu-wai",
+          "tmdb_id": 1337,
+          "character": "Cop 663"
+        },
+        {
+          "name": "Faye Wong",
+          "tmdb_id": 12671,
+          "character": "Faye"
+        },
+        {
+          "name": "Valerie Chow",
+          "tmdb_id": 119875,
+          "character": "Air Hostess"
+        },
+        {
+          "name": "Piggy Chan Kam-Chuen",
+          "tmdb_id": 119876,
+          "character": "Owner of Eatery"
+        },
+        {
+          "name": "Kwan Lee-Na",
+          "tmdb_id": 119877,
+          "character": "May"
+        },
+        {
+          "name": "Leung San",
+          "tmdb_id": 1407506,
+          "character": "K Store Clerk"
+        }
+      ]
+    }
   },
   {
     "spine_number": 454,
@@ -31793,10 +32051,47 @@
     "criterion_url": "https://www.criterion.com/films/20987-che",
     "film_id": "che",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 860565,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [
+        {
+          "name": "Isabel Sadurni",
+          "tmdb_id": 3155200
+        }
+      ],
+      "cast": [
+        {
+          "name": "Steven Soderbergh",
+          "tmdb_id": 1884,
+          "character": "Himself/Peter Andrews"
+        },
+        {
+          "name": "Deanan Dasilva",
+          "tmdb_id": 3194949,
+          "character": "Himself"
+        },
+        {
+          "name": "Rob Lohman",
+          "tmdb_id": 3194950,
+          "character": "Himself"
+        },
+        {
+          "name": "Nat Jencks",
+          "tmdb_id": 1409856,
+          "character": "Himself"
+        },
+        {
+          "name": "Steven Meizler",
+          "tmdb_id": 1476175,
+          "character": "Himself"
+        }
+      ]
+    }
   },
   {
     "spine_number": 497,
@@ -38111,15 +38406,72 @@
   {
     "spine_number": 575,
     "title": "The Killing (with Killer’s Kiss)",
-    "director": "",
+    "director": "Gary Templeton",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-killing-with-killers-kiss",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0276878",
+    "tmdb_id": 75058,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Gary Templeton",
+          "tmdb_id": 1705643
+        }
+      ],
+      "writers": [
+        {
+          "name": "Don Freeman",
+          "tmdb_id": 1705644
+        },
+        {
+          "name": "Gary Templeton",
+          "tmdb_id": 1705643
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Clarke Bittner",
+          "tmdb_id": 1209608,
+          "character": "Manager"
+        },
+        {
+          "name": "Muriel Gould",
+          "tmdb_id": 1508826,
+          "character": "Saleslady"
+        },
+        {
+          "name": "Tim Loomis",
+          "tmdb_id": 1705639,
+          "character": "Corduroy"
+        },
+        {
+          "name": "Ebb Miller",
+          "tmdb_id": 1705640,
+          "character": "Night Watchman"
+        },
+        {
+          "name": "Amanda Mulea",
+          "tmdb_id": 1705641,
+          "character": "Lisa"
+        },
+        {
+          "name": "Monica Parks",
+          "tmdb_id": 1689406,
+          "character": "Mother"
+        },
+        {
+          "name": "Ed Wolfe",
+          "tmdb_id": 1705642,
+          "character": "Janitor"
+        }
+      ]
+    }
   },
   {
     "spine_number": 576,
@@ -40654,16 +41006,27 @@
   {
     "spine_number": 607,
     "title": "A Hollis Frampton Odyssey",
-    "director": null,
+    "director": "Hollis Frampton",
     "year": 1966,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/27945-a-hollis-frampton-odyssey",
     "film_id": "a-hollis-frampton-odyssey",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "",
+    "tmdb_id": 166718,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Hollis Frampton",
+          "tmdb_id": 1092209
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": []
+    }
   },
   {
     "spine_number": 608,
@@ -47160,80 +47523,410 @@
   {
     "spine_number": 685,
     "title": "Touki bouki (World Cinema Project)",
-    "director": "",
+    "director": "Djibril Diop Mambéty",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "touki-bouki-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0070820",
+    "tmdb_id": 77771,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Djibril Diop Mambéty",
+          "tmdb_id": 1079380
+        }
+      ],
+      "writers": [
+        {
+          "name": "Djibril Diop Mambéty",
+          "tmdb_id": 1079380
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Georges Bracher",
+          "tmdb_id": 1199522
+        }
+      ],
+      "editors": [
+        {
+          "name": "Siro Asteni",
+          "tmdb_id": 2840938
+        }
+      ],
+      "cast": [
+        {
+          "name": "Magaye Niang",
+          "tmdb_id": 1154889,
+          "character": "Mory"
+        },
+        {
+          "name": "Myriam Niang",
+          "tmdb_id": 1200639,
+          "character": "Anta"
+        },
+        {
+          "name": "Christoph Colomb",
+          "tmdb_id": 1186856,
+          "character": ""
+        },
+        {
+          "name": "Mustapha Ture",
+          "tmdb_id": 1200621,
+          "character": ""
+        },
+        {
+          "name": "Aminata Fall",
+          "tmdb_id": 1090191,
+          "character": "Aunt Oumy"
+        },
+        {
+          "name": "Ousseynou Diop",
+          "tmdb_id": 1146166,
+          "character": "Charlie"
+        },
+        {
+          "name": "Ndou Labia",
+          "tmdb_id": 1568142,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 686,
     "title": "Redes (World Cinema Project)",
-    "director": "",
+    "director": "Georges Méliès",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "redes-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0000359",
+    "tmdb_id": 49279,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Georges Méliès",
+          "tmdb_id": 11523
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Georges Méliès",
+          "tmdb_id": 11523,
+          "character": "The Chemist / The India Rubber Head"
+        }
+      ]
+    }
   },
   {
     "spine_number": 687,
     "title": "A River Called Titas (World Cinema Project)",
-    "director": "",
+    "director": "Ritwik Ghatak",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "a-river-called-titas-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0070809",
+    "tmdb_id": 93164,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Ritwik Ghatak",
+          "tmdb_id": 543652
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ritwik Ghatak",
+          "tmdb_id": 543652
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Baby Islam",
+          "tmdb_id": 1211322
+        }
+      ],
+      "editors": [
+        {
+          "name": "Abu Taleb",
+          "tmdb_id": 3465667
+        },
+        {
+          "name": "Mahabubur Rahman",
+          "tmdb_id": 4314914
+        },
+        {
+          "name": "Bashir Hossain",
+          "tmdb_id": 1540380
+        }
+      ],
+      "cast": [
+        {
+          "name": "Rosy Afsary",
+          "tmdb_id": 997519,
+          "character": "Basanti"
+        },
+        {
+          "name": "Kabori Sarwar",
+          "tmdb_id": 1881451,
+          "character": "Rajar Jhi"
+        },
+        {
+          "name": "Rawshan Zamil",
+          "tmdb_id": 1752839,
+          "character": "Basanti's Mother"
+        },
+        {
+          "name": "Rani Sarkar",
+          "tmdb_id": 997534,
+          "character": "Mungli"
+        },
+        {
+          "name": "Sufia Rustam",
+          "tmdb_id": 997533,
+          "character": "Udaytara"
+        },
+        {
+          "name": "Prabir Mitra",
+          "tmdb_id": 997531,
+          "character": "Kishore"
+        },
+        {
+          "name": "Shafikul Islam",
+          "tmdb_id": 997529,
+          "character": "Ananta"
+        },
+        {
+          "name": "Golam Mustafa",
+          "tmdb_id": 997532,
+          "character": "Ramprasad / Kader Mian"
+        }
+      ]
+    }
   },
   {
     "spine_number": 688,
     "title": "Dry Summer (World Cinema Project)",
-    "director": "",
+    "director": "Sherif El Bendary",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "dry-summer-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt5139810",
+    "tmdb_id": 400975,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Sherif El Bendary",
+          "tmdb_id": 1210054
+        }
+      ],
+      "writers": [
+        {
+          "name": "Nura El Sheikh",
+          "tmdb_id": 1666469
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Victor Credi",
+          "tmdb_id": 1381141
+        }
+      ],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Mohamed Farid",
+          "tmdb_id": 1397673,
+          "character": "Shawky"
+        },
+        {
+          "name": "Nahed El Sebai",
+          "tmdb_id": 1035825,
+          "character": "Doaa"
+        },
+        {
+          "name": "Donia Maher",
+          "tmdb_id": 1277982,
+          "character": ""
+        },
+        {
+          "name": "Sherif Desouqy",
+          "tmdb_id": 2113892,
+          "character": ""
+        },
+        {
+          "name": "Mohamed Abd El Azim",
+          "tmdb_id": 1666468,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 689,
     "title": "Trances (World Cinema Project)",
-    "director": "",
+    "director": "Ahmed El Maânouni",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "trances-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0406280",
+    "tmdb_id": 215407,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Ahmed El Maânouni",
+          "tmdb_id": 1199644
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ahmed El Maânouni",
+          "tmdb_id": 1199644
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ahmed El Maânouni",
+          "tmdb_id": 1199644
+        }
+      ],
+      "editors": [
+        {
+          "name": "Atika Tahiri",
+          "tmdb_id": 1402833
+        },
+        {
+          "name": "Jean-Claude Bonfanti",
+          "tmdb_id": 39694
+        }
+      ],
+      "cast": [
+        {
+          "name": "Nass El Ghiwane",
+          "tmdb_id": 1382720,
+          "character": "Themselves"
+        },
+        {
+          "name": "Larbi Batma",
+          "tmdb_id": 1382721,
+          "character": "Self - Percussion"
+        },
+        {
+          "name": "Omar Sayed",
+          "tmdb_id": 1382722,
+          "character": "Self - Percussion"
+        },
+        {
+          "name": "Abderrahman Paco",
+          "tmdb_id": 1382723,
+          "character": "Self - Bass"
+        },
+        {
+          "name": "Allal Yaala",
+          "tmdb_id": 1382724,
+          "character": "Self - Banjo"
+        }
+      ]
+    }
   },
   {
     "spine_number": 690,
     "title": "The Housemaid (World Cinema Project)",
-    "director": "",
+    "director": "Paul Feig",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-housemaid-world-cinema-project",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt27543632",
+    "tmdb_id": 1368166,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Paul Feig",
+          "tmdb_id": 116805
+        }
+      ],
+      "writers": [
+        {
+          "name": "Rebecca Sonnenshine",
+          "tmdb_id": 82665
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "John Schwartzman",
+          "tmdb_id": 892
+        }
+      ],
+      "editors": [
+        {
+          "name": "Brent White",
+          "tmdb_id": 41079
+        }
+      ],
+      "cast": [
+        {
+          "name": "Sydney Sweeney",
+          "tmdb_id": 115440,
+          "character": "Millie Calloway"
+        },
+        {
+          "name": "Amanda Seyfried",
+          "tmdb_id": 71070,
+          "character": "Nina Winchester"
+        },
+        {
+          "name": "Brandon Sklenar",
+          "tmdb_id": 1855143,
+          "character": "Andrew Winchester"
+        },
+        {
+          "name": "Michele Morrone",
+          "tmdb_id": 2349355,
+          "character": "Enzo"
+        },
+        {
+          "name": "Indiana Elle",
+          "tmdb_id": 4342318,
+          "character": "Cece Winchester"
+        },
+        {
+          "name": "Sarah Cooper",
+          "tmdb_id": 2035942,
+          "character": "Pam"
+        },
+        {
+          "name": "Elizabeth Perkins",
+          "tmdb_id": 20,
+          "character": "Mrs. Winchester"
+        },
+        {
+          "name": "Ellen Tamaki",
+          "tmdb_id": 2013576,
+          "character": "Patrice"
+        }
+      ]
+    }
   },
   {
     "spine_number": 691,
@@ -49182,80 +49875,496 @@
   {
     "spine_number": 714,
     "title": "Lola (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "lola-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0055093",
+    "tmdb_id": 40641,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Raoul Coutard",
+          "tmdb_id": 3540
+        }
+      ],
+      "editors": [
+        {
+          "name": "Anne-Marie Cotret",
+          "tmdb_id": 45532
+        }
+      ],
+      "cast": [
+        {
+          "name": "Anouk Aimée",
+          "tmdb_id": 5682,
+          "character": "Lola (Cécile)"
+        },
+        {
+          "name": "Marc Michel",
+          "tmdb_id": 46936,
+          "character": "Roland Cassard"
+        },
+        {
+          "name": "Jacques Harden",
+          "tmdb_id": 37118,
+          "character": "Michel"
+        },
+        {
+          "name": "Alan Scott",
+          "tmdb_id": 39150,
+          "character": "Frankie"
+        },
+        {
+          "name": "Élina Labourdette",
+          "tmdb_id": 45477,
+          "character": "Madame Desnoyers"
+        },
+        {
+          "name": "Margo Lion",
+          "tmdb_id": 35879,
+          "character": "Jeanne, la mère de Michel"
+        },
+        {
+          "name": "Annie Duperoux",
+          "tmdb_id": 932594,
+          "character": "Cécile Desnoyers"
+        },
+        {
+          "name": "Catherine Lutz",
+          "tmdb_id": 3514,
+          "character": "Claire, the bar owner"
+        }
+      ]
+    }
   },
   {
     "spine_number": 715,
     "title": "Bay of Angels (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "bay-of-angels-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0056846",
+    "tmdb_id": 60773,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean Rabier",
+          "tmdb_id": 19086
+        }
+      ],
+      "editors": [
+        {
+          "name": "Anne-Marie Cotret",
+          "tmdb_id": 45532
+        }
+      ],
+      "cast": [
+        {
+          "name": "Jeanne Moreau",
+          "tmdb_id": 14812,
+          "character": "Jacqueline 'Jackie' Demaistre"
+        },
+        {
+          "name": "Claude Mann",
+          "tmdb_id": 36018,
+          "character": "Jean Fournier"
+        },
+        {
+          "name": "Paul Guers",
+          "tmdb_id": 24905,
+          "character": "Caron"
+        },
+        {
+          "name": "Henri Nassiet",
+          "tmdb_id": 35050,
+          "character": "M. Fournier"
+        },
+        {
+          "name": "Nicole Chollet",
+          "tmdb_id": 72001,
+          "character": "Marthe"
+        },
+        {
+          "name": "André Certes",
+          "tmdb_id": 29682,
+          "character": ""
+        },
+        {
+          "name": "Jean-Pierre Lorrain",
+          "tmdb_id": 1502419,
+          "character": ""
+        },
+        {
+          "name": "Georges Alban",
+          "tmdb_id": 3416161,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 716,
     "title": "The Umbrellas of Cherbourg (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": 1964,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/27933-the-umbrellas-of-cherbourg",
     "film_id": "the-umbrellas-of-cherbourg-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0058450",
+    "tmdb_id": 5967,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        },
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean Rabier",
+          "tmdb_id": 19086
+        }
+      ],
+      "editors": [
+        {
+          "name": "Anne-Marie Cotret",
+          "tmdb_id": 45532
+        },
+        {
+          "name": "Monique Teisseire",
+          "tmdb_id": 46934
+        }
+      ],
+      "cast": [
+        {
+          "name": "Catherine Deneuve",
+          "tmdb_id": 50,
+          "character": "Geneviève Emery"
+        },
+        {
+          "name": "Nino Castelnuovo",
+          "tmdb_id": 5476,
+          "character": "Guy Foucher"
+        },
+        {
+          "name": "Anne Vernon",
+          "tmdb_id": 28608,
+          "character": "Madame Emery"
+        },
+        {
+          "name": "Mireille Perrey",
+          "tmdb_id": 46935,
+          "character": "Tante Élise"
+        },
+        {
+          "name": "Marc Michel",
+          "tmdb_id": 46936,
+          "character": "Roland Cassard"
+        },
+        {
+          "name": "Ellen Farner",
+          "tmdb_id": 46937,
+          "character": "Madeleine"
+        },
+        {
+          "name": "Jean Champion",
+          "tmdb_id": 18767,
+          "character": "Aubin"
+        },
+        {
+          "name": "Jean-Pierre Dorat",
+          "tmdb_id": 46939,
+          "character": "Jean"
+        }
+      ]
+    }
   },
   {
     "spine_number": 717,
     "title": "The Young Girls of Rochefort (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-young-girls-of-rochefort-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0062873",
+    "tmdb_id": 2433,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ghislain Cloquet",
+          "tmdb_id": 11988
+        }
+      ],
+      "editors": [
+        {
+          "name": "Jean Hamon",
+          "tmdb_id": 1598806
+        }
+      ],
+      "cast": [
+        {
+          "name": "Catherine Deneuve",
+          "tmdb_id": 50,
+          "character": "Delphine Garnier"
+        },
+        {
+          "name": "Françoise Dorléac",
+          "tmdb_id": 18809,
+          "character": "Solange Garnier"
+        },
+        {
+          "name": "Jacques Perrin",
+          "tmdb_id": 20030,
+          "character": "Maxence"
+        },
+        {
+          "name": "Gene Kelly",
+          "tmdb_id": 13294,
+          "character": "Andy Miller"
+        },
+        {
+          "name": "Danielle Darrieux",
+          "tmdb_id": 236016,
+          "character": "Yvonne Garnier"
+        },
+        {
+          "name": "Michel Piccoli",
+          "tmdb_id": 3784,
+          "character": "Simon Dame"
+        },
+        {
+          "name": "George Chakiris",
+          "tmdb_id": 24880,
+          "character": "Etienne"
+        },
+        {
+          "name": "Grover Dale",
+          "tmdb_id": 24881,
+          "character": "Bill"
+        }
+      ]
+    }
   },
   {
     "spine_number": 718,
     "title": "Donkey Skin (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "donkey-skin-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0066207",
+    "tmdb_id": 5590,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ghislain Cloquet",
+          "tmdb_id": 11988
+        }
+      ],
+      "editors": [
+        {
+          "name": "Anne-Marie Cotret",
+          "tmdb_id": 45532
+        }
+      ],
+      "cast": [
+        {
+          "name": "Catherine Deneuve",
+          "tmdb_id": 50,
+          "character": "Princess 'Donkey Skin'"
+        },
+        {
+          "name": "Jacques Perrin",
+          "tmdb_id": 20030,
+          "character": "Prince Charming"
+        },
+        {
+          "name": "Jean Marais",
+          "tmdb_id": 9741,
+          "character": "The King"
+        },
+        {
+          "name": "Delphine Seyrig",
+          "tmdb_id": 3508,
+          "character": "The Fairy"
+        },
+        {
+          "name": "Fernand Ledoux",
+          "tmdb_id": 34583,
+          "character": "The Red King"
+        },
+        {
+          "name": "Micheline Presle",
+          "tmdb_id": 34595,
+          "character": "The Red Queen"
+        },
+        {
+          "name": "Sacha Pitoëff",
+          "tmdb_id": 34594,
+          "character": "The Prime Minister"
+        },
+        {
+          "name": "Henri Crémieux",
+          "tmdb_id": 37990,
+          "character": "The Chief Doctor"
+        }
+      ]
+    }
   },
   {
     "spine_number": 719,
     "title": "Une chambre en ville (Jacques Demy box)",
-    "director": "",
+    "director": "Jacques Demy",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "une-chambre-en-ville-jacques-demy-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0084843",
+    "tmdb_id": 4269,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jacques Demy",
+          "tmdb_id": 24882
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean Penzer",
+          "tmdb_id": 34907
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sabine Mamou",
+          "tmdb_id": 1089799
+        }
+      ],
+      "cast": [
+        {
+          "name": "Dominique Sanda",
+          "tmdb_id": 24590,
+          "character": "Édith"
+        },
+        {
+          "name": "Richard Berry",
+          "tmdb_id": 35896,
+          "character": "François Guilbaud"
+        },
+        {
+          "name": "Michel Piccoli",
+          "tmdb_id": 3784,
+          "character": "Edmond Leroyer"
+        },
+        {
+          "name": "Fabienne Guyon",
+          "tmdb_id": 35897,
+          "character": "Violette Pelletier"
+        },
+        {
+          "name": "Anna Gaylor",
+          "tmdb_id": 34989,
+          "character": "Madame Pelletier"
+        },
+        {
+          "name": "Jean-François Stévenin",
+          "tmdb_id": 6304,
+          "character": "Dambiel"
+        },
+        {
+          "name": "Danielle Darrieux",
+          "tmdb_id": 236016,
+          "character": "Margot Langlois"
+        },
+        {
+          "name": "Jean-Louis Rolland",
+          "tmdb_id": 1169484,
+          "character": "Ménager"
+        }
+      ]
+    }
   },
   {
     "spine_number": 720,
@@ -50040,28 +51149,157 @@
   {
     "spine_number": 730,
     "title": "Jour de fête (Jacques Tati box)",
-    "director": "",
+    "director": "Jacques Tati",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "jour-de-fete-jacques-tati-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0040497",
+    "tmdb_id": 4595,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Tati",
+          "tmdb_id": 5763
+        }
+      ],
+      "writers": [
+        {
+          "name": "René Wheeler",
+          "tmdb_id": 14229
+        },
+        {
+          "name": "Jacques Tati",
+          "tmdb_id": 5763
+        },
+        {
+          "name": "Henri Marquet",
+          "tmdb_id": 38369
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jacques Mercanton",
+          "tmdb_id": 11562
+        }
+      ],
+      "editors": [
+        {
+          "name": "Marcel Morreau",
+          "tmdb_id": 1344603
+        }
+      ],
+      "cast": [
+        {
+          "name": "Jacques Tati",
+          "tmdb_id": 5763,
+          "character": "François the postman"
+        },
+        {
+          "name": "Guy Decomble",
+          "tmdb_id": 1656,
+          "character": "Roger"
+        },
+        {
+          "name": "Paul Frankeur",
+          "tmdb_id": 24684,
+          "character": "Marcel"
+        },
+        {
+          "name": "Santa Relli",
+          "tmdb_id": 38372,
+          "character": "Roger's wife"
+        },
+        {
+          "name": "Maine Vallée",
+          "tmdb_id": 38373,
+          "character": "Jeannette"
+        },
+        {
+          "name": "Roger Rafal",
+          "tmdb_id": 38375,
+          "character": "Hairdresser"
+        },
+        {
+          "name": "Jacques Beauvais",
+          "tmdb_id": 38376,
+          "character": "Cafe owner"
+        },
+        {
+          "name": "Delcassan",
+          "tmdb_id": 3430769,
+          "character": "Gossip"
+        }
+      ]
+    }
   },
   {
     "spine_number": 731,
     "title": "Parade (Jacques Tati box)",
-    "director": "",
+    "director": "Inès Sieulle",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "parade-jacques-tati-box",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 961648,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Inès Sieulle",
+          "tmdb_id": 3503622
+        }
+      ],
+      "writers": [
+        {
+          "name": "Inès Sieulle",
+          "tmdb_id": 3503622
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jorge Piquer Rodríguez",
+          "tmdb_id": 2213427
+        }
+      ],
+      "editors": [
+        {
+          "name": "Olivia Degrez",
+          "tmdb_id": 2738423
+        }
+      ],
+      "cast": [
+        {
+          "name": "Nicolette Picheral",
+          "tmdb_id": 2490902,
+          "character": ""
+        },
+        {
+          "name": "Jean-Pierre Ciantar",
+          "tmdb_id": 3503627,
+          "character": ""
+        },
+        {
+          "name": "Florence Lespet",
+          "tmdb_id": 3503628,
+          "character": ""
+        },
+        {
+          "name": "Caroline Coste",
+          "tmdb_id": 1945583,
+          "character": ""
+        },
+        {
+          "name": "Victor Charlot",
+          "tmdb_id": 3503629,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 732,
@@ -50255,28 +51493,164 @@
   {
     "spine_number": 734,
     "title": "The Shooting (Monte Hellman set)",
-    "director": "",
+    "director": "Monte Hellman",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-shooting-monte-hellman-set",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0062262",
+    "tmdb_id": 42701,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Monte Hellman",
+          "tmdb_id": 20921
+        }
+      ],
+      "writers": [
+        {
+          "name": "Carole Eastman",
+          "tmdb_id": 95782
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Gregory Sandor",
+          "tmdb_id": 1038559
+        }
+      ],
+      "editors": [
+        {
+          "name": "Monte Hellman",
+          "tmdb_id": 20921
+        }
+      ],
+      "cast": [
+        {
+          "name": "Warren Oates",
+          "tmdb_id": 8255,
+          "character": "Willett Gashade"
+        },
+        {
+          "name": "Will Hutchins",
+          "tmdb_id": 34660,
+          "character": "Coley Boyard"
+        },
+        {
+          "name": "Millie Perkins",
+          "tmdb_id": 26142,
+          "character": "Woman"
+        },
+        {
+          "name": "Jack Nicholson",
+          "tmdb_id": 514,
+          "character": "Billy Spear"
+        },
+        {
+          "name": "Charles Eastman",
+          "tmdb_id": 131311,
+          "character": "Bearded Man"
+        },
+        {
+          "name": "Guy El Tsosie",
+          "tmdb_id": 544142,
+          "character": "Indian"
+        },
+        {
+          "name": "Brandon Carroll",
+          "tmdb_id": 98633,
+          "character": "Sheriff"
+        },
+        {
+          "name": "B. J. Merholz",
+          "tmdb_id": 544143,
+          "character": "Leland Drum"
+        }
+      ]
+    }
   },
   {
     "spine_number": 735,
     "title": "Ride in the Whirlwind (Monte Hellman set)",
-    "director": "",
+    "director": "Monte Hellman",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "ride-in-the-whirlwind-monte-hellman-set",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0059653",
+    "tmdb_id": 60555,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Monte Hellman",
+          "tmdb_id": 20921
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jack Nicholson",
+          "tmdb_id": 514
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Gregory Sandor",
+          "tmdb_id": 1038559
+        }
+      ],
+      "editors": [
+        {
+          "name": "Monte Hellman",
+          "tmdb_id": 20921
+        }
+      ],
+      "cast": [
+        {
+          "name": "Cameron Mitchell",
+          "tmdb_id": 44728,
+          "character": "Vern"
+        },
+        {
+          "name": "Jack Nicholson",
+          "tmdb_id": 514,
+          "character": "Wes"
+        },
+        {
+          "name": "Millie Perkins",
+          "tmdb_id": 26142,
+          "character": "Abigail"
+        },
+        {
+          "name": "Katherine Squire",
+          "tmdb_id": 139612,
+          "character": "Catherine"
+        },
+        {
+          "name": "George Mitchell",
+          "tmdb_id": 30987,
+          "character": "Evan"
+        },
+        {
+          "name": "Rupert Crosse",
+          "tmdb_id": 157211,
+          "character": "Indian Joe"
+        },
+        {
+          "name": "Harry Dean Stanton",
+          "tmdb_id": 5048,
+          "character": "Blind Dick"
+        },
+        {
+          "name": "Tom Filer",
+          "tmdb_id": 102737,
+          "character": "Otis"
+        }
+      ]
+    }
   },
   {
     "spine_number": 736,
@@ -51452,28 +52826,129 @@
   {
     "spine_number": 751,
     "title": "Gates of Heaven (Errol Morris double feature)",
-    "director": "",
+    "director": "Errol Morris",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "gates-of-heaven-errol-morris-double-feature",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0077598",
+    "tmdb_id": 24998,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Errol Morris",
+          "tmdb_id": 18533
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Ned Burgess",
+          "tmdb_id": 1359558
+        }
+      ],
+      "editors": [
+        {
+          "name": "Errol Morris",
+          "tmdb_id": 18533
+        }
+      ],
+      "cast": [
+        {
+          "name": "Lucille Billingsley",
+          "tmdb_id": 938847,
+          "character": "Herself"
+        },
+        {
+          "name": "Zella Graham",
+          "tmdb_id": 938848,
+          "character": "Herself"
+        },
+        {
+          "name": "Cal Harberts",
+          "tmdb_id": 938849,
+          "character": "Himself"
+        },
+        {
+          "name": "Dan Harberts",
+          "tmdb_id": 938850,
+          "character": "Himself"
+        },
+        {
+          "name": "Phil Harberts",
+          "tmdb_id": 938852,
+          "character": "Himself"
+        },
+        {
+          "name": "Scottie Harberts",
+          "tmdb_id": 938853,
+          "character": "Himself"
+        },
+        {
+          "name": "Mike Koewler",
+          "tmdb_id": 938854,
+          "character": "Himself"
+        },
+        {
+          "name": "Floyd McClure",
+          "tmdb_id": 938855,
+          "character": "Himself"
+        }
+      ]
+    }
   },
   {
     "spine_number": 752,
     "title": "Vernon, Florida (Errol Morris double feature)",
-    "director": "",
+    "director": "Errol Morris",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "vernon-florida-errol-morris-double-feature",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0083281",
+    "tmdb_id": 30142,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Errol Morris",
+          "tmdb_id": 18533
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Ned Burgess",
+          "tmdb_id": 1359558
+        }
+      ],
+      "editors": [
+        {
+          "name": "Brad Fuller",
+          "tmdb_id": 1106909
+        }
+      ],
+      "cast": [
+        {
+          "name": "Albert Bitterling",
+          "tmdb_id": 1049246,
+          "character": "Himself"
+        },
+        {
+          "name": "Roscoe Collins",
+          "tmdb_id": 1049247,
+          "character": "Himself"
+        },
+        {
+          "name": "George Harris",
+          "tmdb_id": 2314486,
+          "character": "Himself"
+        }
+      ]
+    }
   },
   {
     "spine_number": 753,
@@ -53034,16 +54509,83 @@
   {
     "spine_number": 772,
     "title": "Blind Chance",
-    "director": null,
+    "director": "Krzysztof Kieślowski",
     "year": 1981,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28555-blind-chance",
     "film_id": "blind-chance",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0084549",
+    "tmdb_id": 127,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Krzysztof Kieślowski",
+          "tmdb_id": 1126
+        }
+      ],
+      "writers": [
+        {
+          "name": "Krzysztof Kieślowski",
+          "tmdb_id": 1126
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Krzysztof Pakulski",
+          "tmdb_id": 1397
+        }
+      ],
+      "editors": [
+        {
+          "name": "Elżbieta Kurkowska",
+          "tmdb_id": 1401
+        }
+      ],
+      "cast": [
+        {
+          "name": "Bogusław Linda",
+          "tmdb_id": 144972,
+          "character": "Witek Długosz"
+        },
+        {
+          "name": "Tadeusz Łomnicki",
+          "tmdb_id": 1413,
+          "character": "Werner (1)"
+        },
+        {
+          "name": "Zbigniew Zapasiewicz",
+          "tmdb_id": 1405,
+          "character": "Adam (1)"
+        },
+        {
+          "name": "Bogusława Pawelec",
+          "tmdb_id": 87234,
+          "character": "Czuszka (1)"
+        },
+        {
+          "name": "Marzena Trybała",
+          "tmdb_id": 1408,
+          "character": "Werka (2)"
+        },
+        {
+          "name": "Jacek Borkowski",
+          "tmdb_id": 1138653,
+          "character": "Marek (2)"
+        },
+        {
+          "name": "Jacek Sas-Uhrynowski",
+          "tmdb_id": 1544938,
+          "character": "Daniel (2)"
+        },
+        {
+          "name": "Adam Ferency",
+          "tmdb_id": 1409,
+          "character": "Priest Stefan (2)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 773,
@@ -53906,15 +55448,83 @@
   {
     "spine_number": 783,
     "title": "Pater Panchali (Apu Trilogy)",
-    "director": "",
+    "director": "Satyajit Ray",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "pater-panchali-apu-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0048473",
+    "tmdb_id": 5801,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Satyajit Ray",
+          "tmdb_id": 12160
+        }
+      ],
+      "writers": [
+        {
+          "name": "Satyajit Ray",
+          "tmdb_id": 12160
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Subrata Mitra",
+          "tmdb_id": 12166
+        }
+      ],
+      "editors": [
+        {
+          "name": "Dulal Dutta",
+          "tmdb_id": 12167
+        }
+      ],
+      "cast": [
+        {
+          "name": "Kanu Bannerjee",
+          "tmdb_id": 13762,
+          "character": "Harihar Ray"
+        },
+        {
+          "name": "Karuna Banerjee",
+          "tmdb_id": 13763,
+          "character": "Sarbojaya Ray"
+        },
+        {
+          "name": "Chunibala Devi",
+          "tmdb_id": 45593,
+          "character": "Indir Thakrun"
+        },
+        {
+          "name": "Uma Das Gupta",
+          "tmdb_id": 45591,
+          "character": "Durga Ray"
+        },
+        {
+          "name": "Subir Banerjee",
+          "tmdb_id": 45592,
+          "character": "Apurba \"Apu\" Kumar Ray"
+        },
+        {
+          "name": "Runki Banerjee",
+          "tmdb_id": 1559031,
+          "character": "Little Durga Ray"
+        },
+        {
+          "name": "Reba Devi",
+          "tmdb_id": 1409834,
+          "character": "Seja Thakrun"
+        },
+        {
+          "name": "Aparna Devi",
+          "tmdb_id": 1554963,
+          "character": "Nilmoni's Wife"
+        }
+      ]
+    }
   },
   {
     "spine_number": 784,
@@ -54979,22 +56589,46 @@
     "criterion_url": "",
     "film_id": "the-emigrants-jan-troell-double-feature",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 263181,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": []
+    }
   },
   {
     "spine_number": 797,
     "title": "The New Land (Jan Troell double feature)",
-    "director": "",
+    "director": "Marie-Monique Robin",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-new-land-jan-troell-double-feature",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1189345",
+    "tmdb_id": 27865,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Marie-Monique Robin",
+          "tmdb_id": 99200
+        }
+      ],
+      "writers": [
+        {
+          "name": "Marie-Monique Robin",
+          "tmdb_id": 99200
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": []
+    }
   },
   {
     "spine_number": 798,
@@ -56330,28 +57964,172 @@
   {
     "spine_number": 814,
     "title": "Alice in the Cities (Wim Wenders box)",
-    "director": "",
+    "director": "Wim Wenders",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "alice-in-the-cities-wim-wenders-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0069687",
+    "tmdb_id": 2204,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Wim Wenders",
+          "tmdb_id": 2303
+        }
+      ],
+      "writers": [
+        {
+          "name": "Wim Wenders",
+          "tmdb_id": 2303
+        },
+        {
+          "name": "Veith von Fürstenberg",
+          "tmdb_id": 22607
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Robby Müller",
+          "tmdb_id": 1632
+        }
+      ],
+      "editors": [
+        {
+          "name": "Peter Przygodda",
+          "tmdb_id": 2309
+        }
+      ],
+      "cast": [
+        {
+          "name": "Rüdiger Vogler",
+          "tmdb_id": 5266,
+          "character": "Philip Winter"
+        },
+        {
+          "name": "Yella Rottländer",
+          "tmdb_id": 22611,
+          "character": "Alice van Damm"
+        },
+        {
+          "name": "Lisa Kreuzer",
+          "tmdb_id": 22612,
+          "character": "Lisa van Damm"
+        },
+        {
+          "name": "Edda Köchl",
+          "tmdb_id": 22613,
+          "character": "Angela"
+        },
+        {
+          "name": "Ernest Boehm",
+          "tmdb_id": 22614,
+          "character": "Publisher"
+        },
+        {
+          "name": "Sam Presti",
+          "tmdb_id": 22615,
+          "character": "Car Dealer"
+        },
+        {
+          "name": "Lois Moran",
+          "tmdb_id": 22616,
+          "character": "Airport Hostess"
+        },
+        {
+          "name": "Didi Petrikat",
+          "tmdb_id": 2931162,
+          "character": "Woman at Swimming Park"
+        }
+      ]
+    }
   },
   {
     "spine_number": 815,
     "title": "Wrong Move (Wim Wenders box)",
-    "director": "",
+    "director": "Wim Wenders",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "wrong-move-wim-wenders-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0071483",
+    "tmdb_id": 20017,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Wim Wenders",
+          "tmdb_id": 2303
+        }
+      ],
+      "writers": [
+        {
+          "name": "Peter Handke",
+          "tmdb_id": 2305
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Robby Müller",
+          "tmdb_id": 1632
+        }
+      ],
+      "editors": [
+        {
+          "name": "Peter Przygodda",
+          "tmdb_id": 2309
+        },
+        {
+          "name": "Barbara von Weitershausen",
+          "tmdb_id": 57985
+        }
+      ],
+      "cast": [
+        {
+          "name": "Rüdiger Vogler",
+          "tmdb_id": 5266,
+          "character": "Wilhelm"
+        },
+        {
+          "name": "Hans Christian Blech",
+          "tmdb_id": 23694,
+          "character": "Laertes"
+        },
+        {
+          "name": "Hanna Schygulla",
+          "tmdb_id": 3734,
+          "character": "Therese"
+        },
+        {
+          "name": "Nastassja Kinski",
+          "tmdb_id": 2630,
+          "character": "Mignon"
+        },
+        {
+          "name": "Peter Kern",
+          "tmdb_id": 73671,
+          "character": "Landau"
+        },
+        {
+          "name": "Ivan Desny",
+          "tmdb_id": 9928,
+          "character": "Industrialist"
+        },
+        {
+          "name": "Marianne Hoppe",
+          "tmdb_id": 39755,
+          "character": "Mother"
+        },
+        {
+          "name": "Lisa Kreuzer",
+          "tmdb_id": 22612,
+          "character": "Janine"
+        }
+      ]
+    }
   },
   {
     "spine_number": 816,
@@ -56361,10 +58139,17 @@
     "country": "",
     "criterion_url": "",
     "film_id": "kings-of-the-road-wim-wenders-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt6387432",
+    "tmdb_id": 872093,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": []
+    }
   },
   {
     "spine_number": 817,
@@ -57802,15 +59587,83 @@
   {
     "spine_number": 833,
     "title": "Cat People (1942)",
-    "director": "",
+    "director": "Jacques Tourneur",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "cat-people-1942",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0034587",
+    "tmdb_id": 25508,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Tourneur",
+          "tmdb_id": 10146
+        }
+      ],
+      "writers": [
+        {
+          "name": "DeWitt Bodeen",
+          "tmdb_id": 48804
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Nicholas Musuraca",
+          "tmdb_id": 10150
+        }
+      ],
+      "editors": [
+        {
+          "name": "Mark Robson",
+          "tmdb_id": 19457
+        }
+      ],
+      "cast": [
+        {
+          "name": "Simone Simon",
+          "tmdb_id": 103781,
+          "character": "Irena Dubrovna Reed"
+        },
+        {
+          "name": "Kent Smith",
+          "tmdb_id": 51764,
+          "character": "Oliver Reed"
+        },
+        {
+          "name": "Tom Conway",
+          "tmdb_id": 48962,
+          "character": "Dr. Louis Judd"
+        },
+        {
+          "name": "Jane Randolph",
+          "tmdb_id": 30114,
+          "character": "Alice Moore"
+        },
+        {
+          "name": "Jack Holt",
+          "tmdb_id": 93910,
+          "character": "The Commodore"
+        },
+        {
+          "name": "Henrietta Burnside",
+          "tmdb_id": 1550939,
+          "character": "Sue Ellen (uncredited)"
+        },
+        {
+          "name": "Alec Craig",
+          "tmdb_id": 22606,
+          "character": "Zookeeper (uncredited)"
+        },
+        {
+          "name": "Eddie Dew",
+          "tmdb_id": 1230787,
+          "character": "Street Policeman (uncredited)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 834,
@@ -58089,16 +59942,86 @@
   {
     "spine_number": 837,
     "title": "Dekalog",
-    "director": null,
+    "director": "Kim Kee-duk",
     "year": 1988,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28661-dekalog",
     "film_id": "dekalog",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0061549",
+    "tmdb_id": 42699,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Kim Kee-duk",
+          "tmdb_id": 1286104
+        }
+      ],
+      "writers": [
+        {
+          "name": "Seo Yun-sung",
+          "tmdb_id": 1062360
+        },
+        {
+          "name": "Kim Kee-duk",
+          "tmdb_id": 1286104
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Seong-chun",
+          "tmdb_id": 1894768
+        },
+        {
+          "name": "Byeon In-jib",
+          "tmdb_id": 1506942
+        }
+      ],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Oh Yeong-il",
+          "tmdb_id": 2631742,
+          "character": "Ko Il-woo"
+        },
+        {
+          "name": "Nam Jeong-im",
+          "tmdb_id": 1065314,
+          "character": "Suna"
+        },
+        {
+          "name": "Lee Soon-jae",
+          "tmdb_id": 566367,
+          "character": "Yoo Kwang-nam"
+        },
+        {
+          "name": "Lee Kwang-ho",
+          "tmdb_id": 1065315,
+          "character": "Icho"
+        },
+        {
+          "name": "Cho Kyoung-min",
+          "tmdb_id": 1065316,
+          "character": "Yongary"
+        },
+        {
+          "name": "Moon Kang",
+          "tmdb_id": 2631745,
+          "character": "Kim Yu-ri"
+        },
+        {
+          "name": "Twist Kim",
+          "tmdb_id": 1197140,
+          "character": "Soldier"
+        },
+        {
+          "name": "Kim Shin-jae",
+          "tmdb_id": 1556170,
+          "character": "Kim Yu-ir's Mother"
+        }
+      ]
+    }
   },
   {
     "spine_number": 838,
@@ -59412,15 +61335,83 @@
   {
     "spine_number": 854,
     "title": "The Tree of Wooden Clogs (originally announced as 841 but delayed)",
-    "director": "",
+    "director": "Ermanno Olmi",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-tree-of-wooden-clogs-originally-announced-as-841-but-delayed",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0077138",
+    "tmdb_id": 31542,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Ermanno Olmi",
+          "tmdb_id": 27213
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ermanno Olmi",
+          "tmdb_id": 27213
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ermanno Olmi",
+          "tmdb_id": 27213
+        }
+      ],
+      "editors": [
+        {
+          "name": "Ermanno Olmi",
+          "tmdb_id": 27213
+        }
+      ],
+      "cast": [
+        {
+          "name": "Luigi Ornaghi",
+          "tmdb_id": 1037917,
+          "character": "Batistì"
+        },
+        {
+          "name": "Francesca Moriggi",
+          "tmdb_id": 1037918,
+          "character": "Batistina"
+        },
+        {
+          "name": "Omar Brignoli",
+          "tmdb_id": 1037919,
+          "character": "Minec"
+        },
+        {
+          "name": "Antonio Ferrari",
+          "tmdb_id": 1037920,
+          "character": "Tuni"
+        },
+        {
+          "name": "Teresa Brescianini",
+          "tmdb_id": 1037921,
+          "character": "Widow Runk"
+        },
+        {
+          "name": "Giuseppe Brignoli",
+          "tmdb_id": 1037922,
+          "character": "Anselmo"
+        },
+        {
+          "name": "Carlo Rota",
+          "tmdb_id": 2623590,
+          "character": "Peppino"
+        },
+        {
+          "name": "Pasqualina Brolis",
+          "tmdb_id": 1037923,
+          "character": "Teresina"
+        }
+      ]
+    }
   },
   {
     "spine_number": 855,
@@ -59522,41 +61513,269 @@
   {
     "spine_number": 857,
     "title": "Before Sunrise (The Before Trilogy)",
-    "director": "",
+    "director": "Richard Linklater",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "before-sunrise-the-before-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0112471",
+    "tmdb_id": 76,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        }
+      ],
+      "writers": [
+        {
+          "name": "Kim Krizan",
+          "tmdb_id": 568
+        },
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Daniel",
+          "tmdb_id": 576
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sandra Adair",
+          "tmdb_id": 580
+        },
+        {
+          "name": "Sheri Galloway",
+          "tmdb_id": 582
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ethan Hawke",
+          "tmdb_id": 569,
+          "character": "Jesse"
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146,
+          "character": "Céline"
+        },
+        {
+          "name": "Andrea Eckert",
+          "tmdb_id": 571,
+          "character": "Wife on Train"
+        },
+        {
+          "name": "Hanno Pöschl",
+          "tmdb_id": 572,
+          "character": "Husband on Train"
+        },
+        {
+          "name": "Karl Bruckschwaiger",
+          "tmdb_id": 573,
+          "character": "Guy on Bridge"
+        },
+        {
+          "name": "Tex Rubinowitz",
+          "tmdb_id": 574,
+          "character": "Guy on Bridge"
+        },
+        {
+          "name": "Erni Mangold",
+          "tmdb_id": 146859,
+          "character": "Palm Reader"
+        },
+        {
+          "name": "Dominik Castell",
+          "tmdb_id": 3735,
+          "character": "Street Poet"
+        }
+      ]
+    }
   },
   {
     "spine_number": 858,
     "title": "Before Sunset (The Before Trilogy)",
-    "director": "",
+    "director": "Richard Linklater",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "before-sunset-the-before-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0381681",
+    "tmdb_id": 80,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        }
+      ],
+      "writers": [
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146
+        },
+        {
+          "name": "Ethan Hawke",
+          "tmdb_id": 569
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Daniel",
+          "tmdb_id": 576
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sandra Adair",
+          "tmdb_id": 580
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ethan Hawke",
+          "tmdb_id": 569,
+          "character": "Jesse"
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146,
+          "character": "Céline"
+        },
+        {
+          "name": "Vernon Dobtcheff",
+          "tmdb_id": 649,
+          "character": "Bookstore Manager"
+        },
+        {
+          "name": "Louise Lemoine Torrès",
+          "tmdb_id": 651,
+          "character": "Journalist #1"
+        },
+        {
+          "name": "Rodolphe Pauly",
+          "tmdb_id": 654,
+          "character": "Journalist #2"
+        },
+        {
+          "name": "Mariane Plasteig",
+          "tmdb_id": 657,
+          "character": "Waitress"
+        },
+        {
+          "name": "Diabolo",
+          "tmdb_id": 3728,
+          "character": "Philippe"
+        },
+        {
+          "name": "Denis Evrard",
+          "tmdb_id": 3729,
+          "character": "Boat Attendant"
+        }
+      ]
+    }
   },
   {
     "spine_number": 859,
     "title": "Before Midnight (The Before Trilogy)",
-    "director": "",
+    "director": "Richard Linklater",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "before-midnight-the-before-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt2209418",
+    "tmdb_id": 132344,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        }
+      ],
+      "writers": [
+        {
+          "name": "Richard Linklater",
+          "tmdb_id": 564
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146
+        },
+        {
+          "name": "Ethan Hawke",
+          "tmdb_id": 569
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Christos Voudouris",
+          "tmdb_id": 1140266
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sandra Adair",
+          "tmdb_id": 580
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ethan Hawke",
+          "tmdb_id": 569,
+          "character": "Jesse"
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146,
+          "character": "Céline"
+        },
+        {
+          "name": "Seamus Davey-Fitzpatrick",
+          "tmdb_id": 12042,
+          "character": "Hank"
+        },
+        {
+          "name": "Jennifer Prior",
+          "tmdb_id": 1140264,
+          "character": "Ella"
+        },
+        {
+          "name": "Charlotte Prior",
+          "tmdb_id": 1140265,
+          "character": "Nina"
+        },
+        {
+          "name": "Xenia Kalogeropoulou",
+          "tmdb_id": 1117999,
+          "character": "Natalia"
+        },
+        {
+          "name": "Walter Lassally",
+          "tmdb_id": 36967,
+          "character": "Patrick"
+        },
+        {
+          "name": "Ariane Labed",
+          "tmdb_id": 235125,
+          "character": "Anna"
+        }
+      ]
+    }
   },
   {
     "spine_number": 860,
@@ -60734,80 +62953,524 @@
   {
     "spine_number": 874,
     "title": "Insiang (World Cinema Project No. 2)",
-    "director": "",
+    "director": "Lino Brocka",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "insiang-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0077740",
+    "tmdb_id": 108949,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Lino Brocka",
+          "tmdb_id": 535191
+        }
+      ],
+      "writers": [
+        {
+          "name": "Lamberto E. Antonio",
+          "tmdb_id": 1122699
+        },
+        {
+          "name": "Mario O'Hara",
+          "tmdb_id": 1028931
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Conrado Baltazar",
+          "tmdb_id": 1186139
+        }
+      ],
+      "editors": [
+        {
+          "name": "Augusto Salvador",
+          "tmdb_id": 1028947
+        }
+      ],
+      "cast": [
+        {
+          "name": "Hilda Koronel",
+          "tmdb_id": 142961,
+          "character": "Insiang"
+        },
+        {
+          "name": "Mona Lisa",
+          "tmdb_id": 1078825,
+          "character": "Tonya"
+        },
+        {
+          "name": "Ruel Vernal",
+          "tmdb_id": 1028868,
+          "character": "Dado"
+        },
+        {
+          "name": "Rez Cortez",
+          "tmdb_id": 557552,
+          "character": "Bebot"
+        },
+        {
+          "name": "Marlon Ramirez",
+          "tmdb_id": 1760143,
+          "character": "Nanding Karyas"
+        },
+        {
+          "name": "Nina Lorenzo",
+          "tmdb_id": 1028942,
+          "character": "Ludy Karyas"
+        },
+        {
+          "name": "Mely Mallari",
+          "tmdb_id": 1028941,
+          "character": "Tonya's Sister-in-Law"
+        },
+        {
+          "name": "Carpi Asturias",
+          "tmdb_id": 1341094,
+          "character": "Mr. Karyas"
+        }
+      ]
+    }
   },
   {
     "spine_number": 875,
     "title": "Mysterious Object at Noon (World Cinema Project No. 2)",
-    "director": "",
+    "director": "Apichatpong Weerasethakul",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "mysterious-object-at-noon-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0269587",
+    "tmdb_id": 93553,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Apichatpong Weerasethakul",
+          "tmdb_id": 69759
+        }
+      ],
+      "writers": [
+        {
+          "name": "Apichatpong Weerasethakul",
+          "tmdb_id": 69759
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Apichatpong Weerasethakul",
+          "tmdb_id": 69759
+        },
+        {
+          "name": "Prasong Klimborron",
+          "tmdb_id": 2199484
+        },
+        {
+          "name": "Sayombhu Mukdeeprom",
+          "tmdb_id": 470995
+        }
+      ],
+      "editors": [
+        {
+          "name": "Tony Morias",
+          "tmdb_id": 4398835
+        },
+        {
+          "name": "Apichatpong Weerasethakul",
+          "tmdb_id": 69759
+        },
+        {
+          "name": "Mingmongkol Sonakul",
+          "tmdb_id": 1601495
+        }
+      ],
+      "cast": [
+        {
+          "name": "Duangjai Hiransri",
+          "tmdb_id": 3278336,
+          "character": "Dogfahr 1"
+        },
+        {
+          "name": "Somsri Pinyopol",
+          "tmdb_id": 1601502,
+          "character": "Dogfahr 2"
+        },
+        {
+          "name": "Kannikar Narong",
+          "tmdb_id": 1601505,
+          "character": "Dogfahr 3"
+        },
+        {
+          "name": "To Hanudomlapr",
+          "tmdb_id": 1601504,
+          "character": ""
+        },
+        {
+          "name": "Kongkiat Khomsiri",
+          "tmdb_id": 80733,
+          "character": ""
+        },
+        {
+          "name": "Jaruwan Techasatiern",
+          "tmdb_id": 1601529,
+          "character": "Doctor"
+        },
+        {
+          "name": "Thanit Niyomprasit",
+          "tmdb_id": 1601550,
+          "character": "Crippled Boy 2"
+        },
+        {
+          "name": "Chakree Duangklao",
+          "tmdb_id": 4398838,
+          "character": "Neighbour"
+        }
+      ]
+    }
   },
   {
     "spine_number": 876,
     "title": "Revenge (World Cinema Project No. 2)",
-    "director": "",
+    "director": "Rachid Bouchareb",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "revenge-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1227787",
+    "tmdb_id": 39358,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Rachid Bouchareb",
+          "tmdb_id": 20665
+        }
+      ],
+      "writers": [
+        {
+          "name": "Zoé Galeron",
+          "tmdb_id": 125968
+        },
+        {
+          "name": "Rachid Bouchareb",
+          "tmdb_id": 20665
+        },
+        {
+          "name": "Olivier Lorelle",
+          "tmdb_id": 96290
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jérôme Alméras",
+          "tmdb_id": 54287
+        }
+      ],
+      "editors": [
+        {
+          "name": "Yannick Kergoat",
+          "tmdb_id": 19379
+        }
+      ],
+      "cast": [
+        {
+          "name": "Brenda Blethyn",
+          "tmdb_id": 4154,
+          "character": "Elisabeth"
+        },
+        {
+          "name": "Sotigui Kouyaté",
+          "tmdb_id": 125970,
+          "character": "Ousmane"
+        },
+        {
+          "name": "Sami Bouajila",
+          "tmdb_id": 20667,
+          "character": "Imam"
+        },
+        {
+          "name": "Roschdy Zem",
+          "tmdb_id": 20442,
+          "character": "Le Boucher"
+        },
+        {
+          "name": "Francis Magee",
+          "tmdb_id": 39661,
+          "character": "Inspecteur anglais"
+        },
+        {
+          "name": "Bernard Blancan",
+          "tmdb_id": 20668,
+          "character": "Ouvrier Forestier"
+        },
+        {
+          "name": "Marc Baylis",
+          "tmdb_id": 1215211,
+          "character": "Edward"
+        },
+        {
+          "name": "Gareth Randall",
+          "tmdb_id": 1630987,
+          "character": "Pasteur"
+        }
+      ]
+    }
   },
   {
     "spine_number": 877,
     "title": "Limite (World Cinema Project No. 2)",
-    "director": "",
+    "director": "George Nicholas",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "limite-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt27622496",
+    "tmdb_id": 1217240,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "George Nicholas",
+          "tmdb_id": 3525586
+        }
+      ],
+      "writers": [
+        {
+          "name": "George Nicholas",
+          "tmdb_id": 3525586
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Julián Estrada",
+          "tmdb_id": 1657247
+        }
+      ],
+      "editors": [
+        {
+          "name": "Bohos Topakbashian",
+          "tmdb_id": 2439140
+        }
+      ],
+      "cast": [
+        {
+          "name": "Gustavo Cruz",
+          "tmdb_id": 3182148,
+          "character": "Manuel"
+        },
+        {
+          "name": "Jorge Domínguez Cerdá",
+          "tmdb_id": 5364714,
+          "character": "Manuel Sr."
+        },
+        {
+          "name": "Leah Finity",
+          "tmdb_id": 2156381,
+          "character": "Officer Adams"
+        },
+        {
+          "name": "Carla Culebro",
+          "tmdb_id": 4175667,
+          "character": "Maria"
+        },
+        {
+          "name": "Zoni Medina",
+          "tmdb_id": 4004773,
+          "character": "Alfonso"
+        },
+        {
+          "name": "Eduardo Gómez",
+          "tmdb_id": 5346813,
+          "character": "Rodolfo"
+        },
+        {
+          "name": "Ben-Hur Monreal",
+          "tmdb_id": 5364727,
+          "character": "Giovani"
+        },
+        {
+          "name": "Lylia Cyrum",
+          "tmdb_id": 5364728,
+          "character": "Woman at border line"
+        }
+      ]
+    }
   },
   {
     "spine_number": 878,
     "title": "Law of the Border (World Cinema Project No. 2)",
-    "director": "",
+    "director": "Lütfi Akad",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "law-of-the-border-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0261739",
+    "tmdb_id": 197297,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Lütfi Akad",
+          "tmdb_id": 1007638
+        }
+      ],
+      "writers": [
+        {
+          "name": "Lütfi Akad",
+          "tmdb_id": 1007638
+        },
+        {
+          "name": "Yılmaz Güney",
+          "tmdb_id": 145352
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ali Uğur",
+          "tmdb_id": 1200606
+        }
+      ],
+      "editors": [
+        {
+          "name": "Ali Ün",
+          "tmdb_id": 2674429
+        }
+      ],
+      "cast": [
+        {
+          "name": "Yılmaz Güney",
+          "tmdb_id": 145352,
+          "character": "Hıdır"
+        },
+        {
+          "name": "Pervin Par",
+          "tmdb_id": 1320031,
+          "character": "Ayşe, the teacher"
+        },
+        {
+          "name": "Erol Taş",
+          "tmdb_id": 228612,
+          "character": "Ali Cello"
+        },
+        {
+          "name": "Tuncel Kurtiz",
+          "tmdb_id": 20728,
+          "character": "Bekir"
+        },
+        {
+          "name": "Tuncer Necmioğlu",
+          "tmdb_id": 1325477,
+          "character": "Aziz"
+        },
+        {
+          "name": "Muharrem Gürses",
+          "tmdb_id": 1052880,
+          "character": "Duran Ağa"
+        },
+        {
+          "name": "Aydemir Akbaş",
+          "tmdb_id": 143304,
+          "character": "Abuzer"
+        },
+        {
+          "name": "Sırrı Elitaş",
+          "tmdb_id": 1078374,
+          "character": "İsmail"
+        }
+      ]
+    }
   },
   {
     "spine_number": 879,
     "title": "Taipei Story (World Cinema Project No. 2)",
-    "director": "",
+    "director": "KEFF",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "taipei-story-world-cinema-project-no-2",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt11232334",
+    "tmdb_id": 741780,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "KEFF",
+          "tmdb_id": 2500820
+        }
+      ],
+      "writers": [
+        {
+          "name": "KEFF",
+          "tmdb_id": 2500820
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Kao Tzu-Hao",
+          "tmdb_id": 2405759
+        }
+      ],
+      "editors": [
+        {
+          "name": "Ge Zhai",
+          "tmdb_id": 2480538
+        },
+        {
+          "name": "KEFF",
+          "tmdb_id": 2500820
+        }
+      ],
+      "cast": [
+        {
+          "name": "Vivian Sung",
+          "tmdb_id": 1354895,
+          "character": "Jun-Ting"
+        },
+        {
+          "name": "Tender Huang",
+          "tmdb_id": 231749,
+          "character": "Zhi-Hao"
+        },
+        {
+          "name": "Ming-shiou Tsai",
+          "tmdb_id": 1514559,
+          "character": "Shi-Yi"
+        },
+        {
+          "name": "Pan Chin-Yu",
+          "tmdb_id": 2831852,
+          "character": "A-Fang"
+        },
+        {
+          "name": "Li Chia-Chen",
+          "tmdb_id": 3231686,
+          "character": "Supervisor"
+        },
+        {
+          "name": "Snoopy Yu",
+          "tmdb_id": 3475636,
+          "character": "An-Ming"
+        },
+        {
+          "name": "Mu-Yao Lu",
+          "tmdb_id": 4119342,
+          "character": "Jia-Wei"
+        },
+        {
+          "name": "Chung Yu-Lin",
+          "tmdb_id": 2436946,
+          "character": "Hotel Staff"
+        }
+      ]
+    }
   },
   {
     "spine_number": 880,
@@ -60905,28 +63568,164 @@
   {
     "spine_number": 882,
     "title": "Marius (Marseille Trilogy)",
-    "director": "",
+    "director": "Alexander Korda",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "marius-marseille-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0022125",
+    "tmdb_id": 42818,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Alexander Korda",
+          "tmdb_id": 2490
+        }
+      ],
+      "writers": [
+        {
+          "name": "Marcel Pagnol",
+          "tmdb_id": 38393
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Theodore J. Pahle",
+          "tmdb_id": 106015
+        }
+      ],
+      "editors": [
+        {
+          "name": "Roger Spiri-Mercaton",
+          "tmdb_id": 1611769
+        }
+      ],
+      "cast": [
+        {
+          "name": "Raimu",
+          "tmdb_id": 239231,
+          "character": "César Ollivier"
+        },
+        {
+          "name": "Pierre Fresnay",
+          "tmdb_id": 11546,
+          "character": "Marius Ollivier, fils de César"
+        },
+        {
+          "name": "Orane Demazis",
+          "tmdb_id": 564273,
+          "character": "Fanny Cabanis, fille d'Honorine"
+        },
+        {
+          "name": "Fernand Charpin",
+          "tmdb_id": 94939,
+          "character": "Maître Honoré Panisse"
+        },
+        {
+          "name": "Robert Vattier",
+          "tmdb_id": 117901,
+          "character": "Monsieur Brun"
+        },
+        {
+          "name": "Paul Dullac",
+          "tmdb_id": 588717,
+          "character": "Félix Escartefigue"
+        },
+        {
+          "name": "Alida Rouffe",
+          "tmdb_id": 584135,
+          "character": "Honorine Cabanis"
+        },
+        {
+          "name": "Alexandre Mihalesco",
+          "tmdb_id": 11600,
+          "character": "Piquoiseau"
+        }
+      ]
+    }
   },
   {
     "spine_number": 883,
     "title": "Fanny (Marseille Trilogy)",
-    "director": "",
+    "director": "Daniel Auteuil",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "fanny-marseille-trilogy",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1872101",
+    "tmdb_id": 201018,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Daniel Auteuil",
+          "tmdb_id": 6012
+        }
+      ],
+      "writers": [
+        {
+          "name": "Daniel Auteuil",
+          "tmdb_id": 6012
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean-François Robin",
+          "tmdb_id": 20791
+        }
+      ],
+      "editors": [
+        {
+          "name": "Joëlle Hache",
+          "tmdb_id": 35394
+        }
+      ],
+      "cast": [
+        {
+          "name": "Daniel Auteuil",
+          "tmdb_id": 6012,
+          "character": "César Olivier"
+        },
+        {
+          "name": "Victoire Bélézy",
+          "tmdb_id": 1182171,
+          "character": "Fanny Cabanis"
+        },
+        {
+          "name": "Jean-Pierre Darroussin",
+          "tmdb_id": 28463,
+          "character": "Honoré Panisse"
+        },
+        {
+          "name": "Raphaël Personnaz",
+          "tmdb_id": 147041,
+          "character": "Marius Olivier"
+        },
+        {
+          "name": "Marie-Anne Chazel",
+          "tmdb_id": 64913,
+          "character": "Honorine Cabanis"
+        },
+        {
+          "name": "Nicolas Vaude",
+          "tmdb_id": 238460,
+          "character": "Mr. Brun"
+        },
+        {
+          "name": "Daniel Russo",
+          "tmdb_id": 2197,
+          "character": "Félix Escartefigue"
+        },
+        {
+          "name": "Ariane Ascaride",
+          "tmdb_id": 72590,
+          "character": "Claudine Foulon"
+        }
+      ]
+    }
   },
   {
     "spine_number": 884,
@@ -60937,9 +63736,22 @@
     "criterion_url": "",
     "film_id": "cesar-marseille-trilogy",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 942683,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Antoine de Caunes",
+          "tmdb_id": 46280,
+          "character": "Self"
+        }
+      ]
+    }
   },
   {
     "spine_number": 885,
@@ -64762,67 +67574,435 @@
   {
     "spine_number": 931,
     "title": "Morocco (Dietrich box)",
-    "director": "",
+    "director": "Josef von Sternberg",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "morocco-dietrich-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0021156",
+    "tmdb_id": 42641,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "writers": [
+        {
+          "name": "Benno Vigny",
+          "tmdb_id": 590605
+        },
+        {
+          "name": "Jules Furthman",
+          "tmdb_id": 4297
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lucien Ballard",
+          "tmdb_id": 3351
+        },
+        {
+          "name": "Lee Garmes",
+          "tmdb_id": 13338
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sam Winston",
+          "tmdb_id": 2894
+        }
+      ],
+      "cast": [
+        {
+          "name": "Gary Cooper",
+          "tmdb_id": 4068,
+          "character": "Légionnaire Tom Brown"
+        },
+        {
+          "name": "Marlene Dietrich",
+          "tmdb_id": 2896,
+          "character": "Mademoiselle Amy Jolly"
+        },
+        {
+          "name": "Adolphe Menjou",
+          "tmdb_id": 14563,
+          "character": "Monsieur La Bessiere"
+        },
+        {
+          "name": "Ullrich Haupt",
+          "tmdb_id": 1973717,
+          "character": "Adjudant Caesar"
+        },
+        {
+          "name": "Eve Southern",
+          "tmdb_id": 1050223,
+          "character": "Madame Caesar"
+        },
+        {
+          "name": "Francis McDonald",
+          "tmdb_id": 102327,
+          "character": "Sergeant Tatoche"
+        },
+        {
+          "name": "Paul Porcasi",
+          "tmdb_id": 115770,
+          "character": "Lo Tinto"
+        },
+        {
+          "name": "Émile Chautard",
+          "tmdb_id": 13346,
+          "character": "French General (uncredited)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 932,
     "title": "Dishonored (Dietrich box)",
-    "director": "",
+    "director": "Josef von Sternberg",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "dishonored-dietrich-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0021800",
+    "tmdb_id": 73420,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "writers": [
+        {
+          "name": "Daniel Nathan Rubin",
+          "tmdb_id": 568984
+        },
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Garmes",
+          "tmdb_id": 13338
+        }
+      ],
+      "editors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "cast": [
+        {
+          "name": "Marlene Dietrich",
+          "tmdb_id": 2896,
+          "character": "Magda / X27"
+        },
+        {
+          "name": "Victor McLaglen",
+          "tmdb_id": 30495,
+          "character": "Colonel Kranau"
+        },
+        {
+          "name": "Gustav von Seyffertitz",
+          "tmdb_id": 13345,
+          "character": "Austrian Secret Service Chief"
+        },
+        {
+          "name": "Warner Oland",
+          "tmdb_id": 13342,
+          "character": "Colonel von Hindau"
+        },
+        {
+          "name": "Lew Cody",
+          "tmdb_id": 150191,
+          "character": "Colonel Kovrin"
+        },
+        {
+          "name": "Barry Norton",
+          "tmdb_id": 148852,
+          "character": "Young Lieutenant - Firing Squad"
+        },
+        {
+          "name": "Max Barwyn",
+          "tmdb_id": 945918,
+          "character": "Colonel Kranau's Aide"
+        },
+        {
+          "name": "B.F. Blinn",
+          "tmdb_id": 63382,
+          "character": "Gambler with Glasses"
+        }
+      ]
+    }
   },
   {
     "spine_number": 933,
     "title": "Shanghai Express (Dietrich box)",
-    "director": "",
+    "director": "Josef von Sternberg",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "shanghai-express-dietrich-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0023458",
+    "tmdb_id": 875,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jules Furthman",
+          "tmdb_id": 4297
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Garmes",
+          "tmdb_id": 13338
+        }
+      ],
+      "editors": [
+        {
+          "name": "Frank Sullivan",
+          "tmdb_id": 14679
+        }
+      ],
+      "cast": [
+        {
+          "name": "Marlene Dietrich",
+          "tmdb_id": 2896,
+          "character": "Shanghai Lily"
+        },
+        {
+          "name": "Clive Brook",
+          "tmdb_id": 13340,
+          "character": "Captain Donald 'Doc' Harvey"
+        },
+        {
+          "name": "Anna May Wong",
+          "tmdb_id": 13341,
+          "character": "Hui Fei"
+        },
+        {
+          "name": "Warner Oland",
+          "tmdb_id": 13342,
+          "character": "Mr. Henry Chang"
+        },
+        {
+          "name": "Eugene Pallette",
+          "tmdb_id": 8728,
+          "character": "Sam Salt"
+        },
+        {
+          "name": "Lawrence Grant",
+          "tmdb_id": 13343,
+          "character": "Reverend Carmichael"
+        },
+        {
+          "name": "Louise Closser Hale",
+          "tmdb_id": 13344,
+          "character": "Mrs. Haggerty"
+        },
+        {
+          "name": "Gustav von Seyffertitz",
+          "tmdb_id": 13345,
+          "character": "Eric Baum"
+        }
+      ]
+    }
   },
   {
     "spine_number": 934,
     "title": "Blonde Venus (Dietrich box)",
-    "director": "",
+    "director": "Josef von Sternberg",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "blonde-venus-dietrich-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0022698",
+    "tmdb_id": 34474,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "writers": [
+        {
+          "name": "S.K. Lauren",
+          "tmdb_id": 117851
+        },
+        {
+          "name": "Jules Furthman",
+          "tmdb_id": 4297
+        },
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Bert Glennon",
+          "tmdb_id": 14960
+        }
+      ],
+      "editors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "cast": [
+        {
+          "name": "Marlene Dietrich",
+          "tmdb_id": 2896,
+          "character": "Helen Faraday, aka Helen Jones"
+        },
+        {
+          "name": "Herbert Marshall",
+          "tmdb_id": 2435,
+          "character": "Edward 'Ned' Faraday"
+        },
+        {
+          "name": "Cary Grant",
+          "tmdb_id": 2638,
+          "character": "Nick Townsend"
+        },
+        {
+          "name": "Dickie Moore",
+          "tmdb_id": 10165,
+          "character": "Johnny Faraday"
+        },
+        {
+          "name": "Gene Morgan",
+          "tmdb_id": 145828,
+          "character": "Ben Smith"
+        },
+        {
+          "name": "Rita La Roy",
+          "tmdb_id": 121116,
+          "character": "'Taxi Belle' Hooper"
+        },
+        {
+          "name": "Robert Emmett O'Connor",
+          "tmdb_id": 10806,
+          "character": "Dan O'Connor"
+        },
+        {
+          "name": "Sidney Toler",
+          "tmdb_id": 34747,
+          "character": "Detective Wilson"
+        }
+      ]
+    }
   },
   {
     "spine_number": 935,
     "title": "The Devil Is a Woman (Dietrich box)",
-    "director": "",
+    "director": "Josef von Sternberg",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-devil-is-a-woman-dietrich-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0026276",
+    "tmdb_id": 42943,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "writers": [
+        {
+          "name": "David Hertz",
+          "tmdb_id": 85903
+        },
+        {
+          "name": "Oran Schee",
+          "tmdb_id": 3062424
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lucien Ballard",
+          "tmdb_id": 3351
+        },
+        {
+          "name": "Josef von Sternberg",
+          "tmdb_id": 2891
+        }
+      ],
+      "editors": [
+        {
+          "name": "Sam Winston",
+          "tmdb_id": 2894
+        }
+      ],
+      "cast": [
+        {
+          "name": "Marlene Dietrich",
+          "tmdb_id": 2896,
+          "character": "Concha Perez"
+        },
+        {
+          "name": "Lionel Atwill",
+          "tmdb_id": 2495,
+          "character": "Capt. Don Pasqual 'Pasqualito' Costelar"
+        },
+        {
+          "name": "Edward Everett Horton",
+          "tmdb_id": 2437,
+          "character": "Gov. Don Paquito 'Paquitito'"
+        },
+        {
+          "name": "Alison Skipworth",
+          "tmdb_id": 131234,
+          "character": "Senora Perez"
+        },
+        {
+          "name": "Cesar Romero",
+          "tmdb_id": 4355,
+          "character": "Antonio Galvan"
+        },
+        {
+          "name": "Don Alvarado",
+          "tmdb_id": 85426,
+          "character": "Morenito"
+        },
+        {
+          "name": "Tempe Pigott",
+          "tmdb_id": 29603,
+          "character": "Tuerta (as Tempe Piggott)"
+        },
+        {
+          "name": "Francisco Moreno",
+          "tmdb_id": 1294709,
+          "character": "Alphonso (as Paco Moreno)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 936,
@@ -73287,80 +76467,481 @@
   {
     "spine_number": 1045,
     "title": "Lucía (World Cinema Project No. 3)",
-    "director": "",
+    "director": "Julio Medem",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "lucia-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0254455",
+    "tmdb_id": 1364,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Julio Medem",
+          "tmdb_id": 16435
+        }
+      ],
+      "writers": [
+        {
+          "name": "Julio Medem",
+          "tmdb_id": 16435
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Kiko de la Rica",
+          "tmdb_id": 16437
+        }
+      ],
+      "editors": [
+        {
+          "name": "Iván Aledo",
+          "tmdb_id": 16438
+        }
+      ],
+      "cast": [
+        {
+          "name": "Paz Vega",
+          "tmdb_id": 3627,
+          "character": "Lucía"
+        },
+        {
+          "name": "Tristán Ulloa",
+          "tmdb_id": 16441,
+          "character": "Lorenzo"
+        },
+        {
+          "name": "Elena Anaya",
+          "tmdb_id": 3623,
+          "character": "Belén"
+        },
+        {
+          "name": "Najwa Nimri",
+          "tmdb_id": 16442,
+          "character": "Elena"
+        },
+        {
+          "name": "Daniel Freire",
+          "tmdb_id": 16443,
+          "character": "Carlos/Antonio"
+        },
+        {
+          "name": "Silvia Llanos",
+          "tmdb_id": 16444,
+          "character": "Luna"
+        },
+        {
+          "name": "Diana Suárez",
+          "tmdb_id": 16445,
+          "character": "Madre de Belén"
+        },
+        {
+          "name": "Javier Cámara",
+          "tmdb_id": 1610,
+          "character": "Pepe"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1046,
     "title": "After the Curfew (World Cinema Project No. 3)",
-    "director": "",
+    "director": "Usmar Ismail",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "after-the-curfew-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0045997",
+    "tmdb_id": 172597,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Usmar Ismail",
+          "tmdb_id": 1155189
+        }
+      ],
+      "writers": [
+        {
+          "name": "Asrul Sani",
+          "tmdb_id": 1155192
+        },
+        {
+          "name": "Asrul Sani",
+          "tmdb_id": 1155192
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Max Tera",
+          "tmdb_id": 1155190
+        }
+      ],
+      "editors": [
+        {
+          "name": "Djohar Sjafi",
+          "tmdb_id": 3042841
+        },
+        {
+          "name": "Soemardjono",
+          "tmdb_id": 1155193
+        }
+      ],
+      "cast": [
+        {
+          "name": "A.N. Alcaff",
+          "tmdb_id": 1155195,
+          "character": "Iskandar"
+        },
+        {
+          "name": "Netty Herawaty",
+          "tmdb_id": 1155196,
+          "character": "Norma"
+        },
+        {
+          "name": "Bambang Hermanto",
+          "tmdb_id": 1184059,
+          "character": "Puja"
+        },
+        {
+          "name": "Titien Sumarni",
+          "tmdb_id": 2970480,
+          "character": "Ida"
+        },
+        {
+          "name": "Aedy Moward",
+          "tmdb_id": 1689793,
+          "character": "Adlin"
+        },
+        {
+          "name": "R.D. Ismail",
+          "tmdb_id": 1155197,
+          "character": "Gunawan"
+        },
+        {
+          "name": "Dhalia",
+          "tmdb_id": 1689845,
+          "character": "Laila"
+        },
+        {
+          "name": "Awaludin",
+          "tmdb_id": 1041655,
+          "character": "Gafar"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1047,
     "title": "Pixote (World Cinema Project No. 3)",
-    "director": "",
+    "director": "José Joffily",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "pixote-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0117418",
+    "tmdb_id": 8442,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "José Joffily",
+          "tmdb_id": 55022
+        }
+      ],
+      "writers": [
+        {
+          "name": "Paulo Halm",
+          "tmdb_id": 55021
+        },
+        {
+          "name": "Jorge Durán",
+          "tmdb_id": 55020
+        },
+        {
+          "name": "José Joffily",
+          "tmdb_id": 55022
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Nonato Estrela",
+          "tmdb_id": 557585
+        }
+      ],
+      "editors": [
+        {
+          "name": "Vera Freire",
+          "tmdb_id": 1757844
+        }
+      ],
+      "cast": [
+        {
+          "name": "Cassiano Carneiro",
+          "tmdb_id": 55023,
+          "character": "Fernando"
+        },
+        {
+          "name": "Luciana Rigueira",
+          "tmdb_id": 55024,
+          "character": "Cida"
+        },
+        {
+          "name": "Joana Fomm",
+          "tmdb_id": 55025,
+          "character": "Iracema"
+        },
+        {
+          "name": "Tuca Andrada",
+          "tmdb_id": 55026,
+          "character": "Cafu"
+        },
+        {
+          "name": "Roberto Bomtempo",
+          "tmdb_id": 55027,
+          "character": "Lobato"
+        },
+        {
+          "name": "Carol Machado",
+          "tmdb_id": 55028,
+          "character": "Ana Lucía"
+        },
+        {
+          "name": "Maria Luísa Mendonça",
+          "tmdb_id": 55029,
+          "character": "Malu"
+        },
+        {
+          "name": "Orlando Vieira",
+          "tmdb_id": 1283002,
+          "character": "Louzeiro"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1048,
     "title": "Dos monjes (World Cinema Project No. 3)",
-    "director": "",
+    "director": "Juan Bustillo Oro",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "dos-monjes-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0025062",
+    "tmdb_id": 170296,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Juan Bustillo Oro",
+          "tmdb_id": 974548
+        }
+      ],
+      "writers": [
+        {
+          "name": "Juan Bustillo Oro",
+          "tmdb_id": 974548
+        },
+        {
+          "name": "José Manuel Cordero",
+          "tmdb_id": 1618353
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Agustín Jiménez",
+          "tmdb_id": 1071752
+        }
+      ],
+      "editors": [
+        {
+          "name": "Juan Bustillo Oro",
+          "tmdb_id": 974548
+        }
+      ],
+      "cast": [
+        {
+          "name": "Víctor Urruchúa",
+          "tmdb_id": 1335095,
+          "character": "Juan"
+        },
+        {
+          "name": "Carlos Villatoro",
+          "tmdb_id": 990417,
+          "character": "Javier"
+        },
+        {
+          "name": "Magda Haller",
+          "tmdb_id": 1360344,
+          "character": "Ana"
+        },
+        {
+          "name": "Beltrán de Heredia",
+          "tmdb_id": 1490350,
+          "character": "Prior"
+        },
+        {
+          "name": "Emma Roldán",
+          "tmdb_id": 380715,
+          "character": "Gertrudis"
+        },
+        {
+          "name": "Alberto Miquel",
+          "tmdb_id": 1577801,
+          "character": ""
+        },
+        {
+          "name": "Manuel Noriega",
+          "tmdb_id": 1458464,
+          "character": ""
+        },
+        {
+          "name": "Manuel Bernaldez",
+          "tmdb_id": 2979710,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1049,
     "title": "Soleil Ô (World Cinema Project No. 3)",
-    "director": "",
+    "director": "Med Hondo",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "soleil-o-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0062285",
+    "tmdb_id": 195841,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Med Hondo",
+          "tmdb_id": 586258
+        }
+      ],
+      "writers": [
+        {
+          "name": "Med Hondo",
+          "tmdb_id": 586258
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean-Claude Rahaga",
+          "tmdb_id": 1720097
+        },
+        {
+          "name": "François Catonné",
+          "tmdb_id": 27716
+        }
+      ],
+      "editors": [
+        {
+          "name": "Michèle Masnier",
+          "tmdb_id": 1720098
+        },
+        {
+          "name": "Clément Menuet",
+          "tmdb_id": 1720099
+        }
+      ],
+      "cast": [
+        {
+          "name": "Robert Liensol",
+          "tmdb_id": 87425,
+          "character": "Visitor"
+        },
+        {
+          "name": "Théo Légitimus",
+          "tmdb_id": 1386600,
+          "character": ""
+        },
+        {
+          "name": "Ambroise Mbia",
+          "tmdb_id": 1070389,
+          "character": ""
+        },
+        {
+          "name": "Gabriel Glissant",
+          "tmdb_id": 1720100,
+          "character": ""
+        },
+        {
+          "name": "Akonio Dolo",
+          "tmdb_id": 1659600,
+          "character": ""
+        },
+        {
+          "name": "Greg Germain",
+          "tmdb_id": 85627,
+          "character": ""
+        },
+        {
+          "name": "Jean-Baptiste Tiémélé",
+          "tmdb_id": 1307296,
+          "character": ""
+        },
+        {
+          "name": "Mabousso Lo",
+          "tmdb_id": 1720101,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1050,
     "title": "Downpour (World Cinema Project No. 3)",
-    "director": "",
+    "director": "Claire Dix",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "downpour-world-cinema-project-no-3",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1992122",
+    "tmdb_id": 126708,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Claire Dix",
+          "tmdb_id": 1082919
+        }
+      ],
+      "writers": [
+        {
+          "name": "Claire Dix",
+          "tmdb_id": 1082919
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Cian Barry",
+          "tmdb_id": 979402,
+          "character": "Ciaran"
+        },
+        {
+          "name": "Muireann Bird",
+          "tmdb_id": 989823,
+          "character": "Triona"
+        },
+        {
+          "name": "Marion O'Dwyer",
+          "tmdb_id": 78285,
+          "character": "Mrs. Maguire"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1051,
@@ -76975,54 +80556,321 @@
   {
     "spine_number": 1093,
     "title": "The Story of a Three Day Pass (Melvin Van Peebles: Four Films box)",
-    "director": "",
+    "director": "Melvin Van Peebles",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-story-of-a-three-day-pass-melvin-van-peebles-four-films-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0063646",
+    "tmdb_id": 95954,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "writers": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "cinematographers": [],
+      "editors": [
+        {
+          "name": "Liliane Korb",
+          "tmdb_id": 2162550
+        }
+      ],
+      "cast": [
+        {
+          "name": "Harry Baird",
+          "tmdb_id": 184951,
+          "character": "Turner"
+        },
+        {
+          "name": "Nicole Berger",
+          "tmdb_id": 19269,
+          "character": "Miriam Gervase"
+        },
+        {
+          "name": "Pierre Doris",
+          "tmdb_id": 148301,
+          "character": "Peasant"
+        },
+        {
+          "name": "Christian Marin",
+          "tmdb_id": 36316,
+          "character": "hotelman"
+        },
+        {
+          "name": "Hal Brav",
+          "tmdb_id": 1898375,
+          "character": "The Captain"
+        },
+        {
+          "name": "Tria French",
+          "tmdb_id": 4189201,
+          "character": "Madame Abernathy"
+        },
+        {
+          "name": "Karell Jonathan Beer",
+          "tmdb_id": 4189202,
+          "character": ""
+        },
+        {
+          "name": "George Birt",
+          "tmdb_id": 54405,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1094,
     "title": "Watermelon Man (Melvin Van Peebles: Four Films box)",
-    "director": "",
+    "director": "Melvin Van Peebles",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "watermelon-man-melvin-van-peebles-four-films-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0066550",
+    "tmdb_id": 42600,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "writers": [
+        {
+          "name": "Herman Raucher",
+          "tmdb_id": 590542
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "W. Wallace Kelley",
+          "tmdb_id": 111987
+        }
+      ],
+      "editors": [
+        {
+          "name": "Carl Kress",
+          "tmdb_id": 21821
+        }
+      ],
+      "cast": [
+        {
+          "name": "Godfrey Cambridge",
+          "tmdb_id": 104035,
+          "character": "Jefferson Washington 'Jeff' Gerber"
+        },
+        {
+          "name": "Estelle Parsons",
+          "tmdb_id": 6461,
+          "character": "Althea Janine Gerber"
+        },
+        {
+          "name": "Howard Caine",
+          "tmdb_id": 12159,
+          "character": "Mr. Townsend"
+        },
+        {
+          "name": "D'Urville Martin",
+          "tmdb_id": 109086,
+          "character": "Bus Driver"
+        },
+        {
+          "name": "Mantan Moreland",
+          "tmdb_id": 89747,
+          "character": "Joe the Counterman"
+        },
+        {
+          "name": "Erin Moran",
+          "tmdb_id": 75349,
+          "character": "Janice Gerber"
+        },
+        {
+          "name": "Scott Garrett",
+          "tmdb_id": 92355,
+          "character": "Burton Gerber"
+        },
+        {
+          "name": "Paul Williams",
+          "tmdb_id": 35040,
+          "character": "Employment Office Clerk"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1095,
     "title": "Sweet Sweetback’s Baadasssss Song (Melvin Van Peebles: Four Films box)",
-    "director": "",
+    "director": "Melvin Van Peebles",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "sweet-sweetbacks-baadasssss-song-melvin-van-peebles-four-films-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0067810",
+    "tmdb_id": 5822,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "writers": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Robert Maxwell",
+          "tmdb_id": 45815
+        }
+      ],
+      "editors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "cast": [
+        {
+          "name": "Simon Chuckster",
+          "tmdb_id": 45812,
+          "character": "Beetle"
+        },
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650,
+          "character": "Sweetback"
+        },
+        {
+          "name": "Hubert Scales",
+          "tmdb_id": 45813,
+          "character": "Mu-Mu"
+        },
+        {
+          "name": "Mario Van Peebles",
+          "tmdb_id": 16214,
+          "character": "The Young Sweetback"
+        },
+        {
+          "name": "John Dullaghan",
+          "tmdb_id": 101432,
+          "character": "Commissioner"
+        },
+        {
+          "name": "John Amos",
+          "tmdb_id": 22384,
+          "character": "Biker"
+        },
+        {
+          "name": "Lavelle Roby",
+          "tmdb_id": 43869,
+          "character": ""
+        },
+        {
+          "name": "Rhetta Hughes",
+          "tmdb_id": 43986,
+          "character": "Old Girlfriend"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1096,
     "title": "Don’t Play Us Cheap (Melvin Van Peebles: Four Films box)",
-    "director": "",
+    "director": "Melvin Van Peebles",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "dont-play-us-cheap-melvin-van-peebles-four-films-box",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0069996",
+    "tmdb_id": 90106,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "writers": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Robert Maxwell",
+          "tmdb_id": 45815
+        }
+      ],
+      "editors": [
+        {
+          "name": "Melvin Van Peebles",
+          "tmdb_id": 135650
+        }
+      ],
+      "cast": [
+        {
+          "name": "Esther Rolle",
+          "tmdb_id": 5700,
+          "character": "Miss Maybell"
+        },
+        {
+          "name": "Avon Long",
+          "tmdb_id": 1155210,
+          "character": "Brother Dave"
+        },
+        {
+          "name": "Mabel King",
+          "tmdb_id": 52031,
+          "character": "Mrs. Bowser"
+        },
+        {
+          "name": "Rhetta Hughes",
+          "tmdb_id": 43986,
+          "character": "Earnestine"
+        },
+        {
+          "name": "Frank Carey",
+          "tmdb_id": 1926960,
+          "character": "Mr. Johnson"
+        },
+        {
+          "name": "Thomas Anderson",
+          "tmdb_id": 1544039,
+          "character": "Mr. Percy"
+        },
+        {
+          "name": "Robert Dunn",
+          "tmdb_id": 2726175,
+          "character": "Mr. Bowser"
+        },
+        {
+          "name": "Jay Van Leer",
+          "tmdb_id": 1926956,
+          "character": "Mrs. Johnson (as Jay Vanleer)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1097,
@@ -78307,16 +82155,83 @@
   {
     "spine_number": 1113,
     "title": "Boat People",
-    "director": null,
+    "director": "Jacques Tourneur",
     "year": 1942,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28696-cat-people",
     "film_id": "boat-people",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0034587",
+    "tmdb_id": 25508,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Jacques Tourneur",
+          "tmdb_id": 10146
+        }
+      ],
+      "writers": [
+        {
+          "name": "DeWitt Bodeen",
+          "tmdb_id": 48804
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Nicholas Musuraca",
+          "tmdb_id": 10150
+        }
+      ],
+      "editors": [
+        {
+          "name": "Mark Robson",
+          "tmdb_id": 19457
+        }
+      ],
+      "cast": [
+        {
+          "name": "Simone Simon",
+          "tmdb_id": 103781,
+          "character": "Irena Dubrovna Reed"
+        },
+        {
+          "name": "Kent Smith",
+          "tmdb_id": 51764,
+          "character": "Oliver Reed"
+        },
+        {
+          "name": "Tom Conway",
+          "tmdb_id": 48962,
+          "character": "Dr. Louis Judd"
+        },
+        {
+          "name": "Jane Randolph",
+          "tmdb_id": 30114,
+          "character": "Alice Moore"
+        },
+        {
+          "name": "Jack Holt",
+          "tmdb_id": 93910,
+          "character": "The Commodore"
+        },
+        {
+          "name": "Henrietta Burnside",
+          "tmdb_id": 1550939,
+          "character": "Sue Ellen (uncredited)"
+        },
+        {
+          "name": "Alec Craig",
+          "tmdb_id": 22606,
+          "character": "Zookeeper (uncredited)"
+        },
+        {
+          "name": "Eddie Dew",
+          "tmdb_id": 1230787,
+          "character": "Street Policeman (uncredited)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1114,
@@ -80748,80 +84663,471 @@
   {
     "spine_number": 1143,
     "title": "Sambizanga (World Cinema Project No. 4)",
-    "director": "",
+    "director": "Sarah Maldoror",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "sambizanga-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0069214",
+    "tmdb_id": 87392,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Sarah Maldoror",
+          "tmdb_id": 935113
+        }
+      ],
+      "writers": [
+        {
+          "name": "Maurice Pons",
+          "tmdb_id": 1514343
+        },
+        {
+          "name": "Mário Pinto de Andrade",
+          "tmdb_id": 2663786
+        },
+        {
+          "name": "Claude Agostini",
+          "tmdb_id": 66271
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Claude Agostini",
+          "tmdb_id": 66271
+        }
+      ],
+      "editors": [
+        {
+          "name": "Georges Klotz",
+          "tmdb_id": 24723
+        }
+      ],
+      "cast": [
+        {
+          "name": "Elisa Andrade",
+          "tmdb_id": 1568163,
+          "character": "Maria"
+        },
+        {
+          "name": "Domingos de Oliveira",
+          "tmdb_id": 3277313,
+          "character": "Domingos"
+        },
+        {
+          "name": "Jean M'Vondo",
+          "tmdb_id": 1568165,
+          "character": "Petelo"
+        },
+        {
+          "name": "Dino Abelino",
+          "tmdb_id": 1568166,
+          "character": "Zito"
+        },
+        {
+          "name": "Benoît Moutsila",
+          "tmdb_id": 1568168,
+          "character": "Chico"
+        },
+        {
+          "name": "Talagongo",
+          "tmdb_id": 1568170,
+          "character": "Miguel"
+        },
+        {
+          "name": "Lopes Rodrigues",
+          "tmdb_id": 1568171,
+          "character": "Mussunda"
+        },
+        {
+          "name": "Henriette Meya",
+          "tmdb_id": 1568173,
+          "character": "Bébiana"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1144,
     "title": "Prisioneros de la tierra (World Cinema Project No. 4)",
-    "director": "",
+    "director": "Mario Soffici",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "prisioneros-de-la-tierra-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0176049",
+    "tmdb_id": 335367,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Mario Soffici",
+          "tmdb_id": 1087155
+        }
+      ],
+      "writers": [
+        {
+          "name": "Darío Quiroga",
+          "tmdb_id": 1919297
+        },
+        {
+          "name": "Ulyses Petit de Murat",
+          "tmdb_id": 1050100
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Pablo Tabernero",
+          "tmdb_id": 1818145
+        }
+      ],
+      "editors": [
+        {
+          "name": "José de Nico",
+          "tmdb_id": 3639029
+        },
+        {
+          "name": "Gerardo Rinaldi",
+          "tmdb_id": 1916121
+        }
+      ],
+      "cast": [
+        {
+          "name": "Francisco Petrone",
+          "tmdb_id": 1083980,
+          "character": ""
+        },
+        {
+          "name": "Ángel Magaña",
+          "tmdb_id": 1023636,
+          "character": ""
+        },
+        {
+          "name": "Roberto Fugazot",
+          "tmdb_id": 1083988,
+          "character": ""
+        },
+        {
+          "name": "Homero Cárpena",
+          "tmdb_id": 107296,
+          "character": ""
+        },
+        {
+          "name": "Raúl de Lange",
+          "tmdb_id": 1305169,
+          "character": ""
+        },
+        {
+          "name": "Elisa Galvé",
+          "tmdb_id": 1026228,
+          "character": ""
+        },
+        {
+          "name": "Pepito Petray",
+          "tmdb_id": 1916616,
+          "character": ""
+        },
+        {
+          "name": "Félix Tortorelli",
+          "tmdb_id": 1919301,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1145,
     "title": "Chess of the Wind (World Cinema Project No. 4)",
-    "director": "",
+    "director": "Mohammad Reza Aslani",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "chess-of-the-wind-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0318069",
+    "tmdb_id": 194088,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Mohammad Reza Aslani",
+          "tmdb_id": 1174326
+        }
+      ],
+      "writers": [
+        {
+          "name": "Mohammad Reza Aslani",
+          "tmdb_id": 1174326
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Houshang Baharlou",
+          "tmdb_id": 1174329
+        }
+      ],
+      "editors": [
+        {
+          "name": "Abbas Ganjavi",
+          "tmdb_id": 1174330
+        }
+      ],
+      "cast": [
+        {
+          "name": "Fakhri Khorvash",
+          "tmdb_id": 1174332,
+          "character": "Lady Aghdas"
+        },
+        {
+          "name": "Mohammadali Keshavarz",
+          "tmdb_id": 920426,
+          "character": "Hadji Amoo"
+        },
+        {
+          "name": "Akbar Zanjanpour",
+          "tmdb_id": 1174334,
+          "character": "Ramazan"
+        },
+        {
+          "name": "Shohreh Aghdashloo",
+          "tmdb_id": 21041,
+          "character": "Kanizak"
+        },
+        {
+          "name": "Shahram Golchin",
+          "tmdb_id": 1174331,
+          "character": "Shaban"
+        },
+        {
+          "name": "Hamid Taati",
+          "tmdb_id": 1174333,
+          "character": "Commissar"
+        },
+        {
+          "name": "Aghajan Rafi",
+          "tmdb_id": 3200973,
+          "character": "Doctor"
+        },
+        {
+          "name": "Anik Shefrazian",
+          "tmdb_id": 1339661,
+          "character": "Nanny"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1146,
     "title": "Muna moto (World Cinema Project No. 4)",
-    "director": "",
+    "director": "Dikongué-Pipa",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "muna-moto-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0073417",
+    "tmdb_id": 257803,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Dikongué-Pipa",
+          "tmdb_id": 1298522
+        }
+      ],
+      "writers": [
+        {
+          "name": "Dikongué-Pipa",
+          "tmdb_id": 1298522
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "J.P. Delazay",
+          "tmdb_id": 3479038
+        },
+        {
+          "name": "J.L. Leon",
+          "tmdb_id": 3479039
+        }
+      ],
+      "editors": [
+        {
+          "name": "Andrée Davanture",
+          "tmdb_id": 1158026
+        }
+      ],
+      "cast": [
+        {
+          "name": "Philippe Abia",
+          "tmdb_id": 1298534,
+          "character": ""
+        },
+        {
+          "name": "Arlette Din Beli",
+          "tmdb_id": 1298535,
+          "character": ""
+        },
+        {
+          "name": "Gisèle Dikongue-Pipa",
+          "tmdb_id": 1298536,
+          "character": ""
+        },
+        {
+          "name": "David Endene",
+          "tmdb_id": 1578668,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1147,
     "title": "Two Girls on the Street (World Cinema Project No. 4)",
-    "director": "",
+    "director": "André de Toth",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "two-girls-on-the-street-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0031544",
+    "tmdb_id": 249619,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "André de Toth",
+          "tmdb_id": 81799
+        }
+      ],
+      "writers": [
+        {
+          "name": "André de Toth",
+          "tmdb_id": 81799
+        },
+        {
+          "name": "Rezső Török",
+          "tmdb_id": 1200287
+        },
+        {
+          "name": "Tamás Emőd",
+          "tmdb_id": 1200288
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Károly Vass",
+          "tmdb_id": 71646
+        }
+      ],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Bella Bordy",
+          "tmdb_id": 1413838,
+          "character": "Torma Vica"
+        },
+        {
+          "name": "Maria von Tasnady",
+          "tmdb_id": 1313669,
+          "character": "Kartely"
+        },
+        {
+          "name": "Piri Vaszary",
+          "tmdb_id": 125673,
+          "character": "Pletyus"
+        },
+        {
+          "name": "Gyula Csortos",
+          "tmdb_id": 125370,
+          "character": "Filc bácsi"
+        },
+        {
+          "name": "Andor Ajtay",
+          "tmdb_id": 586251,
+          "character": "Csiszár István"
+        },
+        {
+          "name": "Károly Kovács",
+          "tmdb_id": 125751,
+          "character": "Lali"
+        },
+        {
+          "name": "György Dénes",
+          "tmdb_id": 1468472,
+          "character": "Võlegény"
+        },
+        {
+          "name": "László Földényi",
+          "tmdb_id": 132272,
+          "character": "Gyöngyi apja"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1148,
     "title": "Kalpana (World Cinema Project No. 4)",
-    "director": "",
+    "director": "Rama Narayanan",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "kalpana-world-cinema-project-no-4",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt3178816",
+    "tmdb_id": 339117,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Rama Narayanan",
+          "tmdb_id": 584129
+        }
+      ],
+      "writers": [
+        {
+          "name": "Raghava Lawrence",
+          "tmdb_id": 516473
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Upendra",
+          "tmdb_id": 1054336,
+          "character": "Raghava"
+        },
+        {
+          "name": "Raai Laxmi",
+          "tmdb_id": 111671,
+          "character": "Priya"
+        },
+        {
+          "name": "Sai Kumar",
+          "tmdb_id": 146148,
+          "character": ""
+        },
+        {
+          "name": "Babu Antony",
+          "tmdb_id": 458928,
+          "character": ""
+        },
+        {
+          "name": "Shruti",
+          "tmdb_id": 117726,
+          "character": ""
+        },
+        {
+          "name": "Umashree",
+          "tmdb_id": 1270690,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1149,
@@ -81618,15 +85924,81 @@
   {
     "spine_number": 1159,
     "title": "The Infernal Affairs Trilogy (Infernal Affairs I-III)",
-    "director": "",
+    "director": "Andrew Lau Wai-Keung",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-infernal-affairs-trilogy-infernal-affairs-i-iii",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 1599219,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Andrew Lau Wai-Keung",
+          "tmdb_id": 65994
+        },
+        {
+          "name": "Alan Mak Siu-Fai",
+          "tmdb_id": 66718
+        }
+      ],
+      "writers": [
+        {
+          "name": "Felix Chong Man-Keung",
+          "tmdb_id": 66719
+        },
+        {
+          "name": "Alan Mak Siu-Fai",
+          "tmdb_id": 66718
+        }
+      ],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Andy Lau",
+          "tmdb_id": 25246,
+          "character": "Lau Kin Ming"
+        },
+        {
+          "name": "Tony Leung Chiu-wai",
+          "tmdb_id": 1337,
+          "character": "Chan Wing Yan"
+        },
+        {
+          "name": "Anthony Wong Chau-Sang",
+          "tmdb_id": 66717,
+          "character": "Wong Chi Shing"
+        },
+        {
+          "name": "Eric Tsang Chi-Wai",
+          "tmdb_id": 26724,
+          "character": "Hon Sam"
+        },
+        {
+          "name": "Shawn Yue",
+          "tmdb_id": 78869,
+          "character": "Young Chan Wing Yan"
+        },
+        {
+          "name": "Edison Chen",
+          "tmdb_id": 20372,
+          "character": "Young Lau Kin Ming"
+        },
+        {
+          "name": "Francis Ng Chun-Yu",
+          "tmdb_id": 63584,
+          "character": "Ngai Wing Hau"
+        },
+        {
+          "name": "Kelly Chen",
+          "tmdb_id": 72730,
+          "character": "Lee Sum Yee"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1160,
@@ -81833,15 +86205,47 @@
   {
     "spine_number": 1163,
     "title": "Michael Haneke: Trilogy (The Seventh Continent, Benny’s Video, 71 Fragments of a Chronology of Chance)",
-    "director": "",
+    "director": "Gero von Boehm",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "michael-haneke-trilogy-the-seventh-continent-bennys-video-71-fragments-of-a-chronology-of-chance",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1619720",
+    "tmdb_id": 354937,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Gero von Boehm",
+          "tmdb_id": 1095779
+        },
+        {
+          "name": "Felix von Boehm",
+          "tmdb_id": 1497741
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Michael Haneke",
+          "tmdb_id": 6011,
+          "character": "Self"
+        },
+        {
+          "name": "Juliette Binoche",
+          "tmdb_id": 1137,
+          "character": "Self"
+        },
+        {
+          "name": "Isabelle Huppert",
+          "tmdb_id": 17882,
+          "character": "Self"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1164,
@@ -82820,7 +87224,7 @@
     "criterion_url": "",
     "film_id": "small-axe-five-films-by-steve-mcqueen",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 90705,
     "genres": [],
     "poster_url": null
   },
@@ -86360,16 +90764,72 @@
   {
     "spine_number": 1223,
     "title": "The Underground Railroad",
-    "director": null,
+    "director": "Sanjit Majumdar",
     "year": 2021,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/34073-the-underground-railroad",
     "film_id": "the-underground-railroad",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt1521758",
+    "tmdb_id": 80039,
     "genres": [],
     "poster_url": null,
-    "credits": null
+    "credits": {
+      "directors": [
+        {
+          "name": "Sanjit Majumdar",
+          "tmdb_id": 933172
+        },
+        {
+          "name": "Ranju Majumdar",
+          "tmdb_id": 933171
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Amaobi Anyaogu",
+          "tmdb_id": 933173,
+          "character": "Josiah"
+        },
+        {
+          "name": "Chris Bunch",
+          "tmdb_id": 166151,
+          "character": "Bong Smoker"
+        },
+        {
+          "name": "Lyne Geneste",
+          "tmdb_id": 933174,
+          "character": "India"
+        },
+        {
+          "name": "Sanjit Majumdar",
+          "tmdb_id": 933172,
+          "character": ""
+        },
+        {
+          "name": "Geoffrey Ohen",
+          "tmdb_id": 4366684,
+          "character": ""
+        },
+        {
+          "name": "Ryan J. Lewis",
+          "tmdb_id": 3449505,
+          "character": ""
+        },
+        {
+          "name": "Alan Van Pelt",
+          "tmdb_id": 4366688,
+          "character": ""
+        },
+        {
+          "name": "Darcel Grant",
+          "tmdb_id": 4366689,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1224,
@@ -87443,15 +91903,87 @@
   {
     "spine_number": 1239,
     "title": "Scarface (1932)",
-    "director": "",
+    "director": "Howard Hawks",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "scarface-1932",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0023427",
+    "tmdb_id": 877,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Howard Hawks",
+          "tmdb_id": 11435
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ben Hecht",
+          "tmdb_id": 4341
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lee Garmes",
+          "tmdb_id": 13338
+        },
+        {
+          "name": "L. William O'Connell",
+          "tmdb_id": 34342
+        }
+      ],
+      "editors": [
+        {
+          "name": "Edward Curtiss",
+          "tmdb_id": 13350
+        }
+      ],
+      "cast": [
+        {
+          "name": "Paul Muni",
+          "tmdb_id": 13352,
+          "character": "Antonio 'Tony' Camonte"
+        },
+        {
+          "name": "Ann Dvorak",
+          "tmdb_id": 13353,
+          "character": "Francesca 'Cesca' Camonte"
+        },
+        {
+          "name": "Karen Morley",
+          "tmdb_id": 13354,
+          "character": "Poppy"
+        },
+        {
+          "name": "Osgood Perkins",
+          "tmdb_id": 13355,
+          "character": "John 'Johnny' Lovo"
+        },
+        {
+          "name": "C. Henry Gordon",
+          "tmdb_id": 13356,
+          "character": "Insp. Ben Guarino"
+        },
+        {
+          "name": "George Raft",
+          "tmdb_id": 3152,
+          "character": "Guino Rinaldo"
+        },
+        {
+          "name": "Vince Barnett",
+          "tmdb_id": 13357,
+          "character": "Angelo"
+        },
+        {
+          "name": "Boris Karloff",
+          "tmdb_id": 2922,
+          "character": "Gaffney"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1240,
@@ -88252,15 +92784,95 @@
   {
     "spine_number": 1249,
     "title": "King Lear (1987)",
-    "director": "",
+    "director": "Jean-Luc Godard",
     "year": 1987,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28773-king-lear",
     "film_id": "king-lear-1987",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0093349",
+    "tmdb_id": 50012,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776
+        }
+      ],
+      "writers": [
+        {
+          "name": "Norman Mailer",
+          "tmdb_id": 143280
+        },
+        {
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776
+        },
+        {
+          "name": "Peter Sellars",
+          "tmdb_id": 143279
+        },
+        {
+          "name": "Richard Debuisne",
+          "tmdb_id": 49068
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Sophie Maintigneux",
+          "tmdb_id": 50634
+        }
+      ],
+      "editors": [
+        {
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776
+        }
+      ],
+      "cast": [
+        {
+          "name": "Peter Sellars",
+          "tmdb_id": 143279,
+          "character": "William Shakespeare Junior the Fifth"
+        },
+        {
+          "name": "Burgess Meredith",
+          "tmdb_id": 16523,
+          "character": "Don Learo"
+        },
+        {
+          "name": "Julie Delpy",
+          "tmdb_id": 1146,
+          "character": "Virginia"
+        },
+        {
+          "name": "Leos Carax",
+          "tmdb_id": 27977,
+          "character": "Edgar"
+        },
+        {
+          "name": "Molly Ringwald",
+          "tmdb_id": 21625,
+          "character": "Cordelia"
+        },
+        {
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776,
+          "character": "Professor Pluggy"
+        },
+        {
+          "name": "Woody Allen",
+          "tmdb_id": 1243,
+          "character": "Mr. Alien (uncredited)"
+        },
+        {
+          "name": "Freddy Buache",
+          "tmdb_id": 143281,
+          "character": "Professor Quentin Kozintsev (uncredited)"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1250,
@@ -88875,15 +93487,111 @@
   {
     "spine_number": 1257,
     "title": "Jean de Florette / Manon of the Spring: Two Films by Claude Berri",
-    "director": "",
+    "director": "Claude Berri",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "jean-de-florette-manon-of-the-spring-two-films-by-claude-berri",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0091288",
+    "tmdb_id": 4480,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Claude Berri",
+          "tmdb_id": 20718
+        }
+      ],
+      "writers": [
+        {
+          "name": "Claude Berri",
+          "tmdb_id": 20718
+        },
+        {
+          "name": "Gérard Brach",
+          "tmdb_id": 2356
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Bruno Nuytten",
+          "tmdb_id": 34603
+        }
+      ],
+      "editors": [
+        {
+          "name": "Corinne Lazare",
+          "tmdb_id": 38398
+        },
+        {
+          "name": "Jeanne Kef",
+          "tmdb_id": 38396
+        },
+        {
+          "name": "Noëlle Boisson",
+          "tmdb_id": 12758
+        },
+        {
+          "name": "Sophie Coussein",
+          "tmdb_id": 23510
+        },
+        {
+          "name": "Catherine Serris",
+          "tmdb_id": 38399
+        },
+        {
+          "name": "Arlette Langmann",
+          "tmdb_id": 38397
+        },
+        {
+          "name": "Hervé de Luze",
+          "tmdb_id": 3564
+        }
+      ],
+      "cast": [
+        {
+          "name": "Yves Montand",
+          "tmdb_id": 2565,
+          "character": "César Soubeyran, aka 'le Papet'"
+        },
+        {
+          "name": "Gérard Depardieu",
+          "tmdb_id": 16927,
+          "character": "Jean Cadoret, hunchback, son of Florette"
+        },
+        {
+          "name": "Daniel Auteuil",
+          "tmdb_id": 6012,
+          "character": "Ugolin Soubeyran, nephew of Papet"
+        },
+        {
+          "name": "Elisabeth Depardieu",
+          "tmdb_id": 38351,
+          "character": "Aimée Cadoret, wife of Jean"
+        },
+        {
+          "name": "Margarita Lozano",
+          "tmdb_id": 16314,
+          "character": "Baptistine, Piedmontese of the cave"
+        },
+        {
+          "name": "Ernestine Mazurowna",
+          "tmdb_id": 38385,
+          "character": "Manon Cadoret, daughter of Jean & Aimée"
+        },
+        {
+          "name": "Armand Meffre",
+          "tmdb_id": 38386,
+          "character": "Philoxène, mayor"
+        },
+        {
+          "name": "André Dupon",
+          "tmdb_id": 1110334,
+          "character": "Pamphile,  joiner"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1258,
@@ -89148,41 +93856,247 @@
   {
     "spine_number": 1261,
     "title": "The Wind Will Carry Us (1999)",
-    "director": "",
+    "director": "Abbas Kiarostami",
     "year": 1999,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/30369-the-wind-will-carry-us",
     "film_id": "the-wind-will-carry-us-1999",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0209463",
+    "tmdb_id": 43423,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Abbas Kiarostami",
+          "tmdb_id": 119294
+        }
+      ],
+      "writers": [
+        {
+          "name": "Abbas Kiarostami",
+          "tmdb_id": 119294
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Mahmoud Kalari",
+          "tmdb_id": 545097
+        }
+      ],
+      "editors": [
+        {
+          "name": "Abbas Kiarostami",
+          "tmdb_id": 119294
+        }
+      ],
+      "cast": [
+        {
+          "name": "Behzad Dorani",
+          "tmdb_id": 143152,
+          "character": "Behzad"
+        },
+        {
+          "name": "Farzad Sohrabi",
+          "tmdb_id": 1923828,
+          "character": "Farzad"
+        },
+        {
+          "name": "Noghre Asadi",
+          "tmdb_id": 1923820,
+          "character": ""
+        },
+        {
+          "name": "Roushan Karam Elmi",
+          "tmdb_id": 1923821,
+          "character": ""
+        },
+        {
+          "name": "Bahman Ghobadi",
+          "tmdb_id": 54607,
+          "character": ""
+        },
+        {
+          "name": "Shahpour Ghobadi",
+          "tmdb_id": 1923822,
+          "character": ""
+        },
+        {
+          "name": "Reihan Heidari",
+          "tmdb_id": 1923823,
+          "character": ""
+        },
+        {
+          "name": "Masood Mansouri",
+          "tmdb_id": 1923824,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 1262,
     "title": "Killer of Sheep (1978)",
-    "director": "",
+    "director": "Charles Burnett",
     "year": 1977,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/34233-killer-of-sheep",
     "film_id": "killer-of-sheep-1978",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0076263",
+    "tmdb_id": 27432,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Charles Burnett",
+          "tmdb_id": 97755
+        }
+      ],
+      "writers": [
+        {
+          "name": "Charles Burnett",
+          "tmdb_id": 97755
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Charles Burnett",
+          "tmdb_id": 97755
+        }
+      ],
+      "editors": [
+        {
+          "name": "Charles Burnett",
+          "tmdb_id": 97755
+        }
+      ],
+      "cast": [
+        {
+          "name": "Henry G. Sanders",
+          "tmdb_id": 16506,
+          "character": "Stan"
+        },
+        {
+          "name": "Kaycee Moore",
+          "tmdb_id": 143438,
+          "character": "Stan's Wife"
+        },
+        {
+          "name": "Charles Bracy",
+          "tmdb_id": 143439,
+          "character": "Bracy"
+        },
+        {
+          "name": "Angela Burnett",
+          "tmdb_id": 143440,
+          "character": "Stan's Daughter"
+        },
+        {
+          "name": "Eugene Cherry",
+          "tmdb_id": 122289,
+          "character": "Eugene"
+        },
+        {
+          "name": "Jack Drummond",
+          "tmdb_id": 143441,
+          "character": "Stan's Son"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1263,
     "title": "The Three Musketeers (1973)/The Four Musketeers (1974)",
-    "director": "",
+    "director": "Bruno Corbucci",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "the-three-musketeers-1973the-four-musketeers-1974",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0069425",
+    "tmdb_id": 100470,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Bruno Corbucci",
+          "tmdb_id": 56742
+        }
+      ],
+      "writers": [
+        {
+          "name": "Peter Berling",
+          "tmdb_id": 18405
+        },
+        {
+          "name": "Tito Carpi",
+          "tmdb_id": 92928
+        },
+        {
+          "name": "Bruno Corbucci",
+          "tmdb_id": 56742
+        },
+        {
+          "name": "Leonardo Martín",
+          "tmdb_id": 1016262
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Rafael Pacheco",
+          "tmdb_id": 1090581
+        }
+      ],
+      "editors": [
+        {
+          "name": "Vincenzo Tomassi",
+          "tmdb_id": 53197
+        }
+      ],
+      "cast": [
+        {
+          "name": "Giancarlo Prete",
+          "tmdb_id": 7195,
+          "character": "Dart Coldwater, Jr."
+        },
+        {
+          "name": "George Eastman",
+          "tmdb_id": 33807,
+          "character": "MacAthos"
+        },
+        {
+          "name": "Leo Anchóriz",
+          "tmdb_id": 101113,
+          "character": "Aramirez"
+        },
+        {
+          "name": "Cris Huerta",
+          "tmdb_id": 100861,
+          "character": "Portland"
+        },
+        {
+          "name": "Karin Schubert",
+          "tmdb_id": 76493,
+          "character": "Dr. Alice Ferguson"
+        },
+        {
+          "name": "Eduardo Fajardo",
+          "tmdb_id": 100409,
+          "character": "Horatio Maurice DeLuc"
+        },
+        {
+          "name": "Peter Berling",
+          "tmdb_id": 18405,
+          "character": "Hans"
+        },
+        {
+          "name": "Max Turilli",
+          "tmdb_id": 1024364,
+          "character": "Baron von Horn"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1264,
@@ -90088,15 +95002,87 @@
   {
     "spine_number": 1275,
     "title": "A Confucian Confusion / Mahjong: Two Films by Edward Yang",
-    "director": "",
+    "director": "Edward Yang",
     "year": null,
     "country": "",
     "criterion_url": "",
     "film_id": "a-confucian-confusion-mahjong-two-films-by-edward-yang",
-    "imdb_id": null,
-    "tmdb_id": null,
+    "imdb_id": "tt0109685",
+    "tmdb_id": 54233,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Edward Yang",
+          "tmdb_id": 143035
+        }
+      ],
+      "writers": [
+        {
+          "name": "Yen Hung-ya",
+          "tmdb_id": 143309
+        },
+        {
+          "name": "Edward Yang",
+          "tmdb_id": 143035
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Chang Chan",
+          "tmdb_id": 584058
+        }
+      ],
+      "editors": [
+        {
+          "name": "Chen Po-Wen",
+          "tmdb_id": 1554166
+        }
+      ],
+      "cast": [
+        {
+          "name": "Chen Shiang-Chyi",
+          "tmdb_id": 71395,
+          "character": "Qiqi"
+        },
+        {
+          "name": "Joyce Ni Shu-Chun",
+          "tmdb_id": 1055456,
+          "character": "Molly"
+        },
+        {
+          "name": "Weiming Wang",
+          "tmdb_id": 1371123,
+          "character": "Ming"
+        },
+        {
+          "name": "Wang Bosen",
+          "tmdb_id": 2468221,
+          "character": "Akeem"
+        },
+        {
+          "name": "Danny Deng",
+          "tmdb_id": 150166,
+          "character": "Larry"
+        },
+        {
+          "name": "Elaine Jin Yan-Ling",
+          "tmdb_id": 103598,
+          "character": "Auntie"
+        },
+        {
+          "name": "Richie Li",
+          "tmdb_id": 2468257,
+          "character": "Feng"
+        },
+        {
+          "name": "Chen Yi-wen",
+          "tmdb_id": 150165,
+          "character": "Liren"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1276,
@@ -119977,7 +124963,7 @@
     "criterion_url": "",
     "film_id": "the-age-of-the-medici",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 18490,
     "genres": [],
     "poster_url": null,
     "credits": null

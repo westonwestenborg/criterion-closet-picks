@@ -15,6 +15,9 @@ data/.extraction_progress.json
 data/.letterboxd_progress.json
 data/.criterion_scrape_progress.json
 
+# Backfill CSVs (manual data entry, not committed)
+data/backfill/
+
 # Python
 __pycache__/
 *.pyc
