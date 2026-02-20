@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description = 'A searchable database of every Criterion Closet Pick — with quotes, timestamps, and links.' } = Astro.props;
 const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`;
+const ogImage = new URL('/og-image.png', Astro.site).href;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,15 @@ const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={Astro.url.href} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
   <title>{fullTitle}</title>
   <link rel="canonical" href={Astro.url.href} />
 </head>
