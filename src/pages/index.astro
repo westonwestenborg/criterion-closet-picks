@@ -33,7 +33,7 @@ const recentGuests = getRecentGuests(3);
   <SearchBar />
 
   <h2>Recent Guests</h2>
-  <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+  <div class="recent-guests-scroll">
     {recentGuests.map((guest) => (
       <GuestCard
         name={guest.name}

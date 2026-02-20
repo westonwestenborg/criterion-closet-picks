@@ -157,6 +157,14 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.recent-guests-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 /* Badge */
 .badge {
   display: inline-block;
@@ -756,6 +764,21 @@ blockquote p {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .recent-guests-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .recent-guests-scroll > :global(.card) {
+    flex: 0 0 80%;
+    min-width: 0;
+    scroll-snap-align: start;
   }
 
   .site-header {
