@@ -14,6 +14,7 @@ data/transcripts/
 data/.extraction_progress.json
 data/.letterboxd_progress.json
 data/.criterion_scrape_progress.json
+data/checkpoint_quotes.json
 
 # Backfill CSVs (manual data entry, not committed)
 data/backfill/
@@ -33,6 +34,9 @@ docs/
 # IDE
 .vscode/
 .idea/
+
+# Claude Code local settings (private)
+.claude/settings.local.json
 
 # Astro generated types
 .astro/
