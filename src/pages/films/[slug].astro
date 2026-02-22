@@ -67,6 +67,11 @@ const boxSetInfo = getBoxSetInfoForFilm(film.slug);
               Criterion
             </a>
           )}
+          {film.letterboxd_url && (
+            <a href={film.letterboxd_url} target="_blank" rel="noopener noreferrer">
+              Letterboxd
+            </a>
+          )}
           {film.tmdb_url && (
             <a href={film.tmdb_url} target="_blank" rel="noopener noreferrer">
               TMDB

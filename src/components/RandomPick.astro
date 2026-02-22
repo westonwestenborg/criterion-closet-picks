@@ -19,6 +19,7 @@ const randomData = picks
       posterUrl: film?.poster_url || '',
       criterionUrl: film?.criterion_url || '',
       tmdbUrl: film?.tmdb_url || '',
+      letterboxdUrl: film?.letterboxd_url || '',
       imdbUrl: film?.imdb_url || '',
       spineNumber: film?.criterion_spine_number || null,
       genres: film?.genres || [],
@@ -70,6 +71,9 @@ const initialPick = randomData.length > 0
             <div class="detail-links">
               {initialPick.criterionUrl && (
                 <a href={initialPick.criterionUrl} target="_blank" rel="noopener noreferrer">Criterion</a>
+              )}
+              {initialPick.letterboxdUrl && (
+                <a href={initialPick.letterboxdUrl} target="_blank" rel="noopener noreferrer">Letterboxd</a>
               )}
               {initialPick.tmdbUrl && (
                 <a href={initialPick.tmdbUrl} target="_blank" rel="noopener noreferrer">TMDB</a>
@@ -163,6 +167,7 @@ const initialPick = randomData.length > 0
     let linksHtml = '';
     const links = [];
     if (pick.criterionUrl) links.push(`<a href="${pick.criterionUrl}" target="_blank" rel="noopener noreferrer">Criterion</a>`);
+    if (pick.letterboxdUrl) links.push(`<a href="${pick.letterboxdUrl}" target="_blank" rel="noopener noreferrer">Letterboxd</a>`);
     if (pick.tmdbUrl) links.push(`<a href="${pick.tmdbUrl}" target="_blank" rel="noopener noreferrer">TMDB</a>`);
     if (pick.imdbUrl) links.push(`<a href="${pick.imdbUrl}" target="_blank" rel="noopener noreferrer">IMDB</a>`);
     if (links.length > 0) {

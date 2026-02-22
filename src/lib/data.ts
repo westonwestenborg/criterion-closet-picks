@@ -38,6 +38,7 @@ export interface Film {
   imdb_url: string | null;
   tmdb_id: number | null;
   tmdb_url: string | null;
+  letterboxd_url: string | null;
   poster_url: string | null;
   pick_count: number;
   is_box_set?: boolean;
@@ -114,6 +115,7 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       imdb_url: f.imdb_url ?? (f.imdb_id ? `https://www.imdb.com/title/${f.imdb_id}/` : null),
       tmdb_id: f.tmdb_id ?? null,
       tmdb_url: f.tmdb_id ? `https://www.themoviedb.org/movie/${f.tmdb_id}` : null,
+      letterboxd_url: f.tmdb_id ? `https://letterboxd.com/tmdb/${f.tmdb_id}` : null,
       poster_url: f.poster_url ?? null,
       pick_count: f.pick_count ?? pickCounts.get(slug) ?? 0,
       is_box_set: f.is_box_set ?? false,
