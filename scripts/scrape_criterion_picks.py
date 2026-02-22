@@ -981,6 +981,20 @@ def main():
 
     log(f"Discovered {len(collections)} collections")
 
+    # Inject any VISIT_CRITERION_URLS not discovered from the index
+    discovered_urls = {c["collection_url"] for c in collections}
+    for slug, urls in VISIT_CRITERION_URLS.items():
+        for url in urls:
+            if url not in discovered_urls:
+                name = slug.replace("-", " ").title()
+                collections.append({
+                    "name": name,
+                    "slug": slug,
+                    "collection_url": url,
+                    "collection_path": url.replace(CRITERION_BASE, ""),
+                })
+                log(f"  Injected missing collection: {name} ({url})")
+
     # Index-only mode: just update criterion_page_url and exit
     if args.index_only:
         updated = update_index_only(collections, existing_guests)

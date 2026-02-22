@@ -219,6 +219,19 @@ VISIT_CRITERION_URLS = {
     "wim-wenders": [
         "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
     ],
+    # Guests whose collection pages aren't on the index but exist on criterion.com
+    "jason-bateman": [
+        "https://www.criterion.com/shop/collection/881-jason-bateman-s-closet-picks",
+    ],
+    "ben-whishaw": [
+        "https://www.criterion.com/shop/collection/885-ben-whishaw-s-closet-picks",
+    ],
+    "franklin-leonard": [
+        "https://www.criterion.com/shop/collection/802-franklin-leonard-s-closet-picks",
+    ],
+    "hans-zimmer": [
+        "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
+    ],
 }
 
 

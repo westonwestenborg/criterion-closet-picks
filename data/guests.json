@@ -4524,5 +4524,57 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/927-paul-smith-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "Jason Bateman",
+    "slug": "jason-bateman",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg",
+    "youtube_video_id": "us0xeBVKMJI",
+    "youtube_video_url": "https://www.youtube.com/watch?v=us0xeBVKMJI",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/881-jason-bateman-s-closet-picks",
+    "pick_count": 8
+  },
+  {
+    "name": "Ben Whishaw",
+    "slug": "ben-whishaw",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/2GBtQ6scGeSHkX1urOP1EJbmksx.jpg",
+    "youtube_video_id": "8kKR9UakxQQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=8kKR9UakxQQ",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/885-ben-whishaw-s-closet-picks",
+    "pick_count": 6
+  },
+  {
+    "name": "Franklin Leonard",
+    "slug": "franklin-leonard",
+    "profession": "actor",
+    "photo_url": null,
+    "youtube_video_id": "5YfyrBaAWpE",
+    "youtube_video_url": "https://www.youtube.com/watch?v=5YfyrBaAWpE",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/802-franklin-leonard-s-closet-picks",
+    "pick_count": 9
+  },
+  {
+    "name": "Hans Zimmer",
+    "slug": "hans-zimmer",
+    "profession": "musician",
+    "photo_url": "https://image.tmdb.org/t/p/w185/tpQnDeHY15szIXvpnhlprufz4d.jpg",
+    "youtube_video_id": "2o4oC0diM8E",
+    "youtube_video_url": "https://www.youtube.com/watch?v=2o4oC0diM8E",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
+    "pick_count": 9
   }
 ]
