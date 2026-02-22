@@ -66,6 +66,7 @@ WRONG_VIDEO_FIXES = {
     "matt-johnson": "U2plMSuOgrI",       # Rian Johnson's video
     "michael-mohan": "Ewx-oog2kmQ",       # Michael Shannon's video
     "lee-daniels": "dqNtp1bAI8o",          # Daniel Roher's video
+    "daniels": "dqNtp1bAI8o",               # Daniel Roher's video (same mismatch)
 }
 
 # Slug fixes: rename slug (and update picks) to fix matching issues
@@ -88,6 +89,9 @@ KNOWN_VIDEO_IDS = {
     "tracy-letts": {"youtube_video_id": "EQ7jDVdL5Ko"},
     "seth-meyers": {"youtube_video_id": "-pfZlhfY4JM"},
     "franklin-leonard": {"youtube_video_id": "5YfyrBaAWpE"},
+    # User-provided video IDs for guests where title doesn't match "closet picks" pattern
+    "daniels": {"youtube_video_id": "ZpZXgO_3vN4"},
+    "five-comics": {"youtube_video_id": "d7zuU2a_Tt4"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -114,6 +118,8 @@ KNOWN_CRITERION_URLS = {
     "tracy-letts": "https://www.criterion.com/shop/collection/879-tracy-letts-s-closet-picks",
     "franklin-leonard": "https://www.criterion.com/shop/collection/802-franklin-leonard-s-closet-picks",
     "lee-daniels": "https://www.criterion.com/shop/collection/682-lee-daniels-s-closet-picks",
+    "daniels": "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
+    "five-comics": "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
 }
 
 # Name cleanup

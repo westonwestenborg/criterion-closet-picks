@@ -232,6 +232,12 @@ VISIT_CRITERION_URLS = {
     "hans-zimmer": [
         "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
     ],
+    "daniels": [
+        "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
+    ],
+    "five-comics": [
+        "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
+    ],
 }
 
 

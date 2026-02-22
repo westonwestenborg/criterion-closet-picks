@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T21:40:20",
+  "generated_at": "2026-02-21T21:58:05",
   "catalog": {
     "stats": {
       "total": 1771,
@@ -7103,8 +7103,8 @@
   "guests": {
     "stats": {
       "total": 343,
-      "with_youtube_video": 336,
-      "with_transcript": 328,
+      "with_youtube_video": 337,
+      "with_transcript": 329,
       "with_profession": 333,
       "with_photo": 313,
       "with_letterboxd_url": 0,
@@ -7156,10 +7156,6 @@
       },
       {
         "type": "no_youtube_video",
-        "guest": "Five Comics’"
-      },
-      {
-        "type": "no_youtube_video",
         "guest": "The Quay Brothers’"
       },
       {
@@ -7184,14 +7180,14 @@
   "picks": {
     "stats": {
       "total": 2868,
-      "with_quote": 2702,
-      "with_timestamp": 2704,
-      "with_youtube_url": 2685,
+      "with_quote": 2719,
+      "with_timestamp": 2722,
+      "with_youtube_url": 2703,
       "with_catalog_spine": 2554,
-      "confidence_high": 2660,
+      "confidence_high": 2677,
       "confidence_medium": 41,
       "confidence_low": 1,
-      "confidence_none": 166,
+      "confidence_none": 149,
       "guests_represented": 343,
       "unique_films": 965
     },
@@ -11570,18 +11566,18 @@
       "name": "Five Comics’",
       "slug": "five-comics",
       "profession": null,
-      "has_video": false,
-      "has_transcript": false,
+      "has_video": true,
+      "has_transcript": true,
       "raw_picks": 19,
       "catalog_matched": 18,
       "catalog_match_rate_pct": 94.7,
       "enriched_picks": 19,
-      "with_quote": 0,
-      "confidence_high": 0,
+      "with_quote": 17,
+      "confidence_high": 17,
       "confidence_medium": 0,
       "confidence_low": 0,
-      "confidence_none": 19,
-      "high_confidence_rate_pct": 0.0
+      "confidence_none": 2,
+      "high_confidence_rate_pct": 89.5
     },
     {
       "name": "M.I.A. and Stephen Loveridge",
