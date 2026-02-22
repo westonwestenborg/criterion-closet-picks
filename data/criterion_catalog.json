@@ -70304,7 +70304,7 @@
     "director": "Claude Gagnon",
     "year": 1987,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/28499-the-kid-brother",
     "film_id": "the-kid-brother",
     "imdb_id": "tt0093338",
     "tmdb_id": 261098,
@@ -96174,7 +96174,7 @@
     "director": "Luis Buñuel",
     "year": 1953,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/33695-el",
     "film_id": "el",
     "imdb_id": "tt0045361",
     "tmdb_id": 43344,
@@ -137510,6 +137510,90 @@
           "name": "B. J. Merholz",
           "tmdb_id": 544143,
           "character": "Leland Drum"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "No Bears",
+    "director": "Jafar Panahi",
+    "year": 2022,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/33531-no-bears",
+    "film_id": "no-bears",
+    "imdb_id": "tt20205236",
+    "tmdb_id": 974521,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/e2yKKrBYhZbwO1kEc1Meq2uaGso.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Jafar Panahi",
+          "tmdb_id": 120229
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jafar Panahi",
+          "tmdb_id": 120229
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Amin Jafari",
+          "tmdb_id": 1525468
+        }
+      ],
+      "editors": [
+        {
+          "name": "Amir Etminan",
+          "tmdb_id": 2829763
+        }
+      ],
+      "cast": [
+        {
+          "name": "Jafar Panahi",
+          "tmdb_id": 120229,
+          "character": "Jafar Panahi"
+        },
+        {
+          "name": "Naser Hashemi",
+          "tmdb_id": 1579353,
+          "character": "The Sheriff"
+        },
+        {
+          "name": "Vahid Mobasseri",
+          "tmdb_id": 5389673,
+          "character": "Ghanbar"
+        },
+        {
+          "name": "Bakhtiyar Panjeei",
+          "tmdb_id": 3545133,
+          "character": "Bakhtiyar"
+        },
+        {
+          "name": "Mina Kavani",
+          "tmdb_id": 2260343,
+          "character": "Zara"
+        },
+        {
+          "name": "Narges Delaram",
+          "tmdb_id": 2858100,
+          "character": "Ghanbar's Mother"
+        },
+        {
+          "name": "Abdolreza Heydari",
+          "tmdb_id": 2534840,
+          "character": "Reza"
+        },
+        {
+          "name": "Amir Davar",
+          "tmdb_id": 3790058,
+          "character": "Solduz"
         }
       ]
     }

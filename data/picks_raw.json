@@ -2591,7 +2591,7 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/233-the-red-shoes",
     "source": "criterion",
-    "visit_index": 1,
+    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
@@ -48831,13 +48831,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/33246-wall-e",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48851,13 +48851,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/1078-hobson-s-choice",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48871,13 +48871,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/33280-the-mother-and-the-whore",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48891,13 +48891,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/30369-the-wind-will-carry-us",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48911,13 +48911,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34891-anora",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48931,13 +48931,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/30085-prince-of-broadway",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48951,13 +48951,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/150-8-1-2",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48971,13 +48971,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "michael-cera",
@@ -48991,13 +48991,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/boxsets/7581-gregg-araki-s-teen-apocalypse-trilogy",
     "source": "criterion",
-    "visit_index": 2,
     "is_box_set": true,
     "box_set_name": "Gregg Araki’s Teen Apocalypse Trilogy",
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 2
   },
   {
     "guest_slug": "joel-potrykus",
@@ -50791,13 +50791,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/151-the-400-blows",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50811,13 +50811,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/603-charade",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50831,13 +50831,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/2104-crumb",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50851,13 +50851,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27513-the-thin-red-line",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50871,13 +50871,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27521-the-magician",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50891,13 +50891,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/404-repulsion",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -50911,13 +50911,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27522-paths-of-glory",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "terry-gilliam",
@@ -51731,13 +51731,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/152-ali-fear-eats-the-soul",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51751,13 +51751,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27871-12-angry-men",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51771,13 +51771,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/663-salesman",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51791,13 +51791,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/220-naked",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51811,13 +51811,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/718-man-bites-dog",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51831,13 +51831,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/184-le-samourai",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51851,13 +51851,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27529-five-easy-pieces",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51871,13 +51871,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/373-viridiana",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51891,13 +51891,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27552-things-to-come",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51911,13 +51911,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/576-branded-to-kill",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51931,13 +51931,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28020-macbeth",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51951,13 +51951,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/229-pickpocket",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "yorgos-lanthimos",
@@ -51971,13 +51971,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/455-au-hasard-balthazar",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "edgar-wright",
@@ -51991,13 +51991,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/950-eyes-without-a-face",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "edgar-wright",
@@ -52011,13 +52011,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/526-walker",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "edgar-wright",
@@ -52031,13 +52031,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/735-throne-of-blood",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "edgar-wright",
@@ -52051,13 +52051,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27928-don-t-look-now",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "visit_index": 1
   },
   {
     "guest_slug": "patton-oswalt",
@@ -56474,6 +56474,266 @@
     "visit_index": 1,
     "is_box_set": true,
     "box_set_name": "Gregg Araki’s Teen Apocalypse Trilogy",
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "No Bears",
+    "film_year": null,
+    "film_id": "no-bears",
+    "catalog_spine": null,
+    "catalog_title": null,
+    "match_method": null,
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/33531-no-bears",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "Saint Omer",
+    "film_year": null,
+    "film_id": "saint-omer",
+    "catalog_spine": 1212,
+    "catalog_title": "Saint Omer",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/34051-saint-omer",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "Ugetsu",
+    "film_year": null,
+    "film_id": "ugetsu",
+    "catalog_spine": 309,
+    "catalog_title": "Ugetsu",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/369-ugetsu",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "Harlan County USA",
+    "film_year": null,
+    "film_id": "harlan-county-usa",
+    "catalog_spine": 334,
+    "catalog_title": "Harlan County, USA",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/777-harlan-county-usa",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "Él",
+    "film_year": null,
+    "film_id": "el",
+    "catalog_spine": 1289,
+    "catalog_title": "Él",
+    "match_method": "exact",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/33695-el",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "The Cameraman",
+    "film_year": null,
+    "film_id": "the-cameraman",
+    "catalog_spine": 1033,
+    "catalog_title": "The Cameraman",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29011-the-cameraman",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "alex-winter",
+    "guest_name": "Alex Winter",
+    "film_title": "The Koker Trilogy",
+    "film_year": null,
+    "film_id": "the-brd-trilogy",
+    "catalog_spine": 203,
+    "catalog_title": "The BRD Trilogy",
+    "match_method": "fuzzy_81",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/boxsets/2363-the-koker-trilogy",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": true,
+    "box_set_name": "The Koker Trilogy",
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "paul-smith",
+    "guest_name": "Paul Smith",
+    "film_title": "Withnail and I",
+    "film_year": null,
+    "film_id": "withnail-and-i",
+    "catalog_spine": null,
+    "catalog_title": "Withnail and I",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/658-withnail-and-i",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "paul-smith",
+    "guest_name": "Paul Smith",
+    "film_title": "Breathless",
+    "film_year": null,
+    "film_id": "breathless",
+    "catalog_spine": 408,
+    "catalog_title": "Breathless",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/268-breathless",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "paul-smith",
+    "guest_name": "Paul Smith",
+    "film_title": "My Beautiful Laundrette",
+    "film_year": null,
+    "film_id": "my-beautiful-laundrette",
+    "catalog_spine": 767,
+    "catalog_title": "My Beautiful Laundrette",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/28044-my-beautiful-laundrette",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "paul-smith",
+    "guest_name": "Paul Smith",
+    "film_title": "Kagemusha",
+    "film_year": null,
+    "film_id": "kagemusha",
+    "catalog_spine": 267,
+    "catalog_title": "Kagemusha",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/948-kagemusha",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "paul-smith",
+    "guest_name": "Paul Smith",
+    "film_title": "The Kid Brother",
+    "film_year": null,
+    "film_id": "the-kid-brother",
+    "catalog_spine": 964,
+    "catalog_title": "The Kid Brother",
+    "match_method": "exact",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/28499-the-kid-brother",
+    "source": "criterion",
+    "visit_index": 1,
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "",
+    "start_timestamp": null,
+    "youtube_timestamp_url": "",
+    "extraction_confidence": "none"
+  },
+  {
+    "guest_slug": "guillermo-del-toro",
+    "guest_name": "Guillermo del Toro",
+    "film_title": "Roma",
+    "film_year": null,
+    "film_id": "roma-2018",
+    "catalog_spine": 1014,
+    "catalog_title": "Roma",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/30124-roma",
+    "source": "criterion",
+    "visit_index": 2,
+    "is_box_set": false,
+    "box_set_name": null,
     "quote": "",
     "start_timestamp": null,
     "youtube_timestamp_url": "",

@@ -222,6 +222,50 @@ VISIT_CRITERION_URLS = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Excluded YouTube video IDs
+# ---------------------------------------------------------------------------
+
+# Videos in the Closet Picks playlist that are NOT individual guest episodes.
+# These are filtered out when checking for new videos to avoid false positives.
+EXCLUDED_VIDEO_IDS = {
+    # Compilations / "We Love" series
+    "2SS0RQzGvds",  # From Criterion, With Love | Closet Picks Edition
+    "ujVHv-tdoxk",  # We Love David Lynch | Closet Picks Edition
+    "ATn7YObIedU",  # We Love Jim Jarmusch | Closet Picks Edition
+    "u1ou-tqLgJo",  # We Love ALL THAT JAZZ | Closet Picks Edition
+    "X2x1-t3GDZA",  # We Love Akira Kurosawa | Closet Picks Edition
+    "LG3qEVw3bfA",  # We Love NIGHT OF THE LIVING DEAD | Closet Picks Edition
+    "TnQsap0KJvY",  # We Love Richard Linklater | Closet Picks Edition
+    "GAbJr5c5OLU",  # We Love Martin Scorsese | Closet Picks Edition
+    "zE9yZdXh0s8",  # Closet Picks: Greatest Hits
+    # Mobile Closet events
+    "ujTba4LsZVs",  # The Criterion Closet: Chicago Edition
+    "8ZWOaTAiKL8",  # Criterion Mobile Closet TIFF promo
+    "qE7j_1UOPXI",  # Mobile Closet LA Aero Theatre
+    "LnrhF636NJ8",  # Mobile Closet Vidiots LA
+    "YOXcZIRFEsw",  # Mobile Closet Returns to LA
+    "iXHk5FpPhDc",  # Mobile Closet SXSW
+    "-KYLPII0964",  # Mobile Closet Brooklyn
+    "XvX8AGKHKCE",  # Mobile Closet NYFF Weekend 2
+    "jdceKguPiAI",  # Mobile Closet NYFF Weekend 1
+    # Special messages / promos
+    "Vp0T97ClTXs",  # Special Message from Richard Linklater
+    "X48hhzz-5eM",  # Mother's Day Weekend moment
+    "Rf530YO8J-k",  # Cillian Murphy + THE WES ANDERSON ARCHIVE (book promo)
+    # Single-film spotlight clips (not full episodes)
+    "kg6B7HL5jAI",  # Lucy Liu on IN THE MOOD FOR LOVE
+    "tiafmmKAUBE",  # Wagner Moura on LIMITE
+    "vFp3cXxveGc",  # Ryan Coogler on MALCOLM X
+    # DVD-era picks (different format, pre-Closet Picks series)
+    "f31TXhdC-Ps",  # Mike Leigh's DVD Picks
+    "PtVA6nKygFs",  # Wim Wenders' DVD Picks
+    # Private/unavailable videos
+    "e82armU7LeI",  # [Private video]
+    "bDGl-r3dGtM",  # [Private video]
+}
+
+
 PILOT_GUESTS = [
     "Barry Jenkins",
     "Guillermo del Toro",

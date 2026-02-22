@@ -22,13 +22,19 @@ Run yt-dlp to check the Closet Picks playlist for videos not yet in our data:
 
 ```bash
 .venv/bin/python -c "
-import json, subprocess
+import json, subprocess, sys
 from pathlib import Path
+sys.path.insert(0, 'scripts')
+from utils import EXCLUDED_VIDEO_IDS
 
-# Load processed videos
+# Load processed videos (top-level + all visits)
 guests = json.loads(Path('data/guests.json').read_text())
 known_ids = {g['youtube_video_id'] for g in guests if g.get('youtube_video_id')}
-print(f'Currently tracking {len(known_ids)} videos')
+for g in guests:
+    for v in g.get('visits', []):
+        if v.get('youtube_video_id'):
+            known_ids.add(v['youtube_video_id'])
+print(f'Currently tracking {len(known_ids)} videos ({len(EXCLUDED_VIDEO_IDS)} excluded)')
 
 # Check playlist
 result = subprocess.run([
@@ -40,8 +46,9 @@ new_videos = []
 for line in result.stdout.strip().split('\n'):
     if not line: continue
     v = json.loads(line)
-    if v.get('id') not in known_ids:
-        new_videos.append({'id': v['id'], 'title': v.get('title', '?')})
+    vid = v.get('id')
+    if vid not in known_ids and vid not in EXCLUDED_VIDEO_IDS:
+        new_videos.append({'id': vid, 'title': v.get('title', '?')})
 
 if new_videos:
     print(f'\nFound {len(new_videos)} new videos:')
