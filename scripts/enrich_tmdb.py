@@ -46,6 +46,12 @@ DEPARTMENT_MAP = {
     "Editing": "editor",
 }
 
+# Films that are TV series on TMDB (use /tv/ endpoints instead of /movie/)
+# Maps film_id -> TMDB TV series ID
+TMDB_TV_IDS = {
+    "dekalog": 42699,
+}
+
 
 # ---------------------------------------------------------------------------
 # Criterion URL helpers
@@ -222,6 +228,18 @@ class TMDBClient:
         """Get cast and crew credits for a movie."""
         return self._get(f"/movie/{tmdb_id}/credits")
 
+    def get_tv_details(self, tmdb_id: int) -> dict | None:
+        """Get TV series details."""
+        return self._get(f"/tv/{tmdb_id}")
+
+    def get_tv_external_ids(self, tmdb_id: int) -> dict | None:
+        """Get external IDs (IMDB) for a TV series."""
+        return self._get(f"/tv/{tmdb_id}/external_ids")
+
+    def get_tv_credits(self, tmdb_id: int) -> dict | None:
+        """Get aggregate credits for a TV series."""
+        return self._get(f"/tv/{tmdb_id}/aggregate_credits")
+
 
 def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_lookup: dict = None) -> dict:
     """Enrich a single film with TMDB data.
@@ -238,6 +256,8 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
     if film.get("tmdb_id") and film.get("poster_url") and film.get("credits"):
         return film
 
+    film_id = film.get("film_id", "")
+    is_tv = film_id in TMDB_TV_IDS or film.get("tmdb_type") == "tv"
     tmdb_id = film.get("tmdb_id")
 
     # --- Criterion URL disambiguation ---
@@ -252,6 +272,12 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
             log(f"  Got year {criterion_year} from Criterion page for '{title}'")
             year = criterion_year
             film["year"] = year
+
+    # Use known TV ID if available
+    if not tmdb_id and film_id in TMDB_TV_IDS:
+        tmdb_id = TMDB_TV_IDS[film_id]
+        film["tmdb_id"] = tmdb_id
+        is_tv = True
 
     # Search TMDB if we don't have a tmdb_id yet
     if not tmdb_id:
@@ -287,38 +313,74 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
 
     # IMDB ID
     if tmdb_id and not film.get("imdb_id"):
-        ext_ids = client.get_movie_external_ids(tmdb_id)
+        if is_tv:
+            ext_ids = client.get_tv_external_ids(tmdb_id)
+        else:
+            ext_ids = client.get_movie_external_ids(tmdb_id)
         if ext_ids:
             film["imdb_id"] = ext_ids.get("imdb_id")
 
     # Credits (director, writer, cinematographer, editor, cast)
     if tmdb_id and not film.get("credits"):
-        credits_data = client.get_movie_credits(tmdb_id)
-        if credits_data:
-            crew = credits_data.get("crew", [])
-            cast = credits_data.get("cast", [])
-
-            def crew_by_job(*jobs):
-                return [
+        if is_tv:
+            # For TV series, get creators from details and cast from aggregate_credits
+            tv_details = client.get_tv_details(tmdb_id)
+            credits_data = client.get_tv_credits(tmdb_id)
+            creators = []
+            if tv_details:
+                creators = [
                     {"name": c["name"], "tmdb_id": c["id"]}
-                    for c in crew
-                    if c.get("job") in jobs
+                    for c in tv_details.get("created_by", [])
                 ]
+                # Poster from TV details if missing
+                if not film.get("poster_url") and tv_details.get("poster_path"):
+                    film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{tv_details['poster_path']}"
+                # Genres from TV details if missing
+                if not film.get("genres") or film["genres"] == []:
+                    film["genres"] = [g["name"] for g in tv_details.get("genres", [])]
 
+            cast = credits_data.get("cast", []) if credits_data else []
             film["credits"] = {
-                "directors": crew_by_job("Director"),
-                "writers": crew_by_job("Writer", "Screenplay"),
-                "cinematographers": crew_by_job("Director of Photography"),
-                "editors": crew_by_job("Editor"),
+                "directors": creators,
+                "writers": creators,
+                "cinematographers": [],
+                "editors": [],
                 "cast": [
-                    {"name": c["name"], "tmdb_id": c["id"], "character": c.get("character", "")}
-                    for c in cast[:8]  # Top 8 billed
+                    {"name": c["name"], "tmdb_id": c["id"], "character": ""}
+                    for c in cast[:8]
                 ],
             }
+            film["tmdb_type"] = "tv"
 
-            # Also set director if not already set
-            if not film.get("director") and film["credits"]["directors"]:
-                film["director"] = film["credits"]["directors"][0]["name"]
+            if not film.get("director") and creators:
+                film["director"] = creators[0]["name"]
+        else:
+            credits_data = client.get_movie_credits(tmdb_id)
+            if credits_data:
+                crew = credits_data.get("crew", [])
+                cast = credits_data.get("cast", [])
+
+                def crew_by_job(*jobs):
+                    return [
+                        {"name": c["name"], "tmdb_id": c["id"]}
+                        for c in crew
+                        if c.get("job") in jobs
+                    ]
+
+                film["credits"] = {
+                    "directors": crew_by_job("Director"),
+                    "writers": crew_by_job("Writer", "Screenplay"),
+                    "cinematographers": crew_by_job("Director of Photography"),
+                    "editors": crew_by_job("Editor"),
+                    "cast": [
+                        {"name": c["name"], "tmdb_id": c["id"], "character": c.get("character", "")}
+                        for c in cast[:8]  # Top 8 billed
+                    ],
+                }
+
+                # Also set director if not already set
+                if not film.get("director") and film["credits"]["directors"]:
+                    film["director"] = film["credits"]["directors"][0]["name"]
 
     return film
 

@@ -59942,83 +59942,55 @@
   {
     "spine_number": 837,
     "title": "Dekalog",
-    "director": "Kim Kee-duk",
-    "year": 1988,
+    "director": "Krzysztof Kieślowski",
+    "year": 1989,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28661-dekalog",
     "film_id": "dekalog",
-    "imdb_id": "tt0061549",
+    "imdb_id": "tt0092337",
     "tmdb_id": 42699,
-    "genres": [],
-    "poster_url": null,
+    "tmdb_type": "tv",
+    "genres": ["Drama"],
+    "poster_url": "https://image.tmdb.org/t/p/w185/v390wlQKSVpnuGuM3ynruH6PX7x.jpg",
     "credits": {
       "directors": [
         {
-          "name": "Kim Kee-duk",
-          "tmdb_id": 1286104
+          "name": "Krzysztof Kieślowski",
+          "tmdb_id": 1920
         }
       ],
       "writers": [
         {
-          "name": "Seo Yun-sung",
-          "tmdb_id": 1062360
+          "name": "Krzysztof Kieślowski",
+          "tmdb_id": 1920
         },
         {
-          "name": "Kim Kee-duk",
-          "tmdb_id": 1286104
+          "name": "Krzysztof Piesiewicz",
+          "tmdb_id": 56399
         }
       ],
-      "cinematographers": [
-        {
-          "name": "Lee Seong-chun",
-          "tmdb_id": 1894768
-        },
-        {
-          "name": "Byeon In-jib",
-          "tmdb_id": 1506942
-        }
-      ],
+      "cinematographers": [],
       "editors": [],
       "cast": [
         {
-          "name": "Oh Yeong-il",
-          "tmdb_id": 2631742,
-          "character": "Ko Il-woo"
+          "name": "Artur Barciś",
+          "tmdb_id": 97285,
+          "character": ""
         },
         {
-          "name": "Nam Jeong-im",
-          "tmdb_id": 1065314,
-          "character": "Suna"
+          "name": "Olgierd Łukaszewicz",
+          "tmdb_id": 97260,
+          "character": ""
         },
         {
-          "name": "Lee Soon-jae",
-          "tmdb_id": 566367,
-          "character": "Yoo Kwang-nam"
+          "name": "Krystyna Janda",
+          "tmdb_id": 97258,
+          "character": ""
         },
         {
-          "name": "Lee Kwang-ho",
-          "tmdb_id": 1065315,
-          "character": "Icho"
-        },
-        {
-          "name": "Cho Kyoung-min",
-          "tmdb_id": 1065316,
-          "character": "Yongary"
-        },
-        {
-          "name": "Moon Kang",
-          "tmdb_id": 2631745,
-          "character": "Kim Yu-ri"
-        },
-        {
-          "name": "Twist Kim",
-          "tmdb_id": 1197140,
-          "character": "Soldier"
-        },
-        {
-          "name": "Kim Shin-jae",
-          "tmdb_id": 1556170,
-          "character": "Kim Yu-ir's Mother"
+          "name": "Aleksander Bardini",
+          "tmdb_id": 97262,
+          "character": ""
         }
       ]
     }
