@@ -218,7 +218,7 @@
     "episode_date": "2013-01-14",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
-    "pick_count": 16,
+    "pick_count": 17,
     "visits": [
       {
         "youtube_video_id": "49Al7eYy6sg",
@@ -3548,7 +3548,7 @@
     "episode_date": null,
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/604-jack-garfein-s-closet-picks",
-    "pick_count": 4
+    "pick_count": 6
   },
   {
     "name": "Richard Ayoade",
@@ -4576,5 +4576,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
     "pick_count": 9
+  },
+  {
+    "name": "Halle Berry",
+    "slug": "halle-berry",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/wtFetpWV8kjBsvzYKN9uEEmPdpy.jpg",
+    "youtube_video_id": "NxtUjQOrJZU",
+    "youtube_video_url": "https://www.youtube.com/watch?v=NxtUjQOrJZU",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/931-halle-berry-s-closet-picks",
+    "pick_count": 10
   }
 ]

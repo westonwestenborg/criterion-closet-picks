@@ -92,6 +92,7 @@ KNOWN_VIDEO_IDS = {
     # User-provided video IDs for guests where title doesn't match "closet picks" pattern
     "daniels": {"youtube_video_id": "ZpZXgO_3vN4"},
     "five-comics": {"youtube_video_id": "d7zuU2a_Tt4"},
+    "halle-berry": {"youtube_video_id": "NxtUjQOrJZU"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -111,6 +112,7 @@ KNOWN_CRITERION_URLS = {
     "anton-corbijn": "https://www.criterion.com/shop/collection/571-anton-corbijn-s-closet-picks",
     "joel-potrykus": "https://www.criterion.com/shop/collection/806-joel-potrykus-s-closet-picks",
     "coralie-fargeat": None,  # Unknown
+    "halle-berry": "https://www.criterion.com/shop/collection/931-halle-berry-s-closet-picks",
     "isabella-rossellini": None,  # Unknown
     "pablo-larran": "https://www.criterion.com/shop/collection/766-pablo-larrain-s-closet-picks",
     "pauline-chalamet": "https://www.criterion.com/shop/collection/536-pauline-chalamets-closet-picks",

@@ -238,6 +238,9 @@ VISIT_CRITERION_URLS = {
     "five-comics": [
         "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
     ],
+    "halle-berry": [
+        "https://www.criterion.com/shop/collection/931-halle-berry-s-closet-picks",
+    ],
 }
 
 
