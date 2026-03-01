@@ -59950,7 +59950,9 @@
     "imdb_id": "tt0092337",
     "tmdb_id": 42699,
     "tmdb_type": "tv",
-    "genres": ["Drama"],
+    "genres": [
+      "Drama"
+    ],
     "poster_url": "https://image.tmdb.org/t/p/w185/v390wlQKSVpnuGuM3ynruH6PX7x.jpg",
     "credits": {
       "directors": [

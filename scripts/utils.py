@@ -241,6 +241,9 @@ VISIT_CRITERION_URLS = {
     "halle-berry": [
         "https://www.criterion.com/shop/collection/931-halle-berry-s-closet-picks",
     ],
+    "christoph-waltz": [
+        "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
+    ],
 }
 
 
