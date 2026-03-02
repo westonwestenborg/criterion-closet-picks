@@ -612,7 +612,8 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
         title = film["title"]
 
         # 1. Match by criterion film ID (extracted from URL)
-        if crit_id and crit_id in slug_lookup:
+        # Skip for box sets — /boxsets/ IDs are a different namespace than /films/ IDs
+        if crit_id and crit_id in slug_lookup and not film.get("is_box_set"):
             cat = slug_lookup[crit_id]
             film["catalog_spine"] = cat["spine_number"]
             film["catalog_title"] = cat["title"]
