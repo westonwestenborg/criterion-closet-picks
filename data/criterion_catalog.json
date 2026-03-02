@@ -72008,45 +72008,81 @@
   {
     "spine_number": 984,
     "title": "1984",
-    "director": null,
     "year": 1984,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/29140-1984",
     "film_id": "1984",
-    "imdb_id": "",
-    "tmdb_id": 112892,
-    "genres": [
-      "Music"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/fChx3iVKJFBtRJ34fwOgM5FtrlD.jpg",
+    "tmdb_id": 9314,
+    "imdb_id": "tt0087803",
     "credits": {
-      "directors": [],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
+      "directors": [
+        {
+          "name": "Michael Radford",
+          "tmdb_id": 28898
+        }
+      ],
+      "writers": [
+        {
+          "name": "Michael Radford",
+          "tmdb_id": 28898
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Roger Deakins",
+          "tmdb_id": 151
+        }
+      ],
+      "editors": [
+        {
+          "name": "Tom Priestley",
+          "tmdb_id": 25633
+        }
+      ],
       "cast": [
         {
-          "name": "Gene Simmons",
-          "tmdb_id": 57756,
-          "character": ""
+          "name": "John Hurt",
+          "tmdb_id": 5049,
+          "character": "Winston Smith"
         },
         {
-          "name": "Paul Stanley",
-          "tmdb_id": 123255,
-          "character": ""
+          "name": "Richard Burton",
+          "tmdb_id": 5341,
+          "character": "O'Brien"
         },
         {
-          "name": "Eric Carr",
-          "tmdb_id": 1038489,
-          "character": ""
+          "name": "Suzanna Hamilton",
+          "tmdb_id": 10652,
+          "character": "Julia"
         },
         {
-          "name": "Vinnie Vincent",
-          "tmdb_id": 1038492,
-          "character": ""
+          "name": "Cyril Cusack",
+          "tmdb_id": 4973,
+          "character": "Charrington"
+        },
+        {
+          "name": "Gregor Fisher",
+          "tmdb_id": 7053,
+          "character": "Parsons"
+        },
+        {
+          "name": "James Walker",
+          "tmdb_id": 208920,
+          "character": "Syme"
+        },
+        {
+          "name": "Andrew Wilde",
+          "tmdb_id": 26861,
+          "character": "Tillotson"
+        },
+        {
+          "name": "David Cann",
+          "tmdb_id": 193340,
+          "character": "Martin"
         }
       ]
-    }
+    },
+    "director": "Michael Radford"
   },
   {
     "spine_number": 985,
@@ -73497,76 +73533,85 @@
   {
     "spine_number": 1005,
     "title": "Cold War",
-    "director": "J. Wilder Konschak",
     "year": 2017,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/30104-cold-war",
     "film_id": "cold-war",
-    "imdb_id": "tt5537300",
-    "tmdb_id": 517104,
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/fNtvmW8vkxmsmQbYUdRrPZHxeRM.jpg",
+    "tmdb_id": 440298,
+    "imdb_id": "tt6543652",
     "credits": {
       "directors": [
         {
-          "name": "J. Wilder Konschak",
-          "tmdb_id": 2019354
+          "name": "Paweł Pawlikowski",
+          "tmdb_id": 64194
         }
       ],
       "writers": [
         {
-          "name": "J. Wilder Konschak",
-          "tmdb_id": 2019354
+          "name": "Paweł Pawlikowski",
+          "tmdb_id": 64194
+        },
+        {
+          "name": "Janusz Głowacki",
+          "tmdb_id": 342858
         }
       ],
-      "cinematographers": [],
-      "editors": [],
+      "cinematographers": [
+        {
+          "name": "Łukasz Żal",
+          "tmdb_id": 1609221
+        }
+      ],
+      "editors": [
+        {
+          "name": "Jarosław Kamiński",
+          "tmdb_id": 1421495
+        }
+      ],
       "cast": [
         {
-          "name": "Michael Blaiklock",
-          "tmdb_id": 1254620,
-          "character": "Jon Chupp"
+          "name": "Joanna Kulig",
+          "tmdb_id": 908548,
+          "character": "Zuzanna 'Zula' Lichoń"
         },
         {
-          "name": "Rammel Chan",
-          "tmdb_id": 1360029,
-          "character": "Paul"
+          "name": "Tomasz Kot",
+          "tmdb_id": 140652,
+          "character": "Wiktor Warski"
         },
         {
-          "name": "Scarlett Harper",
-          "tmdb_id": 2721254,
-          "character": "Little Maggie"
+          "name": "Borys Szyc",
+          "tmdb_id": 95105,
+          "character": "Lech Kaczmarek"
         },
         {
-          "name": "Antoine McKay",
-          "tmdb_id": 1437844,
-          "character": "Everett Galoup"
+          "name": "Agata Kulesza",
+          "tmdb_id": 566101,
+          "character": "Irena Bielecka"
         },
         {
-          "name": "Antoine Pierre",
-          "tmdb_id": 2721255,
-          "character": "Petey"
+          "name": "Cédric Kahn",
+          "tmdb_id": 93903,
+          "character": "Michel"
         },
         {
-          "name": "Gail Rastorfer",
-          "tmdb_id": 2721256,
-          "character": "Ollie Galoup"
+          "name": "Jeanne Balibar",
+          "tmdb_id": 77191,
+          "character": "Juliette"
         },
         {
-          "name": "Deanna Reed-Foster",
-          "tmdb_id": 1560230,
-          "character": "Susan"
+          "name": "Adam Woronowicz",
+          "tmdb_id": 136558,
+          "character": "Consul"
         },
         {
-          "name": "Sara Sevigny",
-          "tmdb_id": 1991181,
-          "character": "Crystal"
+          "name": "Adam Ferency",
+          "tmdb_id": 1409,
+          "character": "Minister"
         }
       ]
-    }
+    },
+    "director": "Paweł Pawlikowski"
   },
   {
     "spine_number": 1006,

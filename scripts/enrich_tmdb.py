@@ -52,6 +52,13 @@ TMDB_TV_IDS = {
     "dekalog": 42699,
 }
 
+# Manual TMDB ID overrides for films that auto-search matches incorrectly
+# Maps film_id -> correct TMDB movie ID
+TMDB_ID_OVERRIDES = {
+    "1984": 9314,          # Orwell adaptation, not KISS music doc
+    "cold-war": 440298,    # Pawlikowski's Zimna wojna, not 2017 comedy
+}
+
 
 # ---------------------------------------------------------------------------
 # Criterion URL helpers
@@ -251,14 +258,24 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
     """
     title = film.get("title", "")
     year = film.get("year")
+    film_id = film.get("film_id", "")
+    is_tv = film_id in TMDB_TV_IDS or film.get("tmdb_type") == "tv"
+    tmdb_id = film.get("tmdb_id")
+
+    # --- Manual TMDB ID override (must run before skip check) ---
+    if film_id in TMDB_ID_OVERRIDES:
+        correct_id = TMDB_ID_OVERRIDES[film_id]
+        if tmdb_id != correct_id:
+            log(f"  Overriding TMDB ID for '{title}': {tmdb_id} -> {correct_id}")
+            tmdb_id = correct_id
+            film["tmdb_id"] = tmdb_id
+            # Clear stale data so it gets re-fetched below
+            for key in ("poster_url", "genres", "imdb_id", "credits", "director"):
+                film.pop(key, None)
 
     # Skip if already fully enriched (including credits)
     if film.get("tmdb_id") and film.get("poster_url") and film.get("credits"):
         return film
-
-    film_id = film.get("film_id", "")
-    is_tv = film_id in TMDB_TV_IDS or film.get("tmdb_type") == "tv"
-    tmdb_id = film.get("tmdb_id")
 
     # --- Criterion URL disambiguation ---
     # If we have no year, try to get one from the Criterion film page
