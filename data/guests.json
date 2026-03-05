@@ -4602,5 +4602,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
     "pick_count": 6
+  },
+  {
+    "name": "Cameron Crowe",
+    "slug": "cameron-crowe",
+    "profession": "writer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/iBCN51wrmnSUr2mkQBuN9E2AZK.jpg",
+    "youtube_video_id": "JOYFdj70CpI",
+    "youtube_video_url": "https://www.youtube.com/watch?v=JOYFdj70CpI",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
+    "pick_count": 7
   }
 ]

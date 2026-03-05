@@ -244,6 +244,9 @@ VISIT_CRITERION_URLS = {
     "christoph-waltz": [
         "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
     ],
+    "cameron-crowe": [
+        "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
+    ],
 }
 
 

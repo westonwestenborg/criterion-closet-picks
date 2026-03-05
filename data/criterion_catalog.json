@@ -137616,5 +137616,240 @@
         }
       ]
     }
+  },
+  {
+    "spine_number": null,
+    "title": "Eclipse Series 22: Presenting Sacha Guitry",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/736-eclipse-series-22-presenting-sacha-guitry",
+    "film_id": "eclipse-series-22-presenting-sacha-guitry",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Eclipse Series 37: When Horror Came to Shochiku",
+    "director": "",
+    "year": 1967,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/928-eclipse-series-37-when-horror-came-to-shochiku",
+    "film_id": "eclipse-series-37-when-horror-came-to-shochiku",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Eclipse Series 38: Masaki Kobayashi Against the System",
+    "director": "",
+    "year": 1959,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/952-eclipse-series-38-masaki-kobayashi-against-the-system",
+    "film_id": "eclipse-series-38-masaki-kobayashi-against-the-system",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Martin Scorsese's World Cinema Project No. 1",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "martin-scorsese-s-world-cinema-project-no-1",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Martin Scorsese's World Cinema Project No. 2",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "martin-scorsese-s-world-cinema-project-no-2",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Martin Scorsese's World Cinema Project No. 4",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "martin-scorsese-s-world-cinema-project-no-4",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "Paul Robeson: Portraits of the Artist",
+    "director": "",
+    "year": 1976,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/443-paul-robeson-portraits-of-the-artist",
+    "film_id": "paul-robeson-portraits-of-the-artist",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "The Before Trilogy",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-before-trilogy",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "The Killers",
+    "director": "Tanya Hamilton",
+    "year": 1995,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-killers",
+    "imdb_id": null,
+    "tmdb_id": 1274350,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "writers": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jeff Baustert",
+          "tmdb_id": 1378433
+        },
+        {
+          "name": "J.D. Ligier",
+          "tmdb_id": 1404153
+        }
+      ],
+      "editors": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "cast": [
+        {
+          "name": "Mike Butters",
+          "tmdb_id": 2134,
+          "character": ""
+        },
+        {
+          "name": "Lindsay Edwards",
+          "tmdb_id": 3529431,
+          "character": "Biebel"
+        },
+        {
+          "name": "Tani Grey",
+          "tmdb_id": 4652336,
+          "character": "Marti"
+        },
+        {
+          "name": "Dianah Lilvera",
+          "tmdb_id": 4652337,
+          "character": "Blaustein"
+        },
+        {
+          "name": "Dorothy Cunningham",
+          "tmdb_id": 1867283,
+          "character": "Mama"
+        },
+        {
+          "name": "Fitz Weir",
+          "tmdb_id": 1599591,
+          "character": "Papa"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Koker Trilogy",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-koker-trilogy",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "The Marseille Trilogy",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-marseille-trilogy",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
+  },
+  {
+    "spine_number": null,
+    "title": "The Samurai Trilogy",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-samurai-trilogy",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null
   }
 ]

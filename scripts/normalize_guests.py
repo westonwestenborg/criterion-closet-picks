@@ -94,6 +94,7 @@ KNOWN_VIDEO_IDS = {
     "five-comics": {"youtube_video_id": "d7zuU2a_Tt4"},
     "halle-berry": {"youtube_video_id": "NxtUjQOrJZU"},
     "christoph-waltz": {"youtube_video_id": "fJcVa4vYMHs"},
+    "cameron-crowe": {"youtube_video_id": "JOYFdj70CpI"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -124,6 +125,7 @@ KNOWN_CRITERION_URLS = {
     "daniels": "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
     "five-comics": "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
     "christoph-waltz": "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
+    "cameron-crowe": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
 }
 
 # Name cleanup
