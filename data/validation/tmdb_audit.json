@@ -1,0 +1,475 @@
+{
+  "duplicate_tmdb_ids": [
+    {
+      "tmdb_id": 204,
+      "films": [
+        {
+          "film_id": "the-wages-of-fear",
+          "title": "The Wages of Fear",
+          "spine_number": 36
+        },
+        {
+          "film_id": "le-salaire-de-la-peur",
+          "title": "Le Salaire de la peur",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 843,
+      "films": [
+        {
+          "film_id": "fa-yeung-nin-wa",
+          "title": "Fa yeung nin wa",
+          "spine_number": null
+        },
+        {
+          "film_id": "in-the-mood-for-love",
+          "title": "In the Mood for Love",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 1364,
+      "films": [
+        {
+          "film_id": "lucia-world-cinema-project-no-3",
+          "title": "Lucía (World Cinema Project No. 3)",
+          "spine_number": 1045
+        },
+        {
+          "film_id": "lucia",
+          "title": "Lucía",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 8442,
+      "films": [
+        {
+          "film_id": "pixote-world-cinema-project-no-3",
+          "title": "Pixote (World Cinema Project No. 3)",
+          "spine_number": 1047
+        },
+        {
+          "film_id": "pixote",
+          "title": "Pixote",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 9314,
+      "films": [
+        {
+          "film_id": "1984",
+          "title": "1984",
+          "spine_number": 984
+        },
+        {
+          "film_id": "nineteen-eighty-four",
+          "title": "Nineteen Eighty-Four",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 10227,
+      "films": [
+        {
+          "film_id": "play-time",
+          "title": "PlayTime",
+          "spine_number": 112
+        },
+        {
+          "film_id": "playtime",
+          "title": "PlayTime",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 13446,
+      "films": [
+        {
+          "film_id": "withnail-and-i",
+          "title": "Withnail and I",
+          "spine_number": null
+        },
+        {
+          "film_id": "withnail-i",
+          "title": "Withnail & I",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 29451,
+      "films": [
+        {
+          "film_id": "all-that-money-can-buy-aka-the-devil-and-daniel-webster",
+          "title": "All That Money Can Buy (aka The Devil and Daniel Webster)",
+          "spine_number": 214
+        },
+        {
+          "film_id": "all-that-money-can-buy",
+          "title": "All That Money Can Buy",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 31217,
+      "films": [
+        {
+          "film_id": "the-human-condition",
+          "title": "The Human Condition",
+          "spine_number": 480
+        },
+        {
+          "film_id": "the-human-condition-i-no-greater-love",
+          "title": "The Human Condition I: No Greater Love",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 31345,
+      "films": [
+        {
+          "film_id": "lenfance-nue",
+          "title": "L’Enfance Nue",
+          "spine_number": 534
+        },
+        {
+          "film_id": "naked-childhood",
+          "title": "Naked Childhood",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 31542,
+      "films": [
+        {
+          "film_id": "the-tree-of-wooden-clogs-originally-announced-as-841-but-delayed",
+          "title": "The Tree of Wooden Clogs (originally announced as 841 but delayed)",
+          "spine_number": 854
+        },
+        {
+          "film_id": "the-tree-of-wooden-clogs",
+          "title": "The Tree of Wooden Clogs",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 40641,
+      "films": [
+        {
+          "film_id": "lola",
+          "title": "Lola",
+          "spine_number": 206
+        },
+        {
+          "film_id": "lola-jacques-demy-box",
+          "title": "Lola (Jacques Demy box)",
+          "spine_number": 714
+        }
+      ]
+    },
+    {
+      "tmdb_id": 42701,
+      "films": [
+        {
+          "film_id": "the-shooting-monte-hellman-set",
+          "title": "The Shooting (Monte Hellman set)",
+          "spine_number": 734
+        },
+        {
+          "film_id": "the-shooting",
+          "title": "The Shooting",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 51857,
+      "films": [
+        {
+          "film_id": "cria-cuervos",
+          "title": "Cría cuervos",
+          "spine_number": 403
+        },
+        {
+          "film_id": "cria",
+          "title": "Cria!",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 66180,
+      "films": [
+        {
+          "film_id": "i-fidanzati",
+          "title": "I fidanzati",
+          "spine_number": null
+        },
+        {
+          "film_id": "the-fiances",
+          "title": "The Fiancés",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 77771,
+      "films": [
+        {
+          "film_id": "touki-bouki-world-cinema-project",
+          "title": "Touki bouki (World Cinema Project)",
+          "spine_number": 685
+        },
+        {
+          "film_id": "touki-bouki",
+          "title": "Touki Bouki",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 93164,
+      "films": [
+        {
+          "film_id": "a-river-called-titas-world-cinema-project",
+          "title": "A River Called Titas (World Cinema Project)",
+          "spine_number": 687
+        },
+        {
+          "film_id": "a-river-called-titas",
+          "title": "A River Called Titas",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 93553,
+      "films": [
+        {
+          "film_id": "mysterious-object-at-noon-world-cinema-project-no-2",
+          "title": "Mysterious Object at Noon (World Cinema Project No. 2)",
+          "spine_number": 875
+        },
+        {
+          "film_id": "mysterious-object-at-noon",
+          "title": "Mysterious Object at Noon",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 108949,
+      "films": [
+        {
+          "film_id": "insiang-world-cinema-project-no-2",
+          "title": "Insiang (World Cinema Project No. 2)",
+          "spine_number": 874
+        },
+        {
+          "film_id": "insiang",
+          "title": "Insiang",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 126708,
+      "films": [
+        {
+          "film_id": "downpour-world-cinema-project-no-3",
+          "title": "Downpour (World Cinema Project No. 3)",
+          "spine_number": 1050
+        },
+        {
+          "film_id": "downpour",
+          "title": "Downpour",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 170296,
+      "films": [
+        {
+          "film_id": "dos-monjes-world-cinema-project-no-3",
+          "title": "Dos monjes (World Cinema Project No. 3)",
+          "spine_number": 1048
+        },
+        {
+          "film_id": "two-monks",
+          "title": "Two Monks",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 172597,
+      "films": [
+        {
+          "film_id": "after-the-curfew-world-cinema-project-no-3",
+          "title": "After the Curfew (World Cinema Project No. 3)",
+          "spine_number": 1046
+        },
+        {
+          "film_id": "after-the-curfew",
+          "title": "After the Curfew",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 195841,
+      "films": [
+        {
+          "film_id": "soleil-o-world-cinema-project-no-3",
+          "title": "Soleil Ô (World Cinema Project No. 3)",
+          "spine_number": 1049
+        },
+        {
+          "film_id": "oh-sun",
+          "title": "Oh, Sun",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 197297,
+      "films": [
+        {
+          "film_id": "law-of-the-border-world-cinema-project-no-2",
+          "title": "Law of the Border (World Cinema Project No. 2)",
+          "spine_number": 878
+        },
+        {
+          "film_id": "law-of-the-border",
+          "title": "Law of the Border",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 215407,
+      "films": [
+        {
+          "film_id": "trances-world-cinema-project",
+          "title": "Trances (World Cinema Project)",
+          "spine_number": 689
+        },
+        {
+          "film_id": "trances",
+          "title": "Trances",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 379895,
+      "films": [
+        {
+          "film_id": "the-kennedy-films-of-robert-drew-associates",
+          "title": "The Kennedy Films of Robert Drew & Associates",
+          "spine_number": 808
+        },
+        {
+          "film_id": "adventures-on-the-new-frontier",
+          "title": "Adventures on the New Frontier",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 628403,
+      "films": [
+        {
+          "film_id": "martin-scorseses-world-cinema-project-box-set",
+          "title": "Martin Scorsese’s World Cinema Project (box set)",
+          "spine_number": 684
+        },
+        {
+          "film_id": "martin-scorseses-world-cinema-project-no-2-box-set",
+          "title": "Martin Scorsese's World Cinema Project No. 2 (box set)",
+          "spine_number": 873
+        },
+        {
+          "film_id": "martin-scorseses-world-cinema-project-no-3-box-set",
+          "title": "Martin Scorsese’s World Cinema Project No. 3 (Box set)",
+          "spine_number": 1044
+        },
+        {
+          "film_id": "martin-scorseses-world-cinema-project-no-4-box-set",
+          "title": "Martin Scorsese’s World Cinema Project No. 4 (Box set)",
+          "spine_number": 1142
+        }
+      ]
+    },
+    {
+      "tmdb_id": 741780,
+      "films": [
+        {
+          "film_id": "taipei-story-world-cinema-project-no-2",
+          "title": "Taipei Story (World Cinema Project No. 2)",
+          "spine_number": 879
+        },
+        {
+          "film_id": "taipei-story",
+          "title": "Taipei Story",
+          "spine_number": null
+        }
+      ]
+    },
+    {
+      "tmdb_id": 1368166,
+      "films": [
+        {
+          "film_id": "the-housemaid-world-cinema-project",
+          "title": "The Housemaid (World Cinema Project)",
+          "spine_number": 690
+        },
+        {
+          "film_id": "the-housemaid",
+          "title": "The Housemaid",
+          "spine_number": null
+        }
+      ]
+    }
+  ],
+  "missing_tmdb_id": [
+    {
+      "film_id": "the-complete-mr-arkadin",
+      "title": "The Complete Mr. Arkadin",
+      "criterion_url": "https://www.criterion.com/films/767-the-complete-mr-arkadin"
+    },
+    {
+      "film_id": "symbiopsychotaxiplasm-two-takes",
+      "title": "Symbiopsychotaxiplasm: Two Takes",
+      "criterion_url": "https://www.criterion.com/films/751-symbiopsychotaxiplasm-two-takes-by-william-greaves"
+    },
+    {
+      "film_id": "science-is-fiction-23-films-by-jean-painleve",
+      "title": "Science is Fiction: 23 Films by Jean Painlevé",
+      "criterion_url": "https://www.criterion.com/films/1286-science-is-fiction-23-films-by-jean-painleve"
+    }
+  ],
+  "missing_posters": [],
+  "director_mismatches": [],
+  "summary": {
+    "duplicate_tmdb_ids": 29,
+    "missing_tmdb_id": 3,
+    "missing_posters": 0,
+    "director_mismatches": 0,
+    "full_audit": false
+  }
+}

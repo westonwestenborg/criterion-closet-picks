@@ -18,8 +18,11 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
+from thefuzz import fuzz
+
 from scripts.utils import (
     CATALOG_FILE,
+    DATA_DIR,
     GUESTS_FILE,
     PICKS_FILE,
     PICKS_RAW_FILE,
@@ -64,8 +67,8 @@ TMDB_ID_OVERRIDES = {
 # Criterion URL helpers
 # ---------------------------------------------------------------------------
 
-# Cache for Criterion page year lookups (criterion_url -> year or None)
-_criterion_year_cache: dict[str, int | None] = {}
+# Cache for Criterion page metadata lookups (criterion_url -> dict or None)
+_criterion_metadata_cache: dict[str, dict | None] = {}
 _criterion_scraper = None
 CRITERION_REQUEST_DELAY = 1.5
 
@@ -80,25 +83,29 @@ def _get_criterion_scraper():
     return _criterion_scraper
 
 
-def get_year_from_criterion_url(criterion_url: str) -> int | None:
+def get_metadata_from_criterion_url(criterion_url: str) -> dict | None:
     """
-    Scrape a Criterion film page to extract the release year.
-    Criterion film pages show year in the page title or metadata area.
-    Results are cached to avoid re-scraping.
+    Scrape a Criterion film page to extract metadata (year, director, image_url).
+    Returns dict {"year": int|None, "director": str|None, "image_url": str|None}
+    or None if the URL is empty. Results are cached to avoid re-scraping.
     """
     if not criterion_url:
         return None
 
-    if criterion_url in _criterion_year_cache:
-        return _criterion_year_cache[criterion_url]
+    if criterion_url in _criterion_metadata_cache:
+        return _criterion_metadata_cache[criterion_url]
 
     scraper = _get_criterion_scraper()
     year = None
+    director = None
+    image_url = None
 
     try:
         resp = scraper.get(criterion_url, timeout=30)
         if resp.status_code == 200:
             soup = BeautifulSoup(resp.text, "lxml")
+
+            # --- Year extraction (existing logic) ---
 
             # Method 1: Look for year in <h2 class="film-year"> or similar
             for el in soup.select("h2.film-year, .film-year, .release-year"):
@@ -134,13 +141,59 @@ def get_year_from_criterion_url(criterion_url: str) -> int | None:
                         year = int(m.group(1))
                         break
 
+            # --- Director extraction ---
+
+            # Method 1: Look for <dt> with "DIRECTED BY" or "Director" followed by <dd>
+            for dt in soup.select("dt"):
+                dt_text = dt.get_text(strip=True).upper()
+                if "DIRECTED BY" in dt_text or "DIRECTOR" in dt_text:
+                    dd = dt.find_next_sibling("dd")
+                    if dd:
+                        director = dd.get_text(strip=True)
+                        break
+
+            # Method 2: Try meta description for "Directed by X"
+            if not director:
+                desc_meta = soup.select_one('meta[name="description"]')
+                if desc_meta:
+                    content = desc_meta.get("content", "")
+                    m = re.search(r"[Dd]irected by ([^.]+)", content)
+                    if m:
+                        director = m.group(1).strip()
+
+            # --- Image extraction ---
+
+            # Priority 1: og:image
+            og_img = soup.select_one('meta[property="og:image"]')
+            if og_img and og_img.get("content"):
+                image_url = og_img["content"]
+
+            # Priority 2: .product-image img
+            if not image_url:
+                prod_img = soup.select_one(".product-image img")
+                if prod_img and prod_img.get("src"):
+                    image_url = prod_img["src"]
+
+            # Priority 3: .product-box-art img
+            if not image_url:
+                box_img = soup.select_one(".product-box-art img")
+                if box_img and box_img.get("src"):
+                    image_url = box_img["src"]
+
         time.sleep(CRITERION_REQUEST_DELAY)
 
     except Exception as e:
         log(f"  Error scraping Criterion URL {criterion_url}: {e}")
 
-    _criterion_year_cache[criterion_url] = year
-    return year
+    result = {"year": year, "director": director, "image_url": image_url}
+    _criterion_metadata_cache[criterion_url] = result
+    return result
+
+
+def get_year_from_criterion_url(criterion_url: str) -> int | None:
+    """Backward-compatible wrapper: returns just the year from Criterion metadata."""
+    metadata = get_metadata_from_criterion_url(criterion_url)
+    return metadata["year"] if metadata else None
 
 
 def build_criterion_url_lookup(picks_raw: list[dict]) -> dict[str, str]:
@@ -201,20 +254,74 @@ class TMDBClient:
             self._genre_cache = {g["id"]: g["name"] for g in data.get("genres", [])}
         return self._genre_cache
 
-    def search_movie(self, title: str, year: int = None) -> dict | None:
-        """Search for a movie by title and optionally year."""
+    def search_movie(self, title: str, year: int = None, director: str = None) -> dict | None:
+        """Search for a movie by title, optionally filtering by year and scoring by director."""
         params = {"query": title}
         if year:
             params["year"] = year
         data = self._get("/search/movie", params)
-        if data and data.get("results"):
-            return data["results"][0]
+        results = data.get("results", []) if data else []
+
         # Try without year if year search failed
-        if year:
+        if not results and year:
             data = self._get("/search/movie", {"query": title})
-            if data and data.get("results"):
-                return data["results"][0]
-        return None
+            results = data.get("results", []) if data else []
+
+        # If title contains parenthetical like "(aka Something)", retry with alternatives
+        if not results:
+            aka_match = re.match(r"^(.+?)\s*\((?:aka\s+)?(.+?)\)\s*$", title)
+            if aka_match:
+                main_title = aka_match.group(1).strip()
+                alt_title = aka_match.group(2).strip()
+                for alt in [main_title, alt_title]:
+                    alt_params = {"query": alt}
+                    if year:
+                        alt_params["year"] = year
+                    data = self._get("/search/movie", alt_params)
+                    if data and data.get("results"):
+                        results = data["results"]
+                        break
+                    if year:
+                        data = self._get("/search/movie", {"query": alt})
+                        if data and data.get("results"):
+                            results = data["results"]
+                            break
+
+        if not results:
+            return None
+
+        # If only one result or no director to validate, return first
+        if len(results) == 1 or not director:
+            return results[0]
+
+        # Score results using director match + year proximity
+        scored = []
+        for result in results[:5]:  # Only score top 5 candidates
+            score = 0
+            tmdb_id = result.get("id")
+
+            # Director match bonus
+            if tmdb_id and director:
+                credits_data = self.get_movie_credits(tmdb_id)
+                if credits_data:
+                    crew = credits_data.get("crew", [])
+                    tmdb_directors = [c["name"] for c in crew if c.get("job") == "Director"]
+                    for tmdb_dir in tmdb_directors:
+                        if fuzz.ratio(director.lower(), tmdb_dir.lower()) >= 75:
+                            score += 50
+                            break
+
+            # Year proximity score
+            release_date = result.get("release_date", "")
+            if year and release_date and len(release_date) >= 4:
+                tmdb_year = int(release_date[:4])
+                score += max(0, 10 - abs(year - tmdb_year))
+
+            scored.append((score, result))
+
+        # Sort by score descending, return best
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return scored[0][1]
 
     def get_movie_external_ids(self, tmdb_id: int) -> dict | None:
         """Get external IDs (IMDB) for a movie."""
@@ -278,17 +385,23 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
         return film
 
     # --- Criterion URL disambiguation ---
-    # If we have no year, try to get one from the Criterion film page
+    # Get metadata (year, director, image) from the Criterion film page
     criterion_url = film.get("criterion_url")
     if not criterion_url and criterion_url_lookup:
         criterion_url = criterion_url_lookup.get(film.get("film_id", ""))
 
-    if not year and criterion_url:
-        criterion_year = get_year_from_criterion_url(criterion_url)
-        if criterion_year:
-            log(f"  Got year {criterion_year} from Criterion page for '{title}'")
-            year = criterion_year
-            film["year"] = year
+    criterion_director = None
+    if criterion_url:
+        criterion_metadata = get_metadata_from_criterion_url(criterion_url)
+        if criterion_metadata:
+            if not year and criterion_metadata["year"]:
+                log(f"  Got year {criterion_metadata['year']} from Criterion page for '{title}'")
+                year = criterion_metadata["year"]
+                film["year"] = year
+            criterion_director = criterion_metadata.get("director")
+            # Store director from Criterion if we don't have one yet
+            if criterion_director and not film.get("director"):
+                film["director"] = criterion_director
 
     # Use known TV ID if available
     if not tmdb_id and film_id in TMDB_TV_IDS:
@@ -298,7 +411,7 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
 
     # Search TMDB if we don't have a tmdb_id yet
     if not tmdb_id:
-        result = client.search_movie(title, year)
+        result = client.search_movie(title, year, director=criterion_director)
         if not result:
             return film
 
@@ -480,6 +593,15 @@ def main():
     args = parser.parse_args()
 
     client = TMDBClient()
+
+    # Load manual TMDB corrections from data file
+    corrections_file = DATA_DIR / "tmdb_corrections.json"
+    if corrections_file.exists():
+        corrections = load_json(corrections_file)
+        for film_id, correction in corrections.items():
+            TMDB_ID_OVERRIDES[film_id] = correction["tmdb_id"]
+        log(f"Loaded {len(corrections)} TMDB corrections from {corrections_file}")
+
     genres = client.get_genres()
     log(f"Loaded {len(genres)} genre mappings")
 

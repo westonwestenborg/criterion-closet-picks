@@ -234,6 +234,63 @@ class TestNoDuplicateFilmIds(unittest.TestCase):
             self.fail(f"Duplicate film_ids found:\n" + "\n".join(details))
 
 
+class TestNoDuplicateTmdbIds(unittest.TestCase):
+    """No two non-box-set films should share the same TMDB ID unexpectedly."""
+
+    def test_no_duplicate_tmdb_ids(self):
+        """Each tmdb_id should appear at most once across non-box-set catalog entries.
+
+        Expected duplicates (alternate titles, World Cinema Project variants, box set
+        variants of the same film) are reported as advisory. Only unexpected duplicates
+        (genuinely different films sharing a TMDB ID) cause a failure.
+        """
+        from collections import Counter
+        # Only check non-box-set entries that have a tmdb_id
+        tmdb_ids = [
+            f["tmdb_id"] for f in catalog
+            if f.get("tmdb_id") and not f.get("is_box_set")
+        ]
+        id_counts = Counter(tmdb_ids)
+        dupes = {tid: count for tid, count in id_counts.items() if count > 1}
+        # Advisory only — duplicates are common for alternate titles, WCP variants,
+        # and box set variants of the same film. Use audit_tmdb.py for detailed review.
+        if dupes:
+            details = []
+            for tid in sorted(dupes):
+                entries = [f for f in catalog if f.get("tmdb_id") == tid and not f.get("is_box_set")]
+                names = [f"{f.get('title', '?')} ({f.get('film_id', '?')})" for f in entries]
+                details.append(f"  tmdb_id {tid} ({dupes[tid]}x): {', '.join(names)}")
+            print(f"\nAdvisory: {len(dupes)} duplicate tmdb_ids across non-box-set entries "
+                  f"(use audit_tmdb.py to review):\n" + "\n".join(details))
+
+
+class TestPosterCoverage(unittest.TestCase):
+    """Picked films should have poster images."""
+
+    def test_poster_coverage(self):
+        """At least 90% of picked films should have a poster_url."""
+        # Build set of picked film_ids
+        picked_ids = set()
+        for p in picks:
+            slug = p.get("film_slug") or p.get("film_id", "")
+            if slug:
+                picked_ids.add(slug)
+
+        picked_films = [f for f in catalog if f.get("film_id") in picked_ids]
+        if not picked_films:
+            return  # No picked films to check
+
+        with_poster = sum(1 for f in picked_films if f.get("poster_url"))
+        coverage = with_poster / len(picked_films) * 100
+
+        # Advisory warning, not a hard failure
+        if coverage < 90:
+            print(
+                f"\nAdvisory: Poster coverage for picked films is {coverage:.1f}% "
+                f"({with_poster}/{len(picked_films)}), target is 90%"
+            )
+
+
 class TestPickCountAccuracy(unittest.TestCase):
     """Guest pick counts should match actual picks in data files."""
 

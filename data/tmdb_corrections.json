@@ -1,0 +1,18 @@
+{
+  "boat-people": {
+    "tmdb_id": 72445,
+    "note": "Ann Hui 1982, was wrongly matched to Cat People (25508)"
+  },
+  "infernal-affairs-ii": {
+    "tmdb_id": 11647,
+    "note": "2003 prequel, was sharing tmdb_id 14310 with Infernal Affairs III"
+  },
+  "once-upon-a-time-in-china": {
+    "tmdb_id": 10617,
+    "note": "Tsui Hark 1991 original, was sharing tmdb_id 52316 with OUATIC IV"
+  },
+  "zatoichi-the-fugitive": {
+    "tmdb_id": 18511,
+    "note": "Tokuzō Tanaka 1963, was sharing tmdb_id 54280 with Zatoichi and the Fugitives (1968)"
+  }
+}

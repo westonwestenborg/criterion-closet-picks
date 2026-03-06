@@ -37,6 +37,9 @@ def validate_catalog(catalog: list[dict]) -> dict:
         "with_genres": 0,
         "with_year": 0,
         "with_director": 0,
+        "poster_source_criterion": 0,
+        "poster_source_tmdb": 0,
+        "poster_source_none": 0,
         "duplicate_spines": [],
         "duplicate_film_ids": [],
         "missing_title": 0,
@@ -82,6 +85,16 @@ def validate_catalog(catalog: list[dict]) -> dict:
             stats["with_tmdb_id"] += 1
         if film.get("poster_url"):
             stats["with_poster"] += 1
+        # Poster source breakdown
+        poster_source = film.get("poster_source")
+        if poster_source == "criterion":
+            stats["poster_source_criterion"] += 1
+        elif poster_source == "tmdb":
+            stats["poster_source_tmdb"] += 1
+        elif film.get("poster_url"):
+            stats["poster_source_tmdb"] += 1  # Legacy posters without source tag
+        else:
+            stats["poster_source_none"] += 1
         if film.get("imdb_id"):
             stats["with_imdb_id"] += 1
         if film.get("genres"):
@@ -333,6 +346,7 @@ def print_report(
     print(f"  Total films: {cs['total']}")
     print(f"  With TMDB ID: {cs['with_tmdb_id']} ({cs['with_tmdb_id']/cs['total']*100:.1f}%)" if cs["total"] else "")
     print(f"  With poster:  {cs['with_poster']}")
+    print(f"  Poster source: criterion={cs.get('poster_source_criterion', 0)}, tmdb={cs.get('poster_source_tmdb', 0)}, none={cs.get('poster_source_none', 0)}")
     print(f"  With IMDB ID: {cs['with_imdb_id']}")
     print(f"  With genres:  {cs['with_genres']}")
     print(f"  With year:    {cs['with_year']}")

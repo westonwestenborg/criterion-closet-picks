@@ -23,7 +23,7 @@ from scripts.utils import (
     log,
 )
 from scripts.enrich_tmdb import (
-    get_year_from_criterion_url,
+    get_metadata_from_criterion_url,
     build_criterion_url_lookup,
 )
 
@@ -61,7 +61,8 @@ def find_mismatches(catalog: list[dict], criterion_url_lookup: dict) -> list[dic
     log(f"Checking {len(candidates)} films with both TMDB data and criterion URLs...")
 
     for film, criterion_url in candidates:
-        criterion_year = get_year_from_criterion_url(criterion_url)
+        metadata = get_metadata_from_criterion_url(criterion_url)
+        criterion_year = metadata["year"] if metadata else None
         if not criterion_year:
             continue
 
