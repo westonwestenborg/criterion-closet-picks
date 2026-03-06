@@ -247,6 +247,9 @@ VISIT_CRITERION_URLS = {
     "cameron-crowe": [
         "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
     ],
+    "maggie-gyllenhaal": [
+        "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
+    ],
 }
 
 

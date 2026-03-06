@@ -1861,8 +1861,8 @@
     "slug": "lee-daniels",
     "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/6boIrLokvene1qlhvb4wiKB5Ikd.jpg",
-    "youtube_video_id": null,
-    "youtube_video_url": null,
+    "youtube_video_id": "dqNtp1bAI8o",
+    "youtube_video_url": "https://www.youtube.com/watch?v=dqNtp1bAI8o",
     "vimeo_video_id": null,
     "episode_date": null,
     "letterboxd_list_url": null,
@@ -4615,5 +4615,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
     "pick_count": 7
+  },
+  {
+    "name": "Maggie Gyllenhaal",
+    "slug": "maggie-gyllenhaal",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/vsfkWdYWmA9CpzMHTJzrFxlDnEZ.jpg",
+    "youtube_video_id": "6YDJ0lLnkHA",
+    "youtube_video_url": "https://www.youtube.com/watch?v=6YDJ0lLnkHA",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
+    "pick_count": 12
   }
 ]

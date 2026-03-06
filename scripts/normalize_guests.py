@@ -95,6 +95,7 @@ KNOWN_VIDEO_IDS = {
     "halle-berry": {"youtube_video_id": "NxtUjQOrJZU"},
     "christoph-waltz": {"youtube_video_id": "fJcVa4vYMHs"},
     "cameron-crowe": {"youtube_video_id": "JOYFdj70CpI"},
+    "maggie-gyllenhaal": {"youtube_video_id": "6YDJ0lLnkHA"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -126,6 +127,7 @@ KNOWN_CRITERION_URLS = {
     "five-comics": "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
     "christoph-waltz": "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
     "cameron-crowe": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
+    "maggie-gyllenhaal": "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
 }
 
 # Name cleanup
