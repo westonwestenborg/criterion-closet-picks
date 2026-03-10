@@ -250,6 +250,9 @@ VISIT_CRITERION_URLS = {
     "maggie-gyllenhaal": [
         "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
     ],
+    "shinichiro-watanabe": [
+        "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
+    ],
 }
 
 

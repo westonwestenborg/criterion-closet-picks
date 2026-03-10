@@ -1861,8 +1861,8 @@
     "slug": "lee-daniels",
     "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/6boIrLokvene1qlhvb4wiKB5Ikd.jpg",
-    "youtube_video_id": "dqNtp1bAI8o",
-    "youtube_video_url": "https://www.youtube.com/watch?v=dqNtp1bAI8o",
+    "youtube_video_id": null,
+    "youtube_video_url": null,
     "vimeo_video_id": null,
     "episode_date": null,
     "letterboxd_list_url": null,
@@ -4628,5 +4628,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
     "pick_count": 12
+  },
+  {
+    "name": "Shinichiro Watanabe",
+    "slug": "shinichiro-watanabe",
+    "profession": null,
+    "photo_url": null,
+    "youtube_video_id": "kwoCtvdYYSo",
+    "youtube_video_url": "https://www.youtube.com/watch?v=kwoCtvdYYSo",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
+    "pick_count": 5
   }
 ]

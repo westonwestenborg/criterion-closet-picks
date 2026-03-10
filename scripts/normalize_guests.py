@@ -96,6 +96,7 @@ KNOWN_VIDEO_IDS = {
     "christoph-waltz": {"youtube_video_id": "fJcVa4vYMHs"},
     "cameron-crowe": {"youtube_video_id": "JOYFdj70CpI"},
     "maggie-gyllenhaal": {"youtube_video_id": "6YDJ0lLnkHA"},
+    "shinichiro-watanabe": {"youtube_video_id": "kwoCtvdYYSo"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -128,6 +129,7 @@ KNOWN_CRITERION_URLS = {
     "christoph-waltz": "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
     "cameron-crowe": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
     "maggie-gyllenhaal": "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
+    "shinichiro-watanabe": "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
 }
 
 # Name cleanup
