@@ -62,6 +62,12 @@ TMDB_ID_OVERRIDES = {
     "cold-war": 440298,    # Pawlikowski's Zimna wojna, not 2017 comedy
 }
 
+# Manual TMDB person ID overrides for guests that auto-search misses
+# Maps guest slug -> TMDB person ID
+TMDB_PERSON_OVERRIDES = {
+    "shinichiro-watanabe": 56342,  # Anime director (Cowboy Bebop), search fails on romanization
+}
+
 
 # ---------------------------------------------------------------------------
 # Criterion URL helpers
@@ -554,6 +560,23 @@ def enrich_guest(client: TMDBClient, guest: dict, force: bool = False) -> dict:
     # Skip if already fully enriched (unless force)
     if not force and guest.get("profession") and guest.get("photo_url"):
         return guest
+
+    slug = guest.get("slug", "")
+
+    # Use manual override if search can't find this person
+    override_id = TMDB_PERSON_OVERRIDES.get(slug)
+    if override_id and (not guest.get("profession") or not guest.get("photo_url")):
+        result = client.get_person(override_id)
+        if result:
+            if not guest.get("profession"):
+                department = result.get("known_for_department", "")
+                guest["profession"] = DEPARTMENT_MAP.get(department, "other")
+            if not guest.get("photo_url"):
+                profile_path = result.get("profile_path")
+                if profile_path:
+                    guest["photo_url"] = f"{TMDB_IMAGE_BASE}/w185{profile_path}"
+            if guest.get("profession") and guest.get("photo_url"):
+                return guest
 
     names_to_try = clean_name_for_tmdb(name)
     if not names_to_try:
