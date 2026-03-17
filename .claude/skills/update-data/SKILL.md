@@ -12,6 +12,7 @@ Run the data pipeline to discover and process new Closet Picks episodes.
 - Working directory: the criterion-closet-picks repo root
 - Python venv at `.venv/` with dependencies installed (`pip install -r scripts/requirements.txt`)
 - `.env` file with TMDB_READ_ACCESS_TOKEN, TMDB_API_KEY, GEMINI_API_KEY
+- Optional: X/Twitter and Threads credentials in `.env` (for posting about new guests)
 - `cloudscraper` is a required dependency (used to bypass Cloudflare on Criterion.com)
 
 ## Workflow
@@ -108,6 +109,30 @@ git add data/guests.json data/picks.json data/picks_raw.json data/criterion_cata
 git commit -m "Update data: add N new episodes (YYYY-MM-DD)"
 git push
 ```
+
+### Step 6: Post about new guests (optional)
+
+After pushing, check for new guests and compose posts:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --dry-run
+```
+
+Show the proposed post text to the user. If they want to edit it, work with them
+to adjust the text, then run:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --text "FINAL TEXT HERE"
+```
+
+Or if the dry-run text is approved as-is:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py
+```
+
+Skip this step if no X/Twitter or Threads credentials are configured in `.env`.
+The script will report which platforms it posted to or skipped.
 
 ## Notes
 

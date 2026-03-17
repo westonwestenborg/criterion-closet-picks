@@ -28,3 +28,6 @@ ratelimit>=2.2.1
 
 # Data validation
 jsonschema>=4.20.0
+
+# Social media posting
+tweepy>=4.14.0

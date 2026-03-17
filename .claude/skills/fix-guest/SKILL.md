@@ -12,6 +12,7 @@ Apply targeted fixes to individual guests without running the full 12-step pipel
 - Working directory: criterion-closet-picks repo root
 - Python venv at `.venv/`
 - `.env` file with API keys (GEMINI_API_KEY for quote extraction, TMDB keys for enrichment)
+- Optional: X/Twitter and Threads credentials in `.env` (for posting about new guests)
 
 ## Config Locations
 
@@ -73,6 +74,30 @@ For a specific visit: add `--visit 2`
 ### 5. Exclude a non-guest YouTube video
 
 Add to `EXCLUDED_VIDEO_IDS` in `utils.py` with a descriptive comment.
+
+### 6. Post about a new guest
+
+After adding a new guest and committing the data, compose a post:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --dry-run --guest-slug SLUG
+```
+
+Show the proposed post text to the user. If they want to edit it, work with them
+to adjust the text, then run:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "FINAL TEXT HERE"
+```
+
+Or if the dry-run text is approved as-is:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --guest-slug SLUG
+```
+
+Skip this step if the user is fixing an existing guest (not adding a new one),
+or if no X/Twitter or Threads credentials are configured in `.env`.
 
 ## Key Details
 
