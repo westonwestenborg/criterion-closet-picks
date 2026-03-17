@@ -228,7 +228,7 @@ def maybe_refresh_threads_token() -> None:
     log(f"Threads token refreshed — new expiry ~{today} + 60 days")
 
 
-def post_to_threads(text: str) -> str | None:
+def post_to_threads(text: str, link_url: str | None = None) -> str | None:
     """Post to Threads via Graph API (two-step: create container, publish)."""
     import requests
 
@@ -238,13 +238,17 @@ def post_to_threads(text: str) -> str | None:
     user_id = get_env("THREADS_USER_ID")
 
     # Step 1: Create media container
+    params = {
+        "media_type": "TEXT",
+        "text": text,
+        "access_token": token,
+    }
+    if link_url:
+        params["link_attachment"] = link_url
+
     resp = requests.post(
         f"https://graph.threads.net/v1.0/{user_id}/threads",
-        params={
-            "media_type": "TEXT",
-            "text": text,
-            "access_token": token,
-        },
+        params=params,
     )
     resp.raise_for_status()
     container_id = resp.json()["id"]
@@ -331,9 +335,10 @@ def main():
                 log("X/Twitter: skipped (no credentials)")
 
         # Post to Threads
+        guest_url = f"https://{SITE_URL}/guests/{guest['slug']}/"
         if not args.twitter_only:
             if has_threads_creds():
-                post_to_threads(threads_text)
+                post_to_threads(threads_text, link_url=guest_url)
             else:
                 log("Threads: skipped (no credentials)")
 
