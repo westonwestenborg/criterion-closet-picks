@@ -139639,7 +139639,7 @@
     "spine_number": null,
     "title": "Martin Scorsese's World Cinema Project No. 1",
     "director": "",
-    "year": null,
+    "year": 2007,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1021-martin-scorsese-s-world-cinema-project-no-1",
     "film_id": "martin-scorsese-s-world-cinema-project-no-1",
@@ -139655,7 +139655,7 @@
     "spine_number": null,
     "title": "Martin Scorsese's World Cinema Project No. 2",
     "director": "",
-    "year": null,
+    "year": 2007,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1258-martin-scorsese-s-world-cinema-project-no-2",
     "film_id": "martin-scorsese-s-world-cinema-project-no-2",
@@ -139671,7 +139671,7 @@
     "spine_number": null,
     "title": "Martin Scorsese's World Cinema Project No. 4",
     "director": "",
-    "year": null,
+    "year": 2007,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/6183-martin-scorsese-s-world-cinema-project-no-4",
     "film_id": "martin-scorsese-s-world-cinema-project-no-4",
@@ -139722,9 +139722,77 @@
     "criterion_url": "https://www.criterion.com/boxsets/176-the-killers",
     "film_id": "the-killers",
     "is_box_set": true,
-    "genres": [],
+    "genres": [
+      "Drama"
+    ],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1877-48de0a1fa166375e5c29008f57be3a14/rbztsW1GKvPEC5vTna3sb",
-    "poster_source": "criterion"
+    "poster_source": "criterion",
+    "tmdb_id": 1274350,
+    "year": 1995,
+    "imdb_id": null,
+    "credits": {
+      "directors": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "writers": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "J.D. Ligier",
+          "tmdb_id": 1404153
+        },
+        {
+          "name": "Jeff Baustert",
+          "tmdb_id": 1378433
+        }
+      ],
+      "editors": [
+        {
+          "name": "Tanya Hamilton",
+          "tmdb_id": 141172
+        }
+      ],
+      "cast": [
+        {
+          "name": "Mike Butters",
+          "tmdb_id": 2134,
+          "character": ""
+        },
+        {
+          "name": "Lindsay Edwards",
+          "tmdb_id": 3529431,
+          "character": "Biebel"
+        },
+        {
+          "name": "Tani Grey",
+          "tmdb_id": 4652336,
+          "character": "Marti"
+        },
+        {
+          "name": "Dianah Lilvera",
+          "tmdb_id": 4652337,
+          "character": "Blaustein"
+        },
+        {
+          "name": "Dorothy Cunningham",
+          "tmdb_id": 1867283,
+          "character": "Mama"
+        },
+        {
+          "name": "Fitz Weir",
+          "tmdb_id": 1599591,
+          "character": "Papa"
+        }
+      ]
+    },
+    "director": "Tanya Hamilton"
   },
   {
     "spine_number": null,
@@ -139761,8 +139829,8 @@
   {
     "spine_number": null,
     "title": "The Samurai Trilogy",
-    "director": "",
-    "year": null,
+    "director": "Hiroshi Inagaki and starring the inimitable Toshiro Mifune, was one of Japan’s most successful exports of the 1950s, a rousing, emotionally gripping tale of combat and self-discovery",
+    "year": 1954,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/40-the-samurai-trilogy",
     "film_id": "the-samurai-trilogy",

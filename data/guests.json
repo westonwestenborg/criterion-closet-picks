@@ -4641,5 +4641,31 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "Mitski",
+    "slug": "mitski",
+    "profession": "musician",
+    "photo_url": "https://image.tmdb.org/t/p/w185/q2I1ibRuhuUfVCh0cASKNG25qid.jpg",
+    "youtube_video_id": "Om6PPF-C_G4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=Om6PPF-C_G4",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/938-mitski-s-closet-picks",
+    "pick_count": 5
+  },
+  {
+    "name": "Jim Jarmusch",
+    "slug": "jim-jarmusch",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/iMpIrvhoO9SZWhiDkSzaUt9Yd4N.jpg",
+    "youtube_video_id": "H8sJXDeRUsg",
+    "youtube_video_url": "https://www.youtube.com/watch?v=H8sJXDeRUsg",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/939-jim-jarmusch-s-closet-picks",
+    "pick_count": 8
   }
 ]

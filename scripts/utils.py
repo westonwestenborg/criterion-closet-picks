@@ -253,6 +253,12 @@ VISIT_CRITERION_URLS = {
     "shinichiro-watanabe": [
         "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
     ],
+    "mitski": [
+        "https://www.criterion.com/shop/collection/938-mitski-s-closet-picks",
+    ],
+    "jim-jarmusch": [
+        "https://www.criterion.com/shop/collection/939-jim-jarmusch-s-closet-picks",
+    ],
 }
 
 

@@ -97,6 +97,8 @@ KNOWN_VIDEO_IDS = {
     "cameron-crowe": {"youtube_video_id": "JOYFdj70CpI"},
     "maggie-gyllenhaal": {"youtube_video_id": "6YDJ0lLnkHA"},
     "shinichiro-watanabe": {"youtube_video_id": "kwoCtvdYYSo"},
+    "mitski": {"youtube_video_id": "Om6PPF-C_G4"},
+    "jim-jarmusch": {"youtube_video_id": "H8sJXDeRUsg"},
 }
 
 # Known Criterion page URLs for guests missing them
