@@ -248,21 +248,44 @@ def dedup_picks_raw(picks_raw: list[dict]) -> list[dict]:
 
 
 def recompute_pick_counts(guests: list[dict], picks: list[dict], picks_raw: list[dict]):
-    """Recompute pick_count for every guest from actual picks data."""
-    counts: dict[str, int] = {}
-    for p in picks:
-        slug = p["guest_slug"]
-        counts[slug] = counts.get(slug, 0) + 1
+    """Recompute pick_count for every guest from displayable picks.
 
-    # Also count from raw picks for guests not in processed picks
-    raw_counts: dict[str, int] = {}
+    Display rule (mirrors getDisplayablePicksForGuest in data.ts):
+    a processed pick is displayable if source=='criterion' OR it has a
+    non-empty quote.  Raw criterion-sourced picks that aren't already
+    covered by a processed pick also count.
+    """
+    # Build per-guest lookups
+    picks_by_guest: dict[str, list[dict]] = {}
+    for p in picks:
+        picks_by_guest.setdefault(p["guest_slug"], []).append(p)
+
+    raw_by_guest: dict[str, list[dict]] = {}
     for p in picks_raw:
-        slug = p["guest_slug"]
-        raw_counts[slug] = raw_counts.get(slug, 0) + 1
+        raw_by_guest.setdefault(p["guest_slug"], []).append(p)
 
     for g in guests:
         slug = g["slug"]
-        g["pick_count"] = counts.get(slug, raw_counts.get(slug, 0))
+        guest_picks = picks_by_guest.get(slug, [])
+        guest_raw = raw_by_guest.get(slug, [])
+
+        processed_slugs: set[str] = set()
+        displayable = 0
+        for p in guest_picks:
+            film_key = p.get("film_slug") or p.get("film_id", "")
+            processed_slugs.add(film_key)
+            if p.get("source") == "criterion" or p.get("quote", "").strip():
+                displayable += 1
+
+        # Raw criterion picks not already in processed
+        for rp in guest_raw:
+            film_key = rp.get("film_id", "")
+            if film_key in processed_slugs:
+                continue
+            if rp.get("source") == "criterion":
+                displayable += 1
+
+        g["pick_count"] = displayable
 
 
 # ---------------------------------------------------------------------------
