@@ -77,7 +77,7 @@ Add to `EXCLUDED_VIDEO_IDS` in `utils.py` with a descriptive comment.
 
 ### 6. Post about a new guest
 
-After adding a new guest and committing the data, compose a post:
+After adding a new guest, committing, and **pushing** the data (so the guest page URL works), compose a post:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --dry-run --guest-slug SLUG
