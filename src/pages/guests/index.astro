@@ -7,7 +7,7 @@ import { getPublishableGuests, getAllProfessions } from '../../lib/data';
 const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const professions = getAllProfessions();
 ---
-<BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more.">
+<BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more." ogImage="/og/guests.png">
   <h1>Guests</h1>
   <p>
     Every guest who has visited the Criterion Closet, filterable by profession.

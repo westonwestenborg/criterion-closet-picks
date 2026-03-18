@@ -54,7 +54,7 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
   return null;
 }
 ---
-<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length} films picked.`}>
+<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length} films picked.`} ogImage={`/og/guests/${slug}.png`}>
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (

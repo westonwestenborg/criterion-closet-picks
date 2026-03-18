@@ -22,7 +22,7 @@ const directPicks = allPicks.filter(p => !p.box_set_film_count);
 const boxSetPicks = allPicks.filter(p => p.box_set_film_count);
 const boxSetInfo = getBoxSetInfoForFilm(film.slug);
 ---
-<BaseLayout title={film.title} description={`${film.title} (${film.year}) directed by ${film.director} — picked by ${film.pick_count} Criterion Closet guests.`}>
+<BaseLayout title={film.title} description={`${film.title} (${film.year}) directed by ${film.director} — picked by ${film.pick_count} Criterion Closet guests.`} ogImage={`/og/films/${slug}.png`}>
   <div class="detail-page">
     <div class="detail-header">
       {film.poster_url ? (
