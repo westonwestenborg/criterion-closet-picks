@@ -7,7 +7,7 @@ import { getStats, getRecentGuests } from '../lib/data';
 const stats = getStats();
 const recentGuests = getRecentGuests(3);
 ---
-<BaseLayout title="Closet Picks" ogImage="/og/index.png">
+<BaseLayout title="Closet Picks" description={`Every pick from ${stats.totalGuests} guests visiting the Criterion Collection Closet — ${stats.totalFilms} films with quotes, timestamps, and links.`} ogImage="/og/index.png">
   <h1>Closet Picks</h1>
   <p>
     A searchable database of every pick from the Criterion Collection's

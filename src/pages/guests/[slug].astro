@@ -54,7 +54,11 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
   return null;
 }
 ---
-<BaseLayout title={guest.name} description={`${guest.name}'s Criterion Closet Picks — ${picks.length} films picked.`} ogImage={`/og/guests/${slug}.png`}>
+<BaseLayout title={guest.name} description={(() => {
+  const filmNames = picks.filter(p => p.film && !p.box_set_film_count).slice(0, 3).map(p => p.film!.title);
+  const namesStr = filmNames.length > 0 ? ` — including ${filmNames.join(', ')}` : '';
+  return `Hear what ${guest.name} has to say about ${picks.length > 1 ? `${picks.length} picks` : '1 pick'} from the Criterion Closet${namesStr}.`;
+})()} ogImage={`/og/guests/${slug}.png`}>
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (

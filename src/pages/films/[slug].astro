@@ -22,7 +22,13 @@ const directPicks = allPicks.filter(p => !p.box_set_film_count);
 const boxSetPicks = allPicks.filter(p => p.box_set_film_count);
 const boxSetInfo = getBoxSetInfoForFilm(film.slug);
 ---
-<BaseLayout title={film.title} description={`${film.title} (${film.year}) directed by ${film.director} — picked by ${film.pick_count} Criterion Closet guests.`} ogImage={`/og/films/${slug}.png`}>
+<BaseLayout title={film.title} description={(() => {
+  const guestNames = allPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
+  const namesStr = guestNames.length > 0 ? ` including ${guestNames.join(', ')}` : '';
+  const genre = film.genres[0] || 'film';
+  const article = /^[aeiou]/i.test(genre) ? 'an' : 'a';
+  return `${film.title} (${film.year}) by ${film.director} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
+})()} ogImage={`/og/films/${slug}.png`}>
   <div class="detail-page">
     <div class="detail-header">
       {film.poster_url ? (
