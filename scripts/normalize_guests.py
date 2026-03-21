@@ -99,6 +99,7 @@ KNOWN_VIDEO_IDS = {
     "shinichiro-watanabe": {"youtube_video_id": "kwoCtvdYYSo"},
     "mitski": {"youtube_video_id": "Om6PPF-C_G4"},
     "jim-jarmusch": {"youtube_video_id": "H8sJXDeRUsg"},
+    "sergei-loznitsa": {"youtube_video_id": "_miFRuKBw8o"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -132,6 +133,7 @@ KNOWN_CRITERION_URLS = {
     "cameron-crowe": "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
     "maggie-gyllenhaal": "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
     "shinichiro-watanabe": "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
+    "sergei-loznitsa": "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
 }
 
 # Name cleanup

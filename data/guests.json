@@ -2055,7 +2055,7 @@
     "name": "Jeremy Thomas",
     "slug": "jeremy-thomas",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/mENxsXYilnQ2EO52Q04X73ukYM1.jpg",
     "youtube_video_id": "7pFXCqtYmDM",
     "youtube_video_url": "https://www.youtube.com/watch?v=7pFXCqtYmDM",
     "vimeo_video_id": null,
@@ -4667,5 +4667,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/939-jim-jarmusch-s-closet-picks",
     "pick_count": 8
+  },
+  {
+    "name": "Sergei Loznitsa",
+    "slug": "sergei-loznitsa",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/gxs4Qqw5DjgbChJNU9cZ3UkK9Vw.jpg",
+    "youtube_video_id": "_miFRuKBw8o",
+    "youtube_video_url": "https://www.youtube.com/watch?v=_miFRuKBw8o",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
+    "pick_count": 7
   }
 ]

@@ -10571,7 +10571,7 @@
     "director": "Henri-Georges Clouzot",
     "year": 1943,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/684-le-corbeau",
     "film_id": "le-corbeau",
     "imdb_id": "tt0035753",
     "tmdb_id": 29084,
@@ -92658,12 +92658,13 @@
     "director": "",
     "year": null,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/boxsets/7479-brief-encounters-the-long-farewell-two-films-by-kira-muratova",
     "film_id": "brief-encountersthe-long-farewell-two-films-by-kira-muratova",
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null
+    "poster_url": null,
+    "is_box_set": true
   },
   {
     "spine_number": 1230,
@@ -97235,7 +97236,7 @@
     "director": "Arturo Ripstein",
     "year": 1996,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/1201-deep-crimson",
     "film_id": "deep-crimson",
     "imdb_id": "tt0117394",
     "tmdb_id": 47007,

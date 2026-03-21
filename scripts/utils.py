@@ -259,6 +259,9 @@ VISIT_CRITERION_URLS = {
     "jim-jarmusch": [
         "https://www.criterion.com/shop/collection/939-jim-jarmusch-s-closet-picks",
     ],
+    "sergei-loznitsa": [
+        "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
+    ],
 }
 
 
