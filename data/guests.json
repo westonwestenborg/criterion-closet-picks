@@ -4680,5 +4680,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
     "pick_count": 7
+  },
+  {
+    "name": "Cary Elwes",
+    "slug": "cary-elwes",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/9UszBdQJ9PmyBydIeIBxlStozhW.jpg",
+    "youtube_video_id": "mIugin2XpV4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=mIugin2XpV4",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
+    "pick_count": 5
   }
 ]

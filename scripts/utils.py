@@ -262,6 +262,9 @@ VISIT_CRITERION_URLS = {
     "sergei-loznitsa": [
         "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
     ],
+    "cary-elwes": [
+        "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
+    ],
 }
 
 
