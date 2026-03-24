@@ -23,6 +23,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from datetime import date, datetime
 from pathlib import Path
 
@@ -252,6 +253,9 @@ def post_to_threads(text: str, link_url: str | None = None) -> str | None:
     )
     resp.raise_for_status()
     container_id = resp.json()["id"]
+
+    # Wait for container to be ready before publishing
+    time.sleep(5)
 
     # Step 2: Publish
     resp = requests.post(
