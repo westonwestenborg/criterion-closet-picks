@@ -14,5 +14,9 @@
   "zatoichi-the-fugitive": {
     "tmdb_id": 18511,
     "note": "Tokuzō Tanaka 1963, was sharing tmdb_id 54280 with Zatoichi and the Fugitives (1968)"
+  },
+  "mirror": {
+    "tmdb_id": 1396,
+    "note": "Andrei Tarkovsky 1975 (Zerkalo), was wrongly matched to Jesús Franco's Mirror (137103)"
   }
 }

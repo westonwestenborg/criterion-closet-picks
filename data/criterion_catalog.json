@@ -80978,92 +80978,86 @@
   {
     "spine_number": 1084,
     "title": "Mirror",
-    "director": "Jesús Franco",
     "year": 1975,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28894-mirror",
     "film_id": "mirror",
-    "imdb_id": "tt0070396",
-    "tmdb_id": 137103,
-    "genres": [
-      "Mystery",
-      "Drama",
-      "Horror"
-    ],
-    "poster_url": "https://s3.amazonaws.com/criterion-production/films/729ba8bd7f066bab750d2fe963d37a77/AkLHyvTrDxSGVlvGaZdkHkuH9fSd0x_original.jpg",
+    "tmdb_id": 1396,
+    "poster_source": "criterion",
+    "director": "Andrei Tarkovsky",
+    "imdb_id": "tt0072443",
     "credits": {
       "directors": [
         {
-          "name": "Jesús Franco",
-          "tmdb_id": 30956
+          "name": "Andrei Tarkovsky",
+          "tmdb_id": 8452
         }
       ],
       "writers": [
         {
-          "name": "Jesús Franco",
-          "tmdb_id": 30956
+          "name": "Aleksandr Misharin",
+          "tmdb_id": 55517
+        },
+        {
+          "name": "Andrei Tarkovsky",
+          "tmdb_id": 8452
         }
       ],
       "cinematographers": [
         {
-          "name": "Antonio Millán",
-          "tmdb_id": 1106754
+          "name": "Georgi Rerberg",
+          "tmdb_id": 55518
         }
       ],
       "editors": [
         {
-          "name": "Gilbert Kikoïne",
-          "tmdb_id": 1086217
-        },
-        {
-          "name": "Mercedes Alonso",
-          "tmdb_id": 1032791
+          "name": "Lyudmila Feiginova",
+          "tmdb_id": 8463
         }
       ],
       "cast": [
         {
-          "name": "Emma Cohen",
-          "tmdb_id": 97662,
-          "character": "Ana Olivera / Annette Whitman"
+          "name": "Margarita Terekhova",
+          "tmdb_id": 55512,
+          "character": "Natalya / Maroussia - the Mother"
         },
         {
-          "name": "Robert Woods",
-          "tmdb_id": 1006833,
-          "character": "Bill"
+          "name": "Ignat Daniltsev",
+          "tmdb_id": 55514,
+          "character": "Ignat / Alexei - 12 Years Old"
         },
         {
-          "name": "Françoise Brion",
-          "tmdb_id": 20118,
-          "character": "Carla"
+          "name": "Larisa Tarkovskaya",
+          "tmdb_id": 8471,
+          "character": "Nadezha"
         },
         {
-          "name": "Philippe Lemaire",
-          "tmdb_id": 37727,
-          "character": "Pipo"
+          "name": "Alla Demidova",
+          "tmdb_id": 55513,
+          "character": "Lisa"
         },
         {
-          "name": "Alice Arno",
-          "tmdb_id": 100328,
-          "character": "Tina"
+          "name": "Anatoliy Solonitsyn",
+          "tmdb_id": 8475,
+          "character": "Forensic Doctor"
         },
         {
-          "name": "Ramiro Oliveros",
-          "tmdb_id": 257670,
-          "character": "Miguel Ferrara / Michel"
+          "name": "Mykola Hrynko",
+          "tmdb_id": 1190992,
+          "character": "Printery Director"
         },
         {
-          "name": "Howard Vernon",
-          "tmdb_id": 13696,
-          "character": "Ana's Father"
+          "name": "Tamara Ogorodnikova",
+          "tmdb_id": 8480,
+          "character": "Nanny / Neighbour / Strange Woman at Tea Table"
         },
         {
-          "name": "Ada Tauler",
-          "tmdb_id": 569303,
-          "character": "Estefania"
+          "name": "Yuriy Nazarov",
+          "tmdb_id": 13710,
+          "character": "Rifle Shooting Instructor"
         }
       ]
-    },
-    "poster_source": "criterion"
+    }
   },
   {
     "spine_number": 1085,
