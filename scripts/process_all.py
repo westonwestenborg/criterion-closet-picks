@@ -10,14 +10,15 @@ Steps:
   2. Scrape Criterion.com picks as primary source (scrape_criterion_picks.py --primary)
   3. Normalize guest data (normalize_guests.py)
   4. Match YouTube videos + fetch transcripts (match_youtube.py)
-  5. Extract quotes via Gemini (extract_quotes.py)
-  6. Backfill films & propagate URLs (backfill_films.py)
-  7. Group box set films (group_box_sets.py)
-  8. Scrape box set images (scrape_box_set_images.py)
-  9. Migrate source/visit metadata (migrate_source_visit.py)
-  10. Enrich via TMDB (enrich_tmdb.py)
-  11. Normalize guest data - second pass (normalize_guests.py)
-  12. Validate (validate.py + test_data.py)
+  5. Backfill episode dates from YouTube API (backfill_dates.py)
+  6. Extract quotes via Gemini (extract_quotes.py)
+  7. Backfill films & propagate URLs (backfill_films.py)
+  8. Group box set films (group_box_sets.py)
+  9. Scrape box set images (scrape_box_set_images.py)
+  10. Migrate source/visit metadata (migrate_source_visit.py)
+  11. Enrich via TMDB (enrich_tmdb.py)
+  12. Normalize guest data - second pass (normalize_guests.py)
+  13. Validate (validate.py + test_data.py)
 
 Usage:
   python scripts/process_all.py --pilot          # 10-video pilot
@@ -79,7 +80,7 @@ def main():
     parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
     parser.add_argument("--fresh", action="store_true", help="Start fresh (pass --primary to scraper, clearing existing data)")
-    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-12)")
+    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-13)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
 
@@ -135,7 +136,16 @@ def main():
             step_num,
         ))
 
-    # Step 5: Extract quotes
+    # Step 5: Backfill episode dates from YouTube API
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Backfill Episode Dates",
+            [python, str(SCRIPTS_DIR / "backfill_dates.py")],
+            step_num,
+        ))
+
+    # Step 6: Extract quotes
     step_num += 1
     if not args.skip_quotes and args.from_step <= step_num:
         steps.append((
@@ -144,7 +154,7 @@ def main():
             step_num,
         ))
 
-    # Step 6: Backfill missing films + propagate URLs + flag box sets
+    # Step 7: Backfill missing films + propagate URLs + flag box sets
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -153,7 +163,7 @@ def main():
             step_num,
         ))
 
-    # Step 7: Group box set films
+    # Step 8: Group box set films
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -162,7 +172,7 @@ def main():
             step_num,
         ))
 
-    # Step 8: Scrape box set images (only for entries missing posters)
+    # Step 9: Scrape box set images (only for entries missing posters)
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -171,7 +181,7 @@ def main():
             step_num,
         ))
 
-    # Step 9: Migrate source/visit metadata
+    # Step 10: Migrate source/visit metadata
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -180,7 +190,7 @@ def main():
             step_num,
         ))
 
-    # Step 10: Enrich via TMDB
+    # Step 11: Enrich via TMDB
     step_num += 1
     if not args.skip_enrich and args.from_step <= step_num:
         steps.append((
@@ -189,7 +199,7 @@ def main():
             step_num,
         ))
 
-    # Step 11: Normalize guest data (second pass - after enrichment)
+    # Step 12: Normalize guest data (second pass - after enrichment)
     step_num += 1
     if not args.skip_normalize and args.from_step <= step_num:
         steps.append((
@@ -198,7 +208,7 @@ def main():
             step_num,
         ))
 
-    # Step 12: Validate
+    # Step 13: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

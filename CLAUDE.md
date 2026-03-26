@@ -74,6 +74,7 @@ python scripts/build_catalog.py       # Step 1: Build Criterion catalog referenc
 python scripts/scrape_letterboxd.py   # Step 2: Scrape guest picks from Letterboxd
 python scripts/scrape_criterion_picks.py  # Step 2b: Supplement with Criterion.com data
 python scripts/match_youtube.py       # Step 3: Match YouTube videos + pull transcripts
+python scripts/backfill_dates.py      # Step 3b: Backfill episode dates from YouTube API
 python scripts/extract_quotes.py      # Step 4: LLM quote extraction via Gemini Flash
 python scripts/backfill_films.py      # Step 5: Backfill missing films + propagate Criterion URLs
 python scripts/enrich_tmdb.py         # Step 6: TMDB enrichment (genres, posters, IMDB IDs)
