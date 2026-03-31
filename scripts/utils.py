@@ -265,6 +265,9 @@ VISIT_CRITERION_URLS = {
     "cary-elwes": [
         "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
     ],
+    "sofia-coppola-marc-jacobs": [
+        "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
+    ],
 }
 
 

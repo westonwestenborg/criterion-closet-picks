@@ -101,6 +101,7 @@ KNOWN_VIDEO_IDS = {
     "jim-jarmusch": {"youtube_video_id": "H8sJXDeRUsg"},
     "sergei-loznitsa": {"youtube_video_id": "_miFRuKBw8o"},
     "cary-elwes": {"youtube_video_id": "mIugin2XpV4"},
+    "sofia-coppola-marc-jacobs": {"youtube_video_id": "qLH-ZyrEBn8"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -136,6 +137,7 @@ KNOWN_CRITERION_URLS = {
     "shinichiro-watanabe": "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
     "sergei-loznitsa": "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
     "cary-elwes": "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
+    "sofia-coppola-marc-jacobs": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
 }
 
 # Name cleanup

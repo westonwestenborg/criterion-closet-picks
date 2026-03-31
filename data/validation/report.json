@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-06T15:25:54",
+  "generated_at": "2026-03-30T17:06:32",
   "catalog": {
     "stats": {
-      "total": 1783,
-      "with_tmdb_id": 1662,
-      "with_poster": 1630,
-      "with_imdb_id": 1610,
-      "with_genres": 1509,
-      "with_year": 1605,
-      "with_director": 1643,
-      "poster_source_criterion": 0,
-      "poster_source_tmdb": 1630,
-      "poster_source_none": 153,
+      "total": 1803,
+      "with_tmdb_id": 1691,
+      "with_poster": 1686,
+      "with_imdb_id": 1632,
+      "with_genres": 1534,
+      "with_year": 1637,
+      "with_director": 1681,
+      "poster_source_criterion": 915,
+      "poster_source_tmdb": 775,
+      "poster_source_none": 113,
       "duplicate_spines": [
         null,
         null,
@@ -484,6 +484,26 @@
         null,
         null,
         1162,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -7256,18 +7276,258 @@
           "The Marseille Trilogy",
           "The Samurai Trilogy"
         ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Apu Trilogy"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Samurai Trilogy",
+          "The Apu Trilogy"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Loves of a Blonde"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Apu Trilogy",
+          "Loves of a Blonde"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Summer with Monika"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Loves of a Blonde",
+          "Summer with Monika"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Belle de jour"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Summer with Monika",
+          "Belle de jour"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Bitter Tears of Petra von Kant"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Belle de jour",
+          "The Bitter Tears of Petra von Kant"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "All That Jazz"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Bitter Tears of Petra von Kant",
+          "All That Jazz"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "I Knew Her Well"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "All That Jazz",
+          "I Knew Her Well"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Female Trouble"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "I Knew Her Well",
+          "Female Trouble"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Klute"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Female Trouble",
+          "Klute"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Funny Games"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Klute",
+          "Funny Games"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Heiress"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Funny Games",
+          "The Heiress"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Virgin Suicides"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Heiress",
+          "The Virgin Suicides"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "After Hours"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Virgin Suicides",
+          "After Hours"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Paris Is Burning"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "After Hours",
+          "Paris Is Burning"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Fast Times at Ridgemont High"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Paris Is Burning",
+          "Fast Times at Ridgemont High"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Grifters"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Fast Times at Ridgemont High",
+          "The Grifters"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Ryuichi Sakamoto | Opus"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Grifters",
+          "Ryuichi Sakamoto | Opus"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Flow"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Ryuichi Sakamoto | Opus",
+          "Flow"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Grey Gardens"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Flow",
+          "Grey Gardens"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Gregg Araki's Teen Apocalypse Trilogy"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Grey Gardens",
+          "Gregg Araki's Teen Apocalypse Trilogy"
+        ]
       }
     ]
   },
   "guests": {
     "stats": {
-      "total": 347,
-      "with_youtube_video": 342,
-      "with_transcript": 332,
-      "with_profession": 337,
-      "with_photo": 317,
+      "total": 353,
+      "with_youtube_video": 347,
+      "with_transcript": 331,
+      "with_profession": 343,
+      "with_photo": 326,
       "with_letterboxd_url": 0,
-      "with_episode_date": 7
+      "with_episode_date": 346
     },
     "issues": [
       {
@@ -7294,6 +7554,10 @@
         "type": "missing_transcript",
         "guest": "Bill Hader",
         "video_id": "348qOuXOAXo"
+      },
+      {
+        "type": "no_youtube_video",
+        "guest": "Lee Daniels"
       },
       {
         "type": "missing_transcript",
@@ -7339,37 +7603,67 @@
         "type": "missing_transcript",
         "guest": "Cameron Crowe",
         "video_id": "JOYFdj70CpI"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Shinichiro Watanabe",
+        "video_id": "kwoCtvdYYSo"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Mitski",
+        "video_id": "Om6PPF-C_G4"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Jim Jarmusch",
+        "video_id": "H8sJXDeRUsg"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Sergei Loznitsa",
+        "video_id": "_miFRuKBw8o"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Cary Elwes",
+        "video_id": "mIugin2XpV4"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Sofia Coppola & Marc Jacobs",
+        "video_id": "qLH-ZyrEBn8"
       }
     ]
   },
   "picks": {
     "stats": {
-      "total": 2903,
-      "with_quote": 2760,
-      "with_timestamp": 2763,
-      "with_youtube_url": 2744,
-      "with_catalog_spine": 2504,
-      "confidence_high": 2718,
+      "total": 2953,
+      "with_quote": 2810,
+      "with_timestamp": 2812,
+      "with_youtube_url": 2793,
+      "with_catalog_spine": 2530,
+      "confidence_high": 2767,
       "confidence_medium": 41,
       "confidence_low": 1,
-      "confidence_none": 143,
-      "guests_represented": 347,
-      "unique_films": 965
+      "confidence_none": 144,
+      "guests_represented": 353,
+      "unique_films": 990
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 2905,
-      "with_catalog_spine": 2524,
+      "total": 2955,
+      "with_catalog_spine": 2550,
       "match_methods": {
-        "criterion_url": 2477,
+        "criterion_url": 2497,
         "fuzzy_83": 6,
-        "exact": 346,
-        "fuzzy_100": 15,
+        "exact": 353,
+        "fuzzy_100": 16,
         "fuzzy_98": 7,
         "fuzzy_90": 9,
-        "fuzzy_87": 7,
+        "fuzzy_87": 8,
         "fuzzy_85": 8,
         "fuzzy_77": 2,
         "fuzzy_81": 7,
@@ -7379,7 +7673,9 @@
         "null": 5,
         "fuzzy_82": 2,
         "fuzzy_78": 1,
-        "fuzzy_79": 1
+        "fuzzy_79": 1,
+        "manual": 1,
+        "none": 20
       },
       "guests": {
         "laura-dern": 21,
@@ -7728,10 +8024,16 @@
         "halle-berry": 10,
         "christoph-waltz": 6,
         "cameron-crowe": 7,
-        "maggie-gyllenhaal": 12
+        "maggie-gyllenhaal": 12,
+        "shinichiro-watanabe": 5,
+        "mitski": 5,
+        "jim-jarmusch": 8,
+        "sergei-loznitsa": 7,
+        "cary-elwes": 5,
+        "sofia-coppola-marc-jacobs": 20
       },
-      "unique_guests": 347,
-      "catalog_match_rate_pct": 86.9
+      "unique_guests": 353,
+      "catalog_match_rate_pct": 86.3
     },
     "issues": []
   },
@@ -10035,8 +10337,8 @@
       "name": "Lee Daniels",
       "slug": "lee-daniels",
       "profession": "director",
-      "has_video": true,
-      "has_transcript": true,
+      "has_video": false,
+      "has_transcript": false,
       "raw_picks": 9,
       "catalog_matched": 7,
       "catalog_match_rate_pct": 77.8,
@@ -13630,6 +13932,108 @@
       "enriched_picks": 12,
       "with_quote": 12,
       "confidence_high": 12,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Shinichiro Watanabe",
+      "slug": "shinichiro-watanabe",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 5,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 5,
+      "with_quote": 5,
+      "confidence_high": 5,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Mitski",
+      "slug": "mitski",
+      "profession": "musician",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 5,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 5,
+      "with_quote": 5,
+      "confidence_high": 5,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Jim Jarmusch",
+      "slug": "jim-jarmusch",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 8,
+      "catalog_matched": 7,
+      "catalog_match_rate_pct": 87.5,
+      "enriched_picks": 8,
+      "with_quote": 8,
+      "confidence_high": 8,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Sergei Loznitsa",
+      "slug": "sergei-loznitsa",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 7,
+      "catalog_matched": 4,
+      "catalog_match_rate_pct": 57.1,
+      "enriched_picks": 7,
+      "with_quote": 7,
+      "confidence_high": 6,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 85.7
+    },
+    {
+      "name": "Cary Elwes",
+      "slug": "cary-elwes",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 5,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 5,
+      "with_quote": 5,
+      "confidence_high": 5,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Sofia Coppola & Marc Jacobs",
+      "slug": "sofia-coppola-marc-jacobs",
+      "profession": "director",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 20,
+      "catalog_matched": 0,
+      "catalog_match_rate_pct": 0.0,
+      "enriched_picks": 20,
+      "with_quote": 20,
+      "confidence_high": 20,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,

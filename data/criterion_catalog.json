@@ -6731,15 +6731,51 @@
   {
     "spine_number": 79,
     "title": "W. C. Fields: Six Short Films",
-    "director": "",
-    "year": null,
+    "director": "Monte Brice",
+    "year": 2000,
     "country": "",
     "criterion_url": "",
     "film_id": "w-c-fields-six-short-films",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null
+    "imdb_id": "tt0327230",
+    "tmdb_id": 400659,
+    "genres": [
+      "Comedy"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/ikXOq1Khu2GynV04pZ5RIJclTsX.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Monte Brice",
+          "tmdb_id": 145700
+        },
+        {
+          "name": "Clyde Bruckman",
+          "tmdb_id": 10517
+        },
+        {
+          "name": "Edwin Middleton",
+          "tmdb_id": 145697
+        },
+        {
+          "name": "Leslie Pearce",
+          "tmdb_id": 145702
+        },
+        {
+          "name": "Arthur Ripley",
+          "tmdb_id": 31963
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "W.C. Fields",
+          "tmdb_id": 13954,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 80,
@@ -114075,16 +114111,70 @@
   {
     "spine_number": null,
     "title": "Ingmar Bergman’s Cinema",
-    "director": "",
-    "year": null,
+    "director": "Katja Raganelli",
+    "year": 1993,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
     "film_id": "ingmar-bergmans-cinema",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1929-4d592bff5abc636d45619dfd6d997edd/tKFKOgGoH5bF64n2r7YLfezGOkZBvO_original.jpg",
-    "credits": null,
+    "imdb_id": "tt1080651",
+    "tmdb_id": 622389,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/kYMYCmqUSZd4XX8EIQEcFKyIr98.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Katja Raganelli",
+          "tmdb_id": 1177860
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Konrad Wickler",
+          "tmdb_id": 2195338
+        }
+      ],
+      "editors": [
+        {
+          "name": "Camilla Bernetti",
+          "tmdb_id": 2384596
+        }
+      ],
+      "cast": [
+        {
+          "name": "Bibi Andersson",
+          "tmdb_id": 6657,
+          "character": "Self"
+        },
+        {
+          "name": "Harriet Andersson",
+          "tmdb_id": 7569,
+          "character": "Self"
+        },
+        {
+          "name": "Eva Dahlbeck",
+          "tmdb_id": 70276,
+          "character": "Self"
+        },
+        {
+          "name": "Gunnel Lindblom",
+          "tmdb_id": 6662,
+          "character": "Self"
+        },
+        {
+          "name": "Ingrid Thulin",
+          "tmdb_id": 8742,
+          "character": "Self"
+        },
+        {
+          "name": "Liv Ullmann",
+          "tmdb_id": 11916,
+          "character": "Self"
+        }
+      ]
+    },
     "is_box_set": true,
     "description": "In honor of Ingmar Bergman’s one hundredth birthday, the Criterion Collection is proud to present the most comprehensive collection of his films ever released on home video. One of the most revelatory voices to emerge from the postwar explosion of international art-house cinema, Bergman was a master storyteller who startled the world with his stark intensity and naked pursuit of the most profound metaphysical and spiritual questions. The struggles of faith and morality, the nature of dreams, and the agonies and ecstasies of human relationships—Bergman explored these subjects in films ranging from comedies whose lightness and complexity belie their brooding hearts to groundbreaking formal experiments and excruciatingly intimate explorations of family life.",
     "included_films": [
@@ -139836,5 +139926,1523 @@
     "credits": null,
     "is_box_set": true,
     "poster_source": "criterion"
+  },
+  {
+    "spine_number": null,
+    "title": "The Apu Trilogy",
+    "director": "Kogonada",
+    "year": 2015,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/1145-the-apu-trilogy",
+    "film_id": "1145-the-apu-trilogy",
+    "imdb_id": "tt7956990",
+    "tmdb_id": 648672,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/dDU5eQM3udNeJo5wmWYPZ3i8oGY.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Kogonada",
+          "tmdb_id": 1555636
+        }
+      ],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Mira Nair",
+          "tmdb_id": 6495,
+          "character": "Self"
+        },
+        {
+          "name": "Davide Pozzi",
+          "tmdb_id": 2244558,
+          "character": "Self"
+        }
+      ]
+    },
+    "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "Loves of a Blonde",
+    "director": "Miloš Forman",
+    "year": 1965,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/246-loves-of-a-blonde",
+    "film_id": "246-loves-of-a-blonde",
+    "imdb_id": "tt0059415",
+    "tmdb_id": 39387,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/fyRg6Qh4oN1KRfkx8Q3DFzA642P.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Miloš Forman",
+          "tmdb_id": 3974
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ivan Passer",
+          "tmdb_id": 84736
+        },
+        {
+          "name": "Jaroslav Papoušek",
+          "tmdb_id": 120482
+        },
+        {
+          "name": "Miloš Forman",
+          "tmdb_id": 3974
+        },
+        {
+          "name": "Václav Šašek",
+          "tmdb_id": 1295549
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Miroslav Ondříček",
+          "tmdb_id": 4008
+        }
+      ],
+      "editors": [
+        {
+          "name": "Miroslav Hájek",
+          "tmdb_id": 71131
+        }
+      ],
+      "cast": [
+        {
+          "name": "Hana Brejchová",
+          "tmdb_id": 1092033,
+          "character": "Andula"
+        },
+        {
+          "name": "Vladimír Pucholt",
+          "tmdb_id": 544206,
+          "character": "Milda"
+        },
+        {
+          "name": "Vladimír Menšík",
+          "tmdb_id": 55732,
+          "character": "Vacovský"
+        },
+        {
+          "name": "Ivan Kheil",
+          "tmdb_id": 1704529,
+          "character": "Maňas"
+        },
+        {
+          "name": "Jiří Hrubý",
+          "tmdb_id": 1704530,
+          "character": "Burda"
+        },
+        {
+          "name": "Milada Ježková",
+          "tmdb_id": 11743,
+          "character": "Milda's Mother"
+        },
+        {
+          "name": "Josef Šebánek",
+          "tmdb_id": 585186,
+          "character": "Milda's Father"
+        },
+        {
+          "name": "Josef Kolb",
+          "tmdb_id": 120480,
+          "character": "Pokorný"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Summer with Monika",
+    "director": "Ingmar Bergman",
+    "year": 1953,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/27638-summer-with-monika",
+    "film_id": "27638-summer-with-monika",
+    "imdb_id": "tt0046345",
+    "tmdb_id": 47735,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/82hLsn67V9TjgrLOZCFL7247pJd.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Ingmar Bergman",
+          "tmdb_id": 6648
+        }
+      ],
+      "writers": [
+        {
+          "name": "Per Anders Fogelström",
+          "tmdb_id": 146881
+        },
+        {
+          "name": "Ingmar Bergman",
+          "tmdb_id": 6648
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Gunnar Fischer",
+          "tmdb_id": 6652
+        }
+      ],
+      "editors": [
+        {
+          "name": "Tage Holmberg",
+          "tmdb_id": 558173
+        },
+        {
+          "name": "Gösta Lewin",
+          "tmdb_id": 1606894
+        }
+      ],
+      "cast": [
+        {
+          "name": "Harriet Andersson",
+          "tmdb_id": 7569,
+          "character": "Monika Eriksson"
+        },
+        {
+          "name": "Lars Ekborg",
+          "tmdb_id": 81232,
+          "character": "Harry Lund"
+        },
+        {
+          "name": "Dagmar Ebbesen",
+          "tmdb_id": 146882,
+          "character": "Mrs. Lindström"
+        },
+        {
+          "name": "Åke Fridell",
+          "tmdb_id": 6665,
+          "character": "Ludwig Eriksson"
+        },
+        {
+          "name": "Naemi Briese",
+          "tmdb_id": 150087,
+          "character": "Monika's Mother"
+        },
+        {
+          "name": "Åke Grönberg",
+          "tmdb_id": 34769,
+          "character": "Harry's Friend at Work"
+        },
+        {
+          "name": "Sigge Fürst",
+          "tmdb_id": 145693,
+          "character": "Johan"
+        },
+        {
+          "name": "John Harryson",
+          "tmdb_id": 150089,
+          "character": "Lelle"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Belle de jour",
+    "director": "Luis Buñuel",
+    "year": 1967,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/27949-belle-de-jour",
+    "film_id": "27949-belle-de-jour",
+    "imdb_id": "tt0061395",
+    "tmdb_id": 649,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/iUAFECovwPA0cVV9bo4uNGLJSGL.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Luis Buñuel",
+          "tmdb_id": 793
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jean-Claude Carrière",
+          "tmdb_id": 9747
+        },
+        {
+          "name": "Luis Buñuel",
+          "tmdb_id": 793
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Sacha Vierny",
+          "tmdb_id": 9752
+        }
+      ],
+      "editors": [
+        {
+          "name": "Louisette Hautecœur",
+          "tmdb_id": 9753
+        }
+      ],
+      "cast": [
+        {
+          "name": "Catherine Deneuve",
+          "tmdb_id": 50,
+          "character": "Séverine Serizy"
+        },
+        {
+          "name": "Jean Sorel",
+          "tmdb_id": 9762,
+          "character": "Pierre Serizy"
+        },
+        {
+          "name": "Michel Piccoli",
+          "tmdb_id": 3784,
+          "character": "Henri Husson"
+        },
+        {
+          "name": "Geneviève Page",
+          "tmdb_id": 9763,
+          "character": "Madame Anais"
+        },
+        {
+          "name": "Pierre Clémenti",
+          "tmdb_id": 17577,
+          "character": "Marcel"
+        },
+        {
+          "name": "Françoise Fabian",
+          "tmdb_id": 9765,
+          "character": "Charlotte"
+        },
+        {
+          "name": "Macha Méril",
+          "tmdb_id": 9766,
+          "character": "Renée"
+        },
+        {
+          "name": "Muni",
+          "tmdb_id": 37464,
+          "character": "Pallas"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Bitter Tears of Petra von Kant",
+    "director": "Rainer Werner Fassbinder",
+    "year": 1972,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/27953-the-bitter-tears-of-petra-von-kant",
+    "film_id": "27953-the-bitter-tears-of-petra-von-kant",
+    "imdb_id": "tt0068278",
+    "tmdb_id": 10310,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/bkxrRfXaoTvZObG1Gd91x2mnmFX.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Rainer Werner Fassbinder",
+          "tmdb_id": 2725
+        }
+      ],
+      "writers": [
+        {
+          "name": "Rainer Werner Fassbinder",
+          "tmdb_id": 2725
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Michael Ballhaus",
+          "tmdb_id": 3769
+        }
+      ],
+      "editors": [
+        {
+          "name": "Thea Eymèsz",
+          "tmdb_id": 2737
+        }
+      ],
+      "cast": [
+        {
+          "name": "Margit Carstensen",
+          "tmdb_id": 20017,
+          "character": "Petra von Kant"
+        },
+        {
+          "name": "Hanna Schygulla",
+          "tmdb_id": 3734,
+          "character": "Karin Thimm"
+        },
+        {
+          "name": "Katrin Schaake",
+          "tmdb_id": 26330,
+          "character": "Sidonie von Grasenabb"
+        },
+        {
+          "name": "Eva Mattes",
+          "tmdb_id": 10627,
+          "character": "Gabriele von Kant"
+        },
+        {
+          "name": "Gisela Fackeldey",
+          "tmdb_id": 49414,
+          "character": "Valerie von Kant"
+        },
+        {
+          "name": "Irm Hermann",
+          "tmdb_id": 2729,
+          "character": "Marlene"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "All That Jazz",
+    "director": "Bob Fosse",
+    "year": 1979,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28561-all-that-jazz",
+    "film_id": "28561-all-that-jazz",
+    "imdb_id": "tt0078754",
+    "tmdb_id": 16858,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/culCEdj4srLljefgn4XKd6k3C5t.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Bob Fosse",
+          "tmdb_id": 66777
+        }
+      ],
+      "writers": [
+        {
+          "name": "Robert Alan Aurthur",
+          "tmdb_id": 47373
+        },
+        {
+          "name": "Bob Fosse",
+          "tmdb_id": 66777
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Giuseppe Rotunno",
+          "tmdb_id": 15131
+        }
+      ],
+      "editors": [
+        {
+          "name": "Alan Heim",
+          "tmdb_id": 853
+        }
+      ],
+      "cast": [
+        {
+          "name": "Roy Scheider",
+          "tmdb_id": 6355,
+          "character": "Joe Gideon"
+        },
+        {
+          "name": "Jessica Lange",
+          "tmdb_id": 4431,
+          "character": "Angelique"
+        },
+        {
+          "name": "Ann Reinking",
+          "tmdb_id": 80928,
+          "character": "Kate Jagger"
+        },
+        {
+          "name": "Leland Palmer",
+          "tmdb_id": 80927,
+          "character": "Audrey Paris"
+        },
+        {
+          "name": "Cliff Gorman",
+          "tmdb_id": 19183,
+          "character": "Davis Newman"
+        },
+        {
+          "name": "Ben Vereen",
+          "tmdb_id": 26664,
+          "character": "O'Connor Flood"
+        },
+        {
+          "name": "Erzsebet Foldi",
+          "tmdb_id": 1155690,
+          "character": "Michelle Gideon"
+        },
+        {
+          "name": "Michael Tolan",
+          "tmdb_id": 161650,
+          "character": "Dr. Ballinger"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "I Knew Her Well",
+    "director": "Antonio Pietrangeli",
+    "year": 1965,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28600-i-knew-her-well",
+    "film_id": "28600-i-knew-her-well",
+    "imdb_id": "tt0060545",
+    "tmdb_id": 59336,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/eyQibuSHTg2lwSeWj3VRF4EJKoN.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Antonio Pietrangeli",
+          "tmdb_id": 229222
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ettore Scola",
+          "tmdb_id": 31894
+        },
+        {
+          "name": "Antonio Pietrangeli",
+          "tmdb_id": 229222
+        },
+        {
+          "name": "Ruggero Maccari",
+          "tmdb_id": 31892
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Armando Nannuzzi",
+          "tmdb_id": 24665
+        }
+      ],
+      "editors": [
+        {
+          "name": "Franco Fraticelli",
+          "tmdb_id": 52258
+        }
+      ],
+      "cast": [
+        {
+          "name": "Stefania Sandrelli",
+          "tmdb_id": 34027,
+          "character": "Adriana Astarelli"
+        },
+        {
+          "name": "Mario Adorf",
+          "tmdb_id": 10254,
+          "character": "Emilio Ricci, aka Bietolone"
+        },
+        {
+          "name": "Jean-Claude Brialy",
+          "tmdb_id": 24299,
+          "character": "Dario Marchionni"
+        },
+        {
+          "name": "Joachim Fuchsberger",
+          "tmdb_id": 16818,
+          "character": "The Writer"
+        },
+        {
+          "name": "Nino Manfredi",
+          "tmdb_id": 37583,
+          "character": "Cianfanna"
+        },
+        {
+          "name": "Enrico Maria Salerno",
+          "tmdb_id": 32377,
+          "character": "Roberto"
+        },
+        {
+          "name": "Ugo Tognazzi",
+          "tmdb_id": 32312,
+          "character": "Gigi Baggini"
+        },
+        {
+          "name": "Karin Dor",
+          "tmdb_id": 10073,
+          "character": "Barbara"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Female Trouble",
+    "director": "John Waters",
+    "year": 1974,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28704-female-trouble",
+    "film_id": "28704-female-trouble",
+    "imdb_id": "tt0072979",
+    "tmdb_id": 14267,
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/cqhIufhoORDMuFKEinV1IIYUBxD.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        }
+      ],
+      "writers": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        }
+      ],
+      "editors": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        },
+        {
+          "name": "Charles Roggero",
+          "tmdb_id": 67952
+        }
+      ],
+      "cast": [
+        {
+          "name": "Divine",
+          "tmdb_id": 10369,
+          "character": "Dawn Davenport / Earl Peterson"
+        },
+        {
+          "name": "David Lochary",
+          "tmdb_id": 10370,
+          "character": "Donald Dasher"
+        },
+        {
+          "name": "Mary Vivian Pearce",
+          "tmdb_id": 10371,
+          "character": "Donna Dasher"
+        },
+        {
+          "name": "Mink Stole",
+          "tmdb_id": 9292,
+          "character": "Taffy Davenport"
+        },
+        {
+          "name": "Edith Massey",
+          "tmdb_id": 10373,
+          "character": "Ida Nelson"
+        },
+        {
+          "name": "Cookie Mueller",
+          "tmdb_id": 10375,
+          "character": "Concetta"
+        },
+        {
+          "name": "Susan Walsh",
+          "tmdb_id": 10376,
+          "character": "Chicklette"
+        },
+        {
+          "name": "Ed Peranio",
+          "tmdb_id": 76505,
+          "character": "Wink"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Klute",
+    "director": "Alan J. Pakula",
+    "year": 1971,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28708-klute",
+    "film_id": "28708-klute",
+    "imdb_id": "tt0067309",
+    "tmdb_id": 466,
+    "genres": [
+      "Thriller",
+      "Mystery",
+      "Crime"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/tVyINAsNGSgD1OIstqwCcs7wyGH.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Alan J. Pakula",
+          "tmdb_id": 6349
+        }
+      ],
+      "writers": [
+        {
+          "name": "David E. Lewis",
+          "tmdb_id": 2103373
+        },
+        {
+          "name": "Andy Lewis",
+          "tmdb_id": 6350
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Gordon Willis",
+          "tmdb_id": 3097
+        }
+      ],
+      "editors": [
+        {
+          "name": "Carl Lerner",
+          "tmdb_id": 5262
+        }
+      ],
+      "cast": [
+        {
+          "name": "Jane Fonda",
+          "tmdb_id": 6352,
+          "character": "Bree Daniels"
+        },
+        {
+          "name": "Donald Sutherland",
+          "tmdb_id": 55636,
+          "character": "John Klute"
+        },
+        {
+          "name": "Charles Cioffi",
+          "tmdb_id": 6354,
+          "character": "Peter Cable"
+        },
+        {
+          "name": "Roy Scheider",
+          "tmdb_id": 6355,
+          "character": "Frank Ligourin"
+        },
+        {
+          "name": "Dorothy Tristan",
+          "tmdb_id": 6360,
+          "character": "Arlyn Page"
+        },
+        {
+          "name": "Rita Gam",
+          "tmdb_id": 120391,
+          "character": "Trina"
+        },
+        {
+          "name": "Nathan George",
+          "tmdb_id": 7082,
+          "character": "Trask"
+        },
+        {
+          "name": "Vivian Nathan",
+          "tmdb_id": 6442,
+          "character": "Psychiatrist"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Funny Games",
+    "director": "Michael Haneke",
+    "year": 1997,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28836-funny-games",
+    "film_id": "28836-funny-games",
+    "imdb_id": "tt0119167",
+    "tmdb_id": 10234,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/vUJxLlRGM6KfXQDeAHqyMyhrI59.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Michael Haneke",
+          "tmdb_id": 6011
+        }
+      ],
+      "writers": [
+        {
+          "name": "Michael Haneke",
+          "tmdb_id": 6011
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jürgen Jürges",
+          "tmdb_id": 5639
+        }
+      ],
+      "editors": [
+        {
+          "name": "Andreas Prochaska",
+          "tmdb_id": 16794
+        }
+      ],
+      "cast": [
+        {
+          "name": "Susanne Lothar",
+          "tmdb_id": 19123,
+          "character": "Anna"
+        },
+        {
+          "name": "Ulrich Mühe",
+          "tmdb_id": 8196,
+          "character": "Georg"
+        },
+        {
+          "name": "Arno Frisch",
+          "tmdb_id": 20449,
+          "character": "Paul"
+        },
+        {
+          "name": "Frank Giering",
+          "tmdb_id": 18490,
+          "character": "Peter"
+        },
+        {
+          "name": "Stefan Clapczynski",
+          "tmdb_id": 551782,
+          "character": "Georgie"
+        },
+        {
+          "name": "Doris Kunstmann",
+          "tmdb_id": 45699,
+          "character": "Gerda"
+        },
+        {
+          "name": "Christoph Bantzer",
+          "tmdb_id": 551783,
+          "character": "Fred"
+        },
+        {
+          "name": "Wolfgang Glück",
+          "tmdb_id": 221293,
+          "character": "Robert"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Heiress",
+    "director": "William Wyler",
+    "year": 1949,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28986-the-heiress",
+    "film_id": "28986-the-heiress",
+    "imdb_id": "tt0041452",
+    "tmdb_id": 28571,
+    "genres": [
+      "Drama",
+      "Romance",
+      "History"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/1oN0zsjw3iS1HaOLoZbmptzrD1W.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "William Wyler",
+          "tmdb_id": 10001
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ruth Goetz",
+          "tmdb_id": 1159912
+        },
+        {
+          "name": "Augustus Goetz",
+          "tmdb_id": 237378
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Leo Tover",
+          "tmdb_id": 12279
+        }
+      ],
+      "editors": [
+        {
+          "name": "William Hornbeck",
+          "tmdb_id": 17762
+        }
+      ],
+      "cast": [
+        {
+          "name": "Olivia de Havilland",
+          "tmdb_id": 8725,
+          "character": "Catherine Sloper"
+        },
+        {
+          "name": "Montgomery Clift",
+          "tmdb_id": 12151,
+          "character": "Morris Townsend"
+        },
+        {
+          "name": "Ralph Richardson",
+          "tmdb_id": 12689,
+          "character": "Dr. Austin Sloper"
+        },
+        {
+          "name": "Miriam Hopkins",
+          "tmdb_id": 2433,
+          "character": "Lavinia Penniman"
+        },
+        {
+          "name": "Vanessa Brown",
+          "tmdb_id": 88570,
+          "character": "Maria"
+        },
+        {
+          "name": "Mona Freeman",
+          "tmdb_id": 20144,
+          "character": "Maria Almond"
+        },
+        {
+          "name": "Ray Collins",
+          "tmdb_id": 14518,
+          "character": "Jefferson Almond"
+        },
+        {
+          "name": "Betty Linley",
+          "tmdb_id": 287365,
+          "character": "Mme. Montgomery"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Virgin Suicides",
+    "director": "Sofia Coppola",
+    "year": 2000,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/29336-the-virgin-suicides",
+    "film_id": "29336-the-virgin-suicides",
+    "imdb_id": "tt0159097",
+    "tmdb_id": 1443,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/1NCQtXPQnaHRjOZVmktA9BSM35F.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Sofia Coppola",
+          "tmdb_id": 1769
+        }
+      ],
+      "writers": [
+        {
+          "name": "Sofia Coppola",
+          "tmdb_id": 1769
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Edward Lachman",
+          "tmdb_id": 6345
+        }
+      ],
+      "editors": [
+        {
+          "name": "Melissa Kent",
+          "tmdb_id": 17233
+        },
+        {
+          "name": "James Lyons",
+          "tmdb_id": 17234
+        }
+      ],
+      "cast": [
+        {
+          "name": "Kirsten Dunst",
+          "tmdb_id": 205,
+          "character": "Lux Lisbon"
+        },
+        {
+          "name": "Josh Hartnett",
+          "tmdb_id": 2299,
+          "character": "Trip Fontaine"
+        },
+        {
+          "name": "James Woods",
+          "tmdb_id": 4512,
+          "character": "Mr. Lisbon"
+        },
+        {
+          "name": "Kathleen Turner",
+          "tmdb_id": 3391,
+          "character": "Mrs. Lisbon"
+        },
+        {
+          "name": "Michael Paré",
+          "tmdb_id": 60650,
+          "character": "Adult Trip Fontaine"
+        },
+        {
+          "name": "A. J. Cook",
+          "tmdb_id": 17236,
+          "character": "Mary Lisbon"
+        },
+        {
+          "name": "Hanna Hall",
+          "tmdb_id": 204997,
+          "character": "Cecilia Lisbon"
+        },
+        {
+          "name": "Leslie Hayman",
+          "tmdb_id": 17238,
+          "character": "Therese Lisbon"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "After Hours",
+    "director": "Martin Scorsese",
+    "year": 1985,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/29632-after-hours",
+    "film_id": "29632-after-hours",
+    "imdb_id": "tt0088680",
+    "tmdb_id": 10843,
+    "genres": [
+      "Comedy",
+      "Thriller",
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/eamOBurHBu0MIxohTIVcfxmZ6Z7.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Martin Scorsese",
+          "tmdb_id": 1032
+        }
+      ],
+      "writers": [
+        {
+          "name": "Joseph Minion",
+          "tmdb_id": 51951
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Michael Ballhaus",
+          "tmdb_id": 3769
+        }
+      ],
+      "editors": [
+        {
+          "name": "Thelma Schoonmaker",
+          "tmdb_id": 3661
+        }
+      ],
+      "cast": [
+        {
+          "name": "Griffin Dunne",
+          "tmdb_id": 2171,
+          "character": "Paul Hackett"
+        },
+        {
+          "name": "Rosanna Arquette",
+          "tmdb_id": 2165,
+          "character": "Marcy"
+        },
+        {
+          "name": "Verna Bloom",
+          "tmdb_id": 55192,
+          "character": "June"
+        },
+        {
+          "name": "Tommy Chong",
+          "tmdb_id": 63208,
+          "character": "Pepe"
+        },
+        {
+          "name": "Linda Fiorentino",
+          "tmdb_id": 9625,
+          "character": "Kiki"
+        },
+        {
+          "name": "Teri Garr",
+          "tmdb_id": 8437,
+          "character": "Julie"
+        },
+        {
+          "name": "John Heard",
+          "tmdb_id": 11512,
+          "character": "Tom the Bartender"
+        },
+        {
+          "name": "Cheech Marin",
+          "tmdb_id": 11159,
+          "character": "Neil"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Paris Is Burning",
+    "director": "Jennie Livingston",
+    "year": 1991,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/29647-paris-is-burning",
+    "film_id": "29647-paris-is-burning",
+    "imdb_id": "tt0100332",
+    "tmdb_id": 31225,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/90rCWH41mj9hjHUEy2SOHfuAOl3.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Jennie Livingston",
+          "tmdb_id": 107831
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Paul Gibson",
+          "tmdb_id": 221922
+        }
+      ],
+      "editors": [
+        {
+          "name": "Jonathan Oppenheim",
+          "tmdb_id": 107828
+        }
+      ],
+      "cast": [
+        {
+          "name": "Pepper LaBeija",
+          "tmdb_id": 107842,
+          "character": "Self"
+        },
+        {
+          "name": "Octavia St. Laurent",
+          "tmdb_id": 107844,
+          "character": "Self"
+        },
+        {
+          "name": "Venus Xtravaganza",
+          "tmdb_id": 107846,
+          "character": "Self"
+        },
+        {
+          "name": "Dorian Corey",
+          "tmdb_id": 107840,
+          "character": "Self"
+        },
+        {
+          "name": "Willi Ninja",
+          "tmdb_id": 107843,
+          "character": "Self"
+        },
+        {
+          "name": "Paris Dupree",
+          "tmdb_id": 2497475,
+          "character": "Self"
+        },
+        {
+          "name": "Freddie Pendavis",
+          "tmdb_id": 2362151,
+          "character": "Self"
+        },
+        {
+          "name": "Sol Williams Pendavis",
+          "tmdb_id": 2362150,
+          "character": "Self"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Fast Times at Ridgemont High",
+    "director": "Amy Heckerling",
+    "year": 1982,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/30464-fast-times-at-ridgemont-high",
+    "film_id": "30464-fast-times-at-ridgemont-high",
+    "imdb_id": "tt0083929",
+    "tmdb_id": 13342,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/s1DA8H7qwoOcAEhow2rCzuQtpuO.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Amy Heckerling",
+          "tmdb_id": 57434
+        }
+      ],
+      "writers": [
+        {
+          "name": "Cameron Crowe",
+          "tmdb_id": 11649
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Matthew F. Leonetti",
+          "tmdb_id": 2507
+        }
+      ],
+      "editors": [
+        {
+          "name": "Eric Jenkins",
+          "tmdb_id": 69793
+        }
+      ],
+      "cast": [
+        {
+          "name": "Sean Penn",
+          "tmdb_id": 2228,
+          "character": "Jeff Spicoli"
+        },
+        {
+          "name": "Jennifer Jason Leigh",
+          "tmdb_id": 10431,
+          "character": "Stacy Hamilton"
+        },
+        {
+          "name": "Judge Reinhold",
+          "tmdb_id": 777,
+          "character": "Brad Hamilton"
+        },
+        {
+          "name": "Phoebe Cates",
+          "tmdb_id": 16171,
+          "character": "Linda Barrett"
+        },
+        {
+          "name": "Brian Backer",
+          "tmdb_id": 118946,
+          "character": "Mark \"Rat\" Ratner"
+        },
+        {
+          "name": "Robert Romanus",
+          "tmdb_id": 61217,
+          "character": "Mike Damone"
+        },
+        {
+          "name": "Ray Walston",
+          "tmdb_id": 4093,
+          "character": "Mr. Hand"
+        },
+        {
+          "name": "Scott Thomson",
+          "tmdb_id": 9997,
+          "character": "Arnold"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Grifters",
+    "director": "Stephen Frears",
+    "year": 1990,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/30526-the-grifters",
+    "film_id": "30526-the-grifters",
+    "imdb_id": "tt0099703",
+    "tmdb_id": 18129,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/zMpGfkiDIdg5bB7WGcAT3Fdrfpt.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Stephen Frears",
+          "tmdb_id": 3224
+        }
+      ],
+      "writers": [
+        {
+          "name": "Donald E. Westlake",
+          "tmdb_id": 21672
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Oliver Stapleton",
+          "tmdb_id": 16425
+        }
+      ],
+      "editors": [
+        {
+          "name": "Mick Audsley",
+          "tmdb_id": 294
+        }
+      ],
+      "cast": [
+        {
+          "name": "Anjelica Huston",
+          "tmdb_id": 5657,
+          "character": "Lilly Dillon"
+        },
+        {
+          "name": "John Cusack",
+          "tmdb_id": 3036,
+          "character": "Roy Dillon"
+        },
+        {
+          "name": "Annette Bening",
+          "tmdb_id": 516,
+          "character": "Myra Langtry"
+        },
+        {
+          "name": "Jan Munroe",
+          "tmdb_id": 109762,
+          "character": "Guy in bar"
+        },
+        {
+          "name": "Robert Weems",
+          "tmdb_id": 109763,
+          "character": "Racetrack Announcer"
+        },
+        {
+          "name": "Stephen Tobolowsky",
+          "tmdb_id": 537,
+          "character": "Jeweler"
+        },
+        {
+          "name": "Jimmy Noonan",
+          "tmdb_id": 109764,
+          "character": "Bartender"
+        },
+        {
+          "name": "Richard Holden",
+          "tmdb_id": 109765,
+          "character": "Cop"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Ryuichi Sakamoto | Opus",
+    "director": "Neo Sora",
+    "year": 2023,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
+    "film_id": "34102-ryuichi-sakamoto-opus",
+    "imdb_id": "tt28490873",
+    "tmdb_id": 1156189,
+    "genres": [
+      "Music",
+      "Documentary"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/fw0NchjBAQKz90klk4xNlw0xxuy.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Neo Sora",
+          "tmdb_id": 2010321
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Bill Kirstein",
+          "tmdb_id": 1610252
+        }
+      ],
+      "editors": [
+        {
+          "name": "Takuya Kawakami",
+          "tmdb_id": 2247870
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ryuichi Sakamoto",
+          "tmdb_id": 11382,
+          "character": "Self"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Flow",
+    "director": "Adriaan Lokman",
+    "year": 2019,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/34685-flow",
+    "film_id": "34685-flow",
+    "imdb_id": "tt10501214",
+    "tmdb_id": 608149,
+    "genres": [
+      "Animation"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/97gfdmt6ruajCbYJrgxNPvPzSNa.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Adriaan Lokman",
+          "tmdb_id": 31053
+        }
+      ],
+      "writers": [
+        {
+          "name": "Adriaan Lokman",
+          "tmdb_id": 31053
+        }
+      ],
+      "cinematographers": [],
+      "editors": [
+        {
+          "name": "Adriaan Lokman",
+          "tmdb_id": 31053
+        }
+      ],
+      "cast": []
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Grey Gardens",
+    "director": "Michael Sucsy",
+    "year": 2009,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/664-grey-gardens",
+    "film_id": "664-grey-gardens",
+    "imdb_id": "tt0758751",
+    "tmdb_id": 19851,
+    "genres": [
+      "History",
+      "Drama",
+      "TV Movie"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/9iO11PLhIGCzN6n2V92XcANQ8M9.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Michael Sucsy",
+          "tmdb_id": 566328
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Mike Eley",
+          "tmdb_id": 68543
+        }
+      ],
+      "editors": [
+        {
+          "name": "Lee Percy",
+          "tmdb_id": 2866
+        },
+        {
+          "name": "Alan Heim",
+          "tmdb_id": 853
+        }
+      ],
+      "cast": [
+        {
+          "name": "Drew Barrymore",
+          "tmdb_id": 69597,
+          "character": "Little Edie"
+        },
+        {
+          "name": "Jessica Lange",
+          "tmdb_id": 4431,
+          "character": "Big Edie"
+        },
+        {
+          "name": "Jeanne Tripplehorn",
+          "tmdb_id": 10478,
+          "character": "Jacqueline Kennedy"
+        },
+        {
+          "name": "Ken Howard",
+          "tmdb_id": 18328,
+          "character": "Phelan Beale"
+        },
+        {
+          "name": "Kenneth Welsh",
+          "tmdb_id": 6074,
+          "character": "Max Gordon"
+        },
+        {
+          "name": "Arye Gross",
+          "tmdb_id": 72028,
+          "character": "Albert Maysles"
+        },
+        {
+          "name": "Louis Ferreira",
+          "tmdb_id": 51036,
+          "character": "David Maysles"
+        },
+        {
+          "name": "Daniel Baldwin",
+          "tmdb_id": 24516,
+          "character": "Julius 'Cap' Krug"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Gregg Araki's Teen Apocalypse Trilogy",
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/7581-gregg-araki-s-teen-apocalypse-trilogy",
+    "film_id": "7581-gregg-araki-s-teen-apocalypse-trilogy",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "genres": [],
+    "poster_url": null,
+    "credits": null,
+    "is_box_set": true
   }
 ]

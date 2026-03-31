@@ -4693,5 +4693,27 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "Sofia Coppola & Marc Jacobs",
+    "slug": "sofia-coppola-marc-jacobs",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
+    "youtube_video_id": "qLH-ZyrEBn8",
+    "youtube_video_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8",
+    "source": "criterion",
+    "visit_count": 1,
+    "visits": [
+      {
+        "visit_index": 1,
+        "criterion_page_url": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
+        "youtube_video_id": "qLH-ZyrEBn8",
+        "youtube_video_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8"
+      }
+    ],
+    "pick_count": 20,
+    "poster_url": null,
+    "tmdb_id": null,
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/dzHC2LxmarkBxWLhjp2DRa5oCev.jpg"
   }
 ]
