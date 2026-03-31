@@ -102,6 +102,7 @@ KNOWN_VIDEO_IDS = {
     "sergei-loznitsa": {"youtube_video_id": "_miFRuKBw8o"},
     "cary-elwes": {"youtube_video_id": "mIugin2XpV4"},
     "sofia-coppola-marc-jacobs": {"youtube_video_id": "qLH-ZyrEBn8"},
+    "john-slattery": {"youtube_video_id": "B_Rhewt6f1E"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -138,6 +139,7 @@ KNOWN_CRITERION_URLS = {
     "sergei-loznitsa": "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
     "cary-elwes": "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
     "sofia-coppola-marc-jacobs": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
+    "john-slattery": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
 }
 
 # Name cleanup

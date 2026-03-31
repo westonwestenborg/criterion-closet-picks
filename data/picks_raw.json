@@ -58878,5 +58878,50 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 20
+  },
+  {
+    "guest_slug": "john-slattery",
+    "film_id": "28821-shampoo",
+    "film_title": "Shampoo",
+    "criterion_film_url": "https://www.criterion.com/films/28821-shampoo",
+    "source": "criterion",
+    "visit_index": 1,
+    "pick_order": 1
+  },
+  {
+    "guest_slug": "john-slattery",
+    "film_id": "29429-no-country-for-old-men",
+    "film_title": "No Country for Old Men",
+    "criterion_film_url": "https://www.criterion.com/films/29429-no-country-for-old-men",
+    "source": "criterion",
+    "visit_index": 1,
+    "pick_order": 2
+  },
+  {
+    "guest_slug": "john-slattery",
+    "film_id": "27904-the-awful-truth",
+    "film_title": "The Awful Truth",
+    "criterion_film_url": "https://www.criterion.com/films/27904-the-awful-truth",
+    "source": "criterion",
+    "visit_index": 1,
+    "pick_order": 3
+  },
+  {
+    "guest_slug": "john-slattery",
+    "film_id": "1285-the-hit",
+    "film_title": "The Hit",
+    "criterion_film_url": "https://www.criterion.com/films/1285-the-hit",
+    "source": "criterion",
+    "visit_index": 1,
+    "pick_order": 4
+  },
+  {
+    "guest_slug": "john-slattery",
+    "film_id": "1426-the-friends-of-eddie-coyle",
+    "film_title": "The Friends of Eddie Coyle",
+    "criterion_film_url": "https://www.criterion.com/films/1426-the-friends-of-eddie-coyle",
+    "source": "criterion",
+    "visit_index": 1,
+    "pick_order": 5
   }
 ]

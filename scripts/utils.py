@@ -268,6 +268,9 @@ VISIT_CRITERION_URLS = {
     "sofia-coppola-marc-jacobs": [
         "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
     ],
+    "john-slattery": [
+        "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
+    ],
 }
 
 

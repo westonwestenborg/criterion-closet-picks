@@ -4715,5 +4715,28 @@
     "tmdb_id": null,
     "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/dzHC2LxmarkBxWLhjp2DRa5oCev.jpg"
+  },
+  {
+    "name": "John Slattery",
+    "slug": "john-slattery",
+    "criterion_page_url": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
+    "youtube_video_id": "B_Rhewt6f1E",
+    "youtube_video_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E",
+    "source": "criterion",
+    "visit_count": 1,
+    "visits": [
+      {
+        "visit_index": 1,
+        "criterion_page_url": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
+        "youtube_video_id": "B_Rhewt6f1E",
+        "youtube_video_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E"
+      }
+    ],
+    "pick_count": 5,
+    "poster_url": null,
+    "tmdb_id": null,
+    "tmdb_person_id": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/tm7g84OWD5gQRoyfG4hduBphP1j.jpg",
+    "profession": "actor"
   }
 ]

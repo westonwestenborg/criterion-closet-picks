@@ -141444,5 +141444,444 @@
     "poster_url": null,
     "credits": null,
     "is_box_set": true
+  },
+  {
+    "spine_number": null,
+    "title": "The Hit",
+    "director": "Stephen Frears",
+    "year": 1984,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/1285-the-hit",
+    "film_id": "1285-the-hit",
+    "imdb_id": "tt0087414",
+    "tmdb_id": 19621,
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/hKNIz9iids9uPyEpmJjLFM96KXI.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Stephen Frears",
+          "tmdb_id": 3224
+        }
+      ],
+      "writers": [
+        {
+          "name": "Peter Prince",
+          "tmdb_id": 84958
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Mike Molloy",
+          "tmdb_id": 84960
+        }
+      ],
+      "editors": [
+        {
+          "name": "Mick Audsley",
+          "tmdb_id": 294
+        }
+      ],
+      "cast": [
+        {
+          "name": "John Hurt",
+          "tmdb_id": 5049,
+          "character": "Braddock"
+        },
+        {
+          "name": "Terence Stamp",
+          "tmdb_id": 28641,
+          "character": "Willie Parker"
+        },
+        {
+          "name": "Tim Roth",
+          "tmdb_id": 3129,
+          "character": "Myron"
+        },
+        {
+          "name": "Laura del Sol",
+          "tmdb_id": 103670,
+          "character": "Maggie"
+        },
+        {
+          "name": "Bill Hunter",
+          "tmdb_id": 23,
+          "character": "Harry"
+        },
+        {
+          "name": "Fernando Rey",
+          "tmdb_id": 14821,
+          "character": "Policeman"
+        },
+        {
+          "name": "Jim Broadbent",
+          "tmdb_id": 388,
+          "character": "Barrister"
+        },
+        {
+          "name": "Lennie Peters",
+          "tmdb_id": 1408410,
+          "character": "Mr. Corrigan"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Friends of Eddie Coyle",
+    "director": "Peter Yates",
+    "year": 1973,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/1426-the-friends-of-eddie-coyle",
+    "film_id": "1426-the-friends-of-eddie-coyle",
+    "imdb_id": "tt0070077",
+    "tmdb_id": 25680,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/tyV8Bgf2huCIbGUxTdGgnzdIRKZ.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Peter Yates",
+          "tmdb_id": 12804
+        }
+      ],
+      "writers": [
+        {
+          "name": "Paul Monash",
+          "tmdb_id": 9579
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Victor J. Kemper",
+          "tmdb_id": 14536
+        }
+      ],
+      "editors": [
+        {
+          "name": "Pat Jaffe",
+          "tmdb_id": 1242376
+        }
+      ],
+      "cast": [
+        {
+          "name": "Robert Mitchum",
+          "tmdb_id": 10158,
+          "character": "Eddie 'Fingers' Coyle"
+        },
+        {
+          "name": "Peter Boyle",
+          "tmdb_id": 1039,
+          "character": "Dillon"
+        },
+        {
+          "name": "Richard Jordan",
+          "tmdb_id": 12518,
+          "character": "Dave Foley"
+        },
+        {
+          "name": "Steven Keats",
+          "tmdb_id": 76019,
+          "character": "Jackie Brown"
+        },
+        {
+          "name": "Alex Rocco",
+          "tmdb_id": 20752,
+          "character": "Jimmy Scalise"
+        },
+        {
+          "name": "Joe Santos",
+          "tmdb_id": 6774,
+          "character": "Artie 'Van' Valentropo"
+        },
+        {
+          "name": "Mitchell Ryan",
+          "tmdb_id": 14312,
+          "character": "Waters"
+        },
+        {
+          "name": "Peter MacLean",
+          "tmdb_id": 30785,
+          "character": "Mr. Partridge"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "The Awful Truth",
+    "director": "Leo McCarey",
+    "year": 1937,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/27904-the-awful-truth",
+    "film_id": "27904-the-awful-truth",
+    "imdb_id": "tt0028597",
+    "tmdb_id": 14675,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/2VtsJoxvjpcMpwh0gweS8IMfHxO.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Leo McCarey",
+          "tmdb_id": 30008
+        }
+      ],
+      "writers": [
+        {
+          "name": "Viña Delmar",
+          "tmdb_id": 125363
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Joseph Walker",
+          "tmdb_id": 17761
+        }
+      ],
+      "editors": [
+        {
+          "name": "Al Clark",
+          "tmdb_id": 117774
+        }
+      ],
+      "cast": [
+        {
+          "name": "Irene Dunne",
+          "tmdb_id": 77158,
+          "character": "Lucy Warriner"
+        },
+        {
+          "name": "Cary Grant",
+          "tmdb_id": 2638,
+          "character": "Jerry Warriner"
+        },
+        {
+          "name": "Ralph Bellamy",
+          "tmdb_id": 1208,
+          "character": "Dan Leeson"
+        },
+        {
+          "name": "Alexander D'Arcy",
+          "tmdb_id": 77159,
+          "character": "Armand Duvalle"
+        },
+        {
+          "name": "Cecil Cunningham",
+          "tmdb_id": 77160,
+          "character": "Aunt Patsy"
+        },
+        {
+          "name": "Molly Lamont",
+          "tmdb_id": 90377,
+          "character": "Barbara Vance"
+        },
+        {
+          "name": "Esther Dale",
+          "tmdb_id": 34268,
+          "character": "Mrs. Leeson"
+        },
+        {
+          "name": "Joyce Compton",
+          "tmdb_id": 89725,
+          "character": "Dixie Belle Lee"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Shampoo",
+    "director": "Hal Ashby",
+    "year": 1975,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28821-shampoo",
+    "film_id": "28821-shampoo",
+    "imdb_id": "tt0073692",
+    "tmdb_id": 31121,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/6jmFvXPV6OhtX3AkAVnH7rwdeUJ.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Hal Ashby",
+          "tmdb_id": 4964
+        }
+      ],
+      "writers": [
+        {
+          "name": "Robert Towne",
+          "tmdb_id": 11057
+        },
+        {
+          "name": "Warren Beatty",
+          "tmdb_id": 6449
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "László Kovács",
+          "tmdb_id": 8862
+        }
+      ],
+      "editors": [
+        {
+          "name": "Robert C. Jones",
+          "tmdb_id": 21012
+        }
+      ],
+      "cast": [
+        {
+          "name": "Warren Beatty",
+          "tmdb_id": 6449,
+          "character": "George Roundy"
+        },
+        {
+          "name": "Julie Christie",
+          "tmdb_id": 1666,
+          "character": "Jackie Shawn"
+        },
+        {
+          "name": "Goldie Hawn",
+          "tmdb_id": 18892,
+          "character": "Jill Haynes"
+        },
+        {
+          "name": "Lee Grant",
+          "tmdb_id": 30123,
+          "character": "Felicia Karpf"
+        },
+        {
+          "name": "Jack Warden",
+          "tmdb_id": 5251,
+          "character": "Lester Karpf"
+        },
+        {
+          "name": "Tony Bill",
+          "tmdb_id": 57138,
+          "character": "Johnny Pope"
+        },
+        {
+          "name": "George Furth",
+          "tmdb_id": 9597,
+          "character": "Mr. Pettis"
+        },
+        {
+          "name": "Jay Robinson",
+          "tmdb_id": 16097,
+          "character": "Norman"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "No Country for Old Men",
+    "director": "Joel Coen",
+    "year": 2007,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/29429-no-country-for-old-men",
+    "film_id": "29429-no-country-for-old-men",
+    "imdb_id": "tt0477348",
+    "tmdb_id": 6977,
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Western"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/6d5XOczc226jECq0LIX0siKtgHR.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Joel Coen",
+          "tmdb_id": 1223
+        },
+        {
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
+        }
+      ],
+      "writers": [
+        {
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
+        },
+        {
+          "name": "Joel Coen",
+          "tmdb_id": 1223
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Roger Deakins",
+          "tmdb_id": 151
+        }
+      ],
+      "editors": [
+        {
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
+        },
+        {
+          "name": "Joel Coen",
+          "tmdb_id": 1223
+        }
+      ],
+      "cast": [
+        {
+          "name": "Javier Bardem",
+          "tmdb_id": 3810,
+          "character": "Anton Chigurh"
+        },
+        {
+          "name": "Tommy Lee Jones",
+          "tmdb_id": 2176,
+          "character": "Ed Tom Bell"
+        },
+        {
+          "name": "Josh Brolin",
+          "tmdb_id": 16851,
+          "character": "Llewelyn Moss"
+        },
+        {
+          "name": "Woody Harrelson",
+          "tmdb_id": 57755,
+          "character": "Carson Wells"
+        },
+        {
+          "name": "Kelly Macdonald",
+          "tmdb_id": 9015,
+          "character": "Carla Jean Moss"
+        },
+        {
+          "name": "Garret Dillahunt",
+          "tmdb_id": 39520,
+          "character": "Wendell"
+        },
+        {
+          "name": "Tess Harper",
+          "tmdb_id": 41249,
+          "character": "Loretta Bell"
+        },
+        {
+          "name": "Barry Corbin",
+          "tmdb_id": 12852,
+          "character": "Ellis"
+        }
+      ]
+    }
   }
 ]
