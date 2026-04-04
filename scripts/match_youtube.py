@@ -288,51 +288,55 @@ def match_second_visit_videos(
     results = []
 
     # Strategy A: Use Criterion page URL to extract video ID
-    for guest, visit_idx in candidates[:]:
-        visit = guest["visits"][visit_idx]
-        criterion_url = visit.get("criterion_page_url")
-        if not criterion_url:
-            continue
+    # Filter candidates that have criterion URLs
+    criterion_candidates = [
+        (guest, visit_idx) for guest, visit_idx in candidates
+        if guest["visits"][visit_idx].get("criterion_page_url")
+    ]
 
-        # Try importing from scrape_criterion_picks
+    if criterion_candidates:
         try:
             from scripts.scrape_criterion_picks import (
                 create_scraper,
                 extract_video_ids as extract_video_ids_from_page,
             )
         except ImportError:
-            break
+            criterion_candidates = []
 
-        log(f"  Strategy A: {guest['name']} visit {visit_idx + 1} — fetching {criterion_url}")
-        try:
-            scraper = create_scraper()
-            resp = scraper.get(criterion_url, timeout=30)
-            if resp.status_code == 200:
-                from bs4 import BeautifulSoup
-                soup = BeautifulSoup(resp.text, "lxml")
-                page_video_ids = extract_video_ids_from_page(soup)
-                yt_id = page_video_ids.get("youtube_video_id")
-                vim_id = page_video_ids.get("vimeo_video_id")
+    if criterion_candidates:
+        with create_scraper() as scraper:
+            for guest, visit_idx in criterion_candidates:
+                visit = guest["visits"][visit_idx]
+                criterion_url = visit["criterion_page_url"]
 
-                if yt_id and yt_id not in consumed_ids:
-                    log(f"    Found YouTube: {yt_id}")
-                    # Find the matching video in playlist for upload_date
-                    matched_video = next((v for v in videos if v["video_id"] == yt_id), None)
-                    if not matched_video:
-                        matched_video = {"video_id": yt_id, "title": f"{guest['name']} visit {visit_idx + 1}", "upload_date": ""}
-                    results.append((matched_video, guest, visit_idx))
-                    consumed_ids.add(yt_id)
-                    candidates.remove((guest, visit_idx))
-                elif vim_id and vim_id not in consumed_ids:
-                    log(f"    Found Vimeo: {vim_id}")
-                    visit["vimeo_video_id"] = vim_id
-                    consumed_ids.add(vim_id)
-                    candidates.remove((guest, visit_idx))
-                else:
-                    log(f"    No new video found (or already consumed)")
-            time.sleep(1.5)
-        except Exception as e:
-            log(f"    Error fetching Criterion page: {e}")
+                log(f"  Strategy A: {guest['name']} visit {visit_idx + 1} — fetching {criterion_url}")
+                try:
+                    resp = scraper.fetch(criterion_url, timeout=30)
+                    if resp.status_code == 200:
+                        from bs4 import BeautifulSoup
+                        soup = BeautifulSoup(resp.text, "lxml")
+                        page_video_ids = extract_video_ids_from_page(soup)
+                        yt_id = page_video_ids.get("youtube_video_id")
+                        vim_id = page_video_ids.get("vimeo_video_id")
+
+                        if yt_id and yt_id not in consumed_ids:
+                            log(f"    Found YouTube: {yt_id}")
+                            matched_video = next((v for v in videos if v["video_id"] == yt_id), None)
+                            if not matched_video:
+                                matched_video = {"video_id": yt_id, "title": f"{guest['name']} visit {visit_idx + 1}", "upload_date": ""}
+                            results.append((matched_video, guest, visit_idx))
+                            consumed_ids.add(yt_id)
+                            candidates.remove((guest, visit_idx))
+                        elif vim_id and vim_id not in consumed_ids:
+                            log(f"    Found Vimeo: {vim_id}")
+                            visit["vimeo_video_id"] = vim_id
+                            consumed_ids.add(vim_id)
+                            candidates.remove((guest, visit_idx))
+                        else:
+                            log(f"    No new video found (or already consumed)")
+                    time.sleep(1.5)
+                except Exception as e:
+                    log(f"    Error fetching Criterion page: {e}")
 
     # Strategy B: Fuzzy title match against unmatched playlist videos
     unmatched_videos = [v for v in videos if v["video_id"] not in consumed_ids and _is_closet_picks_video(v["title"])]

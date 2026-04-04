@@ -14,7 +14,6 @@ import argparse
 import sys
 import time
 
-import cloudscraper
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
@@ -28,10 +27,10 @@ from scripts.utils import (
 RATE_LIMIT_SECONDS = 1.5
 
 
-def scrape_box_set_image(url: str, scraper: cloudscraper.CloudScraper) -> str | None:
+def scrape_box_set_image(url: str, scraper) -> str | None:
     """Fetch a Criterion box set page and extract the product image URL."""
     try:
-        resp = scraper.get(url, timeout=15)
+        resp = scraper.fetch(url, timeout=15)
 
         # If redirected to /shop/browse, the URL is stale
         if "/shop/browse" in resp.url or resp.status_code != 200:
@@ -84,32 +83,34 @@ def main():
         log("(dry run)")
         return
 
-    scraper = cloudscraper.create_scraper()
-    found = 0
-    failed = 0
+    from scripts.browser_utils import CriterionBrowser
 
-    for i, entry in enumerate(needs_image):
-        url = entry["criterion_url"]
-        log(f"  [{i + 1}/{len(needs_image)}] {entry['film_id']}")
+    with CriterionBrowser() as scraper:
+        found = 0
+        failed = 0
 
-        image_url = scrape_box_set_image(url, scraper)
+        for i, entry in enumerate(needs_image):
+            url = entry["criterion_url"]
+            log(f"  [{i + 1}/{len(needs_image)}] {entry['film_id']}")
 
-        if image_url:
-            entry["poster_url"] = image_url
-            found += 1
-            log(f"    Found: {image_url[:80]}...")
-        else:
-            failed += 1
-            log(f"    No image found")
+            image_url = scrape_box_set_image(url, scraper)
 
-        if i < len(needs_image) - 1:
-            time.sleep(RATE_LIMIT_SECONDS)
+            if image_url:
+                entry["poster_url"] = image_url
+                found += 1
+                log(f"    Found: {image_url[:80]}...")
+            else:
+                failed += 1
+                log(f"    No image found")
 
-    log(f"\nDone: {found} images found, {failed} failed")
+            if i < len(needs_image) - 1:
+                time.sleep(RATE_LIMIT_SECONDS)
 
-    if found > 0:
-        save_json(CATALOG_FILE, catalog)
-        log(f"Saved {CATALOG_FILE}")
+        log(f"\nDone: {found} images found, {failed} failed")
+
+        if found > 0:
+            save_json(CATALOG_FILE, catalog)
+            log(f"Saved {CATALOG_FILE}")
 
 
 if __name__ == "__main__":

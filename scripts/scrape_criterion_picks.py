@@ -24,7 +24,6 @@ import re
 import sys
 import time
 
-import cloudscraper
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
@@ -57,10 +56,9 @@ REQUEST_DELAY = 1.5
 # ---------------------------------------------------------------------------
 
 def create_scraper():
-    """Create a cloudscraper session for bypassing Cloudflare."""
-    return cloudscraper.create_scraper(
-        browser={"browser": "chrome", "platform": "darwin", "mobile": False}
-    )
+    """Create a CriterionBrowser for bypassing Cloudflare."""
+    from scripts.browser_utils import CriterionBrowser
+    return CriterionBrowser()
 
 
 # ---------------------------------------------------------------------------
@@ -203,7 +201,7 @@ def extract_videos_from_criterion_pages(scraper, existing_guests: list[dict]) ->
         else:
             log(f"  Checking {label}: {url}")
             try:
-                resp = scraper.get(url, timeout=30)
+                resp = scraper.fetch(url, timeout=30)
                 if resp.status_code != 200:
                     log(f"    HTTP {resp.status_code}")
                     seen_urls[url] = {"youtube_video_id": None, "vimeo_video_id": None}
@@ -295,7 +293,7 @@ def scrape_index(scraper) -> list[dict]:
 
     log("Scraping Criterion closet-picks index...")
     try:
-        resp = scraper.get(CLOSET_PICKS_INDEX, timeout=30)
+        resp = scraper.fetch(CLOSET_PICKS_INDEX, timeout=30)
         if resp.status_code != 200:
             log(f"  HTTP {resp.status_code} for index page")
             return []
@@ -385,7 +383,7 @@ def scrape_collection_page(scraper, collection_url: str) -> tuple[list[dict], di
             url = f"{collection_url}{separator}page={page}"
 
         try:
-            resp = scraper.get(url, timeout=30)
+            resp = scraper.fetch(url, timeout=30)
             if resp.status_code != 200:
                 if page > 1:
                     break
@@ -972,78 +970,78 @@ def main():
     log(f"Existing data: {len(existing_guests)} guests, {len(existing_picks)} picks")
 
     # Create scraper
-    scraper = create_scraper()
+    with create_scraper() as scraper:
 
-    # Step 1: Scrape the index to discover all collections
-    collections = scrape_index(scraper)
-    if not collections:
-        log("WARNING: No collections found on Criterion index page, using VISIT_CRITERION_URLS only")
-        collections = []
-    else:
-        log(f"Discovered {len(collections)} collections")
+        # Step 1: Scrape the index to discover all collections
+        collections = scrape_index(scraper)
+        if not collections:
+            log("WARNING: No collections found on Criterion index page, using VISIT_CRITERION_URLS only")
+            collections = []
+        else:
+            log(f"Discovered {len(collections)} collections")
 
-    # Inject any VISIT_CRITERION_URLS not discovered from the index
-    discovered_urls = {c["collection_url"] for c in collections}
-    for slug, urls in VISIT_CRITERION_URLS.items():
-        for url in urls:
-            if url not in discovered_urls:
-                name = slug.replace("-", " ").title()
-                collections.append({
-                    "name": name,
-                    "slug": slug,
-                    "collection_url": url,
-                    "collection_path": url.replace(CRITERION_BASE, ""),
-                })
-                log(f"  Injected missing collection: {name} ({url})")
+        # Inject any VISIT_CRITERION_URLS not discovered from the index
+        discovered_urls = {c["collection_url"] for c in collections}
+        for slug, urls in VISIT_CRITERION_URLS.items():
+            for url in urls:
+                if url not in discovered_urls:
+                    name = slug.replace("-", " ").title()
+                    collections.append({
+                        "name": name,
+                        "slug": slug,
+                        "collection_url": url,
+                        "collection_path": url.replace(CRITERION_BASE, ""),
+                    })
+                    log(f"  Injected missing collection: {name} ({url})")
 
-    # Index-only mode: just update criterion_page_url and exit
-    if args.index_only:
-        updated = update_index_only(collections, existing_guests)
+        # Index-only mode: just update criterion_page_url and exit
+        if args.index_only:
+            updated = update_index_only(collections, existing_guests)
+            save_json(GUESTS_FILE, existing_guests)
+            log(f"Updated {updated} guests with criterion_page_url")
+            log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
+            return
+
+        # Videos-only mode: extract YouTube video IDs from Criterion pages
+        if args.videos_only:
+            updated = extract_videos_from_criterion_pages(scraper, existing_guests)
+            save_json(GUESTS_FILE, existing_guests)
+            log(f"Updated {updated} guests with YouTube video IDs")
+            log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
+            return
+
+        # Step 2: Scrape collection pages for film picks
+        new_guests, new_picks = scrape_all_collections(
+            scraper=scraper,
+            catalog=catalog,
+            collections=collections,
+            existing_guests=existing_guests,
+            existing_picks=existing_picks,
+            limit=args.limit,
+            guest_filter=args.guest,
+            resume=not args.no_resume,
+        )
+
+        # Final save (redundant with incremental but ensures clean state)
         save_json(GUESTS_FILE, existing_guests)
-        log(f"Updated {updated} guests with criterion_page_url")
-        log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
-        return
+        save_json(PICKS_RAW_FILE, existing_picks)
 
-    # Videos-only mode: extract YouTube video IDs from Criterion pages
-    if args.videos_only:
-        updated = extract_videos_from_criterion_pages(scraper, existing_guests)
-        save_json(GUESTS_FILE, existing_guests)
-        log(f"Updated {updated} guests with YouTube video IDs")
-        log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
-        return
+        # Summary
+        log(f"\nResults:")
+        log(f"  New guests added: {len(new_guests)}")
+        log(f"  New picks added: {len(new_picks)}")
+        log(f"  Total guests: {len(existing_guests)}")
+        log(f"  Total picks: {len(existing_picks)}")
 
-    # Step 2: Scrape collection pages for film picks
-    new_guests, new_picks = scrape_all_collections(
-        scraper=scraper,
-        catalog=catalog,
-        collections=collections,
-        existing_guests=existing_guests,
-        existing_picks=existing_picks,
-        limit=args.limit,
-        guest_filter=args.guest,
-        resume=not args.no_resume,
-    )
+        if new_picks:
+            matched = sum(1 for p in new_picks if p.get("catalog_spine"))
+            total = len(new_picks)
+            pct = (matched / total * 100) if total else 0
+            log(f"  Criterion match rate: {matched}/{total} ({pct:.1f}%)")
 
-    # Final save (redundant with incremental but ensures clean state)
-    save_json(GUESTS_FILE, existing_guests)
-    save_json(PICKS_RAW_FILE, existing_picks)
-
-    # Summary
-    log(f"\nResults:")
-    log(f"  New guests added: {len(new_guests)}")
-    log(f"  New picks added: {len(new_picks)}")
-    log(f"  Total guests: {len(existing_guests)}")
-    log(f"  Total picks: {len(existing_picks)}")
-
-    if new_picks:
-        matched = sum(1 for p in new_picks if p.get("catalog_spine"))
-        total = len(new_picks)
-        pct = (matched / total * 100) if total else 0
-        log(f"  Criterion match rate: {matched}/{total} ({pct:.1f}%)")
-
-        box_sets = sum(1 for p in new_picks if p.get("is_box_set"))
-        if box_sets:
-            log(f"  Box sets found: {box_sets}")
+            box_sets = sum(1 for p in new_picks if p.get("is_box_set"))
+            if box_sets:
+                log(f"  Box sets found: {box_sets}")
 
 
 if __name__ == "__main__":

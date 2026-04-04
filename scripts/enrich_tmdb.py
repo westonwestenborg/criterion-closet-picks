@@ -12,7 +12,8 @@ import re
 import sys
 import time
 
-import cloudscraper
+import atexit
+
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
@@ -75,18 +76,19 @@ TMDB_PERSON_OVERRIDES = {
 
 # Cache for Criterion page metadata lookups (criterion_url -> dict or None)
 _criterion_metadata_cache: dict[str, dict | None] = {}
-_criterion_scraper = None
+_criterion_browser = None
 CRITERION_REQUEST_DELAY = 1.5
 
 
-def _get_criterion_scraper():
-    """Lazy-init a cloudscraper instance for Criterion.com."""
-    global _criterion_scraper
-    if _criterion_scraper is None:
-        _criterion_scraper = cloudscraper.create_scraper(
-            browser={"browser": "chrome", "platform": "darwin", "mobile": False}
-        )
-    return _criterion_scraper
+def _get_criterion_browser():
+    """Lazy-init a Playwright browser for Criterion.com."""
+    global _criterion_browser
+    if _criterion_browser is None:
+        from scripts.browser_utils import CriterionBrowser
+        _criterion_browser = CriterionBrowser()
+        _criterion_browser.__enter__()
+        atexit.register(lambda: _criterion_browser.__exit__(None, None, None))
+    return _criterion_browser
 
 
 def get_metadata_from_criterion_url(criterion_url: str) -> dict | None:
@@ -101,13 +103,13 @@ def get_metadata_from_criterion_url(criterion_url: str) -> dict | None:
     if criterion_url in _criterion_metadata_cache:
         return _criterion_metadata_cache[criterion_url]
 
-    scraper = _get_criterion_scraper()
+    browser = _get_criterion_browser()
     year = None
     director = None
     image_url = None
 
     try:
-        resp = scraper.get(criterion_url, timeout=30)
+        resp = browser.fetch(criterion_url, timeout=30)
         if resp.status_code == 200:
             soup = BeautifulSoup(resp.text, "lxml")
 

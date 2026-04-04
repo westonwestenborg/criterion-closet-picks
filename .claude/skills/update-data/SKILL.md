@@ -13,7 +13,7 @@ Run the data pipeline to discover and process new Closet Picks episodes.
 - Python venv at `.venv/` with dependencies installed (`pip install -r scripts/requirements.txt`)
 - `.env` file with TMDB_READ_ACCESS_TOKEN, TMDB_API_KEY, GEMINI_API_KEY
 - Optional: X/Twitter and Threads credentials in `.env` (for posting about new guests)
-- `cloudscraper` is a required dependency (used to bypass Cloudflare on Criterion.com)
+- `playwright` + `playwright-stealth` required (bypasses Cloudflare Turnstile on Criterion.com). Run `playwright install chromium` after pip install.
 
 ## Workflow
 

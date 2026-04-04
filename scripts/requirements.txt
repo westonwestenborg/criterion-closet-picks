@@ -1,6 +1,9 @@
 # HTTP requests
 requests>=2.31.0
-cloudscraper>=1.2.71
+
+# Browser automation (bypasses Cloudflare Managed Challenge on criterion.com)
+playwright>=1.40.0
+playwright-stealth>=1.0.0
 
 # HTML parsing
 beautifulsoup4>=4.12.0

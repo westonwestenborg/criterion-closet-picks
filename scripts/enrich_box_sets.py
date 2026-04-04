@@ -22,7 +22,6 @@ import re
 import sys
 import time
 
-import cloudscraper
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
@@ -37,10 +36,9 @@ RATE_LIMIT_SECONDS = 1.5
 RETRY_DELAY_SECONDS = 3.0
 
 
-def _create_scraper() -> cloudscraper.CloudScraper:
-    return cloudscraper.create_scraper(
-        browser={"browser": "chrome", "platform": "darwin", "mobile": False}
-    )
+def _create_scraper():
+    from scripts.browser_utils import CriterionBrowser
+    return CriterionBrowser()
 
 
 def _extract_description(soup: BeautifulSoup) -> str | None:
@@ -140,7 +138,7 @@ def scrape_box_set(
 ) -> dict | None:
     """Fetch a Criterion box set page and extract enrichment data."""
     try:
-        resp = scraper.get(url, timeout=30)
+        resp = scraper.fetch(url, timeout=30)
 
         if "/shop/browse" in resp.url or resp.status_code != 200:
             return None
@@ -207,49 +205,49 @@ def main():
         log("(dry run)")
         return
 
-    scraper = _create_scraper()
-    enriched = 0
-    failed = 0
+    with _create_scraper() as scraper:
+        enriched = 0
+        failed = 0
 
-    for i, entry in enumerate(needs_enrichment):
-        url = entry["criterion_url"]
-        log(f"  [{i + 1}/{len(needs_enrichment)}] {entry['film_id']}")
+        for i, entry in enumerate(needs_enrichment):
+            url = entry["criterion_url"]
+            log(f"  [{i + 1}/{len(needs_enrichment)}] {entry['film_id']}")
 
-        data = scrape_box_set(url, scraper, catalog_url_lookup)
-
-        if not data:
-            # Retry once
-            log(f"    First attempt failed, retrying...")
-            time.sleep(RETRY_DELAY_SECONDS)
             data = scrape_box_set(url, scraper, catalog_url_lookup)
 
-        if data:
-            if data.get("description"):
-                entry["description"] = data["description"]
-                log(f"    Description: {len(data['description'])} chars")
+            if not data:
+                # Retry once
+                log(f"    First attempt failed, retrying...")
+                time.sleep(RETRY_DELAY_SECONDS)
+                data = scrape_box_set(url, scraper, catalog_url_lookup)
 
-            if data.get("included_films"):
-                entry["included_films"] = data["included_films"]
-                entry["box_set_film_count"] = data["box_set_film_count"]
-                log(f"    Included films: {data['box_set_film_count']}")
+            if data:
+                if data.get("description"):
+                    entry["description"] = data["description"]
+                    log(f"    Description: {len(data['description'])} chars")
 
-            if data.get("spine_from_page") and not entry.get("spine_number"):
-                entry["spine_number"] = data["spine_from_page"]
-                log(f"    Spine: {data['spine_from_page']}")
+                if data.get("included_films"):
+                    entry["included_films"] = data["included_films"]
+                    entry["box_set_film_count"] = data["box_set_film_count"]
+                    log(f"    Included films: {data['box_set_film_count']}")
 
-            enriched += 1
-        else:
-            failed += 1
-            log(f"    Failed to enrich")
+                if data.get("spine_from_page") and not entry.get("spine_number"):
+                    entry["spine_number"] = data["spine_from_page"]
+                    log(f"    Spine: {data['spine_from_page']}")
 
-        if i < len(needs_enrichment) - 1:
-            time.sleep(RATE_LIMIT_SECONDS)
+                enriched += 1
+            else:
+                failed += 1
+                log(f"    Failed to enrich")
 
-    log(f"\nDone: {enriched} enriched, {failed} failed")
+            if i < len(needs_enrichment) - 1:
+                time.sleep(RATE_LIMIT_SECONDS)
 
-    if enriched > 0:
-        save_json(CATALOG_FILE, catalog)
-        log(f"Saved {CATALOG_FILE}")
+        log(f"\nDone: {enriched} enriched, {failed} failed")
+
+        if enriched > 0:
+            save_json(CATALOG_FILE, catalog)
+            log(f"Saved {CATALOG_FILE}")
 
 
 if __name__ == "__main__":
