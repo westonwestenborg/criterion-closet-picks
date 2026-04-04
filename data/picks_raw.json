@@ -58923,5 +58923,86 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 5
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Merrily We Go to Hell",
+    "catalog_spine": 1076,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "merrily-we-go-to-hell",
+    "criterion_film_url": "https://www.criterion.com/films/30456-merrily-we-go-to-hell"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Something Wild",
+    "catalog_spine": 563,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "something-wild",
+    "criterion_film_url": "https://www.criterion.com/films/28777-something-wild"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Leave Her to Heaven",
+    "catalog_spine": 1020,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "leave-her-to-heaven",
+    "criterion_film_url": "https://www.criterion.com/films/29602-leave-her-to-heaven"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Thirty Two Short Films About Glenn Gould",
+    "catalog_spine": 1268,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "thirty-two-short-films-about-glenn-gould",
+    "criterion_film_url": ""
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Punch-Drunk Love",
+    "catalog_spine": 843,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "punch-drunk-love",
+    "criterion_film_url": "https://www.criterion.com/films/27916-punch-drunk-love"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Kiss Me Deadly",
+    "catalog_spine": 568,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "kiss-me-deadly",
+    "criterion_film_url": "https://www.criterion.com/films/27620-kiss-me-deadly"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "The Killing",
+    "catalog_spine": 575,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "the-killing",
+    "criterion_film_url": ""
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Flesh for Frankenstein",
+    "catalog_spine": 27,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "flesh-for-frankenstein",
+    "criterion_film_url": "https://www.criterion.com/films/562-flesh-for-frankenstein"
+  },
+  {
+    "guest_slug": "kim-morgan",
+    "film_title": "Blood for Dracula",
+    "catalog_spine": 28,
+    "source": "criterion",
+    "visit_index": 1,
+    "film_id": "blood-for-dracula",
+    "criterion_film_url": "https://www.criterion.com/films/564-blood-for-dracula"
   }
 ]

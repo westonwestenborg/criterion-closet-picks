@@ -271,6 +271,9 @@ VISIT_CRITERION_URLS = {
     "john-slattery": [
         "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
     ],
+    "kim-morgan": [
+        "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
+    ],
 }
 
 

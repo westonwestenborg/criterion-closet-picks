@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-03-30T17:06:32",
+  "generated_at": "2026-04-03T17:09:40",
   "catalog": {
     "stats": {
-      "total": 1803,
-      "with_tmdb_id": 1691,
-      "with_poster": 1686,
-      "with_imdb_id": 1632,
-      "with_genres": 1534,
-      "with_year": 1637,
-      "with_director": 1681,
+      "total": 1810,
+      "with_tmdb_id": 1698,
+      "with_poster": 1693,
+      "with_imdb_id": 1639,
+      "with_genres": 1541,
+      "with_year": 1644,
+      "with_director": 1688,
       "poster_source_criterion": 915,
-      "poster_source_tmdb": 775,
+      "poster_source_tmdb": 782,
       "poster_source_none": 113,
       "duplicate_spines": [
         null,
@@ -591,7 +591,14 @@
         null,
         null,
         null,
-        null
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        563,
+        575
       ],
       "duplicate_film_ids": [],
       "missing_title": 0
@@ -7516,18 +7523,94 @@
           "Grey Gardens",
           "Gregg Araki's Teen Apocalypse Trilogy"
         ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Hit"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Gregg Araki's Teen Apocalypse Trilogy",
+          "The Hit"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Friends of Eddie Coyle"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Hit",
+          "The Friends of Eddie Coyle"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "The Awful Truth"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Friends of Eddie Coyle",
+          "The Awful Truth"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Shampoo"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "The Awful Truth",
+          "Shampoo"
+        ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "No Country for Old Men"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Shampoo",
+          "No Country for Old Men"
+        ]
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": 563,
+        "titles": [
+          "Something Wild",
+          "Something Wild"
+        ]
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": 575,
+        "titles": [
+          "The Killing (with Killer’s Kiss)",
+          "The Killing"
+        ]
       }
     ]
   },
   "guests": {
     "stats": {
-      "total": 353,
-      "with_youtube_video": 347,
-      "with_transcript": 331,
-      "with_profession": 343,
-      "with_photo": 326,
+      "total": 355,
+      "with_youtube_video": 349,
+      "with_transcript": 332,
+      "with_profession": 345,
+      "with_photo": 328,
       "with_letterboxd_url": 0,
-      "with_episode_date": 346
+      "with_episode_date": 347
     },
     "issues": [
       {
@@ -7633,29 +7716,34 @@
         "type": "missing_transcript",
         "guest": "Sofia Coppola & Marc Jacobs",
         "video_id": "qLH-ZyrEBn8"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "John Slattery",
+        "video_id": "B_Rhewt6f1E"
       }
     ]
   },
   "picks": {
     "stats": {
-      "total": 2953,
-      "with_quote": 2810,
-      "with_timestamp": 2812,
-      "with_youtube_url": 2793,
-      "with_catalog_spine": 2530,
-      "confidence_high": 2767,
+      "total": 2967,
+      "with_quote": 2824,
+      "with_timestamp": 2826,
+      "with_youtube_url": 2807,
+      "with_catalog_spine": 2539,
+      "confidence_high": 2781,
       "confidence_medium": 41,
       "confidence_low": 1,
       "confidence_none": 144,
-      "guests_represented": 353,
-      "unique_films": 990
+      "guests_represented": 355,
+      "unique_films": 1004
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 2955,
-      "with_catalog_spine": 2550,
+      "total": 2969,
+      "with_catalog_spine": 2559,
       "match_methods": {
         "criterion_url": 2497,
         "fuzzy_83": 6,
@@ -7675,7 +7763,7 @@
         "fuzzy_78": 1,
         "fuzzy_79": 1,
         "manual": 1,
-        "none": 20
+        "none": 34
       },
       "guests": {
         "laura-dern": 21,
@@ -8030,10 +8118,12 @@
         "jim-jarmusch": 8,
         "sergei-loznitsa": 7,
         "cary-elwes": 5,
-        "sofia-coppola-marc-jacobs": 20
+        "sofia-coppola-marc-jacobs": 20,
+        "john-slattery": 5,
+        "kim-morgan": 9
       },
-      "unique_guests": 353,
-      "catalog_match_rate_pct": 86.3
+      "unique_guests": 355,
+      "catalog_match_rate_pct": 86.2
     },
     "issues": []
   },
@@ -14034,6 +14124,40 @@
       "enriched_picks": 20,
       "with_quote": 20,
       "confidence_high": 20,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "John Slattery",
+      "slug": "john-slattery",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 5,
+      "catalog_matched": 0,
+      "catalog_match_rate_pct": 0.0,
+      "enriched_picks": 5,
+      "with_quote": 5,
+      "confidence_high": 5,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Kim Morgan",
+      "slug": "kim-morgan",
+      "profession": "writer",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 9,
+      "catalog_matched": 9,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 9,
+      "with_quote": 9,
+      "confidence_high": 9,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,

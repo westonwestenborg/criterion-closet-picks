@@ -38976,14 +38976,14 @@
     "spine_number": 575,
     "title": "The Killing (with Killer’s Kiss)",
     "director": "Gary Templeton",
-    "year": null,
+    "year": 1956,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/27751-the-killing",
     "film_id": "the-killing-with-killers-kiss",
-    "imdb_id": "tt0276878",
-    "tmdb_id": 75058,
+    "imdb_id": "tt0049406",
+    "tmdb_id": 247,
     "genres": [],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/09b4b650ba3c7dd2bd35077502c96bf6/Vlq14mj2f7tyWxTjHSUgAV3VN6upwP_large.jpg",
     "credits": {
       "directors": [
         {
@@ -39040,7 +39040,8 @@
           "character": "Janitor"
         }
       ]
-    }
+    },
+    "poster_source": "criterion"
   },
   {
     "spine_number": 576,
@@ -95875,7 +95876,7 @@
       "Drama",
       "Music"
     ],
-    "poster_url": "https://image.tmdb.org/t/p/w185/3GTmkUpCb1uL7psLYqAHyIyld51.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/62bbfbf0c2233d9caee286285f4af79e/2N5DrBiNrrT1TfNAQDgCxLZDGADWpG_large.jpg",
     "credits": {
       "directors": [
         {
@@ -95948,7 +95949,7 @@
         }
       ]
     },
-    "poster_source": "tmdb"
+    "poster_source": "criterion"
   },
   {
     "spine_number": 1269,
@@ -141880,6 +141881,181 @@
           "name": "Barry Corbin",
           "tmdb_id": 12852,
           "character": "Ellis"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": 563,
+    "title": "Something Wild",
+    "director": "Jack Garfein",
+    "year": 1961,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/28777-something-wild",
+    "film_id": "something-wild",
+    "imdb_id": "tt0055464",
+    "tmdb_id": 82944,
+    "genres": [
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/j6j4LQKevC8YPBowUxrPbMAGJIg.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Jack Garfein",
+          "tmdb_id": 589089
+        }
+      ],
+      "writers": [
+        {
+          "name": "Jack Garfein",
+          "tmdb_id": 589089
+        },
+        {
+          "name": "Alex Karmel",
+          "tmdb_id": 1546972
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Eugen Schüfftan",
+          "tmdb_id": 1758
+        }
+      ],
+      "editors": [
+        {
+          "name": "Carl Lerner",
+          "tmdb_id": 5262
+        }
+      ],
+      "cast": [
+        {
+          "name": "Carroll Baker",
+          "tmdb_id": 14701,
+          "character": "Mary Ann Robinson"
+        },
+        {
+          "name": "Ralph Meeker",
+          "tmdb_id": 14562,
+          "character": "Mike"
+        },
+        {
+          "name": "Mildred Dunnock",
+          "tmdb_id": 68642,
+          "character": "Mrs. Gates"
+        },
+        {
+          "name": "Jean Stapleton",
+          "tmdb_id": 28933,
+          "character": "Shirley Johnson"
+        },
+        {
+          "name": "Martin Kosleck",
+          "tmdb_id": 29142,
+          "character": "Landlord"
+        },
+        {
+          "name": "Charles Watts",
+          "tmdb_id": 54683,
+          "character": "Warren Gates"
+        },
+        {
+          "name": "Clifton James",
+          "tmdb_id": 10224,
+          "character": "Detective Bogart"
+        },
+        {
+          "name": "George L. Smith",
+          "tmdb_id": 936087,
+          "character": "Store Manager"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": 575,
+    "title": "The Killing",
+    "director": "Stanley Kubrick",
+    "year": 1956,
+    "country": "",
+    "criterion_url": "",
+    "film_id": "the-killing",
+    "imdb_id": "tt0049406",
+    "tmdb_id": 247,
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/A6VzUPcADZGYdGHlVdWvpMNDF5d.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Stanley Kubrick",
+          "tmdb_id": 240
+        }
+      ],
+      "writers": [
+        {
+          "name": "Stanley Kubrick",
+          "tmdb_id": 240
+        },
+        {
+          "name": "Jim Thompson",
+          "tmdb_id": 3335
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Lucien Ballard",
+          "tmdb_id": 3351
+        }
+      ],
+      "editors": [
+        {
+          "name": "Betty Steinberg",
+          "tmdb_id": 3352
+        }
+      ],
+      "cast": [
+        {
+          "name": "Sterling Hayden",
+          "tmdb_id": 3088,
+          "character": "Johnny Clay"
+        },
+        {
+          "name": "Coleen Gray",
+          "tmdb_id": 3336,
+          "character": "Fay"
+        },
+        {
+          "name": "Vince Edwards",
+          "tmdb_id": 3337,
+          "character": "Val Cannon"
+        },
+        {
+          "name": "Jay C. Flippen",
+          "tmdb_id": 3338,
+          "character": "Marvin Unger"
+        },
+        {
+          "name": "Ted de Corsia",
+          "tmdb_id": 2097,
+          "character": "Randy Kennan"
+        },
+        {
+          "name": "Marie Windsor",
+          "tmdb_id": 3340,
+          "character": "Sherry Peatty"
+        },
+        {
+          "name": "Elisha Cook Jr.",
+          "tmdb_id": 3339,
+          "character": "George Peatty"
+        },
+        {
+          "name": "Joe Sawyer",
+          "tmdb_id": 3341,
+          "character": "Mike O'Reilly"
         }
       ]
     }

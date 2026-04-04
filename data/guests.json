@@ -4707,7 +4707,8 @@
         "visit_index": 1,
         "criterion_page_url": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
         "youtube_video_id": "qLH-ZyrEBn8",
-        "youtube_video_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8"
+        "youtube_video_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8",
+        "episode_date": "2026-03-27"
       }
     ],
     "pick_count": 20,
@@ -4729,7 +4730,8 @@
         "visit_index": 1,
         "criterion_page_url": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
         "youtube_video_id": "B_Rhewt6f1E",
-        "youtube_video_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E"
+        "youtube_video_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E",
+        "episode_date": "2026-03-30"
       }
     ],
     "pick_count": 5,
@@ -4738,5 +4740,18 @@
     "tmdb_person_id": null,
     "photo_url": "https://image.tmdb.org/t/p/w185/tm7g84OWD5gQRoyfG4hduBphP1j.jpg",
     "profession": "actor"
+  },
+  {
+    "name": "Kim Morgan",
+    "slug": "kim-morgan",
+    "profession": "writer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/fSDOE62LNQ7UQu4WpsCzHxSytx9.jpg",
+    "youtube_video_id": "_VIKYAIu23o",
+    "youtube_video_url": "https://www.youtube.com/watch?v=_VIKYAIu23o",
+    "vimeo_video_id": null,
+    "episode_date": "2026-04-03",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
+    "pick_count": 9
   }
 ]

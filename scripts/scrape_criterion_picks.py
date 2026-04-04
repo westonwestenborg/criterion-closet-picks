@@ -977,10 +977,10 @@ def main():
     # Step 1: Scrape the index to discover all collections
     collections = scrape_index(scraper)
     if not collections:
-        log("ERROR: No collections found on Criterion index page")
-        sys.exit(1)
-
-    log(f"Discovered {len(collections)} collections")
+        log("WARNING: No collections found on Criterion index page, using VISIT_CRITERION_URLS only")
+        collections = []
+    else:
+        log(f"Discovered {len(collections)} collections")
 
     # Inject any VISIT_CRITERION_URLS not discovered from the index
     discovered_urls = {c["collection_url"] for c in collections}

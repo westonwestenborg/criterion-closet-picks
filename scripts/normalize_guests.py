@@ -103,6 +103,7 @@ KNOWN_VIDEO_IDS = {
     "cary-elwes": {"youtube_video_id": "mIugin2XpV4"},
     "sofia-coppola-marc-jacobs": {"youtube_video_id": "qLH-ZyrEBn8"},
     "john-slattery": {"youtube_video_id": "B_Rhewt6f1E"},
+    "kim-morgan": {"youtube_video_id": "_VIKYAIu23o"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -140,6 +141,7 @@ KNOWN_CRITERION_URLS = {
     "cary-elwes": "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
     "sofia-coppola-marc-jacobs": "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
     "john-slattery": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
+    "kim-morgan": "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
 }
 
 # Name cleanup
