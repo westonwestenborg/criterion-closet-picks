@@ -274,6 +274,9 @@ VISIT_CRITERION_URLS = {
     "kim-morgan": [
         "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
     ],
+    "jamie-demetriou": [
+        "https://www.criterion.com/shop/collection/947-jamie-demetriou-s-closet-picks",
+    ],
 }
 
 

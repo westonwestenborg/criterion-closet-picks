@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-03T17:09:40",
+  "generated_at": "2026-04-06T14:16:18",
   "catalog": {
     "stats": {
       "total": 1810,
       "with_tmdb_id": 1698,
-      "with_poster": 1693,
+      "with_poster": 1694,
       "with_imdb_id": 1639,
       "with_genres": 1541,
-      "with_year": 1644,
+      "with_year": 1645,
       "with_director": 1688,
-      "poster_source_criterion": 915,
-      "poster_source_tmdb": 782,
-      "poster_source_none": 113,
+      "poster_source_criterion": 917,
+      "poster_source_tmdb": 781,
+      "poster_source_none": 112,
       "duplicate_spines": [
         null,
         null,
@@ -7604,11 +7604,11 @@
   },
   "guests": {
     "stats": {
-      "total": 355,
-      "with_youtube_video": 349,
+      "total": 356,
+      "with_youtube_video": 350,
       "with_transcript": 332,
-      "with_profession": 345,
-      "with_photo": 328,
+      "with_profession": 346,
+      "with_photo": 329,
       "with_letterboxd_url": 0,
       "with_episode_date": 347
     },
@@ -7721,31 +7721,36 @@
         "type": "missing_transcript",
         "guest": "John Slattery",
         "video_id": "B_Rhewt6f1E"
+      },
+      {
+        "type": "missing_transcript",
+        "guest": "Jamie Demetriou",
+        "video_id": "W5hLFhqn1FM"
       }
     ]
   },
   "picks": {
     "stats": {
-      "total": 2967,
-      "with_quote": 2824,
-      "with_timestamp": 2826,
-      "with_youtube_url": 2807,
-      "with_catalog_spine": 2539,
-      "confidence_high": 2781,
+      "total": 2974,
+      "with_quote": 2831,
+      "with_timestamp": 2833,
+      "with_youtube_url": 2814,
+      "with_catalog_spine": 2546,
+      "confidence_high": 2788,
       "confidence_medium": 41,
       "confidence_low": 1,
       "confidence_none": 144,
-      "guests_represented": 355,
+      "guests_represented": 356,
       "unique_films": 1004
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 2969,
-      "with_catalog_spine": 2559,
+      "total": 2976,
+      "with_catalog_spine": 2566,
       "match_methods": {
-        "criterion_url": 2497,
+        "criterion_url": 2504,
         "fuzzy_83": 6,
         "exact": 353,
         "fuzzy_100": 16,
@@ -8120,9 +8125,10 @@
         "cary-elwes": 5,
         "sofia-coppola-marc-jacobs": 20,
         "john-slattery": 5,
-        "kim-morgan": 9
+        "kim-morgan": 9,
+        "jamie-demetriou": 7
       },
-      "unique_guests": 355,
+      "unique_guests": 356,
       "catalog_match_rate_pct": 86.2
     },
     "issues": []
@@ -14158,6 +14164,23 @@
       "enriched_picks": 9,
       "with_quote": 9,
       "confidence_high": 9,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Jamie Demetriou",
+      "slug": "jamie-demetriou",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": false,
+      "raw_picks": 7,
+      "catalog_matched": 7,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 7,
+      "with_quote": 7,
+      "confidence_high": 7,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,

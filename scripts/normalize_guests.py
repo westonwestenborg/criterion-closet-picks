@@ -104,6 +104,7 @@ KNOWN_VIDEO_IDS = {
     "sofia-coppola-marc-jacobs": {"youtube_video_id": "qLH-ZyrEBn8"},
     "john-slattery": {"youtube_video_id": "B_Rhewt6f1E"},
     "kim-morgan": {"youtube_video_id": "_VIKYAIu23o"},
+    "jamie-demetriou": {"youtube_video_id": "W5hLFhqn1FM"},
 }
 
 # Known Criterion page URLs for guests missing them
