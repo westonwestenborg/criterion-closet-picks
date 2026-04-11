@@ -56491,82 +56491,73 @@
   },
   {
     "spine_number": 786,
-    "title": "Don't Look Back",
-    "director": "Kim Young-nam",
-    "year": 2006,
+    "title": "Dont Look Back",
+    "year": 1967,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/28655-dont-look-back",
     "film_id": "dont-look-back",
-    "imdb_id": "tt0835823",
-    "tmdb_id": 381860,
-    "genres": [
-      "Drama"
-    ],
-    "poster_url": "https://s3.amazonaws.com/criterion-production/films/520ccec1451bbeade3175c32ff46b736/SgNPHBjYshUm7a8TzlMLbbK0525KTN_original.jpg",
+    "tmdb_id": 135,
+    "poster_source": "criterion",
+    "director": "D. A. Pennebaker",
+    "imdb_id": "tt0061589",
     "credits": {
       "directors": [
         {
-          "name": "Kim Young-nam",
-          "tmdb_id": 119530
+          "name": "D. A. Pennebaker",
+          "tmdb_id": 21113
         }
       ],
       "writers": [
         {
-          "name": "Kim Young-nam",
-          "tmdb_id": 119530
+          "name": "D. A. Pennebaker",
+          "tmdb_id": 21113
         }
       ],
-      "cinematographers": [
-        {
-          "name": "Lee Chang-jae",
-          "tmdb_id": 2313289
-        }
-      ],
+      "cinematographers": [],
       "editors": [],
       "cast": [
         {
-          "name": "Kim Tae-woo",
-          "tmdb_id": 25003,
-          "character": "Sgt. Kim In-Ho"
+          "name": "Bob Dylan",
+          "tmdb_id": 1487,
+          "character": "Self"
         },
         {
-          "name": "Kim Hye-na",
-          "tmdb_id": 939144,
-          "character": "Jung-Hee"
+          "name": "Albert Grossman",
+          "tmdb_id": 1488,
+          "character": "Self"
         },
         {
-          "name": "Lee Sang-woo",
-          "tmdb_id": 1254391,
-          "character": "Keun-Woo"
+          "name": "Bob Neuwirth",
+          "tmdb_id": 1489,
+          "character": "Self"
         },
         {
-          "name": "Kim Nam-gil",
-          "tmdb_id": 110388,
-          "character": "Seok-Woo"
+          "name": "Joan Baez",
+          "tmdb_id": 1490,
+          "character": "Self"
         },
         {
-          "name": "Baek Jeong-rim",
-          "tmdb_id": 234591,
-          "character": "Ji-eun"
+          "name": "Alan Price",
+          "tmdb_id": 1491,
+          "character": "Self"
         },
         {
-          "name": "Yang Eun-yong",
-          "tmdb_id": 554025,
-          "character": "woman wearing pink (uncredited)"
+          "name": "Tito Burns",
+          "tmdb_id": 1492,
+          "character": "Self"
         },
         {
-          "name": "Min Young",
-          "tmdb_id": 1684823,
-          "character": "Jung-hee's friend (uncredited)"
+          "name": "Donovan",
+          "tmdb_id": 1493,
+          "character": "Self"
         },
         {
-          "name": "Jeong In-gi",
-          "tmdb_id": 240082,
-          "character": "Adulterer (uncredited)"
+          "name": "Derroll Adams",
+          "tmdb_id": 1494,
+          "character": "Self"
         }
       ]
-    },
-    "poster_source": "criterion"
+    }
   },
   {
     "spine_number": 787,
@@ -92976,10 +92967,60 @@
     "country": "",
     "criterion_url": "",
     "film_id": "teen-apocalypse-trilogy-totally-fed-up-the-doom-generation-nowhere",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": null
+    "imdb_id": "tt37529616",
+    "tmdb_id": 1664448,
+    "genres": [
+      "Documentary"
+    ],
+    "poster_url": null,
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Gregg Araki",
+          "tmdb_id": 19224,
+          "character": "Self"
+        },
+        {
+          "name": "Andrea Sperling",
+          "tmdb_id": 22115,
+          "character": "Self"
+        },
+        {
+          "name": "James Duval",
+          "tmdb_id": 1582,
+          "character": "Self"
+        },
+        {
+          "name": "Patti Podesta",
+          "tmdb_id": 560,
+          "character": "Self"
+        },
+        {
+          "name": "Jim Fealy",
+          "tmdb_id": 113827,
+          "character": "Self"
+        },
+        {
+          "name": "Sara Jane Slotnick",
+          "tmdb_id": 1612793,
+          "character": "Self"
+        },
+        {
+          "name": "Cathy Cooper",
+          "tmdb_id": 2311843,
+          "character": "Self"
+        },
+        {
+          "name": "Jason Rail",
+          "tmdb_id": 2188194,
+          "character": "Self"
+        }
+      ]
+    }
   },
   {
     "spine_number": 1234,
@@ -95868,7 +95909,7 @@
     "director": "François Girard",
     "year": 1993,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/27915-thirty-two-short-films-about-glenn-gould",
     "film_id": "thirty-two-short-films-about-glenn-gould",
     "imdb_id": "tt0108328",
     "tmdb_id": 20967,

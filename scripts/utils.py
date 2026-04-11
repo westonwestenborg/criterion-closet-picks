@@ -277,6 +277,9 @@ VISIT_CRITERION_URLS = {
     "jamie-demetriou": [
         "https://www.criterion.com/shop/collection/947-jamie-demetriou-s-closet-picks",
     ],
+    "steven-knight": [
+        "https://www.criterion.com/shop/collection/948-steven-knights-closet-picks",
+    ],
 }
 
 

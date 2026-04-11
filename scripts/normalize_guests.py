@@ -105,6 +105,7 @@ KNOWN_VIDEO_IDS = {
     "john-slattery": {"youtube_video_id": "B_Rhewt6f1E"},
     "kim-morgan": {"youtube_video_id": "_VIKYAIu23o"},
     "jamie-demetriou": {"youtube_video_id": "W5hLFhqn1FM"},
+    "steven-knight": {"youtube_video_id": "2_ITjg3vrEU"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -154,6 +155,7 @@ NAME_FIXES = {
     "Watch& & shop": "Jeremy Pope",  # Garbled overlay text
     "Claire Denis'": "Claire Denis",  # Trailing apostrophe from URL extraction
     "Five Comics'": "Five Comics",  # Trailing apostrophe from URL extraction
+    "Steven Knights'": "Steven Knight",  # Possessive artifact from URL extraction
 }
 
 # Import multi-visit URLs from shared config
