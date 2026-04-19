@@ -4779,5 +4779,31 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/948-steven-knights-closet-picks",
     "pick_count": 9
+  },
+  {
+    "name": "Sophy Romvari",
+    "slug": "sophy-romvari",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/JfwPV9H8dnMb7cVF57GK6APV9A.jpg",
+    "youtube_video_id": "ziMJzKbYF4g",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g",
+    "vimeo_video_id": null,
+    "episode_date": "2026-04-17",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
+    "pick_count": 5
+  },
+  {
+    "name": "Jack Harlow",
+    "slug": "jack-harlow",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/kwyfajrPMpQYa9qBBZo3uK1LjAT.jpg",
+    "youtube_video_id": null,
+    "youtube_video_url": null,
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/949-jack-harlow-s-closet-picks",
+    "pick_count": 10
   }
 ]

@@ -280,6 +280,9 @@ VISIT_CRITERION_URLS = {
     "steven-knight": [
         "https://www.criterion.com/shop/collection/948-steven-knights-closet-picks",
     ],
+    "sophy-romvari": [
+        "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
+    ],
 }
 
 
