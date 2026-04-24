@@ -286,6 +286,9 @@ VISIT_CRITERION_URLS = {
     "elisabeth-moss": [
         "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
     ],
+    "jon-hamm": [
+        "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
+    ],
 }
 
 

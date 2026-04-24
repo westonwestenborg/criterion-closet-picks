@@ -142100,5 +142100,90 @@
         }
       ]
     }
+  },
+  {
+    "spine_number": null,
+    "title": "How to Get Ahead in Advertising",
+    "director": "Bruce Robinson",
+    "year": 1989,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/660-how-to-get-ahead-in-advertising",
+    "film_id": "how-to-get-ahead-in-advertising",
+    "imdb_id": "tt0097531",
+    "tmdb_id": 14776,
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Drama"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/8T1UacG5YV063PDbaHH2RaqA6Wc.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Bruce Robinson",
+          "tmdb_id": 8966
+        }
+      ],
+      "writers": [
+        {
+          "name": "Bruce Robinson",
+          "tmdb_id": 8966
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Peter Hannan",
+          "tmdb_id": 57699
+        }
+      ],
+      "editors": [
+        {
+          "name": "Alan Strachan",
+          "tmdb_id": 24257
+        }
+      ],
+      "cast": [
+        {
+          "name": "Richard E. Grant",
+          "tmdb_id": 20766,
+          "character": "Denis Dimbleby Bagley"
+        },
+        {
+          "name": "Rachel Ward",
+          "tmdb_id": 36042,
+          "character": "Julia Bagley"
+        },
+        {
+          "name": "Richard Wilson",
+          "tmdb_id": 47874,
+          "character": "John Bristol"
+        },
+        {
+          "name": "Jacqueline Tong",
+          "tmdb_id": 219498,
+          "character": "Penny Wheelstock"
+        },
+        {
+          "name": "Susan Wooldridge",
+          "tmdb_id": 1198828,
+          "character": "Monica"
+        },
+        {
+          "name": "John Shrapnel",
+          "tmdb_id": 940,
+          "character": "Psychiatrist"
+        },
+        {
+          "name": "Hugh Armstrong",
+          "tmdb_id": 33106,
+          "character": "Harry Wax"
+        },
+        {
+          "name": "Mick Ford",
+          "tmdb_id": 93847,
+          "character": "Richard"
+        }
+      ]
+    }
   }
 ]
