@@ -86743,7 +86743,7 @@
     "director": "Frank Capra",
     "year": 1944,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/29005-arsenic-and-old-lace",
     "film_id": "arsenic-and-old-lace",
     "imdb_id": "tt0036613",
     "tmdb_id": 212,
@@ -92685,7 +92685,7 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2060-1287910e39269374b5a3d51bd6169bef/4lANA89xq2vrb5t1Uv2VjaRZpouYyh_large.jpg",
     "is_box_set": true
   },
   {
@@ -135106,7 +135106,7 @@
     "country": "",
     "criterion_url": "",
     "film_id": "ulysse",
-    "imdb_id": null,
+    "imdb_id": "tt42007282",
     "tmdb_id": 1383287,
     "genres": [
       "Drama"
@@ -139930,7 +139930,7 @@
     "criterion_url": "https://www.criterion.com/boxsets/2363-the-koker-trilogy",
     "film_id": "the-koker-trilogy",
     "imdb_id": null,
-    "tmdb_id": null,
+    "tmdb_id": 1679625,
     "genres": [],
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1947-6cf8d8f140a25cd8f62e087c268b4643/XbFH2LD6d9MtdOVyA3AOMBjMl5QY4V_original.jpg",
     "credits": null,
@@ -141483,7 +141483,7 @@
     "imdb_id": null,
     "tmdb_id": null,
     "genres": [],
-    "poster_url": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2062-3dec234579713afc97637fac6435f122/FTh01r10Eke6ESEc9Qln3Yisc386RY_large.jpg",
     "credits": null,
     "is_box_set": true
   },

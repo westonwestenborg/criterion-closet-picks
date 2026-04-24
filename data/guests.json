@@ -2683,7 +2683,7 @@
     "name": "Roger & James Deakins",
     "slug": "roger-james-deakins",
     "profession": "other",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/6sZGGtq7RHt8Pg6ynUMrPJPuTlj.jpg",
     "youtube_video_id": "juhiRVORJ8o",
     "youtube_video_url": "https://www.youtube.com/watch?v=juhiRVORJ8o",
     "vimeo_video_id": null,
@@ -4805,5 +4805,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/949-jack-harlow-s-closet-picks",
     "pick_count": 10
+  },
+  {
+    "name": "Elisabeth Moss",
+    "slug": "elisabeth-moss",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/vZDe22EtLtcHvPr28l4ZM0b7qjG.jpg",
+    "youtube_video_id": "RgGuFOid5PE",
+    "youtube_video_url": "https://www.youtube.com/watch?v=RgGuFOid5PE",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
+    "pick_count": 8
   }
 ]

@@ -6784,7 +6784,7 @@
     "box_set_film_titles": [
       "Martin Scorsese’s World Cinema Project No. 2"
     ],
-    "source": "letterboxd",
+    "source": "criterion",
     "film_slug": "martin-scorsese-s-world-cinema-project-no-2",
     "visit_index": 1
   },
@@ -9294,7 +9294,7 @@
       "Touki bouki",
       "Trances"
     ],
-    "source": "letterboxd",
+    "source": "criterion",
     "film_slug": "martin-scorsese-s-world-cinema-project-no-1",
     "visit_index": 1
   },
@@ -34252,7 +34252,7 @@
     "box_set_film_titles": [
       "Martin Scorsese’s World Cinema Project No. 4"
     ],
-    "source": "letterboxd",
+    "source": "criterion",
     "film_slug": "martin-scorsese-s-world-cinema-project-no-4",
     "visit_index": 1
   },
@@ -34653,7 +34653,7 @@
     "box_set_film_titles": [
       "Martin Scorsese’s World Cinema Project No. 2"
     ],
-    "source": "letterboxd",
+    "source": "criterion",
     "film_slug": "martin-scorsese-s-world-cinema-project-no-2",
     "visit_index": 1
   },
@@ -59094,13 +59094,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/248-the-battle-of-algiers",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Well, of course, one of the first movies I saw on the screen in London when I was living on my own was Battle of Algiers, Gillo Pontecorvo. Basically takes us through how Algeria found its independence through this gritty, incredible movie. Once you've seen it, you're never the same again. No one's ever made anything like it. It's a classic, so we're keeping that, thank you.",
     "start_timestamp": 11,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=mIugin2XpV4&t=11",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "cary-elwes",
@@ -59114,13 +59114,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28039-roma",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "quote": "One of my favorites, Fellini, Roma. Why do I love Fellini? Fellini, all his films are like Dreams. He used to write down his Dreams as soon as he woke up in the morning because he wanted his films to feel, have that ethereal feel, and he said movie making and movies are the closest things we have to dreaming. And so all of his films are like fever Dreams and I just love this. Roma is incredible. Every extra is a star in this movie. It's fabulous.",
     "start_timestamp": 42,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=mIugin2XpV4&t=42",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "cary-elwes",
@@ -59134,13 +59134,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28561-all-that-jazz",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Okay, Bob Fosse, All That Jazz. This is one of the great movies of all time. This guy only made a handful of films and they're all just brilliant and also kind of like a fever dream. Roy Scheider is going through a terrible personal life and he's trying to put on a musical at the same time and yeah, amazing film, beautifully shot.",
     "start_timestamp": 74,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=mIugin2XpV4&t=74",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "cary-elwes",
@@ -59154,13 +59154,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/1285-the-hit",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "The Hit. Yes, Stephen Frears. Oh my god. This is one of my favorite, favorite movies. Every time it's on, I dare you to try and flip the channel if it's on TV. This is a beautiful film and it's about a guy who's on the run. He's in the witness protection program, Terence Stamp. He's sent to Spain and given a new identity and then he has to deal with the fact that John Hurt and Tim Roth have been sent to kill him. And it's fabulous. It's a great look at the British Underworld and gang life.",
     "start_timestamp": 100,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=mIugin2XpV4&t=100",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "cary-elwes",
@@ -59174,13 +59174,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28173-odd-man-out",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Aha, okay. One of the films that defined me growing up. First time I saw Carol Reed directing. All of his films are brilliant, but Odd Man Out is one of my favorites. I mean, James Mason, what a beautiful, beautiful film. This guy also on the run from the law, Belfast. Part of a robbery that goes wrong and he finds himself on the street, ends up with Robert Newton. God, this film is a film noir, it's just beautiful. And Carol Reed was just one of my favorites, just an extraordinary filmmaker.",
     "start_timestamp": 139,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=mIugin2XpV4&t=139",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59188,12 +59188,12 @@
     "film_title": "Grey Gardens",
     "criterion_film_url": "https://www.criterion.com/films/664-grey-gardens",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 1,
     "quote": "I'll start with this one, Grey Gardens, always a favorite.",
     "start_timestamp": 16,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=16"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=16",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59201,12 +59201,12 @@
     "film_title": "Loves of a Blonde",
     "criterion_film_url": "https://www.criterion.com/films/246-loves-of-a-blonde",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 2,
     "quote": "Oh, Loves of a Blonde, have you ever seen that? It's really cool. It's an early Miloš Forman movie. Oh really? Yeah, maybe you need to take that and see it. Great, I'd love to see that one. It's great.",
     "start_timestamp": 19,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=19"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=19",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59214,12 +59214,12 @@
     "film_title": "All That Jazz",
     "criterion_film_url": "https://www.criterion.com/films/28561-all-that-jazz",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 3,
     "quote": "I have to have All That Jazz. I've seen All That Jazz like probably 20 times.",
     "start_timestamp": 32,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=32"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=32",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59227,12 +59227,12 @@
     "film_title": "The Bitter Tears of Petra von Kant",
     "criterion_film_url": "https://www.criterion.com/films/27953-the-bitter-tears-of-petra-von-kant",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 4,
     "quote": "And The Bitter Tears of Petra von Kant, you know how much I love this movie. Most incredible visuals. Every frame is like a fashion image. It's just like it's so incredible. I mean I've seen Petra von Kant like at least 20 times.",
     "start_timestamp": 33,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=33"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=33",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59240,12 +59240,12 @@
     "film_title": "Paris Is Burning",
     "criterion_film_url": "https://www.criterion.com/films/29647-paris-is-burning",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 5,
     "quote": "Paris Is Burning. Oh I love that movie. So good. I've watched it a million times. I know, I want my own Criterion. I know, because I feel cozy and you need to see that.",
     "start_timestamp": 45,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=45"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=45",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59253,12 +59253,12 @@
     "film_title": "Female Trouble",
     "criterion_film_url": "https://www.criterion.com/films/28704-female-trouble",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 6,
     "quote": "Amazing, you picked Female Trouble. Yeah, I did. Again, a classic in a way.",
     "start_timestamp": 63,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=63"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=63",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59266,12 +59266,12 @@
     "film_title": "Klute",
     "criterion_film_url": "https://www.criterion.com/films/28708-klute",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 7,
     "quote": "Oh, and close by is Klute, another classic. Another extraordinary fashion movie.",
     "start_timestamp": 68,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=68"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=68",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59279,12 +59279,12 @@
     "film_title": "The Virgin Suicides",
     "criterion_film_url": "https://www.criterion.com/films/29336-the-virgin-suicides",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 8,
     "quote": "Oh look what I found, another all-time favorite, The Virgin Suicides. Oh, I'm so proud to have it. I'm so proud to have a Criterion. Yeah.",
     "start_timestamp": 76,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=76"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=76",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59292,12 +59292,12 @@
     "film_title": "After Hours",
     "criterion_film_url": "https://www.criterion.com/films/29632-after-hours",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 9,
     "quote": "Here's your After Hours, I think that was something you were interested in, right? Oh yeah, I love this movie but I haven't seen it in a long time so I'm really excited to revisit it. New York and big laughs in the 80s.",
     "start_timestamp": 86,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=86"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=86",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59305,14 +59305,14 @@
     "film_title": "Summer with Monika",
     "criterion_film_url": "https://www.criterion.com/films/27638-summer-with-monika",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 10,
     "quote": "It's a Bergman movie, Summer with Monika, that it was just on the Criterion Channel one night and I thought oh we'll just put it on to like fall asleep to, and then I like couldn't take my eyes off it. You just got this Love Affair with this bad girl and I don't know, it was really, I really loved it.",
     "start_timestamp": 99,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=99",
     "is_box_set": true,
-    "box_set_name": "Ingmar Bergman's Cinema"
+    "box_set_name": "Ingmar Bergman's Cinema",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59320,12 +59320,12 @@
     "film_title": "I Knew Her Well",
     "criterion_film_url": "https://www.criterion.com/films/28600-i-knew-her-well",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 11,
     "quote": "I love this movie, I Knew Her Well. It's Stefania Sandrelli at her most beautiful. It's really good. It's like a young kind of model girl and it's the way it looks, it's so stylish. It's gonna... It's really inspiring. Yes, I love that movie if you haven't seen it.",
     "start_timestamp": 117,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=117"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=117",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59333,12 +59333,12 @@
     "film_title": "The Apu Trilogy",
     "criterion_film_url": "https://www.criterion.com/boxsets/1145-the-apu-trilogy",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 12,
     "quote": "Oh, yeah this one I love these, The Apu Trilogy. I think I've seen the first one and the last one. It's the same character through his life and he starts as a little boy and then him as an adult. You want to take it? Yes.",
     "start_timestamp": 135,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=135"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=135",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59346,12 +59346,12 @@
     "film_title": "Belle de jour",
     "criterion_film_url": "https://www.criterion.com/films/27949-belle-de-jour",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 13,
     "quote": "Oh there, Belle de jour. Oh yeah. We have a clip in our back from that for her style. There's yeah, Yves Saint Laurent, beautiful dressing of Catherine Deneuve.",
     "start_timestamp": 151,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=151"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=151",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59359,12 +59359,12 @@
     "film_title": "Flow",
     "criterion_film_url": "https://www.criterion.com/films/34685-flow",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 14,
     "quote": "And this one which I love, Flow. You have to see it. It was like kind of the exception in my list because all the other ones were fashion inspiration, but this one just is the most touching. I just I can't even tell you how much I love this movie. Just so beautiful and sweet. Each of the animals is just like they express themselves but they've got the behavior of each of the animals so perfectly like it's just it's just incredible. You feel the character.",
     "start_timestamp": 164,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=164"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=164",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59372,12 +59372,12 @@
     "film_title": "Ryuichi Sakamoto | Opus",
     "criterion_film_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 15,
     "quote": "Oh, this I was excited about. I'm a big fan of Sakamoto who I knew about from Merry Christmas Mr. Lawrence as a teenager. And they have it's his last concert that he filmed at the end of his life, which seems really beautiful. I haven't seen it.",
     "start_timestamp": 194,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=194"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=194",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59385,12 +59385,12 @@
     "film_title": "Gregg Araki's Teen Apocalypse Trilogy",
     "criterion_film_url": "https://www.criterion.com/boxsets/7581-gregg-araki-s-teen-apocalypse-trilogy",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 16,
     "quote": "Did you ever see all of these? It's Totally F***ed Up, Doom Generation, and Nowhere. I've only seen Doom Generation. Should I see the rest of them? Yeah. I thought it was so interesting and cool and strong, wild. And Nowhere was really good. It's funny those are like period movies now. I know, I know. Oh I love the era.",
     "start_timestamp": 211,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=211"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=211",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59398,12 +59398,12 @@
     "film_title": "The Heiress",
     "criterion_film_url": "https://www.criterion.com/films/28986-the-heiress",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 17,
     "quote": "It's Montgomery Clift as a grifter and an innocent heiress, Olivia de Havilland. I thought it's right for a modern day remake. I wonder if you'd be into it. It's the style you won't like the clothes because it's like 1860s, old-timey. But her Performance is incredible because she goes from really innocent to not in a really cool way. So that's cool just for her Performance.",
     "start_timestamp": 238,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=238"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=238",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59411,12 +59411,12 @@
     "film_title": "Funny Games",
     "criterion_film_url": "https://www.criterion.com/films/28836-funny-games",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 18,
     "quote": "This movie so disturbed me. Oh my god, that movie is so upsetting. It's so disturbing. We're talking about Funny Games. It is terrifying. We're talking about this but don't watch it. Unless you want to be terrified. It just really because I thought that could happen to me, you know like... And it was so and it was it was just relentless. So just dark, bad. Yeah, evil. Yeah, that was terrifying. Yeah, I wish I could erase that from my memory.",
     "start_timestamp": 268,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=268"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=268",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59424,12 +59424,12 @@
     "film_title": "Fast Times at Ridgemont High",
     "criterion_film_url": "https://www.criterion.com/films/30464-fast-times-at-ridgemont-high",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 19,
     "quote": "But on a on a brighter note, Fast Times, Sean Penn as Spicoli, one of the best characters ever. Yeah, ever. It's so cool that you guys have this one.",
     "start_timestamp": 305,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=305"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=305",
+    "visit_index": 1
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59437,12 +59437,12 @@
     "film_title": "The Grifters",
     "criterion_film_url": "https://www.criterion.com/films/30526-the-grifters",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 20,
     "quote": "Oh I love The Grifters, we don't need to take it but... Yeah, it's so good. Anjelica Huston. Oh my god I love her in it. It's so good. So good. I've seen that one many times.",
     "start_timestamp": 332,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=332"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=332",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-slattery",
@@ -59450,12 +59450,12 @@
     "film_title": "Shampoo",
     "criterion_film_url": "https://www.criterion.com/films/28821-shampoo",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 1,
     "quote": "Shampoo, written by Robert Towne and Warren Beatty and directed by Hal Ashby. Robert Towne was on the staff of Mad Men in the last season or two seasons and I got to hang out with him. I asked him how long it took to shoot and he said 75 days, which is, you know, in modern filmmaking, that's a lot of days. At some point they laid over the Nixon Election over the story because Warren wanted this, he knew he had a moment and he knew he could make what he want. I love this movie.",
     "start_timestamp": 8,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=8"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=8",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-slattery",
@@ -59463,12 +59463,12 @@
     "film_title": "No Country for Old Men",
     "criterion_film_url": "https://www.criterion.com/films/29429-no-country-for-old-men",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 2,
     "quote": "Here's a movie, No Country for Old Men, which I think... I worked with Mike Nichols once and he said that every stick of furniture, every piece of clothing, everything you put into the movie should add to the telling of the story. And I feel like this movie does that. Just every single thing about this film I think is just masterfully executed. These guys are at the height of their filmmaking abilities when they made this.",
     "start_timestamp": 77,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=77"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=77",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-slattery",
@@ -59476,12 +59476,12 @@
     "film_title": "The Awful Truth",
     "criterion_film_url": "https://www.criterion.com/films/27904-the-awful-truth",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 3,
     "quote": "This movie here is maybe my favorite screwball comedy, of which I'm a great fan. Leo McCarey and The Awful Truth. Leo McCarey didn't like the original script and rewrote it a bunch and had a piano on set that he would sit at when he wasn't sure what to do. It was the first time that Cary Grant had improvised. It's some of the most inspired comedic acting that I've ever seen. Both of them are great in it.",
     "start_timestamp": 126,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=126"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=126",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-slattery",
@@ -59489,12 +59489,12 @@
     "film_title": "The Hit",
     "criterion_film_url": "https://www.criterion.com/films/1285-the-hit",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 4,
     "quote": "Here's a movie by the great Stephen Frears called The Hit. It starts out small, it's shot in Spain, the production gets bigger and bigger. It's sort of a chase and it's about a hitman who loses nerve and starts to examine his conscience and it's full of amazing performances. There's a scene in it where Tim Roth goes into a bar and gets a couple of beers to take with him and gets made fun of by a bunch of locals. It's a great film, really, really well done.",
     "start_timestamp": 191,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=191"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=191",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-slattery",
@@ -59502,19 +59502,18 @@
     "film_title": "The Friends of Eddie Coyle",
     "criterion_film_url": "https://www.criterion.com/films/1426-the-friends-of-eddie-coyle",
     "source": "criterion",
-    "visit_index": 1,
     "pick_order": 5,
     "quote": "There's a movie that I go back to a lot. I directed a couple movies, one was called God's Pocket and it was inspired by this, The Friends of Eddie Coyle. Peter Yates is a guy who to me is remarkable in his breadth of field. And Mitchum is unbelievable. I come from Boston, so a lot of old Boston is here. There's an entrance that he makes through the... He steps up to the window of a diner and that's the first time you see the reflection in the window of Mitchum. It's a great film.",
     "start_timestamp": 249,
     "extraction_confidence": "high",
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=249"
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=249",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Merrily We Go to Hell",
     "catalog_spine": 1076,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "I’m choosing Merrily We Go to Hell, an incredibly daring film about marriage and the breakdown of a marriage. There’s so much more to say. This is such a complicated movie. And Fredric March and Sylvia Sidney are so incredible in it. Watch all of Dorothy Arzner’s films that you can, because she was such a fascinating woman and filmmaker and very important in the history of cinema.",
     "start_timestamp": 17,
     "extraction_confidence": "high",
@@ -59527,14 +59526,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Something Wild",
     "catalog_spine": 563,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "Something Wild by Jack Garfein. This film really means a lot to me because I became good friends with him and I know this was a very personal film to him, starred his then-wife, Carroll Baker, and it’s a very realistic depiction of the aftermath of rape and the surreal, anxious feelings that follow. Cinematography by Eugen Schüfftan, who did Eyes Without a Face, so there’s all these experimental elements to the film as well.",
     "start_timestamp": 41,
     "extraction_confidence": "high",
@@ -59547,14 +59546,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Leave Her to Heaven",
     "catalog_spine": 1020,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "Ellen. Ellen from Leave Her to Heaven. Farran Smith Nehme and I have talked a lot about the movie. We’re always discussing this film together because we feel, although she does many misdeeds, obviously, in an understatement, we have this feeling that she maybe, perhaps, is an artist herself and she’s not really happy with her husband’s book. However, do not dedicate a book to your wife’s sister. You will have Vincent Price defending you in court after you pass away.",
     "start_timestamp": 77,
     "extraction_confidence": "high",
@@ -59567,14 +59566,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Thirty Two Short Films About Glenn Gould",
     "catalog_spine": 1268,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "Thirty Two Short Films About Glenn Gould. I love movies that aren’t traditional biopics. I love that through the music– There’s a scene in here that I love where he’s at a diner and he’s listening to all the sounds, he’s listening to the people talking, and you can feel the musicality of that, and what Glenn Gould would incorporate, just in regular life, how musical he was, what a genius he was. More people should check out this film, and it’s just a beautiful meditation on Glenn Gould.",
     "start_timestamp": 114,
     "extraction_confidence": "high",
@@ -59587,14 +59586,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Punch-Drunk Love",
     "catalog_spine": 843,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "I love this movie, Punch-Drunk Love. I remember seeing this at a screening and just walking out... Just kind of walking on air. I love that what Paul Thomas Anderson did with Adam Sandler, who, of course, in other work, I believe, showed that he had dramatic chops, and even in his comedy, the anger that he would show, you see it in here and he pulls it out of him, somewhat in a way that Hitchcock pulled out of Jimmy Stewart. It’s such a romantic, beautiful movie.",
     "start_timestamp": 158,
     "extraction_confidence": "high",
@@ -59607,14 +59606,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Kiss Me Deadly",
     "catalog_spine": 568,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "So Kiss Me Deadly by Robert Aldrich. This was made in 1955. It’s a little bit late in the noir cycle. This film was so influential to the French New Wave, and then all the way to Quentin Tarantino with Pulp Fiction, with the suitcase, and Alex Cox’s Repo Man before that. But the movie is just, still to this day, I don’t want to use the word modern. I want to say timeless. If you have not seen the opening sequence of this movie, you have not watched cinema.",
     "start_timestamp": 225,
     "extraction_confidence": "high",
@@ -59627,14 +59626,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "The Killing",
     "catalog_spine": 575,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "So I’m choosing The Killing. This is a seminal Kubrick film, and what I love about it is it moves like clockwork in terms of the heist, but then it ends with that suitcase. And I don’t want to just focus on the suitcase here, but he buys the worst suitcase, I must say. The absurdity of it is almost beautiful. In fact, it is in the way that Sterling Hayden, who’s so perfect in this film, says those great final lines, 'What’s the difference?'",
     "start_timestamp": 298,
     "extraction_confidence": "high",
@@ -59647,14 +59646,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Flesh for Frankenstein",
     "catalog_spine": 27,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "So, Criterion kindly pulled these out for me. I wanted to show these in honor of the great Udo Kier: Flesh for Frankenstein, Blood for Dracula. Two of his greatest performances. I’m very partial to Udo. I adored him. Watch these movies and watch all of Udo Kier’s movies. He made many, and he always left such an impression. There was no one like him. No one like him.",
     "start_timestamp": 345,
     "extraction_confidence": "high",
@@ -59667,14 +59666,14 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "kim-morgan",
     "film_title": "Blood for Dracula",
     "catalog_spine": 28,
     "source": "criterion",
-    "visit_index": 1,
     "quote": "So, Criterion kindly pulled these out for me. I wanted to show these in honor of the great Udo Kier: Flesh for Frankenstein, Blood for Dracula. Two of his greatest performances. I’m very partial to Udo. I adored him. Watch these movies and watch all of Udo Kier’s movies. He made many, and he always left such an impression. There was no one like him. No one like him.",
     "start_timestamp": 345,
     "extraction_confidence": "high",
@@ -59687,7 +59686,8 @@
     "is_box_set": false,
     "box_set_name": null,
     "letterboxd_url": null,
-    "match_method": "transcript_discovery"
+    "match_method": "transcript_discovery",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59701,13 +59701,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29202-secrets-lies",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I'm actually going to start with Secrets & Lies, Mike Leigh. Hello England. This to me just feels like his juiciest work. There's just something in him kind of utilizing naturalism for like really heavy drama. He also just doesn't waste a character, which I think is, in my experience of being an acting person, quite a common pain you feel. I think that guy in his films always is given a proper something to do, which I think is so generous but also like beneficial to the film. I love this on...",
     "start_timestamp": 12,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=12",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59721,13 +59721,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28059-the-celebration",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "The Celebration, Festen. Takes me back to the days where I tried to define myself as being the guy who liked Dogme 95 stuff. I'm still that guy, but I don't define myself by it. I just think that the amount of extra business that goes on when making stuff these days, it's useful to remember that you don't have to and that the kind of obstructions that they created for themselves obviously ended up being like insanely fruitful creatively and the product is actually like soap-style drama.",
     "start_timestamp": 67,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=67",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59741,13 +59741,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28830-the-squid-and-the-whale",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "These I picked because they're three contemporary performances that I just think changed the way I want to act or inspired me to do better. Jeff Daniels in Noah Baumbach's Squid and the Whale is taking a kind of person in the world via Baumbach's incredible script who is seemingly one-dimensional. He just has no ability to introspect. I think it's one of the funniest performances, but it requires so much introspection from the actor to kind of get it over the line.",
     "start_timestamp": 132,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=132",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59761,13 +59761,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34134-anatomy-of-a-fall",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Sandra Hüller in Anatomy of a Fall. I mean this Sandra Hüller that year with Zone of Interest as well just immediately became like, you know, the person that I will see anything in. It feels like a classic from a million years ago already. I just think her dedication felt like a new, it really felt like a new level of naturalism. I just can't fathom how she did what she did in that film.",
     "start_timestamp": 169,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=169",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59781,13 +59781,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27916-punch-drunk-love",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "And Paul Thomas Anderson's Punch-Drunk Love. I think as time passes people are becoming more and more obsessed with Adam Sandler's Performance in this for good reason. On the surface when I think about that film I'm thinking that he's playing the most anxious man in the world, but then when you actually think about it he's the most confident character who's ever existed. Like the things that he's willing to do demonstrate that he has like there's no simplicity.",
     "start_timestamp": 201,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=201",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59801,13 +59801,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/32661-the-worst-person-in-the-world",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Worst Person in the World, a recent classic. Kind of demonstrates that cinema does have a future despite my gut feeling there might not. It's really rewarding to see, you know, I've put a lot of new stuff in here because I do think that it's important, I'm excited to see like where all these directors go and what they do with their stuff and how their work kind of holds cinema up.",
     "start_timestamp": 232,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=232",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "jamie-demetriou",
@@ -59821,13 +59821,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28055-being-john-malkovich",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Oh, lovely stuff. Of course, seen a million times, loved a million times. I'm not sad that this, Being John Malkovich by Spike Jonze and Charlie Kaufman, is going in my bag.",
     "start_timestamp": 256,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=W5hLFhqn1FM&t=256",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59841,13 +59841,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/345-brief-encounter",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Brief Encounter, which is just a classic, David Lean. The performances are just beyond belief and it's very emotional and it's sort of gone in a big circle where there was a time when it was considered to be really old-fashioned, but it's sort of not now.",
     "start_timestamp": 11,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=11",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59861,13 +59861,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/628-le-cercle-rouge",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Le cercle Rouge, I did a version of this in Hong Kong, which is going to come out at some point. Brilliant, brilliant, brilliant. Alain Delon, possibly the best actor maybe, certainly out of Europe and wonderful, wonderful film.",
     "start_timestamp": 28,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=28",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59881,13 +59881,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/860-the-spy-who-came-in-from-the-cold",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "The Spy Who Came in from the Cold is for me, it's about Richard Burton, who was the most remarkable actor, born in Wales, son of a coal miner, fluent in Welsh, drinker, fighter, all of those things. Brilliant actor, his story with Elizabeth Taylor was a movie in itself. And he's the actor I would most have liked to have written for that would have reflected that sort of fire that he had in his soul.",
     "start_timestamp": 46,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=46",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59901,13 +59901,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/1502-paris-texas",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Paris, Texas. One of my daughters when she was three years old became obsessed with Paris, Texas. And if she was, if we needed to get her to sleep or if we needed to, you know, to calm her down or anything, we'd just put Paris, Texas on and she'd just sit there. Not just listen to the music, but just watch it and sort of know what was coming next. There's something hypnotic about it.",
     "start_timestamp": 81,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=81",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59921,13 +59921,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27910-3-10-to-yuma",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "3:10 to Yuma is sort of indicative for me of Westerns. My dad used to take us boys to Westerns, usually John Wayne, but any Western that was on. My dad was a farrier, a blacksmith, he used to shoe horses, he used to take us all out shoeing horses, so we knew about horses and my dad used to love to watch the way they rode because the people who ride horses in Westerns are amongst the best riders in the world. As well as the stories, the horses were quite important to us.",
     "start_timestamp": 102,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=102",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59941,13 +59941,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28979-one-eyed-jacks",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "One-Eyed Jacks, I mean, Marlon Brando so, and Karl Malden in this film, it's one of the strongest performances. For me, this film introduced a sort of modernity to, well, Marlon Brando himself, a modernity to Performance. You didn't quite know if he was in it or not, if he was really in the character or not, but that was because the character he always played was not really in the world sort of thing, in my opinion.",
     "start_timestamp": 131,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=131",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59961,13 +59961,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29079-betty-blue",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Betty Blue, I love, again when I was a kid, me and my brothers, Saturday night on BBC 2 they used to play French films and they did have an effect on me. Watching those films had a real effect on me, not because we were artsy or anything, but there's all this stuff would be going on and then it would suddenly go 'fin' and nothing had been resolved and the plot hadn't really come together. They'd just done a series of scenes and then went 'fin' as if to say, 'I've had enough of this, I'm bored.'",
     "start_timestamp": 164,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=164",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -59981,13 +59981,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28655-dont-look-back",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Dont Look Back, I mean, God, Bob Dylan. When I see this and see his interviews on telly, he looks like a time traveler who is from now who has been taken back in time and he's sort of bewildered by how weird everybody is. He's actually more like us than them is my opinion.",
     "start_timestamp": 206,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=206",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "steven-knight",
@@ -60001,13 +60001,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/32250-citizen-kane",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Citizen Kane hardly needs explanation, it's just so good.",
     "start_timestamp": 229,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=2_ITjg3vrEU&t=229",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sophy-romvari",
@@ -60021,13 +60021,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/510-a-woman-under-the-influence",
     "source": "criterion",
-    "visit_index": 1,
-    "is_box_set": false,
-    "box_set_name": null,
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
     "quote": "I'm going to start with just one of the greatest films ever made, A Woman Under the Influence. It doesn't need to be sold to anybody, but it was definitely not only this film, but all of Cassavetes' films in general were a helpful point of reference in making my first feature. Just in terms of the ethos of filmmaking and independent filmmaking and the way he prioritizes Performance over technical precision. I think especially when you're working with children, it's really helpful.",
     "start_timestamp": 21,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g&t=21",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sophy-romvari",
@@ -60041,13 +60041,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/30705-the-watermelon-woman",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Watermelon Woman. It's one of those films that you watch and you see, oh wow, everyone has been copying this film. Everyone is inspired by this film because it really does use the hybrid form in such an inventive way, in such a seamless way, and the way that she self-inserts as a director but as a performer and brings documentary elements in without it bringing attention to itself. It's just brilliant and it really should be one of those films that every filmmaker has to watch at some point.",
     "start_timestamp": 58,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g&t=58",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sophy-romvari",
@@ -60061,13 +60061,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/33619-not-a-pretty-picture",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Not a Pretty Picture by Martha Coolidge. Made 50 years ago, another film that is extremely, I think, integral to the form of hybrid filmmaking and to personal filmmaking, but is an extremely formally intelligent film. The way that it marries documentary and fiction and it's incredible that a film like this exists. So I'm going to take that one as well.",
     "start_timestamp": 129,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g&t=129",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sophy-romvari",
@@ -60081,13 +60081,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/218-jules-and-jim",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I'm going to take Jules and Jim because I had an interesting moment when I was making my short film Still Processing. My dad sent me all the home video footage that he'd taken of me and my brothers growing up and there's a video of me as a two or three-year-old and he's whistling a tune and I'm dancing to the tune and it sounded familiar to me. So I asked my dad, what is this tune that you're whistling? And it's the song that they sing in Jules and Jim. So it's a special film.",
     "start_timestamp": 217,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g&t=217",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "sophy-romvari",
@@ -60101,12 +60101,172 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29635-girlfriends",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I'm going to take Girlfriends as well. There are few films that show the complexity of friendships between women in a way that I think this film really, really nails. And this point in life where friendships can diverge because of just different paths in life and she does it in such a subtle but also very humanist kind of way where neither character is villainized but is also quite flawed in their own ways and it's rare I think that it's representation of women in friendship.",
     "start_timestamp": 255,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ziMJzKbYF4g&t=255",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Arsenic and Old Lace",
+    "film_year": null,
+    "film_id": "arsenic-and-old-lace",
+    "catalog_spine": 1153,
+    "catalog_title": "Arsenic and Old Lace",
+    "match_method": "exact",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29005-arsenic-and-old-lace",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "Arsenic and Old Lace, Frank Capra, starring Cary Grant. I probably genre-wise romantic comedy or comedy, screwball comedy, things like that, those are my go-tos. And this one I actually haven't seen. And Frank Capra, of course, is one of my favorites, as is Cary Grant. There's no one like him.",
+    "start_timestamp": 23,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=23",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Swing Time",
+    "film_year": null,
+    "film_id": "swing-time",
+    "catalog_spine": 979,
+    "catalog_title": "Swing Time",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29037-swing-time",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "Swing Time. So my kind of introduction to film, one of the first films I remember seeing was Swing Time and Top Hat. Fred Astaire, Ginger Rogers films holds a special place in my heart.",
+    "start_timestamp": 58,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=58",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "The Cameraman",
+    "film_year": null,
+    "film_id": "the-cameraman",
+    "catalog_spine": 1033,
+    "catalog_title": "The Cameraman",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29011-the-cameraman",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "The Cameraman. Another one I have seen, Buster Keaton, but haven't seen in a very long time. This is a just, I mean, obviously classic. I'm probably talking to film buffs here that I don't need to like explain these movies to you guys. You know more than I do, but this for me was definitely one that I watched in my revival House days. I worked at the Silent Movie Theater in LA for a while... It was my opportunity to see a bunch of beautiful silent films like The Cameraman.",
+    "start_timestamp": 68,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=68",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Holiday",
+    "film_year": null,
+    "film_id": "holiday",
+    "catalog_spine": 1009,
+    "catalog_title": "Holiday",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/28829-holiday",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "Holiday. Again, Cary Grant, Katharine Hepburn. Come on, the greatest of all time. I love The Philadelphia Story so much and this is just another classic from George Cukor.",
+    "start_timestamp": 113,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=113",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Sweetie",
+    "film_year": null,
+    "film_id": "sweetie",
+    "catalog_spine": 356,
+    "catalog_title": "Sweetie",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/749-sweetie",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "Sweetie. Jane Campion. And I got the opportunity to work with Jane on Top of the Lake seasons one and two and become friends with her... Don't tell her, but I never saw this movie. I just kind of went with her other films when I wanted to work with her, but this is one I haven't got the opportunity to see, so I'm excited.",
+    "start_timestamp": 128,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=128",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "All About Eve",
+    "film_year": null,
+    "film_id": "all-about-eve",
+    "catalog_spine": 1003,
+    "catalog_title": "All About Eve",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29596-all-about-eve",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "All About Eve. Starring Bette Davis, who was my kind of first idol as an actress. All About Eve is such a great film about theater and about acting and about an actress and the way they knew how to write. You know, like the scripts. They do that now, they do it now, but it is not as frequent as it was then.",
+    "start_timestamp": 163,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=163",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Broadcast News",
+    "film_year": null,
+    "film_id": "broadcast-news",
+    "catalog_spine": 552,
+    "catalog_title": "Broadcast News",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/27535-broadcast-news",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "Broadcast News. I mean, James L. Brooks, just, how do I, I mean, I get chills talking about him... His work and his films are my favorites. So this is obviously one of the best movies ever. Speaking of dialogue and writing, oh my god. And Holly Hunter... I had the opportunity to work with her. She is so nice, so cool, and so funny, and just The Most Beautiful actress.",
+    "start_timestamp": 205,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=205",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "elisabeth-moss",
+    "guest_name": "Elisabeth Moss",
+    "film_title": "Don’t Look Now",
+    "film_year": null,
+    "film_id": "dont-look-now",
+    "catalog_spine": 745,
+    "catalog_title": "Don't Look Now",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/27928-don-t-look-now",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "I have to go with the ultimate in screwball comedies, which is Don't Look Now. I know that I need to watch it. I know that it's really good... But I also know that it's dark and I know why it's dark and I think that it will be something I will just have to buck up and get through and perhaps it's punishment for all of the times that I have made extremely dark material about children and made other people watch it. So this is my, this is karma.",
+    "start_timestamp": 254,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=RgGuFOid5PE&t=254",
+    "extraction_confidence": "high",
+    "visit_index": 1
   }
 ]

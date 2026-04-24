@@ -283,6 +283,9 @@ VISIT_CRITERION_URLS = {
     "sophy-romvari": [
         "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
     ],
+    "elisabeth-moss": [
+        "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
+    ],
 }
 
 

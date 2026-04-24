@@ -107,6 +107,7 @@ KNOWN_VIDEO_IDS = {
     "jamie-demetriou": {"youtube_video_id": "W5hLFhqn1FM"},
     "steven-knight": {"youtube_video_id": "2_ITjg3vrEU"},
     "sophy-romvari": {"youtube_video_id": "ziMJzKbYF4g"},
+    "elisabeth-moss": {"youtube_video_id": "RgGuFOid5PE"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -146,6 +147,7 @@ KNOWN_CRITERION_URLS = {
     "john-slattery": "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
     "kim-morgan": "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
     "sophy-romvari": "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
+    "elisabeth-moss": "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
 }
 
 # Name cleanup
