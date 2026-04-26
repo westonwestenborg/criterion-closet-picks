@@ -109,6 +109,7 @@ KNOWN_VIDEO_IDS = {
     "sophy-romvari": {"youtube_video_id": "ziMJzKbYF4g"},
     "elisabeth-moss": {"youtube_video_id": "RgGuFOid5PE"},
     "jon-hamm": {"youtube_video_id": "ErwYl1eU3is"},
+    "jack-harlow": {"youtube_video_id": "2GEOljy1JKg"},
 }
 
 # Known Criterion page URLs for guests missing them
