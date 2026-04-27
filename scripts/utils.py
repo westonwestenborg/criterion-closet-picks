@@ -289,6 +289,9 @@ VISIT_CRITERION_URLS = {
     "jon-hamm": [
         "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
     ],
+    "bob-odenkirk": [
+        "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
+    ],
 }
 
 

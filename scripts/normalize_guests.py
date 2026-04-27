@@ -110,6 +110,7 @@ KNOWN_VIDEO_IDS = {
     "elisabeth-moss": {"youtube_video_id": "RgGuFOid5PE"},
     "jon-hamm": {"youtube_video_id": "ErwYl1eU3is"},
     "jack-harlow": {"youtube_video_id": "2GEOljy1JKg"},
+    "bob-odenkirk": {"youtube_video_id": "_SDB919kWLo"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -151,6 +152,7 @@ KNOWN_CRITERION_URLS = {
     "sophy-romvari": "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
     "elisabeth-moss": "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
     "jon-hamm": "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
+    "bob-odenkirk": "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
 }
 
 # Name cleanup
