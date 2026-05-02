@@ -111,6 +111,8 @@ KNOWN_VIDEO_IDS = {
     "jon-hamm": {"youtube_video_id": "ErwYl1eU3is"},
     "jack-harlow": {"youtube_video_id": "2GEOljy1JKg"},
     "bob-odenkirk": {"youtube_video_id": "_SDB919kWLo"},
+    "oscar-isaac": {"youtube_video_id": "-GZ1xYEZDgc"},
+    "steve-zahn": {"youtube_video_id": "QElu6xNs6Q8"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -153,6 +155,8 @@ KNOWN_CRITERION_URLS = {
     "elisabeth-moss": "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
     "jon-hamm": "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
     "bob-odenkirk": "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
+    "oscar-isaac": "https://www.criterion.com/shop/collection/957-oscar-issac-s-closet-picks",
+    "steve-zahn": "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
 }
 
 # Name cleanup
@@ -165,6 +169,7 @@ NAME_FIXES = {
     "Claire Denis'": "Claire Denis",  # Trailing apostrophe from URL extraction
     "Five Comics'": "Five Comics",  # Trailing apostrophe from URL extraction
     "Steven Knights'": "Steven Knight",  # Possessive artifact from URL extraction
+    "Oscar Issac": "Oscar Isaac",  # Misspelling on Criterion's collection page/URL
 }
 
 # Import multi-visit URLs from shared config

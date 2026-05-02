@@ -129,6 +129,25 @@ def format_picks_list(picks: list[dict]) -> str:
 BATCH_SIZE = 20  # Max picks per API call to avoid output truncation
 
 
+def parse_json_array_response(response_text: str) -> list:
+    """Parse a Gemini response that should contain a JSON array."""
+    response_text = response_text.strip()
+
+    if response_text.startswith("```"):
+        response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
+        response_text = re.sub(r"\s*```$", "", response_text)
+
+    try:
+        return json.loads(response_text)
+    except json.JSONDecodeError:
+        start = response_text.find("[")
+        if start == -1:
+            raise
+        decoder = json.JSONDecoder()
+        parsed, _ = decoder.raw_decode(response_text[start:])
+        return parsed
+
+
 def _extract_single_batch(
     model,
     guest_name: str,
@@ -146,13 +165,7 @@ def _extract_single_batch(
     try:
         response = model.generate_content(prompt)
         response_text = response.text.strip()
-
-        # Handle markdown code blocks if present
-        if response_text.startswith("```"):
-            response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
-            response_text = re.sub(r"\s*```$", "", response_text)
-
-        quotes = json.loads(response_text)
+        quotes = parse_json_array_response(response_text)
 
         if not isinstance(quotes, list):
             log(f"  WARNING: Gemini returned non-list response")
@@ -328,13 +341,7 @@ def extract_quotes_from_audio(
     try:
         response = model.generate_content([prompt, audio_file])
         response_text = response.text.strip()
-
-        # Handle markdown code blocks
-        if response_text.startswith("```"):
-            response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
-            response_text = re.sub(r"\s*```$", "", response_text)
-
-        quotes = json.loads(response_text)
+        quotes = parse_json_array_response(response_text)
         if not isinstance(quotes, list):
             log(f"  WARNING: Gemini returned non-list for audio extraction")
             return []

@@ -4835,14 +4835,40 @@
   {
     "name": "Bob Odenkirk",
     "slug": "bob-odenkirk",
-    "profession": null,
-    "photo_url": null,
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg",
     "youtube_video_id": "_SDB919kWLo",
     "youtube_video_url": "https://www.youtube.com/watch?v=_SDB919kWLo",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-04-27",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
     "pick_count": 13
+  },
+  {
+    "name": "Oscar Isaac",
+    "slug": "oscar-isaac",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg",
+    "youtube_video_id": "-GZ1xYEZDgc",
+    "youtube_video_url": "https://www.youtube.com/watch?v=-GZ1xYEZDgc",
+    "vimeo_video_id": null,
+    "episode_date": "2026-04-29",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/957-oscar-issac-s-closet-picks",
+    "pick_count": 14
+  },
+  {
+    "name": "Steve Zahn",
+    "slug": "steve-zahn",
+    "profession": null,
+    "photo_url": null,
+    "youtube_video_id": "QElu6xNs6Q8",
+    "youtube_video_url": "https://www.youtube.com/watch?v=QElu6xNs6Q8",
+    "vimeo_video_id": null,
+    "episode_date": "2026-05-01",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
+    "pick_count": 7
   }
 ]
