@@ -155,7 +155,7 @@ KNOWN_CRITERION_URLS = {
     "elisabeth-moss": "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
     "jon-hamm": "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
     "bob-odenkirk": "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
-    "oscar-isaac": "https://www.criterion.com/shop/collection/957-oscar-issac-s-closet-picks",
+    "oscar-isaac": "https://www.criterion.com/shop/collection/957-oscar-isaac-s-closet-picks",
     "steve-zahn": "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
 }
 

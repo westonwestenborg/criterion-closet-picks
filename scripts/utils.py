@@ -293,7 +293,7 @@ VISIT_CRITERION_URLS = {
         "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
     ],
     "oscar-isaac": [
-        "https://www.criterion.com/shop/collection/957-oscar-issac-s-closet-picks",
+        "https://www.criterion.com/shop/collection/957-oscar-isaac-s-closet-picks",
     ],
     "steve-zahn": [
         "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
