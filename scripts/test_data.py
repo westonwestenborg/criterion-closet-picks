@@ -234,6 +234,64 @@ class TestNoDuplicateFilmIds(unittest.TestCase):
             self.fail(f"Duplicate film_ids found:\n" + "\n".join(details))
 
 
+class TestNoPrefixedFilmIdShadows(unittest.TestCase):
+    """Catalog entries with film_id like '<digits>-<slug>' must not have a base
+    twin where film_id == '<slug>'. These are duplicate entries created when
+    Criterion serves the same film at both /films/<id>-slug and /films/slug,
+    and they split picks across two ids. Use scripts/dedupe_film_ids.py to fix.
+    """
+
+    def test_no_prefixed_film_id_shadows_base(self):
+        import re
+        prefix_re = re.compile(r"^(\d+)-(.+)")
+        ids = {f["film_id"] for f in catalog}
+        shadows = []
+        for f in catalog:
+            m = prefix_re.match(f.get("film_id", ""))
+            if m and m.group(2) in ids:
+                shadows.append(f"{f['film_id']} -> base {m.group(2)}")
+        self.assertEqual(
+            shadows, [],
+            "Prefixed film_ids shadow a base entry "
+            "(run scripts/dedupe_film_ids.py):\n" + "\n".join(shadows),
+        )
+
+
+class TestPickTitlesAreCanonical(unittest.TestCase):
+    """Every pick's film_title must equal the canonical catalog title for its
+    film_id, so each film has a single source of truth. Picks whose film_id is
+    not in the catalog are skipped (covered by TestFilmCoverage).
+    """
+
+    def test_picks_film_title_matches_catalog(self):
+        self._check(picks, "picks.json")
+
+    def test_picks_raw_film_title_matches_catalog(self):
+        self._check(picks_raw, "picks_raw.json")
+
+    def _check(self, entries: list[dict], label: str) -> None:
+        mismatches = []
+        for p in entries:
+            film_id = p.get("film_slug") or p.get("film_id")
+            if not film_id:
+                continue
+            entry = catalog_by_film_id.get(film_id)
+            if not entry:
+                continue
+            canonical = entry.get("title")
+            actual = p.get("film_title")
+            if canonical and actual != canonical:
+                mismatches.append(
+                    f"  {film_id} guest={p.get('guest_slug', '?')}: "
+                    f"got={actual!r} expected={canonical!r}"
+                )
+        self.assertEqual(
+            mismatches, [],
+            f"{label} entries with non-canonical film_title "
+            "(run scripts/dedupe_film_ids.py):\n" + "\n".join(mismatches),
+        )
+
+
 class TestNoDuplicateTmdbIds(unittest.TestCase):
     """No two non-box-set films should share the same TMDB ID unexpectedly."""
 
