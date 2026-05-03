@@ -119,7 +119,7 @@
   {
     "guest_slug": "barry-jenkins",
     "guest_name": "Barry Jenkins",
-    "film_title": "La Ciénaga",
+    "film_title": "La ciénaga",
     "film_year": null,
     "film_id": "la-cienaga",
     "catalog_spine": 743,
@@ -239,7 +239,7 @@
   {
     "guest_slug": "barry-jenkins",
     "guest_name": "Barry Jenkins",
-    "film_title": "Three Colours: Red",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -997,7 +997,7 @@
   {
     "guest_slug": "bill-hader",
     "guest_name": "Bill Hader",
-    "film_title": "Cat People",
+    "film_title": "Boat People",
     "film_year": null,
     "film_id": "boat-people",
     "catalog_spine": 1113,
@@ -1081,7 +1081,7 @@
   {
     "guest_slug": "denis-villeneuve",
     "guest_name": "Denis Villeneuve",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -1407,7 +1407,7 @@
   {
     "guest_slug": "charli-xcx",
     "guest_name": "Charli XCX",
-    "film_title": "La Notte",
+    "film_title": "La notte",
     "film_year": null,
     "film_id": "la-notte",
     "catalog_spine": 678,
@@ -1604,7 +1604,7 @@
   {
     "guest_slug": "andrew-garfield",
     "guest_name": "Andrew Garfield",
-    "film_title": "Original Cast Album: Company",
+    "film_title": "Original Cast Album: “Company”",
     "film_year": null,
     "film_id": "original-cast-album-company",
     "catalog_spine": 1090,
@@ -1741,7 +1741,7 @@
   {
     "guest_slug": "nicholas-britell",
     "guest_name": "Nicholas Britell",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -1783,7 +1783,7 @@
   {
     "guest_slug": "jodie-foster",
     "guest_name": "Jodie Foster",
-    "film_title": "Petite Maman",
+    "film_title": "Petite maman",
     "film_year": null,
     "film_id": "petite-maman",
     "catalog_spine": 1181,
@@ -1877,7 +1877,7 @@
   {
     "guest_slug": "jodie-foster",
     "guest_name": "Jodie Foster",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -1896,7 +1896,7 @@
   {
     "guest_slug": "jodie-foster",
     "guest_name": "Jodie Foster",
-    "film_title": "Woman in the Dunes",
+    "film_title": "The Woman in the Dunes",
     "film_year": null,
     "film_id": "the-woman-in-the-dunes",
     "catalog_spine": 394,
@@ -2167,7 +2167,7 @@
   {
     "guest_slug": "atom-egoyan",
     "guest_name": "Atom Egoyan",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -2212,7 +2212,7 @@
   {
     "guest_slug": "stellan-skarsgard",
     "guest_name": "Stellan Skarsgård",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -2515,7 +2515,7 @@
   {
     "guest_slug": "lav-diaz",
     "guest_name": "Lav Diaz",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -2540,7 +2540,7 @@
   {
     "guest_slug": "lav-diaz",
     "guest_name": "Lav Diaz",
-    "film_title": "Letters from Fontainhas: Three Films by Pedro Costa",
+    "film_title": "Letters From Fontainhas: Three Films by Pedro Costa",
     "film_year": null,
     "film_id": "letters-from-fontainhas-three-films-by-pedro-costa",
     "catalog_spine": 508,
@@ -2622,7 +2622,7 @@
   {
     "guest_slug": "will-arnett",
     "guest_name": "Will Arnett",
-    "film_title": "Always for Pleasure",
+    "film_title": "Les Blank: Always for Pleasure",
     "film_year": null,
     "film_id": "les-blank-always-for-pleasure",
     "catalog_spine": 737,
@@ -2882,7 +2882,7 @@
   {
     "guest_slug": "rose-byrne",
     "guest_name": "Rose Byrne",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -3039,7 +3039,7 @@
   {
     "guest_slug": "lucy-liu",
     "guest_name": "Lucy Liu",
-    "film_title": "Jackie Chan: Emergence of a Superstar",
+    "film_title": "Jackie Chan: Emergence of a Superstar (box set)",
     "film_year": null,
     "film_id": "jackie-chan-emergence-of-a-superstar-box-set",
     "catalog_spine": 1197,
@@ -3061,7 +3061,7 @@
   {
     "guest_slug": "lucy-liu",
     "guest_name": "Lucy Liu",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -3123,7 +3123,7 @@
   {
     "guest_slug": "tom-rothman",
     "guest_name": "Tom Rothman",
-    "film_title": "Harlan County U.S.A.",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -3140,7 +3140,7 @@
   {
     "guest_slug": "tom-rothman",
     "guest_name": "Tom Rothman",
-    "film_title": "Winchester '73",
+    "film_title": "Winchester ’73",
     "film_year": null,
     "film_id": "winchester-73",
     "catalog_spine": 1248,
@@ -3297,7 +3297,7 @@
   {
     "guest_slug": "rian-johnson",
     "guest_name": "Rian Johnson",
-    "film_title": "Hell's Angels",
+    "film_title": "Hell’s Angels",
     "film_year": null,
     "film_id": "hells-angels",
     "catalog_spine": 1288,
@@ -3374,7 +3374,7 @@
   {
     "guest_slug": "derek-cianfrance",
     "guest_name": "Derek Cianfrance",
-    "film_title": "Freaks / The Unknown / The Mystic: Tod Browning's Sideshow Shockers",
+    "film_title": "Tod Browning’s Sideshow Shockers (Freaks, The Unknown, The Mystic)",
     "film_year": null,
     "film_id": "tod-brownings-sideshow-shockers-freaks-the-unknown-the-mystic",
     "catalog_spine": 1194,
@@ -3765,7 +3765,7 @@
   {
     "guest_slug": "kathryn-bigelow",
     "guest_name": "Kathryn Bigelow",
-    "film_title": "Straw Dogs",
+    "film_title": "Stray Dog",
     "film_year": null,
     "film_id": "stray-dog",
     "catalog_spine": 233,
@@ -3979,7 +3979,7 @@
   {
     "guest_slug": "wagner-moura",
     "guest_name": "Wagner Moura",
-    "film_title": "Martin Scorsese's World Cinema Project No. 3",
+    "film_title": "Martin Scorsese’s World Cinema Project No. 5",
     "film_year": null,
     "film_id": "martin-scorseses-world-cinema-project-no-5",
     "catalog_spine": 1296,
@@ -4384,7 +4384,7 @@
   {
     "guest_slug": "billy-crudup",
     "guest_name": "Billy Crudup",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -4661,7 +4661,7 @@
   {
     "guest_slug": "june-squibb",
     "guest_name": "June Squibb",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -4825,7 +4825,7 @@
   {
     "guest_slug": "diane-kruger",
     "guest_name": "Diane Kruger",
-    "film_title": "Dietrich & von Sternberg in Hollywood",
+    "film_title": "Dietrich & Von Sternberg in Hollywood (box set)",
     "film_year": null,
     "film_id": "dietrich-von-sternberg-in-hollywood-box-set",
     "catalog_spine": 930,
@@ -5072,7 +5072,7 @@
   {
     "guest_slug": "amy-irving",
     "guest_name": "Amy Irving",
-    "film_title": "Le Petit Soldat",
+    "film_title": "Le petit soldat",
     "film_year": null,
     "film_id": "le-petit-soldat",
     "catalog_spine": 1010,
@@ -5151,7 +5151,7 @@
   {
     "guest_slug": "anohni",
     "guest_name": "ANOHNI",
-    "film_title": "Night and Fog",
+    "film_title": "Day for Night",
     "film_year": null,
     "film_id": "day-for-night",
     "catalog_spine": 769,
@@ -5191,7 +5191,7 @@
   {
     "guest_slug": "anohni",
     "guest_name": "ANOHNI",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -5231,7 +5231,7 @@
   {
     "guest_slug": "anohni",
     "guest_name": "ANOHNI",
-    "film_title": "Science Is Fiction: 23 Films by Jean Painlevé",
+    "film_title": "Science is Fiction: 23 Films by Jean Painlevé",
     "film_year": null,
     "film_id": "science-is-fiction-23-films-by-jean-painleve",
     "catalog_spine": 468,
@@ -5251,7 +5251,7 @@
   {
     "guest_slug": "anohni",
     "guest_name": "ANOHNI",
-    "film_title": "3 Silent Classics by Josef von Sternberg",
+    "film_title": "Three Silent Classics by Josef von Sternberg",
     "film_year": null,
     "film_id": "three-silent-classics-by-josef-von-sternberg",
     "catalog_spine": null,
@@ -5274,7 +5274,7 @@
   {
     "guest_slug": "marion-cotillard",
     "guest_name": "Marion Cotillard",
-    "film_title": "Fan-Fan the Tulip",
+    "film_title": "Fanfan la Tulipe",
     "film_year": null,
     "film_id": "fanfan-la-tulipe",
     "catalog_spine": 451,
@@ -5513,7 +5513,7 @@
   {
     "guest_slug": "josh-brolin",
     "guest_name": "Josh Brolin",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -5573,7 +5573,7 @@
   {
     "guest_slug": "josh-brolin",
     "guest_name": "Josh Brolin",
-    "film_title": "Sid and Nancy",
+    "film_title": "Sid & Nancy",
     "film_year": null,
     "film_id": "sid-nancy",
     "catalog_spine": 20,
@@ -5690,7 +5690,7 @@
   {
     "guest_slug": "judd-apatow",
     "guest_name": "Judd Apatow",
-    "film_title": "Original Cast Album: Company",
+    "film_title": "Original Cast Album: “Company”",
     "film_year": null,
     "film_id": "original-cast-album-company",
     "catalog_spine": 1090,
@@ -5767,7 +5767,7 @@
   {
     "guest_slug": "judd-apatow",
     "guest_name": "Judd Apatow",
-    "film_title": "Guillermo del Toro's Pinocchio",
+    "film_title": "Guillermo del Toro’s Pinocchio",
     "film_year": null,
     "film_id": "guillermo-del-toros-pinocchio",
     "catalog_spine": 1201,
@@ -6228,7 +6228,7 @@
   {
     "guest_slug": "peter-wolf",
     "guest_name": "Peter Wolf",
-    "film_title": "I Know Where I'm Going!",
+    "film_title": "I Know Where I’m Going!",
     "film_year": null,
     "film_id": "i-know-where-im-going",
     "catalog_spine": 94,
@@ -6322,7 +6322,7 @@
   {
     "guest_slug": "margaret-qualley",
     "guest_name": "Margaret Qualley",
-    "film_title": "Beau Travail",
+    "film_title": "Beau travail",
     "film_year": null,
     "film_id": "beau-travail",
     "catalog_spine": 1042,
@@ -6558,7 +6558,7 @@
   {
     "guest_slug": "rza",
     "guest_name": "RZA",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -6891,7 +6891,7 @@
   {
     "guest_slug": "tunde-adebimpe",
     "guest_name": "Tunde Adebimpe",
-    "film_title": "Akira Kurosawa's Dreams",
+    "film_title": "Akira Kurosawa’s Dreams",
     "film_year": null,
     "film_id": "akira-kurosawas-dreams",
     "catalog_spine": 842,
@@ -8253,7 +8253,7 @@
   {
     "guest_slug": "barbie-ferreira",
     "guest_name": "Barbie Ferreira",
-    "film_title": "Gregg Araki's Teen Apocalypse Trilogy",
+    "film_title": "Gregg Araki’s Teen Apocalypse Trilogy",
     "film_year": null,
     "film_id": "gregg-arakis-teen-apocalypse-trilogy",
     "catalog_spine": null,
@@ -8538,7 +8538,7 @@
   {
     "guest_slug": "david-cronenberg",
     "guest_name": "David Cronenberg",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -8597,7 +8597,7 @@
   {
     "guest_slug": "david-cronenberg",
     "guest_name": "David Cronenberg",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -8765,7 +8765,7 @@
   {
     "guest_slug": "charles-burnett",
     "guest_name": "Charles Burnett",
-    "film_title": "Killer of Sheep",
+    "film_title": "Killer of Sheep (1978)",
     "film_year": null,
     "film_id": "killer-of-sheep-1978",
     "catalog_spine": 1262,
@@ -8785,7 +8785,7 @@
   {
     "guest_slug": "charles-burnett",
     "guest_name": "Charles Burnett",
-    "film_title": "Dodes'ka-den",
+    "film_title": "Dodes’ka-den",
     "film_year": null,
     "film_id": "dodeska-den",
     "catalog_spine": 465,
@@ -8923,7 +8923,7 @@
   {
     "guest_slug": "charles-burnett",
     "guest_name": "Charles Burnett",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -8948,7 +8948,7 @@
   {
     "guest_slug": "rob-delaney",
     "guest_name": "Rob Delaney",
-    "film_title": "Harlan County U.S.A.",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -8965,7 +8965,7 @@
   {
     "guest_slug": "rob-delaney",
     "guest_name": "Rob Delaney",
-    "film_title": "The Umbrellas of Cherbourg",
+    "film_title": "The Umbrellas of Cherbourg (Jacques Demy box)",
     "film_year": null,
     "film_id": "the-umbrellas-of-cherbourg-jacques-demy-box",
     "catalog_spine": 716,
@@ -9458,7 +9458,7 @@
   {
     "guest_slug": "matias-pineiro",
     "guest_name": "Matías Piñeiro",
-    "film_title": "La Ciénaga",
+    "film_title": "La ciénaga",
     "film_year": null,
     "film_id": "la-cienaga",
     "catalog_spine": 743,
@@ -9686,7 +9686,7 @@
   {
     "guest_slug": "natasha-lyonne",
     "guest_name": "Natasha Lyonne",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -10031,7 +10031,7 @@
   {
     "guest_slug": "questlove",
     "guest_name": "Questlove",
-    "film_title": "Beastie Boys: Video Anthology",
+    "film_title": "Beastie Boys Video Anthology",
     "film_year": null,
     "film_id": "beastie-boys-video-anthology",
     "catalog_spine": 100,
@@ -10150,7 +10150,7 @@
   {
     "guest_slug": "ben-affleck",
     "guest_name": "Ben Affleck",
-    "film_title": "Miller's Crossing",
+    "film_title": "Miller’s Crossing",
     "film_year": null,
     "film_id": "millers-crossing",
     "catalog_spine": 1112,
@@ -10207,7 +10207,7 @@
   {
     "guest_slug": "ben-affleck",
     "guest_name": "Ben Affleck",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -10407,7 +10407,7 @@
   {
     "guest_slug": "rosamund-pike",
     "guest_name": "Rosamund Pike",
-    "film_title": "L'Eclisse",
+    "film_title": "Eclipse",
     "film_year": null,
     "film_id": "eclipse",
     "catalog_spine": 278,
@@ -10987,7 +10987,7 @@
   {
     "guest_slug": "seth-rogen-evan-goldberg",
     "guest_name": "Seth Rogen",
-    "film_title": "It's a Mad, Mad, Mad, Mad World",
+    "film_title": "It’s a Mad, Mad, Mad, Mad World",
     "film_year": null,
     "film_id": "its-a-mad-mad-mad-mad-world",
     "catalog_spine": 692,
@@ -11104,7 +11104,7 @@
   {
     "guest_slug": "seth-rogen-evan-goldberg",
     "guest_name": "Seth Rogen & Evan Goldberg",
-    "film_title": "The Killing",
+    "film_title": "The Killer",
     "film_year": null,
     "film_id": "the-killer",
     "catalog_spine": 8,
@@ -11164,7 +11164,7 @@
   {
     "guest_slug": "seth-rogen-evan-goldberg",
     "guest_name": "Seth Rogen & Evan Goldberg",
-    "film_title": "Jackie Chan: Emergence of a Superstar",
+    "film_title": "Jackie Chan: Emergence of a Superstar (box set)",
     "film_year": null,
     "film_id": "jackie-chan-emergence-of-a-superstar-box-set",
     "catalog_spine": 1197,
@@ -11352,7 +11352,7 @@
   {
     "guest_slug": "mark-rylance",
     "guest_name": "Mark Rylance",
-    "film_title": "Dodes'ka-den",
+    "film_title": "Dodes’ka-den",
     "film_year": null,
     "film_id": "dodeska-den",
     "catalog_spine": 465,
@@ -11389,7 +11389,7 @@
   {
     "guest_slug": "mark-rylance",
     "guest_name": "Mark Rylance",
-    "film_title": "Woman in the Dunes",
+    "film_title": "The Woman in the Dunes",
     "film_year": null,
     "film_id": "the-woman-in-the-dunes",
     "catalog_spine": 394,
@@ -11673,7 +11673,7 @@
   {
     "guest_slug": "carrie-coon",
     "guest_name": "Carrie Coon",
-    "film_title": "Eric Rohmer's Tales of the Four Seasons",
+    "film_title": "Eric Rohmer’s Tales of the Four Seasons",
     "film_year": null,
     "film_id": "eric-rohmers-tales-of-the-four-seasons",
     "catalog_spine": 1206,
@@ -12104,7 +12104,7 @@
   {
     "guest_slug": "julia-garner",
     "guest_name": "Julia Garner",
-    "film_title": "Lars von Trier's Europe Trilogy",
+    "film_title": "Lars von Trier’s Europe Trilogy",
     "film_year": null,
     "film_id": "lars-von-triers-europe-trilogy",
     "catalog_spine": null,
@@ -12653,7 +12653,7 @@
   {
     "guest_slug": "nicholas-hoult",
     "guest_name": "Nicholas Hoult",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -12715,7 +12715,7 @@
   {
     "guest_slug": "pamela-anderson",
     "guest_name": "Pamela Anderson",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -12877,7 +12877,7 @@
   {
     "guest_slug": "pamela-anderson",
     "guest_name": "Pamela Anderson",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -12922,7 +12922,7 @@
   {
     "guest_slug": "jeremy-pope",
     "guest_name": "Watch& & shop",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -12962,7 +12962,7 @@
   {
     "guest_slug": "jeremy-pope",
     "guest_name": "Jeremy Pope",
-    "film_title": "One Night in Miami...",
+    "film_title": "One Night in Miami",
     "film_year": null,
     "film_id": "one-night-in-miami",
     "catalog_spine": 1106,
@@ -13161,7 +13161,7 @@
   {
     "guest_slug": "mikey-madison",
     "guest_name": "Mikey Madison",
-    "film_title": "Heaven's Gate",
+    "film_title": "Heaven’s Gate",
     "film_year": null,
     "film_id": "heavens-gate",
     "catalog_spine": 636,
@@ -13352,7 +13352,7 @@
   {
     "guest_slug": "john-lithgow",
     "guest_name": "John Lithgow",
-    "film_title": "The Spy Who Came In from the Cold",
+    "film_title": "The Spy Who Came in from the Cold",
     "film_year": null,
     "film_id": "the-spy-who-came-in-from-the-cold",
     "catalog_spine": 452,
@@ -13431,7 +13431,7 @@
   {
     "guest_slug": "winona-ryder",
     "guest_name": "Winona Ryder",
-    "film_title": "Au Revoir les Enfants",
+    "film_title": "Au revoir les enfants",
     "film_year": null,
     "film_id": "au-revoir-les-enfants",
     "catalog_spine": 330,
@@ -13611,7 +13611,7 @@
   {
     "guest_slug": "amelia-dimoldenberg",
     "guest_name": "Amelia Dimoldenberg",
-    "film_title": "A Hard Day's Night",
+    "film_title": "A Hard Day’s Night",
     "film_year": null,
     "film_id": "a-hard-days-night",
     "catalog_spine": 711,
@@ -13708,7 +13708,7 @@
   {
     "guest_slug": "amelia-dimoldenberg",
     "guest_name": "Amelia Dimoldenberg",
-    "film_title": "Petite Maman",
+    "film_title": "Petite maman",
     "film_year": null,
     "film_id": "petite-maman",
     "catalog_spine": 1181,
@@ -14445,7 +14445,7 @@
   {
     "guest_slug": "barry-sonnenfeld",
     "guest_name": "Barry Sonnenfeld",
-    "film_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "film_title": "Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb",
     "film_year": null,
     "film_id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
     "catalog_spine": 821,
@@ -14782,7 +14782,7 @@
   {
     "guest_slug": "marianne-jean-baptiste-mike-leigh",
     "guest_name": "Mike Leigh",
-    "film_title": "Vivre Sa Vie",
+    "film_title": "Vivre sa vie",
     "film_year": null,
     "film_id": "vivre-sa-vie",
     "catalog_spine": 512,
@@ -14799,7 +14799,7 @@
   {
     "guest_slug": "marianne-jean-baptiste-mike-leigh",
     "guest_name": "Mike Leigh",
-    "film_title": "A Hard Day's Night",
+    "film_title": "A Hard Day’s Night",
     "film_year": null,
     "film_id": "a-hard-days-night",
     "catalog_spine": 711,
@@ -15001,7 +15001,7 @@
   {
     "guest_slug": "marianne-jean-baptiste-mike-leigh",
     "guest_name": "Marianne Jean-Baptiste & Mike Leigh",
-    "film_title": "A Story of Floating Weeds / Floating Weeds: Two Films by Yasujiro Ozu",
+    "film_title": "A Story of Floating Weeds / Floating Weeds",
     "film_year": null,
     "film_id": "a-story-of-floating-weeds-floating-weeds",
     "catalog_spine": null,
@@ -15206,7 +15206,7 @@
   {
     "guest_slug": "christian-petzold",
     "guest_name": "Christian Petzold",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -15410,7 +15410,7 @@
   {
     "guest_slug": "alan-palomo",
     "guest_name": "Alan Palomo",
-    "film_title": "Sid and Nancy",
+    "film_title": "Sid & Nancy",
     "film_year": null,
     "film_id": "sid-nancy",
     "catalog_spine": 20,
@@ -15587,7 +15587,7 @@
   {
     "guest_slug": "tyler-mitchell",
     "guest_name": "Tyler Mitchell",
-    "film_title": "L'Argent",
+    "film_title": "L'argent",
     "film_year": null,
     "film_id": "largent",
     "catalog_spine": 886,
@@ -15644,7 +15644,7 @@
   {
     "guest_slug": "tyler-mitchell",
     "guest_name": "Tyler Mitchell",
-    "film_title": "La Ciénaga",
+    "film_title": "La ciénaga",
     "film_year": null,
     "film_id": "la-cienaga",
     "catalog_spine": 743,
@@ -15883,7 +15883,7 @@
   {
     "guest_slug": "paul-b-preciado",
     "guest_name": "Paul B. Preciado",
-    "film_title": "Cría cuervos . . .",
+    "film_title": "Cría cuervos",
     "film_year": null,
     "film_id": "cria-cuervos",
     "catalog_spine": 403,
@@ -15947,7 +15947,7 @@
   {
     "guest_slug": "paul-b-preciado",
     "guest_name": "Paul B. Preciado",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -16009,7 +16009,7 @@
   {
     "guest_slug": "luis-guzman",
     "guest_name": "Luis Guzman",
-    "film_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "film_title": "Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb",
     "film_year": null,
     "film_id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
     "catalog_spine": 821,
@@ -16086,7 +16086,7 @@
   {
     "guest_slug": "raven-jackson",
     "guest_name": "Raven Jackson",
-    "film_title": "Eve's Bayou",
+    "film_title": "Eve’s Bayou",
     "film_year": null,
     "film_id": "eves-bayou",
     "catalog_spine": 1154,
@@ -16143,7 +16143,7 @@
   {
     "guest_slug": "raven-jackson",
     "guest_name": "Raven Jackson",
-    "film_title": "Amores Perros",
+    "film_title": "Amores perros",
     "film_year": null,
     "film_id": "amores-perros",
     "catalog_spine": 1060,
@@ -16220,7 +16220,7 @@
   {
     "guest_slug": "raven-jackson",
     "guest_name": "Raven Jackson",
-    "film_title": "Faya Dayi",
+    "film_title": "Faya dayi",
     "film_year": null,
     "film_id": "faya-dayi",
     "catalog_spine": 1141,
@@ -16237,7 +16237,7 @@
   {
     "guest_slug": "raven-jackson",
     "guest_name": "Raven Jackson",
-    "film_title": "La Ciénaga",
+    "film_title": "La ciénaga",
     "film_year": null,
     "film_id": "la-cienaga",
     "catalog_spine": 743,
@@ -16257,7 +16257,7 @@
   {
     "guest_slug": "raven-jackson",
     "guest_name": "Raven Jackson",
-    "film_title": "The Devil's Backbone",
+    "film_title": "The Devil’s Backbone",
     "film_year": null,
     "film_id": "the-devils-backbone",
     "catalog_spine": 666,
@@ -16391,7 +16391,7 @@
   {
     "guest_slug": "kleber-mendonca-filho",
     "guest_name": "Kleber Mendonça Filho",
-    "film_title": "The Signifyin' Works of Marlon Riggs",
+    "film_title": "The Signifyin’ Works of Marlon Riggs",
     "film_year": null,
     "film_id": "the-signifyin-works-of-marlon-riggs",
     "catalog_spine": 1082,
@@ -16416,7 +16416,7 @@
   {
     "guest_slug": "kleber-mendonca-filho",
     "guest_name": "Kleber Mendonça Filho",
-    "film_title": "Martin Scorsese's World Cinema Project No. 3",
+    "film_title": "Martin Scorsese’s World Cinema Project No. 5",
     "film_year": null,
     "film_id": "martin-scorseses-world-cinema-project-no-5",
     "catalog_spine": 1296,
@@ -16523,7 +16523,7 @@
   {
     "guest_slug": "lina-rodriguez",
     "guest_name": "Lina Rodriguez",
-    "film_title": "Eight Hours Don't Make a Day",
+    "film_title": "Eight Hours Don’t Make a Day",
     "film_year": null,
     "film_id": "eight-hours-dont-make-a-day",
     "catalog_spine": 946,
@@ -16580,7 +16580,7 @@
   {
     "guest_slug": "lina-rodriguez",
     "guest_name": "Lina Rodriguez",
-    "film_title": "Bo Widerberg's New Swedish Cinema",
+    "film_title": "Bo Widerberg’s New Swedish Cinema",
     "film_year": null,
     "film_id": "bo-widerbergs-new-swedish-cinema",
     "catalog_spine": 1189,
@@ -16825,7 +16825,7 @@
   {
     "guest_slug": "willem-dafoe",
     "guest_name": "Willem Dafoe",
-    "film_title": "The Devil's Backbone",
+    "film_title": "The Devil’s Backbone",
     "film_year": null,
     "film_id": "the-devils-backbone",
     "catalog_spine": 666,
@@ -17121,7 +17121,7 @@
   {
     "guest_slug": "callum-turner",
     "guest_name": "Callum Turner",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -17140,7 +17140,7 @@
   {
     "guest_slug": "callum-turner",
     "guest_name": "Callum Turner",
-    "film_title": "Nothing But a Man",
+    "film_title": "Nothing but a Man",
     "film_year": null,
     "film_id": "nothing-but-a-man",
     "catalog_spine": 1209,
@@ -17259,7 +17259,7 @@
   {
     "guest_slug": "paul-giamatti",
     "guest_name": "Paul Giamatti",
-    "film_title": "Cat People",
+    "film_title": "Boat People",
     "film_year": null,
     "film_id": "boat-people",
     "catalog_spine": 1113,
@@ -17783,7 +17783,7 @@
   {
     "guest_slug": "carol-kane",
     "guest_name": "Carol Kane",
-    "film_title": "Hobson's Choice",
+    "film_title": "Hobson’s Choice",
     "film_year": null,
     "film_id": "hobsons-choice",
     "catalog_spine": 461,
@@ -17943,7 +17943,7 @@
   {
     "guest_slug": "bill-pope",
     "guest_name": "Bill Pope",
-    "film_title": "Harlan County U.S.A.",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -18260,7 +18260,7 @@
   {
     "guest_slug": "agnieszka-holland",
     "guest_name": "Agnieszka Holland",
-    "film_title": "La Notte",
+    "film_title": "La notte",
     "film_year": null,
     "film_id": "la-notte",
     "catalog_spine": 678,
@@ -18479,7 +18479,7 @@
   {
     "guest_slug": "greg-gonzalez",
     "guest_name": "Greg Gonzalez",
-    "film_title": "Eric Rohmer's Tales of the Four Seasons",
+    "film_title": "Eric Rohmer’s Tales of the Four Seasons",
     "film_year": null,
     "film_id": "eric-rohmers-tales-of-the-four-seasons",
     "catalog_spine": 1206,
@@ -18746,7 +18746,7 @@
   {
     "guest_slug": "dylan-baker",
     "guest_name": "Dylan Baker",
-    "film_title": "It's a Mad, Mad, Mad, Mad World",
+    "film_title": "It’s a Mad, Mad, Mad, Mad World",
     "film_year": null,
     "film_id": "its-a-mad-mad-mad-mad-world",
     "catalog_spine": 692,
@@ -18843,7 +18843,7 @@
   {
     "guest_slug": "jr",
     "guest_name": "JR",
-    "film_title": "Amores Perros",
+    "film_title": "Amores perros",
     "film_year": null,
     "film_id": "amores-perros",
     "catalog_spine": 1060,
@@ -18860,7 +18860,7 @@
   {
     "guest_slug": "jr",
     "guest_name": "JR",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -18917,7 +18917,7 @@
   {
     "guest_slug": "jr",
     "guest_name": "JR",
-    "film_title": "The Innocent",
+    "film_title": "The Innocents",
     "film_year": null,
     "film_id": "the-innocents",
     "catalog_spine": 727,
@@ -19122,7 +19122,7 @@
   {
     "guest_slug": "anna-kendrick",
     "guest_name": "Anna Kendrick",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -19227,7 +19227,7 @@
   {
     "guest_slug": "edward-berger",
     "guest_name": "Edward Berger",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -19313,7 +19313,7 @@
   {
     "guest_slug": "jennifer-kent",
     "guest_name": "Jennifer Kent",
-    "film_title": "The Last Wave",
+    "film_title": "The Last Waltz",
     "film_year": null,
     "film_id": "the-last-waltz",
     "catalog_spine": 1118,
@@ -19373,7 +19373,7 @@
   {
     "guest_slug": "jennifer-kent",
     "guest_name": "Jennifer Kent",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -19572,7 +19572,7 @@
   {
     "guest_slug": "cheryl-dunye",
     "guest_name": "Cheryl Dunye",
-    "film_title": "The Signifyin' Works of Marlon Riggs",
+    "film_title": "The Signifyin’ Works of Marlon Riggs",
     "film_year": null,
     "film_id": "the-signifyin-works-of-marlon-riggs",
     "catalog_spine": 1082,
@@ -19721,7 +19721,7 @@
   {
     "guest_slug": "tim-blake-nelson",
     "guest_name": "Tim Blake Nelson",
-    "film_title": "Miller's Crossing",
+    "film_title": "Miller’s Crossing",
     "film_year": null,
     "film_id": "millers-crossing",
     "catalog_spine": 1112,
@@ -20060,7 +20060,7 @@
   {
     "guest_slug": "molly-ringwald",
     "guest_name": "Molly Ringwald",
-    "film_title": "Dietrich & von Sternberg in Hollywood",
+    "film_title": "Dietrich & Von Sternberg in Hollywood (box set)",
     "film_year": null,
     "film_id": "dietrich-von-sternberg-in-hollywood-box-set",
     "catalog_spine": 930,
@@ -20082,7 +20082,7 @@
   {
     "guest_slug": "molly-ringwald",
     "guest_name": "Molly Ringwald",
-    "film_title": "Eric Rohmer's Tales of the Four Seasons",
+    "film_title": "Eric Rohmer’s Tales of the Four Seasons",
     "film_year": null,
     "film_id": "eric-rohmers-tales-of-the-four-seasons",
     "catalog_spine": 1206,
@@ -20214,7 +20214,7 @@
   {
     "guest_slug": "manuel-garcia-rulfo",
     "guest_name": "Manuel Garcia-Rulfo",
-    "film_title": "Amores Perros",
+    "film_title": "Amores perros",
     "film_year": null,
     "film_id": "amores-perros",
     "catalog_spine": 1060,
@@ -20531,7 +20531,7 @@
   {
     "guest_slug": "st-vincent",
     "guest_name": "St. Vincent",
-    "film_title": "The Bitter Tears of Petra von Kant",
+    "film_title": "The Bitter Tears of Petra Von Kant",
     "film_year": null,
     "film_id": "the-bitter-tears-of-petra-von-kant",
     "catalog_spine": 740,
@@ -20730,7 +20730,7 @@
   {
     "guest_slug": "gregg-araki",
     "guest_name": "Gregg Araki",
-    "film_title": "Masculin Féminin",
+    "film_title": "Masculin, féminin",
     "film_year": null,
     "film_id": "masculin-feminin",
     "catalog_spine": 308,
@@ -20807,7 +20807,7 @@
   {
     "guest_slug": "rodrigo-prieto",
     "guest_name": "Rodrigo Prieto",
-    "film_title": "Amores Perros",
+    "film_title": "Amores perros",
     "film_year": null,
     "film_id": "amores-perros",
     "catalog_spine": 1060,
@@ -20984,7 +20984,7 @@
   {
     "guest_slug": "sally-potter",
     "guest_name": "Sally Potter",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -21534,7 +21534,7 @@
   {
     "guest_slug": "jerzy-skolimowski",
     "guest_name": "Jerzy Skolimowski",
-    "film_title": "Ivan's Childhood",
+    "film_title": "Ivan’s Childhood",
     "film_year": null,
     "film_id": "ivans-childhood",
     "catalog_spine": 397,
@@ -21551,7 +21551,7 @@
   {
     "guest_slug": "jerzy-skolimowski",
     "guest_name": "Jerzy Skolimowski",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -21627,7 +21627,7 @@
   {
     "guest_slug": "raul-castillo",
     "guest_name": "Raúl Castillo",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -21847,7 +21847,7 @@
   {
     "guest_slug": "yo-la-tengo",
     "guest_name": "Yo La Tengo",
-    "film_title": "The Girl Can't Help It",
+    "film_title": "The Girl Can’t Help It",
     "film_year": null,
     "film_id": "the-girl-cant-help-it",
     "catalog_spine": 1120,
@@ -21946,7 +21946,7 @@
   {
     "guest_slug": "sara-dosa",
     "guest_name": "Sara Dosa",
-    "film_title": "Faya Dayi",
+    "film_title": "Faya dayi",
     "film_year": null,
     "film_id": "faya-dayi",
     "catalog_spine": 1141,
@@ -21983,7 +21983,7 @@
   {
     "guest_slug": "sara-dosa",
     "guest_name": "Sara Dosa",
-    "film_title": "Y Tu Mamá También",
+    "film_title": "Y tu mamá también",
     "film_year": null,
     "film_id": "y-tu-mama-tambien",
     "catalog_spine": 723,
@@ -22020,7 +22020,7 @@
   {
     "guest_slug": "sara-dosa",
     "guest_name": "Sara Dosa",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -22432,7 +22432,7 @@
   {
     "guest_slug": "carl-franklin",
     "guest_name": "Carl Franklin",
-    "film_title": "'Round Midnight",
+    "film_title": "‘Round Midnight",
     "film_year": null,
     "film_id": "round-midnight",
     "catalog_spine": 1122,
@@ -22469,7 +22469,7 @@
   {
     "guest_slug": "carl-franklin",
     "guest_name": "Carl Franklin",
-    "film_title": "Martin Scorsese's World Cinema Project No. 3",
+    "film_title": "Martin Scorsese’s World Cinema Project No. 5",
     "film_year": null,
     "film_id": "martin-scorseses-world-cinema-project-no-5",
     "catalog_spine": 1296,
@@ -22614,7 +22614,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Woman in the Dunes",
+    "film_title": "The Woman in the Dunes",
     "film_year": null,
     "film_id": "the-woman-in-the-dunes",
     "catalog_spine": 394,
@@ -22694,7 +22694,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Winchester '73",
+    "film_title": "Winchester ’73",
     "film_year": null,
     "film_id": "winchester-73",
     "catalog_spine": 1248,
@@ -22734,7 +22734,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Lacombe, Lucien",
+    "film_title": "Lacombe Lucien",
     "film_year": null,
     "film_id": "lacombe-lucien",
     "catalog_spine": 329,
@@ -22774,7 +22774,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Straw Dogs",
+    "film_title": "Stray Dog",
     "film_year": null,
     "film_id": "stray-dog",
     "catalog_spine": 233,
@@ -23139,7 +23139,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Three Fantastic Journeys by Karel Zeman",
+    "film_title": "Three Fantastic Journeys by Karel Zeman: Invention for Destruction",
     "film_year": null,
     "film_id": "three-fantastic-journeys-by-karel-zeman-invention-for-destruction",
     "catalog_spine": 1016,
@@ -23161,7 +23161,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "La poison",
+    "film_title": "La Poison",
     "film_year": null,
     "film_id": "la-poison",
     "catalog_spine": 891,
@@ -23181,7 +23181,7 @@
   {
     "guest_slug": "ari-aster",
     "guest_name": "Ari Aster",
-    "film_title": "Brand upon the Brain!",
+    "film_title": "Brand Upon the Brain!",
     "film_year": null,
     "film_id": "brand-upon-the-brain",
     "catalog_spine": 440,
@@ -23794,7 +23794,7 @@
   {
     "guest_slug": "mary-harron",
     "guest_name": "Mary Harron",
-    "film_title": "Sid and Nancy",
+    "film_title": "Sid & Nancy",
     "film_year": null,
     "film_id": "sid-nancy",
     "catalog_spine": 20,
@@ -24051,7 +24051,7 @@
   {
     "guest_slug": "gina-prince-bythewood",
     "guest_name": "Gina Prince-Bythewood",
-    "film_title": "An Actor's Revenge",
+    "film_title": "An Actor’s Revenge",
     "film_year": null,
     "film_id": "an-actors-revenge",
     "catalog_spine": 912,
@@ -24111,7 +24111,7 @@
   {
     "guest_slug": "john-darnielle",
     "guest_name": "John Darnielle",
-    "film_title": "Original Cast Album: Company",
+    "film_title": "Original Cast Album: “Company”",
     "film_year": null,
     "film_id": "original-cast-album-company",
     "catalog_spine": 1090,
@@ -24251,7 +24251,7 @@
   {
     "guest_slug": "john-darnielle",
     "guest_name": "John Darnielle",
-    "film_title": "The Signifyin' Works of Marlon Riggs",
+    "film_title": "The Signifyin’ Works of Marlon Riggs",
     "film_year": null,
     "film_id": "the-signifyin-works-of-marlon-riggs",
     "catalog_spine": 1082,
@@ -24276,7 +24276,7 @@
   {
     "guest_slug": "john-darnielle",
     "guest_name": "John Darnielle",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -24338,7 +24338,7 @@
   {
     "guest_slug": "philip-kaufman",
     "guest_name": "Philip Kaufman",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -24482,7 +24482,7 @@
   {
     "guest_slug": "ruben-ostlund",
     "guest_name": "Ruben Östlund",
-    "film_title": "The Bitter Tears of Petra von Kant",
+    "film_title": "The Bitter Tears of Petra Von Kant",
     "film_year": null,
     "film_id": "the-bitter-tears-of-petra-von-kant",
     "catalog_spine": 740,
@@ -24524,7 +24524,7 @@
   {
     "guest_slug": "ruben-ostlund",
     "guest_name": "Ruben Östlund",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -24566,7 +24566,7 @@
   {
     "guest_slug": "kim-cattrall",
     "guest_name": "Kim Cattrall",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -24588,7 +24588,7 @@
   {
     "guest_slug": "kim-cattrall",
     "guest_name": "Kim Cattrall",
-    "film_title": "Cat People",
+    "film_title": "Boat People",
     "film_year": null,
     "film_id": "boat-people",
     "catalog_spine": 1113,
@@ -24924,7 +24924,7 @@
   {
     "guest_slug": "cauleen-smith",
     "guest_name": "Cauleen Smith",
-    "film_title": "Symbiopsychotaxiplasm: Take One",
+    "film_title": "Symbiopsychotaxiplasm: Two Takes",
     "film_year": null,
     "film_id": "symbiopsychotaxiplasm-two-takes",
     "catalog_spine": 360,
@@ -24961,7 +24961,7 @@
   {
     "guest_slug": "cauleen-smith",
     "guest_name": "Cauleen Smith",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -25145,7 +25145,7 @@
   {
     "guest_slug": "renate-reinsve",
     "guest_name": "Renate Reinsve",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -25286,7 +25286,7 @@
   {
     "guest_slug": "renate-reinsve",
     "guest_name": "Renate Reinsve",
-    "film_title": "Pierre Etaix",
+    "film_title": "Pierre Étaix",
     "film_year": null,
     "film_id": "pierre-etaix",
     "catalog_spine": null,
@@ -25488,7 +25488,7 @@
   {
     "guest_slug": "garrett-bradley",
     "guest_name": "Garrett Bradley",
-    "film_title": "Akira Kurosawa's Dreams",
+    "film_title": "Akira Kurosawa’s Dreams",
     "film_year": null,
     "film_id": "akira-kurosawas-dreams",
     "catalog_spine": 842,
@@ -25552,7 +25552,7 @@
   {
     "guest_slug": "garrett-bradley",
     "guest_name": "Garrett Bradley",
-    "film_title": "The Signifyin' Works of Marlon Riggs",
+    "film_title": "The Signifyin’ Works of Marlon Riggs",
     "film_year": null,
     "film_id": "the-signifyin-works-of-marlon-riggs",
     "catalog_spine": 1082,
@@ -25599,7 +25599,7 @@
   {
     "guest_slug": "jenni-olson",
     "guest_name": "Jenni Olson",
-    "film_title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+    "film_title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles",
     "film_year": null,
     "film_id": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles",
     "catalog_spine": 484,
@@ -25701,7 +25701,7 @@
   {
     "guest_slug": "peter-sarsgaard",
     "guest_name": "Peter Sarsgaard",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -26182,7 +26182,7 @@
   {
     "guest_slug": "richard-e-grant",
     "guest_name": "Richard E. Grant",
-    "film_title": "La Strada",
+    "film_title": "La strada",
     "film_year": null,
     "film_id": "la-strada",
     "catalog_spine": 219,
@@ -26418,7 +26418,7 @@
   {
     "guest_slug": "lee-unkrich",
     "guest_name": "Lee Unkrich",
-    "film_title": "Three Colours: Red",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -26669,7 +26669,7 @@
   {
     "guest_slug": "alexander-payne",
     "guest_name": "Alexander Payne",
-    "film_title": "Alambrista!",
+    "film_title": "¡Alambrista!",
     "film_year": null,
     "film_id": "alambrista",
     "catalog_spine": 609,
@@ -27113,7 +27113,7 @@
   {
     "guest_slug": "amy-heckerling",
     "guest_name": "Amy Heckerling",
-    "film_title": "I Vitelloni",
+    "film_title": "I vitelloni",
     "film_year": null,
     "film_id": "i-vitelloni",
     "catalog_spine": 246,
@@ -27710,7 +27710,7 @@
   {
     "guest_slug": "michael-cera",
     "guest_name": "Michael Cera",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -27770,7 +27770,7 @@
   {
     "guest_slug": "michael-cera",
     "guest_name": "Michael Cera",
-    "film_title": "The Wind Will Carry Us",
+    "film_title": "The Wind Will Carry Us (1999)",
     "film_year": null,
     "film_id": "the-wind-will-carry-us-1999",
     "catalog_spine": 1261,
@@ -27991,7 +27991,7 @@
   {
     "guest_slug": "the-wolfpack",
     "guest_name": "The Wolfpack",
-    "film_title": "Rosemary's Baby",
+    "film_title": "Rosemary’s Baby",
     "film_year": null,
     "film_id": "rosemarys-baby",
     "catalog_spine": 630,
@@ -28008,7 +28008,7 @@
   {
     "guest_slug": "the-wolfpack",
     "guest_name": "The Wolfpack",
-    "film_title": "The Killing",
+    "film_title": "The Killer",
     "film_year": null,
     "film_id": "the-killer",
     "catalog_spine": 8,
@@ -28188,7 +28188,7 @@
   {
     "guest_slug": "the-wolfpack",
     "guest_name": "The Wolfpack",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -28328,7 +28328,7 @@
   {
     "guest_slug": "the-wolfpack",
     "guest_name": "The Wolfpack",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -28567,7 +28567,7 @@
   {
     "guest_slug": "yorgos-lanthimos",
     "guest_name": "Yorgos Lanthimos",
-    "film_title": "Le samouraï",
+    "film_title": "Le Samouraï",
     "film_year": null,
     "film_id": "le-samourai",
     "catalog_spine": 306,
@@ -28700,7 +28700,7 @@
   {
     "guest_slug": "yorgos-lanthimos",
     "guest_name": "Yorgos Lanthimos",
-    "film_title": "Au hasard Balthazar",
+    "film_title": "Au Hasard Balthazar",
     "film_year": null,
     "film_id": "au-hasard-balthazar",
     "catalog_spine": 297,
@@ -28739,7 +28739,7 @@
   {
     "guest_slug": "anna-karina",
     "guest_name": "Anna Karina",
-    "film_title": "Made in U.S.A",
+    "film_title": "Made In USA",
     "film_year": null,
     "film_id": "made-in-usa",
     "catalog_spine": 481,
@@ -28939,7 +28939,7 @@
   {
     "guest_slug": "patrick-brice",
     "guest_name": "Patrick Brice",
-    "film_title": "Y Tu Mamá También",
+    "film_title": "Y tu mamá también",
     "film_year": null,
     "film_id": "y-tu-mama-tambien",
     "catalog_spine": 723,
@@ -28956,7 +28956,7 @@
   {
     "guest_slug": "volker-schlondorff",
     "guest_name": "Volker Schlondorff",
-    "film_title": "L'Eclisse",
+    "film_title": "Eclipse",
     "film_year": null,
     "film_id": "eclipse",
     "catalog_spine": 278,
@@ -29070,7 +29070,7 @@
   {
     "guest_slug": "volker-schlondorff",
     "guest_name": "Volker Schlöndorff",
-    "film_title": "Le beau Serge",
+    "film_title": "Le Beau Serge",
     "film_year": null,
     "film_id": "le-beau-serge",
     "catalog_spine": 580,
@@ -29250,7 +29250,7 @@
   {
     "guest_slug": "william-friedkin",
     "guest_name": "William Friedkin",
-    "film_title": "All That Money Can Buy (a.k.a. The Devil and Daniel Webster)",
+    "film_title": "All That Money Can Buy (aka The Devil and Daniel Webster)",
     "film_year": null,
     "film_id": "all-that-money-can-buy-aka-the-devil-and-daniel-webster",
     "catalog_spine": 214,
@@ -29287,7 +29287,7 @@
   {
     "guest_slug": "richard-ayoade",
     "guest_name": "Richard Ayoade",
-    "film_title": "The Cousins",
+    "film_title": "Les Cousins",
     "film_year": null,
     "film_id": "les-cousins",
     "catalog_spine": 581,
@@ -29927,7 +29927,7 @@
   {
     "guest_slug": "joachim-trier",
     "guest_name": "Joachim Trier",
-    "film_title": "Heaven's Gate",
+    "film_title": "Heaven’s Gate",
     "film_year": null,
     "film_id": "heavens-gate",
     "catalog_spine": 636,
@@ -29966,7 +29966,7 @@
   {
     "guest_slug": "joachim-trier",
     "guest_name": "Joachim Trier",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -30696,7 +30696,7 @@
   {
     "guest_slug": "laurie-anderson",
     "guest_name": "Laurie Anderson",
-    "film_title": "Tout Va Bien",
+    "film_title": "Tout va bien",
     "film_year": null,
     "film_id": "tout-va-bien",
     "catalog_spine": 275,
@@ -31077,7 +31077,7 @@
   {
     "guest_slug": "edgar-wright",
     "guest_name": "Edgar Wright",
-    "film_title": "A Hard Day's Night",
+    "film_title": "A Hard Day’s Night",
     "film_year": null,
     "film_id": "a-hard-days-night",
     "catalog_spine": 711,
@@ -31097,7 +31097,7 @@
   {
     "guest_slug": "edgar-wright",
     "guest_name": "Edgar Wright",
-    "film_title": "The Earrings of Madame de . . .",
+    "film_title": "The Earrings of Madame de...",
     "film_year": null,
     "film_id": "the-earrings-of-madame-de",
     "catalog_spine": 445,
@@ -31241,7 +31241,7 @@
   {
     "guest_slug": "edgar-wright",
     "guest_name": "Edgar Wright",
-    "film_title": "Don’t Look Now",
+    "film_title": "Don't Look Now",
     "film_year": null,
     "film_id": "dont-look-now",
     "catalog_spine": 745,
@@ -31460,7 +31460,7 @@
   {
     "guest_slug": "claire-danes",
     "guest_name": "Claire Danes",
-    "film_title": "Streetwise/Tiny: The Life of Erin Blackwell",
+    "film_title": "Tiny: The Life of Erin Blackwell",
     "film_year": null,
     "film_id": "tiny-the-life-of-erin-blackwell",
     "catalog_spine": 1080,
@@ -31846,7 +31846,7 @@
   {
     "guest_slug": "benny-safdie",
     "guest_name": "Benny Safdie",
-    "film_title": "Il posto",
+    "film_title": "Il Posto",
     "film_year": null,
     "film_id": "il-posto",
     "catalog_spine": null,
@@ -31866,7 +31866,7 @@
   {
     "guest_slug": "benny-safdie",
     "guest_name": "Benny Safdie",
-    "film_title": "L’argent",
+    "film_title": "L'argent",
     "film_year": null,
     "film_id": "largent",
     "catalog_spine": 886,
@@ -32248,7 +32248,7 @@
   {
     "guest_slug": "jay-duplass",
     "guest_name": "Jay Duplass",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -32518,7 +32518,7 @@
   {
     "guest_slug": "kristin-scott-thomas",
     "guest_name": "Kristin Scott Thomas",
-    "film_title": "Casque d'or",
+    "film_title": "Casque d’or",
     "film_year": null,
     "film_id": "casque-dor",
     "catalog_spine": 270,
@@ -32658,7 +32658,7 @@
   {
     "guest_slug": "kristin-scott-thomas",
     "guest_name": "Kristin Scott Thomas",
-    "film_title": "Ivan's Childhood",
+    "film_title": "Ivan’s Childhood",
     "film_year": null,
     "film_id": "ivans-childhood",
     "catalog_spine": 397,
@@ -32720,7 +32720,7 @@
   {
     "guest_slug": "jamie-lee-curtis",
     "guest_name": "Jamie Lee Curtis",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -33020,7 +33020,7 @@
   {
     "guest_slug": "ronan-farrow",
     "guest_name": "Ronan Farrow",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -33042,7 +33042,7 @@
   {
     "guest_slug": "joseph-kosinski",
     "guest_name": "Joseph Kosinski",
-    "film_title": "L'avventura",
+    "film_title": "L’avventura",
     "film_year": null,
     "film_id": "lavventura",
     "catalog_spine": 98,
@@ -33082,7 +33082,7 @@
   {
     "guest_slug": "joseph-kosinski",
     "guest_name": "Joseph Kosinski",
-    "film_title": "Le samouraï",
+    "film_title": "Le Samouraï",
     "film_year": null,
     "film_id": "le-samourai",
     "catalog_spine": 306,
@@ -33242,7 +33242,7 @@
   {
     "guest_slug": "paul-w-downs",
     "guest_name": "Paul W. Downs",
-    "film_title": "Traffic",
+    "film_title": "Trafic",
     "film_year": null,
     "film_id": "trafic",
     "catalog_spine": 439,
@@ -33505,7 +33505,7 @@
   {
     "guest_slug": "francois-girard",
     "guest_name": "François Girard",
-    "film_title": "Merry Christmas Mr. Lawrence",
+    "film_title": "Merry Christmas, Mr. Lawrence",
     "film_year": null,
     "film_id": "merry-christmas-mr-lawrence",
     "catalog_spine": 535,
@@ -33525,7 +33525,7 @@
   {
     "guest_slug": "francois-girard",
     "guest_name": "François Girard",
-    "film_title": "The Killing",
+    "film_title": "The Killer",
     "film_year": null,
     "film_id": "the-killer",
     "catalog_spine": 8,
@@ -33767,7 +33767,7 @@
   {
     "guest_slug": "diego-luna",
     "guest_name": "Diego Luna",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -33789,7 +33789,7 @@
   {
     "guest_slug": "diego-luna",
     "guest_name": "Diego Luna",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -33951,7 +33951,7 @@
   {
     "guest_slug": "azazel-jacobs",
     "guest_name": "Azazel Jacobs",
-    "film_title": "Hobson's Choice",
+    "film_title": "Hobson’s Choice",
     "film_year": null,
     "film_id": "hobsons-choice",
     "catalog_spine": 461,
@@ -33991,7 +33991,7 @@
   {
     "guest_slug": "azazel-jacobs",
     "guest_name": "Azazel Jacobs",
-    "film_title": "La Ciénaga",
+    "film_title": "La ciénaga",
     "film_year": null,
     "film_id": "la-cienaga",
     "catalog_spine": 743,
@@ -34091,7 +34091,7 @@
   {
     "guest_slug": "azazel-jacobs",
     "guest_name": "Azazel Jacobs",
-    "film_title": "Pandora's Box",
+    "film_title": "Pandora’s Box",
     "film_year": null,
     "film_id": "pandoras-box",
     "catalog_spine": 358,
@@ -34211,7 +34211,7 @@
   {
     "guest_slug": "zeinabu-irene-davis",
     "guest_name": "Zeinabu irene Davis",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -34548,7 +34548,7 @@
   {
     "guest_slug": "payal-kapadia",
     "guest_name": "Payal Kapadia",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -34568,7 +34568,7 @@
   {
     "guest_slug": "payal-kapadia",
     "guest_name": "Payal Kapadia",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -34924,7 +34924,7 @@
   {
     "guest_slug": "ramell-ross",
     "guest_name": "RaMell Ross",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -34968,7 +34968,7 @@
   {
     "guest_slug": "ramell-ross",
     "guest_name": "RaMell Ross",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -35050,7 +35050,7 @@
   {
     "guest_slug": "gints-zilbalodis",
     "guest_name": "Gints Zilbalodis",
-    "film_title": "Woman in the Dunes",
+    "film_title": "The Woman in the Dunes",
     "film_year": null,
     "film_id": "the-woman-in-the-dunes",
     "catalog_spine": 394,
@@ -35192,7 +35192,7 @@
   {
     "guest_slug": "nathalie-emmanuel",
     "guest_name": "Nathalie Emmanuel",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -35834,7 +35834,7 @@
   {
     "guest_slug": "jeremy-thomas",
     "guest_name": "Jeremy Thomas",
-    "film_title": "The Last Wave",
+    "film_title": "The Last Waltz",
     "film_year": null,
     "film_id": "the-last-waltz",
     "catalog_spine": 1118,
@@ -35938,7 +35938,7 @@
   {
     "guest_slug": "jason-schwartzman",
     "guest_name": "Jason Schwartzman",
-    "film_title": "The Killers",
+    "film_title": "The Killer",
     "film_year": null,
     "film_id": "the-killer",
     "catalog_spine": 8,
@@ -35978,7 +35978,7 @@
   {
     "guest_slug": "jason-schwartzman",
     "guest_name": "Jason Schwartzman",
-    "film_title": "Straw Dogs",
+    "film_title": "Stray Dog",
     "film_year": null,
     "film_id": "stray-dog",
     "catalog_spine": 233,
@@ -36100,7 +36100,7 @@
   {
     "guest_slug": "kyle-maclachlan",
     "guest_name": "Kyle MacLachlan",
-    "film_title": "sex, lies, and videotape",
+    "film_title": "Sex, Lies, and Videotape",
     "film_year": null,
     "film_id": "sex-lies-and-videotape",
     "catalog_spine": 938,
@@ -36260,7 +36260,7 @@
   {
     "guest_slug": "sarita-choudhury",
     "guest_name": "Sarita Choudhury",
-    "film_title": "L'eclisse",
+    "film_title": "Eclipse",
     "film_year": null,
     "film_id": "eclipse",
     "catalog_spine": 278,
@@ -36604,7 +36604,7 @@
   {
     "guest_slug": "charlotte-gainsbourg",
     "guest_name": "Charlotte Gainsbourg",
-    "film_title": "Belle de jour",
+    "film_title": "Belle de Jour",
     "film_year": null,
     "film_id": "belle-de-jour",
     "catalog_spine": 593,
@@ -36666,7 +36666,7 @@
   {
     "guest_slug": "jeremy-o-harris",
     "guest_name": "Jeremy O. Harris",
-    "film_title": "Original Cast Album: \"Company\"",
+    "film_title": "Original Cast Album: “Company”",
     "film_year": null,
     "film_id": "original-cast-album-company",
     "catalog_spine": 1090,
@@ -36726,7 +36726,7 @@
   {
     "guest_slug": "jeremy-o-harris",
     "guest_name": "Jeremy O. Harris",
-    "film_title": "Salò, or The 120 Days of Sodom",
+    "film_title": "Salò, or the 120 Days of Sodom",
     "film_year": null,
     "film_id": "salo-or-the-120-days-of-sodom",
     "catalog_spine": 17,
@@ -36948,7 +36948,7 @@
   {
     "guest_slug": "nuri-bilge-ceylan",
     "guest_name": "Nuri Bilge Ceylan",
-    "film_title": "Ingmar Bergman's Cinema",
+    "film_title": "Ingmar Bergman’s Cinema",
     "film_year": null,
     "film_id": "ingmar-bergmans-cinema",
     "catalog_spine": null,
@@ -37040,7 +37040,7 @@
   {
     "guest_slug": "julio-torres",
     "guest_name": "Julio Torres",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -37160,7 +37160,7 @@
   {
     "guest_slug": "julio-torres",
     "guest_name": "Julio Torres",
-    "film_title": "Pierre Etaix",
+    "film_title": "Pierre Étaix",
     "film_year": null,
     "film_id": "pierre-etaix",
     "catalog_spine": null,
@@ -37305,7 +37305,7 @@
   {
     "guest_slug": "charles-melton",
     "guest_name": "Charles Melton",
-    "film_title": "Le samouraï",
+    "film_title": "Le Samouraï",
     "film_year": null,
     "film_id": "le-samourai",
     "catalog_spine": 306,
@@ -37465,7 +37465,7 @@
   {
     "guest_slug": "charles-melton",
     "guest_name": "Charles Melton",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -37667,7 +37667,7 @@
   {
     "guest_slug": "hari-nef",
     "guest_name": "Hari Nef",
-    "film_title": "Belle de jour",
+    "film_title": "Belle de Jour",
     "film_year": null,
     "film_id": "belle-de-jour",
     "catalog_spine": 593,
@@ -37867,7 +37867,7 @@
   {
     "guest_slug": "rosine-mbakam",
     "guest_name": "Rosine Mbakam",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -37907,7 +37907,7 @@
   {
     "guest_slug": "hlynur-palmason",
     "guest_name": "Hlynur Pálmason",
-    "film_title": "Cría cuervos . . .",
+    "film_title": "Cría cuervos",
     "film_year": null,
     "film_id": "cria-cuervos",
     "catalog_spine": 403,
@@ -38027,7 +38027,7 @@
   {
     "guest_slug": "hlynur-palmason",
     "guest_name": "Hlynur Pálmason",
-    "film_title": "L'humanité",
+    "film_title": "L’humanité",
     "film_year": null,
     "film_id": "lhumanite",
     "catalog_spine": 981,
@@ -38409,7 +38409,7 @@
   {
     "guest_slug": "trace-lysette",
     "guest_name": "Trace Lysette",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -38469,7 +38469,7 @@
   {
     "guest_slug": "trace-lysette",
     "guest_name": "Trace Lysette",
-    "film_title": "love jones",
+    "film_title": "Love Jones",
     "film_year": null,
     "film_id": "love-jones",
     "catalog_spine": 1117,
@@ -38873,7 +38873,7 @@
   {
     "guest_slug": "wilco",
     "guest_name": "Wilco",
-    "film_title": "A Poem Is a Naked Person",
+    "film_title": "Leon Russell: A Poem Is a Naked Person",
     "film_year": null,
     "film_id": "leon-russell-a-poem-is-a-naked-person",
     "catalog_spine": 805,
@@ -39158,7 +39158,7 @@
   {
     "guest_slug": "kemp-powers",
     "guest_name": "Kemp Powers",
-    "film_title": "One Night in Miami . . .",
+    "film_title": "One Night in Miami",
     "film_year": null,
     "film_id": "one-night-in-miami",
     "catalog_spine": 1106,
@@ -39358,7 +39358,7 @@
   {
     "guest_slug": "elvis-mitchell",
     "guest_name": "Elvis Mitchell",
-    "film_title": "'Round Midnight",
+    "film_title": "‘Round Midnight",
     "film_year": null,
     "film_id": "round-midnight",
     "catalog_spine": 1122,
@@ -39398,7 +39398,7 @@
   {
     "guest_slug": "elvis-mitchell",
     "guest_name": "Elvis Mitchell",
-    "film_title": "love jones",
+    "film_title": "Love Jones",
     "film_year": null,
     "film_id": "love-jones",
     "catalog_spine": 1117,
@@ -39438,7 +39438,7 @@
   {
     "guest_slug": "elvis-mitchell",
     "guest_name": "Elvis Mitchell",
-    "film_title": "Miller's Crossing",
+    "film_title": "Miller’s Crossing",
     "film_year": null,
     "film_id": "millers-crossing",
     "catalog_spine": 1112,
@@ -40068,7 +40068,7 @@
   {
     "guest_slug": "tim-robbins",
     "guest_name": "Tim Robbins",
-    "film_title": "Antonio Gaudí",
+    "film_title": "Antonio Gaudi",
     "film_year": null,
     "film_id": "antonio-gaudi",
     "catalog_spine": 425,
@@ -40210,7 +40210,7 @@
   {
     "guest_slug": "tim-robbins",
     "guest_name": "Tim Robbins",
-    "film_title": "La Jetée/Sans Soleil",
+    "film_title": "La jetée / Sans Soleil",
     "film_year": null,
     "film_id": "la-jetee-sans-soleil",
     "catalog_spine": 387,
@@ -40979,7 +40979,7 @@
   {
     "guest_slug": "ben-sinclair",
     "guest_name": "Ben Sinclair",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -41139,7 +41139,7 @@
   {
     "guest_slug": "bill-and-turner-ross",
     "guest_name": "Bill and Turner Ross",
-    "film_title": "Touki bouki",
+    "film_title": "Touki Bouki",
     "film_year": null,
     "film_id": "touki-bouki",
     "catalog_spine": null,
@@ -41239,7 +41239,7 @@
   {
     "guest_slug": "bill-and-turner-ross",
     "guest_name": "Bill and Turner Ross",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -41259,7 +41259,7 @@
   {
     "guest_slug": "bill-and-turner-ross",
     "guest_name": "Bill and Turner Ross",
-    "film_title": "Harlan County USA",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -41935,7 +41935,7 @@
   {
     "guest_slug": "bertrand-bonello",
     "guest_name": "Bertrand Bonello",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -41997,7 +41997,7 @@
   {
     "guest_slug": "ron-shelton",
     "guest_name": "Ron Shelton",
-    "film_title": "Straw Dogs",
+    "film_title": "Stray Dog",
     "film_year": null,
     "film_id": "stray-dog",
     "catalog_spine": 233,
@@ -42217,7 +42217,7 @@
   {
     "guest_slug": "flying-lotus",
     "guest_name": "Flying Lotus",
-    "film_title": "Masculin féminin",
+    "film_title": "Masculin, féminin",
     "film_year": null,
     "film_id": "masculin-feminin",
     "catalog_spine": 308,
@@ -42397,7 +42397,7 @@
   {
     "guest_slug": "slavoj-zizek",
     "guest_name": "Slavoj Zizek",
-    "film_title": "Y Tu Mamá También",
+    "film_title": "Y tu mamá también",
     "film_year": null,
     "film_id": "y-tu-mama-tambien",
     "catalog_spine": 723,
@@ -42703,7 +42703,7 @@
   {
     "guest_slug": "neal-brennan",
     "guest_name": "Neal Brennan",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -42863,7 +42863,7 @@
   {
     "guest_slug": "park-chan-wook",
     "guest_name": "Park Chan-wook",
-    "film_title": "The Cousins",
+    "film_title": "Les Cousins",
     "film_year": null,
     "film_id": "les-cousins",
     "catalog_spine": 581,
@@ -42899,7 +42899,7 @@
   {
     "guest_slug": "park-chan-wook",
     "guest_name": "Park Chan-wook",
-    "film_title": "La Notte",
+    "film_title": "La notte",
     "film_year": null,
     "film_id": "la-notte",
     "catalog_spine": 678,
@@ -42935,7 +42935,7 @@
   {
     "guest_slug": "park-chan-wook",
     "guest_name": "Park Chan-wook",
-    "film_title": "Le Silence de la mer",
+    "film_title": "Le silence de la mer",
     "film_year": null,
     "film_id": "le-silence-de-la-mer",
     "catalog_spine": 755,
@@ -43392,7 +43392,7 @@
   {
     "guest_slug": "agnes-b",
     "guest_name": "Agnès B.",
-    "film_title": "Theorem",
+    "film_title": "Teorema",
     "film_year": null,
     "film_id": "teorema",
     "catalog_spine": 1013,
@@ -43611,7 +43611,7 @@
   {
     "guest_slug": "alain-guiraudie",
     "guest_name": "Alain Guiraudie",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -43631,7 +43631,7 @@
   {
     "guest_slug": "alain-guiraudie",
     "guest_name": "Alain Guiraudie’s Criterion Closet Picks",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -43751,7 +43751,7 @@
   {
     "guest_slug": "jacques-audiard",
     "guest_name": "Jacques Audiard’s Criterion Closet Picks",
-    "film_title": "L'Avventura",
+    "film_title": "L’avventura",
     "film_year": null,
     "film_id": "lavventura",
     "catalog_spine": 98,
@@ -43808,7 +43808,7 @@
   {
     "guest_slug": "jacques-audiard",
     "guest_name": "Jacques Audiard’s Criterion Closet Picks",
-    "film_title": "La Ronde",
+    "film_title": "La ronde",
     "film_year": null,
     "film_id": "la-ronde",
     "catalog_spine": 443,
@@ -43967,7 +43967,7 @@
   {
     "guest_slug": "matteo-garrone",
     "guest_name": "Matteo Garrone’s Criterion Closet Picks",
-    "film_title": "Mulholland Drive",
+    "film_title": "Mulholland Dr.",
     "film_year": null,
     "film_id": "mulholland-dr",
     "catalog_spine": 779,
@@ -44067,7 +44067,7 @@
   {
     "guest_slug": "lucrecia-martel",
     "guest_name": "Lucrecia Martel",
-    "film_title": "Cat People",
+    "film_title": "Boat People",
     "film_year": null,
     "film_id": "boat-people",
     "catalog_spine": 1113,
@@ -44267,7 +44267,7 @@
   {
     "guest_slug": "laura-dern",
     "guest_name": "Laura Dern",
-    "film_title": "Tanner ’88",
+    "film_title": "Tanner ‘88",
     "film_year": null,
     "film_id": "tanner-88",
     "catalog_spine": 258,
@@ -44327,7 +44327,7 @@
   {
     "guest_slug": "laura-dern",
     "guest_name": "Laura Dern",
-    "film_title": "The Umbrellas of Cherbourg",
+    "film_title": "The Umbrellas of Cherbourg (Jacques Demy box)",
     "film_year": null,
     "film_id": "the-umbrellas-of-cherbourg-jacques-demy-box",
     "catalog_spine": 716,
@@ -44347,7 +44347,7 @@
   {
     "guest_slug": "laura-dern",
     "guest_name": "Laura Dern",
-    "film_title": "Belle de jour",
+    "film_title": "Belle de Jour",
     "film_year": null,
     "film_id": "belle-de-jour",
     "catalog_spine": 593,
@@ -44587,7 +44587,7 @@
   {
     "guest_slug": "laura-dern",
     "guest_name": "Laura Dern",
-    "film_title": "Fanny and Alexander",
+    "film_title": "Fanny and Alexander Box Set",
     "film_year": null,
     "film_id": "fanny-and-alexander-box-set",
     "catalog_spine": 261,
@@ -44898,7 +44898,7 @@
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
     "guest_name": "Juliette Binoche and Ralph Fiennes",
-    "film_title": "Au hasard Balthazar",
+    "film_title": "Au Hasard Balthazar",
     "film_year": null,
     "film_id": "au-hasard-balthazar",
     "catalog_spine": 297,
@@ -45137,7 +45137,7 @@
   {
     "guest_slug": "zoe-kravitz-and-channing-tatum",
     "guest_name": "Zoë Kravitz and Channing Tatum",
-    "film_title": "Harlan County USA",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -45157,7 +45157,7 @@
   {
     "guest_slug": "zoe-kravitz-and-channing-tatum",
     "guest_name": "Zoë Kravitz and Channing Tatum",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -45237,7 +45237,7 @@
   {
     "guest_slug": "zoe-kravitz-and-channing-tatum",
     "guest_name": "Zoë Kravitz and Channing Tatum",
-    "film_title": "The Killing",
+    "film_title": "The Killer",
     "film_year": null,
     "film_id": "the-killer",
     "catalog_spine": 8,
@@ -45704,7 +45704,7 @@
   {
     "guest_slug": "annie-baker-and-lucian-johnston",
     "guest_name": "Annie Baker and Lucian Johnston",
-    "film_title": "L’enfance nue",
+    "film_title": "L’Enfance Nue",
     "film_year": null,
     "film_id": "lenfance-nue",
     "catalog_spine": 534,
@@ -45724,7 +45724,7 @@
   {
     "guest_slug": "annie-baker-and-lucian-johnston",
     "guest_name": "Annie Baker and Lucian Johnston",
-    "film_title": "L’argent",
+    "film_title": "L'argent",
     "film_year": null,
     "film_id": "largent",
     "catalog_spine": 886,
@@ -46077,7 +46077,7 @@
   {
     "guest_slug": "ben-gibbards",
     "guest_name": "Ben Gibbards",
-    "film_title": "Streetwise/Tiny: The Life of Erin Blackwell",
+    "film_title": "Tiny: The Life of Erin Blackwell",
     "film_year": null,
     "film_id": "tiny-the-life-of-erin-blackwell",
     "catalog_spine": 1080,
@@ -46343,7 +46343,7 @@
   {
     "guest_slug": "alessandro-borghi-felix-van-groeningen-and-charlotte-vandermeersch",
     "guest_name": "Alessandro Borghi, Felix van Groeningen, and Charlotte Vandermeersch",
-    "film_title": "Dietrich & von Sternberg in Hollywood",
+    "film_title": "Dietrich & Von Sternberg in Hollywood (box set)",
     "film_year": null,
     "film_id": "dietrich-von-sternberg-in-hollywood-box-set",
     "catalog_spine": 930,
@@ -46707,7 +46707,7 @@
   {
     "guest_slug": "saul-williams-and-anisia-uzeyman",
     "guest_name": "Saul Williams and Anisia Uzeyman",
-    "film_title": "Touki bouki",
+    "film_title": "Touki Bouki",
     "film_year": null,
     "film_id": "touki-bouki",
     "catalog_spine": null,
@@ -46809,7 +46809,7 @@
   {
     "guest_slug": "vince-staples",
     "guest_name": "Vince Staples",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -47337,7 +47337,7 @@
   {
     "guest_slug": "john-david-washington-and-malcolm-washington",
     "guest_name": "John David Washington and Malcolm Washington",
-    "film_title": "Jackie Chan: Emergence of a Superstar",
+    "film_title": "Jackie Chan: Emergence of a Superstar (box set)",
     "film_year": null,
     "film_id": "jackie-chan-emergence-of-a-superstar-box-set",
     "catalog_spine": 1197,
@@ -47679,7 +47679,7 @@
   {
     "guest_slug": "patton-oswalt",
     "guest_name": "Patton Oswalt",
-    "film_title": "The Flavor of Green Tea over Rice",
+    "film_title": "The Flavor of Green Tea Over Rice",
     "film_year": null,
     "film_id": "the-flavor-of-green-tea-over-rice",
     "catalog_spine": 989,
@@ -47699,7 +47699,7 @@
   {
     "guest_slug": "patton-oswalt",
     "guest_name": "Patton Oswalt",
-    "film_title": "Le samouraï",
+    "film_title": "Le Samouraï",
     "film_year": null,
     "film_id": "le-samourai",
     "catalog_spine": 306,
@@ -47859,7 +47859,7 @@
   {
     "guest_slug": "adrian-utley",
     "guest_name": "Adrian Utley",
-    "film_title": "Merry Christmas Mr. Lawrence",
+    "film_title": "Merry Christmas, Mr. Lawrence",
     "film_year": null,
     "film_id": "merry-christmas-mr-lawrence",
     "catalog_spine": 535,
@@ -48519,7 +48519,7 @@
   {
     "guest_slug": "louis-garrel",
     "guest_name": "Louis Garrel",
-    "film_title": "Pierre Etaix",
+    "film_title": "Pierre Étaix",
     "film_year": null,
     "film_id": "pierre-etaix",
     "catalog_spine": null,
@@ -50018,7 +50018,7 @@
   {
     "guest_slug": "harris-savides",
     "guest_name": "Harris Savides",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -50120,7 +50120,7 @@
   {
     "guest_slug": "todd-haynes",
     "guest_name": "Todd Haynes",
-    "film_title": "Masculin féminin",
+    "film_title": "Masculin, féminin",
     "film_year": null,
     "film_id": "masculin-feminin",
     "catalog_spine": 308,
@@ -50402,7 +50402,7 @@
   {
     "guest_slug": "jerry-schatzberg",
     "guest_name": "Jerry Schatzberg",
-    "film_title": "’Round Midnight",
+    "film_title": "‘Round Midnight",
     "film_year": null,
     "film_id": "round-midnight",
     "catalog_spine": 1122,
@@ -50442,7 +50442,7 @@
   {
     "guest_slug": "jerry-schatzberg",
     "guest_name": "Jerry Schatzberg",
-    "film_title": "Dietrich & von Sternberg in Hollywood",
+    "film_title": "Dietrich & Von Sternberg in Hollywood (box set)",
     "film_year": null,
     "film_id": "dietrich-von-sternberg-in-hollywood-box-set",
     "catalog_spine": 930,
@@ -50790,7 +50790,7 @@
   {
     "guest_slug": "guy-maddin",
     "guest_name": "Guy Maddin",
-    "film_title": "Symbiopsychotaxiplasm: Two Takes by William Greaves",
+    "film_title": "Symbiopsychotaxiplasm: Two Takes",
     "film_year": null,
     "film_id": "symbiopsychotaxiplasm-two-takes",
     "catalog_spine": 360,
@@ -50850,7 +50850,7 @@
   {
     "guest_slug": "guy-maddin",
     "guest_name": "Guy Maddin",
-    "film_title": "WR: Mysteries of the Organism",
+    "film_title": "W.R.: Mysteries of the Organism",
     "film_year": null,
     "film_id": "wr-mysteries-of-the-organism",
     "catalog_spine": 389,
@@ -51010,7 +51010,7 @@
   {
     "guest_slug": "elegance-bratton",
     "guest_name": "Elegance Bratton",
-    "film_title": "Paris Is Burning",
+    "film_title": "Paris is Burning",
     "film_year": null,
     "film_id": "paris-is-burning",
     "catalog_spine": 1018,
@@ -51132,7 +51132,7 @@
   {
     "guest_slug": "matthew-modine",
     "guest_name": "Matthew Modine",
-    "film_title": "Tanner ’88",
+    "film_title": "Tanner ‘88",
     "film_year": null,
     "film_id": "tanner-88",
     "catalog_spine": 258,
@@ -51172,7 +51172,7 @@
   {
     "guest_slug": "matthew-modine",
     "guest_name": "Matthew Modine",
-    "film_title": "Dr. Strangelove, or: How I Learned to Stop Worrying and Love the Bomb",
+    "film_title": "Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb",
     "film_year": null,
     "film_id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
     "catalog_spine": 821,
@@ -51638,7 +51638,7 @@
   {
     "guest_slug": "tracy-letts",
     "guest_name": "Tracy Letts",
-    "film_title": "’Round Midnight",
+    "film_title": "‘Round Midnight",
     "film_year": null,
     "film_id": "round-midnight",
     "catalog_spine": 1122,
@@ -51658,7 +51658,7 @@
   {
     "guest_slug": "tracy-letts",
     "guest_name": "Tracy Letts",
-    "film_title": "Thelonious Monk Straight, No Chaser",
+    "film_title": "Thelonious Monk: Straight, No Chaser",
     "film_year": null,
     "film_id": "thelonious-monk-straight-no-chaser",
     "catalog_spine": 1265,
@@ -51698,7 +51698,7 @@
   {
     "guest_slug": "tracy-letts",
     "guest_name": "Tracy Letts",
-    "film_title": "love jones",
+    "film_title": "Love Jones",
     "film_year": null,
     "film_id": "love-jones",
     "catalog_spine": 1117,
@@ -51960,7 +51960,7 @@
   {
     "guest_slug": "andre-gregory-and-wallace-shawn",
     "guest_name": "Andre Gregory And Wallace Shawn",
-    "film_title": "L’eclisse",
+    "film_title": "Eclipse",
     "film_year": null,
     "film_id": "eclipse",
     "catalog_spine": 278,
@@ -52222,7 +52222,7 @@
   {
     "guest_slug": "gaspar-noe",
     "guest_name": "Gaspar Noe",
-    "film_title": "Salò, or The 120 Days of Sodom",
+    "film_title": "Salò, or the 120 Days of Sodom",
     "film_year": null,
     "film_id": "salo-or-the-120-days-of-sodom",
     "catalog_spine": 17,
@@ -52450,7 +52450,7 @@
   {
     "guest_slug": "phil-rosenthal",
     "guest_name": "Phil Rosenthal",
-    "film_title": "Dr. Strangelove, or: How I Learned to Stop Worrying and Love the Bomb",
+    "film_title": "Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb",
     "film_year": null,
     "film_id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
     "catalog_spine": 821,
@@ -52510,7 +52510,7 @@
   {
     "guest_slug": "phil-rosenthal",
     "guest_name": "Phil Rosenthal",
-    "film_title": "Sullivan’s Travels",
+    "film_title": "Sullivan's Travels",
     "film_year": null,
     "film_id": "sullivans-travels",
     "catalog_spine": null,
@@ -52590,7 +52590,7 @@
   {
     "guest_slug": "reginald-hudlin",
     "guest_name": "Reginald Hudlin",
-    "film_title": "Killer of Sheep",
+    "film_title": "Killer of Sheep (1978)",
     "film_year": null,
     "film_id": "killer-of-sheep-1978",
     "catalog_spine": 1262,
@@ -52692,7 +52692,7 @@
   {
     "guest_slug": "reginald-hudlin",
     "guest_name": "Reginald Hudlin",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -52776,7 +52776,7 @@
   {
     "guest_slug": "david-remnick",
     "guest_name": "David Remnick",
-    "film_title": "Thelonious Monk Straight, No Chaser",
+    "film_title": "Thelonious Monk: Straight, No Chaser",
     "film_year": null,
     "film_id": "thelonious-monk-straight-no-chaser",
     "catalog_spine": 1265,
@@ -52836,7 +52836,7 @@
   {
     "guest_slug": "david-remnick",
     "guest_name": "David Remnick",
-    "film_title": "King Lear",
+    "film_title": "King Lear (1987)",
     "film_year": null,
     "film_id": "king-lear-1987",
     "catalog_spine": 1249,
@@ -53042,7 +53042,7 @@
   {
     "guest_slug": "robert-eggers",
     "guest_name": "Robert Eggers",
-    "film_title": "Freaks / The Unknown / The Mystic: Tod Browning’s Sideshow Shockers",
+    "film_title": "Tod Browning’s Sideshow Shockers (Freaks, The Unknown, The Mystic)",
     "film_year": null,
     "film_id": "tod-brownings-sideshow-shockers-freaks-the-unknown-the-mystic",
     "catalog_spine": 1194,
@@ -53186,7 +53186,7 @@
   {
     "guest_slug": "pablo-larrain",
     "guest_name": "Pablo Larrain",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -53455,7 +53455,7 @@
   {
     "guest_slug": "justine-triet",
     "guest_name": "Justine Triet",
-    "film_title": "sex, lies, and videotape",
+    "film_title": "Sex, Lies, and Videotape",
     "film_year": null,
     "film_id": "sex-lies-and-videotape",
     "catalog_spine": 938,
@@ -54068,7 +54068,7 @@
   {
     "guest_slug": "karina-longworth",
     "guest_name": "Karina Longworth",
-    "film_title": "I Am Curious—Yellow",
+    "film_title": "I Am Curious (Yellow)",
     "film_year": null,
     "film_id": "i-am-curious-yellow",
     "catalog_spine": null,
@@ -54351,7 +54351,7 @@
   {
     "guest_slug": "alfonso-cuaron-and-pawel-pawlikowski",
     "guest_name": "Alfonso Cuaron And Pawel Pawlikowski",
-    "film_title": "The Firemen’s Ball",
+    "film_title": "The Firemen's Ball",
     "film_year": null,
     "film_id": "the-firemens-ball",
     "catalog_spine": null,
@@ -54391,7 +54391,7 @@
   {
     "guest_slug": "alfonso-cuaron-and-pawel-pawlikowski",
     "guest_name": "Alfonso Cuaron And Pawel Pawlikowski",
-    "film_title": "Masculin féminin",
+    "film_title": "Masculin, féminin",
     "film_year": null,
     "film_id": "masculin-feminin",
     "catalog_spine": 308,
@@ -55180,7 +55180,7 @@
   {
     "guest_slug": "johnnie-to",
     "guest_name": "Johnnie To",
-    "film_title": "Straw Dogs",
+    "film_title": "Stray Dog",
     "film_year": null,
     "film_id": "stray-dog",
     "catalog_spine": 233,
@@ -55240,7 +55240,7 @@
   {
     "guest_slug": "johnnie-to",
     "guest_name": "Johnnie To",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -55585,7 +55585,7 @@
   {
     "guest_slug": "hideo-kojima",
     "guest_name": "Hideo Kojima",
-    "film_title": "Woman in the Dunes",
+    "film_title": "The Woman in the Dunes",
     "film_year": null,
     "film_id": "the-woman-in-the-dunes",
     "catalog_spine": 394,
@@ -55867,7 +55867,7 @@
   {
     "guest_slug": "five-comics",
     "guest_name": "Five Comics’",
-    "film_title": "Made in U.S.A",
+    "film_title": "Made In USA",
     "film_year": null,
     "film_id": "made-in-usa",
     "catalog_spine": 481,
@@ -55907,7 +55907,7 @@
   {
     "guest_slug": "five-comics",
     "guest_name": "Five Comics’",
-    "film_title": "sex, lies, and videotape",
+    "film_title": "Sex, Lies, and Videotape",
     "film_year": null,
     "film_id": "sex-lies-and-videotape",
     "catalog_spine": 938,
@@ -56261,7 +56261,7 @@
   {
     "guest_slug": "wim-wenders",
     "guest_name": "Wim Wenders",
-    "film_title": "Au hasard Balthazar",
+    "film_title": "Au Hasard Balthazar",
     "film_year": null,
     "film_id": "au-hasard-balthazar",
     "catalog_spine": 297,
@@ -56299,7 +56299,7 @@
   {
     "guest_slug": "wim-wenders",
     "guest_name": "Wim Wenders",
-    "film_title": "A Story of Floating Weeds / Floating Weeds: Two Films by Yasujiro Ozu",
+    "film_title": "A Story of Floating Weeds / Floating Weeds",
     "film_year": null,
     "film_id": "a-story-of-floating-weeds-floating-weeds",
     "catalog_spine": null,
@@ -56382,7 +56382,7 @@
   {
     "guest_slug": "ryusuke-hamaguchi",
     "guest_name": "Ryusuke Hamaguchi",
-    "film_title": "La haine",
+    "film_title": "La Haine",
     "film_year": null,
     "film_id": "la-haine",
     "catalog_spine": 381,
@@ -56605,7 +56605,7 @@
   {
     "guest_slug": "ryusuke-hamaguchi",
     "guest_name": "Ryusuke Hamaguchi",
-    "film_title": "A Story of Floating Weeds / Floating Weeds: Two Films by Yasujiro Ozu",
+    "film_title": "A Story of Floating Weeds / Floating Weeds",
     "film_year": null,
     "film_id": "a-story-of-floating-weeds-floating-weeds",
     "catalog_spine": null,
@@ -57032,7 +57032,7 @@
   {
     "guest_slug": "alex-winter",
     "guest_name": "Alex Winter",
-    "film_title": "Harlan County USA",
+    "film_title": "Harlan County, USA",
     "film_year": null,
     "film_id": "harlan-county-usa",
     "catalog_spine": 334,
@@ -57355,7 +57355,7 @@
   {
     "guest_slug": "jason-bateman",
     "guest_name": "Jason Bateman",
-    "film_title": "Three Colors",
+    "film_title": "Three Colors: Red",
     "film_year": null,
     "film_id": "three-colors-red",
     "catalog_spine": 590,
@@ -57437,7 +57437,7 @@
   {
     "guest_slug": "ben-whishaw",
     "guest_name": "Ben Whishaw",
-    "film_title": "King Lear",
+    "film_title": "King Lear (1987)",
     "film_year": null,
     "film_id": "king-lear-1987",
     "catalog_spine": 1249,
@@ -57700,7 +57700,7 @@
   {
     "guest_slug": "hans-zimmer",
     "guest_name": "Hans Zimmer",
-    "film_title": "Night and Fog",
+    "film_title": "Day for Night",
     "film_year": null,
     "film_id": "day-for-night",
     "catalog_spine": 769,
@@ -57903,7 +57903,7 @@
   {
     "guest_slug": "halle-berry",
     "guest_name": "Halle Berry",
-    "film_title": "love jones",
+    "film_title": "Love Jones",
     "film_year": null,
     "film_id": "love-jones",
     "catalog_spine": 1117,
@@ -58371,7 +58371,7 @@
   {
     "guest_slug": "maggie-gyllenhaal",
     "guest_name": "Maggie Gyllenhaal",
-    "film_title": "’Round Midnight",
+    "film_title": "‘Round Midnight",
     "film_year": null,
     "film_id": "round-midnight",
     "catalog_spine": 1122,
@@ -58391,7 +58391,7 @@
   {
     "guest_slug": "maggie-gyllenhaal",
     "guest_name": "Maggie Gyllenhaal",
-    "film_title": "Il posto",
+    "film_title": "Il Posto",
     "film_year": null,
     "film_id": "il-posto",
     "catalog_spine": null,
@@ -58655,7 +58655,7 @@
   {
     "guest_slug": "shinichiro-watanabe",
     "guest_name": "Shinichiro Watanabe",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
@@ -58757,7 +58757,7 @@
   {
     "guest_slug": "jim-jarmusch",
     "guest_name": "Jim Jarmusch",
-    "film_title": "Il sorpasso",
+    "film_title": "Il Sorpasso",
     "film_year": null,
     "film_id": "il-sorpasso",
     "catalog_spine": 707,
@@ -58959,7 +58959,7 @@
   {
     "guest_slug": "sergei-loznitsa",
     "guest_name": "Sergei Loznitsa",
-    "film_title": "Salò, or The 120 Days of Sodom",
+    "film_title": "Salò, or the 120 Days of Sodom",
     "film_year": null,
     "film_id": "salo-or-the-120-days-of-sodom",
     "catalog_spine": 17,
@@ -58999,7 +58999,7 @@
   {
     "guest_slug": "sergei-loznitsa",
     "guest_name": "Sergei Loznitsa",
-    "film_title": "Brief Encounters / The Long Farewell: Two Films by Kira Muratova",
+    "film_title": "Brief Encounters/The Long Farewell: Two Films by Kira Muratova",
     "film_year": null,
     "film_id": "brief-encountersthe-long-farewell-two-films-by-kira-muratova",
     "catalog_spine": 1229,
@@ -59184,7 +59184,7 @@
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "664-grey-gardens",
+    "film_id": "grey-gardens",
     "film_title": "Grey Gardens",
     "criterion_film_url": "https://www.criterion.com/films/664-grey-gardens",
     "source": "criterion",
@@ -59193,11 +59193,12 @@
     "start_timestamp": 16,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=16",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_title": "Grey Gardens"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "246-loves-of-a-blonde",
+    "film_id": "loves-of-a-blonde",
     "film_title": "Loves of a Blonde",
     "criterion_film_url": "https://www.criterion.com/films/246-loves-of-a-blonde",
     "source": "criterion",
@@ -59206,11 +59207,13 @@
     "start_timestamp": 19,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=19",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 144,
+    "catalog_title": "Loves of a Blonde"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28561-all-that-jazz",
+    "film_id": "all-that-jazz",
     "film_title": "All That Jazz",
     "criterion_film_url": "https://www.criterion.com/films/28561-all-that-jazz",
     "source": "criterion",
@@ -59219,12 +59222,14 @@
     "start_timestamp": 32,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=32",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 724,
+    "catalog_title": "All That Jazz"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "27953-the-bitter-tears-of-petra-von-kant",
-    "film_title": "The Bitter Tears of Petra von Kant",
+    "film_id": "the-bitter-tears-of-petra-von-kant",
+    "film_title": "The Bitter Tears of Petra Von Kant",
     "criterion_film_url": "https://www.criterion.com/films/27953-the-bitter-tears-of-petra-von-kant",
     "source": "criterion",
     "pick_order": 4,
@@ -59232,12 +59237,14 @@
     "start_timestamp": 33,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=33",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 740,
+    "catalog_title": "The Bitter Tears of Petra Von Kant"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "29647-paris-is-burning",
-    "film_title": "Paris Is Burning",
+    "film_id": "paris-is-burning",
+    "film_title": "Paris is Burning",
     "criterion_film_url": "https://www.criterion.com/films/29647-paris-is-burning",
     "source": "criterion",
     "pick_order": 5,
@@ -59245,11 +59252,13 @@
     "start_timestamp": 45,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=45",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1018,
+    "catalog_title": "Paris is Burning"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28704-female-trouble",
+    "film_id": "female-trouble",
     "film_title": "Female Trouble",
     "criterion_film_url": "https://www.criterion.com/films/28704-female-trouble",
     "source": "criterion",
@@ -59258,11 +59267,13 @@
     "start_timestamp": 63,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=63",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 929,
+    "catalog_title": "Female Trouble"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28708-klute",
+    "film_id": "klute",
     "film_title": "Klute",
     "criterion_film_url": "https://www.criterion.com/films/28708-klute",
     "source": "criterion",
@@ -59271,11 +59282,13 @@
     "start_timestamp": 68,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=68",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 987,
+    "catalog_title": "Klute"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "29336-the-virgin-suicides",
+    "film_id": "the-virgin-suicides",
     "film_title": "The Virgin Suicides",
     "criterion_film_url": "https://www.criterion.com/films/29336-the-virgin-suicides",
     "source": "criterion",
@@ -59284,11 +59297,13 @@
     "start_timestamp": 76,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=76",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 920,
+    "catalog_title": "The Virgin Suicides"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "29632-after-hours",
+    "film_id": "after-hours",
     "film_title": "After Hours",
     "criterion_film_url": "https://www.criterion.com/films/29632-after-hours",
     "source": "criterion",
@@ -59297,11 +59312,13 @@
     "start_timestamp": 86,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=86",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1185,
+    "catalog_title": "After Hours"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "27638-summer-with-monika",
+    "film_id": "summer-with-monika",
     "film_title": "Summer with Monika",
     "criterion_film_url": "https://www.criterion.com/films/27638-summer-with-monika",
     "source": "criterion",
@@ -59312,11 +59329,13 @@
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=99",
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 614,
+    "catalog_title": "Summer with Monika"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28600-i-knew-her-well",
+    "film_id": "i-knew-her-well",
     "film_title": "I Knew Her Well",
     "criterion_film_url": "https://www.criterion.com/films/28600-i-knew-her-well",
     "source": "criterion",
@@ -59325,11 +59344,13 @@
     "start_timestamp": 117,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=117",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 801,
+    "catalog_title": "I Knew Her Well"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "1145-the-apu-trilogy",
+    "film_id": "the-apu-trilogy",
     "film_title": "The Apu Trilogy",
     "criterion_film_url": "https://www.criterion.com/boxsets/1145-the-apu-trilogy",
     "source": "criterion",
@@ -59338,12 +59359,14 @@
     "start_timestamp": 135,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=135",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 782,
+    "catalog_title": "The Apu Trilogy"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "27949-belle-de-jour",
-    "film_title": "Belle de jour",
+    "film_id": "belle-de-jour",
+    "film_title": "Belle de Jour",
     "criterion_film_url": "https://www.criterion.com/films/27949-belle-de-jour",
     "source": "criterion",
     "pick_order": 13,
@@ -59351,11 +59374,13 @@
     "start_timestamp": 151,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=151",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 593,
+    "catalog_title": "Belle de Jour"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "34685-flow",
+    "film_id": "flow",
     "film_title": "Flow",
     "criterion_film_url": "https://www.criterion.com/films/34685-flow",
     "source": "criterion",
@@ -59364,7 +59389,9 @@
     "start_timestamp": 164,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=164",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1278,
+    "catalog_title": "Flow"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59394,7 +59421,7 @@
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28986-the-heiress",
+    "film_id": "the-heiress",
     "film_title": "The Heiress",
     "criterion_film_url": "https://www.criterion.com/films/28986-the-heiress",
     "source": "criterion",
@@ -59403,11 +59430,13 @@
     "start_timestamp": 238,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=238",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 974,
+    "catalog_title": "The Heiress"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "28836-funny-games",
+    "film_id": "funny-games",
     "film_title": "Funny Games",
     "criterion_film_url": "https://www.criterion.com/films/28836-funny-games",
     "source": "criterion",
@@ -59416,11 +59445,13 @@
     "start_timestamp": 268,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=268",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 975,
+    "catalog_title": "Funny Games"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "30464-fast-times-at-ridgemont-high",
+    "film_id": "fast-times-at-ridgemont-high",
     "film_title": "Fast Times at Ridgemont High",
     "criterion_film_url": "https://www.criterion.com/films/30464-fast-times-at-ridgemont-high",
     "source": "criterion",
@@ -59429,11 +59460,13 @@
     "start_timestamp": 305,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=305",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1075,
+    "catalog_title": "Fast Times at Ridgemont High"
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
-    "film_id": "30526-the-grifters",
+    "film_id": "the-grifters",
     "film_title": "The Grifters",
     "criterion_film_url": "https://www.criterion.com/films/30526-the-grifters",
     "source": "criterion",
@@ -59442,11 +59475,13 @@
     "start_timestamp": 332,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=332",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1246,
+    "catalog_title": "The Grifters"
   },
   {
     "guest_slug": "john-slattery",
-    "film_id": "28821-shampoo",
+    "film_id": "shampoo",
     "film_title": "Shampoo",
     "criterion_film_url": "https://www.criterion.com/films/28821-shampoo",
     "source": "criterion",
@@ -59455,11 +59490,13 @@
     "start_timestamp": 8,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=8",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 947,
+    "catalog_title": "Shampoo"
   },
   {
     "guest_slug": "john-slattery",
-    "film_id": "29429-no-country-for-old-men",
+    "film_id": "no-country-for-old-men",
     "film_title": "No Country for Old Men",
     "criterion_film_url": "https://www.criterion.com/films/29429-no-country-for-old-men",
     "source": "criterion",
@@ -59468,11 +59505,13 @@
     "start_timestamp": 77,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=77",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 1243,
+    "catalog_title": "No Country for Old Men"
   },
   {
     "guest_slug": "john-slattery",
-    "film_id": "27904-the-awful-truth",
+    "film_id": "the-awful-truth",
     "film_title": "The Awful Truth",
     "criterion_film_url": "https://www.criterion.com/films/27904-the-awful-truth",
     "source": "criterion",
@@ -59481,11 +59520,13 @@
     "start_timestamp": 126,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=126",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 917,
+    "catalog_title": "The Awful Truth"
   },
   {
     "guest_slug": "john-slattery",
-    "film_id": "1285-the-hit",
+    "film_id": "the-hit",
     "film_title": "The Hit",
     "criterion_film_url": "https://www.criterion.com/films/1285-the-hit",
     "source": "criterion",
@@ -59494,11 +59535,13 @@
     "start_timestamp": 191,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=191",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 469,
+    "catalog_title": "The Hit"
   },
   {
     "guest_slug": "john-slattery",
-    "film_id": "1426-the-friends-of-eddie-coyle",
+    "film_id": "the-friends-of-eddie-coyle",
     "film_title": "The Friends of Eddie Coyle",
     "criterion_film_url": "https://www.criterion.com/films/1426-the-friends-of-eddie-coyle",
     "source": "criterion",
@@ -59507,7 +59550,9 @@
     "start_timestamp": 249,
     "extraction_confidence": "high",
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=B_Rhewt6f1E&t=249",
-    "visit_index": 1
+    "visit_index": 1,
+    "catalog_spine": 475,
+    "catalog_title": "The Friends of Eddie Coyle"
   },
   {
     "guest_slug": "kim-morgan",
@@ -60252,7 +60297,7 @@
   {
     "guest_slug": "elisabeth-moss",
     "guest_name": "Elisabeth Moss",
-    "film_title": "Don’t Look Now",
+    "film_title": "Don't Look Now",
     "film_year": null,
     "film_id": "dont-look-now",
     "catalog_spine": 745,
@@ -60292,7 +60337,7 @@
   {
     "guest_slug": "jon-hamm",
     "guest_name": "Jon Hamm",
-    "film_title": "WALL·E",
+    "film_title": "WALL•E",
     "film_year": null,
     "film_id": "walle",
     "catalog_spine": 1161,
@@ -60552,7 +60597,7 @@
   {
     "guest_slug": "jack-harlow",
     "guest_name": "Jack Harlow",
-    "film_title": "Close-up",
+    "film_title": "Close-Up",
     "film_year": null,
     "film_id": "close-up",
     "catalog_spine": 519,
@@ -60672,7 +60717,7 @@
   {
     "guest_slug": "bob-odenkirk",
     "guest_name": "Bob Odenkirk",
-    "film_title": "Scarface",
+    "film_title": "Scarface (1932)",
     "film_year": null,
     "film_id": "scarface-1932",
     "catalog_spine": 1239,
@@ -60772,7 +60817,7 @@
   {
     "guest_slug": "bob-odenkirk",
     "guest_name": "Bob Odenkirk",
-    "film_title": "Salò, or The 120 Days of Sodom",
+    "film_title": "Salò, or the 120 Days of Sodom",
     "film_year": null,
     "film_id": "salo-or-the-120-days-of-sodom",
     "catalog_spine": 17,
@@ -60872,7 +60917,7 @@
   {
     "guest_slug": "bob-odenkirk",
     "guest_name": "Bob Odenkirk",
-    "film_title": "Jackie Chan: Emergence of a Superstar",
+    "film_title": "Jackie Chan: Emergence of a Superstar (box set)",
     "film_year": null,
     "film_id": "jackie-chan-emergence-of-a-superstar-box-set",
     "catalog_spine": 1197,
@@ -60892,7 +60937,7 @@
   {
     "guest_slug": "bob-odenkirk",
     "guest_name": "Bob Odenkirk",
-    "film_title": "Bruce Lee: His Greatest Hits",
+    "film_title": "Bruce Lee: His Greatest Hits (box set)",
     "film_year": null,
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "catalog_spine": 1036,
