@@ -298,6 +298,9 @@ VISIT_CRITERION_URLS = {
     "steve-zahn": [
         "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
     ],
+    "richard-gadd": [
+        "https://www.criterion.com/shop/collection/959-richard-gadd-s-closet-picks",
+    ],
 }
 
 
