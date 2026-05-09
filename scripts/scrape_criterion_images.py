@@ -56,7 +56,7 @@ def main():
     for entry in catalog:
         if not entry.get("criterion_url"):
             continue
-        if entry.get("poster_source") == "criterion":
+        if entry.get("poster_source") == "criterion" and entry.get("poster_url"):
             if args.force:
                 to_scrape.append(entry)
             else:
