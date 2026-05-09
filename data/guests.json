@@ -2735,7 +2735,7 @@
     "name": "Paul B. Preciado",
     "slug": "paul-b-preciado",
     "profession": "director",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/65iZGumjicAvnDXg0JM0vAUFUqF.jpg",
     "youtube_video_id": "XqDpc-bnT_U",
     "youtube_video_url": "https://www.youtube.com/watch?v=XqDpc-bnT_U",
     "vimeo_video_id": null,
@@ -4861,8 +4861,8 @@
   {
     "name": "Steve Zahn",
     "slug": "steve-zahn",
-    "profession": null,
-    "photo_url": null,
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg",
     "youtube_video_id": "QElu6xNs6Q8",
     "youtube_video_url": "https://www.youtube.com/watch?v=QElu6xNs6Q8",
     "vimeo_video_id": null,
@@ -4874,8 +4874,8 @@
   {
     "name": "Richard Gadd",
     "slug": "richard-gadd",
-    "profession": null,
-    "photo_url": null,
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/3McA6R1Wd0Fk86OKjUph9aZM0ih.jpg",
     "youtube_video_id": "1zj9pYwG64g",
     "youtube_video_url": "https://www.youtube.com/watch?v=1zj9pYwG64g",
     "vimeo_video_id": null,
@@ -4883,5 +4883,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/959-richard-gadd-s-closet-picks",
     "pick_count": 7
+  },
+  {
+    "name": "Elijah Wood",
+    "slug": "elijah-wood",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/ayARmqAe9Aab1zg6FjJG0u9MEBo.jpg",
+    "youtube_video_id": "kcXBFY2XBuY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=kcXBFY2XBuY",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
+    "pick_count": 11
   }
 ]

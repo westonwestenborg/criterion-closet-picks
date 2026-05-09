@@ -301,6 +301,9 @@ VISIT_CRITERION_URLS = {
     "richard-gadd": [
         "https://www.criterion.com/shop/collection/959-richard-gadd-s-closet-picks",
     ],
+    "elijah-wood": [
+        "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
+    ],
 }
 
 
