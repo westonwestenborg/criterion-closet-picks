@@ -385,6 +385,7 @@ blockquote p {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .guest-initial {
@@ -398,6 +399,7 @@ blockquote p {
   justify-content: center;
   font-size: 2rem;
   font-style: italic;
+  flex-shrink: 0;
 }
 
 .guest-photo-small {
@@ -405,6 +407,7 @@ blockquote p {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .guest-initial-small {
