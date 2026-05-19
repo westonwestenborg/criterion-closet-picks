@@ -115,6 +115,8 @@ KNOWN_VIDEO_IDS = {
     "steve-zahn": {"youtube_video_id": "QElu6xNs6Q8"},
     "richard-gadd": {"youtube_video_id": "1zj9pYwG64g"},
     "elijah-wood": {"youtube_video_id": "kcXBFY2XBuY"},
+    "eiza-gonzalez": {"youtube_video_id": "zMUzKUMyNeQ"},
+    "boots-riley": {"youtube_video_id": "E_66gXXfrbA"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -161,6 +163,8 @@ KNOWN_CRITERION_URLS = {
     "steve-zahn": "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
     "richard-gadd": "https://www.criterion.com/shop/collection/959-richard-gadd-s-closet-picks",
     "elijah-wood": "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
+    "eiza-gonzalez": "https://www.criterion.com/shop/collection/962-eiza-gonzalez-s-closet-picks",
+    "boots-riley": "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
 }
 
 # Name cleanup

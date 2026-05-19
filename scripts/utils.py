@@ -304,6 +304,16 @@ VISIT_CRITERION_URLS = {
     "elijah-wood": [
         "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
     ],
+    "ira-sachs": [
+        "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks",
+        "https://www.criterion.com/shop/collection/961-ira-sachs-s-closet-picks",
+    ],
+    "eiza-gonzalez": [
+        "https://www.criterion.com/shop/collection/962-eiza-gonzalez-s-closet-picks",
+    ],
+    "boots-riley": [
+        "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
+    ],
 }
 
 

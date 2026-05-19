@@ -3665,7 +3665,25 @@
     "episode_date": "2016-08-10",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks",
-    "pick_count": 10
+    "visits": [
+      {
+        "youtube_video_id": "FA4mnGD5Qi8",
+        "youtube_video_url": "https://www.youtube.com/watch?v=FA4mnGD5Qi8",
+        "vimeo_video_id": null,
+        "episode_date": "2016-08-10",
+        "letterboxd_list_url": null,
+        "criterion_page_url": "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks"
+      },
+      {
+        "youtube_video_id": "ENCPEKroK44",
+        "youtube_video_url": "https://www.youtube.com/watch?v=ENCPEKroK44",
+        "vimeo_video_id": null,
+        "episode_date": null,
+        "letterboxd_list_url": null,
+        "criterion_page_url": "https://www.criterion.com/shop/collection/961-ira-sachs-s-closet-picks"
+      }
+    ],
+    "pick_count": 17
   },
   {
     "name": "The Wolfpack",
@@ -4896,5 +4914,31 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
     "pick_count": 11
+  },
+  {
+    "name": "Eiza González",
+    "slug": "eiza-gonzalez",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/w2pZ8gLqZNguj8cqrDGbMw2Ibj0.jpg",
+    "youtube_video_id": "zMUzKUMyNeQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=zMUzKUMyNeQ",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/962-eiza-gonzalez-s-closet-picks",
+    "pick_count": 6
+  },
+  {
+    "name": "Boots Riley",
+    "slug": "boots-riley",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/gOVD3zUjeHNEqxWrKMz8W3ZKHmb.jpg",
+    "youtube_video_id": "E_66gXXfrbA",
+    "youtube_video_url": "https://www.youtube.com/watch?v=E_66gXXfrbA",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
+    "pick_count": 12
   }
 ]
