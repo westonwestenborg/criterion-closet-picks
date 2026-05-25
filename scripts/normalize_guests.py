@@ -180,6 +180,7 @@ NAME_FIXES = {
     "Five Comics'": "Five Comics",  # Trailing apostrophe from URL extraction
     "Steven Knights'": "Steven Knight",  # Possessive artifact from URL extraction
     "Oscar Issac": "Oscar Isaac",  # Misspelling on Criterion's collection page/URL
+    "Thierry Fremaux": "Thierry Frémaux",  # Accent stripped from Criterion's URL-derived name
 }
 
 # Import multi-visit URLs from shared config
