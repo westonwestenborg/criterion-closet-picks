@@ -314,6 +314,9 @@ VISIT_CRITERION_URLS = {
     "boots-riley": [
         "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
     ],
+    "thierry-fremaux": [
+        "https://www.criterion.com/shop/collection/965-thierry-fremaux-s-closet-picks",
+    ],
 }
 
 

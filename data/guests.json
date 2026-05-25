@@ -4940,5 +4940,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
     "pick_count": 12
+  },
+  {
+    "name": "Thierry Fremaux",
+    "slug": "thierry-fremaux",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/cpqwH40qwAw53U4qbxzL484kRlH.jpg",
+    "youtube_video_id": "h1NsxFbPT-U",
+    "youtube_video_url": "https://www.youtube.com/watch?v=h1NsxFbPT-U",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/965-thierry-fremaux-s-closet-picks",
+    "pick_count": 7
   }
 ]
