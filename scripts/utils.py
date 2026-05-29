@@ -317,6 +317,9 @@ VISIT_CRITERION_URLS = {
     "thierry-fremaux": [
         "https://www.criterion.com/shop/collection/965-thierry-fremaux-s-closet-picks",
     ],
+    "robert-de-niro": [
+        "https://www.criterion.com/shop/collection/966-robert-de-niro-s-closet-picks",
+    ],
 }
 
 

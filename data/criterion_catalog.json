@@ -132678,16 +132678,76 @@
   {
     "spine_number": 1263,
     "title": "The Three Musketeers / The Four Musketeers: Two Films by Richard Lester",
-    "director": "",
-    "year": null,
+    "director": "Pierre Aknine",
+    "year": 2005,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/7974-the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
     "film_id": "the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2085-51259520a591e486478292d7c44d25ed/vTjIL84GfnnUQPTOxsv6pDReCUHiCH_original.jpg",
-    "credits": null,
+    "imdb_id": "tt0425945",
+    "tmdb_id": 119900,
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/uwk8yMUe5XbvbejiBJ6CQNNDUTr.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Pierre Aknine",
+          "tmdb_id": 1071332
+        }
+      ],
+      "writers": [],
+      "cinematographers": [
+        {
+          "name": "Allen Smith",
+          "tmdb_id": 1194062
+        }
+      ],
+      "editors": [],
+      "cast": [
+        {
+          "name": "Emmanuelle Béart",
+          "tmdb_id": 4885,
+          "character": "Milady Winter"
+        },
+        {
+          "name": "Vincent Elbaz",
+          "tmdb_id": 54918,
+          "character": "D'Artagnan"
+        },
+        {
+          "name": "Tchéky Karyo",
+          "tmdb_id": 10698,
+          "character": "Le cardinal de Richelieu"
+        },
+        {
+          "name": "Heino Ferch",
+          "tmdb_id": 1086,
+          "character": "Athos"
+        },
+        {
+          "name": "Grégori Derangère",
+          "tmdb_id": 23670,
+          "character": "Aramis"
+        },
+        {
+          "name": "Grégory Gadebois",
+          "tmdb_id": 223532,
+          "character": "Porthos"
+        },
+        {
+          "name": "Stefania Rocca",
+          "tmdb_id": 15917,
+          "character": "Anne D'Autriche"
+        },
+        {
+          "name": "Diana Amft",
+          "tmdb_id": 57361,
+          "character": "Constance Bonacieux"
+        }
+      ]
+    },
     "is_box_set": true,
     "description": "Alexandre Dumas’s immortal tale of adventure and camaraderie received perhaps the finest of its numerous screen adaptations with this two-part swashbuckling spectacular fromA Hard Day’sNightdirector Richard Lester. Featuring Michael York, OliverReed, Frank Finlay, and Richard Chamberlain as the swaggering swordsmen, who thrust and parry their way through courtly intrigue in seventeenth-century France,The Three MusketeersandThe Four Musketeersare also graced with an all-star supporting cast that includes Raquel Welch, Faye Dunaway, Geraldine Chaplin, and Charlton Heston. Lester’s exuberant epic breathes new life into an oft-told classic through its boisterous slapstick invention, its meticulous attention to period detail, and a sense of pure, unbridled bravado that is thrilling to behold.",
     "included_films": [
@@ -140286,6 +140346,102 @@
           "name": "Mick Ford",
           "tmdb_id": 93847,
           "character": "Richard"
+        }
+      ]
+    }
+  },
+  {
+    "spine_number": null,
+    "title": "Big Deal on Madonna Street",
+    "director": "Mario Monicelli",
+    "year": 1958,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/652-big-deal-on-madonna-street",
+    "film_id": "big-deal-on-madonna-street",
+    "imdb_id": "tt0052216",
+    "tmdb_id": 24382,
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/f5OxD8Nl0pR3DcYHtYhHRfpsmjl.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Mario Monicelli",
+          "tmdb_id": 32375
+        }
+      ],
+      "writers": [
+        {
+          "name": "Agenore Incrocci",
+          "tmdb_id": 5811
+        },
+        {
+          "name": "Furio Scarpelli",
+          "tmdb_id": 5812
+        },
+        {
+          "name": "Suso Cecchi d'Amico",
+          "tmdb_id": 24658
+        },
+        {
+          "name": "Mario Monicelli",
+          "tmdb_id": 32375
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Gianni Di Venanzo",
+          "tmdb_id": 5680
+        }
+      ],
+      "editors": [
+        {
+          "name": "Adriana Novelli",
+          "tmdb_id": 14269
+        }
+      ],
+      "cast": [
+        {
+          "name": "Vittorio Gassman",
+          "tmdb_id": 12259,
+          "character": "Peppe il pantera"
+        },
+        {
+          "name": "Renato Salvatori",
+          "tmdb_id": 27442,
+          "character": "Mario Angeletti"
+        },
+        {
+          "name": "Memmo Carotenuto",
+          "tmdb_id": 12341,
+          "character": "Cosimo"
+        },
+        {
+          "name": "Rossana Rory",
+          "tmdb_id": 91543,
+          "character": "Norma"
+        },
+        {
+          "name": "Carla Gravina",
+          "tmdb_id": 91544,
+          "character": "Nicoletta"
+        },
+        {
+          "name": "Claude Cardinale",
+          "tmdb_id": 4959,
+          "character": "Carmelina"
+        },
+        {
+          "name": "Marcello Mastroianni",
+          "tmdb_id": 5676,
+          "character": "Tiberio"
+        },
+        {
+          "name": "Totò",
+          "tmdb_id": 132190,
+          "character": "Dante Cruciani"
         }
       ]
     }
