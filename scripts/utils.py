@@ -320,6 +320,9 @@ VISIT_CRITERION_URLS = {
     "robert-de-niro": [
         "https://www.criterion.com/shop/collection/966-robert-de-niro-s-closet-picks",
     ],
+    "paul-rudd": [
+        "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
+    ],
 }
 
 
