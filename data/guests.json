@@ -4979,5 +4979,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
     "pick_count": 6
+  },
+  {
+    "name": "Bob the Drag Queen",
+    "slug": "bob-the-drag-queen",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/nxSDj12VwIktohMgOMmjeofMpS2.jpg",
+    "youtube_video_id": "0ZvmGDEBXZM",
+    "youtube_video_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
+    "pick_count": 6
   }
 ]

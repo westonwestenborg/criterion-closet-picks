@@ -120,6 +120,7 @@ KNOWN_VIDEO_IDS = {
     "thierry-fremaux": {"youtube_video_id": "h1NsxFbPT-U"},
     "robert-de-niro": {"youtube_video_id": "1yXOFLr_LJc"},
     "paul-rudd": {"youtube_video_id": "ZTvRQRTVdqA"},
+    "bob-the-drag-queen": {"youtube_video_id": "0ZvmGDEBXZM"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -171,6 +172,7 @@ KNOWN_CRITERION_URLS = {
     "thierry-fremaux": "https://www.criterion.com/shop/collection/965-thierry-fremaux-s-closet-picks",
     "robert-de-niro": "https://www.criterion.com/shop/collection/966-robert-de-niro-s-closet-picks",
     "paul-rudd": "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
+    "bob-the-drag-queen": "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
 }
 
 # Name cleanup
@@ -185,6 +187,7 @@ NAME_FIXES = {
     "Steven Knights'": "Steven Knight",  # Possessive artifact from URL extraction
     "Oscar Issac": "Oscar Isaac",  # Misspelling on Criterion's collection page/URL
     "Thierry Fremaux": "Thierry Frémaux",  # Accent stripped from Criterion's URL-derived name
+    "Bob The Drag Queen": "Bob the Drag Queen",  # Lowercase "the" in stage name (Criterion title-cases it)
 }
 
 # Import multi-visit URLs from shared config

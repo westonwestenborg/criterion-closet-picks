@@ -323,6 +323,9 @@ VISIT_CRITERION_URLS = {
     "paul-rudd": [
         "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
     ],
+    "bob-the-drag-queen": [
+        "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
+    ],
 }
 
 
