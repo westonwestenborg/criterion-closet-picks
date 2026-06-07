@@ -326,6 +326,9 @@ VISIT_CRITERION_URLS = {
     "bob-the-drag-queen": [
         "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
     ],
+    "john-cameron-mitchell": [
+        "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
+    ],
 }
 
 

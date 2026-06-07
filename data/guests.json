@@ -4992,5 +4992,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
     "pick_count": 6
+  },
+  {
+    "name": "John Cameron Mitchell",
+    "slug": "john-cameron-mitchell",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/iDyhkjtgy7U8xl9tKk9xcJA3yEY.jpg",
+    "youtube_video_id": "4iilUJHpAf0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=4iilUJHpAf0",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
+    "pick_count": 12
   }
 ]

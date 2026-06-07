@@ -121,6 +121,7 @@ KNOWN_VIDEO_IDS = {
     "robert-de-niro": {"youtube_video_id": "1yXOFLr_LJc"},
     "paul-rudd": {"youtube_video_id": "ZTvRQRTVdqA"},
     "bob-the-drag-queen": {"youtube_video_id": "0ZvmGDEBXZM"},
+    "john-cameron-mitchell": {"youtube_video_id": "4iilUJHpAf0"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -173,6 +174,7 @@ KNOWN_CRITERION_URLS = {
     "robert-de-niro": "https://www.criterion.com/shop/collection/966-robert-de-niro-s-closet-picks",
     "paul-rudd": "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
     "bob-the-drag-queen": "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
+    "john-cameron-mitchell": "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
 }
 
 # Name cleanup

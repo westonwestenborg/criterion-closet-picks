@@ -23787,15 +23787,19 @@
   {
     "spine_number": 387,
     "title": "La jetée / Sans Soleil",
-    "director": "",
-    "year": null,
+    "director": "Chris Marker",
+    "year": 1962,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/77-la-jetee-sans-soleil",
     "film_id": "la-jetee-sans-soleil",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "genres": [],
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1863-d6916651f0f3ead148ffd869331459b7/oQoeqXYr3XiuO5vvu3J6PphWl19PlW_original.jpg",
+    "imdb_id": "tt0056119",
+    "tmdb_id": 662,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Science Fiction"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/elGidsRHXkk8UyrtLbcMhaptDyp.jpg",
     "is_box_set": true,
     "description": "One of the most influential, radical science-fiction films ever made and a mind-bending free-form travelogue:La JetéeandSans Soleilcouldn’t seem more different—but they’re the twin pillars of an unparalleled and uncompromising career in cinema. A filmmaker, poet, novelist, photographer, editor, and now videographer and digital multimedia artist, Chris Marker has been challenging moviegoers, philosophers, and himself for years with his investigations of time, memory, and the rapid advancement of life on this planet. These two films—a tale of time travel told in still images and a journey to Africa and Japan—remain his best-loved and most widely seen.",
     "included_films": [
@@ -23811,7 +23815,79 @@
       }
     ],
     "box_set_film_count": 2,
-    "poster_source": "criterion"
+    "poster_source": "criterion",
+    "credits": {
+      "directors": [
+        {
+          "name": "Chris Marker",
+          "tmdb_id": 9956
+        }
+      ],
+      "writers": [
+        {
+          "name": "Chris Marker",
+          "tmdb_id": 9956
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Jean Chiabaut",
+          "tmdb_id": 9957
+        },
+        {
+          "name": "Chris Marker",
+          "tmdb_id": 9956
+        }
+      ],
+      "editors": [
+        {
+          "name": "Jean Ravel",
+          "tmdb_id": 9958
+        }
+      ],
+      "cast": [
+        {
+          "name": "Jean Négroni",
+          "tmdb_id": 9960,
+          "character": "Narrator (voice)"
+        },
+        {
+          "name": "Hélène Chatelain",
+          "tmdb_id": 9961,
+          "character": ""
+        },
+        {
+          "name": "Davos Hanich",
+          "tmdb_id": 9962,
+          "character": ""
+        },
+        {
+          "name": "Jacques Ledoux",
+          "tmdb_id": 9963,
+          "character": ""
+        },
+        {
+          "name": "André Heinrich",
+          "tmdb_id": 1167681,
+          "character": ""
+        },
+        {
+          "name": "Jacques Branchu",
+          "tmdb_id": 1167682,
+          "character": ""
+        },
+        {
+          "name": "Pierre Joffroy",
+          "tmdb_id": 1167683,
+          "character": ""
+        },
+        {
+          "name": "Étienne Becker",
+          "tmdb_id": 24854,
+          "character": ""
+        }
+      ]
+    }
   },
   {
     "spine_number": 388,
