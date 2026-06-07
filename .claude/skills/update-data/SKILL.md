@@ -97,6 +97,11 @@ After the pipeline completes, report:
 - Quote extraction confidence for new entries
 - Any validation issues
 - Multi-visit guest attribution (from migrate_source_visit output)
+- New guests' auto-assigned `profession` (from TMDB). TMDB tags by most-credited
+  role, which can misrepresent how a guest is known (e.g. a director tagged
+  "actor"). Flag any that look off so the user can correct them — see fix-guest
+  Workflow 7. Use only the single-word vocabulary (actor/director/writer/
+  musician/producer/cinematographer/editor/other); never multi-role labels.
 
 Ask the user if they want to commit and push the updated data files.
 

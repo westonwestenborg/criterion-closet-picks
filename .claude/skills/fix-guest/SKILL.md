@@ -99,10 +99,43 @@ Or if the dry-run text is approved as-is:
 Skip this step if the user is fixing an existing guest (not adding a new one),
 or if no X/Twitter or Threads credentials are configured in `.env`.
 
+### 7. Correct a guest's profession / descriptor
+
+`profession` is auto-set by `enrich_tmdb.py` from TMDB's `known_for_department`
+via `DEPARTMENT_MAP`. It is a **single-word controlled vocabulary** — only these
+values are used site-wide: `actor`, `director`, `writer`, `musician`, `producer`,
+`cinematographer`, `editor`, `other`. Do **not** invent multi-role labels like
+"writer-director" or "filmmaker"; they break the existing pattern (and the social
+post template + guest-page display assume a single word).
+
+TMDB often tags a guest by the role they're most credited for, which can
+misrepresent how they're known (e.g. John Cameron Mitchell → "actor" when
+"director" fits better). To correct it, edit the value directly in
+`data/guests.json` for that guest's slug:
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json, save_json, GUESTS_FILE
+g=load_json(GUESTS_FILE)
+for x in g:
+    if x['slug']=='SLUG': x['profession']='director'
+save_json(GUESTS_FILE, g)"
+```
+
+Manual edits persist: `enrich_tmdb.py` never overwrites a profession that is
+already set. Pick the single vocabulary value that best matches how the guest is
+publicly known. Rebuild after the change so the guest page reflects it.
+
 ## Key Details
 
 - Fix application order: `WRONG_VIDEO_FIXES` -> `KNOWN_VIDEO_IDS` -> `KNOWN_CRITERION_URLS`
 - Always run `normalize_guests.py` before `extract_quotes.py` to ensure video IDs are set
 - `--force` re-extracts even if the checkpoint says the guest is already processed
+- New guest (no transcript on disk yet): after `normalize_guests.py` sets the video
+  ID, fetch the transcript before extracting quotes — `extract_quotes.py` reads
+  `data/transcripts/{video_id}.json` and does not fetch it. Use
+  `match_youtube.fetch_transcript(video_id)` and save `{video_id, guest_name, segments}`.
+- `profession` is a single-word controlled vocabulary (see Workflow 7) — never multi-role
 - Build after fixes: `npm run build && npx pagefind --site dist`
 - Use `update-data` skill instead for weekly new-episode checks (full pipeline)

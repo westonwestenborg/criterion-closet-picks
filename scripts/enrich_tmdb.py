@@ -39,7 +39,13 @@ from scripts.utils import (
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p"
 
-# Map TMDB known_for_department to our profession enum
+# Map TMDB known_for_department to our profession enum.
+# These values (+ "other" fallback) are the ENTIRE controlled vocabulary for
+# guest.profession site-wide — always single-word, never multi-role labels like
+# "writer-director" or "filmmaker". TMDB tags by most-credited role, which can
+# misrepresent how a guest is known; to override, edit profession directly in
+# data/guests.json (this script never overwrites an already-set profession).
+# See the fix-guest skill, Workflow 7.
 DEPARTMENT_MAP = {
     "Directing": "director",
     "Acting": "actor",
