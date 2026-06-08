@@ -5005,5 +5005,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
     "pick_count": 12
+  },
+  {
+    "name": "Lisa Kudrow",
+    "slug": "lisa-kudrow",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/ziatnwJRiBJIcc8jlk6xoClhfOy.jpg",
+    "youtube_video_id": "VsywXM8vMLs",
+    "youtube_video_url": "https://www.youtube.com/watch?v=VsywXM8vMLs",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/970-lisa-kudrow-s-closet-picks",
+    "pick_count": 5
   }
 ]

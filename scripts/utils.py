@@ -329,6 +329,9 @@ VISIT_CRITERION_URLS = {
     "john-cameron-mitchell": [
         "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
     ],
+    "lisa-kudrow": [
+        "https://www.criterion.com/shop/collection/970-lisa-kudrow-s-closet-picks",
+    ],
 }
 
 
