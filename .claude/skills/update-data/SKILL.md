@@ -146,5 +146,5 @@ The script will report which platforms it posted to or skipped.
 - Checkpoint files in `data/` track progress for resume capability
 - Multi-visit guests (Bill Hader, Guillermo del Toro, etc.) are handled automatically via `data/visit_criterion_urls.json` (loaded by `utils.py` as `VISIT_CRITERION_URLS`)
 - If Gemini quota is exhausted, use `--skip-quotes` and run quote extraction later
-- For parallel extraction: `python scripts/extract_quotes_parallel.py --workers 32`
+- For parallel extraction: `python scripts/extract_quotes.py --workers 32`
 - For a single video: `python scripts/process_video.py --youtube-url "URL"`

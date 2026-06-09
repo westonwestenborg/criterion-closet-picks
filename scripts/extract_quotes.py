@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-Extract quotes from transcripts using Gemini 2.0 Flash.
+Extract quotes from transcripts using Gemini Flash.
 For each guest with both picks and a transcript, sends the transcript + known picks
 to Gemini and extracts verbatim quotes with timestamps.
+
+Use --workers N to parallelize the transcript pass (32 recommended for full runs;
+throughput is bound by per-call latency, not rate limits). The audio-fallback and
+multi-visit passes always run serially after it.
 
 Output: data/picks.json
 """
@@ -11,7 +15,10 @@ import argparse
 import json
 import re
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import nullcontext
 
 from tqdm import tqdm
 
@@ -43,7 +50,7 @@ titles and proper names.
 
 GUEST: {guest_name}
 
-KNOWN PICKS (from curated Letterboxd data - these are the films they took home):
+KNOWN PICKS (from curated data - these are the films they took home):
 {picks_list}
 
 TRANSCRIPT (with timestamps in seconds):
@@ -366,6 +373,78 @@ def extract_quotes_from_audio(
         return []
 
 
+def _process_transcript_guest(
+    model,
+    guest: dict,
+    guest_picks: list[dict],
+    transcript_path,
+    existing_pick_index: dict,
+    checkpoint: dict,
+    lock: threading.Lock | None = None,
+) -> bool:
+    """
+    Extract quotes for one guest from a text transcript and merge the results
+    into existing_pick_index + checkpoint. Returns True on success.
+    Pass a lock to make the shared-state updates thread-safe.
+    """
+    slug = guest["slug"]
+    video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
+    video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
+
+    transcript_data = load_json(transcript_path)
+    if isinstance(transcript_data, list):
+        segments = transcript_data
+    else:
+        segments = transcript_data.get("segments", [])
+
+    if not segments:
+        log(f"  Empty transcript for {guest['name']}")
+        return False
+
+    quotes = extract_quotes_for_guest(model, guest, guest_picks, segments)
+
+    if not quotes:
+        log(f"  No quotes extracted for {guest['name']}")
+        return False
+
+    log(f"  Extracted {len(quotes)} quotes for {guest['name']}")
+
+    # Merge quotes into picks, matching by film_title
+    quotes_by_title = {q["film_title"].lower(): q for q in quotes}
+
+    with lock if lock is not None else nullcontext():
+        for pick in guest_picks:
+            title = pick["film_title"]
+            quote_match = quotes_by_title.get(title.lower())
+
+            if quote_match:
+                pick["quote"] = quote_match["quote"]
+                pick["start_timestamp"] = quote_match["start_timestamp"]
+                pick["extraction_confidence"] = quote_match["confidence"]
+                # Tag with visit_index 1 (primary pass = first visit)
+                pick["visit_index"] = 1
+                if video_id and quote_match["start_timestamp"]:
+                    if video_source == "vimeo":
+                        pick["vimeo_timestamp_url"] = (
+                            f"https://vimeo.com/{video_id}#t={quote_match['start_timestamp']}s"
+                        )
+                    else:
+                        pick["youtube_timestamp_url"] = (
+                            f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
+                        )
+
+            existing_pick_index[(slug, title)] = pick
+
+        checkpoint[slug] = {
+            "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            "quotes_count": len(quotes),
+            "picks_count": len(guest_picks),
+        }
+        save_json(CHECKPOINT_FILE, checkpoint)
+
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser(description="Extract quotes via Gemini")
     parser.add_argument("--pilot", action="store_true", help="Only process pilot guests")
@@ -374,6 +453,8 @@ def main():
     parser.add_argument("--force", action="store_true", help="Re-extract even if already done")
     parser.add_argument("--visit", type=int, default=None,
                         help="Extract only this visit number (1-indexed)")
+    parser.add_argument("--workers", type=int, default=1,
+                        help="Parallel workers for the transcript pass (default 1 = serial; 32 recommended for full runs)")
     args = parser.parse_args()
 
     # Load data
@@ -482,72 +563,43 @@ def main():
 
     log(f"Processing {len(guests_to_process)} guests, skipping {skipped}")
 
-    for guest, guest_picks, transcript_path in tqdm(guests_to_process, desc="Extracting quotes"):
-        slug = guest["slug"]
-        video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
-        video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
-        log(f"  Processing {guest['name']} ({len(guest_picks)} picks)")
+    if args.workers <= 1:
+        for guest, guest_picks, transcript_path in tqdm(guests_to_process, desc="Extracting quotes"):
+            log(f"  Processing {guest['name']} ({len(guest_picks)} picks)")
+            if _process_transcript_guest(
+                model, guest, guest_picks, transcript_path, existing_pick_index, checkpoint
+            ):
+                processed += 1
+                time.sleep(6)  # Rate limit: ~10 RPM for Gemini
+            else:
+                errors += 1
+    else:
+        # Parallel transcript pass: each worker thread gets its own Gemini model;
+        # shared state (pick index + checkpoint) is guarded by a lock.
+        log(f"Running transcript pass with {args.workers} parallel workers")
+        thread_local = threading.local()
+        state_lock = threading.Lock()
 
-        # Load transcript
-        transcript_data = load_json(transcript_path)
-        if isinstance(transcript_data, list):
-            segments = transcript_data
-        else:
-            segments = transcript_data.get("segments", [])
+        def process_one(item) -> bool:
+            guest, guest_picks, transcript_path = item
+            if not hasattr(thread_local, "model"):
+                thread_local.model = get_gemini_model()
+            log(f"  Processing {guest['name']} ({len(guest_picks)} picks)")
+            try:
+                return _process_transcript_guest(
+                    thread_local.model, guest, guest_picks, transcript_path,
+                    existing_pick_index, checkpoint, lock=state_lock,
+                )
+            except Exception as e:
+                log(f"  Error: {guest['name']}: {e}")
+                return False
 
-        if not segments:
-            log(f"  Empty transcript for {guest['name']}")
-            errors += 1
-            continue
-
-        # Extract quotes
-        quotes = extract_quotes_for_guest(model, guest, guest_picks, segments)
-
-        if not quotes:
-            log(f"  No quotes extracted for {guest['name']}")
-            errors += 1
-            continue
-
-        log(f"  Extracted {len(quotes)} quotes")
-
-        # Merge quotes into picks
-        # Match by film_title
-        quotes_by_title = {q["film_title"].lower(): q for q in quotes}
-
-        for pick in guest_picks:
-            title = pick["film_title"]
-            quote_match = quotes_by_title.get(title.lower())
-
-            if quote_match:
-                pick["quote"] = quote_match["quote"]
-                pick["start_timestamp"] = quote_match["start_timestamp"]
-                pick["extraction_confidence"] = quote_match["confidence"]
-                # Tag with visit_index 1 (primary pass = first visit)
-                pick["visit_index"] = 1
-                if video_id and quote_match["start_timestamp"]:
-                    if video_source == "vimeo":
-                        pick["vimeo_timestamp_url"] = (
-                            f"https://vimeo.com/{video_id}#t={quote_match['start_timestamp']}s"
-                        )
-                    else:
-                        pick["youtube_timestamp_url"] = (
-                            f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
-                        )
-
-            # Update existing picks index
-            key = (slug, title)
-            existing_pick_index[key] = pick
-
-        # Update checkpoint
-        checkpoint[slug] = {
-            "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-            "quotes_count": len(quotes),
-            "picks_count": len(guest_picks),
-        }
-        save_json(CHECKPOINT_FILE, checkpoint)
-
-        processed += 1
-        time.sleep(6)  # Rate limit: ~10 RPM for Gemini
+        with ThreadPoolExecutor(max_workers=args.workers) as executor:
+            for ok in executor.map(process_one, guests_to_process):
+                if ok:
+                    processed += 1
+                else:
+                    errors += 1
 
     # --- Audio fallback for non-English guests ---
     if audio_candidates:
