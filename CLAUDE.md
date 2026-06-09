@@ -35,16 +35,16 @@ All data files in `data/` (except `transcripts/`) are committed to the repo. The
 ### Frontend (Astro site)
 
 ```bash
-npm install
-npm run dev        # Local dev server (usually http://localhost:4321)
-npm run build      # Production build to dist/
-npm run preview    # Preview production build locally
+bun install
+bun run dev        # Local dev server (usually http://localhost:4321)
+bun run build      # Production build to dist/
+bun run preview    # Preview production build locally
 ```
 
 After building, generate the search index:
 
 ```bash
-npx pagefind --site dist
+bunx pagefind --site dist
 ```
 
 ### Data Pipeline (Python)
@@ -83,7 +83,7 @@ python scripts/migrate_source_visit.py    # Step 10: Migrate source/visit metada
 python scripts/enrich_tmdb.py             # Step 11: TMDB enrichment (genres, posters, IMDB IDs)
 python scripts/normalize_guests.py        # Step 12: Normalize guest data (second pass)
 python scripts/validate.py                # Step 13: Validate data and generate reports
-python scripts/test_data.py               # Run data integrity tests (also: npm run validate)
+python scripts/test_data.py               # Run data integrity tests (also: bun run validate)
 ```
 
 `process_all.py` runs these same steps in order; prefer it over invoking steps manually.
@@ -166,6 +166,6 @@ criterion-closet-picks/
 - **Data pipeline is manual:** Run scripts locally, commit JSON data files, push to trigger rebuild.
 - **Transcripts are gitignored:** Large and regenerable. Only processed quote data in `picks.json` is committed.
 - **Film matching uses fuzzy search:** `thefuzz` library handles title variations between sources.
-- **Data integrity tests:** Run `python scripts/test_data.py` (or `npm run validate`) to verify data quality after pipeline runs. Tests check film coverage, URL validity, box set structure, guest coverage, and year validity.
+- **Data integrity tests:** Run `python scripts/test_data.py` (or `bun run validate`) to verify data quality after pipeline runs. Tests check film coverage, URL validity, box set structure, guest coverage, and year validity.
 - **Backfill step:** `backfill_films.py` creates catalog entries for films that appear in picks but not in the Criterion catalog, and propagates canonical Criterion URLs from picks_raw into the catalog.
 - **Guests without videos:** Guests who have picks but no YouTube video/transcript get their picks from `picks_raw.json` as a fallback (displayed without quotes).
