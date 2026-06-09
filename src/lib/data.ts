@@ -68,7 +68,17 @@ export interface Pick {
   box_set_criterion_url?: string;
 }
 
-const dataDir = join(process.cwd(), 'data');
+let dataDir = join(process.cwd(), 'data');
+
+/** Test-only: point the loader at a fixture directory and clear all caches. */
+export function setDataDir(dir: string): void {
+  dataDir = dir;
+  _picks = null;
+  _films = null;
+  _guests = null;
+  _guestNameMap = null;
+  _boxSetFilms = null;
+}
 
 function loadRawJSON(fileName: string): any[] {
   const filePath = join(dataDir, fileName);
@@ -131,12 +141,7 @@ let _guests: Guest[] | null = null;
 
 export function getPicks(): Pick[] {
   if (_picks) return _picks;
-  // Prefer real pipeline data, fall back to mock
-  let raw = loadRawJSON('picks.json');
-  if (raw.length === 0) raw = loadRawJSON('mock_picks.json');
-  // If real picks reference film_id format, ensure consistency
-
-  _picks = normalizePicks(raw);
+  _picks = normalizePicks(loadRawJSON('picks.json'));
   return _picks;
 }
 
@@ -152,12 +157,7 @@ export function getFilms(): Film[] {
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
   }
 
-  // Prefer pipeline data (criterion_catalog.json) over mock data
-  let raw = loadRawJSON('criterion_catalog.json');
-  if (raw.length === 0) raw = loadRawJSON('films.json');
-  if (raw.length === 0) raw = loadRawJSON('mock_films.json');
-
-  const allFilms = normalizeFilms(raw, pickCounts);
+  const allFilms = normalizeFilms(loadRawJSON('criterion_catalog.json'), pickCounts);
 
   // If loading from full catalog (1000+ entries), filter to only picked films
   // Exclude box sets unless they're referenced as individual films (not aggregates)
@@ -181,9 +181,7 @@ export function getFilms(): Film[] {
 
 export function getGuests(): Guest[] {
   if (_guests) return _guests;
-  let raw = loadRawJSON('guests.json');
-  if (raw.length === 0) raw = loadRawJSON('mock_guests.json');
-  _guests = raw as Guest[];
+  _guests = loadRawJSON('guests.json') as Guest[];
 
   // Check for local photo overrides in public/photos/
   const photosDir = join(process.cwd(), 'public', 'photos');
