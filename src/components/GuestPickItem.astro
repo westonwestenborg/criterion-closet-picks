@@ -1,0 +1,40 @@
+---
+import QuoteBlock from './QuoteBlock.astro';
+import type { Pick, Guest } from '../lib/data';
+
+interface Props {
+  pick: Pick & { guest: Guest | undefined };
+}
+
+const { pick } = Astro.props;
+---
+<div>
+  <div class="pick-guest-header">
+    {pick.guest?.photo_url ? (
+      <img src={pick.guest.photo_url} alt={pick.guest.name} class="guest-photo-small" loading="lazy" />
+    ) : (
+      <div class="guest-initial-small">
+        {pick.guest?.name?.charAt(0) || '?'}
+      </div>
+    )}
+    <div>
+      <a href={`/guests/${pick.guest_slug}/`} style="font-size: 1.05rem;">
+        {pick.guest?.name || pick.guest_slug}
+      </a>
+      {pick.guest?.profession && (
+        <span class="small-caps text-secondary" style="margin-left: 0.5rem; font-size: 0.85rem;">
+          {pick.guest.profession}
+        </span>
+      )}
+    </div>
+  </div>
+  {pick.quote ? (
+    <QuoteBlock
+      quote={pick.quote}
+      attribution={`${pick.guest?.name || pick.guest_slug}`}
+      timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+    />
+  ) : (
+    <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
+  )}
+</div>

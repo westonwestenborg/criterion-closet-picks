@@ -1,0 +1,98 @@
+---
+import QuoteBlock from './QuoteBlock.astro';
+import type { Pick, Film } from '../lib/data';
+
+interface Props {
+  pick: Pick & { film: Film | undefined };
+}
+
+const { pick } = Astro.props;
+---
+<div>
+  {pick.box_set_film_count ? (
+    <div class="pick-with-poster">
+      {pick.box_set_criterion_url ? (
+        <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
+          {pick.film?.poster_url ? (
+            <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+          ) : null}
+        </a>
+      ) : pick.film?.poster_url ? (
+        <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+      ) : null}
+      <div class="pick-content">
+        <div class="pick-film-info">
+          {pick.box_set_criterion_url ? (
+            <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
+              {pick.box_set_name}
+            </a>
+          ) : (
+            <span class="pick-film-title">{pick.box_set_name}</span>
+          )}
+          {pick.box_set_film_count > 0 && (
+            <span class="pick-film-meta">
+              {' '}&mdash; {pick.box_set_film_count} films
+            </span>
+          )}
+          <span class="box-set-tag">Box Set</span>
+          {pick.box_set_film_titles && (
+            <details class="box-set-details">
+              <summary class="text-muted">Show films</summary>
+              <ul class="box-set-film-list">
+                {pick.box_set_film_titles.map((title: string) => (
+                  <li>{title}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+        </div>
+        {pick.quote && (
+          <QuoteBlock
+            quote={pick.quote}
+            timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+            hideAttribution={true}
+          />
+        )}
+      </div>
+    </div>
+  ) : (
+    <div class="pick-with-poster">
+      <a href={`/films/${pick.film_slug}/`} style="border-bottom: none;">
+        {pick.film?.poster_url ? (
+          <img src={pick.film.poster_url} alt={pick.film?.title} class="film-poster-thumb" loading="lazy" />
+        ) : pick.film?.criterion_spine_number ? (
+          <div class="spine-placeholder-thumb">
+            #{pick.film.criterion_spine_number}
+          </div>
+        ) : null}
+      </a>
+      <div class="pick-content">
+        <div class="pick-film-info">
+          <a href={`/films/${pick.film_slug}/`} class="pick-film-title">
+            {pick.film?.title || pick.film_slug}
+          </a>
+          {pick.film && (
+            <span class="pick-film-meta">
+              {pick.film.director ? ` — ${pick.film.director}` : ''}{pick.film.year ? `, ${pick.film.year}` : ''}
+              {pick.film.criterion_spine_number && (
+                <span> &middot; <span class="spine-number">#{pick.film.criterion_spine_number}</span></span>
+              )}
+            </span>
+          )}
+          {pick.is_box_set && pick.box_set_name && (
+            <span class="box-set-tag">Part of {pick.box_set_name}</span>
+          )}
+        </div>
+        {pick.quote ? (
+          <QuoteBlock
+            quote={pick.quote}
+            timestampUrl={pick.youtube_timestamp_url || pick.vimeo_timestamp_url}
+            hideAttribution={true}
+          />
+        ) : (
+          <p class="text-muted" style="font-style: italic; margin-top: 0.25rem;">Picked without comment</p>
+        )}
+      </div>
+    </div>
+  )}
+</div>

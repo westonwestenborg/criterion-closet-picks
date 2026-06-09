@@ -1,0 +1,28 @@
+---
+interface Props {
+  platform: 'youtube' | 'vimeo';
+  videoId: string;
+  title: string;
+}
+
+const { platform, videoId, title } = Astro.props;
+---
+{platform === 'youtube' ? (
+  <div class="video-embed">
+    <iframe
+      src={`https://www.youtube.com/embed/${videoId}`}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+) : (
+  <div class="video-embed">
+    <iframe
+      src={`https://player.vimeo.com/video/${videoId}`}
+      title={title}
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+)}
