@@ -168,216 +168,23 @@ def log(msg: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Pilot guest list
+# Config data (loaded from data/)
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# Multi-visit guest URLs
-# ---------------------------------------------------------------------------
-
-# Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2 = newer)
-# Scraped from criterion.com/shop#collection-closet-picks index
-VISIT_CRITERION_URLS = {
-    "bill-hader": [
-        "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011",
-        "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
-    ],
-    "guillermo-del-toro": [
-        "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
-        "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
-    ],
-    "ari-aster": [
-        "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
-        "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks",
-    ],
-    "michael-cera": [
-        "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014",
-        "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks",
-    ],
-    "yorgos-lanthimos": [
-        "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks",
-        "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks",
-    ],
-    "edgar-wright": [
-        "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks",
-        "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks",
-    ],
-    "benny-safdie": [
-        "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks",
-        "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks",
-    ],
-    # Single-page guests: assign to visit 1 only
-    "barry-jenkins": [
-        "https://www.criterion.com/shop/collection/470-barry-jenkins-s-closet-picks",
-    ],
-    "isabelle-huppert": [
-        "https://www.criterion.com/shop/collection/741-isabelle-huppert-s-closet-picks",
-    ],
-    "griffin-dunne": [
-        "https://www.criterion.com/shop/collection/795-griffin-dunne-s-closet-picks",
-    ],
-    "wim-wenders": [
-        "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
-    ],
-    # Guests whose collection pages aren't on the index but exist on criterion.com
-    "jason-bateman": [
-        "https://www.criterion.com/shop/collection/881-jason-bateman-s-closet-picks",
-    ],
-    "ben-whishaw": [
-        "https://www.criterion.com/shop/collection/885-ben-whishaw-s-closet-picks",
-    ],
-    "franklin-leonard": [
-        "https://www.criterion.com/shop/collection/802-franklin-leonard-s-closet-picks",
-    ],
-    "hans-zimmer": [
-        "https://www.criterion.com/shop/collection/793-hans-zimmer-s-closet-picks",
-    ],
-    "daniels": [
-        "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
-    ],
-    "five-comics": [
-        "https://www.criterion.com/shop/collection/443-five-comics-closet-picks",
-    ],
-    "halle-berry": [
-        "https://www.criterion.com/shop/collection/931-halle-berry-s-closet-picks",
-    ],
-    "christoph-waltz": [
-        "https://www.criterion.com/shop/collection/932-christoph-waltz-s-closet-picks",
-    ],
-    "cameron-crowe": [
-        "https://www.criterion.com/shop/collection/933-cameron-crowe-s-closet-picks",
-    ],
-    "maggie-gyllenhaal": [
-        "https://www.criterion.com/shop/collection/936-maggie-gyllenhaal-s-closet-picks",
-    ],
-    "shinichiro-watanabe": [
-        "https://www.criterion.com/shop/collection/937-shinichiro-watanabe-s-closet-picks",
-    ],
-    "mitski": [
-        "https://www.criterion.com/shop/collection/938-mitski-s-closet-picks",
-    ],
-    "jim-jarmusch": [
-        "https://www.criterion.com/shop/collection/939-jim-jarmusch-s-closet-picks",
-    ],
-    "sergei-loznitsa": [
-        "https://www.criterion.com/shop/collection/941-sergei-loznitsa-s-closet-picks",
-    ],
-    "cary-elwes": [
-        "https://www.criterion.com/shop/collection/943-cary-elwes-s-closet-picks",
-    ],
-    "sofia-coppola-marc-jacobs": [
-        "https://www.criterion.com/shop/collection/944-sofia-coppola-marc-jacobs-s-closet-picks",
-    ],
-    "john-slattery": [
-        "https://www.criterion.com/shop/collection/945-john-slattery-s-closet-picks",
-    ],
-    "kim-morgan": [
-        "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
-    ],
-    "jamie-demetriou": [
-        "https://www.criterion.com/shop/collection/947-jamie-demetriou-s-closet-picks",
-    ],
-    "steven-knight": [
-        "https://www.criterion.com/shop/collection/948-steven-knights-closet-picks",
-    ],
-    "sophy-romvari": [
-        "https://www.criterion.com/shop/collection/950-sophy-romvari-s-closet-picks",
-    ],
-    "elisabeth-moss": [
-        "https://www.criterion.com/shop/collection/952-elisabeth-moss-s-closet-picks",
-    ],
-    "jon-hamm": [
-        "https://www.criterion.com/shop/collection/955-jon-hamm-s-closet-picks",
-    ],
-    "bob-odenkirk": [
-        "https://www.criterion.com/shop/collection/956-bob-odenkirk-s-closet-picks",
-    ],
-    "oscar-isaac": [
-        "https://www.criterion.com/shop/collection/957-oscar-isaac-s-closet-picks",
-    ],
-    "steve-zahn": [
-        "https://www.criterion.com/shop/collection/958-steve-zahn-s-closet-picks",
-    ],
-    "richard-gadd": [
-        "https://www.criterion.com/shop/collection/959-richard-gadd-s-closet-picks",
-    ],
-    "elijah-wood": [
-        "https://www.criterion.com/shop/collection/960-elijah-wood-s-closet-picks",
-    ],
-    "ira-sachs": [
-        "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks",
-        "https://www.criterion.com/shop/collection/961-ira-sachs-s-closet-picks",
-    ],
-    "eiza-gonzalez": [
-        "https://www.criterion.com/shop/collection/962-eiza-gonzalez-s-closet-picks",
-    ],
-    "boots-riley": [
-        "https://www.criterion.com/shop/collection/963-boots-riley-s-closet-picks",
-    ],
-    "thierry-fremaux": [
-        "https://www.criterion.com/shop/collection/965-thierry-fremaux-s-closet-picks",
-    ],
-    "robert-de-niro": [
-        "https://www.criterion.com/shop/collection/966-robert-de-niro-s-closet-picks",
-    ],
-    "paul-rudd": [
-        "https://www.criterion.com/shop/collection/967-paul-rudd-s-closet-picks",
-    ],
-    "bob-the-drag-queen": [
-        "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
-    ],
-    "john-cameron-mitchell": [
-        "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
-    ],
-    "lisa-kudrow": [
-        "https://www.criterion.com/shop/collection/970-lisa-kudrow-s-closet-picks",
-    ],
-}
-
-
-# ---------------------------------------------------------------------------
-# Excluded YouTube video IDs
-# ---------------------------------------------------------------------------
+# Criterion page URLs per visit (visit 1 = older/lower collection ID, visit 2
+# = newer). Edit data/visit_criterion_urls.json to add or correct guests.
+VISIT_CRITERION_URLS: dict[str, list[str]] = load_json(DATA_DIR / "visit_criterion_urls.json")
 
 # Videos in the Closet Picks playlist that are NOT individual guest episodes.
-# These are filtered out when checking for new videos to avoid false positives.
-EXCLUDED_VIDEO_IDS = {
-    # Compilations / "We Love" series
-    "2SS0RQzGvds",  # From Criterion, With Love | Closet Picks Edition
-    "ujVHv-tdoxk",  # We Love David Lynch | Closet Picks Edition
-    "ATn7YObIedU",  # We Love Jim Jarmusch | Closet Picks Edition
-    "u1ou-tqLgJo",  # We Love ALL THAT JAZZ | Closet Picks Edition
-    "X2x1-t3GDZA",  # We Love Akira Kurosawa | Closet Picks Edition
-    "LG3qEVw3bfA",  # We Love NIGHT OF THE LIVING DEAD | Closet Picks Edition
-    "TnQsap0KJvY",  # We Love Richard Linklater | Closet Picks Edition
-    "GAbJr5c5OLU",  # We Love Martin Scorsese | Closet Picks Edition
-    "zE9yZdXh0s8",  # Closet Picks: Greatest Hits
-    # Mobile Closet events
-    "ujTba4LsZVs",  # The Criterion Closet: Chicago Edition
-    "8ZWOaTAiKL8",  # Criterion Mobile Closet TIFF promo
-    "qE7j_1UOPXI",  # Mobile Closet LA Aero Theatre
-    "LnrhF636NJ8",  # Mobile Closet Vidiots LA
-    "YOXcZIRFEsw",  # Mobile Closet Returns to LA
-    "iXHk5FpPhDc",  # Mobile Closet SXSW
-    "-KYLPII0964",  # Mobile Closet Brooklyn
-    "XvX8AGKHKCE",  # Mobile Closet NYFF Weekend 2
-    "jdceKguPiAI",  # Mobile Closet NYFF Weekend 1
-    # Special messages / promos
-    "Vp0T97ClTXs",  # Special Message from Richard Linklater
-    "X48hhzz-5eM",  # Mother's Day Weekend moment
-    "Rf530YO8J-k",  # Cillian Murphy + THE WES ANDERSON ARCHIVE (book promo)
-    # Single-film spotlight clips (not full episodes)
-    "kg6B7HL5jAI",  # Lucy Liu on IN THE MOOD FOR LOVE
-    "tiafmmKAUBE",  # Wagner Moura on LIMITE
-    "vFp3cXxveGc",  # Ryan Coogler on MALCOLM X
-    # DVD-era picks (different format, pre-Closet Picks series)
-    "f31TXhdC-Ps",  # Mike Leigh's DVD Picks
-    "PtVA6nKygFs",  # Wim Wenders' DVD Picks
-    # Private/unavailable videos
-    "e82armU7LeI",  # [Private video]
-    "bDGl-r3dGtM",  # [Private video]
+# Edit data/excluded_video_ids.json (id -> note) to exclude more.
+EXCLUDED_VIDEO_IDS: set[str] = {
+    vid for vid in load_json(DATA_DIR / "excluded_video_ids.json") if not vid.startswith("_")
 }
 
+
+# ---------------------------------------------------------------------------
+# Pilot guest list (used by --pilot flags)
+# ---------------------------------------------------------------------------
 
 PILOT_GUESTS = [
     "Barry Jenkins",
@@ -391,7 +198,3 @@ PILOT_GUESTS = [
     "Park Chan-wook",
     "Cate Blanchett",
 ]
-
-# Note: Greta Gerwig and Martin Scorsese were in the original pilot list but
-# do not have Letterboxd @closetpicks lists. Replaced with Denis Villeneuve
-# and Andrew Garfield. Cate Blanchett's list is joint with Todd Field.

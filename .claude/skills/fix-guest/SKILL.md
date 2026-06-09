@@ -23,9 +23,11 @@ Fixes involve these config dicts:
 - `WRONG_VIDEO_FIXES` — null out incorrectly matched video IDs
 - `KNOWN_CRITERION_URLS` — set `criterion_page_url` for guests
 
-**`scripts/utils.py`:**
-- `VISIT_CRITERION_URLS` — Criterion collection URLs (injected into scraper when not on index)
-- `EXCLUDED_VIDEO_IDS` — non-guest YouTube videos to ignore
+**`data/visit_criterion_urls.json`** (loaded by `utils.py` as `VISIT_CRITERION_URLS`):
+- Criterion collection URLs per guest slug (injected into scraper when not on index)
+
+**`data/excluded_video_ids.json`** (loaded by `utils.py` as `EXCLUDED_VIDEO_IDS`):
+- non-guest YouTube videos to ignore, as `"video_id": "note"` pairs
 
 ## Workflows
 
@@ -43,7 +45,7 @@ Fixes involve these config dicts:
 ### 2. Add a Criterion collection URL
 
 1. Add to `KNOWN_CRITERION_URLS` in `normalize_guests.py`
-2. Add to `VISIT_CRITERION_URLS` in `utils.py`
+2. Add to `data/visit_criterion_urls.json`
 3. Run: `.venv/bin/python scripts/normalize_guests.py`
 
 ### 3. Re-extract quotes for a guest
@@ -56,7 +58,7 @@ For a specific visit: add `--visit 2`
 
 ### 4. Scrape picks from a new Criterion collection page
 
-1. Add URL to `VISIT_CRITERION_URLS` in `utils.py`
+1. Add URL to `data/visit_criterion_urls.json`
 2. Clear checkpoint if URL was previously attempted:
    ```bash
    .venv/bin/python -c "
@@ -73,7 +75,7 @@ For a specific visit: add `--visit 2`
 
 ### 5. Exclude a non-guest YouTube video
 
-Add to `EXCLUDED_VIDEO_IDS` in `utils.py` with a descriptive comment.
+Add to `data/excluded_video_ids.json` as `"video_id": "descriptive note"`.
 
 ### 6. Post about a new guest
 

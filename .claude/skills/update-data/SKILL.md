@@ -144,7 +144,7 @@ The script will report which platforms it posted to or skipped.
 - **Criterion.com is the sole data source** (Letterboxd dropped Feb 2025)
 - The pipeline is idempotent: re-running won't duplicate data
 - Checkpoint files in `data/` track progress for resume capability
-- Multi-visit guests (Bill Hader, Guillermo del Toro, etc.) are handled automatically via `VISIT_CRITERION_URLS` config in `scripts/utils.py`
+- Multi-visit guests (Bill Hader, Guillermo del Toro, etc.) are handled automatically via `data/visit_criterion_urls.json` (loaded by `utils.py` as `VISIT_CRITERION_URLS`)
 - If Gemini quota is exhausted, use `--skip-quotes` and run quote extraction later
 - For parallel extraction: `python scripts/extract_quotes_parallel.py --workers 32`
 - For a single video: `python scripts/process_video.py --youtube-url "URL"`
