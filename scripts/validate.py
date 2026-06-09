@@ -24,6 +24,7 @@ from scripts.utils import (
     log,
     slugify,
 )
+from scripts.schema import CatalogFilm, Guest, Pick
 
 
 def validate_catalog(catalog: list[dict]) -> dict:
@@ -450,10 +451,10 @@ def main():
 
     log("Loading data files...")
 
-    catalog = load_json(CATALOG_FILE)
-    guests = load_json(GUESTS_FILE)
-    picks_raw = load_json(PICKS_RAW_FILE)
-    picks = load_json(PICKS_FILE)
+    catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
+    guests: list[Guest] = load_json(GUESTS_FILE)
+    picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
+    picks: list[Pick] = load_json(PICKS_FILE)
 
     if not catalog:
         log("WARNING: No catalog data found")

@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.utils import GUESTS_FILE, PICKS_FILE, PICKS_RAW_FILE, load_json, save_json, log
+from scripts.schema import Guest, Pick
 
 
 # ---------------------------------------------------------------------------
@@ -342,9 +343,9 @@ def recompute_pick_counts(guests: list[dict], picks: list[dict], picks_raw: list
 # ---------------------------------------------------------------------------
 
 def normalize(dry_run: bool = False):
-    guests = load_json(GUESTS_FILE)
-    picks = load_json(PICKS_FILE)
-    picks_raw = load_json(PICKS_RAW_FILE)
+    guests: list[Guest] = load_json(GUESTS_FILE)
+    picks: list[Pick] = load_json(PICKS_FILE)
+    picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
 
     stats = {
         "repeat_merges": 0,

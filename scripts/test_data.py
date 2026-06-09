@@ -18,12 +18,13 @@ from scripts.utils import (
     PICKS_RAW_FILE,
     load_json,
 )
+from scripts.schema import CatalogFilm, Guest, Pick
 
 # Load data once for all tests
-catalog = load_json(CATALOG_FILE)
-guests = load_json(GUESTS_FILE)
-picks = load_json(PICKS_FILE)
-picks_raw = load_json(PICKS_RAW_FILE)
+catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
+guests: list[Guest] = load_json(GUESTS_FILE)
+picks: list[Pick] = load_json(PICKS_FILE)
+picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
 
 # Build lookup indexes
 catalog_by_spine = {f["spine_number"]: f for f in catalog}

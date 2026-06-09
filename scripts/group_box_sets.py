@@ -34,6 +34,7 @@ from scripts.utils import (
     save_json,
     log,
 )
+from scripts.schema import CatalogFilm, Pick
 
 # Known large box sets: title -> list of film titles
 # Supplemental to catalog annotations for sets with many films
@@ -415,9 +416,9 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Preview without saving")
     args = parser.parse_args()
 
-    catalog = load_json(CATALOG_FILE)
-    picks = load_json(PICKS_FILE)
-    picks_raw = load_json(PICKS_RAW_FILE)
+    catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
+    picks: list[Pick] = load_json(PICKS_FILE)
+    picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
 
     if not picks:
         log("No picks to process")

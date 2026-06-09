@@ -22,6 +22,7 @@ from scripts.utils import (
     save_json,
     log,
 )
+from scripts.schema import CatalogFilm, Pick
 
 
 def build_criterion_url_map(picks_raw: list[dict]) -> dict[str, str]:
@@ -102,9 +103,9 @@ def make_synthetic_entry(film_id: str, meta: dict) -> dict:
 
 
 def main() -> None:
-    catalog = load_json(CATALOG_FILE)
-    picks = load_json(PICKS_FILE)
-    picks_raw = load_json(PICKS_RAW_FILE)
+    catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
+    picks: list[Pick] = load_json(PICKS_FILE)
+    picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
 
     catalog_by_id = {c["film_id"]: c for c in catalog}
     log(f"Loaded {len(catalog)} catalog entries, {len(picks)} picks, {len(picks_raw)} picks_raw")
