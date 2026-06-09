@@ -447,7 +447,7 @@ def main():
     # Load guests
     guests = load_json(GUESTS_FILE)
     if not guests:
-        log("ERROR: No guests found. Run scrape_letterboxd.py first.")
+        log("ERROR: No guests found. Run scrape_criterion_picks.py first.")
         sys.exit(1)
     log(f"Loaded {len(guests)} guests")
 

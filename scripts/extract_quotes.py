@@ -382,10 +382,10 @@ def main():
     existing_picks = load_json(PICKS_FILE)
 
     if not guests:
-        log("ERROR: No guests. Run scrape_letterboxd.py first.")
+        log("ERROR: No guests. Run scrape_criterion_picks.py first.")
         sys.exit(1)
     if not picks_raw:
-        log("ERROR: No picks. Run scrape_letterboxd.py first.")
+        log("ERROR: No picks. Run scrape_criterion_picks.py first.")
         sys.exit(1)
 
     # Load checkpoint

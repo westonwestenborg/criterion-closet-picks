@@ -1,6 +1,6 @@
 # Criterion Closet Picks
 
-A searchable static web app that aggregates data from the Criterion Collection's "Closet Picks" YouTube series (400+ episodes). It combines curated pick lists from Letterboxd (@closetpicks), verbatim quotes extracted from YouTube transcripts via Gemini Flash, and film metadata from TMDB to create a unified, searchable database. The site lives at closetpicks.westenb.org.
+A searchable static web app that aggregates data from the Criterion Collection's "Closet Picks" YouTube series (400+ episodes). It combines pick lists scraped from Criterion.com collection pages, verbatim quotes extracted from YouTube transcripts via Gemini Flash, and film metadata from TMDB to create a unified, searchable database. The site lives at closetpicks.westenb.org.
 
 ## Architecture
 
@@ -22,7 +22,7 @@ A searchable static web app that aggregates data from the Criterion Collection's
 
 ```
 Criterion.com (catalog) --> data/criterion_catalog.json
-Letterboxd @closetpicks (guest picks) --> data/guests.json, data/picks_raw.json
+Criterion.com /closet-picks collections (guest picks) --> data/guests.json, data/picks_raw.json
 YouTube transcripts --> data/transcripts/ (gitignored)
 Gemini Flash (quote extraction) --> data/picks.json
 TMDB API (enrichment) --> updates catalog + guests with posters, genres, IMDB IDs
@@ -70,17 +70,23 @@ GEMINI_API_KEY=<your-gemini-api-key>
 Scripts are run in order. Each writes to `data/`:
 
 ```bash
-python scripts/build_catalog.py       # Step 1: Build Criterion catalog reference
-python scripts/scrape_letterboxd.py   # Step 2: Scrape guest picks from Letterboxd
-python scripts/scrape_criterion_picks.py  # Step 2b: Supplement with Criterion.com data
-python scripts/match_youtube.py       # Step 3: Match YouTube videos + pull transcripts
-python scripts/backfill_dates.py      # Step 3b: Backfill episode dates from YouTube API
-python scripts/extract_quotes.py      # Step 4: LLM quote extraction via Gemini Flash
-python scripts/backfill_films.py      # Step 5: Backfill missing films + propagate Criterion URLs
-python scripts/enrich_tmdb.py         # Step 6: TMDB enrichment (genres, posters, IMDB IDs)
-python scripts/validate.py            # Validate data and generate reports
-python scripts/test_data.py           # Run data integrity tests (also: npm run validate)
+python scripts/build_catalog.py           # Step 1: Build Criterion catalog reference
+python scripts/scrape_criterion_picks.py  # Step 2: Scrape guest picks from Criterion.com
+python scripts/normalize_guests.py        # Step 3: Normalize guest data
+python scripts/match_youtube.py           # Step 4: Match YouTube videos + pull transcripts
+python scripts/backfill_dates.py          # Step 5: Backfill episode dates from YouTube API
+python scripts/extract_quotes.py          # Step 6: LLM quote extraction via Gemini Flash
+python scripts/backfill_films.py          # Step 7: Backfill missing films + propagate Criterion URLs
+python scripts/group_box_sets.py          # Step 8: Group box set films
+python scripts/scrape_box_set_images.py   # Step 9: Scrape box set images
+python scripts/migrate_source_visit.py    # Step 10: Migrate source/visit metadata
+python scripts/enrich_tmdb.py             # Step 11: TMDB enrichment (genres, posters, IMDB IDs)
+python scripts/normalize_guests.py        # Step 12: Normalize guest data (second pass)
+python scripts/validate.py                # Step 13: Validate data and generate reports
+python scripts/test_data.py               # Run data integrity tests (also: npm run validate)
 ```
+
+`process_all.py` runs these same steps in order; prefer it over invoking steps manually.
 
 For processing a single new video:
 
@@ -113,14 +119,14 @@ criterion-closet-picks/
 │   ├── criterion_catalog.json      # All Criterion titles with metadata (+ backfilled non-catalog films)
 │   ├── guests.json                 # All guests with metadata
 │   ├── picks.json                  # All picks with quotes + timestamps
-│   ├── picks_raw.json              # Raw picks from Letterboxd/Criterion (no quotes)
+│   ├── picks_raw.json              # Raw picks from Criterion.com (no quotes)
 │   ├── transcripts/                # Raw transcripts (gitignored, regenerable)
 │   └── validation/                 # Validation reports
 ├── scripts/                        # Python data pipeline
 │   ├── requirements.txt
 │   ├── build_catalog.py            # Criterion catalog scraper
-│   ├── scrape_letterboxd.py        # Letterboxd guest picks scraper
 │   ├── scrape_criterion_picks.py   # Criterion.com collection page scraper
+│   ├── normalize_guests.py         # Guest name/slug/visit normalization
 │   ├── match_youtube.py            # YouTube video matching + transcripts
 │   ├── extract_quotes.py           # Gemini Flash quote extraction
 │   ├── backfill_films.py           # Backfill missing films + propagate Criterion URLs
@@ -152,7 +158,7 @@ criterion-closet-picks/
 
 ## Key Conventions
 
-- **Data source of truth for picks:** Letterboxd @closetpicks account (440 curated lists), supplemented by Criterion.com collection pages. Transcripts are used only for quotes/timestamps.
+- **Data source of truth for picks:** Criterion.com /closet-picks collection pages (sole primary source; Letterboxd was dropped Feb 2025). Transcripts are used only for quotes/timestamps.
 - **Static site:** Everything is pre-rendered at build time. No server-side code in production.
 - **Pagefind search:** Client-side static search, index generated post-build.
 - **TMDB attribution required:** Footer must include TMDB logo and disclaimer per API terms.
