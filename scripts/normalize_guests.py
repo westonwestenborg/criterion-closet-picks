@@ -124,6 +124,7 @@ KNOWN_VIDEO_IDS = {
     "bob-the-drag-queen": {"youtube_video_id": "0ZvmGDEBXZM"},
     "john-cameron-mitchell": {"youtube_video_id": "4iilUJHpAf0"},
     "lisa-kudrow": {"youtube_video_id": "VsywXM8vMLs"},
+    "john-c-reilly": {"youtube_video_id": "vJn8q_oBWlc"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -178,6 +179,7 @@ KNOWN_CRITERION_URLS = {
     "bob-the-drag-queen": "https://www.criterion.com/shop/collection/968-bob-the-drag-queen-s-closet-picks",
     "john-cameron-mitchell": "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
     "lisa-kudrow": "https://www.criterion.com/shop/collection/970-lisa-kudrow-s-closet-picks",
+    "john-c-reilly": "https://www.criterion.com/shop/collection/971-john-c-reilly-s-closet-picks",
 }
 
 # Name cleanup

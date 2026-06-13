@@ -360,7 +360,7 @@
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=CcscEY2KoS8&t=10",
     "extraction_confidence": "high",
-    "visit_index": 1
+    "visit_index": 2
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -712,7 +712,7 @@
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=y2TK8IHWIcY&t=42",
     "extraction_confidence": "high",
     "source": "criterion",
-    "visit_index": 1
+    "visit_index": 2
   },
   {
     "guest_slug": "bill-hader",
@@ -932,7 +932,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -952,7 +952,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -972,7 +972,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -992,7 +992,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -1012,7 +1012,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -1056,7 +1056,7 @@
     "extraction_confidence": "none",
     "box_set_film_count": -1,
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "bill-hader",
@@ -41496,7 +41496,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41516,7 +41516,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41536,7 +41536,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41556,7 +41556,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41576,7 +41576,7 @@
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
     "extraction_confidence": "none",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41596,7 +41596,7 @@
     "start_timestamp": 103,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=FA4mnGD5Qi8&t=103",
     "extraction_confidence": "high",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "ira-sachs",
@@ -41616,7 +41616,7 @@
     "start_timestamp": 218,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=FA4mnGD5Qi8&t=218",
     "extraction_confidence": "medium",
-    "visit_index": 2
+    "visit_index": 1
   },
   {
     "guest_slug": "charlotte-wells",
@@ -62536,13 +62536,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/658-withnail-and-i",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Withnail and I is right at the top of that list. I was about 22 years old and a friend of mine had a videotape and said, 'I think you'd like this movie.' And I watched it and then I rewound it and watched it again. I'd never done that before. It's proof that you can make one of the funniest movies ever and it's tragic, it's sad, and heartbreaking, and everyone in it is brilliant.",
     "start_timestamp": 21,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=21",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "paul-rudd",
@@ -62556,13 +62556,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28820-boyhood",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I think Richard Linklater is the great American director. Boyhood is like the Michael Apted Seven Up series in a narrative form, in a fictional movie. I saw it at Sundance and it destroyed me because to focus on all of the connective tissue between major events in people's lives and you just see it unfold over the course of many, many years. It's stunning and I'm a massive fan.",
     "start_timestamp": 45,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=45",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "paul-rudd",
@@ -62576,13 +62576,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29634-defending-your-life",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Defending Your Life, four movies that Albert Brooks did in a row... Is maybe a murderer's row. It's Meet the Beatles to Sergeant Pepper. But Defending Your Life I'm picking because it might be the most high-concept comedy that I know of and all of the performances, Rip Torn is amazing, Meryl Streep is unreal, but every single minor actor that has maybe one scene... They're all perfect. He can take a joke that's hilarious and then make it even a little bit better.",
     "start_timestamp": 90,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=90",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "paul-rudd",
@@ -62596,13 +62596,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29202-secrets-lies",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I do love Mike Leigh, I love his films. But there was a moment in this film from Timothy Spall where he has such an emotional outburst after kind of sitting on emotions throughout a lot of the film, I thought. And when he did this, I burst into tears and I thought, I don't know of a Performance that was so restrained that just exploded. I've thought about that moment for years and the power of restraint.",
     "start_timestamp": 145,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=145",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "paul-rudd",
@@ -62616,13 +62616,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I must say, I actually haven't seen Opus, I have wanted to. But I wanted to bring this up because Ryuichi Sakamoto is somebody I share with my son who is a massive fan. My son heard Last Emperor and said, 'Wait a minute.' He's an exceptional artist. Everyone should know who he is. It's a tragedy that we lost him recently, but what a treasure that we get to experience him through Opus, Coda, and every other incredible piece of art that he created.",
     "start_timestamp": 178,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=178",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "paul-rudd",
@@ -62636,13 +62636,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/30464-fast-times-at-ridgemont-high",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Fast Times at Ridgemont High. Amy Heckerling, who I adore and made the movie Clueless, also made this. I can't think of another person who has their finger on the pulse of what kids are going through and what they're saying. You have a scene where Sean Penn is ordering a pizza to class, which is like a big funny sequence, and then you also have a young girl in high school getting an abortion and this exists in the same movie. And it does so with care and dexterity and elegance.",
     "start_timestamp": 246,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=ZTvRQRTVdqA&t=246",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62656,13 +62656,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29018-hedwig-and-the-angry-inch",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Hedwig and the Angry Inch, this is a drag queen staple. I actually did not know much about this movie until I moved to New York City. Shout out to my friend Adam Siciliano, who actually taught me about Hedwig. He's what they call a Hedhead. But John Cameron Mitchell kind of created this character in the like the New York City like cabaret theater scene. It's been played on Broadway by my god, Taye Diggs, Andrew Rannells, Neil Patrick Harris... I guess I'll take this home for research purposes.",
     "start_timestamp": 16,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=16",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62676,13 +62676,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/30975-jo-jo-dancer-your-life-is-calling",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I do not know this one. Let me read this one real quick. One of the greatest comedians of all time Richard Pryor gets raw and real in this brutally funny and lacerating self-portrait, Following the Notorious incident in which he caught on fire while high on cocaine, nearly losing his life. Well, sign me up, hook, line, and sinker. I mean, I've been doing stand-up comedy for 17 years and I don't think there's a comedian who has not been inspired by Richard Pryor.",
     "start_timestamp": 51,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=51",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62696,13 +62696,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34870-pee-wee-s-big-adventure",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I have Pee-wee's Big Adventure. I don't know if a lot of people know this but Pee-wee Herman didn't actually start as a kids' show. It started as like a live theater thing that was actually for adults and then somehow it morphed and it made its way to my desk as a small child. Contributed so much to the culture. Paul Reubens, wherever you are, I don't know what you believe, but much love to you.",
     "start_timestamp": 135,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=135",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62716,13 +62716,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34869-network",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "The movie Network. Have you ever seen those things online where they take a monologue and then they overlay what's happening right now? The fact that this movie came out in 1976 and the stuff they're saying in this film makes even more sense today is sign that progress is slow, if at all. The moral arc of the universe is long, but it bends towards justice. Will we all be there for the justice? I don't know. I probably won't, I'm probably older than some of you watching this.",
     "start_timestamp": 157,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=157",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62736,13 +62736,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/33810-the-wiz",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "This is actually a really controversial movie because it was kind of a flop in its time but it ended up being like a cult classic. Diana Ross was cast as Dorothy in The Wiz, which is kind of crazy because Dorothy's like a 16-year-old girl. But yeah, I mean, this movie's got Michael Jackson, it's got Nipsey Russell, it's got Diana Ross, it's got Mabel, there's so many amazing actors in this film. Quincy Jones did a lot of the music for this. This is an absolutely brilliant, brilliant film.",
     "start_timestamp": 235,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=235",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "bob-the-drag-queen",
@@ -62756,13 +62756,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29647-paris-is-burning",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "A black gay guy chose Paris is Burning. Shocker. That being said, what ended up happening to the subjects, like a lot of them died in abject poverty. This movie has secrets that aren't even revealed in the movie. There is actually a dead body in this movie and they didn't even know there was a dead body in the movie... Her name is Dorian Corey. And it has one of my favorite quotes of all time... Paris is Burning is probably one of the most important films of all time.",
     "start_timestamp": 318,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=0ZvmGDEBXZM&t=318",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62776,13 +62776,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/31689-cooley-high",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Now, this is something I remember very well as a kid. Cooley High was a staple for us, especially Army kids. We loved this film and it was a hit. The other one that was a huge hit was Mother, Jugs & Speed, around the same time, and Car Wash. So I will be grabbing that.",
     "start_timestamp": 15,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=15",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62796,13 +62796,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/33621-moonage-daydream",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Moonage Daydream. Of course, I’m wearing David Bowie today, and I’m going to be doing a David Bowie tour this year in Australia, so I have to get Moonage Daydream, which I still haven’t seen. I know I’m supposed to see it in IMAX, but this is just as good or next best.",
     "start_timestamp": 65,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=65",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62816,13 +62816,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28561-all-that-jazz",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "I should get my favorite musical, really, which is All That Jazz by Bob Fosse. The film probably most responsible for the freedom of style in the Hedwig film was this film, Bob Fosse, an autobiographical classic.",
     "start_timestamp": 81,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=81",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62836,13 +62836,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28954-multiple-maniacs",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "You know, I never saw Multiple Maniacs. I think I need to get that one because John Waters is a friend and I feel terrible I haven’t seen this. He feels terrible that people have to watch it. He always jokes about grandma saying, 'I love your work.' And he’s like, 'Did you see Multiple Maniacs?'",
     "start_timestamp": 96,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=96",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62856,13 +62856,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29081-after-life",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "A great film by Kore-eda, a Japanese filmmaker who I met right after this film. He loved Hedwig. I was there when someone told Kore-eda that the last film that Noah wanted to watch was a film that he helped, which was this. And Kore-eda just started weeping, A beautiful film about a possible afterlife that really is a metaphor for filmmaking. So I’ll definitely be taking After Life home, which will prepare me for my impending end.",
     "start_timestamp": 117,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=117",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62876,13 +62876,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/28821-shampoo",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "This is Shampoo. Now, this is a classic ’70s comedy. Funny as hell. I find the women funnier than Warren Beatty, but that’s just me. Julie Christie, Goldie Hawn, Lee Grant, brilliant. Also, the great Jack Warden. I love Jack Warden.",
     "start_timestamp": 160,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=160",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62896,13 +62896,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29018-hedwig-and-the-angry-inch",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "My own film. I really don’t know what to do with that. Actually, I need an extra copy. Ha! We are independent filmmakers, after all.",
     "start_timestamp": 175,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=175",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62916,13 +62916,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34869-network",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Network, which is the world we live in now. Sidney Lumet’s one of my tops, along with Altman and Cassavetes. And people forget about Lumet. He worked in very different styles. He came from the theater. But people like you to do the same style. It’s called a brand. But we theater people change depending on what the subject matter or the script is. And this is a perfect example of a highly theatrical screenplay done brilliantly.",
     "start_timestamp": 226,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=226",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62936,13 +62936,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/34870-pee-wee-s-big-adventure",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Pee-wee’s Big Adventure. Combination of two geniuses, Paul Reubens and Tim Burton, making something absolutely unique, and yet somehow weirdly familiar, with a little bit of B-52s thrown in, maybe. And queer undertones. Just so damn good. And I can’t wait to see the extras on here, too.",
     "start_timestamp": 252,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=252",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62956,13 +62956,15 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": true,
     "box_set_name": "The Wes Anderson Archive: Ten Films, Twenty-Five Years",
     "quote": "I might have to get The Wes Anderson Archive, which is like a boom box of things, with the great Rushmore, of course.",
     "start_timestamp": 35,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=35",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "box_set_film_count": 10,
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62976,13 +62978,15 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/boxsets/558-john-cassavetes-five-films",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": true,
     "box_set_name": "John Cassavetes: Five Films",
     "quote": "The Cassavetes box set. I mean, the greatest independent filmmaker in America ever. And probably my favorite film ever is A Woman Under the Influence. There’s also an incredible doc about– like, a three-hour doc about how he worked, which was very singular, with the great Gena Rowlands, maybe the best film actress of all time.",
     "start_timestamp": 44,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=44",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "box_set_film_count": 5,
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/558-john-cassavetes-five-films",
+    "visit_index": 1
   },
   {
     "guest_slug": "john-cameron-mitchell",
@@ -62996,13 +63000,15 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "quote": "All right, Pasolini, a queer icon, an intellectual icon, a Marxist icon in Italy. So moving, The Gospel According to Matthew. He was Catholic, but in the deepest way that is much closer to socialism, when you think about it. And that film– I remember Lazarus coming out of the tomb to the sound of an old American ancient blues song, and it somehow worked. Teorema, one of my favorite films... Of course, Mamma Roma, the great Anna Magnani. Brilliant Performance. Yeah, so this is great.",
     "start_timestamp": 184,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=4iilUJHpAf0&t=184",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "box_set_film_count": -1,
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
+    "visit_index": 1
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -63016,13 +63022,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29596-all-about-eve",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "First one is All About Eve. I saw this when I was, like, a pre-teen and was just blown away by the intelligent way they spoke. The dialogue is unbelievable. Bette Davis is a theater actress who feels like she’s aging out of ingenue roles. Anne Baxter is a young, up-and-coming actress that everyone just adores, and she turns out to be a big, fat liar. George Sanders plays Addison DeWitt, a critic. It’s so easy to hurt people without hurting them. That’s what I got out of it.",
     "start_timestamp": 6,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VsywXM8vMLs&t=6",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -63036,13 +63042,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29026-now-voyager",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Right next to it. Okay. It’s Now, Voyager. This was my Mother’s favorite movie. And, again, it’s Bette Davis, who was one of the most interesting women. Really strong. Just sort of knew who she was and put that in all of her characters. I started on Friends, went out to the Stage 24, and looked at the plaque at Warner Brothers, and they shot some stuff from Now, Voyager, it was on the plaque, and I was so excited to tell my mom. Yeah, that was thrilling.",
     "start_timestamp": 79,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VsywXM8vMLs&t=79",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -63056,13 +63062,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29029-the-philadelphia-story",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "Another important movie for me when I was young: Philadelphia Story, Katharine Hepburn, Cary Grant. I mean, talk about just throwing lines away. They were so effortless, while performing, but effortless and sharp, bright dialogue. And every time I saw it, I sort of changed my mind depending on who I was. Katharine Hepburn was in the play and she needed to boost her career, so smarty-pants optioned it to make it a movie and got George Cukor to direct it. That’s a big deal.",
     "start_timestamp": 136,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VsywXM8vMLs&t=136",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -63076,13 +63082,13 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/29634-defending-your-life",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "This movie, Defending Your Life, Albert Brooks. I had already seen Modern Romance. Fantastic. But anyway, Defending Your Life, with Meryl Streep, no less. Another one where, every time I see this movie, I realize something different. This movie has a lot of insight, I think, into how the universe works, in a way. Fear is the opposite of love and the cure for fear is love. So it’s a fearful guy, so afraid of himself, and it isn’t until he surrenders to love that he can get where he’s going.",
     "start_timestamp": 186,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VsywXM8vMLs&t=186",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -63096,12 +63102,132 @@
     "letterboxd_url": "",
     "criterion_film_url": "https://www.criterion.com/films/27871-12-angry-men",
     "source": "criterion",
-    "visit_index": 1,
     "is_box_set": false,
     "box_set_name": null,
     "quote": "When I was a kid, I saw 12 Angry Men on TV. Phenomenal actors. And it was a play, and it’s all shot, basically, in a jury room. And one juror who’s the holdout, Henry Fonda, who’s pointing out to everybody, 'You’re making some biased decisions. Not all the evidence adds up.' And so everyone’s getting so mad at him. For me, it really, really highlighted the fact that, ooh, juries are problematic and might not always get a fair trial. Anyway, 12 Angry Men, so good and true.",
     "start_timestamp": 253,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VsywXM8vMLs&t=253",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "Down by Law",
+    "film_year": null,
+    "film_id": "down-by-law",
+    "catalog_spine": null,
+    "catalog_title": "Down by Law",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/719-down-by-law",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "And the first one that did is this movie by Jim Jarmusch, Down by Law. \"I scream, you scream, we all scream for ice cream,\" the famous Roberto Benigni line. But also this was in the early days of my obsession with Tom Waits when I was in college, that’s when I discovered Tom’s music, and he’s such a good actor. And you can tell he’s improvising these weather reports from the prison cell, and it’s just a real formative movie for me. I’m still trying to get in a Jim Jarmusch movie.",
+    "start_timestamp": 25,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=25",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "The Killing of a Chinese Bookie",
+    "film_year": null,
+    "film_id": "the-killing-of-a-chinese-bookie",
+    "catalog_spine": 254,
+    "catalog_title": "The Killing of a Chinese Bookie",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/958-the-killing-of-a-chinese-bookie",
+    "source": "criterion",
+    "is_box_set": true,
+    "box_set_name": "John Cassavetes: Five Films",
+    "quote": "The Killing of a Chinese Bookie by John Cassavetes. Timothy Carey, one of the great, bizarre character actors. He was in Stanley Kubrick’s The Killing. Anyway, he plays one of the goons, and there’s this whole showdown scene where he’s been assigned the job to kill Ben Gazzara, and he starts to get the sense, \"This guy is tougher than I realize.\" And then Ben Gazzara’s sort of like, \"Get out of here, man. You’re an amateur.\" This is just a great, great movie.",
+    "start_timestamp": 69,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=69",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "The Brood",
+    "film_year": null,
+    "film_id": "the-brood",
+    "catalog_spine": 777,
+    "catalog_title": "The Brood",
+    "match_method": "exact",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/28439-the-brood",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "This one’s kind of random. I haven’t seen this movie since it came out in the theater when I was a child, and I snuck into the movie theater, the Marquette Theatre on the Southwest Side of Chicago, to see David Cronenberg’s The Brood. It really upset me. A woman has a… she bites open this embryonic sac and these babies– these monster babies come out. Anyway, terrifying movie. That weird moment. Be careful what movies you sneak into, kids.",
+    "start_timestamp": 108,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=108",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "Defending Your Life",
+    "film_year": null,
+    "film_id": "defending-your-life",
+    "catalog_spine": 1071,
+    "catalog_title": "Defending Your Life",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29634-defending-your-life",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "So, moving right along to some comedy: this movie, Defending Your Life by Albert Brooks, might be the hardest I have ever laughed in a movie. I was laughing so hard I thought… it felt like I was tripping on mushrooms. All of it, from top to bottom, is– it’s just a brilliant, brilliant movie. And Albert Brooks is one of the all-time American greats of comedy.",
+    "start_timestamp": 144,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=144",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "On the Waterfront",
+    "film_year": null,
+    "film_id": "on-the-waterfront",
+    "catalog_spine": 647,
+    "catalog_title": "On the Waterfront",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/27899-on-the-waterfront",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "On the Waterfront, by Elia Kazan. Of course, one of the canon, right. I went to boys’ Catholic high school, and we had this whole year of junior year where they would show us movies that had ethical issues, and then we would discuss afterwards. I pick it out because it’s one of the great misreadings of lines in history. So Rod Steiger and Marlon Brando are in the back of the car, right, and he says... \"I could have been somebody, Charley.\" It makes me cry.",
+    "start_timestamp": 166,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=166",
+    "extraction_confidence": "high",
+    "visit_index": 1
+  },
+  {
+    "guest_slug": "john-c-reilly",
+    "guest_name": "John C. Reilly",
+    "film_title": "The Great Escape",
+    "film_year": null,
+    "film_id": "the-great-escape",
+    "catalog_spine": 1027,
+    "catalog_title": "The Great Escape",
+    "match_method": "criterion_url",
+    "letterboxd_url": "",
+    "criterion_film_url": "https://www.criterion.com/films/29149-the-great-escape",
+    "source": "criterion",
+    "is_box_set": false,
+    "box_set_name": null,
+    "quote": "All right, one more. Like, a nostalgia movie, okay? And that is The Great Escape. It makes you punk rock, this movie. It teaches you how to resist the system. How do you… What do you have to do to trick the guards? And I kind of took that through my whole life, growing up on the South Side of Chicago and going to Catholic school. And Steve McQueen in this one, it’s just one of the all-time great performances. It’s full of amazing actors, actually. Donald Pleasance is so great in it.",
+    "start_timestamp": 233,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=vJn8q_oBWlc&t=233",
+    "extraction_confidence": "high",
+    "visit_index": 1
   }
 ]
