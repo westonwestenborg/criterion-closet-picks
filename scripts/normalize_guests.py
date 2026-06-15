@@ -125,6 +125,7 @@ KNOWN_VIDEO_IDS = {
     "john-cameron-mitchell": {"youtube_video_id": "4iilUJHpAf0"},
     "lisa-kudrow": {"youtube_video_id": "VsywXM8vMLs"},
     "john-c-reilly": {"youtube_video_id": "vJn8q_oBWlc"},
+    "matthew-rhys": {"youtube_video_id": "r0-5G6-g7WI"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -180,6 +181,7 @@ KNOWN_CRITERION_URLS = {
     "john-cameron-mitchell": "https://www.criterion.com/shop/collection/969-john-cameron-mitchell-s-closet-picks",
     "lisa-kudrow": "https://www.criterion.com/shop/collection/970-lisa-kudrow-s-closet-picks",
     "john-c-reilly": "https://www.criterion.com/shop/collection/971-john-c-reilly-s-closet-picks",
+    "matthew-rhys": "https://www.criterion.com/shop/collection/972-matthew-rhys-s-closet-picks",
 }
 
 # Name cleanup
