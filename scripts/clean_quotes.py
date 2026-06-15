@@ -105,17 +105,38 @@ def fix_capitalization(text: str) -> str:
     return text
 
 
+# Compiled title patterns, cached across calls. The title_map holds ~1800
+# entries — far above CPython's internal re cache (512) — so compiling per call
+# thrashed that cache and made cleaning the full pick set take minutes.
+_TITLE_PATTERN_CACHE: dict[str, re.Pattern] = {}
+
+
+def _title_pattern(lower_title: str) -> re.Pattern:
+    pattern = _TITLE_PATTERN_CACHE.get(lower_title)
+    if pattern is None:
+        pattern = re.compile(r"\b" + re.escape(lower_title) + r"\b", re.IGNORECASE)
+        _TITLE_PATTERN_CACHE[lower_title] = pattern
+    return pattern
+
+
 def fix_film_titles(text: str, title_map: dict[str, str]) -> str:
     """
     Fix known film title capitalization in quotes.
     Uses word boundaries to avoid false substring matches (e.g. "Birth" inside "birthday").
     """
+    low = text.lower()
     for lower_title, correct_title in title_map.items():
         if len(lower_title) < 5:
             continue  # Skip very short titles to avoid false matches
+        # A \b...\b match requires the literal substring to be present, so skip
+        # titles that can't possibly match before paying for the regex.
+        if lower_title not in low:
+            continue
         # Use word boundaries to avoid matching inside other words
-        pattern = re.compile(r"\b" + re.escape(lower_title) + r"\b", re.IGNORECASE)
-        text = pattern.sub(correct_title, text)
+        new_text = _title_pattern(lower_title).sub(correct_title, text)
+        if new_text != text:
+            text = new_text
+            low = text.lower()  # keep in sync; a correction may change letters
     return text
 
 
