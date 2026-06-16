@@ -23,8 +23,8 @@ function guest(overrides: Partial<Guest> & { slug: string }): Guest {
     name: overrides.slug,
     profession: 'Director',
     photo_url: null,
-    youtube_video_id: '',
-    youtube_video_url: '',
+    youtube_video_id: 'video-id',
+    youtube_video_url: 'https://www.youtube.com/watch?v=video-id',
     vimeo_video_id: null,
     episode_date: '',
     criterion_page_url: null,
@@ -57,6 +57,7 @@ describe('film normalization', () => {
   it('maps spine_number and constructs external URLs from ids', () => {
     cleanup = makeFixtureDir({
       picks: [{ guest_slug: 'test-guest-alpha', film_id: 'm-1931', quote: 'classic', extraction_confidence: 'high' }],
+      guests: [guest({ slug: 'test-guest-alpha' })],
       catalog: [
         { film_id: 'm-1931', title: 'M', spine_number: 30, imdb_id: 'tt0022100', tmdb_id: 832 },
         { film_id: 'unlinked-film', title: 'Unlinked' },
@@ -73,6 +74,19 @@ describe('film normalization', () => {
     expect(unlinked.tmdb_url).toBeNull();
     expect(unlinked.letterboxd_url).toBeNull();
   });
+
+  it('constructs TV TMDB URLs without Letterboxd movie shortcuts', () => {
+    cleanup = makeFixtureDir({
+      picks: [{ guest_slug: 'test-guest-alpha', film_id: 'series', quote: 'classic', extraction_confidence: 'high' }],
+      guests: [guest({ slug: 'test-guest-alpha' })],
+      catalog: [{ film_id: 'series', title: 'Series', tmdb_id: 1804, tmdb_type: 'tv' }],
+    });
+
+    const series = getFilms().find((f) => f.slug === 'series')!;
+    expect(series.tmdb_type).toBe('tv');
+    expect(series.tmdb_url).toBe('https://www.themoviedb.org/tv/1804');
+    expect(series.letterboxd_url).toBeNull();
+  });
 });
 
 describe('pick-count rules', () => {
@@ -88,6 +102,7 @@ describe('pick-count rules', () => {
         // not counted: box set aggregate
         { guest_slug: 'g4', film_id: 'film-a', quote: 'set quote', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'Set' },
       ],
+      guests: [guest({ slug: 'g1' }), guest({ slug: 'g2' }), guest({ slug: 'g3' }), guest({ slug: 'g4' })],
       catalog: [{ film_id: 'film-a', title: 'Film A' }],
     });
     expect(getFilms().find((f) => f.slug === 'film-a')!.pick_count).toBe(2);
@@ -96,9 +111,32 @@ describe('pick-count rules', () => {
   it('prefers an explicit pick_count on the catalog entry', () => {
     cleanup = makeFixtureDir({
       picks: [{ guest_slug: 'g1', film_id: 'film-a', quote: 'q', extraction_confidence: 'high' }],
+      guests: [guest({ slug: 'g1' })],
       catalog: [{ film_id: 'film-a', title: 'Film A', pick_count: 7 }],
     });
     expect(getFilms().find((f) => f.slug === 'film-a')!.pick_count).toBe(7);
+  });
+
+  it('does not count or show picks from guests without videos', () => {
+    cleanup = makeFixtureDir({
+      picks: [
+        { guest_slug: 'video-guest', film_id: 'film-a', quote: 'q', extraction_confidence: 'high' },
+        { guest_slug: 'collection-only', film_id: 'film-a', quote: 'q', extraction_confidence: 'high' },
+      ],
+      guests: [
+        guest({ slug: 'video-guest' }),
+        guest({
+          slug: 'collection-only',
+          youtube_video_id: '',
+          youtube_video_url: '',
+          criterion_page_url: 'https://www.criterion.com/shop/collection/1-collection-only',
+        }),
+      ],
+      catalog: [{ film_id: 'film-a', title: 'Film A' }],
+    });
+
+    expect(getFilms().find((f) => f.slug === 'film-a')!.pick_count).toBe(1);
+    expect(getPicksForFilm('film-a').map((p) => p.guest_slug)).toEqual(['video-guest']);
   });
 });
 
@@ -111,6 +149,7 @@ describe('catalog filtering', () => {
     catalog.push({ film_id: 'picked-film', title: 'Picked' });
     cleanup = makeFixtureDir({
       picks: [{ guest_slug: 'g1', film_id: 'picked-film', quote: 'q', extraction_confidence: 'high' }],
+      guests: [guest({ slug: 'g1' })],
       catalog,
     });
     const films = getFilms();
@@ -124,6 +163,7 @@ describe('catalog filtering', () => {
         // aggregate-only reference to the box set entry
         { guest_slug: 'g1', film_id: 'wcp-box', quote: 'q', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'WCP' },
       ],
+      guests: [guest({ slug: 'g1' })],
       catalog: [
         { film_id: 'wcp-box', title: 'WCP', is_box_set: true },
         { film_id: 'regular-film', title: 'Regular' },
@@ -197,6 +237,7 @@ describe('getBoxSetInfoForFilm', () => {
         // aggregate WITH quote -> excluded (already shown via getPicksForFilm)
         { guest_slug: 'g3', film_id: 'wcp-box', quote: 'q', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'WCP' },
       ],
+      guests: [guest({ slug: 'g1' }), guest({ slug: 'g2' }), guest({ slug: 'g3' })],
     });
     const [info] = getBoxSetInfoForFilm('film-a');
     expect(info.name).toBe('WCP');
@@ -212,6 +253,7 @@ describe('getDisplayablePicksForGuest', () => {
       picks: [
         { guest_slug: 'test-guest-alpha', film_id: 'film-a', quote: 'processed', extraction_confidence: 'high' },
       ],
+      guests: [guest({ slug: 'test-guest-alpha' })],
       picksRaw: [
         // duplicate of a processed pick -> suppressed
         { guest_slug: 'test-guest-alpha', film_id: 'film-a', film_title: 'Film A', source: 'criterion' },
@@ -245,6 +287,7 @@ describe('getDisplayablePicksForGuest', () => {
         // aggregate matched by title fallback (no URL)
         { guest_slug: 'test-guest-alpha', film_id: 'other-box', source: 'criterion', box_set_film_count: 2, box_set_name: 'Other Set' },
       ],
+      guests: [guest({ slug: 'test-guest-alpha' })],
       catalog: [
         { film_id: 'wcp-box', title: 'WCP', is_box_set: true, criterion_url: 'https://www.criterion.com/boxsets/wcp', poster_url: 'wcp.jpg' },
         { film_id: 'other-box', title: 'Other Set', is_box_set: true, poster_url: 'other.jpg' },
@@ -261,6 +304,7 @@ describe('getDisplayablePicksForGuest', () => {
       picks: [
         { guest_slug: 'test-guest-alpha', film_id: 'film-a', quote: 'q', extraction_confidence: 'high', visit_index: 2 },
       ],
+      guests: [guest({ slug: 'test-guest-alpha' })],
       picksRaw: [
         { guest_slug: 'test-guest-alpha', film_id: 'film-b', film_title: 'Film B', source: 'criterion', visit_index: 1 },
       ],
@@ -276,21 +320,28 @@ describe('getDisplayablePicksForGuest', () => {
 });
 
 describe('guest publishability', () => {
-  it('requires a criterion page URL or a video on the guest or a visit', () => {
-    const byUrl = guest({ slug: 'a', criterion_page_url: 'https://www.criterion.com/shop/collection/1-a' });
+  it('requires a video on the guest or a visit', () => {
+    const byUrl = guest({
+      slug: 'a',
+      youtube_video_id: '',
+      youtube_video_url: '',
+      criterion_page_url: 'https://www.criterion.com/shop/collection/1-a',
+    });
     const byVideo = guest({ slug: 'b', youtube_video_id: 'abc123' });
     const byVisit = guest({
       slug: 'c',
+      youtube_video_id: '',
+      youtube_video_url: '',
       visits: [{ youtube_video_id: null, youtube_video_url: null, vimeo_video_id: 'v1', episode_date: null, criterion_page_url: null }],
     });
-    const neither = guest({ slug: 'd' });
-    expect(isGuestPublishable(byUrl)).toBe(true);
+    const neither = guest({ slug: 'd', youtube_video_id: '', youtube_video_url: '' });
+    expect(isGuestPublishable(byUrl)).toBe(false);
     expect(isGuestPublishable(byVideo)).toBe(true);
     expect(isGuestPublishable(byVisit)).toBe(true);
     expect(isGuestPublishable(neither)).toBe(false);
 
     cleanup = makeFixtureDir({ guests: [byUrl, byVideo, byVisit, neither] });
-    expect(getPublishableGuests().map((g) => g.slug).sort()).toEqual(['a', 'b', 'c']);
+    expect(getPublishableGuests().map((g) => g.slug).sort()).toEqual(['b', 'c']);
   });
 });
 

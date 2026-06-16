@@ -106,7 +106,7 @@
   {
     "name": "Stellan Skarsgård",
     "slug": "stellan-skarsgard",
-    "profession": null,
+    "profession": "actor",
     "photo_url": null,
     "youtube_video_id": "vpw582iA-n4",
     "youtube_video_url": "https://www.youtube.com/watch?v=vpw582iA-n4",
@@ -226,14 +226,16 @@
         "vimeo_video_id": null,
         "episode_date": "2013-01-14",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "CcscEY2KoS8",
         "youtube_video_url": "https://www.youtube.com/watch?v=CcscEY2KoS8",
         "vimeo_video_id": null,
         "episode_date": "2026-01-24",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -321,14 +323,16 @@
         "vimeo_video_id": null,
         "episode_date": "2016-05-13",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "wFditJEjgjI",
         "youtube_video_url": "https://www.youtube.com/watch?v=wFditJEjgjI",
         "vimeo_video_id": null,
         "episode_date": "2025-12-08",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/900-yorgos-lanthimos-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -403,14 +407,16 @@
         "vimeo_video_id": null,
         "episode_date": "2015-03-04",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "f-bklvjQftk",
         "youtube_video_url": "https://www.youtube.com/watch?v=f-bklvjQftk",
         "vimeo_video_id": null,
         "episode_date": "2025-11-10",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/887-edgar-wright-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -511,14 +517,16 @@
         "vimeo_video_id": null,
         "episode_date": "2017-09-11",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "q3aEv64x4Fo",
         "youtube_video_url": "https://www.youtube.com/watch?v=q3aEv64x4Fo",
         "vimeo_video_id": null,
         "episode_date": "2025-10-21",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/880-benny-safdie-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -637,7 +645,7 @@
     "episode_date": "2025-09-26",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/872-mark-duplass-s-closet-picks",
-    "pick_count": 7
+    "pick_count": 6
   },
   {
     "name": "Josh Brolin",
@@ -715,7 +723,7 @@
     "episode_date": "2025-04-18",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/800-seth-rogen-evan-goldberg-s-closet-picks",
-    "pick_count": 19
+    "pick_count": 18
   },
   {
     "name": "Judd Apatow",
@@ -858,7 +866,7 @@
     "episode_date": "2024-12-18",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/757-pamela-anderson-s-closet-picks",
-    "pick_count": 12
+    "pick_count": 11
   },
   {
     "name": "Mikey Madison",
@@ -884,7 +892,7 @@
     "episode_date": "2023-04-20",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
-    "pick_count": 36,
+    "pick_count": 35,
     "visits": [
       {
         "youtube_video_id": "psV-DcsnU1Y",
@@ -892,14 +900,16 @@
         "vimeo_video_id": null,
         "episode_date": "2023-04-20",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "vj6QawF-Q9w",
         "youtube_video_url": "https://www.youtube.com/watch?v=vj6QawF-Q9w",
         "vimeo_video_id": null,
         "episode_date": "2025-08-04",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/856-ari-aster-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -953,7 +963,7 @@
     "episode_date": "2025-06-16",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/835-rob-delaney-s-closet-picks",
-    "pick_count": 5
+    "pick_count": 4
   },
   {
     "name": "Simon Pegg",
@@ -1031,7 +1041,7 @@
     "episode_date": "2025-05-16",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/808-aimee-lou-wood-s-closet-picks",
-    "pick_count": 10
+    "pick_count": 9
   },
   {
     "name": "Questlove",
@@ -1070,7 +1080,7 @@
     "episode_date": "2025-06-23",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
-    "pick_count": 11
+    "pick_count": 10
   },
   {
     "name": "Diego Luna",
@@ -1109,7 +1119,7 @@
     "episode_date": "2025-06-06",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/831-michelle-zauner-s-closet-picks",
-    "pick_count": 6
+    "pick_count": 5
   },
   {
     "name": "Katya Zamolodchikova",
@@ -1330,7 +1340,7 @@
     "episode_date": "2025-02-21",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/774-zeinabu-irene-davis-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Ken Burns",
@@ -1356,7 +1366,7 @@
     "episode_date": "2025-02-13",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/777-harris-dickinson-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Eric Bana",
@@ -1512,7 +1522,7 @@
     "episode_date": "2024-11-15",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/737-payal-kapadia-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Jacques Audiard",
@@ -1551,7 +1561,7 @@
     "episode_date": "2024-12-23",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/759-maura-delpero-s-closet-picks",
-    "pick_count": 8
+    "pick_count": 7
   },
   {
     "name": "Kevin Smith",
@@ -1806,14 +1816,16 @@
         "vimeo_video_id": null,
         "episode_date": "2011-04-19",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "y2TK8IHWIcY",
         "youtube_video_url": "https://www.youtube.com/watch?v=y2TK8IHWIcY",
         "vimeo_video_id": null,
         "episode_date": "2024-09-27",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/720-bill-hader-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -1828,7 +1840,7 @@
     "episode_date": "2024-08-14",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/675-zoe-kravitz-and-channing-tatum-s-closet-picks",
-    "pick_count": 15
+    "pick_count": 13
   },
   {
     "name": "Michael Shannon",
@@ -1863,8 +1875,8 @@
     "photo_url": "https://image.tmdb.org/t/p/w185/6boIrLokvene1qlhvb4wiKB5Ikd.jpg",
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "1008075360",
+    "episode_date": "2024-09-10",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/682-lee-daniels-s-closet-picks",
     "pick_count": 9
@@ -2114,7 +2126,7 @@
     "episode_date": "2024-01-01",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/595-jason-schwartzman-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "John Waters’",
@@ -2278,14 +2290,16 @@
         "vimeo_video_id": null,
         "episode_date": "2015-06-23",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "fmXifiwHR-k",
         "youtube_video_url": "https://www.youtube.com/watch?v=fmXifiwHR-k",
         "vimeo_video_id": null,
         "episode_date": "2025-05-30",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/823-michael-cera-s-closet-picks",
+        "visit_index": 2
       }
     ]
   },
@@ -2422,7 +2436,7 @@
   {
     "name": "Ben Gibbards",
     "slug": "ben-gibbards",
-    "profession": null,
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "ZiRJyUUFJQA",
     "youtube_video_url": "https://www.youtube.com/watch?v=ZiRJyUUFJQA",
@@ -2456,7 +2470,7 @@
     "episode_date": "2024-02-26",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/630-nuri-bilge-ceylan-s-closet-picks",
-    "pick_count": 8
+    "pick_count": 7
   },
   {
     "name": "Chelsea Peretti",
@@ -2482,7 +2496,7 @@
     "episode_date": "2024-03-01",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/632-julio-torres-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Matteo Garrone",
@@ -2612,7 +2626,7 @@
     "episode_date": "2023-02-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/522-daniels-closet-picks",
-    "pick_count": 7
+    "pick_count": 6
   },
   {
     "name": "Park Chan-wook",
@@ -2621,8 +2635,8 @@
     "photo_url": "https://image.tmdb.org/t/p/w185/jsSFCVB7MhuVbSLwTgESiXEiNjt.jpg",
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "853427660",
+    "episode_date": "2023-08-10",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/575-park-chan-wook-s-closet-picks",
     "pick_count": 12
@@ -2833,7 +2847,7 @@
     "episode_date": "2023-05-24",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/552-carl-franklin-s-closet-picks",
-    "pick_count": 13
+    "pick_count": 12
   },
   {
     "name": "Trace Lysette",
@@ -2911,7 +2925,7 @@
     "episode_date": "2023-01-25",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/521-john-darnielle-s-closet-picks",
-    "pick_count": 10
+    "pick_count": 9
   },
   {
     "name": "Leslie Harris",
@@ -2989,7 +3003,7 @@
     "episode_date": "2021-11-09",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/426-colin-quinn-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Elvis Mitchell",
@@ -3176,7 +3190,7 @@
   {
     "name": "Five Comics’",
     "slug": "five-comics",
-    "profession": null,
+    "profession": "other",
     "photo_url": null,
     "youtube_video_id": "d7zuU2a_Tt4",
     "youtube_video_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4",
@@ -3501,12 +3515,12 @@
   {
     "name": "The Quay Brothers’",
     "slug": "the-quay-brothers",
-    "profession": null,
+    "profession": "director",
     "photo_url": null,
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "769988668",
+    "episode_date": "2022-11-11",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/597-the-quay-brothers-closet-picks",
     "pick_count": 6
@@ -3544,8 +3558,8 @@
     "photo_url": null,
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "769988118",
+    "episode_date": "2022-11-11",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/604-jack-garfein-s-closet-picks",
     "pick_count": 4
@@ -3672,7 +3686,8 @@
         "vimeo_video_id": null,
         "episode_date": "2016-08-10",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks",
+        "visit_index": 1
       },
       {
         "youtube_video_id": "ENCPEKroK44",
@@ -3680,7 +3695,8 @@
         "vimeo_video_id": null,
         "episode_date": "2026-05-11",
         "letterboxd_list_url": null,
-        "criterion_page_url": "https://www.criterion.com/shop/collection/961-ira-sachs-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/961-ira-sachs-s-closet-picks",
+        "visit_index": 2
       }
     ],
     "pick_count": 17
@@ -3688,7 +3704,7 @@
   {
     "name": "The Wolfpack",
     "slug": "the-wolfpack",
-    "profession": null,
+    "profession": "other",
     "photo_url": null,
     "youtube_video_id": "edCT-dyYA0s",
     "youtube_video_url": "https://www.youtube.com/watch?v=edCT-dyYA0s",
@@ -3696,7 +3712,7 @@
     "episode_date": "2015-07-07",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/607-the-wolfpack-s-closet-picks",
-    "pick_count": 24
+    "pick_count": 23
   },
   {
     "name": "Asif Kapadia",
@@ -3709,7 +3725,7 @@
     "episode_date": "2016-02-25",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/462-asif-kapadia-s-closet-picks",
-    "pick_count": 15
+    "pick_count": 14
   },
   {
     "name": "Ruben Östlund",
@@ -3735,7 +3751,7 @@
     "episode_date": "2018-03-22",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/446-ethan-hawke-and-jonathan-marc-sherman-s-closet-picks",
-    "pick_count": 15
+    "pick_count": 14
   },
   {
     "name": "Charlotte Wells",
@@ -3813,7 +3829,7 @@
     "episode_date": "2023-11-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/587-alden-ehrenreich-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 8
   },
   {
     "name": "Saul Williams and Anisia Uzeyman",
@@ -3887,8 +3903,8 @@
     "photo_url": "https://image.tmdb.org/t/p/w185/dc7A11efmuX8DEVRnGTCcShuIyo.jpg",
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "960366172",
+    "episode_date": "2024-06-17",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/628-neal-brennan-s-closet-picks",
     "pick_count": 8
@@ -4069,8 +4085,8 @@
     "photo_url": "https://image.tmdb.org/t/p/w185/AbqrYglSgaMfetQAeqdHaqiPSof.jpg",
     "youtube_video_id": null,
     "youtube_video_url": null,
-    "vimeo_video_id": null,
-    "episode_date": null,
+    "vimeo_video_id": "922549736",
+    "episode_date": "2024-03-12",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks",
     "pick_count": 11
@@ -4325,7 +4341,7 @@
   {
     "name": "Alfonso Cuaron And Pawel Pawlikowski",
     "slug": "alfonso-cuaron-and-pawel-pawlikowski",
-    "profession": null,
+    "profession": "director",
     "photo_url": null,
     "youtube_video_id": "BGvcB42YnM8",
     "youtube_video_url": "https://www.youtube.com/watch?v=BGvcB42YnM8",
@@ -4338,7 +4354,7 @@
   {
     "name": "Aubrey Plaza And Jeff Baena",
     "slug": "aubrey-plaza-and-jeff-baena",
-    "profession": null,
+    "profession": "actor",
     "photo_url": null,
     "youtube_video_id": "b78bW2EoXeM",
     "youtube_video_url": "https://www.youtube.com/watch?v=b78bW2EoXeM",
@@ -4352,14 +4368,14 @@
     "name": "Karina Longworth",
     "slug": "karina-longworth",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://images.squarespace-cdn.com/content/v1/532b4541e4b078ca803911d1/1535045643029-ACS7JG21CL52RZML0FQM/090916LONGWORTH278+%281%29.jpg",
     "youtube_video_id": "AHUyj4kFmF4",
     "youtube_video_url": "https://www.youtube.com/watch?v=AHUyj4kFmF4",
     "vimeo_video_id": null,
     "episode_date": "2020-04-23",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/455-karina-longworth-s-closet-picks",
-    "pick_count": 11
+    "pick_count": 10
   },
   {
     "name": "Barry Levinson",
@@ -4377,7 +4393,7 @@
   {
     "name": "Jean Pierre And Luc Dardenne",
     "slug": "jean-pierre-and-luc-dardenne",
-    "profession": null,
+    "profession": "director",
     "photo_url": null,
     "youtube_video_id": "6sTDUur1III",
     "youtube_video_url": "https://www.youtube.com/watch?v=6sTDUur1III",
@@ -4403,7 +4419,7 @@
   {
     "name": "Charlotte Rampling And Andrew Haigh",
     "slug": "charlotte-rampling-and-andrew-haigh",
-    "profession": null,
+    "profession": "actor",
     "photo_url": null,
     "youtube_video_id": "F3-hyGZuyqk",
     "youtube_video_url": "https://www.youtube.com/watch?v=F3-hyGZuyqk",
@@ -4442,7 +4458,7 @@
   {
     "name": "Andre Gregory And Wallace Shawn",
     "slug": "andre-gregory-and-wallace-shawn",
-    "profession": null,
+    "profession": "actor",
     "photo_url": null,
     "youtube_video_id": "xjMy2RSgBAo",
     "youtube_video_url": "https://www.youtube.com/watch?v=xjMy2RSgBAo",
@@ -4528,7 +4544,7 @@
     "episode_date": "2026-02-20",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/926-alex-winter-s-closet-picks",
-    "pick_count": 8
+    "pick_count": 7
   },
   {
     "name": "Paul Smith",
@@ -4573,7 +4589,7 @@
     "name": "Franklin Leonard",
     "slug": "franklin-leonard",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Franklin_Leonard_for_Mercer.jpg/500px-Franklin_Leonard_for_Mercer.jpg",
     "youtube_video_id": "5YfyrBaAWpE",
     "youtube_video_url": "https://www.youtube.com/watch?v=5YfyrBaAWpE",
     "vimeo_video_id": null,
@@ -4729,11 +4745,12 @@
         "episode_date": "2026-03-27"
       }
     ],
-    "pick_count": 21,
+    "pick_count": 20,
     "poster_url": null,
     "tmdb_id": null,
     "profession": "director",
-    "photo_url": "https://image.tmdb.org/t/p/w185/dzHC2LxmarkBxWLhjp2DRa5oCev.jpg"
+    "photo_url": "https://image.tmdb.org/t/p/w185/dzHC2LxmarkBxWLhjp2DRa5oCev.jpg",
+    "episode_date": "2026-03-27"
   },
   {
     "name": "John Slattery",
@@ -4757,7 +4774,8 @@
     "tmdb_id": null,
     "tmdb_person_id": null,
     "photo_url": "https://image.tmdb.org/t/p/w185/tm7g84OWD5gQRoyfG4hduBphP1j.jpg",
-    "profession": "actor"
+    "profession": "actor",
+    "episode_date": "2026-03-30"
   },
   {
     "name": "Kim Morgan",
@@ -4770,7 +4788,7 @@
     "episode_date": "2026-04-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/946-kim-morgan-s-closet-picks",
-    "pick_count": 10
+    "pick_count": 9
   },
   {
     "name": "Jamie Demetriou",

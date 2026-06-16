@@ -135,6 +135,14 @@ def format_picks_list(picks: list[dict]) -> str:
 
 BATCH_SIZE = 20  # Max picks per API call to avoid output truncation
 
+def pick_index_key(pick: dict) -> tuple:
+    """Stable key for merging enriched quote data without collapsing duplicate titles."""
+    return (
+        pick.get("guest_slug"),
+        pick.get("visit_index"),
+        pick.get("film_id") or pick.get("film_slug"),
+    )
+
 
 def parse_json_array_response(response_text: str) -> list:
     """Parse a Gemini response that should contain a JSON array."""
@@ -433,7 +441,7 @@ def _process_transcript_guest(
                             f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
                         )
 
-            existing_pick_index[(slug, title)] = pick
+            existing_pick_index[pick_index_key(pick)] = pick
 
         checkpoint[slug] = {
             "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -502,8 +510,7 @@ def main():
     # Build existing picks index for merging
     existing_pick_index = {}
     for p in existing_picks:
-        key = (p["guest_slug"], p.get("film_title", ""))
-        existing_pick_index[key] = p
+        existing_pick_index[pick_index_key(p)] = p
 
     processed = 0
     skipped = 0
@@ -638,8 +645,7 @@ def main():
                         pick["youtube_timestamp_url"] = (
                             f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
                         )
-                key = (slug, title)
-                existing_pick_index[key] = pick
+                existing_pick_index[pick_index_key(pick)] = pick
 
             checkpoint[f"{slug}_audio"] = {
                 "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -668,7 +674,7 @@ def main():
             # Check if this guest has "none" confidence picks that might benefit
             guest_picks_in_index = [
                 p for key, p in existing_pick_index.items()
-                if key[0] == slug and p.get("extraction_confidence") in ("none", None)
+                if p.get("guest_slug") == slug and p.get("extraction_confidence") in ("none", None)
             ]
             if not guest_picks_in_index:
                 continue
@@ -727,7 +733,7 @@ def main():
                                     pick["youtube_timestamp_url"] = (
                                         f"https://www.youtube.com/watch?v={visit_video_id}&t={quote_match['start_timestamp']}"
                                     )
-                            existing_pick_index[(slug, title)] = pick
+                            existing_pick_index[pick_index_key(pick)] = pick
                             new_quotes_found += 1
 
                     log(f"    Found {new_quotes_found} new quotes from visit {visit_idx + 1}")

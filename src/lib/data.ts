@@ -37,6 +37,7 @@ export interface Film {
   imdb_id: string | null;
   imdb_url: string | null;
   tmdb_id: number | null;
+  tmdb_type?: 'movie' | 'tv';
   tmdb_url: string | null;
   letterboxd_url: string | null;
   poster_url: string | null;
@@ -112,6 +113,7 @@ function normalizePicks(raw: any[]): Pick[] {
 function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
   return raw.map((f) => {
     const slug = f.slug ?? f.film_id ?? '';
+    const tmdbType = f.tmdb_type === 'tv' ? 'tv' : 'movie';
     return {
       title: f.title ?? '',
       slug,
@@ -124,8 +126,9 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       imdb_id: f.imdb_id ?? null,
       imdb_url: f.imdb_url ?? (f.imdb_id ? `https://www.imdb.com/title/${f.imdb_id}/` : null),
       tmdb_id: f.tmdb_id ?? null,
-      tmdb_url: f.tmdb_id ? `https://www.themoviedb.org/movie/${f.tmdb_id}` : null,
-      letterboxd_url: f.tmdb_id ? `https://letterboxd.com/tmdb/${f.tmdb_id}` : null,
+      tmdb_type: f.tmdb_type ?? undefined,
+      tmdb_url: f.tmdb_id ? `https://www.themoviedb.org/${tmdbType}/${f.tmdb_id}` : null,
+      letterboxd_url: f.tmdb_id && tmdbType === 'movie' ? `https://letterboxd.com/tmdb/${f.tmdb_id}` : null,
       poster_url: f.poster_url ?? null,
       pick_count: f.pick_count ?? pickCounts.get(slug) ?? 0,
       is_box_set: f.is_box_set ?? false,
@@ -145,9 +148,35 @@ export function getPicks(): Pick[] {
   return _picks;
 }
 
+export function hasGuestVideo(guest: Guest): boolean {
+  if (guest.youtube_video_id || guest.vimeo_video_id) return true;
+  return guest.visits?.some(v => v.youtube_video_id || v.vimeo_video_id) ?? false;
+}
+
+/**
+ * Check if a guest should have a page generated.
+ * A guest is publishable if the project has a video-backed closet visit.
+ */
+export function isGuestPublishable(guest: Guest): boolean {
+  return hasGuestVideo(guest);
+}
+
+export function getPublishableGuests(): Guest[] {
+  return getGuests().filter(isGuestPublishable);
+}
+
+function getPublishableGuestSlugs(): Set<string> {
+  return new Set(getPublishableGuests().map((g) => g.slug));
+}
+
+export function getSupportedPicks(): Pick[] {
+  const publishableGuestSlugs = getPublishableGuestSlugs();
+  return getPicks().filter((p) => publishableGuestSlugs.has(p.guest_slug));
+}
+
 export function getFilms(): Film[] {
   if (_films) return _films;
-  const picks = getPicks();
+  const picks = getSupportedPicks();
   const pickCounts = new Map<string, number>();
   for (const p of picks) {
     // Only count picks with actual quotes
@@ -205,7 +234,7 @@ let _guestNameMap: Map<string, string> | null = null;
 export function getGuestByName(name: string): Guest | undefined {
   if (!_guestNameMap) {
     _guestNameMap = new Map();
-    for (const g of getGuests()) {
+    for (const g of getPublishableGuests()) {
       _guestNameMap.set(g.name.toLowerCase(), g.slug);
     }
   }
@@ -230,6 +259,9 @@ function getBoxSetFilms(): Film[] {
 }
 
 export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
+  const guest = getGuestBySlug(guestSlug);
+  if (!guest || !isGuestPublishable(guest)) return [];
+
   const films = getFilms();
   const boxSetFilms = getBoxSetFilms();
   return getPicks()
@@ -252,8 +284,9 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
 }
 
 export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | undefined })[] {
-  const guests = getGuests();
-  const allPicks = getPicks();
+  const guests = getPublishableGuests();
+  const publishableGuestSlugs = new Set(guests.map((g) => g.slug));
+  const allPicks = getPicks().filter((p) => publishableGuestSlugs.has(p.guest_slug));
 
   // Find box set names that contain this film (from tagged individual picks)
   const boxSetNames = new Set<string>();
@@ -313,7 +346,7 @@ export interface BoxSetInfo {
 }
 
 export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
-  const allPicks = getPicks();
+  const allPicks = getSupportedPicks();
 
   // Find box set names that contain this film
   const boxSetNames = new Set<string>();
@@ -366,22 +399,13 @@ export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
 }
 
 /**
- * Check if a guest should have a page generated.
- * A guest is publishable if they have a criterion page URL or a video.
- */
-export function isGuestPublishable(guest: Guest): boolean {
-  if (guest.criterion_page_url) return true;
-  if (guest.youtube_video_id || guest.vimeo_video_id) return true;
-  // Check visits for video
-  if (guest.visits?.some(v => v.youtube_video_id || v.vimeo_video_id)) return true;
-  return false;
-}
-
-/**
  * Get all displayable picks for a guest, merging picks.json and picks_raw.json.
  * Display rule: show if source === 'criterion' OR pick has a quote.
  */
 export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
+  const guest = getGuestBySlug(guestSlug);
+  if (!guest || !isGuestPublishable(guest)) return [];
+
   const films = getFilms();
   const boxSetFilms = getBoxSetFilms();
   const processedPicks = getPicks().filter(p => p.guest_slug === guestSlug);
@@ -434,16 +458,12 @@ export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: 
   });
 }
 
-export function getPublishableGuests(): Guest[] {
-  return getGuests().filter(isGuestPublishable);
-}
-
 export function getFilmsSortedByPickCount(): Film[] {
   return [...getFilms()].sort((a, b) => b.pick_count - a.pick_count);
 }
 
 export function getAllProfessions(): string[] {
-  const professions = new Set(getGuests().map(g => g.profession).filter(Boolean));
+  const professions = new Set(getPublishableGuests().map(g => g.profession).filter(Boolean));
   return [...professions].sort();
 }
 
@@ -466,7 +486,7 @@ export function getRecentGuests(count: number = 3): Guest[] {
     const m = g.criterion_page_url?.match(/\/shop\/collection\/(\d+)-/);
     return m ? parseInt(m[1], 10) : 0;
   };
-  return [...getGuests()]
+  return [...getPublishableGuests()]
     .filter(g => g.criterion_page_url)
     .sort((a, b) => collectionId(b) - collectionId(a))
     .slice(0, count);
@@ -476,6 +496,6 @@ export function getStats() {
   return {
     totalGuests: getPublishableGuests().length,
     totalFilms: getFilms().length,
-    totalPicks: getPicks().length,
+    totalPicks: getSupportedPicks().length,
   };
 }

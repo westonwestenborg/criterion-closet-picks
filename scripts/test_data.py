@@ -7,6 +7,7 @@ Run: python scripts/test_data.py
 """
 
 import sys
+import re
 import unittest
 from pathlib import Path
 
@@ -19,17 +20,54 @@ from scripts.utils import (
     load_json,
 )
 from scripts.schema import CatalogFilm, Guest, Pick
+from scripts.audit_data_quality import load_known_exceptions
 
 # Load data once for all tests
 catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
 guests: list[Guest] = load_json(GUESTS_FILE)
 picks: list[Pick] = load_json(PICKS_FILE)
 picks_raw: list[Pick] = load_json(PICKS_RAW_FILE)
+known_exceptions = load_known_exceptions()
 
 # Build lookup indexes
 catalog_by_spine = {f["spine_number"]: f for f in catalog}
 catalog_by_film_id = {f["film_id"]: f for f in catalog}
 guest_by_slug = {g["slug"]: g for g in guests}
+
+SMART_QUOTE_TRANSLATION = str.maketrans(
+    {
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+    }
+)
+
+
+def box_set_title_lookup_keys(title: str) -> set[str]:
+    """Return stable lookup keys for user-facing box-set member titles."""
+    key = re.sub(r"\s+", " ", title.translate(SMART_QUOTE_TRANSLATION).strip().lower())
+    keys = {key}
+    without_parenthetical = re.sub(r"\s+\([^)]*\)$", "", key).strip()
+    if without_parenthetical:
+        keys.add(without_parenthetical)
+    return keys
+
+
+class TestBoxSetTitleLookup(unittest.TestCase):
+    """Box set title lookups should tolerate display-title differences."""
+
+    def test_normalizes_smart_quotes(self):
+        self.assertEqual(
+            box_set_title_lookup_keys("Martin Scorsese’s World Cinema Project No. 2"),
+            box_set_title_lookup_keys("Martin Scorsese's World Cinema Project No. 2"),
+        )
+
+    def test_catalog_parenthetical_suffixes_match_display_titles(self):
+        self.assertIn(
+            "dry summer",
+            box_set_title_lookup_keys("Dry Summer (World Cinema Project)"),
+        )
 
 
 class TestFilmCoverage(unittest.TestCase):
@@ -93,11 +131,13 @@ class TestBoxSetStructure(unittest.TestCase):
 
     def test_box_set_film_titles_exist(self):
         """Box set film titles listed in box_set_film_titles should be findable in the catalog."""
-        catalog_titles_lower = {f["title"].lower() for f in catalog}
+        catalog_title_keys = set()
+        for film in catalog:
+            catalog_title_keys.update(box_set_title_lookup_keys(film["title"]))
         missing = []
         for pick in picks:
             for title in pick.get("box_set_film_titles", []):
-                if title.lower() not in catalog_titles_lower:
+                if box_set_title_lookup_keys(title).isdisjoint(catalog_title_keys):
                     missing.append(
                         f"'{title}' from box set '{pick.get('box_set_name', '?')}' "
                         f"(guest {pick.get('guest_slug', '?')})"
@@ -310,9 +350,14 @@ class TestNoDuplicateTmdbIds(unittest.TestCase):
             if f.get("tmdb_id") and not f.get("is_box_set")
         ]
         id_counts = Counter(tmdb_ids)
-        dupes = {tid: count for tid, count in id_counts.items() if count > 1}
+        dupes = {
+            tid: count
+            for tid, count in id_counts.items()
+            if count > 1 and f"record:duplicate_tmdb_id:{tid}" not in known_exceptions
+        }
         # Advisory only — duplicates are common for alternate titles, WCP variants,
-        # and box set variants of the same film. Use audit_tmdb.py for detailed review.
+        # and box set variants of the same film. Reviewed duplicates live in the
+        # data-quality exception allowlist; new ones should still be surfaced here.
         if dupes:
             details = []
             for tid in sorted(dupes):

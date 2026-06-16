@@ -60,6 +60,8 @@ DEPARTMENT_MAP = {
 # Maps film_id -> TMDB TV series ID
 TMDB_TV_IDS = {
     "dekalog": 42699,
+    "tanner-88": 1804,
+    "the-underground-railroad": 80039,
 }
 
 # Manual TMDB ID overrides for films that auto-search matches incorrectly

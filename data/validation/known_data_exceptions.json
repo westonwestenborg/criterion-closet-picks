@@ -1,0 +1,110 @@
+{
+  "_comment": "Accepted local data-quality audit exceptions. Keep explicit IDs small; use accepted_issue_types only for categories whose behavior is intentionally non-actionable.",
+  "accepted_issue_ids": [
+    "guest_incomplete_quote_coverage:data/picks.json:bill-hader|youtube:348qOuXOAXo"
+  ],
+  "accepted_issue_types": {
+    "catalog_box_set_missing_spine": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable.",
+    "pick_box_set_missing_spine": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+  },
+  "accepted_issue_record_keys": {
+    "duplicate_title_year_director": {
+      "in the mood for love|2000|wong kar-wai": "Reviewed on 2026-06-16; picked rows use the Criterion-backed fa-yeung-nin-wa catalog entry, while in-the-mood-for-love is an unpicked legacy alias.",
+      "playtime|1967|jacques tati": "Reviewed on 2026-06-16; play-time is the Criterion-backed catalog entry, while playtime is an unpicked legacy alias."
+    },
+    "duplicate_tmdb_id": {
+      "843": "Reviewed on 2026-06-16; picked rows use the Criterion-backed fa-yeung-nin-wa catalog entry, while in-the-mood-for-love is an unpicked legacy alias.",
+      "10227": "Reviewed on 2026-06-16; play-time is the Criterion-backed catalog entry, while playtime is an unpicked legacy alias.",
+      "13446": "Reviewed on 2026-06-16; Criterion-backed Withnail and I has picks, while Withnail & I is an unpicked alternate-title alias.",
+      "204": "Reviewed on 2026-06-16; Criterion-backed Le Salaire de la peur has picks, while The Wages of Fear is an unpicked alternate-title alias.",
+      "29451": "Reviewed on 2026-06-16; Criterion-backed All That Money Can Buy (aka The Devil and Daniel Webster) has picks, while the shorter-title row is an unpicked alias.",
+      "31217": "Reviewed on 2026-06-16; Criterion's The Human Condition aggregate and the first-film alias share one local TMDB reference until the data model supports contained-film IDs.",
+      "31345": "Reviewed on 2026-06-16; Criterion-backed L'Enfance Nue has picks, while Naked Childhood is an unpicked translated-title alias.",
+      "31542": "Reviewed on 2026-06-16; Criterion-backed The Tree of Wooden Clogs has picks, while the delayed-announcement row is an unpicked legacy catalog alias.",
+      "42701": "Reviewed on 2026-06-16; Criterion-backed The Shooting has picks, while The Shooting (Monte Hellman set) is an unpicked set membership alias.",
+      "51857": "Reviewed on 2026-06-16; Criterion-backed Cria cuervos has picks, while Cria! is an unpicked alternate-title alias.",
+      "66180": "Reviewed on 2026-06-16; Criterion-backed I fidanzati has picks, while The Fiances is an unpicked translated-title alias.",
+      "77771": "Reviewed on 2026-06-16; Touki Bouki and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "9314": "Reviewed on 2026-06-16; Criterion-backed 1984 has picks, while Nineteen Eighty-Four is an unpicked alternate-title alias.",
+      "108949": "Reviewed on 2026-06-16; Insiang and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "126708": "Reviewed on 2026-06-16; Downpour and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "1364": "Reviewed on 2026-06-16; Lucia and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "1368166": "Reviewed on 2026-06-16; The Housemaid and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "170296": "Reviewed on 2026-06-16; Two Monks and its Dos monjes World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "172597": "Reviewed on 2026-06-16; After the Curfew and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "195841": "Reviewed on 2026-06-16; Oh, Sun and its Soleil O World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "197297": "Reviewed on 2026-06-16; Law of the Border and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "215407": "Reviewed on 2026-06-16; Trances and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "379895": "Reviewed on 2026-06-16; Adventures on the New Frontier is contained in the Kennedy Films release, so the duplicate is a contained-film modeling artifact.",
+      "40641": "Reviewed on 2026-06-16; Lola and its Jacques Demy box row intentionally share a TMDB ID for the same film/release context.",
+      "628403": "Reviewed on 2026-06-16; World Cinema Project volume rows share an aggregate TMDB reference until box-set modeling is richer.",
+      "741780": "Reviewed on 2026-06-16; Taipei Story and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "8442": "Reviewed on 2026-06-16; Pixote and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "93164": "Reviewed on 2026-06-16; A River Called Titas and its World Cinema Project row intentionally share a TMDB ID for the same film/release context.",
+      "93553": "Reviewed on 2026-06-16; Mysterious Object at Noon and its World Cinema Project row intentionally share a TMDB ID for the same film/release context."
+    },
+    "orphan_transcript": {
+      "6dXSH9n2aC4": "Reviewed on 2026-06-16; legacy transcript retained but not linked from current publishable guest metadata.",
+      "I0npWmWUFyo": "Reviewed on 2026-06-16; legacy transcript retained but not linked from current publishable guest metadata.",
+      "LhDI8R0Mskg": "Reviewed on 2026-06-16; legacy transcript retained but not linked from current publishable guest metadata.",
+      "dqNtp1bAI8o": "Reviewed on 2026-06-16; known Lee Daniels/Daniels video-ID mismatch appears in normalize_guests.py and is not linked from current guest metadata.",
+      "rcBivDDUMTM": "Reviewed on 2026-06-16; legacy transcript retained but not linked from current publishable guest metadata.",
+      "y7JQUoUcE20": "Reviewed on 2026-06-16; legacy transcript retained but not linked from current publishable guest metadata."
+    }
+  },
+  "accepted_issue_film_ids": {
+    "catalog_regular_film_missing_spine": {
+      "34102-ryuichi-sakamoto-opus": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "dreams": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "eo": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "godland": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "lynchoz": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "no-bears": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "the-innocent": "Criterion /films/ page was checked on 2026-06-16 and did not expose a visible public Spine # label.",
+      "the-shrouds": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "totem": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+    },
+    "pick_regular_film_missing_spine": {
+      "34102-ryuichi-sakamoto-opus": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "dreams": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "eo": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "godland": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "lynchoz": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "no-bears": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "the-innocent": "Criterion /films/ page was checked on 2026-06-16 and did not expose a visible public Spine # label.",
+      "the-shrouds": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "the-killers": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label; the catalog entry is represented as a box set.",
+      "totem": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+    },
+    "film_missing_tmdb_id": {
+      "che": "Criterion's Che is a two-part feature; the previous single TMDB ID was only a making-of documentary, so no single TMDB movie ID is accepted without a richer multi-part model.",
+      "science-is-fiction-23-films-by-jean-painleve": "Multi-short collection; no single locally verified TMDB entity is accepted without a richer contained-films model.",
+      "symbiopsychotaxiplasm-two-takes": "Two-film release; no single locally verified TMDB entity is accepted without a richer contained-films model.",
+      "the-complete-mr-arkadin": "Multi-version release; no single locally verified TMDB entity is accepted without a richer contained-versions model."
+    },
+    "film_missing_imdb_id": {
+      "a-hollis-frampton-odyssey": "Multi-film collection; TMDB has no verified single IMDb ID to backfill locally.",
+      "che": "Two-part feature with separate IMDb records; leave blank until the data model supports multi-part external IDs.",
+      "les-blank-always-for-pleasure": "Multi-film collection; TMDB has no verified single IMDb ID to backfill locally.",
+      "martha-graham-dance-on-film": "Multi-film program; TMDB has no verified single IMDb ID to backfill locally.",
+      "science-is-fiction-23-films-by-jean-painleve": "Multi-short collection; no single locally verified IMDb ID is accepted without a richer contained-films model.",
+      "symbiopsychotaxiplasm-two-takes": "Two-film release; no single locally verified IMDb ID is accepted without a richer contained-films model.",
+      "the-complete-mr-arkadin": "Multi-version release; no single locally verified IMDb ID is accepted without a richer contained-versions model."
+    },
+    "film_missing_genres": {
+      "a-hollis-frampton-odyssey": "Multi-film collection; the exact TMDB entity has no genre payload, so this remains a known completeness gap.",
+      "les-blank-always-for-pleasure": "Multi-film collection; the exact TMDB entity has no genre payload, so this remains a known completeness gap.",
+      "science-is-fiction-23-films-by-jean-painleve": "Multi-short collection; no single locally verified TMDB entity is accepted without a richer contained-films model.",
+      "symbiopsychotaxiplasm-two-takes": "Two-film release; no single locally verified TMDB entity is accepted without a richer contained-films model.",
+      "the-complete-mr-arkadin": "Multi-version release; no single locally verified TMDB entity is accepted without a richer contained-versions model."
+    },
+    "film_missing_director": {
+      "the-golden-age-of-television": "Anthology release with multiple directors; leave the aggregate director blank until the data model supports contained-film credits."
+    }
+  },
+  "notes": {
+    "guest_incomplete_quote_coverage:data/picks.json:bill-hader|youtube:348qOuXOAXo": "Audio fallback checked on 2026-06-15; remaining unquoted visit-1 picks appear to be silent pickups rather than verbal mentions."
+  }
+}

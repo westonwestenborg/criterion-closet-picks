@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getGuests, getFilms, getPicks, getStats } from '../lib/data';
+import { getPublishableGuests, getFilms, getSupportedPicks, getStats } from '../lib/data';
 
-const guests = getGuests().sort((a, b) => a.name.localeCompare(b.name));
+const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const films = getFilms();
-const picks = getPicks();
+const picks = getSupportedPicks();
 const stats = getStats();
 
 const buildDate = new Date().toISOString().split('T')[0];

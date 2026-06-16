@@ -22,5 +22,121 @@
   "dont-look-back": {
     "tmdb_id": 135,
     "note": "D. A. Pennebaker 1967 Bob Dylan documentary, was wrongly matched to Kim Young-nam 2006 Korean film (381860)"
+  },
+  "all-that-heaven-allows": {
+    "tmdb_id": 43316,
+    "note": "Douglas Sirk 1955, was wrongly matched to Tai Paulo short (1300255)"
+  },
+  "blow-out": {
+    "tmdb_id": 11644,
+    "note": "Brian De Palma 1981, was wrongly matched to Chicago Blow-Out (575710)"
+  },
+  "cul-de-sac": {
+    "tmdb_id": 4772,
+    "note": "Roman Polanski 1966, was wrongly matched to Jimmy Luk Tin-Wah short (1173298)"
+  },
+  "day-for-night": {
+    "tmdb_id": 1675,
+    "note": "Francois Truffaut 1973, was wrongly matched to an unrelated short (663344)"
+  },
+  "every-man-for-himself": {
+    "tmdb_id": 113479,
+    "note": "Jean-Luc Godard 1980, was wrongly matched to Cheung Sum film (186693)"
+  },
+  "gomorrah": {
+    "tmdb_id": 8882,
+    "note": "Matteo Garrone 2008, was wrongly matched to Aaron J McIntyre film (1186121)"
+  },
+  "it-happened-one-night": {
+    "tmdb_id": 3078,
+    "note": "Frank Capra 1934, was wrongly matched to Henry Barakat film (1324784)"
+  },
+  "kwaidan": {
+    "tmdb_id": 30959,
+    "note": "Masaki Kobayashi 1965, was wrongly matched to Claus Canddie documentary (1058062)"
+  },
+  "master-of-the-house": {
+    "tmdb_id": 55589,
+    "note": "Carl Th. Dreyer 1925, was wrongly matched to Dylan Maranda film (1089567)"
+  },
+  "mona-lisa": {
+    "tmdb_id": 10002,
+    "note": "Neil Jordan 1986, was wrongly matched to Veselka Kuncheva short (1262287)"
+  },
+  "richard-iii": {
+    "tmdb_id": 43323,
+    "note": "Laurence Olivier 1955, was wrongly matched to Gyorgy Feher television film (383485)"
+  },
+  "stranger-than-paradise": {
+    "tmdb_id": 469,
+    "note": "Jim Jarmusch 1984 feature, was wrongly matched to unrelated short (410051)"
+  },
+  "stray-dog": {
+    "tmdb_id": 30368,
+    "note": "Akira Kurosawa 1949 film, split from Straw Dogs"
+  },
+  "straw-dogs": {
+    "tmdb_id": 994,
+    "note": "Sam Peckinpah 1971 film, split from Stray Dog"
+  },
+  "summertime": {
+    "tmdb_id": 50363,
+    "note": "David Lean 1955, was wrongly matched to Corentin Leconte short (1071580)"
+  },
+  "the-celebration": {
+    "tmdb_id": 309,
+    "note": "Thomas Vinterberg 1998, was wrongly matched to Milad Tangshir documentary (1394265)"
+  },
+  "the-cremator": {
+    "tmdb_id": 18352,
+    "note": "Juraj Herz 1969, was wrongly matched to Nishon Shakya film (775517)"
+  },
+  "the-executioner": {
+    "tmdb_id": 4498,
+    "note": "Luis Garcia Berlanga 1963, was wrongly matched to unrelated film (972235)"
+  },
+  "the-innocent": {
+    "tmdb_id": 919573,
+    "note": "Louis Garrel 2022 Criterion Premieres film, split from The Innocents (1961)"
+  },
+  "the-innocents": {
+    "tmdb_id": 16372,
+    "note": "Jack Clayton 1961 film, split from The Innocent (2022) and Bill Viola short (673155)"
+  },
+  "the-organizer": {
+    "tmdb_id": 51092,
+    "note": "Mario Monicelli 1963, was wrongly matched to Nick Taylor documentary (575577)"
+  },
+  "the-wiz": {
+    "tmdb_id": 24961,
+    "note": "Sidney Lumet 1978, was wrongly matched to Matthew Xia production (929834)"
+  },
+  "things-to-come": {
+    "tmdb_id": 3596,
+    "note": "William Cameron Menzies 1936, was wrongly matched to Ken Jacobs film (633756)"
+  },
+  "throne-of-blood": {
+    "tmdb_id": 3777,
+    "note": "Akira Kurosawa 1957, was wrongly matched to a making-of documentary (523611)"
+  },
+  "traffic": {
+    "tmdb_id": 1900,
+    "note": "Steven Soderbergh 2000 film, split from Jacques Tati's Trafic and wrong Aurora Martínez short (1191431)"
+  },
+  "topsy-turvy": {
+    "tmdb_id": 46435,
+    "note": "Mike Leigh 1999, was wrongly matched to Masaharu Segawa film (987409)"
+  },
+  "two-lane-blacktop": {
+    "tmdb_id": 27236,
+    "note": "Monte Hellman 1971, was wrongly matched to unrelated short (1182614)"
+  },
+  "until-the-end-of-the-world": {
+    "tmdb_id": 10341,
+    "note": "Wim Wenders 1991, was wrongly matched to Francesco De Augustinis documentary (1286629)"
+  },
+  "weekend-1967": {
+    "tmdb_id": 8075,
+    "note": "Jean-Luc Godard 1967, was wrongly matched to David McNeil short (651058)"
   }
 }

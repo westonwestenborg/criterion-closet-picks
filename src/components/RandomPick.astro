@@ -1,9 +1,9 @@
 ---
-import { getFilms, getPicks, getGuests } from '../lib/data';
+import { getFilms, getSupportedPicks, getPublishableGuests } from '../lib/data';
 
 const films = getFilms();
-const picks = getPicks();
-const guests = getGuests();
+const picks = getSupportedPicks();
+const guests = getPublishableGuests();
 
 // Build a serializable data structure for client-side JS
 const randomData = picks

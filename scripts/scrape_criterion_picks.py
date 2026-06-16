@@ -925,7 +925,7 @@ def main():
     parser.add_argument(
         "--videos-only",
         action="store_true",
-        help="Only extract YouTube video IDs from Criterion collection pages",
+        help="Only extract YouTube/Vimeo video IDs from Criterion collection pages",
     )
     parser.add_argument(
         "--guest",
@@ -1002,11 +1002,11 @@ def main():
             log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
             return
 
-        # Videos-only mode: extract YouTube video IDs from Criterion pages
+        # Videos-only mode: extract YouTube/Vimeo video IDs from Criterion pages
         if args.videos_only:
             updated = extract_videos_from_criterion_pages(scraper, existing_guests)
             save_json(GUESTS_FILE, existing_guests)
-            log(f"Updated {updated} guests with YouTube video IDs")
+            log(f"Updated {updated} guests with Criterion page video IDs")
             log(f"Saved {len(existing_guests)} guests to {GUESTS_FILE}")
             return
 

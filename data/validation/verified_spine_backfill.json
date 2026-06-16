@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-06-13",
+  "source_note": "Criterion film pages inspected via browser/web text. Records marked verified_spine had a visible Spine # label; records marked no_spine_visible did not expose a visible Spine # label on the Criterion film page.",
+  "records": [
+    {
+      "film_id": "34102-ryuichi-sakamoto-opus",
+      "criterion_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "a-matter-of-life-and-death",
+      "criterion_url": "https://www.criterion.com/films/28833-a-matter-of-life-and-death",
+      "status": "verified_spine",
+      "spine_number": 939,
+      "evidence": "Spine #939"
+    },
+    {
+      "film_id": "ali-fear-eats-the-soul",
+      "criterion_url": "https://www.criterion.com/films/152-ali-fear-eats-the-soul",
+      "status": "verified_spine",
+      "spine_number": 198,
+      "evidence": "Spine #198"
+    },
+    {
+      "film_id": "band-of-outsiders",
+      "criterion_url": "https://www.criterion.com/films/291-band-of-outsiders",
+      "status": "verified_spine",
+      "spine_number": 174,
+      "evidence": "Spine #174"
+    },
+    {
+      "film_id": "big-deal-on-madonna-street",
+      "criterion_url": "https://www.criterion.com/films/652-big-deal-on-madonna-street",
+      "status": "verified_spine",
+      "spine_number": 113,
+      "evidence": "Spine #113"
+    },
+    {
+      "film_id": "children-of-paradise",
+      "criterion_url": "https://www.criterion.com/films/683-children-of-paradise",
+      "status": "verified_spine",
+      "spine_number": 141,
+      "evidence": "Spine #141"
+    },
+    {
+      "film_id": "closely-watched-trains",
+      "criterion_url": "https://www.criterion.com/films/212-closely-watched-trains",
+      "status": "verified_spine",
+      "spine_number": 131,
+      "evidence": "Spine #131"
+    },
+    {
+      "film_id": "contempt",
+      "criterion_url": "https://www.criterion.com/films/239-contempt",
+      "status": "verified_spine",
+      "spine_number": 171,
+      "evidence": "Spine #171"
+    },
+    {
+      "film_id": "coup-de-grace",
+      "criterion_url": "https://www.criterion.com/films/737-coup-de-grace",
+      "status": "verified_spine",
+      "spine_number": 192,
+      "evidence": "Spine #192"
+    },
+    {
+      "film_id": "day-of-wrath",
+      "criterion_url": "https://www.criterion.com/films/442-day-of-wrath",
+      "status": "verified_spine",
+      "spine_number": 125,
+      "evidence": "Spine #125"
+    },
+    {
+      "film_id": "down-by-law",
+      "criterion_url": "https://www.criterion.com/films/719-down-by-law",
+      "status": "verified_spine",
+      "spine_number": 166,
+      "evidence": "Spine #166"
+    },
+    {
+      "film_id": "dreams",
+      "criterion_url": "https://www.criterion.com/films/28206-dreams",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "eo",
+      "criterion_url": "https://www.criterion.com/films/33481-eo",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "fear-and-loathing-in-las-vegas",
+      "criterion_url": "https://www.criterion.com/films/215-fear-and-loathing-in-las-vegas",
+      "status": "verified_spine",
+      "spine_number": 175,
+      "evidence": "Spine #175"
+    },
+    {
+      "film_id": "gertrud",
+      "criterion_url": "https://www.criterion.com/films/443-gertrud",
+      "status": "verified_spine",
+      "spine_number": 127,
+      "evidence": "Spine #127"
+    },
+    {
+      "film_id": "godland",
+      "criterion_url": "https://www.criterion.com/films/33485-godland",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "grey-gardens",
+      "criterion_url": "https://www.criterion.com/films/664-grey-gardens",
+      "status": "verified_spine",
+      "spine_number": 123,
+      "evidence": "Spine #123"
+    },
+    {
+      "film_id": "haxan",
+      "criterion_url": "https://www.criterion.com/films/352-haxan",
+      "status": "verified_spine",
+      "spine_number": 134,
+      "evidence": "Spine #134"
+    },
+    {
+      "film_id": "hiroshima-mon-amour",
+      "criterion_url": "https://www.criterion.com/films/217-hiroshima-mon-amour",
+      "status": "verified_spine",
+      "spine_number": 196,
+      "evidence": "Spine #196"
+    },
+    {
+      "film_id": "hopscotch",
+      "criterion_url": "https://www.criterion.com/films/717-hopscotch",
+      "status": "verified_spine",
+      "spine_number": 163,
+      "evidence": "Spine #163"
+    },
+    {
+      "film_id": "how-to-get-ahead-in-advertising",
+      "criterion_url": "https://www.criterion.com/films/660-how-to-get-ahead-in-advertising",
+      "status": "verified_spine",
+      "spine_number": 120,
+      "evidence": "Spine #120"
+    },
+    {
+      "film_id": "i-am-curious-yellow",
+      "criterion_url": "https://www.criterion.com/films/728-i-am-curious-yellow",
+      "status": "verified_spine",
+      "spine_number": 180,
+      "evidence": "Spine #180"
+    },
+    {
+      "film_id": "i-fidanzati",
+      "criterion_url": "https://www.criterion.com/films/739-i-fidanzati",
+      "status": "verified_spine",
+      "spine_number": 195,
+      "evidence": "Spine #195"
+    },
+    {
+      "film_id": "il-posto",
+      "criterion_url": "https://www.criterion.com/films/364-il-posto",
+      "status": "verified_spine",
+      "spine_number": 194,
+      "evidence": "Spine #194"
+    },
+    {
+      "film_id": "jubilee",
+      "criterion_url": "https://www.criterion.com/films/736-jubilee",
+      "status": "verified_spine",
+      "spine_number": 191,
+      "evidence": "Spine #191"
+    },
+    {
+      "film_id": "la-belle-et-la-bete",
+      "criterion_url": "https://www.criterion.com/films/177-beauty-and-the-beast",
+      "status": "verified_spine",
+      "spine_number": 6,
+      "evidence": "Spine #6"
+    },
+    {
+      "film_id": "la-regle-du-jeu",
+      "criterion_url": "https://www.criterion.com/films/295-the-rules-of-the-game",
+      "status": "verified_spine",
+      "spine_number": 216,
+      "evidence": "Spine #216"
+    },
+    {
+      "film_id": "le-salaire-de-la-peur",
+      "criterion_url": "https://www.criterion.com/films/370-the-wages-of-fear",
+      "status": "verified_spine",
+      "spine_number": 36,
+      "evidence": "Spine #36"
+    },
+    {
+      "film_id": "lynchoz",
+      "criterion_url": "https://www.criterion.com/films/33490-lynch-oz",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "man-bites-dog",
+      "criterion_url": "https://www.criterion.com/films/718-man-bites-dog",
+      "status": "verified_spine",
+      "spine_number": 165,
+      "evidence": "Spine #165"
+    },
+    {
+      "film_id": "mona-lisa",
+      "criterion_url": "https://www.criterion.com/films/648-mona-lisa",
+      "status": "verified_spine",
+      "spine_number": 107,
+      "evidence": "Spine #107"
+    },
+    {
+      "film_id": "my-life-as-a-dog",
+      "criterion_url": "https://www.criterion.com/films/727-my-life-as-a-dog",
+      "status": "verified_spine",
+      "spine_number": 178,
+      "evidence": "Spine #178"
+    },
+    {
+      "film_id": "my-man-godfrey",
+      "criterion_url": "https://www.criterion.com/films/653-my-man-godfrey",
+      "status": "verified_spine",
+      "spine_number": 114,
+      "evidence": "Spine #114"
+    },
+    {
+      "film_id": "no-bears",
+      "criterion_url": "https://www.criterion.com/films/33531-no-bears",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "notorious",
+      "criterion_url": "https://www.criterion.com/films/682-notorious",
+      "status": "verified_spine",
+      "spine_number": 137,
+      "evidence": "Spine #137"
+    },
+    {
+      "film_id": "ordet",
+      "criterion_url": "https://www.criterion.com/films/441-ordet",
+      "status": "verified_spine",
+      "spine_number": 126,
+      "evidence": "Spine #126"
+    },
+    {
+      "film_id": "rebecca",
+      "criterion_url": "https://www.criterion.com/films/680-rebecca",
+      "status": "verified_spine",
+      "spine_number": 135,
+      "evidence": "Spine #135"
+    },
+    {
+      "film_id": "red-beard",
+      "criterion_url": "https://www.criterion.com/films/713-red-beard",
+      "status": "verified_spine",
+      "spine_number": 159,
+      "evidence": "Spine #159"
+    },
+    {
+      "film_id": "rififi",
+      "criterion_url": "https://www.criterion.com/films/654-rififi",
+      "status": "verified_spine",
+      "spine_number": 115,
+      "evidence": "Spine #115"
+    },
+    {
+      "film_id": "solaris",
+      "criterion_url": "https://www.criterion.com/films/553-solaris",
+      "status": "verified_spine",
+      "spine_number": 164,
+      "evidence": "Spine #164"
+    },
+    {
+      "film_id": "spartacus",
+      "criterion_url": "https://www.criterion.com/films/449-spartacus",
+      "status": "verified_spine",
+      "spine_number": 105,
+      "evidence": "Spine #105"
+    },
+    {
+      "film_id": "sullivans-travels",
+      "criterion_url": "https://www.criterion.com/films/657-sullivan-s-travels",
+      "status": "verified_spine",
+      "spine_number": 118,
+      "evidence": "Spine #118"
+    },
+    {
+      "film_id": "the-firemens-ball",
+      "criterion_url": "https://www.criterion.com/films/688-the-firemen-s-ball",
+      "status": "verified_spine",
+      "spine_number": 145,
+      "evidence": "Spine #145"
+    },
+    {
+      "film_id": "the-hidden-fortress",
+      "criterion_url": "https://www.criterion.com/films/655-the-hidden-fortress",
+      "status": "verified_spine",
+      "spine_number": 116,
+      "evidence": "Spine #116"
+    },
+    {
+      "film_id": "the-honeymoon-killers",
+      "criterion_url": "https://www.criterion.com/films/582-the-honeymoon-killers",
+      "status": "verified_spine",
+      "spine_number": 200,
+      "evidence": "Spine #200"
+    },
+    {
+      "film_id": "the-horses-mouth",
+      "criterion_url": "https://www.criterion.com/films/695-the-horse-s-mouth",
+      "status": "verified_spine",
+      "spine_number": 154,
+      "evidence": "Spine #154"
+    },
+    {
+      "film_id": "the-importance-of-being-earnest",
+      "criterion_url": "https://www.criterion.com/films/355-the-importance-of-being-earnest",
+      "status": "verified_spine",
+      "spine_number": 158,
+      "evidence": "Spine #158"
+    },
+    {
+      "film_id": "the-killers",
+      "criterion_url": "https://www.criterion.com/films/725-the-killers",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "the-lady-eve",
+      "criterion_url": "https://www.criterion.com/films/639-the-lady-eve",
+      "status": "verified_spine",
+      "spine_number": 103,
+      "evidence": "Spine #103"
+    },
+    {
+      "film_id": "the-life-and-death-of-colonel-blimp",
+      "criterion_url": "https://www.criterion.com/films/359-the-life-and-death-of-colonel-blimp",
+      "status": "verified_spine",
+      "spine_number": 173,
+      "evidence": "Spine #173"
+    },
+    {
+      "film_id": "the-royal-tenenbaums",
+      "criterion_url": "https://www.criterion.com/films/230-the-royal-tenenbaums",
+      "status": "verified_spine",
+      "spine_number": 157,
+      "evidence": "Spine #157"
+    },
+    {
+      "film_id": "the-scarlet-empress",
+      "criterion_url": "https://www.criterion.com/films/431-the-scarlet-empress",
+      "status": "verified_spine",
+      "spine_number": 109,
+      "evidence": "Spine #109"
+    },
+    {
+      "film_id": "the-shooting",
+      "criterion_url": "https://www.criterion.com/films/28580-the-shooting",
+      "status": "verified_spine",
+      "spine_number": 734,
+      "evidence": "Spine #734"
+    },
+    {
+      "film_id": "the-shrouds",
+      "criterion_url": "https://www.criterion.com/films/34881-the-shrouds",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "the-tree-of-wooden-clogs",
+      "criterion_url": "https://www.criterion.com/films/28599-the-tree-of-wooden-clogs",
+      "status": "verified_spine",
+      "spine_number": 854,
+      "evidence": "Spine #854"
+    },
+    {
+      "film_id": "the-vanishing",
+      "criterion_url": "https://www.criterion.com/films/677-the-vanishing",
+      "status": "verified_spine",
+      "spine_number": 133,
+      "evidence": "Spine #133"
+    },
+    {
+      "film_id": "tokyo-olympiad",
+      "criterion_url": "https://www.criterion.com/films/709-tokyo-olympiad",
+      "status": "verified_spine",
+      "spine_number": 155,
+      "evidence": "Spine #155"
+    },
+    {
+      "film_id": "totem",
+      "criterion_url": "https://www.criterion.com/films/33900-totem",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "touki-bouki",
+      "criterion_url": "https://www.criterion.com/films/28412-touki-bouki",
+      "status": "verified_spine",
+      "spine_number": 685,
+      "evidence": "Spine #685"
+    },
+    {
+      "film_id": "trouble-in-paradise",
+      "criterion_url": "https://www.criterion.com/films/723-trouble-in-paradise",
+      "status": "verified_spine",
+      "spine_number": 170,
+      "evidence": "Spine #170"
+    },
+    {
+      "film_id": "withnail-and-i",
+      "criterion_url": "https://www.criterion.com/films/658-withnail-and-i",
+      "status": "verified_spine",
+      "spine_number": 119,
+      "evidence": "Spine #119"
+    },
+    {
+      "film_id": "wooden-crosses",
+      "criterion_url": "https://www.criterion.com/films/880-wooden-crosses",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "z",
+      "criterion_url": "https://www.criterion.com/films/1400-z",
+      "status": "verified_spine",
+      "spine_number": 491,
+      "evidence": "Spine #491"
+    }
+  ]
+}
