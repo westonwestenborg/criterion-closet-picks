@@ -26,6 +26,11 @@ from scripts.utils import (
     load_json,
     make_film_id,
 )
+from scripts.apply_verified_spines import (
+    DEFAULT_VERIFICATION_FILE,
+    load_verification_records,
+    apply_verified_spines,
+)
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -239,6 +244,36 @@ def deduplicate_catalog(catalog: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Merge into existing catalog (preserve enrichment)
+# ---------------------------------------------------------------------------
+
+def merge_into_existing(existing: list[dict], scraped: list[dict]) -> tuple[list[dict], int, int]:
+    """Merge freshly-scraped Digital Bits entries into the existing catalog.
+
+    The Digital Bits scrape yields bare spine+title rows; the committed catalog
+    carries TMDB enrichment, verified spines, box-set entries, backfilled
+    (non-catalog) films, and repair-created rows — none of which Digital Bits
+    regenerates. So existing entries are PRESERVED in place: the scraper only
+    appends genuinely-new spines and fills an empty criterion_url. It never
+    overwrites an enriched field. Existing order is kept; new entries append.
+
+    Returns (merged_catalog, num_new, num_filled).
+    """
+    by_spine = {e["spine_number"]: e for e in existing if e.get("spine_number") is not None}
+    new_entries: list[dict] = []
+    filled = 0
+    for sc in scraped:
+        ex = by_spine.get(sc.get("spine_number"))
+        if ex is None:
+            new_entries.append(sc)
+            continue
+        if not ex.get("criterion_url") and sc.get("criterion_url"):
+            ex["criterion_url"] = sc["criterion_url"]
+            filled += 1
+    return existing + new_entries, len(new_entries), filled
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -249,6 +284,12 @@ def main():
         choices=["digitalbits", "all"],
         default="digitalbits",
         help="Data source (default: digitalbits)",
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Overwrite the catalog from scratch (DESTROYS enrichment/verified "
+             "spines/box-set/backfilled rows). Default is to merge, preserving them.",
     )
     args = parser.parse_args()
 
@@ -269,15 +310,31 @@ def main():
 
     # Deduplicate
     catalog = deduplicate_catalog(catalog)
-    log(f"After deduplication: {len(catalog)} entries")
+    log(f"After deduplication: {len(catalog)} scraped entries")
+
+    # Merge into the existing catalog so enrichment is never destroyed.
+    existing = load_json(CATALOG_FILE)
+    if existing and not args.replace:
+        catalog, n_new, n_filled = merge_into_existing(existing, catalog)
+        log(f"Merge: preserved {len(existing)} existing entries, "
+            f"added {n_new} new spines, filled {n_filled} criterion_urls")
+        # Re-apply verified spines (idempotent; reasserts the manual spine layer).
+        records = load_verification_records(DEFAULT_VERIFICATION_FILE)
+        catalog, report = apply_verified_spines(catalog, records)
+        s = report["summary"]
+        log(f"Verified spines: {s['spines_updated']} updated, {s['unchanged']} unchanged")
+    elif args.replace:
+        log(f"--replace: overwriting catalog with {len(catalog)} bare scraped entries")
+    else:
+        log(f"No existing catalog; writing {len(catalog)} scraped entries")
 
     # Save
     save_json(CATALOG_FILE, catalog)
     log(f"Saved catalog to {CATALOG_FILE}")
 
     # Summary
-    max_spine = max((e.get("spine_number", 0) for e in catalog), default=0)
-    log(f"Summary: {len(catalog)} films, spine #1 to #{max_spine}")
+    max_spine = max((e.get("spine_number", 0) or 0 for e in catalog), default=0)
+    log(f"Summary: {len(catalog)} films, max spine #{max_spine}")
 
 
 if __name__ == "__main__":
