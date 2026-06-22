@@ -16,6 +16,11 @@ This harness is NON-DESTRUCTIVE: it runs the core (which mutates the working
 tree), reports the value-level churn vs HEAD, then restores the four data files
 with `git checkout`.
 
+Scope: this gate covers only the network-free deterministic core. The two
+network steps with idempotency fixes — build_catalog's catalog merge and
+enrich_tmdb's TMDB suppression — are NOT run here; they are covered offline by
+scripts/test_pipeline_idempotency.py (merge-identity + suppression tests).
+
 Usage:
     python scripts/check_idempotency.py            # diagnose: print churn, exit 0
     python scripts/check_idempotency.py --gate      # exit 1 if any churn (CI gate)

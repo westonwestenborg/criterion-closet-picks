@@ -144,7 +144,11 @@ class Pick(TypedDict, total=False):
 
 
 def _reorder(record: dict, annotations: dict) -> dict:
-    """Return record with keys in `annotations` declaration order, unknown keys sorted last."""
+    """Return record with keys in `annotations` declaration order, unknown keys sorted last.
+
+    Shallow copy: nested list/dict values are shared with the input, so callers
+    must not mutate nested values on the result (every current caller writes and
+    discards via save_json, so this is safe)."""
     known = [k for k in annotations if k in record]
     extra = sorted(k for k in record if k not in annotations)
     return {k: record[k] for k in known + extra}

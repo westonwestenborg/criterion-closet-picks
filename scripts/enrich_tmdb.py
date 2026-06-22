@@ -45,7 +45,7 @@ def load_suppressed_tmdb_ids() -> set[str]:
     if not path.exists():
         return set()
     data = load_json(path)
-    return set((data.get("accepted_issue_film_ids", {}) or {}).get("film_missing_tmdb_id", {}))
+    return set((data.get("accepted_issue_film_ids", {}) or {}).get("film_missing_tmdb_id", {}) or {})
 
 
 TMDB_BASE = "https://api.themoviedb.org/3"
@@ -400,8 +400,15 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
     is_tv = film_id in TMDB_TV_IDS or film.get("tmdb_type") == "tv"
     tmdb_id = film.get("tmdb_id")
 
-    # Suppressed films are human-managed: never search/re-add a TMDB id for them.
-    if suppressed_tmdb_ids and film_id in suppressed_tmdb_ids:
+    # Suppressed films (multi-part releases) are human-managed: never search or
+    # re-add a TMDB id. Default-load the set so EVERY caller is covered even if it
+    # doesn't pass one (e.g. process_video.py's single-video path). The catalog
+    # must already carry tmdb_id=None for these — the repair layer / a manual edit
+    # does the nulling; this guard only prevents re-adding. Intentionally takes
+    # precedence over TMDB_ID_OVERRIDES below.
+    if suppressed_tmdb_ids is None:
+        suppressed_tmdb_ids = load_suppressed_tmdb_ids()
+    if film_id in suppressed_tmdb_ids:
         return film
 
     # --- Manual TMDB ID override (must run before skip check) ---

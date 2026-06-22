@@ -60,6 +60,32 @@ class TestCanonicalKeyOrdering(unittest.TestCase):
             self.assertEqual(once, twice)
 
 
+class TestSaveJsonCanonicalizes(unittest.TestCase):
+    """save_json applies canonical ordering for the 4 data files (the write seam)."""
+
+    def test_picks_file_written_in_canonical_order(self):
+        import tempfile, os
+        from scripts.utils import save_json
+        from scripts.utils import load_json
+        scrambled = {"quote": "x", "guest_slug": "a", "film_id": "f", "film_title": "t"}
+        with tempfile.TemporaryDirectory() as d:
+            # Basename must match a CANONICALIZERS key to trigger reordering.
+            p = os.path.join(d, "picks.json")
+            save_json(p, [scrambled])
+            written = load_json(p)
+        self.assertEqual(list(written[0]), ["guest_slug", "film_id", "film_title", "quote"])
+
+    def test_unknown_basename_passes_through(self):
+        import tempfile, os
+        from scripts.utils import save_json, load_json
+        scrambled = {"quote": "x", "guest_slug": "a"}
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "something_else.json")
+            save_json(p, [scrambled])
+            written = load_json(p)
+        self.assertEqual(list(written[0]), ["quote", "guest_slug"])  # untouched
+
+
 class TestTmdbSuppression(unittest.TestCase):
     def test_suppressed_film_is_noop_without_network(self):
         from scripts.enrich_tmdb import enrich_film

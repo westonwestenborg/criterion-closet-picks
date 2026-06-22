@@ -442,13 +442,14 @@ def normalize(dry_run: bool = False):
             visit2["youtube_video_id"] = None
             visit2["youtube_video_url"] = None
 
-        # Assign visit_index positionally (urls are chronological, oldest first),
-        # preserving any previously-set value so re-runs don't churn it. build_visit()
-        # drops visit_index, so without this a rebuild would strip it from visit 1.
+        # Assign visit_index positionally: urls are chronological (oldest first),
+        # so visit N is always at position N. build_visit() drops visit_index, so
+        # a rebuild would otherwise strip it. Deriving it positionally (rather than
+        # preserving a stored value) self-heals any corrupt index and matches
+        # migrate_source_visit's positional pick attribution.
         visits = [visit1, visit2]
         for i, v in enumerate(visits):
-            prev = existing_visits[i].get("visit_index") if i < len(existing_visits) else None
-            v["visit_index"] = prev or (i + 1)
+            v["visit_index"] = i + 1
         g["visits"] = visits
         g["criterion_page_url"] = urls[0]
         log(f"  Built visits for '{g['name']}': {len(urls)} visit(s)")
