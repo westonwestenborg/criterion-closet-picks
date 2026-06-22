@@ -5062,5 +5062,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/972-matthew-rhys-s-closet-picks",
     "pick_count": 8
+  },
+  {
+    "name": "Hannah Einbinder",
+    "slug": "hannah-einbinder",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/iWMeyJAghUYP3zxmOxzcYLU5G8Z.jpg",
+    "youtube_video_id": "FDm1avEBSBM",
+    "youtube_video_url": "https://www.youtube.com/watch?v=FDm1avEBSBM",
+    "vimeo_video_id": null,
+    "episode_date": "2026-06-20",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/974-hannah-einbinder-s-closet-picks",
+    "pick_count": 11
   }
 ]

@@ -141563,5 +141563,89 @@
         }
       ]
     }
+  },
+  {
+    "spine_number": null,
+    "title": "High Art",
+    "director": "Lisa Cholodenko",
+    "year": 1998,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/32507-high-art",
+    "film_id": "high-art",
+    "imdb_id": "tt0139362",
+    "tmdb_id": 37636,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w185/qTg05RNJIvb9w4Z7XIcAZxuZmTn.jpg",
+    "credits": {
+      "directors": [
+        {
+          "name": "Lisa Cholodenko",
+          "tmdb_id": 75699
+        }
+      ],
+      "writers": [
+        {
+          "name": "Lisa Cholodenko",
+          "tmdb_id": 75699
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Tami Reiker",
+          "tmdb_id": 958706
+        }
+      ],
+      "editors": [
+        {
+          "name": "Amy E. Duddleston",
+          "tmdb_id": 57050
+        }
+      ],
+      "cast": [
+        {
+          "name": "Radha Mitchell",
+          "tmdb_id": 8329,
+          "character": "Syd"
+        },
+        {
+          "name": "Ally Sheedy",
+          "tmdb_id": 12851,
+          "character": "Lucy Berliner"
+        },
+        {
+          "name": "Gabriel Mann",
+          "tmdb_id": 32458,
+          "character": "James"
+        },
+        {
+          "name": "Patricia Clarkson",
+          "tmdb_id": 1276,
+          "character": "Greta"
+        },
+        {
+          "name": "David Thornton",
+          "tmdb_id": 76526,
+          "character": "Harry"
+        },
+        {
+          "name": "Anh Duong",
+          "tmdb_id": 1137641,
+          "character": "Dominique"
+        },
+        {
+          "name": "Bill Sage",
+          "tmdb_id": 32029,
+          "character": "Arnie"
+        },
+        {
+          "name": "Tammy Grimes",
+          "tmdb_id": 63998,
+          "character": "Vera"
+        }
+      ]
+    }
   }
 ]
