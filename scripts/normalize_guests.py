@@ -127,6 +127,7 @@ KNOWN_VIDEO_IDS = {
     "john-c-reilly": {"youtube_video_id": "vJn8q_oBWlc"},
     "matthew-rhys": {"youtube_video_id": "r0-5G6-g7WI"},
     "hannah-einbinder": {"youtube_video_id": "FDm1avEBSBM"},
+    "noah-wyle": {"youtube_video_id": "RU3Csk-y1-w"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -184,6 +185,7 @@ KNOWN_CRITERION_URLS = {
     "john-c-reilly": "https://www.criterion.com/shop/collection/971-john-c-reilly-s-closet-picks",
     "matthew-rhys": "https://www.criterion.com/shop/collection/972-matthew-rhys-s-closet-picks",
     "hannah-einbinder": "https://www.criterion.com/shop/collection/974-hannah-einbinder-s-closet-picks",
+    "noah-wyle": "https://www.criterion.com/shop/collection/975-noah-wyle-s-closet-picks",
 }
 
 # Name cleanup

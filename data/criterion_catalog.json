@@ -8792,8 +8792,8 @@
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/138-the-brd-trilogy",
     "imdb_id": null,
-    "tmdb_id": null,
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1945-23da7bdafe273dbec66ce60e6dd58658/V5oY4ZalkXBF5sf9sEHmGPVjlZjmps_original.jpg",
+    "tmdb_id": 1712202,
+    "poster_url": "https://image.tmdb.org/t/p/w185/adrAJTZnoen35xgQMRDba8nEeYO.jpg",
     "poster_source": "criterion",
     "genres": [],
     "is_box_set": true,
@@ -141647,5 +141647,20 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+    "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+    "spine_number": null,
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1765-1da409c960845d45f64b48d1ca15eb9e/f7bVJLMFY5l5fLzDN3Yp0rG1yikQQT_large.jpg",
+    "genres": [],
+    "credits": null,
+    "is_box_set": true
   }
 ]
