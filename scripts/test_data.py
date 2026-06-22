@@ -449,5 +449,72 @@ class TestPickCountAccuracy(unittest.TestCase):
         )
 
 
+class TestSuppressedTmdbIds(unittest.TestCase):
+    """Multi-part releases (che etc.) keep tmdb_id null; enrich must not re-add it.
+
+    Idempotency guard (Phase 1b): a re-run of the pipeline must not re-introduce
+    the TMDB matches the repair layer deliberately removed."""
+
+    def test_suppressed_films_have_null_tmdb_id(self):
+        from scripts.enrich_tmdb import load_suppressed_tmdb_ids
+        suppressed = load_suppressed_tmdb_ids()
+        self.assertTrue(suppressed, "expected suppressed film_ids in known_data_exceptions.json")
+        offenders = [
+            f["film_id"] for f in catalog
+            if f.get("film_id") in suppressed and f.get("tmdb_id") is not None
+        ]
+        self.assertEqual(
+            offenders, [],
+            f"suppressed multi-part films must keep tmdb_id null: {offenders}",
+        )
+
+
+class TestMultiVisitVisitIndex(unittest.TestCase):
+    """Multi-visit guests have contiguous 1..N visit_index on their visits.
+
+    Idempotency guard (Phase 1a): normalize_guests must preserve/assign these
+    rather than dropping them on rebuild."""
+
+    def test_visits_have_contiguous_visit_index(self):
+        bad = []
+        for g in guests:
+            visits = g.get("visits") or []
+            if len(visits) < 2:
+                continue
+            idxs = [v.get("visit_index") for v in visits]
+            if idxs != list(range(1, len(visits) + 1)):
+                bad.append(f"{g['slug']}: {idxs}")
+        self.assertEqual(
+            bad, [],
+            f"multi-visit guests need contiguous 1..N visit_index: {bad}",
+        )
+
+
+class TestCanonicalKeyOrder(unittest.TestCase):
+    """Every record is stored in canonical key order, so a pipeline re-run that
+    changes no values produces an empty diff (byte-idempotency). See
+    scripts/schema.py CANONICALIZERS and scripts/check_idempotency.py."""
+
+    def _offenders(self, records, canon, label):
+        import json
+        out = []
+        for r in records:
+            if json.dumps(r, ensure_ascii=False) != json.dumps(canon(r), ensure_ascii=False):
+                out.append(f"{label}:{r.get('film_id') or r.get('slug') or r.get('guest_slug')}")
+        return out
+
+    def test_files_in_canonical_order(self):
+        from scripts.schema import canonicalize_pick, canonicalize_guest, canonicalize_film
+        bad = []
+        bad += self._offenders(picks, canonicalize_pick, "picks")
+        bad += self._offenders(picks_raw, canonicalize_pick, "picks_raw")
+        bad += self._offenders(guests, canonicalize_guest, "guests")
+        bad += self._offenders(catalog, canonicalize_film, "catalog")
+        self.assertEqual(
+            len(bad), 0,
+            f"{len(bad)} records not in canonical key order (would churn on save): {bad[:10]}",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

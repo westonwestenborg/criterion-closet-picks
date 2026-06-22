@@ -28,12 +28,24 @@ from scripts.utils import (
     PICKS_FILE,
     PICKS_RAW_FILE,
     PILOT_GUESTS,
+    VALIDATION_DIR,
     load_json,
     save_json,
     log,
     get_env,
     slugify,
 )
+
+
+def load_suppressed_tmdb_ids() -> set[str]:
+    """Film_ids recorded as having no single valid TMDB id (multi-part releases
+    like `che`), from data/validation/known_data_exceptions.json. enrich_film
+    leaves these exactly as committed so a re-run never re-adds a bad match."""
+    path = VALIDATION_DIR / "known_data_exceptions.json"
+    if not path.exists():
+        return set()
+    data = load_json(path)
+    return set((data.get("accepted_issue_film_ids", {}) or {}).get("film_missing_tmdb_id", {}))
 
 
 TMDB_BASE = "https://api.themoviedb.org/3"
@@ -371,19 +383,26 @@ class TMDBClient:
         return self._get(f"/tv/{tmdb_id}/aggregate_credits")
 
 
-def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_lookup: dict = None) -> dict:
+def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_lookup: dict = None,
+                suppressed_tmdb_ids: set = None) -> dict:
     """Enrich a single film with TMDB data.
 
     Args:
         criterion_url_lookup: Optional dict of film_id -> criterion_film_url
             from picks_raw.json. Used to find criterion URLs for films that
             don't have one in the catalog yet.
+        suppressed_tmdb_ids: film_ids that must keep tmdb_id null (multi-part
+            releases with no single valid TMDB match). Left exactly as committed.
     """
     title = film.get("title", "")
     year = film.get("year")
     film_id = film.get("film_id", "")
     is_tv = film_id in TMDB_TV_IDS or film.get("tmdb_type") == "tv"
     tmdb_id = film.get("tmdb_id")
+
+    # Suppressed films are human-managed: never search/re-add a TMDB id for them.
+    if suppressed_tmdb_ids and film_id in suppressed_tmdb_ids:
+        return film
 
     # --- Manual TMDB ID override (must run before skip check) ---
     if film_id in TMDB_ID_OVERRIDES:
@@ -635,6 +654,10 @@ def main():
             TMDB_ID_OVERRIDES[film_id] = correction["tmdb_id"]
         log(f"Loaded {len(corrections)} TMDB corrections from {corrections_file}")
 
+    suppressed_tmdb_ids = load_suppressed_tmdb_ids()
+    if suppressed_tmdb_ids:
+        log(f"Suppressing TMDB matching for {len(suppressed_tmdb_ids)} films: {sorted(suppressed_tmdb_ids)}")
+
     genres = client.get_genres()
     log(f"Loaded {len(genres)} genre mappings")
 
@@ -672,7 +695,7 @@ def main():
         enriched_count = 0
         for film in tqdm(films_to_enrich, desc="Enriching films"):
             before = (film.get("tmdb_id"), film.get("poster_url"))
-            film = enrich_film(client, film, genres, criterion_url_lookup)
+            film = enrich_film(client, film, genres, criterion_url_lookup, suppressed_tmdb_ids)
             after = (film.get("tmdb_id"), film.get("poster_url"))
             if before != after:
                 enriched_count += 1

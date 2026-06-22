@@ -442,7 +442,14 @@ def normalize(dry_run: bool = False):
             visit2["youtube_video_id"] = None
             visit2["youtube_video_url"] = None
 
-        g["visits"] = [visit1, visit2]
+        # Assign visit_index positionally (urls are chronological, oldest first),
+        # preserving any previously-set value so re-runs don't churn it. build_visit()
+        # drops visit_index, so without this a rebuild would strip it from visit 1.
+        visits = [visit1, visit2]
+        for i, v in enumerate(visits):
+            prev = existing_visits[i].get("visit_index") if i < len(existing_visits) else None
+            v["visit_index"] = prev or (i + 1)
+        g["visits"] = visits
         g["criterion_page_url"] = urls[0]
         log(f"  Built visits for '{g['name']}': {len(urls)} visit(s)")
         stats["repeat_merges"] += 1

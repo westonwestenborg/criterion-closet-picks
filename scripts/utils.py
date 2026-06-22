@@ -14,6 +14,11 @@ from functools import wraps
 from dotenv import load_dotenv
 from thefuzz import fuzz
 
+try:  # importable as `schema` (scripts/ on path) or `scripts.schema` (repo root on path)
+    from schema import CANONICALIZERS
+except ImportError:
+    from scripts.schema import CANONICALIZERS
+
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -49,9 +54,17 @@ def load_json(path: Path) -> list | dict:
 
 
 def save_json(path: Path, data: list | dict, indent: int = 2) -> None:
-    """Save data as JSON, creating parent directories if needed."""
+    """Save data as JSON, creating parent directories if needed.
+
+    For the four canonical data files, records are written with keys in a fixed
+    order (see scripts.schema.CANONICALIZERS) so re-runs that change no values
+    produce an empty diff.
+    """
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    canon = CANONICALIZERS.get(path.name)
+    if canon and isinstance(data, list):
+        data = [canon(r) if isinstance(r, dict) else r for r in data]
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=indent, ensure_ascii=False)
 
