@@ -11,6 +11,7 @@ import argparse
 import re
 import sys
 import time
+import unicodedata
 
 import atexit
 
@@ -557,6 +558,14 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
     return film
 
 
+def _ascii_fold(name: str) -> str:
+    """Strip diacritics, invisible chars, and case for name comparison.
+    'Carla Simón' and 'Carla Simon' both fold to 'carla simon'."""
+    name = unicodedata.normalize("NFKD", name)
+    name = name.encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"\s+", " ", name).strip().lower()
+
+
 def clean_name_for_tmdb(name: str) -> list[str]:
     """Extract searchable individual names from a guest name.
 
@@ -622,6 +631,18 @@ def enrich_guest(client: TMDBClient, guest: dict, force: bool = False) -> dict:
         result = client.search_person(try_name)
         if not result:
             continue
+
+        # Restore proper diacritics/spelling from TMDB when the matched person
+        # is the same name modulo accents (e.g. scraped "Carla Simon" ->
+        # "Carla Simón"). The ASCII-fold guard ensures we never replace a pair
+        # ("Sofia Coppola & Marc Jacobs") or stage name with a single person.
+        result_name = result.get("name", "")
+        if (
+            result_name
+            and result_name != guest.get("name")
+            and _ascii_fold(result_name) == _ascii_fold(guest.get("name", ""))
+        ):
+            guest["name"] = unicodedata.normalize("NFC", result_name)
 
         # Profession (don't overwrite if already set)
         if not guest.get("profession"):

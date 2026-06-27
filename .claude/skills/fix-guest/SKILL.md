@@ -138,6 +138,17 @@ publicly known. Rebuild after the change so the guest page reflects it.
   ID, fetch the transcript before extracting quotes — `extract_quotes.py` reads
   `data/transcripts/{video_id}.json` and does not fetch it. Use
   `match_youtube.fetch_transcript(video_id)` and save `{video_id, guest_name, segments}`.
+- Non-English guest (only a foreign-language transcript, e.g. a Spanish-speaking
+  director): `fetch_transcript` returns nothing (it only tries English), so **leave
+  no transcript file on disk** — `extract_quotes.py --guest-slug SLUG --force` then
+  auto-routes the guest to its audio fallback (yt-dlp downloads audio → Gemini
+  transcribes+translates). Quotes come back prefixed `[Translated]`. Requires
+  `yt-dlp` on PATH. This is the established path for non-English guests.
+- Accented names: do **not** add a `NAME_FIXES` entry just to restore an accent.
+  `enrich_tmdb.py` restores diacritics from TMDB (e.g. "Carla Simon" → "Carla
+  Simón") and `normalize_guests.py` (step 8b) NFC-normalizes the guest name and
+  syncs it onto every pick by slug. `NAME_FIXES` is only for non-accent fixes
+  (typos, garbled overlay text). See CLAUDE.md → Key Conventions → "Guest names".
 - `profession` is a single-word controlled vocabulary (see Workflow 7) — never multi-role
 - Build after fixes: `npm run build && npx pagefind --site dist`
 - Use `update-data` skill instead for weekly new-episode checks (full pipeline)

@@ -10,7 +10,9 @@ Run: python scripts/normalize_guests.py [--dry-run]
 
 import argparse
 import copy
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -222,6 +224,26 @@ GUEST_TYPE_TAGS = {
 # Helpers
 # ---------------------------------------------------------------------------
 
+# Zero-width / BOM characters that occasionally leak into scraped names
+# (zero-width space, ZWNJ, ZWJ, byte-order mark).
+_INVISIBLE_CHARS = dict.fromkeys(
+    (0x200B, 0x200C, 0x200D, 0xFEFF), None
+)
+
+
+def clean_display_name(name: str) -> str:
+    """Canonicalize a display name: NFC-normalize, strip invisible characters,
+    and collapse whitespace. Preserves accents/diacritics — this only fixes the
+    encoding (e.g. decomposed NFD å, a stray zero-width space), never the
+    spelling. Idempotent."""
+    if not name:
+        return name
+    name = unicodedata.normalize("NFC", name)
+    name = name.translate(_INVISIBLE_CHARS)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name
+
+
 def guest_by_slug(guests: list[dict], slug: str) -> dict | None:
     for g in guests:
         if g["slug"] == slug:
@@ -368,6 +390,8 @@ def normalize(dry_run: bool = False):
         "guest_type_tags": 0,
         "picks_reassigned": 0,
         "raw_picks_reassigned": 0,
+        "picks_name_synced": 0,
+        "raw_picks_name_synced": 0,
     }
 
     # --- 0. Slug fixes (do first so everything else uses correct slugs) ---
@@ -626,6 +650,25 @@ def normalize(dry_run: bool = False):
         if changed:
             log(f"  Criterion URL fix: '{g['name']}' — {len(urls)} page(s)")
 
+    # --- 8b. Canonicalize guest names and sync them onto picks ---
+    # The guest record is the source of truth for display names; picks carry a
+    # denormalized copy that drifts (accent-stripped by scraping, decomposed
+    # NFD, stray zero-width chars). Clean the canonical name and propagate it to
+    # every pick by slug so the two never disagree. Idempotent.
+    canonical_by_slug = {}
+    for g in guests:
+        cleaned = clean_display_name(g.get("name", ""))
+        if cleaned and cleaned != g.get("name"):
+            g["name"] = cleaned
+        canonical_by_slug[g["slug"]] = cleaned
+
+    for collection, stat_key in ((picks, "picks_name_synced"), (picks_raw, "raw_picks_name_synced")):
+        for p in collection:
+            canon = canonical_by_slug.get(p.get("guest_slug"))
+            if canon and p.get("guest_name") != canon:
+                p["guest_name"] = canon
+                stats[stat_key] += 1
+
     # --- 9. Dedup picks ---
     before_picks = len(picks)
     picks = dedup_picks(picks)
@@ -653,6 +696,8 @@ def normalize(dry_run: bool = False):
     log(f"  Guest type tags: {stats['guest_type_tags']}")
     log(f"  Picks reassigned: {stats['picks_reassigned']}")
     log(f"  Raw picks reassigned: {stats['raw_picks_reassigned']}")
+    log(f"  Picks name-synced: {stats['picks_name_synced']}")
+    log(f"  Raw picks name-synced: {stats['raw_picks_name_synced']}")
     log(f"  Final: {len(guests)} guests, {len(picks)} picks, {len(picks_raw)} raw picks")
 
     if dry_run:
