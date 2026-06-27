@@ -6723,6 +6723,7 @@
     "imdb_id": "tt0327230",
     "tmdb_id": 400659,
     "poster_url": "https://image.tmdb.org/t/p/w185/ikXOq1Khu2GynV04pZ5RIJclTsX.jpg",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy"
     ],
@@ -93721,7 +93722,8 @@
     "criterion_url": "https://www.criterion.com/boxsets/7479-brief-encounters-the-long-farewell-two-films-by-kira-muratova",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2060-1287910e39269374b5a3d51bd6169bef/4lANA89xq2vrb5t1Uv2VjaRZpouYyh_large.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2060-1287910e39269374b5a3d51bd6169bef/4lANA89xq2vrb5t1Uv2VjaRZpouYyh_original.jpg",
+    "poster_source": "criterion",
     "genres": [],
     "is_box_set": true
   },
@@ -94403,7 +94405,8 @@
     "criterion_url": "https://www.criterion.com/films/32139-scarface",
     "imdb_id": "tt0023427",
     "tmdb_id": 877,
-    "poster_url": "https://image.tmdb.org/t/p/w185/y4E5oRiHMTFkEB12IIcpbKbKzDW.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/b0765b4740399a495b98488529b9770b/IlZAmgLKrWJlg3wgysAO9h7IrATikd_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Action",
@@ -141174,7 +141177,8 @@
     "criterion_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
     "imdb_id": "tt28490873",
     "tmdb_id": 1156189,
-    "poster_url": "https://image.tmdb.org/t/p/w185/fw0NchjBAQKz90klk4xNlw0xxuy.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/3b64526e0e3c6f39a814fd926fe61d97/6fX66iQGUqtIYScyJkSknGz1IX17AR_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Music",
       "Documentary"
@@ -141218,7 +141222,8 @@
     "criterion_url": "https://www.criterion.com/films/28777-something-wild",
     "imdb_id": "tt0055464",
     "tmdb_id": 82944,
-    "poster_url": "https://image.tmdb.org/t/p/w185/j6j4LQKevC8YPBowUxrPbMAGJIg.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/0b770eba06f4657157937c7271edb112/DVPTu5alei5nnuu4alLaenGwUmHAOv_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -141305,7 +141310,8 @@
     "criterion_url": "https://www.criterion.com/films/27751-the-killing",
     "imdb_id": "tt0049406",
     "tmdb_id": 247,
-    "poster_url": "https://image.tmdb.org/t/p/w185/A6VzUPcADZGYdGHlVdWvpMNDF5d.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/09b4b650ba3c7dd2bd35077502c96bf6/Vlq14mj2f7tyWxTjHSUgAV3VN6upwP_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Thriller"
@@ -141393,7 +141399,8 @@
     "criterion_url": "https://www.criterion.com/films/660-how-to-get-ahead-in-advertising",
     "imdb_id": "tt0097531",
     "tmdb_id": 14776,
-    "poster_url": "https://image.tmdb.org/t/p/w185/8T1UacG5YV063PDbaHH2RaqA6Wc.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/9b503d25f9288727a1756d1fb72a1e74/1on26U0trF1EOH2JitADZmXNIvkAHt_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Fantasy",
       "Comedy",
@@ -141478,7 +141485,8 @@
     "criterion_url": "https://www.criterion.com/films/652-big-deal-on-madonna-street",
     "imdb_id": "tt0052216",
     "tmdb_id": 24382,
-    "poster_url": "https://image.tmdb.org/t/p/w185/f5OxD8Nl0pR3DcYHtYhHRfpsmjl.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/3ea30a24e22aa24b78417d7c2e5a9c82/TiFmiKcnV2SowrX7dD8EgDucoPy0jI_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Crime"
@@ -141574,7 +141582,8 @@
     "criterion_url": "https://www.criterion.com/films/32507-high-art",
     "imdb_id": "tt0139362",
     "tmdb_id": 37636,
-    "poster_url": "https://image.tmdb.org/t/p/w185/qTg05RNJIvb9w4Z7XIcAZxuZmTn.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/4fdaca5bd13aa86042c40d6a655cad7f/GjbZ7OvRJCZEwho0PHDJtYiXt7orUe_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Romance"
@@ -141658,9 +141667,94 @@
     "criterion_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1765-1da409c960845d45f64b48d1ca15eb9e/f7bVJLMFY5l5fLzDN3Yp0rG1yikQQT_large.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1765-1da409c960845d45f64b48d1ca15eb9e/f7bVJLMFY5l5fLzDN3Yp0rG1yikQQT_original.jpg",
+    "poster_source": "criterion",
     "genres": [],
     "credits": null,
     "is_box_set": true
+  },
+  {
+    "film_id": "vermiglio",
+    "title": "Vermiglio",
+    "spine_number": null,
+    "director": "Maura Delpero",
+    "year": 2024,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/34803-vermiglio",
+    "imdb_id": "tt28618488",
+    "tmdb_id": 1151244,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/074cd71076ed561edd75cc39c4f2c86a/8POd3yeipDLkL5QYHWTt3NL4GVROJS_original.jpg",
+    "poster_source": "criterion",
+    "genres": [
+      "Drama"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Maura Delpero",
+          "tmdb_id": 2363766
+        }
+      ],
+      "writers": [
+        {
+          "name": "Maura Delpero",
+          "tmdb_id": 2363766
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Mikhail Krichman",
+          "tmdb_id": 68525
+        }
+      ],
+      "editors": [
+        {
+          "name": "Gianluca Mattei",
+          "tmdb_id": 3037172
+        }
+      ],
+      "cast": [
+        {
+          "name": "Tommaso Ragno",
+          "tmdb_id": 226353,
+          "character": "Cesare"
+        },
+        {
+          "name": "Giuseppe De Domenico",
+          "tmdb_id": 1949402,
+          "character": "Pietro"
+        },
+        {
+          "name": "Roberta Rovelli",
+          "tmdb_id": 1940113,
+          "character": "Adele"
+        },
+        {
+          "name": "Martina Scrinzi",
+          "tmdb_id": 4836320,
+          "character": "Lucia"
+        },
+        {
+          "name": "Orietta Notari",
+          "tmdb_id": 1183889,
+          "character": "Zia Cesira"
+        },
+        {
+          "name": "Carlotta Gamba",
+          "tmdb_id": 3014985,
+          "character": "Virginia"
+        },
+        {
+          "name": "Santiago Fondevila",
+          "tmdb_id": 2737276,
+          "character": "Attilio"
+        },
+        {
+          "name": "Sara Serraiocco",
+          "tmdb_id": 1171457,
+          "character": "Anna Pennisi"
+        }
+      ]
+    }
   }
 ]
