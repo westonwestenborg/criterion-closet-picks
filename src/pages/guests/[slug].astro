@@ -80,6 +80,11 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
           </p>
         )}
         <div class="detail-links">
+          {picks.length > 0 && (
+            <a href="#picks">
+              View {picks.length} {picks.length === 1 ? 'Pick' : 'Picks'}
+            </a>
+          )}
           {!isMultiVisit && (guest.youtube_video_url ? (
             <a href={guest.youtube_video_url} target="_blank" rel="noopener noreferrer">
               Full Video
@@ -110,7 +115,7 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
 
         return (
           <div class="visit-section">
-            <h2>{label} &mdash; {visitPicks.length} Picks</h2>
+            <h2 id={idx === 0 ? 'picks' : undefined}>{label} &mdash; {visitPicks.length} Picks</h2>
             {embed && <VideoEmbed platform={embed.type} videoId={embed.id} title={embed.title} />}
             {visitPicks.length > 0 && (
               <div class="picks-list">
@@ -129,7 +134,7 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
           <VideoEmbed platform="vimeo" videoId={guest.vimeo_video_id} title={`${guest.name} - Criterion Closet Picks`} />
         ) : null}
 
-        <h2>{picks.length} Picks</h2>
+        <h2 id="picks">{picks.length} Picks</h2>
 
         {picks.length > 0 && (
           <div class="picks-list">

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "records": 63,
+    "spines_updated": 0,
+    "unchanged": 53,
+    "no_spine_visible": 10,
+    "review_items": 0,
+    "invalid_records": 0
+  },
+  "changes": [],
+  "no_spine_visible": [
+    {
+      "action": "no_spine_visible",
+      "film_id": "34102-ryuichi-sakamoto-opus",
+      "title": "Ryuichi Sakamoto | Opus",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/34102-ryuichi-sakamoto-opus",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "dreams",
+      "title": "Dreams",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/28206-dreams",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "eo",
+      "title": "EO",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33481-eo",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "godland",
+      "title": "Godland",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33485-godland",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "lynchoz",
+      "title": "Lynch/Oz",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33490-lynch-oz",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "no-bears",
+      "title": "No Bears",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33531-no-bears",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "the-killers",
+      "title": "The Killers",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/725-the-killers",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "the-shrouds",
+      "title": "The Shrouds",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/34881-the-shrouds",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "totem",
+      "title": "Tótem",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33900-totem",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "wooden-crosses",
+      "title": "Wooden Crosses",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/880-wooden-crosses",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    }
+  ],
+  "review_items": []
+}

@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "changes": {
+      "data/criterion_catalog.json:catalog_identity_corrected": 4,
+      "data/criterion_catalog.json:catalog_row_created": 2,
+      "data/picks.json:pick_identity_corrected": 14,
+      "data/picks_raw.json:pick_identity_corrected": 14
+    },
+    "total_changes": 34,
+    "actions": 34
+  },
+  "actions": [
+    {
+      "type": "catalog_identity_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "che",
+      "title": "Che",
+      "evidence": {
+        "tmdb_id": {
+          "old": 860565,
+          "new": null
+        },
+        "genres": {
+          "old": [],
+          "new": [
+            "Drama",
+            "History",
+            "War"
+          ]
+        },
+        "credits": {
+          "old": {
+            "directors": [],
+            "writers": [],
+            "cinematographers": [],
+            "editors": [
+              {
+                "name": "Isabel Sadurni",
+                "tmdb_id": 3155200
+              }
+            ],
+            "cast": [
+              {
+                "name": "Steven Soderbergh",
+                "tmdb_id": 1884,
+                "character": "Himself/Peter Andrews"
+              },
+              {
+                "name": "Deanan Dasilva",
+                "tmdb_id": 3194949,
+                "character": "Himself"
+              },
+              {
+                "name": "Rob Lohman",
+                "tmdb_id": 3194950,
+                "character": "Himself"
+              },
+              {
+                "name": "Nat Jencks",
+                "tmdb_id": 1409856,
+                "character": "Himself"
+              },
+              {
+                "name": "Steven Meizler",
+                "tmdb_id": 1476175,
+                "character": "Himself"
+              }
+            ]
+          },
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "catalog_row_created",
+      "file": "data/criterion_catalog.json",
+      "record_key": "straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "insert_after": "stray-dog",
+        "criterion_url": "https://www.criterion.com/films/730-straw-dogs"
+      }
+    },
+    {
+      "type": "catalog_identity_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "director": {
+          "old": "Sam Peckinpah",
+          "new": "Akira Kurosawa"
+        },
+        "year": {
+          "old": 1971,
+          "new": 1949
+        },
+        "country": {
+          "old": "",
+          "new": "Japan"
+        },
+        "criterion_url": {
+          "old": "https://www.criterion.com/films/730-straw-dogs",
+          "new": "https://www.criterion.com/films/788-stray-dog"
+        },
+        "tmdb_id": {
+          "old": 994,
+          "new": 30368
+        },
+        "imdb_id": {
+          "old": "tt0067800",
+          "new": null
+        },
+        "poster_url": {
+          "old": "https://s3.amazonaws.com/criterion-production/films/beca22ceb97188c09bd8ef6090c6bca7/XQmMDjG2VLEmmHY6Y6TslMJBOi1w2p_original.jpg",
+          "new": "https://s3.amazonaws.com/criterion-production/films/7b8b89e66c85b8bc543d76173f49717f/KOW5xpKfZGHlt86Ep17hYF1ORXvSce_original.jpg"
+        },
+        "credits": {
+          "old": {
+            "directors": [
+              {
+                "name": "Sam Peckinpah",
+                "tmdb_id": 7767
+              }
+            ],
+            "writers": [
+              {
+                "name": "David Zelag Goodman",
+                "tmdb_id": 14941
+              },
+              {
+                "name": "Sam Peckinpah",
+                "tmdb_id": 7767
+              }
+            ],
+            "cinematographers": [
+              {
+                "name": "John Coquillon",
+                "tmdb_id": 14944
+              }
+            ],
+            "editors": [
+              {
+                "name": "Roger Spottiswoode",
+                "tmdb_id": 1724
+              },
+              {
+                "name": "Tony Lawson",
+                "tmdb_id": 12685
+              },
+              {
+                "name": "Paul Davies",
+                "tmdb_id": 2305998
+              }
+            ],
+            "cast": [
+              {
+                "name": "Dustin Hoffman",
+                "tmdb_id": 4483,
+                "character": "David Sumner"
+              },
+              {
+                "name": "Susan George",
+                "tmdb_id": 14947,
+                "character": "Amy"
+              },
+              {
+                "name": "Peter Vaughan",
+                "tmdb_id": 386,
+                "character": "Tom Hedden"
+              },
+              {
+                "name": "T. P. McKenna",
+                "tmdb_id": 14948,
+                "character": "Maj. John Scott"
+              },
+              {
+                "name": "Del Henney",
+                "tmdb_id": 14949,
+                "character": "Charlie Venner"
+              },
+              {
+                "name": "Jim Norton",
+                "tmdb_id": 14950,
+                "character": "Chris Cawsey"
+              },
+              {
+                "name": "Donald Webster",
+                "tmdb_id": 14951,
+                "character": "Riddaway"
+              },
+              {
+                "name": "Ken Hutchison",
+                "tmdb_id": 7194,
+                "character": "Norman Scutt"
+              }
+            ]
+          },
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "catalog_row_created",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "insert_after": "the-innocents",
+        "criterion_url": "https://www.criterion.com/films/33649-the-innocent"
+      }
+    },
+    {
+      "type": "catalog_identity_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "director": {
+          "old": "Bill Viola",
+          "new": "Jack Clayton"
+        },
+        "year": {
+          "old": 2008,
+          "new": 1961
+        },
+        "country": {
+          "old": "",
+          "new": "United States"
+        },
+        "criterion_url": {
+          "old": "https://www.criterion.com/films/33649-the-innocent",
+          "new": "https://www.criterion.com/films/28569-the-innocents"
+        },
+        "tmdb_id": {
+          "old": 673155,
+          "new": 16372
+        },
+        "poster_url": {
+          "old": "https://s3.amazonaws.com/criterion-production/films/303e9f38f9bfbd8553006af0f8a02201/A1BOQLhJEJfs2iOBh6B18fMXpuKanW_original.jpg",
+          "new": "https://s3.amazonaws.com/criterion-production/films/cb71c87fc3d8226a70d5773a2ec9e48e/pY4N3dYTsGXunHjifYu4MbfAA5FKib_original.jpg"
+        },
+        "credits": {
+          "old": {
+            "directors": [
+              {
+                "name": "Bill Viola",
+                "tmdb_id": 142840
+              }
+            ],
+            "writers": [],
+            "cinematographers": [],
+            "editors": [],
+            "cast": []
+          },
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "catalog_identity_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "trafic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "director": {
+          "old": "Aurora Martínez",
+          "new": "Steven Soderbergh"
+        },
+        "country": {
+          "old": "",
+          "new": "United States"
+        },
+        "spine_number": {
+          "old": 439,
+          "new": 151
+        },
+        "tmdb_id": {
+          "old": 1191431,
+          "new": 1900
+        },
+        "credits": {
+          "old": {
+            "directors": [
+              {
+                "name": "Aurora Martínez",
+                "tmdb_id": 941323
+              }
+            ],
+            "writers": [],
+            "cinematographers": [],
+            "editors": [],
+            "cast": [
+              {
+                "name": "Guillermo Quintanilla",
+                "tmdb_id": 1044087,
+                "character": ""
+              },
+              {
+                "name": "Aurora Martínez",
+                "tmdb_id": 941323,
+                "character": ""
+              },
+              {
+                "name": "Gerardo Vigil",
+                "tmdb_id": 941566,
+                "character": ""
+              },
+              {
+                "name": "Miguel Ángel Rodríguez",
+                "tmdb_id": 1031901,
+                "character": ""
+              }
+            ]
+          },
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "ari-aster|2|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "ben-affleck|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "christian-petzold|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "jason-schwartzman|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "johnnie-to|1|stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "criterion_film_url": {
+          "old": "https://www.criterion.com/films/730-straw-dogs",
+          "new": "https://www.criterion.com/films/788-stray-dog"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "josh-brolin|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "jr|1|the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "film_id": {
+          "old": "the-innocents",
+          "new": "the-innocent"
+        },
+        "film_title": {
+          "old": "The Innocents",
+          "new": "The Innocent"
+        },
+        "catalog_title": {
+          "old": "The Innocents",
+          "new": "The Innocent"
+        },
+        "catalog_spine": {
+          "old": 727,
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "kathryn-bigelow|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "paul-w-downs|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "phil-rosenthal|1|the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "match_method": {
+          "old": "exact",
+          "new": "criterion_url"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "raul-castillo|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "robert-eggers|1|the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "match_method": {
+          "old": "exact",
+          "new": "criterion_url"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "ron-shelton|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks.json",
+      "record_key": "the-wolfpack|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster|2|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "ben-affleck|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "christian-petzold|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "jason-schwartzman|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "johnnie-to|1|stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "criterion_film_url": {
+          "old": "https://www.criterion.com/films/730-straw-dogs",
+          "new": "https://www.criterion.com/films/788-stray-dog"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "josh-brolin|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "jr|1|the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "film_id": {
+          "old": "the-innocents",
+          "new": "the-innocent"
+        },
+        "film_title": {
+          "old": "The Innocents",
+          "new": "The Innocent"
+        },
+        "catalog_title": {
+          "old": "The Innocents",
+          "new": "The Innocent"
+        },
+        "catalog_spine": {
+          "old": 727,
+          "new": null
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "kathryn-bigelow|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "paul-w-downs|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "phil-rosenthal|1|the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "match_method": {
+          "old": "exact",
+          "new": "criterion_url"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "raul-castillo|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "robert-eggers|1|the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "match_method": {
+          "old": "exact",
+          "new": "criterion_url"
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "ron-shelton|1|straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "film_id": {
+          "old": "stray-dog",
+          "new": "straw-dogs"
+        },
+        "film_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_title": {
+          "old": "Stray Dog",
+          "new": "Straw Dogs"
+        },
+        "catalog_spine": {
+          "old": 233,
+          "new": 182
+        }
+      }
+    },
+    {
+      "type": "pick_identity_corrected",
+      "file": "data/picks_raw.json",
+      "record_key": "the-wolfpack|1|traffic",
+      "title": "Traffic",
+      "evidence": {
+        "film_id": {
+          "old": "trafic",
+          "new": "traffic"
+        },
+        "film_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_title": {
+          "old": "Trafic",
+          "new": "Traffic"
+        },
+        "catalog_spine": {
+          "old": 439,
+          "new": 151
+        }
+      }
+    }
+  ]
+}

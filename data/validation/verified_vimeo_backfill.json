@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "changes": {
+      "data/guests.json:vimeo_video_id_backfilled": 6
+    },
+    "total_changes": 6,
+    "actions": 6,
+    "review_items": 0,
+    "review_by_type": {}
+  },
+  "actions": [
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "jack-garfein",
+      "title": "Jack Garfein",
+      "evidence": {
+        "vimeo_video_id": "769988118",
+        "source_url": "https://www.criterion.com/shop/collection/604-jack-garfein-s-closet-picks"
+      }
+    },
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "lee-daniels",
+      "title": "Lee Daniels",
+      "evidence": {
+        "vimeo_video_id": "1008075360",
+        "source_url": "https://www.criterion.com/shop/collection/682-lee-daniels-s-closet-picks"
+      }
+    },
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "neal-brennan",
+      "title": "Neal Brennan",
+      "evidence": {
+        "vimeo_video_id": "960366172",
+        "source_url": "https://www.criterion.com/shop/collection/628-neal-brennan-s-closet-picks"
+      }
+    },
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "park-chan-wook",
+      "title": "Park Chan-wook",
+      "evidence": {
+        "vimeo_video_id": "853427660",
+        "source_url": "https://www.criterion.com/shop/collection/575-park-chan-wook-s-closet-picks"
+      }
+    },
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "the-quay-brothers",
+      "title": "The Quay Brothers’",
+      "evidence": {
+        "vimeo_video_id": "769988668",
+        "source_url": "https://www.criterion.com/shop/collection/597-the-quay-brothers-closet-picks"
+      }
+    },
+    {
+      "type": "verified_vimeo_id_backfilled",
+      "file": "data/guests.json",
+      "record_key": "wim-wenders",
+      "title": "Wim Wenders",
+      "evidence": {
+        "vimeo_video_id": "922549736",
+        "source_url": "https://www.criterion.com/shop/collection/634-wim-wenders-closet-picks"
+      }
+    }
+  ],
+  "review_items": []
+}

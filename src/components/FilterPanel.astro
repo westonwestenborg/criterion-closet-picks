@@ -6,73 +6,17 @@ interface Props {
 }
 
 const { filters, filterKey, label } = Astro.props;
+const labelText = label || filterKey;
+const labelId = `${filterKey}-filter-label`;
 ---
-<div class="filter-panel" data-filter-key={filterKey}>
-  {label && <span class="text-muted" style="font-size: 0.85rem; align-self: center; margin-right: 0.25rem;">{label}:</span>}
-  <button class="filter-chip active" data-filter-value="all">All</button>
+<div class="filter-group" data-filter-key={filterKey} data-filter-label={labelText}>
+  {label && <span id={labelId} class="filter-label">{label}:</span>}
+  <div class="filter-panel" role="group" aria-labelledby={label ? labelId : undefined}>
+  <button type="button" class="filter-chip active" data-filter-value="all" aria-pressed="true">All</button>
   {filters.map((filter) => (
-    <button class="filter-chip" data-filter-value={filter.toLowerCase()}>
+    <button type="button" class="filter-chip" data-filter-value={filter.toLowerCase()} aria-pressed="false">
       {filter}
     </button>
   ))}
+  </div>
 </div>
-
-<script>
-  // Shared filter state across all panels on the page
-  if (!(window as any).__filterState) {
-    (window as any).__filterState = {} as Record<string, string>;
-  }
-  const _filterState: Record<string, string> = (window as any).__filterState;
-
-  function applyFilters() {
-    const grid = document.querySelector('.grid');
-    if (!grid) return;
-    const searchQuery = ((window as any).__searchQuery || '').toLowerCase();
-
-    for (const card of grid.children) {
-      const el = card as HTMLElement;
-      let visible = true;
-
-      // Text search against data-search attribute
-      if (searchQuery) {
-        const searchText = (el.dataset.search || '').toLowerCase();
-        if (!searchText.includes(searchQuery)) {
-          visible = false;
-        }
-      }
-
-      // Chip filters
-      if (visible) {
-        for (const [key, value] of Object.entries(_filterState)) {
-          if (value === 'all') continue;
-          const cardValues = (el.dataset[key] || '').toLowerCase().split(',');
-          if (!cardValues.some(v => v.trim() === value)) {
-            visible = false;
-            break;
-          }
-        }
-      }
-
-      el.style.display = visible ? '' : 'none';
-    }
-  }
-  (window as any).applyFilters = applyFilters;
-
-  document.querySelectorAll('.filter-panel').forEach((panel) => {
-    const filterKey = panel.getAttribute('data-filter-key');
-    if (!filterKey) return;
-    const chips = panel.querySelectorAll('.filter-chip');
-
-    _filterState[filterKey] = 'all';
-
-    chips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        chips.forEach((c) => c.classList.remove('active'));
-        chip.classList.add('active');
-
-        _filterState[filterKey] = (chip as HTMLElement).dataset.filterValue || 'all';
-        applyFilters();
-      });
-    });
-  });
-</script>

@@ -1,19 +1,29 @@
 ---
 interface Props {
   placeholder?: string;
+  label?: string;
+  id?: string;
 }
 
-const { placeholder = 'Search films, guests, quotes...' } = Astro.props;
+const {
+  placeholder = 'Search films, guests, quotes...',
+  label = 'Search films, guests, quotes',
+  id = 'pagefind-search-input',
+} = Astro.props;
 ---
-<div class="search-container" id="search">
+<div class="search-container" id="search" role="search">
+  <label class="sr-only" for={id}>{label}</label>
   <input
     type="text"
     class="search-input"
     placeholder={placeholder}
-    id="pagefind-search-input"
+    id={id}
+    name="q"
     autocomplete="off"
+    data-pagefind-search
   />
-  <div id="pagefind-results"></div>
+  <p class="search-status" id="pagefind-search-status" role="status" aria-live="polite"></p>
+  <div id="pagefind-results" class="pagefind-results" role="list"></div>
 </div>
 
 <script is:inline>
@@ -22,37 +32,118 @@ const { placeholder = 'Search films, guests, quotes...' } = Astro.props;
   // /pagefind/pagefind.js which we load here at runtime.
   // Using is:inline to prevent Vite from trying to resolve the import at build time.
   async function initPagefindSearch() {
+    const input = document.querySelector('[data-pagefind-search]');
+    const results = document.getElementById('pagefind-results');
+    const status = document.getElementById('pagefind-search-status');
+    if (!input || !results || !status) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get('q') || '';
+
+    function setQueryParam(query, mode) {
+      const url = new URL(window.location.href);
+      if (query) {
+        url.searchParams.set('q', query);
+      } else {
+        url.searchParams.delete('q');
+      }
+      window.history[mode === 'push' ? 'pushState' : 'replaceState']({}, '', url);
+    }
+
+    function getResultType(url) {
+      if (url.includes('/guests/')) return 'Guest';
+      if (url.includes('/films/')) return 'Film';
+      if (url.includes('/most-popular/')) return 'Ranking';
+      if (url.includes('/random/')) return 'Random';
+      return 'Page';
+    }
+
+    function clearResults(message) {
+      results.innerHTML = '';
+      status.textContent = message || '';
+    }
+
+    function renderResults(items, totalCount, query) {
+      results.innerHTML = '';
+
+      if (!query) {
+        status.textContent = '';
+        return;
+      }
+
+      if (!items.length) {
+        status.textContent = `No results for "${query}".`;
+        const empty = document.createElement('p');
+        empty.className = 'empty-state';
+        empty.textContent = `No results for "${query}".`;
+        results.appendChild(empty);
+        return;
+      }
+
+      status.textContent = `${totalCount} ${totalCount === 1 ? 'result' : 'results'} for "${query}".`;
+
+      items.forEach(function(item) {
+        const result = document.createElement('article');
+        result.className = 'pagefind-result';
+        result.setAttribute('role', 'listitem');
+
+        const meta = document.createElement('span');
+        meta.className = 'pagefind-result-type';
+        meta.textContent = getResultType(item.url);
+
+        const title = document.createElement('a');
+        title.className = 'pagefind-result-title';
+        title.href = item.url;
+        title.textContent = item.meta && item.meta.title ? item.meta.title : item.url;
+
+        const excerpt = document.createElement('p');
+        excerpt.className = 'pagefind-result-excerpt';
+        excerpt.innerHTML = item.excerpt || '';
+
+        result.append(meta, title, excerpt);
+        results.appendChild(result);
+      });
+    }
+
     try {
       const pagefind = await import('/pagefind/pagefind.js');
       await pagefind.init();
 
-      const input = document.getElementById('pagefind-search-input');
-      const results = document.getElementById('pagefind-results');
-      if (!input || !results) return;
-
-      input.addEventListener('input', async function(e) {
-        const query = e.target.value;
+      async function runSearch(query) {
         if (!query) {
-          results.innerHTML = '';
+          clearResults('');
+          setQueryParam('', 'replace');
           return;
         }
 
+        status.textContent = `Searching for "${query}"...`;
+        setQueryParam(query, 'replace');
         const search = await pagefind.search(query);
         const items = await Promise.all(
           search.results.slice(0, 8).map(function(r) { return r.data(); })
         );
+        renderResults(items, search.results.length, query);
+      }
 
-        results.innerHTML = items
-          .map(function(item) {
-            return '<div style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0d8;">' +
-              '<a href="' + item.url + '" style="font-size: 1rem;">' + (item.meta && item.meta.title ? item.meta.title : item.url) + '</a>' +
-              '<p style="font-size: 0.85rem; color: #555; margin: 0.25rem 0 0;">' + (item.excerpt || '') + '</p>' +
-              '</div>';
-          })
-          .join('');
+      input.value = initialQuery;
+      if (initialQuery) await runSearch(initialQuery);
+
+      input.addEventListener('input', async function(e) {
+        await runSearch(e.target.value.trim());
+      });
+
+      input.addEventListener('change', function(e) {
+        setQueryParam(e.target.value.trim(), 'push');
       });
     } catch (e) {
-      // Pagefind not yet built -- search is a no-op during dev
+      clearResults('');
+      input.addEventListener('input', function(e) {
+        const query = e.target.value.trim();
+        setQueryParam(query, 'replace');
+        status.textContent = query
+          ? 'Search index unavailable in this local build.'
+          : '';
+      });
     }
   }
 

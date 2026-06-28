@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "changes": {
+      "data/picks.json:box_set_count_from_catalog_members": 1,
+      "data/picks_raw.json:box_set_count_from_catalog_members": 8
+    },
+    "total_changes": 9,
+    "review_items": 0,
+    "review_by_type": {},
+    "review_by_severity": {}
+  },
+  "review_items": []
+}

@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "changes": {
+      "data/criterion_catalog.json:credits_backfilled": 7,
+      "data/criterion_catalog.json:director_backfilled": 1,
+      "data/criterion_catalog.json:genres_backfilled": 8,
+      "data/criterion_catalog.json:imdb_id_backfilled": 7,
+      "data/criterion_catalog.json:poster_url_backfilled": 7,
+      "data/criterion_catalog.json:tmdb_type_corrected": 2
+    },
+    "total_changes": 32,
+    "actions": 32,
+    "review_items": 0,
+    "review_by_type": {}
+  },
+  "actions": [
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "martha-graham-dance-on-film",
+      "title": "Martha Graham: Dance on Film",
+      "evidence": {
+        "tmdb_id": 1404798,
+        "genres": [
+          "Documentary"
+        ]
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "tmdb_id": 994,
+        "credits": {
+          "directors": [
+            {
+              "name": "Sam Peckinpah",
+              "tmdb_id": 7767
+            }
+          ],
+          "writers": [
+            {
+              "name": "David Zelag Goodman",
+              "tmdb_id": 14941
+            },
+            {
+              "name": "Sam Peckinpah",
+              "tmdb_id": 7767
+            }
+          ],
+          "cinematographers": [
+            {
+              "name": "John Coquillon",
+              "tmdb_id": 14944
+            }
+          ],
+          "editors": [
+            {
+              "name": "Tony Lawson",
+              "tmdb_id": 12685
+            },
+            {
+              "name": "Roger Spottiswoode",
+              "tmdb_id": 1724
+            },
+            {
+              "name": "Paul Davies",
+              "tmdb_id": 2305998
+            }
+          ],
+          "cast": [
+            {
+              "name": "Dustin Hoffman",
+              "tmdb_id": 4483,
+              "character": "David Sumner"
+            },
+            {
+              "name": "Susan George",
+              "tmdb_id": 14947,
+              "character": "Amy"
+            },
+            {
+              "name": "Peter Vaughan",
+              "tmdb_id": 386,
+              "character": "Tom Hedden"
+            },
+            {
+              "name": "T. P. McKenna",
+              "tmdb_id": 14948,
+              "character": "Maj. John Scott"
+            },
+            {
+              "name": "Del Henney",
+              "tmdb_id": 14949,
+              "character": "Charlie Venner"
+            },
+            {
+              "name": "Jim Norton",
+              "tmdb_id": 14950,
+              "character": "Chris Cawsey"
+            },
+            {
+              "name": "Donald Webster",
+              "tmdb_id": 14951,
+              "character": "Riddaway"
+            },
+            {
+              "name": "Ken Hutchison",
+              "tmdb_id": 7194,
+              "character": "Norman Scutt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "tmdb_id": 994,
+        "genres": [
+          "Thriller",
+          "Drama",
+          "Crime"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "tmdb_id": 994,
+        "imdb_id": "tt0067800"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "straw-dogs",
+      "title": "Straw Dogs",
+      "evidence": {
+        "tmdb_id": 994,
+        "poster_url": "https://image.tmdb.org/t/p/w185/yigkfHE1OhkxPPrjrV78Y9ibGEk.jpg"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "tmdb_id": 30368,
+        "credits": {
+          "directors": [
+            {
+              "name": "Akira Kurosawa",
+              "tmdb_id": 5026
+            }
+          ],
+          "writers": [
+            {
+              "name": "Akira Kurosawa",
+              "tmdb_id": 5026
+            },
+            {
+              "name": "Ryuzo Kikushima",
+              "tmdb_id": 34373
+            }
+          ],
+          "cinematographers": [
+            {
+              "name": "Asakazu Nakai",
+              "tmdb_id": 34380
+            }
+          ],
+          "editors": [
+            {
+              "name": "Toshio Goto",
+              "tmdb_id": 1136963
+            },
+            {
+              "name": "Yoshi Sugihara",
+              "tmdb_id": 1039764
+            }
+          ],
+          "cast": [
+            {
+              "name": "Toshirō Mifune",
+              "tmdb_id": 7450,
+              "character": "Det. Murakami"
+            },
+            {
+              "name": "Takashi Shimura",
+              "tmdb_id": 7453,
+              "character": "Det. Sato"
+            },
+            {
+              "name": "Keiko Awaji",
+              "tmdb_id": 106159,
+              "character": "Harumi Namiki"
+            },
+            {
+              "name": "Eiko Miyoshi",
+              "tmdb_id": 106160,
+              "character": "Harumi's mother"
+            },
+            {
+              "name": "Noriko Sengoku",
+              "tmdb_id": 106161,
+              "character": "Girl"
+            },
+            {
+              "name": "Noriko Honma",
+              "tmdb_id": 7456,
+              "character": "Wooden Tub Shop woman"
+            },
+            {
+              "name": "Reikichi Kawamura",
+              "tmdb_id": 106164,
+              "character": ""
+            },
+            {
+              "name": "Chōko Iida",
+              "tmdb_id": 145250,
+              "character": "Kogetsu Hotel manager"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "tmdb_id": 30368,
+        "genres": [
+          "Crime",
+          "Drama",
+          "Thriller",
+          "Mystery"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "tmdb_id": 30368,
+        "imdb_id": "tt0041699"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "tmdb_id": 30368,
+        "poster_url": "https://image.tmdb.org/t/p/w185/riBzUgeYawBDi2q9PjARjHrQM7Z.jpg"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "tanner-88",
+      "title": "Tanner ‘88",
+      "evidence": {
+        "tmdb_id": 1804,
+        "credits": {
+          "directors": [
+            {
+              "name": "Garry Trudeau",
+              "tmdb_id": 265414
+            },
+            {
+              "name": "Robert Altman",
+              "tmdb_id": 9789
+            }
+          ],
+          "writers": [
+            {
+              "name": "Garry Trudeau",
+              "tmdb_id": 265414
+            },
+            {
+              "name": "Robert Altman",
+              "tmdb_id": 9789
+            }
+          ],
+          "cinematographers": [],
+          "editors": [],
+          "cast": [
+            {
+              "name": "Michael Murphy",
+              "tmdb_id": 4776,
+              "character": "Jack Tanner"
+            },
+            {
+              "name": "Pamela Reed",
+              "tmdb_id": 14699,
+              "character": "T.J. Cavanaugh"
+            },
+            {
+              "name": "Cynthia Nixon",
+              "tmdb_id": 38024,
+              "character": "Alex Tanner"
+            },
+            {
+              "name": "Kevin J. O'Connor",
+              "tmdb_id": 18916,
+              "character": "Hayes Haggerty"
+            },
+            {
+              "name": "Daniel H. Jenkins",
+              "tmdb_id": 97809,
+              "character": "Stringer Kincaid"
+            },
+            {
+              "name": "Jim Fyfe",
+              "tmdb_id": 101776,
+              "character": "Emil Berkoff"
+            },
+            {
+              "name": "Matt Malloy",
+              "tmdb_id": 19208,
+              "character": "Deke Connors"
+            },
+            {
+              "name": "Ilana Levine",
+              "tmdb_id": 1212620,
+              "character": "Andrea Spinelli"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "tanner-88",
+      "title": "Tanner ‘88",
+      "evidence": {
+        "tmdb_id": 1804,
+        "genres": [
+          "Comedy",
+          "War & Politics"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "tanner-88",
+      "title": "Tanner ‘88",
+      "evidence": {
+        "tmdb_id": 1804,
+        "imdb_id": "tt0094562"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "tanner-88",
+      "title": "Tanner ‘88",
+      "evidence": {
+        "tmdb_id": 1804,
+        "poster_url": "https://image.tmdb.org/t/p/w185/u28Q2dj1O1ir26hqxNclQViJ6Qa.jpg"
+      }
+    },
+    {
+      "type": "tmdb_type_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "tanner-88",
+      "title": "Tanner ‘88",
+      "evidence": {
+        "old_tmdb_type": null,
+        "new_tmdb_type": "tv"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "tmdb_id": 919573,
+        "credits": {
+          "directors": [
+            {
+              "name": "Louis Garrel",
+              "tmdb_id": 16269
+            }
+          ],
+          "writers": [
+            {
+              "name": "Louis Garrel",
+              "tmdb_id": 16269
+            },
+            {
+              "name": "Tanguy Viel",
+              "tmdb_id": 2572208
+            }
+          ],
+          "cinematographers": [
+            {
+              "name": "Julien Poupard",
+              "tmdb_id": 1438570
+            }
+          ],
+          "editors": [
+            {
+              "name": "Pierre Deschamps",
+              "tmdb_id": 1352901
+            }
+          ],
+          "cast": [
+            {
+              "name": "Louis Garrel",
+              "tmdb_id": 16269,
+              "character": "Abel Lefranc"
+            },
+            {
+              "name": "Roschdy Zem",
+              "tmdb_id": 20442,
+              "character": "Michel Ferrand"
+            },
+            {
+              "name": "Noémie Merlant",
+              "tmdb_id": 1385600,
+              "character": "Clémence Genièvre"
+            },
+            {
+              "name": "Anouk Grinberg",
+              "tmdb_id": 40883,
+              "character": "Sylvie Lefranc"
+            },
+            {
+              "name": "Jean-Claude Pautot",
+              "tmdb_id": 3718829,
+              "character": "Jean-Paul"
+            },
+            {
+              "name": "Yanisse Kebbab",
+              "tmdb_id": 3718830,
+              "character": "Caviar truck driver"
+            },
+            {
+              "name": "Léa Wiazemsky",
+              "tmdb_id": 212104,
+              "character": "Sylvie's witness"
+            },
+            {
+              "name": "Manda Touré",
+              "tmdb_id": 1183008,
+              "character": "Woman at the aquarium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "tmdb_id": 919573,
+        "genres": [
+          "Comedy",
+          "Crime",
+          "Romance"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "tmdb_id": 919573,
+        "imdb_id": "tt19841734"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "tmdb_id": 919573,
+        "poster_url": "https://image.tmdb.org/t/p/w185/4nQ7hBCfr8mS0NAzDj0dg5Atq1t.jpg"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "tmdb_id": 16372,
+        "credits": {
+          "directors": [
+            {
+              "name": "Jack Clayton",
+              "tmdb_id": 25630
+            }
+          ],
+          "writers": [
+            {
+              "name": "William Archibald",
+              "tmdb_id": 80462
+            },
+            {
+              "name": "Truman Capote",
+              "tmdb_id": 1930
+            }
+          ],
+          "cinematographers": [
+            {
+              "name": "Freddie Francis",
+              "tmdb_id": 5629
+            }
+          ],
+          "editors": [
+            {
+              "name": "Jim Clark",
+              "tmdb_id": 8970
+            }
+          ],
+          "cast": [
+            {
+              "name": "Deborah Kerr",
+              "tmdb_id": 20141,
+              "character": "Miss Giddens"
+            },
+            {
+              "name": "Peter Wyngarde",
+              "tmdb_id": 22529,
+              "character": "Peter Quint"
+            },
+            {
+              "name": "Megs Jenkins",
+              "tmdb_id": 47398,
+              "character": "Mrs. Grose"
+            },
+            {
+              "name": "Michael Redgrave",
+              "tmdb_id": 7640,
+              "character": "The Uncle"
+            },
+            {
+              "name": "Martin Stephens",
+              "tmdb_id": 70447,
+              "character": "Miles"
+            },
+            {
+              "name": "Pamela Franklin",
+              "tmdb_id": 25635,
+              "character": "Flora"
+            },
+            {
+              "name": "Clytie Jessop",
+              "tmdb_id": 80463,
+              "character": "Miss Jessel"
+            },
+            {
+              "name": "Isla Cameron",
+              "tmdb_id": 80464,
+              "character": "Anna"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "tmdb_id": 16372,
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Drama"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "tmdb_id": 16372,
+        "imdb_id": "tt0055018"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-innocents",
+      "title": "The Innocents",
+      "evidence": {
+        "tmdb_id": 16372,
+        "poster_url": "https://image.tmdb.org/t/p/w185/idqvLBmlEHUITMnQ0EJ6Yb5TpVw.jpg"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "tmdb_id": 80039,
+        "credits": {
+          "directors": [
+            {
+              "name": "Barry Jenkins",
+              "tmdb_id": 92784
+            }
+          ],
+          "writers": [
+            {
+              "name": "Barry Jenkins",
+              "tmdb_id": 92784
+            }
+          ],
+          "cinematographers": [],
+          "editors": [],
+          "cast": [
+            {
+              "name": "Thuso Mbedu",
+              "tmdb_id": 2286339,
+              "character": "Cora Randall"
+            },
+            {
+              "name": "Chase W. Dillon",
+              "tmdb_id": 2461073,
+              "character": "Homer"
+            },
+            {
+              "name": "Joel Edgerton",
+              "tmdb_id": 33192,
+              "character": "Arnold Ridgeway"
+            },
+            {
+              "name": "Sheila Atim",
+              "tmdb_id": 1851642,
+              "character": "Mabel"
+            },
+            {
+              "name": "Kylee D. Allen",
+              "tmdb_id": 2828744,
+              "character": "Molly"
+            },
+            {
+              "name": "Aaron Pierre",
+              "tmdb_id": 1763709,
+              "character": "Caesar"
+            },
+            {
+              "name": "Ryan James",
+              "tmdb_id": 3308159,
+              "character": "Red"
+            },
+            {
+              "name": "Lucius Baston",
+              "tmdb_id": 930994,
+              "character": "Prideful"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "director_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "tmdb_id": 80039,
+        "director": "Barry Jenkins"
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "tmdb_id": 80039,
+        "genres": [
+          "Drama",
+          "Sci-Fi & Fantasy"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "tmdb_id": 80039,
+        "imdb_id": "tt6704972"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "tmdb_id": 80039,
+        "poster_url": "https://image.tmdb.org/t/p/w185/CrrTqw7LHafnbdH9UcK60aOZSm.jpg"
+      }
+    },
+    {
+      "type": "tmdb_type_corrected",
+      "file": "data/criterion_catalog.json",
+      "record_key": "the-underground-railroad",
+      "title": "The Underground Railroad",
+      "evidence": {
+        "old_tmdb_type": null,
+        "new_tmdb_type": "tv"
+      }
+    },
+    {
+      "type": "credits_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "traffic",
+      "title": "Traffic",
+      "evidence": {
+        "tmdb_id": 1900,
+        "credits": {
+          "directors": [
+            {
+              "name": "Steven Soderbergh",
+              "tmdb_id": 1884
+            }
+          ],
+          "writers": [
+            {
+              "name": "Stephen Gaghan",
+              "tmdb_id": 2945
+            }
+          ],
+          "cinematographers": [
+            {
+              "name": "Steven Soderbergh",
+              "tmdb_id": 1884
+            }
+          ],
+          "editors": [
+            {
+              "name": "Stephen Mirrione",
+              "tmdb_id": 1891
+            }
+          ],
+          "cast": [
+            {
+              "name": "Michael Douglas",
+              "tmdb_id": 3392,
+              "character": "Robert Wakefield"
+            },
+            {
+              "name": "Benicio del Toro",
+              "tmdb_id": 1121,
+              "character": "Javier Rodriguez"
+            },
+            {
+              "name": "Catherine Zeta-Jones",
+              "tmdb_id": 1922,
+              "character": "Helena Ayala"
+            },
+            {
+              "name": "Erika Christensen",
+              "tmdb_id": 21711,
+              "character": "Caroline Wakefield"
+            },
+            {
+              "name": "Don Cheadle",
+              "tmdb_id": 1896,
+              "character": "Montel Gordon"
+            },
+            {
+              "name": "Jacob Vargas",
+              "tmdb_id": 16429,
+              "character": "Manolo Sanchez"
+            },
+            {
+              "name": "Miguel Ferrer",
+              "tmdb_id": 15860,
+              "character": "Eduardo Ruiz"
+            },
+            {
+              "name": "Luis Guzmán",
+              "tmdb_id": 40481,
+              "character": "Ray Castro"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "genres_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "traffic",
+      "title": "Traffic",
+      "evidence": {
+        "tmdb_id": 1900,
+        "genres": [
+          "Thriller",
+          "Drama",
+          "Crime"
+        ]
+      }
+    },
+    {
+      "type": "imdb_id_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "traffic",
+      "title": "Traffic",
+      "evidence": {
+        "tmdb_id": 1900,
+        "imdb_id": "tt0181865"
+      }
+    },
+    {
+      "type": "poster_url_backfilled",
+      "file": "data/criterion_catalog.json",
+      "record_key": "traffic",
+      "title": "Traffic",
+      "evidence": {
+        "tmdb_id": 1900,
+        "poster_url": "https://image.tmdb.org/t/p/w185/jbccmnqE4oAPI67bApgt2JiRPz8.jpg"
+      }
+    }
+  ],
+  "review_items": []
+}

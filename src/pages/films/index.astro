@@ -14,19 +14,31 @@ const genres = getAllGenres();
     Every film picked from the Criterion Closet, filterable by decade and genre.
   </p>
 
-  <input type="text" class="search-input" placeholder="Search films..." autocomplete="off" />
+  <section class="browse-controls browse-controls--compact" data-browse-singular="film" data-browse-plural="films" data-default-sort="title" data-default-dir="asc">
+    <label class="sr-only" for="film-search">Search films</label>
+    <input id="film-search" name="q" type="text" class="search-input" placeholder="Search films..." autocomplete="off" data-browse-search />
 
-  <FilterPanel filters={decades} filterKey="decade" label="Decade" />
-  <FilterPanel filters={genres} filterKey="genre" label="Genre" />
+    <FilterPanel filters={decades} filterKey="decade" label="Decade" />
+    <FilterPanel filters={genres} filterKey="genre" label="Genre" />
 
-  <div class="sort-controls">
-    <span class="text-muted" style="font-size: 0.85rem; margin-right: 0.25rem;">Sort:</span>
-    <button class="filter-chip active" data-sort="title" data-dir="asc">Title <span class="sort-arrow">&#9650;</span></button>
-    <button class="filter-chip" data-sort="year" data-dir="desc">Year</button>
-    <button class="filter-chip" data-sort="picks" data-dir="desc">Most Picked</button>
-  </div>
+    <div class="sort-controls" role="group" aria-label="Sort films">
+      <span class="filter-label">Sort:</span>
+      <button type="button" class="filter-chip active" data-sort="title" data-dir="asc" aria-pressed="true">Title <span class="sort-arrow" aria-hidden="true">&#9650;</span></button>
+      <button type="button" class="filter-chip" data-sort="year" data-dir="desc" aria-pressed="false">Year</button>
+      <button type="button" class="filter-chip" data-sort="picks" data-dir="desc" aria-pressed="false">Most Picked</button>
+    </div>
 
-  <div class="grid">
+    <div class="browse-status-row">
+      <p class="browse-status" data-browse-status role="status" aria-live="polite">
+        {films.length} films shown
+      </p>
+      <button type="button" class="reset-filters" data-browse-reset hidden>Reset filters</button>
+    </div>
+  </section>
+
+  <p class="empty-state" data-browse-empty hidden>No films match the current filters.</p>
+
+  <div class="grid" data-browse-grid>
     {films.map((film) => {
       const decade = film.year ? `${Math.floor(film.year / 10) * 10}s` : '';
       const genreStr = film.genres.join(',');
@@ -55,88 +67,5 @@ const genres = getAllGenres();
 </BaseLayout>
 
 <script>
-  const sortButtons = document.querySelectorAll('.sort-controls .filter-chip');
-  const grid = document.querySelector('.grid');
-
-  function sortGrid(sortKey: string, dir: string) {
-    if (!grid) return;
-    const items = Array.from(grid.children) as HTMLElement[];
-    const mult = dir === 'asc' ? 1 : -1;
-
-    items.sort((a, b) => {
-      if (sortKey === 'title') {
-        return mult * (a.dataset.title || '').localeCompare(b.dataset.title || '');
-      }
-      const aVal = parseInt(a.dataset[sortKey] || '0') || 0;
-      const bVal = parseInt(b.dataset[sortKey] || '0') || 0;
-      return mult * (aVal - bVal);
-    });
-
-    items.forEach((item) => grid.appendChild(item));
-  }
-
-  sortButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const el = btn as HTMLElement;
-      const isActive = el.classList.contains('active');
-
-      if (isActive) {
-        // Toggle direction
-        el.dataset.dir = el.dataset.dir === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortButtons.forEach((b) => {
-          b.classList.remove('active');
-          // Clear arrow text from inactive buttons
-          const arrow = b.querySelector('.sort-arrow');
-          if (arrow) arrow.remove();
-        });
-        el.classList.add('active');
-      }
-
-      // Update arrow indicator
-      let arrow = el.querySelector('.sort-arrow');
-      if (!arrow) {
-        arrow = document.createElement('span');
-        arrow.className = 'sort-arrow';
-        el.appendChild(arrow);
-      }
-      arrow.innerHTML = el.dataset.dir === 'asc' ? '&#9650;' : '&#9660;';
-
-      sortGrid(el.dataset.sort!, el.dataset.dir!);
-    });
-  });
-
-  document.querySelector('.search-input')?.addEventListener('input', (e) => {
-    (window as any).__searchQuery = (e.target as HTMLInputElement).value;
-    (window as any).applyFilters?.();
-  });
+  import '../../scripts/browseControls';
 </script>
-
-<style>
-  .sort-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0 0 1.5rem;
-    align-items: center;
-  }
-  .search-input {
-    font-family: et-book, Palatino, Georgia, serif;
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #ccc;
-    background: #fffff8;
-    width: 100%;
-    max-width: 24rem;
-    margin-bottom: 0.5rem;
-  }
-  .search-input:focus {
-    outline: none;
-    border-color: #888;
-  }
-  .sort-arrow {
-    font-size: 0.6em;
-    margin-left: 0.25em;
-    vertical-align: middle;
-  }
-</style>

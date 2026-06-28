@@ -43,3 +43,6 @@ docs/
 
 # Astro generated types
 .astro/
+
+# env backups (contain secrets)
+.env.bak.*

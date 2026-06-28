@@ -1,0 +1,2482 @@
+{
+  "schema_version": 2,
+  "summary": {
+    "changes": {
+      "data/picks_raw.json:visit_index_from_enriched_pick": 154
+    },
+    "total_changes": 154,
+    "actions": 154,
+    "actions_by_type": {
+      "raw_visit_index_backfilled": 154
+    },
+    "review_items": 0,
+    "review_by_type": {}
+  },
+  "actions": [
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||a-face-in-the-crowd",
+      "title": "A Face in the Crowd",
+      "evidence": {
+        "new_key": "ari-aster|2|a-face-in-the-crowd",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "a-face-in-the-crowd",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||ace-in-the-hole",
+      "title": "Ace in the Hole",
+      "evidence": {
+        "new_key": "ari-aster|2|ace-in-the-hole",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "ace-in-the-hole",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||bigger-than-life",
+      "title": "Bigger Than Life",
+      "evidence": {
+        "new_key": "ari-aster|1|bigger-than-life",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "bigger-than-life",
+          "pick_order": 11
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||brand-upon-the-brain",
+      "title": "Brand Upon the Brain!",
+      "evidence": {
+        "new_key": "ari-aster|1|brand-upon-the-brain",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "brand-upon-the-brain",
+          "pick_order": 12
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||che",
+      "title": "Che",
+      "evidence": {
+        "new_key": "ari-aster|1|che",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "che",
+          "pick_order": 9
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||closely-watched-trains",
+      "title": "Closely Watched Trains",
+      "evidence": {
+        "new_key": "ari-aster|1|closely-watched-trains",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "closely-watched-trains",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||cure",
+      "title": "Cure",
+      "evidence": {
+        "new_key": "ari-aster|1|cure",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "cure",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||daisies",
+      "title": "Daisies",
+      "evidence": {
+        "new_key": "ari-aster|1|daisies",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "daisies",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||do-the-right-thing",
+      "title": "Do the Right Thing",
+      "evidence": {
+        "new_key": "ari-aster|2|do-the-right-thing",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "do-the-right-thing",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||graduation",
+      "title": "Graduation",
+      "evidence": {
+        "new_key": "ari-aster|2|graduation",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "graduation",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||la-poison",
+      "title": "La Poison",
+      "evidence": {
+        "new_key": "ari-aster|1|la-poison",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "la-poison",
+          "pick_order": 5
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||lacombe-lucien",
+      "title": "Lacombe Lucien",
+      "evidence": {
+        "new_key": "ari-aster|2|lacombe-lucien",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "lacombe-lucien",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||le-salaire-de-la-peur",
+      "title": "Le Salaire de la peur",
+      "evidence": {
+        "new_key": "ari-aster|2|le-salaire-de-la-peur",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "le-salaire-de-la-peur",
+          "pick_order": 13
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||lone-star",
+      "title": "Lone Star",
+      "evidence": {
+        "new_key": "ari-aster|2|lone-star",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "lone-star",
+          "pick_order": 14
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||michael-haneke-trilogy",
+      "title": "Michael Haneke: Trilogy",
+      "evidence": {
+        "new_key": "ari-aster|1|michael-haneke-trilogy",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "michael-haneke-trilogy",
+          "pick_order": 14
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||mishima-a-life-in-four-chapters",
+      "title": "Mishima: A Life in Four Chapters",
+      "evidence": {
+        "new_key": "ari-aster|1|mishima-a-life-in-four-chapters",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "mishima-a-life-in-four-chapters",
+          "pick_order": 10
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||mr-klein",
+      "title": "Mr. Klein",
+      "evidence": {
+        "new_key": "ari-aster|1|mr-klein",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "mr-klein",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||my-darling-clementine",
+      "title": "My Darling Clementine",
+      "evidence": {
+        "new_key": "ari-aster|2|my-darling-clementine",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "my-darling-clementine",
+          "pick_order": 18
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||no-country-for-old-men",
+      "title": "No Country for Old Men",
+      "evidence": {
+        "new_key": "ari-aster|2|no-country-for-old-men",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "no-country-for-old-men",
+          "pick_order": 19
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||revanche",
+      "title": "Revanche",
+      "evidence": {
+        "new_key": "ari-aster|2|revanche",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "revanche",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||secret-sunshine",
+      "title": "Secret Sunshine",
+      "evidence": {
+        "new_key": "ari-aster|1|secret-sunshine",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "secret-sunshine",
+          "pick_order": 7
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||stray-dog",
+      "title": "Stray Dog",
+      "evidence": {
+        "new_key": "ari-aster|2|stray-dog",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "stray-dog",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||targets",
+      "title": "Targets",
+      "evidence": {
+        "new_key": "ari-aster|2|targets",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "targets",
+          "pick_order": 16
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-grifters",
+      "title": "The Grifters",
+      "evidence": {
+        "new_key": "ari-aster|2|the-grifters",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-grifters",
+          "pick_order": 11
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-koker-trilogy",
+      "title": "The Koker Trilogy",
+      "evidence": {
+        "new_key": "ari-aster|1|the-koker-trilogy",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-koker-trilogy",
+          "pick_order": 16
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-last-picture-show",
+      "title": "The Last Picture Show",
+      "evidence": {
+        "new_key": "ari-aster|2|the-last-picture-show",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-last-picture-show",
+          "pick_order": 15
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-new-world",
+      "title": "The New World",
+      "evidence": {
+        "new_key": "ari-aster|1|the-new-world",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-new-world",
+          "pick_order": 6
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-parallax-view",
+      "title": "The Parallax View",
+      "evidence": {
+        "new_key": "ari-aster|2|the-parallax-view",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-parallax-view",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||the-woman-in-the-dunes",
+      "title": "The Woman in the Dunes",
+      "evidence": {
+        "new_key": "ari-aster|1|the-woman-in-the-dunes",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "the-woman-in-the-dunes",
+          "pick_order": 8
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||three-fantastic-journeys-by-karel-zeman-invention-for-destruction",
+      "title": "Three Fantastic Journeys by Karel Zeman: Invention for Destruction",
+      "evidence": {
+        "new_key": "ari-aster|1|three-fantastic-journeys-by-karel-zeman-invention-for-destruction",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "three-fantastic-journeys-by-karel-zeman-invention-for-destruction",
+          "pick_order": 15
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||walkabout",
+      "title": "Walkabout",
+      "evidence": {
+        "new_key": "ari-aster|1|walkabout",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "walkabout",
+          "pick_order": 13
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||wanda",
+      "title": "Wanda",
+      "evidence": {
+        "new_key": "ari-aster|2|wanda",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "wanda",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||winchester-73",
+      "title": "Winchester ’73",
+      "evidence": {
+        "new_key": "ari-aster|2|winchester-73",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "winchester-73",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||you-can-count-on-me",
+      "title": "You Can Count on Me",
+      "evidence": {
+        "new_key": "ari-aster|2|you-can-count-on-me",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "you-can-count-on-me",
+          "pick_order": 12
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ari-aster||young-mr-lincoln",
+      "title": "Young Mr. Lincoln",
+      "evidence": {
+        "new_key": "ari-aster|2|young-mr-lincoln",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "ari-aster",
+          "film_id": "young-mr-lincoln",
+          "pick_order": 17
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||a-man-escaped",
+      "title": "A Man Escaped",
+      "evidence": {
+        "new_key": "benny-safdie|1|a-man-escaped",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "a-man-escaped",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||bicycle-thieves",
+      "title": "Bicycle Thieves",
+      "evidence": {
+        "new_key": "benny-safdie|1|bicycle-thieves",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "bicycle-thieves",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||blood-simple",
+      "title": "Blood Simple",
+      "evidence": {
+        "new_key": "benny-safdie|1|blood-simple",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "blood-simple",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||carnal-knowledge",
+      "title": "Carnal Knowledge",
+      "evidence": {
+        "new_key": "benny-safdie|2|carnal-knowledge",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "carnal-knowledge",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||flow",
+      "title": "Flow",
+      "evidence": {
+        "new_key": "benny-safdie|2|flow",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "flow",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||fox-and-his-friends",
+      "title": "Fox and His Friends",
+      "evidence": {
+        "new_key": "benny-safdie|1|fox-and-his-friends",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "fox-and-his-friends",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||husbands",
+      "title": "Husbands",
+      "evidence": {
+        "new_key": "benny-safdie|2|husbands",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "husbands",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||il-posto",
+      "title": "Il Posto",
+      "evidence": {
+        "new_key": "benny-safdie|1|il-posto",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "il-posto",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||largent",
+      "title": "L'argent",
+      "evidence": {
+        "new_key": "benny-safdie|1|largent",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "largent",
+          "pick_order": 11
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||meantime",
+      "title": "Meantime",
+      "evidence": {
+        "new_key": "benny-safdie|1|meantime",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "meantime",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||my-beautiful-laundrette",
+      "title": "My Beautiful Laundrette",
+      "evidence": {
+        "new_key": "benny-safdie|1|my-beautiful-laundrette",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "my-beautiful-laundrette",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||tess",
+      "title": "Tess",
+      "evidence": {
+        "new_key": "benny-safdie|1|tess",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "tess",
+          "pick_order": 12
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-great-escape",
+      "title": "The Great Escape",
+      "evidence": {
+        "new_key": "benny-safdie|2|the-great-escape",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-great-escape",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-moment-of-truth",
+      "title": "The Moment of Truth",
+      "evidence": {
+        "new_key": "benny-safdie|1|the-moment-of-truth",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-moment-of-truth",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-player",
+      "title": "The Player",
+      "evidence": {
+        "new_key": "benny-safdie|1|the-player",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-player",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-princess-bride",
+      "title": "The Princess Bride",
+      "evidence": {
+        "new_key": "benny-safdie|2|the-princess-bride",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-princess-bride",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-red-balloon-and-other-stories-five-films-by-albert-lamorisse",
+      "title": "The Red Balloon and Other Stories: Five Films by Albert Lamorisse",
+      "evidence": {
+        "new_key": "benny-safdie|2|the-red-balloon-and-other-stories-five-films-by-albert-lamorisse",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-red-balloon-and-other-stories-five-films-by-albert-lamorisse",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||the-war-room",
+      "title": "The War Room",
+      "evidence": {
+        "new_key": "benny-safdie|2|the-war-room",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "the-war-room",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||walkabout",
+      "title": "Walkabout",
+      "evidence": {
+        "new_key": "benny-safdie|1|walkabout",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "walkabout",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||when-we-were-kings",
+      "title": "When We Were Kings",
+      "evidence": {
+        "new_key": "benny-safdie|2|when-we-were-kings",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "when-we-were-kings",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "benny-safdie||wim-wenders-the-road-trilogy",
+      "title": "Wim Wenders: The Road Trilogy",
+      "evidence": {
+        "new_key": "benny-safdie|2|wim-wenders-the-road-trilogy",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "benny-safdie",
+          "film_id": "wim-wenders-the-road-trilogy",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||a-man-escaped",
+      "title": "A Man Escaped",
+      "evidence": {
+        "new_key": "bill-hader|1|a-man-escaped",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "a-man-escaped",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||amarcord",
+      "title": "Amarcord",
+      "evidence": {
+        "new_key": "bill-hader|1|amarcord",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "amarcord",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||antichrist",
+      "title": "Antichrist",
+      "evidence": {
+        "new_key": "bill-hader|1|antichrist",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "antichrist",
+          "pick_order": 12
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||barry-lyndon",
+      "title": "Barry Lyndon",
+      "evidence": {
+        "new_key": "bill-hader|2|barry-lyndon",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "barry-lyndon",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||boat-people",
+      "title": "Boat People",
+      "evidence": {
+        "new_key": "bill-hader|1|boat-people",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "boat-people",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||cold-war",
+      "title": "Cold War",
+      "evidence": {
+        "new_key": "bill-hader|2|cold-war",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "cold-war",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "title": "Eclipse Series 24: The Actuality Dramas of Allan King",
+      "evidence": {
+        "new_key": "bill-hader|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "eclipse-series-24-the-actuality-dramas-of-allan-king",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||essential-fellini",
+      "title": "Essential Fellini",
+      "evidence": {
+        "new_key": "bill-hader|2|essential-fellini",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "essential-fellini",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||green-for-danger",
+      "title": "Green for Danger",
+      "evidence": {
+        "new_key": "bill-hader|1|green-for-danger",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "green-for-danger",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||house",
+      "title": "House",
+      "evidence": {
+        "new_key": "bill-hader|1|house",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "house",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||ikiru",
+      "title": "Ikiru",
+      "evidence": {
+        "new_key": "bill-hader|2|ikiru",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "ikiru",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||loves-of-a-blonde",
+      "title": "Loves of a Blonde",
+      "evidence": {
+        "new_key": "bill-hader|1|loves-of-a-blonde",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "loves-of-a-blonde",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||my-darling-clementine",
+      "title": "My Darling Clementine",
+      "evidence": {
+        "new_key": "bill-hader|2|my-darling-clementine",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "my-darling-clementine",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||petite-maman",
+      "title": "Petite maman",
+      "evidence": {
+        "new_key": "bill-hader|1|petite-maman",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "petite-maman",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||real-life",
+      "title": "Real Life",
+      "evidence": {
+        "new_key": "bill-hader|2|real-life",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "real-life",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||roma-2018",
+      "title": "Roma",
+      "evidence": {
+        "new_key": "bill-hader|2|roma-2018",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "roma-2018",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||salo-or-the-120-days-of-sodom",
+      "title": "Salò, or the 120 Days of Sodom",
+      "evidence": {
+        "new_key": "bill-hader|2|salo-or-the-120-days-of-sodom",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "salo-or-the-120-days-of-sodom",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||salvatore-giuliano",
+      "title": "Salvatore Giuliano",
+      "evidence": {
+        "new_key": "bill-hader|1|salvatore-giuliano",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "salvatore-giuliano",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||the-asphalt-jungle",
+      "title": "The Asphalt Jungle",
+      "evidence": {
+        "new_key": "bill-hader|1|the-asphalt-jungle",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "the-asphalt-jungle",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||the-daytrippers",
+      "title": "The Daytrippers",
+      "evidence": {
+        "new_key": "bill-hader|1|the-daytrippers",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "the-daytrippers",
+          "pick_order": 11
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "bill-hader||yi-yi",
+      "title": "Yi Yi",
+      "evidence": {
+        "new_key": "bill-hader|2|yi-yi",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "bill-hader",
+          "film_id": "yi-yi",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||a-hard-days-night",
+      "title": "A Hard Day’s Night",
+      "evidence": {
+        "new_key": "edgar-wright|2|a-hard-days-night",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "a-hard-days-night",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||america-lost-and-found-the-bbs-story",
+      "title": "America Lost and Found: The BBS Story",
+      "evidence": {
+        "new_key": "edgar-wright|2|america-lost-and-found-the-bbs-story",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "america-lost-and-found-the-bbs-story",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||black-narcissus",
+      "title": "Black Narcissus",
+      "evidence": {
+        "new_key": "edgar-wright|2|black-narcissus",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "black-narcissus",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||dont-look-now",
+      "title": "Don't Look Now",
+      "evidence": {
+        "new_key": "edgar-wright|1|dont-look-now",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "dont-look-now",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||eyes-without-a-face",
+      "title": "Eyes Without a Face",
+      "evidence": {
+        "new_key": "edgar-wright|1|eyes-without-a-face",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "eyes-without-a-face",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||police-story-police-story-2",
+      "title": "Police Story / Police Story 2",
+      "evidence": {
+        "new_key": "edgar-wright|2|police-story-police-story-2",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "police-story-police-story-2",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||something-wild-1986",
+      "title": "Something Wild",
+      "evidence": {
+        "new_key": "edgar-wright|2|something-wild-1986",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "something-wild-1986",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||the-earrings-of-madame-de",
+      "title": "The Earrings of Madame de...",
+      "evidence": {
+        "new_key": "edgar-wright|2|the-earrings-of-madame-de",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "the-earrings-of-madame-de",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
+      "title": "The Three Musketeers / The Four Musketeers: Two Films by Richard Lester",
+      "evidence": {
+        "new_key": "edgar-wright|2|the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||throne-of-blood",
+      "title": "Throne of Blood",
+      "evidence": {
+        "new_key": "edgar-wright|1|throne-of-blood",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "throne-of-blood",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "edgar-wright||walker",
+      "title": "Walker",
+      "evidence": {
+        "new_key": "edgar-wright|1|walker",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "edgar-wright",
+          "film_id": "walker",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||all-that-heaven-allows",
+      "title": "All That Heaven Allows",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|all-that-heaven-allows",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "all-that-heaven-allows",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||au-revoir-les-enfants",
+      "title": "Au revoir les enfants",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|au-revoir-les-enfants",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "au-revoir-les-enfants",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||black-narcissus",
+      "title": "Black Narcissus",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|black-narcissus",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "black-narcissus",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||charade",
+      "title": "Charade",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|charade",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "charade",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||crumb",
+      "title": "Crumb",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|crumb",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "crumb",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||notorious",
+      "title": "Notorious",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|notorious",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "notorious",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||paths-of-glory",
+      "title": "Paths of Glory",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|paths-of-glory",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "paths-of-glory",
+          "pick_order": 7
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||repulsion",
+      "title": "Repulsion",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|repulsion",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "repulsion",
+          "pick_order": 6
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||roma-1972",
+      "title": "Roma",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|roma-1972",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "roma-1972",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||roma-2018",
+      "title": "Roma",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|roma-2018",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "roma-2018",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||salesman",
+      "title": "Salesman",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|salesman",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "salesman",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-400-blows",
+      "title": "The 400 Blows",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|the-400-blows",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-400-blows",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-age-of-innocence",
+      "title": "The Age of Innocence",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|the-age-of-innocence",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-age-of-innocence",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-magician",
+      "title": "The Magician",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|the-magician",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-magician",
+          "pick_order": 5
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-red-shoes",
+      "title": "The Red Shoes",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|the-red-shoes",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-red-shoes",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-thin-red-line",
+      "title": "The Thin Red Line",
+      "evidence": {
+        "new_key": "guillermo-del-toro|1|the-thin-red-line",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-thin-red-line",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "guillermo-del-toro||the-wes-anderson-archive-ten-films-twenty-five-years",
+      "title": "The Wes Anderson Archive: Ten Films, Twenty-Five Years",
+      "evidence": {
+        "new_key": "guillermo-del-toro|2|the-wes-anderson-archive-ten-films-twenty-five-years",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "guillermo-del-toro",
+          "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||3-women",
+      "title": "3 Women",
+      "evidence": {
+        "new_key": "ira-sachs|1|3-women",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "3-women",
+          "pick_order": 11
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||all-that-jazz",
+      "title": "All That Jazz",
+      "evidence": {
+        "new_key": "ira-sachs|1|all-that-jazz",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "all-that-jazz",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||beau-travail",
+      "title": "Beau travail",
+      "evidence": {
+        "new_key": "ira-sachs|1|beau-travail",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "beau-travail",
+          "pick_order": 13
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||charulata",
+      "title": "Charulata",
+      "evidence": {
+        "new_key": "ira-sachs|1|charulata",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "charulata",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||cold-water",
+      "title": "Cold Water",
+      "evidence": {
+        "new_key": "ira-sachs|1|cold-water",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "cold-water",
+          "pick_order": 14
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||good-morning",
+      "title": "Good Morning",
+      "evidence": {
+        "new_key": "ira-sachs|1|good-morning",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "good-morning",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||magnificent-obsession",
+      "title": "Magnificent Obsession",
+      "evidence": {
+        "new_key": "ira-sachs|1|magnificent-obsession",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "magnificent-obsession",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||night-and-the-city",
+      "title": "Night and the City",
+      "evidence": {
+        "new_key": "ira-sachs|1|night-and-the-city",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "night-and-the-city",
+          "pick_order": 12
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||nothing-but-a-man",
+      "title": "Nothing but a Man",
+      "evidence": {
+        "new_key": "ira-sachs|1|nothing-but-a-man",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "nothing-but-a-man",
+          "pick_order": 15
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||salvatore-giuliano",
+      "title": "Salvatore Giuliano",
+      "evidence": {
+        "new_key": "ira-sachs|1|salvatore-giuliano",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "salvatore-giuliano",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||shoah",
+      "title": "Shoah",
+      "evidence": {
+        "new_key": "ira-sachs|1|shoah",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "shoah",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||shock-corridor",
+      "title": "Shock Corridor",
+      "evidence": {
+        "new_key": "ira-sachs|1|shock-corridor",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "shock-corridor",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||the-bitter-tears-of-petra-von-kant",
+      "title": "The Bitter Tears of Petra Von Kant",
+      "evidence": {
+        "new_key": "ira-sachs|1|the-bitter-tears-of-petra-von-kant",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "the-bitter-tears-of-petra-von-kant",
+          "pick_order": 17
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||the-complete-jacques-tati",
+      "title": "The Complete Jacques Tati",
+      "evidence": {
+        "new_key": "ira-sachs|1|the-complete-jacques-tati",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "the-complete-jacques-tati",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||the-heiress",
+      "title": "The Heiress",
+      "evidence": {
+        "new_key": "ira-sachs|1|the-heiress",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "the-heiress",
+          "pick_order": 16
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||the-magic-flute",
+      "title": "The Magic Flute",
+      "evidence": {
+        "new_key": "ira-sachs|1|the-magic-flute",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "the-magic-flute",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "ira-sachs||the-moment-of-truth",
+      "title": "The Moment of Truth",
+      "evidence": {
+        "new_key": "ira-sachs|1|the-moment-of-truth",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "ira-sachs",
+          "film_id": "the-moment-of-truth",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||812",
+      "title": "8½",
+      "evidence": {
+        "new_key": "michael-cera|2|812",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "812",
+          "pick_order": 7
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||anora",
+      "title": "Anora",
+      "evidence": {
+        "new_key": "michael-cera|2|anora",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "anora",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||close-up",
+      "title": "Close-Up",
+      "evidence": {
+        "new_key": "michael-cera|1|close-up",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "close-up",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "title": "Eclipse Series 24: The Actuality Dramas of Allan King",
+      "evidence": {
+        "new_key": "michael-cera|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "eclipse-series-24-the-actuality-dramas-of-allan-king",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||good-morning",
+      "title": "Good Morning",
+      "evidence": {
+        "new_key": "michael-cera|1|good-morning",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "good-morning",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||gregg-arakis-teen-apocalypse-trilogy",
+      "title": "Gregg Araki’s Teen Apocalypse Trilogy",
+      "evidence": {
+        "new_key": "michael-cera|2|gregg-arakis-teen-apocalypse-trilogy",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "gregg-arakis-teen-apocalypse-trilogy",
+          "pick_order": 9
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||hobsons-choice",
+      "title": "Hobson’s Choice",
+      "evidence": {
+        "new_key": "michael-cera|2|hobsons-choice",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "hobsons-choice",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||prince-of-broadway",
+      "title": "Prince of Broadway",
+      "evidence": {
+        "new_key": "michael-cera|2|prince-of-broadway",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "prince-of-broadway",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||the-complete-jacques-tati",
+      "title": "The Complete Jacques Tati",
+      "evidence": {
+        "new_key": "michael-cera|2|the-complete-jacques-tati",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "the-complete-jacques-tati",
+          "pick_order": 8
+        },
+        "match_basis": "unique_guest_film"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||the-mother-and-the-whore",
+      "title": "The Mother and the Whore",
+      "evidence": {
+        "new_key": "michael-cera|2|the-mother-and-the-whore",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "the-mother-and-the-whore",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||the-wind-will-carry-us-1999",
+      "title": "The Wind Will Carry Us (1999)",
+      "evidence": {
+        "new_key": "michael-cera|2|the-wind-will-carry-us-1999",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "the-wind-will-carry-us-1999",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||tootsie",
+      "title": "Tootsie",
+      "evidence": {
+        "new_key": "michael-cera|1|tootsie",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "tootsie",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "michael-cera||walle",
+      "title": "WALL•E",
+      "evidence": {
+        "new_key": "michael-cera|2|walle",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "michael-cera",
+          "film_id": "walle",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||12-angry-men",
+      "title": "12 Angry Men",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|12-angry-men",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "12-angry-men",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||ali-fear-eats-the-soul",
+      "title": "Ali: Fear Eats the Soul",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|ali-fear-eats-the-soul",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "ali-fear-eats-the-soul",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||au-hasard-balthazar",
+      "title": "Au Hasard Balthazar",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|au-hasard-balthazar",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "au-hasard-balthazar",
+          "pick_order": 13
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||black-god-white-devil",
+      "title": "Black God, White Devil",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|black-god-white-devil",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "black-god-white-devil",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||branded-to-kill",
+      "title": "Branded to Kill",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|branded-to-kill",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "branded-to-kill",
+          "pick_order": 10
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||carnal-knowledge",
+      "title": "Carnal Knowledge",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|carnal-knowledge",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "carnal-knowledge",
+          "pick_order": 2
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||five-easy-pieces",
+      "title": "Five Easy Pieces",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|five-easy-pieces",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "five-easy-pieces",
+          "pick_order": 7
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||inland-empire",
+      "title": "Inland Empire",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|inland-empire",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "inland-empire",
+          "pick_order": 1
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||le-samourai",
+      "title": "Le Samouraï",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|le-samourai",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "le-samourai",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||macbeth",
+      "title": "Macbeth",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|macbeth",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "macbeth",
+          "pick_order": 11
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||man-bites-dog",
+      "title": "Man Bites Dog",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|man-bites-dog",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "man-bites-dog",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||mikey-and-nicky",
+      "title": "Mikey and Nicky",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|mikey-and-nicky",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "mikey-and-nicky",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||naked",
+      "title": "Naked",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|naked",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "naked",
+          "pick_order": 4
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||persona",
+      "title": "Persona",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|persona",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "persona",
+          "pick_order": 5
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||pickpocket",
+      "title": "Pickpocket",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|pickpocket",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "pickpocket",
+          "pick_order": 12
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||salesman",
+      "title": "Salesman",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|salesman",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "salesman",
+          "pick_order": 3
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||things-to-come",
+      "title": "Things to Come",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|things-to-come",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "things-to-come",
+          "pick_order": 9
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||three-films-by-luis-bunuel",
+      "title": "Three Films by Luis Buñuel",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|2|three-films-by-luis-bunuel",
+        "visit_index": 2,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "three-films-by-luis-bunuel",
+          "pick_order": 6
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    },
+    {
+      "type": "raw_visit_index_backfilled",
+      "file": "data/picks_raw.json",
+      "record_key": "yorgos-lanthimos||viridiana",
+      "title": "Viridiana",
+      "evidence": {
+        "new_key": "yorgos-lanthimos|1|viridiana",
+        "visit_index": 1,
+        "signature": {
+          "guest_slug": "yorgos-lanthimos",
+          "film_id": "viridiana",
+          "pick_order": 8
+        },
+        "match_basis": "guest_film_pick_order"
+      }
+    }
+  ],
+  "review_items": []
+}

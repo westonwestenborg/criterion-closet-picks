@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "summary": {
+    "changes": {
+      "data/guests.json:visit_index_assigned": 8
+    },
+    "total_changes": 8,
+    "actions": 8,
+    "review_items": 0,
+    "review_by_type": {}
+  },
+  "actions": [
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "ari-aster",
+      "title": "Ari Aster",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "psV-DcsnU1Y",
+            "vimeo_video_id": null,
+            "episode_date": "2023-04-20",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "benny-safdie",
+      "title": "Benny Safdie",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "jSdxbBsShak",
+            "vimeo_video_id": null,
+            "episode_date": "2017-09-11",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/476-josh-and-benny-safdie-s-closet-picks"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "bill-hader",
+      "title": "Bill Hader",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "348qOuXOAXo",
+            "vimeo_video_id": null,
+            "episode_date": "2011-04-19",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/488-bill-hader-s-closet-picks-2011"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "edgar-wright",
+      "title": "Edgar Wright",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "M99gL8IBMZw",
+            "vimeo_video_id": null,
+            "episode_date": "2015-03-04",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/490-edgar-wright-s-closet-picks"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "guillermo-del-toro",
+      "title": "Guillermo del Toro",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "49Al7eYy6sg",
+            "vimeo_video_id": null,
+            "episode_date": "2013-01-14",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "ira-sachs",
+      "title": "Ira Sachs",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "FA4mnGD5Qi8",
+            "vimeo_video_id": null,
+            "episode_date": "2016-08-10",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/600-ira-sachs-s-closet-picks"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "michael-cera",
+      "title": "Michael Cera",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "5CODR5TU8RM",
+            "vimeo_video_id": null,
+            "episode_date": "2015-06-23",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/491-michael-cera-s-closet-picks-2014"
+          }
+        ]
+      }
+    },
+    {
+      "type": "guest_visit_indexes_assigned",
+      "file": "data/guests.json",
+      "record_key": "yorgos-lanthimos",
+      "title": "Yorgos Lanthimos",
+      "evidence": {
+        "assigned_visits": [
+          {
+            "visit_index": 1,
+            "youtube_video_id": "3QAY9OY-ho4",
+            "vimeo_video_id": null,
+            "episode_date": "2016-05-13",
+            "criterion_page_url": "https://www.criterion.com/shop/collection/467-yorgos-lanthimos-ariane-labed-s-closet-picks"
+          }
+        ]
+      }
+    }
+  ],
+  "review_items": []
+}
