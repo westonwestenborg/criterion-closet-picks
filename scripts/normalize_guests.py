@@ -131,6 +131,7 @@ KNOWN_VIDEO_IDS = {
     "hannah-einbinder": {"youtube_video_id": "FDm1avEBSBM"},
     "noah-wyle": {"youtube_video_id": "RU3Csk-y1-w"},
     "carla-simon": {"youtube_video_id": "lxM1ic5nX7o"},
+    "billy-eichner": {"youtube_video_id": "9GRs6AfiH-E"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -190,6 +191,7 @@ KNOWN_CRITERION_URLS = {
     "hannah-einbinder": "https://www.criterion.com/shop/collection/974-hannah-einbinder-s-closet-picks",
     "noah-wyle": "https://www.criterion.com/shop/collection/975-noah-wyle-s-closet-picks",
     "carla-simon": "https://www.criterion.com/shop/collection/976-carla-simon-s-closet-picks",
+    "billy-eichner": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
 }
 
 # Name cleanup

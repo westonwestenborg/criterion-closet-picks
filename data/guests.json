@@ -107,7 +107,7 @@
     "name": "Stellan Skarsgård",
     "slug": "stellan-skarsgard",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/mW7xmtGV4y79kQGn0zkKVGDMAmw.jpg",
     "youtube_video_id": "vpw582iA-n4",
     "youtube_video_url": "https://www.youtube.com/watch?v=vpw582iA-n4",
     "vimeo_video_id": null,
@@ -5101,5 +5101,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/976-carla-simon-s-closet-picks",
     "pick_count": 8
+  },
+  {
+    "name": "Billy Eichner",
+    "slug": "billy-eichner",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/kScO4moqNlDbyCTZuIoBqyaml4l.jpg",
+    "youtube_video_id": "9GRs6AfiH-E",
+    "youtube_video_url": "https://www.youtube.com/watch?v=9GRs6AfiH-E",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
+    "pick_count": 6
   }
 ]

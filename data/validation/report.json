@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T19:26:58",
+  "generated_at": "2026-06-29T12:07:23",
   "catalog": {
     "stats": {
       "total": 1790,
@@ -6704,11 +6704,11 @@
   },
   "guests": {
     "stats": {
-      "total": 379,
-      "with_youtube_video": 373,
-      "with_transcript": 339,
-      "with_profession": 379,
-      "with_photo": 356,
+      "total": 380,
+      "with_youtube_video": 374,
+      "with_transcript": 340,
+      "with_profession": 380,
+      "with_photo": 358,
       "with_letterboxd_url": 0,
       "with_episode_date": 378
     },
@@ -6911,28 +6911,28 @@
   },
   "picks": {
     "stats": {
-      "total": 3187,
-      "with_quote": 3055,
-      "with_timestamp": 3056,
-      "with_youtube_url": 3008,
-      "with_catalog_spine": 2989,
-      "confidence_high": 3007,
+      "total": 3193,
+      "with_quote": 3061,
+      "with_timestamp": 3062,
+      "with_youtube_url": 3014,
+      "with_catalog_spine": 2994,
+      "confidence_high": 3013,
       "confidence_medium": 46,
       "confidence_low": 1,
       "confidence_none": 133,
-      "guests_represented": 379,
+      "guests_represented": 380,
       "unique_films": 962
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 3187,
-      "with_catalog_spine": 2989,
+      "total": 3193,
+      "with_catalog_spine": 2994,
       "match_methods": {
-        "criterion_url": 2718,
+        "criterion_url": 2723,
         "fuzzy_83": 7,
-        "exact": 396,
+        "exact": 397,
         "fuzzy_100": 21,
         "fuzzy_98": 3,
         "fuzzy_90": 10,
@@ -7327,9 +7327,10 @@
         "matthew-rhys": 8,
         "hannah-einbinder": 11,
         "noah-wyle": 18,
-        "carla-simon": 8
+        "carla-simon": 8,
+        "billy-eichner": 6
       },
-      "unique_guests": 379,
+      "unique_guests": 380,
       "catalog_match_rate_pct": 93.8
     },
     "issues": []
@@ -7472,7 +7473,7 @@
       "high_confidence_rate_pct": 100.0
     },
     {
-      "name": "Stellan Skarsgård",
+      "name": "Stellan Skarsgård",
       "slug": "stellan-skarsgard",
       "profession": "actor",
       "has_video": true,
@@ -10107,7 +10108,7 @@
       "high_confidence_rate_pct": 62.5
     },
     {
-      "name": "​Luis Guzmán",
+      "name": "Luis Guzmán",
       "slug": "luis-guzman",
       "profession": "actor",
       "has_video": true,
@@ -13773,6 +13774,23 @@
       "enriched_picks": 8,
       "with_quote": 8,
       "confidence_high": 8,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Billy Eichner",
+      "slug": "billy-eichner",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 6,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 83.3,
+      "enriched_picks": 6,
+      "with_quote": 6,
+      "confidence_high": 6,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,
