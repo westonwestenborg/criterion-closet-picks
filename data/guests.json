@@ -5114,5 +5114,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
     "pick_count": 6
+  },
+  {
+    "name": "Geena Davis",
+    "slug": "geena-davis",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/jNsZLedzKPuyUmgnvpRpP5oG3Wr.jpg",
+    "youtube_video_id": "QqzRI0d_5TA",
+    "youtube_video_url": "https://www.youtube.com/watch?v=QqzRI0d_5TA",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/978-geena-davis-s-closet-picks",
+    "pick_count": 5
   }
 ]

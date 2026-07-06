@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T12:07:23",
+  "generated_at": "2026-07-06T13:41:40",
   "catalog": {
     "stats": {
       "total": 1790,
@@ -6704,11 +6704,11 @@
   },
   "guests": {
     "stats": {
-      "total": 380,
-      "with_youtube_video": 374,
-      "with_transcript": 340,
-      "with_profession": 380,
-      "with_photo": 358,
+      "total": 381,
+      "with_youtube_video": 375,
+      "with_transcript": 341,
+      "with_profession": 381,
+      "with_photo": 359,
       "with_letterboxd_url": 0,
       "with_episode_date": 378
     },
@@ -6911,26 +6911,26 @@
   },
   "picks": {
     "stats": {
-      "total": 3193,
-      "with_quote": 3061,
-      "with_timestamp": 3062,
-      "with_youtube_url": 3014,
-      "with_catalog_spine": 2994,
-      "confidence_high": 3013,
+      "total": 3198,
+      "with_quote": 3066,
+      "with_timestamp": 3067,
+      "with_youtube_url": 3019,
+      "with_catalog_spine": 2999,
+      "confidence_high": 3018,
       "confidence_medium": 46,
       "confidence_low": 1,
       "confidence_none": 133,
-      "guests_represented": 380,
+      "guests_represented": 381,
       "unique_films": 962
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 3193,
-      "with_catalog_spine": 2994,
+      "total": 3198,
+      "with_catalog_spine": 2999,
       "match_methods": {
-        "criterion_url": 2723,
+        "criterion_url": 2728,
         "fuzzy_83": 7,
         "exact": 397,
         "fuzzy_100": 21,
@@ -7328,9 +7328,10 @@
         "hannah-einbinder": 11,
         "noah-wyle": 18,
         "carla-simon": 8,
-        "billy-eichner": 6
+        "billy-eichner": 6,
+        "geena-davis": 5
       },
-      "unique_guests": 380,
+      "unique_guests": 381,
       "catalog_match_rate_pct": 93.8
     },
     "issues": []
@@ -13791,6 +13792,23 @@
       "enriched_picks": 6,
       "with_quote": 6,
       "confidence_high": 6,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Geena Davis",
+      "slug": "geena-davis",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 5,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 5,
+      "with_quote": 5,
+      "confidence_high": 5,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,
