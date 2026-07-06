@@ -141756,5 +141756,20 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "oliviers-shakespeare",
+    "title": "Olivier’s Shakespeare",
+    "spine_number": null,
+    "director": "",
+    "year": 1944,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/577-olivier-s-shakespeare",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1885-cda9f785b9487d302fc633c8d281e52d/n5E4qB3SG4k1Sbtq4c1XXEtIoKKZ9z_large.jpg",
+    "genres": [],
+    "credits": null,
+    "is_box_set": true
   }
 ]

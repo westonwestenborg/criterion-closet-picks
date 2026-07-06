@@ -5127,5 +5127,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/978-geena-davis-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "David Tennant",
+    "slug": "david-tennant",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/mGfrEMbxjUWjek1WDSq1j4TULIR.jpg",
+    "youtube_video_id": "RoXYGX-tM7c",
+    "youtube_video_url": "https://www.youtube.com/watch?v=RoXYGX-tM7c",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/979-david-tennant-s-closet-picks",
+    "pick_count": 6
   }
 ]

@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-06T13:41:40",
+  "generated_at": "2026-07-06T13:42:31",
   "catalog": {
     "stats": {
-      "total": 1790,
+      "total": 1791,
       "with_tmdb_id": 1682,
-      "with_poster": 1678,
+      "with_poster": 1679,
       "with_imdb_id": 1642,
       "with_genres": 1558,
-      "with_year": 1633,
+      "with_year": 1634,
       "with_director": 1674,
       "poster_source_criterion": 926,
-      "poster_source_tmdb": 755,
+      "poster_source_tmdb": 756,
       "poster_source_none": 109,
       "duplicate_spines": [
         null,
@@ -514,6 +514,7 @@
         6,
         null,
         734,
+        null,
         null,
         null,
         null,
@@ -6699,16 +6700,28 @@
           "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
           "Vermiglio"
         ]
+      },
+      {
+        "type": "missing_spine",
+        "film": "Olivier’s Shakespeare"
+      },
+      {
+        "type": "duplicate_spine",
+        "spine": null,
+        "titles": [
+          "Vermiglio",
+          "Olivier’s Shakespeare"
+        ]
       }
     ]
   },
   "guests": {
     "stats": {
-      "total": 381,
-      "with_youtube_video": 375,
-      "with_transcript": 341,
-      "with_profession": 381,
-      "with_photo": 359,
+      "total": 382,
+      "with_youtube_video": 376,
+      "with_transcript": 342,
+      "with_profession": 382,
+      "with_photo": 360,
       "with_letterboxd_url": 0,
       "with_episode_date": 378
     },
@@ -6911,28 +6924,28 @@
   },
   "picks": {
     "stats": {
-      "total": 3198,
-      "with_quote": 3066,
-      "with_timestamp": 3067,
-      "with_youtube_url": 3019,
-      "with_catalog_spine": 2999,
-      "confidence_high": 3018,
+      "total": 3204,
+      "with_quote": 3072,
+      "with_timestamp": 3073,
+      "with_youtube_url": 3025,
+      "with_catalog_spine": 3004,
+      "confidence_high": 3024,
       "confidence_medium": 46,
       "confidence_low": 1,
       "confidence_none": 133,
-      "guests_represented": 381,
-      "unique_films": 962
+      "guests_represented": 382,
+      "unique_films": 963
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 3198,
-      "with_catalog_spine": 2999,
+      "total": 3204,
+      "with_catalog_spine": 3004,
       "match_methods": {
-        "criterion_url": 2728,
+        "criterion_url": 2732,
         "fuzzy_83": 7,
-        "exact": 397,
+        "exact": 398,
         "fuzzy_100": 21,
         "fuzzy_98": 3,
         "fuzzy_90": 10,
@@ -6946,7 +6959,7 @@
         "fuzzy_79": 1,
         "manual": 1,
         "fuzzy_76": 1,
-        "null": 3
+        "null": 4
       },
       "guests": {
         "laura-dern": 21,
@@ -7329,9 +7342,10 @@
         "noah-wyle": 18,
         "carla-simon": 8,
         "billy-eichner": 6,
-        "geena-davis": 5
+        "geena-davis": 5,
+        "david-tennant": 6
       },
-      "unique_guests": 381,
+      "unique_guests": 382,
       "catalog_match_rate_pct": 93.8
     },
     "issues": []
@@ -13809,6 +13823,23 @@
       "enriched_picks": 5,
       "with_quote": 5,
       "confidence_high": 5,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "David Tennant",
+      "slug": "david-tennant",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 6,
+      "catalog_matched": 5,
+      "catalog_match_rate_pct": 83.3,
+      "enriched_picks": 6,
+      "with_quote": 6,
+      "confidence_high": 6,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,

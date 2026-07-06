@@ -133,6 +133,7 @@ KNOWN_VIDEO_IDS = {
     "carla-simon": {"youtube_video_id": "lxM1ic5nX7o"},
     "billy-eichner": {"youtube_video_id": "9GRs6AfiH-E"},
     "geena-davis": {"youtube_video_id": "QqzRI0d_5TA"},
+    "david-tennant": {"youtube_video_id": "RoXYGX-tM7c"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -194,6 +195,7 @@ KNOWN_CRITERION_URLS = {
     "carla-simon": "https://www.criterion.com/shop/collection/976-carla-simon-s-closet-picks",
     "billy-eichner": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
     "geena-davis": "https://www.criterion.com/shop/collection/978-geena-davis-s-closet-picks",
+    "david-tennant": "https://www.criterion.com/shop/collection/979-david-tennant-s-closet-picks",
 }
 
 # Name cleanup
