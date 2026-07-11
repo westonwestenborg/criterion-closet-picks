@@ -3,20 +3,44 @@ interface Props {
   filters: string[];
   filterKey: string;
   label?: string;
+  /** When set, chips beyond this index collapse behind a "More" toggle (JS-enhanced). */
+  collapseAfter?: number;
 }
 
-const { filters, filterKey, label } = Astro.props;
+const { filters, filterKey, label, collapseAfter } = Astro.props;
 const labelText = label || filterKey;
 const labelId = `${filterKey}-filter-label`;
+const collapse = typeof collapseAfter === 'number' && filters.length > collapseAfter;
+const overflowCount = collapse ? filters.length - collapseAfter! : 0;
+const moreLabel = `+ ${overflowCount} more`;
+const lessLabel = 'Fewer';
 ---
 <div class="filter-group" data-filter-key={filterKey} data-filter-label={labelText}>
   {label && <span id={labelId} class="filter-label">{label}:</span>}
   <div class="filter-panel" role="group" aria-labelledby={label ? labelId : undefined}>
   <button type="button" class="filter-chip active" data-filter-value="all" aria-pressed="true">All</button>
-  {filters.map((filter) => (
-    <button type="button" class="filter-chip" data-filter-value={filter.toLowerCase()} aria-pressed="false">
+  {filters.map((filter, i) => (
+    <button
+      type="button"
+      class:list={['filter-chip', collapse && i >= collapseAfter! && 'filter-overflow']}
+      data-filter-value={filter.toLowerCase()}
+      aria-pressed="false"
+    >
       {filter}
     </button>
   ))}
+  {collapse && (
+    <button
+      type="button"
+      class="filter-more"
+      data-filter-more
+      data-more-label={moreLabel}
+      data-less-label={lessLabel}
+      aria-expanded="false"
+      hidden
+    >
+      {moreLabel}
+    </button>
+  )}
   </div>
 </div>

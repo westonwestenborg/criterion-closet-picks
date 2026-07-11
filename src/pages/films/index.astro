@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FilmRow from '../../components/FilmRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
-import { getFilms, getAllDecades, getAllGenres } from '../../lib/data';
+import { getFilms, getAllDecades, getGenresRanked } from '../../lib/data';
 
 // Sort/group key: strip a leading article so "The Piano" files under P, and the
 // client-side re-sort (which reads data-title) matches this server order.
@@ -10,7 +10,7 @@ const sortKey = (t: string) => t.replace(/^(the|a|an)\s+/i, '').toLowerCase();
 
 const films = getFilms().sort((a, b) => sortKey(a.title).localeCompare(sortKey(b.title)));
 const decades = getAllDecades();
-const genres = getAllGenres();
+const genres = getGenresRanked();
 
 // Group by first-letter of the article-stripped title, preserving sorted order.
 const groups = new Map<string, typeof films>();
@@ -27,12 +27,12 @@ const letters = [...groups.keys()];
     Every film picked from the Criterion Closet, filterable by decade and genre.
   </p>
 
-  <section class="browse-controls browse-controls--compact" data-browse-singular="film" data-browse-plural="films" data-default-sort="title" data-default-dir="asc">
+  <section class="browse-controls" data-browse-singular="film" data-browse-plural="films" data-default-sort="title" data-default-dir="asc">
     <label class="sr-only" for="film-search">Search films</label>
     <input id="film-search" name="q" type="text" class="search-input" placeholder="Filter films or directors…" autocomplete="off" data-browse-search />
 
     <FilterPanel filters={decades} filterKey="decade" label="Decade" />
-    <FilterPanel filters={genres} filterKey="genre" label="Genre" />
+    <FilterPanel filters={genres} filterKey="genre" label="Genre" collapseAfter={10} />
 
     <div class="sort-controls" role="group" aria-label="Sort films">
       <span class="filter-label">Sort:</span>

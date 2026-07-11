@@ -116,6 +116,24 @@ function normalizePicks(raw: any[]): Pick[] {
   }));
 }
 
+// TMDB tags films with both its movie and TV genre taxonomies, which leak
+// near-duplicate labels (each matching only a film or two). Fold the TV-only
+// variants into their film-taxonomy equivalents so the genre filter isn't
+// polluted by singletons.
+const GENRE_NORMALIZE: Record<string, string> = {
+  'War & Politics': 'War',
+  'Sci-Fi & Fantasy': 'Science Fiction',
+};
+function normalizeGenres(genres: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const g of genres) {
+    const n = GENRE_NORMALIZE[g] ?? g;
+    if (!seen.has(n)) { seen.add(n); out.push(n); }
+  }
+  return out;
+}
+
 // Normalize films from pipeline catalog format (film_id, spine_number) to frontend format (slug, criterion_spine_number)
 function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
   return raw.map((f) => {
@@ -128,7 +146,7 @@ function normalizeFilms(raw: any[], pickCounts: Map<string, number>): Film[] {
       director: f.director ?? '',
       year: f.year ?? null,
       country: f.country ?? '',
-      genres: f.genres ?? [],
+      genres: normalizeGenres(f.genres ?? []),
       criterion_url: f.criterion_url || '',
       imdb_id: f.imdb_id ?? null,
       imdb_url: f.imdb_url ?? (f.imdb_id ? `https://www.imdb.com/title/${f.imdb_id}/` : null),
@@ -581,6 +599,21 @@ export function getAllDecades(): string[] {
 export function getAllGenres(): string[] {
   const genres = new Set(getFilms().flatMap(f => f.genres));
   return [...genres].sort();
+}
+
+/**
+ * Genres ranked by how many films carry them (most common first), for the
+ * films-index filter: common genres lead, the long tail collapses behind a
+ * "More genres" toggle. All genres are kept — 34% of films are single-genre
+ * and tail genres (Western, Horror, …) are the sole genre for dozens of films,
+ * so dropping any would make those films unreachable.
+ */
+export function getGenresRanked(): string[] {
+  const freq = new Map<string, number>();
+  for (const f of getFilms()) {
+    for (const g of f.genres) freq.set(g, (freq.get(g) || 0) + 1);
+  }
+  return [...freq.entries()].sort((a, b) => b[1] - a[1]).map(([g]) => g);
 }
 
 export function getRecentGuests(count: number = 3): Guest[] {

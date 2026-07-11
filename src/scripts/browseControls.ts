@@ -101,6 +101,31 @@ function updateFilterButtons(controls: HTMLElement, state: BrowseState) {
   });
 }
 
+// Progressive-disclosure filter (e.g. genre): show/hide the overflow chips.
+function setFilterOverflow(moreBtn: HTMLButtonElement, expanded: boolean) {
+  const panel = moreBtn.closest('.filter-panel');
+  if (!panel) return;
+  panel.querySelectorAll<HTMLElement>('.filter-overflow').forEach((chip) => {
+    chip.hidden = !expanded;
+  });
+  moreBtn.setAttribute('aria-expanded', String(expanded));
+  moreBtn.textContent = expanded
+    ? (moreBtn.dataset.lessLabel || 'Fewer')
+    : (moreBtn.dataset.moreLabel || 'More');
+}
+
+// Auto-expand a collapsed panel when one of its hidden chips is the active
+// filter (e.g. a tail genre arrived via the URL), so the selection is visible.
+function syncFilterOverflow(controls: HTMLElement) {
+  controls.querySelectorAll<HTMLButtonElement>('[data-filter-more]').forEach((moreBtn) => {
+    const panel = moreBtn.closest('.filter-panel');
+    if (!panel) return;
+    if (panel.querySelector('.filter-overflow.active') && moreBtn.getAttribute('aria-expanded') !== 'true') {
+      setFilterOverflow(moreBtn, true);
+    }
+  });
+}
+
 function updateSortButtons(controls: HTMLElement, state: BrowseState) {
   const buttons = Array.from(controls.querySelectorAll<HTMLButtonElement>('[data-sort]'));
   if (!buttons.length) return;
@@ -220,6 +245,7 @@ function applyBrowseState(grid: HTMLElement, controls: HTMLElement, state: Brows
   }
 
   updateFilterButtons(controls, state);
+  syncFilterOverflow(controls);
   const grouping = layoutGrid(grid, controls, state, defaults);
   updateSortButtons(controls, state);
 
@@ -292,6 +318,16 @@ function initBrowseControls() {
   controls.querySelectorAll<HTMLElement>('[data-filter-key]').forEach((group) => {
     const key = group.dataset.filterKey;
     if (key) defaults.filters[key] = 'all';
+  });
+
+  // Progressive-disclosure toggles: reveal the "More" control and collapse the
+  // overflow chips (they render visible server-side so no-JS users see them all).
+  controls.querySelectorAll<HTMLButtonElement>('[data-filter-more]').forEach((moreBtn) => {
+    moreBtn.hidden = false;
+    setFilterOverflow(moreBtn, false);
+    moreBtn.addEventListener('click', () => {
+      setFilterOverflow(moreBtn, moreBtn.getAttribute('aria-expanded') !== 'true');
+    });
   });
 
   let state = readStateFromUrl(controls);
