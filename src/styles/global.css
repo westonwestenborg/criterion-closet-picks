@@ -1,7 +1,8 @@
 /* et-book fonts from Tufte CSS — self-hosted from /public/fonts */
 @font-face {
   font-family: "et-book";
-  src: url("/fonts/et-book-roman-line-figures.ttf") format("truetype");
+  src: url("/fonts/et-book-roman-line-figures.woff2") format("woff2"),
+       url("/fonts/et-book-roman-line-figures.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +10,8 @@
 
 @font-face {
   font-family: "et-book";
-  src: url("/fonts/et-book-bold-line-figures.ttf") format("truetype");
+  src: url("/fonts/et-book-bold-line-figures.woff2") format("woff2"),
+       url("/fonts/et-book-bold-line-figures.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -17,7 +19,8 @@
 
 @font-face {
   font-family: "et-book";
-  src: url("/fonts/et-book-display-italic-old-style-figures.ttf") format("truetype");
+  src: url("/fonts/et-book-display-italic-old-style-figures.woff2") format("woff2"),
+       url("/fonts/et-book-display-italic-old-style-figures.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -223,7 +226,7 @@ a:hover {
 .idx-letter {
   font-variant: small-caps;
   letter-spacing: 0.08em;
-  color: #999;
+  color: #767676;
   font-size: 1rem;
   padding: 1.1rem 0 0.3rem;
   border-bottom: 1px solid #e0e0d8;
@@ -284,7 +287,7 @@ a:hover {
   background: #111;
   color: #fffff8;
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .idx-name {
@@ -1084,7 +1087,7 @@ blockquote p {
   }
 
   .idx-name {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .idx-meta {
