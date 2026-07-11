@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found" description="The page you were looking for isn't in the collection.">
+  <h1>Page not found</h1>
+  <p>
+    The page you were looking for isn't in the collection. The link may be
+    incomplete, or the page may have moved. To search films, guests, and
+    quotes, start from the <a href="/">home page</a>.
+  </p>
+
+  <div class="quick-links">
+    <a href="/" class="quick-link">Home</a>
+    <a href="/guests/" class="quick-link">Guests</a>
+    <a href="/films/" class="quick-link">Films</a>
+    <a href="/most-popular/" class="quick-link">Most Popular</a>
+    <a href="/random/" class="quick-link">Random</a>
+  </div>
+</BaseLayout>
