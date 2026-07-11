@@ -18,7 +18,7 @@ for (const guest of guests) {
   const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : 'Unknown';
 
   markdown += `## ${guest.name} (${guest.profession})\n`;
-  markdown += `Episode: ${episodeYear}`;
+  markdown += `Aired: ${episodeYear}`;
 
   const guestVisits = (guest as any).visits as any[] | undefined;
   if (guestVisits && guestVisits.length >= 2) {
