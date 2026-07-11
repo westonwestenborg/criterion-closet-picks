@@ -134,6 +134,7 @@ KNOWN_VIDEO_IDS = {
     "billy-eichner": {"youtube_video_id": "9GRs6AfiH-E"},
     "geena-davis": {"youtube_video_id": "QqzRI0d_5TA"},
     "david-tennant": {"youtube_video_id": "RoXYGX-tM7c"},
+    "finneas": {"youtube_video_id": "uJqqkVAgCcc"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -196,6 +197,7 @@ KNOWN_CRITERION_URLS = {
     "billy-eichner": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
     "geena-davis": "https://www.criterion.com/shop/collection/978-geena-davis-s-closet-picks",
     "david-tennant": "https://www.criterion.com/shop/collection/979-david-tennant-s-closet-picks",
+    "finneas": "https://www.criterion.com/shop/collection/980-finneas-s-closet-picks",
 }
 
 # Name cleanup

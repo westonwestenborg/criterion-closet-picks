@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T13:42:31",
+  "generated_at": "2026-07-11T11:27:16",
   "catalog": {
     "stats": {
       "total": 1791,
@@ -6717,11 +6717,11 @@
   },
   "guests": {
     "stats": {
-      "total": 382,
-      "with_youtube_video": 376,
-      "with_transcript": 342,
-      "with_profession": 382,
-      "with_photo": 360,
+      "total": 383,
+      "with_youtube_video": 377,
+      "with_transcript": 343,
+      "with_profession": 383,
+      "with_photo": 362,
       "with_letterboxd_url": 0,
       "with_episode_date": 378
     },
@@ -6924,26 +6924,26 @@
   },
   "picks": {
     "stats": {
-      "total": 3204,
-      "with_quote": 3072,
-      "with_timestamp": 3073,
-      "with_youtube_url": 3025,
-      "with_catalog_spine": 3004,
-      "confidence_high": 3024,
+      "total": 3210,
+      "with_quote": 3078,
+      "with_timestamp": 3079,
+      "with_youtube_url": 3031,
+      "with_catalog_spine": 3010,
+      "confidence_high": 3030,
       "confidence_medium": 46,
       "confidence_low": 1,
       "confidence_none": 133,
-      "guests_represented": 382,
+      "guests_represented": 383,
       "unique_films": 963
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 3204,
-      "with_catalog_spine": 3004,
+      "total": 3210,
+      "with_catalog_spine": 3010,
       "match_methods": {
-        "criterion_url": 2732,
+        "criterion_url": 2738,
         "fuzzy_83": 7,
         "exact": 398,
         "fuzzy_100": 21,
@@ -7343,9 +7343,10 @@
         "carla-simon": 8,
         "billy-eichner": 6,
         "geena-davis": 5,
-        "david-tennant": 6
+        "david-tennant": 6,
+        "finneas": 6
       },
-      "unique_guests": 382,
+      "unique_guests": 383,
       "catalog_match_rate_pct": 93.8
     },
     "issues": []
@@ -13837,6 +13838,23 @@
       "raw_picks": 6,
       "catalog_matched": 5,
       "catalog_match_rate_pct": 83.3,
+      "enriched_picks": 6,
+      "with_quote": 6,
+      "confidence_high": 6,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "FINNEAS",
+      "slug": "finneas",
+      "profession": "musician",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 6,
+      "catalog_matched": 6,
+      "catalog_match_rate_pct": 100.0,
       "enriched_picks": 6,
       "with_quote": 6,
       "confidence_high": 6,
