@@ -89,6 +89,8 @@ class Guest(TypedDict, total=False):
     letterboxd_list_url: str | None  # legacy (Letterboxd era); usually null
     criterion_page_url: str  # canonical Criterion collection URL
     pick_count: int  # recalculated by migrate_source_visit.py
+    x_handle: str | None  # verified X/Twitter handle (no @), for social post tagging
+    threads_handle: str | None  # verified Threads handle (no @); = IG handle
     visits: list[GuestVisit]  # only present for multi-visit guests
     visit_count: int
     source: str

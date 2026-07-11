@@ -79,7 +79,41 @@ Add to `data/excluded_video_ids.json` as `"video_id": "descriptive note"`.
 
 ### 6. Post about a new guest
 
-After adding a new guest, committing, and **pushing** the data (so the guest page URL works), compose a post:
+After adding a new guest, committing, and **pushing** the data (so the guest page URL works), compose a post.
+
+**First, find and verify the guest's social handles (tag > name).** A tagged
+guest may see, like, or reshare the post — reach you can't buy — so tagging the
+real account is the single highest-leverage part of the post. But a wrong tag
+amplifies an impersonator into a celebrity's feed, so the bar is verification,
+not a guess:
+
+1. Search for the guest's **X** and **Threads** handles (Threads = their
+   Instagram handle). Use web search; check their Linktree / official site.
+2. **Confirm against a primary source** — a verified badge, a link from their
+   official site/Wikipedia, or the account self-identifying. Beware decoys: the
+   more "official"-sounding handle is often the fake (FINNEAS publicly warns that
+   `@finneasofficial` is *not* him; the real one is `@finneas`). If you can't
+   confirm, leave the handle unset — the post falls back to `Name (profession)`.
+3. Store confirmed handles (no leading `@`) on the guest in `data/guests.json`;
+   they're per-platform because X and Threads handles diverge:
+
+   ```bash
+   .venv/bin/python -c "
+   import sys; sys.path.insert(0,'scripts')
+   from utils import load_json, save_json, GUESTS_FILE
+   g=load_json(GUESTS_FILE)
+   for x in g:
+       if x['slug']=='SLUG':
+           x['x_handle']='HANDLE'          # omit/skip if not verified
+           x['threads_handle']='HANDLE'    # omit/skip if not verified
+   save_json(GUESTS_FILE, g)"
+   ```
+
+   `post_new_guests.py` then renders `Name (@handle)` per platform (dropping the
+   profession, since the tag identifies them). Do this **before** the commit so
+   the handles ship with the guest.
+
+Then compose a post:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --dry-run --guest-slug SLUG

@@ -99,18 +99,35 @@ def get_guest_picks(slug: str) -> list[dict]:
 # Post composition
 # ---------------------------------------------------------------------------
 
-def compose_post(guest: dict, picks: list[dict], char_limit: int) -> str:
-    """Compose a post about a guest, truncating the film list to fit char_limit."""
+def guest_name_token(guest: dict, platform: str) -> str:
+    """How the guest is referred to in a post header.
+
+    If a verified handle is stored for this platform, tag it (@handle) — a
+    tagged guest may see, like, or reshare the post, which is the whole point.
+    The tag identifies them, so the profession is dropped. With no handle we
+    fall back to `Name (profession)`, then bare `Name`.
+
+    platform: "x" -> x_handle, "threads" -> threads_handle. Handles are stored
+    without a leading @ (see schema.py); we strip one defensively either way.
+    """
     name = guest.get("name", "Unknown")
+    handle_field = "x_handle" if platform == "x" else "threads_handle"
+    handle = (guest.get(handle_field) or "").strip().lstrip("@")
+    if handle:
+        return f"{name} (@{handle})"
     profession = guest.get("profession", "")
+    if profession:
+        return f"{name} ({profession})"
+    return name
+
+
+def compose_post(guest: dict, picks: list[dict], char_limit: int, platform: str) -> str:
+    """Compose a post about a guest, truncating the film list to fit char_limit."""
     slug = guest["slug"]
     pick_count = guest.get("pick_count", len(picks))
 
     # Build header and footer
-    if profession:
-        header = f"New on Closet Picks: {name} ({profession}) picked {pick_count} films.\n\n"
-    else:
-        header = f"New on Closet Picks: {name} picked {pick_count} films.\n\n"
+    header = f"New on Closet Picks: {guest_name_token(guest, platform)} picked {pick_count} films.\n\n"
 
     footer = f"\n\nAll picks + quotes: {SITE_URL}/guests/{slug}/"
 
@@ -314,8 +331,8 @@ def main():
             x_text = args.text
             threads_text = args.text
         else:
-            x_text = compose_post(guest, picks, X_CHAR_LIMIT)
-            threads_text = compose_post(guest, picks, THREADS_CHAR_LIMIT)
+            x_text = compose_post(guest, picks, X_CHAR_LIMIT, "x")
+            threads_text = compose_post(guest, picks, THREADS_CHAR_LIMIT, "threads")
 
         # Show X post
         if not args.threads_only:
