@@ -29,7 +29,7 @@ const letters = [...groups.keys()];
 
   <section class="browse-controls browse-controls--compact" data-browse-singular="film" data-browse-plural="films" data-default-sort="title" data-default-dir="asc">
     <label class="sr-only" for="film-search">Search films</label>
-    <input id="film-search" name="q" type="text" class="search-input" placeholder="Search films..." autocomplete="off" data-browse-search />
+    <input id="film-search" name="q" type="text" class="search-input" placeholder="Filter films or directors…" autocomplete="off" data-browse-search />
 
     <FilterPanel filters={decades} filterKey="decade" label="Decade" />
     <FilterPanel filters={genres} filterKey="genre" label="Genre" />
