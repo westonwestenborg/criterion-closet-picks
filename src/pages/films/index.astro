@@ -1,12 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FilmCard from '../../components/FilmCard.astro';
+import FilmRow from '../../components/FilmRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
 import { getFilms, getAllDecades, getAllGenres } from '../../lib/data';
 
-const films = getFilms().sort((a, b) => a.title.localeCompare(b.title));
+// Sort/group key: strip a leading article so "The Piano" files under P, and the
+// client-side re-sort (which reads data-title) matches this server order.
+const sortKey = (t: string) => t.replace(/^(the|a|an)\s+/i, '').toLowerCase();
+
+const films = getFilms().sort((a, b) => sortKey(a.title).localeCompare(sortKey(b.title)));
 const decades = getAllDecades();
 const genres = getAllGenres();
+
+// Group by first-letter of the article-stripped title, preserving sorted order.
+const groups = new Map<string, typeof films>();
+for (const film of films) {
+  const letter = (sortKey(film.title).charAt(0) || '#').toUpperCase();
+  if (!groups.has(letter)) groups.set(letter, []);
+  groups.get(letter)!.push(film);
+}
+const letters = [...groups.keys()];
 ---
 <BaseLayout title="Films" description="Browse all films from the Criterion Closet Picks series — filterable by decade and genre." ogImage="/og/films.png">
   <h1>Films</h1>
@@ -34,35 +47,48 @@ const genres = getAllGenres();
       </p>
       <button type="button" class="reset-filters" data-browse-reset hidden>Reset filters</button>
     </div>
+
+    <nav class="ltr-rail" aria-label="Jump to letter" data-letter-rail>
+      {letters.map((letter) => (
+        <a class="ltr-anchor" href={`#ltr-${letter}`}>{letter}</a>
+      ))}
+    </nav>
   </section>
 
   <p class="empty-state" data-browse-empty hidden>No films match the current filters.</p>
 
-  <div class="grid" data-browse-grid>
-    {films.map((film) => {
-      const decade = film.year ? `${Math.floor(film.year / 10) * 10}s` : '';
-      const genreStr = film.genres.join(',');
-      return (
-        <div
-          data-decade={decade.toLowerCase()}
-          data-genre={genreStr.toLowerCase()}
-          data-search={`${film.title} ${film.director || ''}`.toLowerCase()}
-          data-title={film.title.toLowerCase()}
-          data-year={film.year || 0}
-          data-picks={film.pick_count}
-        >
-          <FilmCard
-            title={film.title}
-            slug={film.slug}
-            director={film.director}
-            year={film.year}
-            spineNumber={film.criterion_spine_number}
-            posterUrl={film.poster_url}
-            pickCount={film.pick_count}
-          />
-        </div>
-      );
-    })}
+  <div class="idx-list" data-browse-grid>
+    {[...groups.entries()].map(([letter, group]) => (
+      <>
+        <div class="idx-letter" id={`ltr-${letter}`} data-browse-divider data-letter={letter} aria-hidden="true">{letter}</div>
+        {group.map((film) => {
+          const decade = film.year ? `${Math.floor(film.year / 10) * 10}s` : '';
+          const genreStr = film.genres.join(',');
+          return (
+            <div
+              data-browse-item
+              data-letter={letter}
+              data-decade={decade.toLowerCase()}
+              data-genre={genreStr.toLowerCase()}
+              data-search={`${film.title} ${film.director || ''}`.toLowerCase()}
+              data-title={sortKey(film.title)}
+              data-year={film.year || 0}
+              data-picks={film.pick_count}
+            >
+              <FilmRow
+                title={film.title}
+                slug={film.slug}
+                director={film.director}
+                year={film.year}
+                spineNumber={film.criterion_spine_number}
+                posterUrl={film.poster_url}
+                pickCount={film.pick_count}
+              />
+            </div>
+          );
+        })}
+      </>
+    ))}
   </div>
 </BaseLayout>
 

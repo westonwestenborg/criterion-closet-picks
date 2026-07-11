@@ -22,9 +22,9 @@ const topNames = films.slice(0, 3).map(f => f.title).join(', ');
             <div class="spine-placeholder">#{film.criterion_spine_number}</div>
           ) : null}
           <div class="ranked-content">
-            <h3 style="margin-top: 0;">
+            <h2 style="margin-top: 0;">
               <a href={`/films/${film.slug}/`}>{film.title}</a>
-            </h3>
+            </h2>
             <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
               {film.director}, {film.year}
             </p>
@@ -33,8 +33,8 @@ const topNames = films.slice(0, 3).map(f => f.title).join(', ');
                 <span class="spine-number">#{film.criterion_spine_number}</span>
               </span>
             )}
-            <span class="badge">
-              Picked by {film.pick_count} {film.pick_count === 1 ? 'guest' : 'guests'}
+            <span class="text-muted" style="font-size: 0.85rem;">
+              {film.pick_count} {film.pick_count === 1 ? 'pick' : 'picks'}
             </span>
           </div>
         </div>

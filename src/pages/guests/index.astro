@@ -1,11 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import GuestCard from '../../components/GuestCard.astro';
+import GuestRow from '../../components/GuestRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
 import { getPublishableGuests, getAllProfessions } from '../../lib/data';
 
 const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const professions = getAllProfessions();
+
+// Group by first-letter, preserving the already-sorted order.
+const groups = new Map<string, typeof guests>();
+for (const guest of guests) {
+  const letter = (guest.name.charAt(0) || '#').toUpperCase();
+  if (!groups.has(letter)) groups.set(letter, []);
+  groups.get(letter)!.push(guest);
+}
+const letters = [...groups.keys()];
 ---
 <BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more." ogImage="/og/guests.png">
   <h1>Guests</h1>
@@ -25,21 +34,32 @@ const professions = getAllProfessions();
       </p>
       <button type="button" class="reset-filters" data-browse-reset hidden>Reset filters</button>
     </div>
+
+    <nav class="ltr-rail" aria-label="Jump to letter" data-letter-rail>
+      {letters.map((letter) => (
+        <a class="ltr-anchor" href={`#ltr-${letter}`}>{letter}</a>
+      ))}
+    </nav>
   </section>
 
   <p class="empty-state" data-browse-empty hidden>No guests match the current filters.</p>
 
-  <div class="grid" data-browse-grid>
-    {guests.map((guest) => (
-      <div data-profession={guest.profession} data-search={guest.name.toLowerCase()}>
-        <GuestCard
-          name={guest.name}
-          slug={guest.slug}
-          profession={guest.profession}
-          photoUrl={guest.photo_url}
-          pickCount={guest.pick_count}
-        />
-      </div>
+  <div class="idx-list" data-browse-grid>
+    {[...groups.entries()].map(([letter, group]) => (
+      <>
+        <div class="idx-letter" id={`ltr-${letter}`} data-browse-divider data-letter={letter} aria-hidden="true">{letter}</div>
+        {group.map((guest) => (
+          <div data-browse-item data-letter={letter} data-profession={guest.profession} data-search={guest.name.toLowerCase()}>
+            <GuestRow
+              name={guest.name}
+              slug={guest.slug}
+              profession={guest.profession}
+              photoUrl={guest.photo_url}
+              pickCount={guest.pick_count}
+            />
+          </div>
+        ))}
+      </>
     ))}
   </div>
 </BaseLayout>

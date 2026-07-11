@@ -127,23 +127,78 @@ function updateSortButtons(controls: HTMLElement, state: BrowseState) {
   });
 }
 
-function sortGrid(grid: HTMLElement, state: BrowseState) {
-  if (!state.sort) return;
+function getItems(grid: HTMLElement): HTMLElement[] {
+  return Array.from(grid.querySelectorAll<HTMLElement>('[data-browse-item]'));
+}
 
-  const items = Array.from(grid.children) as HTMLElement[];
+function getDividers(grid: HTMLElement): HTMLElement[] {
+  return Array.from(grid.querySelectorAll<HTMLElement>('[data-browse-divider]'));
+}
+
+// Grouping (letter dividers + jump rail) is only shown at the default sort:
+// guests are always default (no sort controls), films only at title-asc.
+function isGrouping(state: BrowseState, defaults: BrowseState): boolean {
+  return state.sort === defaults.sort && state.dir === defaults.dir;
+}
+
+function sortItems(items: HTMLElement[], state: BrowseState): HTMLElement[] {
+  const sorted = items.slice();
+  if (!state.sort) return sorted; // no sort key (e.g. guests): keep server order
+
   const multiplier = state.dir === 'asc' ? 1 : -1;
-
-  items.sort((a, b) => {
+  sorted.sort((a, b) => {
     if (state.sort === 'title') {
       return multiplier * (a.dataset.title || '').localeCompare(b.dataset.title || '');
     }
-
     const aValue = parseInt(a.dataset[state.sort] || '0', 10) || 0;
     const bValue = parseInt(b.dataset[state.sort] || '0', 10) || 0;
     return multiplier * (aValue - bValue);
   });
+  return sorted;
+}
 
-  items.forEach((item) => grid.appendChild(item));
+// Reorders items in the DOM and manages divider + jump-rail visibility. When
+// grouping, dividers are interleaved before each letter's items; otherwise all
+// dividers and the rail are hidden and items are appended in flat sorted order.
+function layoutGrid(grid: HTMLElement, controls: HTMLElement, state: BrowseState, defaults: BrowseState) {
+  const items = getItems(grid);
+  const dividers = getDividers(grid);
+  const rail = controls.querySelector<HTMLElement>('[data-letter-rail]');
+  const grouping = isGrouping(state, defaults) && dividers.length > 0;
+  const sorted = sortItems(items, state);
+
+  const fragment = document.createDocumentFragment();
+
+  if (grouping) {
+    const dividerByLetter = new Map<string, HTMLElement>();
+    dividers.forEach((divider) => {
+      dividerByLetter.set(divider.dataset.letter || '', divider);
+    });
+
+    const emitted = new Set<string>();
+    sorted.forEach((item) => {
+      const letter = item.dataset.letter || '';
+      if (!emitted.has(letter)) {
+        emitted.add(letter);
+        const divider = dividerByLetter.get(letter);
+        if (divider) {
+          divider.hidden = false;
+          fragment.appendChild(divider);
+        }
+      }
+      fragment.appendChild(item);
+    });
+  } else {
+    dividers.forEach((divider) => {
+      divider.hidden = true;
+    });
+    sorted.forEach((item) => fragment.appendChild(item));
+  }
+
+  grid.appendChild(fragment);
+  if (rail) rail.hidden = !grouping;
+
+  return grouping;
 }
 
 function hasActiveState(state: BrowseState, defaults: BrowseState): boolean {
@@ -165,11 +220,11 @@ function applyBrowseState(grid: HTMLElement, controls: HTMLElement, state: Brows
   }
 
   updateFilterButtons(controls, state);
-  sortGrid(grid, state);
+  const grouping = layoutGrid(grid, controls, state, defaults);
   updateSortButtons(controls, state);
 
   let visibleCount = 0;
-  const items = Array.from(grid.children) as HTMLElement[];
+  const items = getItems(grid);
 
   items.forEach((item) => {
     let visible = true;
@@ -189,6 +244,19 @@ function applyBrowseState(grid: HTMLElement, controls: HTMLElement, state: Brows
     item.hidden = !visible;
     if (visible) visibleCount += 1;
   });
+
+  // When grouping, hide any letter divider whose items are all filtered out.
+  if (grouping) {
+    const visibleByLetter = new Map<string, number>();
+    items.forEach((item) => {
+      if (item.hidden) return;
+      const letter = item.dataset.letter || '';
+      visibleByLetter.set(letter, (visibleByLetter.get(letter) || 0) + 1);
+    });
+    getDividers(grid).forEach((divider) => {
+      divider.hidden = !visibleByLetter.get(divider.dataset.letter || '');
+    });
+  }
 
   const totalCount = items.length;
   const itemLabel = getItemLabel(visibleCount, singular, plural);

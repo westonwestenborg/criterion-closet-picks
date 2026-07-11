@@ -32,7 +32,7 @@ const boxSetInfo = getBoxSetInfoForFilm(film.slug);
   <div class="detail-page">
     <div class="detail-header">
       {film.poster_url ? (
-        <img src={film.poster_url} alt={film.title} class="film-poster-large" loading="lazy" />
+        <img src={film.poster_url} alt={film.title} class="film-poster-large" />
       ) : film.criterion_spine_number ? (
         <div class="spine-placeholder" style="width: 185px; height: 278px; font-size: 2rem;">
           #{film.criterion_spine_number}

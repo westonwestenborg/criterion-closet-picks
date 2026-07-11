@@ -1,8 +1,7 @@
-/* et-book fonts from Tufte CSS */
+/* et-book fonts from Tufte CSS — self-hosted from /public/fonts */
 @font-face {
   font-family: "et-book";
-  src: url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff2") format("woff2"),
-       url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff");
+  src: url("/fonts/et-book-roman-line-figures.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,8 +9,7 @@
 
 @font-face {
   font-family: "et-book";
-  src: url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff2") format("woff2"),
-       url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff");
+  src: url("/fonts/et-book-bold-line-figures.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -19,8 +17,7 @@
 
 @font-face {
   font-family: "et-book";
-  src: url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff2") format("woff2"),
-       url("https://cdn.jsdelivr.net/gh/edwardtufte/et-book@gh-pages/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff");
+  src: url("/fonts/et-book-display-italic-old-style-figures.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -217,6 +214,144 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+/* Editorial index list (guests / films browse pages) */
+.idx-list {
+  margin: 1.5rem 0 3rem;
+  border-top: 1px solid #e0e0d8;
+}
+
+.idx-letter {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: #999;
+  font-size: 1rem;
+  padding: 1.1rem 0 0.3rem;
+  border-bottom: 1px solid #e0e0d8;
+  scroll-margin-top: 1rem;
+}
+
+.idx-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e0e0d8;
+  transition: background-color 0.12s ease;
+}
+
+.idx-row:hover {
+  background: #f4f4ee;
+  border-bottom-color: #e0e0d8;
+}
+
+.idx-row--film {
+  grid-template-columns: 46px 1fr auto;
+  column-gap: 1.1rem;
+  padding: 0.7rem 0;
+}
+
+.av {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.av-init {
+  background: #e0e0d8;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.pv {
+  width: 46px;
+  height: 69px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f0f0ea;
+}
+
+.pv-spine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fffff8;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.7rem;
+}
+
+.idx-name {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.idx-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.idx-sub {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.idx-meta {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+
+.idx-prof {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.idx-count {
+  color: #666;
+  font-size: 0.85rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Letter-anchor jump rail */
+.ltr-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+  margin: 1rem 0 0;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+.ltr-rail[hidden] {
+  display: none;
+}
+
+.ltr-anchor {
+  color: #555;
+  font-size: 0.85rem;
+  border-bottom: 1px solid transparent;
+}
+
+.ltr-anchor:hover {
+  color: #111;
+  border-bottom-color: #111;
+}
+
 /* Badge */
 .badge {
   display: inline-block;
@@ -365,7 +500,7 @@ blockquote p {
 }
 
 .search-input::placeholder {
-  color: #999;
+  color: #767676;
   font-style: italic;
 }
 
@@ -596,12 +731,14 @@ blockquote p {
 .film-poster {
   width: 80px;
   height: auto;
+  aspect-ratio: 2 / 3;
   flex-shrink: 0;
 }
 
 .film-poster-large {
   width: 185px;
   height: auto;
+  aspect-ratio: 2 / 3;
   flex-shrink: 0;
 }
 
@@ -628,6 +765,7 @@ blockquote p {
 .film-poster-thumb {
   width: 60px;
   height: auto;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -690,7 +828,7 @@ blockquote p {
 }
 
 .credit-label {
-  color: #888;
+  color: #767676;
   font-size: 0.85rem;
 }
 
@@ -769,6 +907,13 @@ blockquote p {
 
 .ranked-content {
   flex: 1;
+}
+
+/* Ranked titles are h2 for heading order, sized like the surrounding h3 scale */
+.ranked-content h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
 }
 
 /* Random pick */
@@ -936,6 +1081,14 @@ blockquote p {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .idx-name {
+    font-size: 1.15rem;
+  }
+
+  .idx-meta {
+    font-size: 0.95rem;
   }
 
   .recent-guests-scroll {

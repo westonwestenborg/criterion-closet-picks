@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  profession: string;
+  photoUrl: string | null;
+  pickCount: number;
+}
+
+const { name, slug, profession, photoUrl, pickCount } = Astro.props;
+const initial = name.charAt(0).toUpperCase();
+---
+<a class="idx-row" href={`/guests/${slug}/`}>
+  {photoUrl ? (
+    <img src={photoUrl} alt={name} class="av" loading="lazy" width="40" height="40" />
+  ) : (
+    <div class="av av-init" aria-hidden="true">{initial}</div>
+  )}
+  <span class="idx-name">{name}</span>
+  <span class="idx-meta">
+    <span class="idx-prof">{profession}</span>
+    <span class="idx-count">{pickCount} {pickCount === 1 ? 'pick' : 'picks'}</span>
+  </span>
+</a>
