@@ -163,6 +163,32 @@ Manual edits persist: `enrich_tmdb.py` never overwrites a profession that is
 already set. Pick the single vocabulary value that best matches how the guest is
 publicly known. Rebuild after the change so the guest page reflects it.
 
+### 8. Curate a guest's home-page quote (optional)
+
+The home page shows the most recent guests, each with their **best pick** — a
+verbatim quote surfaced next to their name. By default `getBestPickForGuest()`
+(in `src/lib/data.ts`) picks it heuristically: highest extraction confidence,
+then a quote length near ~200 characters. That's a *defensible* quote, not
+always the *standout* one.
+
+To hand-pick a guest's home-page quote, set `featured_film_slug` on that guest
+in `data/guests.json` to the `film_slug`/`film_id` of the pick whose quote you
+want surfaced. The home page prefers it over the heuristic; leave it unset to
+fall back. Only worth doing for guests likely to appear in the recent set.
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json, save_json, GUESTS_FILE
+g=load_json(GUESTS_FILE)
+for x in g:
+    if x['slug']=='SLUG': x['featured_film_slug']='the-red-shoes'
+save_json(GUESTS_FILE, g)"
+```
+
+Purely editorial — it never affects data integrity, only which quote leads on
+the home page. Rebuild after the change.
+
 ## Key Details
 
 - Fix application order: `WRONG_VIDEO_FIXES` -> `KNOWN_VIDEO_IDS` -> `KNOWN_CRITERION_URLS`

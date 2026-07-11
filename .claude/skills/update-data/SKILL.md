@@ -102,6 +102,10 @@ After the pipeline completes, report:
   "actor"). Flag any that look off so the user can correct them — see fix-guest
   Workflow 7. Use only the single-word vocabulary (actor/director/writer/
   musician/producer/cinematographer/editor/other); never multi-role labels.
+- The new guests will be the ones shown on the **home page** (most-recent set),
+  each with a "best pick" quote chosen heuristically. Skim those quotes; if the
+  auto-picked one for a prominent new guest is weak, offer to curate it via
+  `featured_film_slug` — see fix-guest Workflow 8. Optional, editorial only.
 
 Ask the user if they want to commit and push the updated data files.
 
