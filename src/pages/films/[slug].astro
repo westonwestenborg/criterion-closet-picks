@@ -1,34 +1,62 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestPickItem from '../../components/GuestPickItem.astro';
-import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug } from '../../lib/data';
+import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug, getPickedBoxSets, getBoxSetBySlug, getPicksForBoxSet, getBoxSetMemberFilms } from '../../lib/data';
 
 export function getStaticPaths() {
-  const films = getFilms();
-  return films.map((film) => ({
-    params: { slug: film.slug },
-  }));
+  const slugs = new Set<string>();
+  for (const f of getFilms()) slugs.add(f.slug);
+  for (const b of getPickedBoxSets()) slugs.add(b.slug);
+  return [...slugs].map((slug) => ({ params: { slug } }));
 }
 
 const { slug } = Astro.params;
+// A handful of box-set catalog entries also leak into getFilms() (they were picked
+// as an individual film too). For those, the existing film view is richer — it shows
+// both the direct picks and the box-set aggregate guests — so prefer film and only
+// fall back to the box-set view for slugs that would otherwise 404.
 const film = getFilmBySlug(slug!);
+const boxSet = film ? undefined : getBoxSetBySlug(slug!);
 
-if (!film) {
+if (!film && !boxSet) {
   return Astro.redirect('/films/');
 }
 
-const allPicks = getPicksForFilm(film.slug);
+// --- Film view data (only when rendering a film) ---
+const allPicks = film ? getPicksForFilm(film.slug) : [];
 const directPicks = allPicks.filter(p => !p.box_set_film_count);
 const boxSetPicks = allPicks.filter(p => p.box_set_film_count);
-const boxSetInfo = getBoxSetInfoForFilm(film.slug);
+const boxSetInfo = film ? getBoxSetInfoForFilm(film.slug) : [];
+
+// --- Box set view data (only when rendering a box set) ---
+const hasQuote = (p: { quote?: string; extraction_confidence?: string }) =>
+  !!(p.quote && p.quote.trim() !== '' && p.extraction_confidence !== 'none');
+const bsPicks = boxSet ? getPicksForBoxSet(boxSet.slug) : [];
+const bsQuotedPicks = bsPicks.filter(hasQuote);
+const bsNoQuoteGuests = bsPicks.filter(p => !hasQuote(p)).map(p => p.guest).filter(Boolean);
+const bsMembers = boxSet ? getBoxSetMemberFilms(boxSet.slug) : [];
+const bsFilmCount = boxSet
+  ? (bsPicks.find(p => p.box_set_film_count)?.box_set_film_count ?? bsMembers.length)
+  : 0;
+
+const pageTitle = film ? film.title : boxSet!.title;
+const pageDescription = film
+  ? (() => {
+      const guestNames = allPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
+      const namesStr = guestNames.length > 0 ? ` including ${guestNames.join(', ')}` : '';
+      const genre = film.genres[0] || 'film';
+      const article = /^[aeiou]/i.test(genre) ? 'an' : 'a';
+      return `${film.title} (${film.year}) by ${film.director} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
+    })()
+  : (() => {
+      const names = bsPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
+      const namesStr = names.length > 0 ? ` including ${names.join(', ')}` : '';
+      const countStr = bsFilmCount > 0 ? ` (${bsFilmCount} films)` : '';
+      return `${boxSet!.title}${countStr} — a Criterion box set picked by ${boxSet!.pick_count} Criterion Closet ${boxSet!.pick_count === 1 ? 'guest' : 'guests'}${namesStr}.`;
+    })();
 ---
-<BaseLayout title={film.title} description={(() => {
-  const guestNames = allPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
-  const namesStr = guestNames.length > 0 ? ` including ${guestNames.join(', ')}` : '';
-  const genre = film.genres[0] || 'film';
-  const article = /^[aeiou]/i.test(genre) ? 'an' : 'a';
-  return `${film.title} (${film.year}) by ${film.director} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
-})()} ogImage={`/og/films/${slug}.png`}>
+<BaseLayout title={pageTitle} description={pageDescription} ogImage={film ? `/og/films/${slug}.png` : undefined}>
+  {film && (
   <div class="detail-page">
     <div class="detail-header">
       {film.poster_url ? (
@@ -200,4 +228,73 @@ const boxSetInfo = getBoxSetInfoForFilm(film.slug);
       ) : null;
     })}
   </div>
+  )}
+
+  {boxSet && (
+  <div class="detail-page">
+    <div class="detail-header">
+      {boxSet.poster_url && (
+        <img src={boxSet.poster_url} alt={boxSet.title} class="film-poster-large" />
+      )}
+      <div class="detail-meta">
+        <h1 style="margin-top: 0;">{boxSet.title}</h1>
+        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+          Box set{bsFilmCount > 0 ? ` · ${bsFilmCount} films` : ''}
+        </p>
+        <p style="margin-bottom: 0.5rem;">
+          <span class="badge">
+            Picked by {boxSet.pick_count} {boxSet.pick_count === 1 ? 'guest' : 'guests'}
+          </span>
+        </p>
+        <div class="detail-links">
+          {boxSet.criterion_url && (
+            <a href={boxSet.criterion_url} target="_blank" rel="noopener noreferrer">
+              View on Criterion
+            </a>
+          )}
+          {boxSet.tmdb_url && (
+            <a href={boxSet.tmdb_url} target="_blank" rel="noopener noreferrer">
+              TMDB
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    {bsMembers.length > 0 && (
+      <div style="margin-top: 1.5rem;">
+        <h2>Films in this set</h2>
+        <ul class="box-set-film-list">
+          {bsMembers.map((m) => (
+            <li>
+              {m.film ? (
+                <a href={`/films/${m.film.slug}/`}>{m.title}</a>
+              ) : (
+                <span>{m.title}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <h2>Picked by</h2>
+
+    <div class="picks-list">
+      {bsQuotedPicks.map((pick) => <GuestPickItem pick={pick} />)}
+    </div>
+
+    {bsNoQuoteGuests.length > 0 && (
+      <p class="text-muted" style="margin-top: 1rem;">
+        Also picked by{' '}
+        {bsNoQuoteGuests.map((g, i) => (
+          <>
+            {i > 0 && ', '}
+            <a href={`/guests/${g!.slug}/`}>{g!.name}</a>
+          </>
+        ))}
+      </p>
+    )}
+  </div>
+  )}
 </BaseLayout>

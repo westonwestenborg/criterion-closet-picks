@@ -1,5 +1,6 @@
 ---
 import QuoteBlock from './QuoteBlock.astro';
+import { hasFilmPage } from '../lib/data';
 import type { Pick, Film } from '../lib/data';
 
 interface Props {
@@ -7,11 +8,22 @@ interface Props {
 }
 
 const { pick } = Astro.props;
+
+// Link box-set references to their internal detail page when one exists; otherwise
+// fall back to the external Criterion link (guard prevents dead internal links).
+const boxSetInternal = !!pick.box_set_film_count && hasFilmPage(pick.film_slug);
+const boxSetHref = boxSetInternal ? `/films/${pick.film_slug}/` : undefined;
 ---
 <div>
   {pick.box_set_film_count ? (
     <div class="pick-with-poster">
-      {pick.box_set_criterion_url ? (
+      {boxSetInternal ? (
+        <a href={boxSetHref} style="border-bottom: none;">
+          {pick.film?.poster_url ? (
+            <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
+          ) : null}
+        </a>
+      ) : pick.box_set_criterion_url ? (
         <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer" style="border-bottom: none;">
           {pick.film?.poster_url ? (
             <img src={pick.film.poster_url} alt={pick.box_set_name} class="film-poster-thumb" loading="lazy" />
@@ -22,7 +34,11 @@ const { pick } = Astro.props;
       ) : null}
       <div class="pick-content">
         <div class="pick-film-info">
-          {pick.box_set_criterion_url ? (
+          {boxSetInternal ? (
+            <a href={boxSetHref} class="pick-film-title">
+              {pick.box_set_name}
+            </a>
+          ) : pick.box_set_criterion_url ? (
             <a href={pick.box_set_criterion_url} class="pick-film-title" target="_blank" rel="noopener noreferrer">
               {pick.box_set_name}
             </a>
@@ -35,6 +51,11 @@ const { pick } = Astro.props;
             </span>
           )}
           <span class="box-set-tag">Box Set</span>
+          {boxSetInternal && pick.box_set_criterion_url && (
+            <span class="pick-film-meta">
+              {' '}&middot; <a href={pick.box_set_criterion_url} target="_blank" rel="noopener noreferrer">on Criterion</a>
+            </span>
+          )}
           {pick.box_set_film_titles && (
             <details class="box-set-details">
               <summary class="text-muted">Show films</summary>
