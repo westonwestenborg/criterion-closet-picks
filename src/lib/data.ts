@@ -23,6 +23,12 @@ export interface Guest {
   pick_count: number;
   visits?: GuestVisit[];
   guest_type?: 'person' | 'group' | 'character' | 'event';
+  /**
+   * Optional editorial override: the film_slug of this guest's standout pick,
+   * surfaced on the home page. When unset, getBestPickForGuest() falls back to
+   * a heuristic. Set this in guests.json to curate a guest's home-page quote.
+   */
+  featured_film_slug?: string | null;
 }
 
 export interface Film {
@@ -588,6 +594,49 @@ export function getRecentGuests(count: number = 3): Guest[] {
     .filter(g => g.criterion_page_url)
     .sort((a, b) => collectionId(b) - collectionId(a))
     .slice(0, count);
+}
+
+const CONFIDENCE_RANK: Record<string, number> = { high: 3, medium: 2, low: 1, none: 0 };
+
+/**
+ * Select a guest's strongest quote for surfacing (e.g. the home page).
+ * Prefers the editorial override (guest.featured_film_slug); otherwise a
+ * heuristic: highest extraction confidence, then a quote length near ~200
+ * characters. Returns null when the guest has no usable quote.
+ */
+export function getBestPickForGuest(guestSlug: string): (Pick & { film: Film | undefined }) | null {
+  const guest = getGuestBySlug(guestSlug);
+  if (!guest || !isGuestPublishable(guest)) return null;
+
+  const candidates = getPicks().filter(
+    (p) => p.guest_slug === guestSlug && !p.box_set_film_count && !!p.quote && p.quote.trim().length >= 60
+  );
+  if (!candidates.length) return null;
+
+  const override = guest.featured_film_slug || null;
+  const score = (p: Pick): number => {
+    if (override && p.film_slug === override) return Number.MAX_SAFE_INTEGER;
+    const conf = CONFIDENCE_RANK[p.extraction_confidence] ?? 0;
+    return conf * 1000 - Math.abs((p.quote?.length ?? 0) - 200);
+  };
+
+  const best = [...candidates].sort((a, b) => score(b) - score(a))[0];
+  const films = getFilms();
+  return { ...best, film: films.find((f) => f.slug === best.film_slug) };
+}
+
+/**
+ * The most recent guests paired with their best pick, for the home page.
+ * Skips guests without a usable quote so the layout stays consistent.
+ */
+export function getRecentGuestsWithBestPick(count = 4): { guest: Guest; pick: Pick & { film: Film | undefined } }[] {
+  const out: { guest: Guest; pick: Pick & { film: Film | undefined } }[] = [];
+  for (const guest of getRecentGuests(count * 5)) {
+    const pick = getBestPickForGuest(guest.slug);
+    if (pick && pick.film) out.push({ guest, pick });
+    if (out.length >= count) break;
+  }
+  return out;
 }
 
 export function getStats() {

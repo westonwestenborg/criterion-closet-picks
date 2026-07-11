@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchBar from '../components/SearchBar.astro';
-import GuestCard from '../components/GuestCard.astro';
-import { getStats, getRecentGuests } from '../lib/data';
+import HomeGuestPick from '../components/HomeGuestPick.astro';
+import { getStats, getRecentGuestsWithBestPick } from '../lib/data';
 
 const stats = getStats();
-const recentGuests = getRecentGuests(3);
+const recent = getRecentGuestsWithBestPick(4);
 ---
 <BaseLayout title="Closet Picks" description={`Every pick from ${stats.totalGuests} guests visiting the Criterion Collection Closet — ${stats.totalFilms} films with quotes, timestamps, and links.`} ogImage="/og/index.png">
   <h1>Closet Picks</h1>
@@ -32,20 +32,56 @@ const recentGuests = getRecentGuests(3);
 
   <SearchBar />
 
-  <h2>Recent Guests</h2>
-  <div class="recent-guests-scroll">
-    {recentGuests.map((guest) => (
-      <GuestCard
-        name={guest.name}
-        slug={guest.slug}
-        profession={guest.profession}
-        photoUrl={guest.photo_url}
-        pickCount={guest.pick_count}
-      />
-    ))}
-  </div>
+  {recent.length > 0 && (
+    <>
+      <div class="home-section-head">
+        <h2>Recent guests</h2>
+        <a href="/guests/" class="home-section-more small-caps">All {stats.totalGuests} guests &rarr;</a>
+      </div>
+      <div class="home-picks">
+        {recent.map(({ guest, pick }) => (
+          <HomeGuestPick guest={guest} pick={pick} />
+        ))}
+      </div>
+    </>
+  )}
 
   <div class="quick-links">
     <a href="/random/" class="quick-link">Random Pick</a>
   </div>
 </BaseLayout>
+
+<style>
+  .home-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2.5rem 0 0.5rem;
+    border-bottom: 1px solid #e0e0d8;
+    padding-bottom: 0.4rem;
+  }
+  .home-section-head h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .home-section-more {
+    font-size: 0.85rem;
+    color: #555;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .home-section-more:hover {
+    border-bottom-color: #555;
+  }
+  .home-picks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+  @media (max-width: 768px) {
+    .home-picks {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+  }
+</style>

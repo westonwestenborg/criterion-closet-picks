@@ -1,0 +1,118 @@
+---
+import type { Pick, Guest, Film } from '../lib/data';
+
+interface Props {
+  guest: Guest;
+  pick: Pick & { film: Film | undefined };
+}
+
+const { guest, pick } = Astro.props;
+const initial = guest.name.charAt(0);
+
+// Trim to a consistent length so the grid stays even; full quote lives on the
+// guest page / at the timestamp.
+function trim(s: string, n = 165): string {
+  const t = s.trim();
+  if (t.length <= n) return t;
+  const cut = t.slice(0, n);
+  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:.\s]+$/, '') + '…';
+}
+
+const timestampUrl = pick.youtube_timestamp_url || pick.vimeo_timestamp_url;
+const meta = [pick.film?.director, pick.film?.year].filter(Boolean).join(', ');
+---
+<div class="gp">
+  <a href={`/guests/${guest.slug}/`} class="gp-head">
+    {guest.photo_url ? (
+      <img src={guest.photo_url} alt={guest.name} class="gp-avatar" loading="lazy" width="44" height="44" />
+    ) : (
+      <div class="gp-avatar gp-initial">{initial}</div>
+    )}
+    <span class="gp-id">
+      <span class="gp-name">{guest.name}</span>
+      <span class="gp-prof small-caps">{guest.profession}</span>
+    </span>
+  </a>
+  <blockquote class="gp-quote">&ldquo;{trim(pick.quote)}&rdquo;</blockquote>
+  <div class="gp-attr">
+    on <a href={`/films/${pick.film_slug}/`} class="gp-film">{pick.film?.title}</a>{meta && <span class="gp-meta"> &middot; {meta}</span>}
+    {timestampUrl && (
+      <>&nbsp;<a href={timestampUrl} class="gp-watch small-caps" target="_blank" rel="noopener noreferrer">Watch &rarr;</a></>
+    )}
+  </div>
+</div>
+
+<style>
+  .gp {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0d8;
+  }
+  .gp-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.9rem;
+    border-bottom: none;
+  }
+  .gp-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .gp-initial {
+    background: #e0e0d8;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  .gp-id {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .gp-name {
+    font-size: 1.2rem;
+  }
+  .gp-head:hover .gp-name {
+    border-bottom: 1px solid #777;
+  }
+  .gp-prof {
+    font-size: 0.78rem;
+    color: #666;
+  }
+  .gp-quote {
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: #333;
+    border-left: 3px solid #e0e0d8;
+    padding-left: 1.1rem;
+    margin: 0 0 0.7rem;
+  }
+  .gp-attr {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .gp-attr a {
+    border-bottom: none;
+  }
+  .gp-film {
+    font-style: italic;
+    border-bottom: 1px solid #777;
+  }
+  .gp-meta {
+    color: #777;
+  }
+  .gp-watch {
+    color: #2b5797;
+    font-size: 0.8rem;
+    border-bottom: 1px solid transparent;
+  }
+  .gp-watch:hover {
+    border-bottom: 1px solid #2b5797;
+  }
+</style>
