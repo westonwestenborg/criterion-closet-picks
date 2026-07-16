@@ -54,12 +54,62 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
   }
   return null;
 }
+
+const filmNames = picks.filter(p => p.film && !p.box_set_film_count).slice(0, 3).map(p => p.film!.title);
+const namesStr = filmNames.length > 0 ? ` — including ${filmNames.join(', ')}` : '';
+const pageDescription = `Hear what ${guest.name} has to say about ${picks.length > 1 ? `${picks.length} picks` : '1 pick'} from the Criterion Closet${namesStr}.`;
+const pageUrl = new URL(`/guests/${slug}/`, Astro.site).href;
+const entityType = guest.guest_type === 'group' ? 'Organization' : guest.guest_type === 'person' || !guest.guest_type ? 'Person' : 'Thing';
+const mainEntity = {
+  '@type': entityType,
+  name: guest.name,
+  url: pageUrl,
+  ...(entityType === 'Person' ? { jobTitle: guest.profession } : { description: guest.profession }),
+  ...(guest.photo_url ? { image: guest.photo_url } : {}),
+};
+const videoSources = visits.length > 0
+  ? visits
+  : [{
+      youtube_video_id: guest.youtube_video_id,
+      youtube_video_url: guest.youtube_video_url,
+      vimeo_video_id: guest.vimeo_video_id,
+      episode_date: guest.episode_date,
+      criterion_page_url: guest.criterion_page_url,
+    }];
+const videoSchemas = videoSources
+  .filter((visit) => visit.youtube_video_id)
+  .map((visit, index) => ({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: `${guest.name} visits the Criterion Closet${videoSources.length > 1 ? ` — Visit ${index + 1}` : ''}`,
+    description: pageDescription,
+    thumbnailUrl: `https://i.ytimg.com/vi/${visit.youtube_video_id}/hqdefault.jpg`,
+    ...(visit.episode_date ? { uploadDate: new Date(visit.episode_date).toISOString() } : {}),
+    embedUrl: `https://www.youtube.com/embed/${visit.youtube_video_id}`,
+    contentUrl: visit.youtube_video_url || `https://www.youtube.com/watch?v=${visit.youtube_video_id}`,
+  }));
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: `${guest.name} — Closet Picks`,
+    url: pageUrl,
+    description: pageDescription,
+    mainEntity,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Closet Picks', item: Astro.site!.href },
+      { '@type': 'ListItem', position: 2, name: 'Guests', item: new URL('/guests/', Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: guest.name, item: pageUrl },
+    ],
+  },
+  ...videoSchemas,
+];
 ---
-<BaseLayout title={guest.name} description={(() => {
-  const filmNames = picks.filter(p => p.film && !p.box_set_film_count).slice(0, 3).map(p => p.film!.title);
-  const namesStr = filmNames.length > 0 ? ` — including ${filmNames.join(', ')}` : '';
-  return `Hear what ${guest.name} has to say about ${picks.length > 1 ? `${picks.length} picks` : '1 pick'} from the Criterion Closet${namesStr}.`;
-})()} ogImage={`/og/guests/${slug}.png`}>
+<BaseLayout title={guest.name} description={pageDescription} ogImage={`/og/guests/${slug}.png`} ogType={entityType === 'Person' ? 'profile' : 'website'} structuredData={structuredData}>
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (

@@ -6,8 +6,52 @@ import { getStats, getRecentGuestsWithBestPick } from '../lib/data';
 
 const stats = getStats();
 const recent = getRecentGuestsWithBestPick(4);
+const description = `Every pick from ${stats.totalGuests} guests visiting the Criterion Collection Closet — ${stats.totalFilms} films with quotes, timestamps, and links.`;
+const siteUrl = Astro.site!.href;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Closet Picks',
+    url: siteUrl,
+    description,
+    creator: {
+      '@type': 'Person',
+      name: 'Weston Westenborg',
+      url: 'https://westenb.org/about/',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Criterion Closet Picks Database',
+    description,
+    url: siteUrl,
+    creator: {
+      '@type': 'Person',
+      name: 'Weston Westenborg',
+      url: 'https://westenb.org/about/',
+    },
+    isBasedOn: [
+      'https://www.criterion.com/shop/collection/702-closet-picks',
+      'https://www.youtube.com/playlist?list=PL7D89754A5DAD1E8E',
+    ],
+    distribution: [
+      {
+        '@type': 'DataDownload',
+        encodingFormat: 'text/markdown',
+        contentUrl: `${siteUrl}exports/closet-picks.md`,
+      },
+      {
+        '@type': 'DataDownload',
+        encodingFormat: 'application/json',
+        contentUrl: `${siteUrl}exports/picks.json`,
+      },
+    ],
+  },
+];
 ---
-<BaseLayout title="Closet Picks" description={`Every pick from ${stats.totalGuests} guests visiting the Criterion Collection Closet — ${stats.totalFilms} films with quotes, timestamps, and links.`} ogImage="/og/index.png">
+<BaseLayout title="Closet Picks" description={description} ogImage="/og/index.png" structuredData={structuredData}>
   <h1>Closet Picks</h1>
   <p>
     A searchable database of every pick from the Criterion Collection's

@@ -1,103 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getPublishableGuests, getFilms, getSupportedPicks, getStats } from '../lib/data';
+import { getStats } from '../lib/data';
 
-const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
-const films = getFilms();
-const picks = getSupportedPicks();
 const stats = getStats();
-
-const buildDate = new Date().toISOString().split('T')[0];
-
-// Generate the markdown content
-let markdown = `# Criterion Closet Picks - Complete Database\n`;
-markdown += `Generated: ${buildDate} | ${stats.totalGuests} guests | ${stats.totalFilms} films | ${stats.totalPicks} picks\n\n`;
-
-for (const guest of guests) {
-  const guestPicks = picks.filter(p => p.guest_slug === guest.slug);
-  const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYear() : 'Unknown';
-
-  markdown += `## ${guest.name} (${guest.profession})\n`;
-  markdown += `Aired: ${episodeYear}`;
-
-  const guestVisits = (guest as any).visits as any[] | undefined;
-  if (guestVisits && guestVisits.length >= 2) {
-    for (let vi = 0; vi < guestVisits.length; vi++) {
-      const v = guestVisits[vi];
-      const vLabel = `Visit ${vi + 1}`;
-      if (v.youtube_video_url) markdown += ` | [${vLabel} Video](${v.youtube_video_url})`;
-      else if (v.youtube_video_id) markdown += ` | [${vLabel} Video](https://www.youtube.com/watch?v=${v.youtube_video_id})`;
-    }
-  } else {
-    if (guest.youtube_video_url) markdown += ` | [Full Video](${guest.youtube_video_url})`;
-    if (guest.criterion_page_url) markdown += ` | [Criterion Page](${guest.criterion_page_url})`;
-  }
-  markdown += `\n\n`;
-
-  for (const pick of guestPicks) {
-    // Box set aggregate entries
-    if (pick.box_set_film_count) {
-      const countStr = pick.box_set_film_count > 0 ? ` (${pick.box_set_film_count} films)` : '';
-      markdown += `- **${pick.box_set_name}**${countStr} [Box Set]`;
-      if (pick.box_set_criterion_url) markdown += ` - [Criterion](${pick.box_set_criterion_url})`;
-      markdown += `\n`;
-      if (pick.quote) {
-        markdown += `  > "${pick.quote}"\n`;
-        if (pick.youtube_timestamp_url) {
-          markdown += `  [Watch this moment](${pick.youtube_timestamp_url})\n`;
-        }
-      }
-      markdown += `\n`;
-      continue;
-    }
-
-    const film = films.find(f => f.slug === pick.film_slug);
-    if (!film) continue;
-
-    const spineStr = film.criterion_spine_number ? ` - Spine #${film.criterion_spine_number}` : '';
-    markdown += `- **${film.title}** (${film.year}) - ${film.director}${spineStr}`;
-    if (film.criterion_url) markdown += ` - [Criterion](${film.criterion_url})`;
-    if (film.imdb_url) markdown += ` - [IMDB](${film.imdb_url})`;
-    markdown += `\n`;
-
-    if (pick.quote) {
-      markdown += `  > "${pick.quote}"\n`;
-      if (pick.youtube_timestamp_url) {
-        markdown += `  [Watch this moment](${pick.youtube_timestamp_url})\n`;
-      }
-    }
-    markdown += `\n`;
-  }
-}
 ---
-<BaseLayout title="LLM Export" description="Machine-readable markdown export of all Criterion Closet Picks data.">
+<BaseLayout
+  title="Data Exports"
+  description="Machine-readable Markdown and JSON exports of the Criterion Closet Picks database."
+  noindex={true}
+>
   <div class="llm-export">
-    <h1>LLM Export</h1>
+    <h1>Data Exports</h1>
     <p>
-      A machine-readable export of the complete Criterion Closet Picks database.
-      Intended for use with LLMs and AI tools.
+      Direct machine-readable exports of {stats.totalGuests} guests, {stats.totalFilms} films,
+      and {stats.totalPicks} picks. Each record retains source links, quotes, and timestamps where available.
     </p>
 
+    <h2>Complete database</h2>
     <p>
-      <a
-        class="download-link"
-        id="download-md"
-        href="#"
-      >
-        Download as Markdown
-      </a>
+      <a class="download-link" href="/exports/closet-picks.md">Download Markdown</a>
     </p>
 
-    <pre><code>{markdown}</code></pre>
+    <h2>Structured data</h2>
+    <ul>
+      <li><a href="/exports/guests.json">Guests JSON</a></li>
+      <li><a href="/exports/films.json">Films JSON</a></li>
+      <li><a href="/exports/picks.json">Picks JSON</a></li>
+    </ul>
+
+    <p>
+      Agents can use <a href="/llms.txt">llms.txt</a> as a concise map of the site and its canonical resources.
+    </p>
   </div>
-
-  <script define:vars={{ markdown }}>
-    const downloadBtn = document.getElementById('download-md');
-    if (downloadBtn) {
-      const blob = new Blob([markdown], { type: 'text/markdown' });
-      const url = URL.createObjectURL(blob);
-      downloadBtn.setAttribute('href', url);
-      downloadBtn.setAttribute('download', 'criterion-closet-picks.md');
-    }
-  </script>
 </BaseLayout>

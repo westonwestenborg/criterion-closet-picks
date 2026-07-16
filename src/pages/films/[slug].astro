@@ -54,8 +54,45 @@ const pageDescription = film
       const countStr = bsFilmCount > 0 ? ` (${bsFilmCount} films)` : '';
       return `${boxSet!.title}${countStr} — a Criterion box set picked by ${boxSet!.pick_count} Criterion Closet ${boxSet!.pick_count === 1 ? 'guest' : 'guests'}${namesStr}.`;
     })();
+const pageUrl = new URL(`/films/${slug}/`, Astro.site).href;
+const mainEntity = film
+  ? {
+      '@type': 'Movie',
+      name: film.title,
+      url: pageUrl,
+      ...(film.year ? { dateCreated: String(film.year) } : {}),
+      ...(film.director ? { director: { '@type': 'Person', name: film.director } } : {}),
+      ...(film.genres.length > 0 ? { genre: film.genres } : {}),
+      ...(film.poster_url ? { image: film.poster_url } : {}),
+      sameAs: [film.criterion_url, film.imdb_url, film.tmdb_url].filter(Boolean),
+    }
+  : {
+      '@type': 'CreativeWorkSeries',
+      name: boxSet!.title,
+      url: pageUrl,
+      ...(boxSet!.criterion_url ? { sameAs: boxSet!.criterion_url } : {}),
+    };
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${pageTitle} — Closet Picks`,
+    url: pageUrl,
+    description: pageDescription,
+    mainEntity,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Closet Picks', item: Astro.site!.href },
+      { '@type': 'ListItem', position: 2, name: 'Films', item: new URL('/films/', Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: pageTitle, item: pageUrl },
+    ],
+  },
+];
 ---
-<BaseLayout title={pageTitle} description={pageDescription} ogImage={film ? `/og/films/${slug}.png` : undefined}>
+<BaseLayout title={pageTitle} description={pageDescription} ogImage={film ? `/og/films/${slug}.png` : undefined} ogType={film ? 'video.movie' : 'website'} structuredData={structuredData}>
   {film && (
   <div class="detail-page">
     <div class="detail-header">

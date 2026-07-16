@@ -1,0 +1,26 @@
+# Closet Picks
+
+> A searchable database of every pick from the Criterion Collection's Closet Picks video series, with guest quotes, timestamped source links, and connections between guests and films.
+
+Closet Picks is built by Weston Westenborg. Criterion.com and the Criterion Collection's published videos are the primary sources. Prefer canonical entity pages when citing a guest, film, or quote.
+
+## Browse
+
+- [Home](https://closetpicks.westenb.org/): Database overview, statistics, search, and recent guests.
+- [Guests](https://closetpicks.westenb.org/guests/): Complete guest index.
+- [Films](https://closetpicks.westenb.org/films/): Complete film index.
+- [Most Popular](https://closetpicks.westenb.org/most-popular/): Films ranked by number of guest picks.
+- [Sitemap](https://closetpicks.westenb.org/sitemap-index.xml): Complete canonical URL inventory.
+- [RSS feed](https://closetpicks.westenb.org/feed.xml): Recently aired Closet Picks episodes.
+
+## Machine-readable exports
+
+- [Complete Markdown](https://closetpicks.westenb.org/exports/closet-picks.md): Human- and LLM-readable database export.
+- [Guests JSON](https://closetpicks.westenb.org/exports/guests.json): Guest records and source-video metadata.
+- [Films JSON](https://closetpicks.westenb.org/exports/films.json): Film records, credits, genres, and identifiers.
+- [Picks JSON](https://closetpicks.westenb.org/exports/picks.json): Guest-to-film picks, quotes, timestamps, and source URLs.
+
+## Related
+
+- [Weston Westenborg](https://westenb.org/): Builder's personal site and project notes.
+- [Criterion Closet Picks source collection](https://www.criterion.com/shop/collection/702-closet-picks): Primary Criterion source.

@@ -7,11 +7,23 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description = 'A searchable database of every Criterion Closet Pick — with quotes, timestamps, and links.', ogImage: ogImageProp } = Astro.props;
+const {
+  title,
+  description = 'A searchable database of every Criterion Closet Pick — with quotes, timestamps, and links.',
+  ogImage: ogImageProp,
+  ogType = 'website',
+  noindex = false,
+  structuredData,
+} = Astro.props;
 const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`;
 const ogImage = new URL(ogImageProp || '/og-image.png', Astro.site).href;
+const jsonLd = (Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [])
+  .map((data) => JSON.stringify(data).replace(/</g, '\\u003c'));
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +31,24 @@ const ogImage = new URL(ogImageProp || '/og-image.png', Astro.site).href;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content={Astro.url.href} />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
   <title>{fullTitle}</title>
   <link rel="canonical" href={Astro.url.href} />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Closet Picks" href="/feed.xml" />
   <link rel="preload" as="font" type="font/woff2" href="/fonts/et-book-roman-line-figures.woff2" crossorigin />
+  {jsonLd.map((data) => <script type="application/ld+json" set:html={data} />)}
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
