@@ -121,14 +121,79 @@ def guest_name_token(guest: dict, platform: str) -> str:
     return name
 
 
+# Quote selection mirrors getBestPickForGuest() in src/lib/data.ts so the
+# default post leads with the same quote the home page features. Keep the two
+# in sync: extraction-confidence rank, the ~200-char length target, and the
+# featured_film_slug override (matched against film_id, the raw twin of the
+# frontend's film_slug).
+_CONFIDENCE_RANK = {"high": 3, "medium": 2, "low": 1, "none": 0}
+
+
+def quote_candidates(guest: dict, picks: list[dict]) -> list[dict]:
+    """Guest's picks that carry a usable quote, strongest first.
+
+    Same filter and ordering as the frontend's getBestPickForGuest(): drop box
+    sets and quotes under 60 chars, then rank by confidence, then by closeness
+    to ~200 chars, with featured_film_slug forced to the top.
+    """
+    override = guest.get("featured_film_slug") or None
+    candidates = [
+        p for p in picks
+        if not p.get("box_set_film_count")
+        and (p.get("quote") or "").strip()
+        and len((p["quote"]).strip()) >= 60
+    ]
+
+    def score(p: dict) -> int:
+        if override and p.get("film_id") == override:
+            return 10**18
+        conf = _CONFIDENCE_RANK.get(p.get("extraction_confidence", ""), 0)
+        return conf * 1000 - abs(len(p.get("quote") or "") - 200)
+
+    return sorted(candidates, key=score, reverse=True)
+
+
+def trim_quote(text: str, budget: int) -> str:
+    """Trim a quote to <= budget chars, preferring a sentence boundary.
+
+    A scaffold, not the final cut — every post is hand-curated via --text — so
+    this only needs to land on a clean-ish stopping point. Ends on sentence
+    punctuation when one sits in the back half; otherwise cuts at a word
+    boundary and appends an ellipsis.
+    """
+    text = " ".join(text.split())
+    if len(text) <= budget:
+        return text
+    window = text[: max(0, budget - 1)]  # reserve a char for the ellipsis
+    boundary = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+    if boundary >= budget // 2:
+        return text[: boundary + 1]  # keep the punctuation, drop trailing space
+    space = window.rfind(" ")
+    return (window[:space] if space > 0 else window) + "…"
+
+
 def compose_post(guest: dict, picks: list[dict], char_limit: int, platform: str) -> str:
-    """Compose a post about a guest, truncating the film list to fit char_limit."""
+    """Compose a post about a guest, fitting char_limit.
+
+    Leads with the guest's strongest quote (the differentiator Criterion's own
+    posts lack); falls back to the film list only when no usable quote exists.
+    """
     slug = guest["slug"]
     pick_count = guest.get("pick_count", len(picks))
+    token = guest_name_token(guest, platform)
+    cta = f"\n\nSee all {pick_count} picks: {SITE_URL}/guests/{slug}/"
 
-    # Build header and footer
-    header = f"New on Closet Picks: {guest_name_token(guest, platform)} picked {pick_count} films.\n\n"
+    best = quote_candidates(guest, picks)
+    if best:
+        top = best[0]
+        film = top.get("film_title") or top.get("title") or ""
+        header = f"{token} on {film}:\n\n"
+        available = char_limit - len(header) - len(cta) - 2  # 2 for the quote marks
+        quote = trim_quote(top["quote"], available)
+        return f'{header}"{quote}"{cta}'
 
+    # Fallback: no usable quote (e.g. Vimeo-only guest) — list the films.
+    header = f"New on Closet Picks: {token} picked {pick_count} films.\n\n"
     footer = f"\n\nAll picks + quotes: {SITE_URL}/guests/{slug}/"
 
     # Calculate space for film list
@@ -343,6 +408,19 @@ def main():
         if not args.twitter_only:
             print(f"\n--- Threads ({len(threads_text)}/{THREADS_CHAR_LIMIT} chars) ---")
             print(threads_text)
+
+        if args.dry_run and not args.text:
+            candidates = quote_candidates(guest, picks)
+            if candidates:
+                print(
+                    f"\n--- Candidate quotes ({len(candidates)}), strongest first "
+                    "— pick/trim one, then rerun with --text ---"
+                )
+                for p in candidates:
+                    film = p.get("film_title") or p.get("title") or "?"
+                    conf = p.get("extraction_confidence", "?")
+                    quote = " ".join(p["quote"].split())
+                    print(f"\n[{conf}, {len(p['quote'])}c] {film}:\n{quote}")
 
         if args.dry_run:
             print("\n[DRY RUN — not posting]")

@@ -113,20 +113,48 @@ not a guess:
    profession, since the tag identifies them). Do this **before** the commit so
    the handles ship with the guest.
 
-Then compose a post:
+Then compose a post. **Lead with a quote, not a list of titles.** Criterion's
+own posts are "✨{Name}'s Closet Picks!✨ + video link" — they lead with the
+video because they own it. We don't have the video; our differentiator is the
+extracted quotes and the searchable database. A quote-led post is the one thing
+Criterion structurally doesn't do, and it gives the tagged guest something
+flattering-and-specific to reshare. So the default template leads with the
+guest's strongest quote; **don't fall back to the title list** unless the guest
+genuinely has no usable quote (e.g. a Vimeo-only guest with no transcript).
+
+Every post is hand-curated in the session — the script never auto-picks a
+punchy line, because good pull-quotes come from human judgment, not truncation.
+The process:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --dry-run --guest-slug SLUG
 ```
 
-Show the proposed post text to the user. If they want to edit it, work with them
-to adjust the text, then run:
+The dry-run prints a quote-led draft (using the guest's featured/best quote,
+trimmed to fit) **plus a "Candidate quotes" menu** — every pick's full quote,
+strongest first. Read the candidates, pick the one that's most compelling and
+most *this guest* (the line they'd be proud to see quoted back), and cut a tight
+pull-quote from it — a short verbatim phrase, not the whole 400-char quote.
+Favor the punchiest cut; add just enough context that the line lands on its own.
+Recommend one to the user with your reasoning, then post the approved text:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "FINAL TEXT HERE"
 ```
 
-Or if the dry-run text is approved as-is:
+`--text` posts the same text to both platforms; guest @handles resolve
+case-insensitively on X and Threads, so a single tag works for both. Keep the
+shape used for John Leguizamo:
+
+```
+{Name} (@{handle}) on {Film}:
+
+"{tight pull-quote}"
+
+See all {N} picks: closetpicks.westenb.org/guests/{slug}/
+```
+
+Or, only if the dry-run's auto-trimmed draft is already good, approve it as-is:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --guest-slug SLUG
