@@ -5155,5 +5155,21 @@
     "pick_count": 6,
     "x_handle": "finneas",
     "threads_handle": "finneas"
+  },
+  {
+    "name": "John Leguizamo",
+    "slug": "john-leguizamo",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/kwYCdxTlDh9zauUCg4mp2XTCQTw.jpg",
+    "youtube_video_id": "VyE1nBqRNIQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=VyE1nBqRNIQ",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/981-john-leguizamo-s-closet-picks",
+    "pick_count": 6,
+    "x_handle": "JohnLeguizamo",
+    "threads_handle": "johnleguizamo",
+    "featured_film_slug": "do-the-right-thing"
   }
 ]
