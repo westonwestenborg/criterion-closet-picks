@@ -5171,5 +5171,20 @@
     "x_handle": "JohnLeguizamo",
     "threads_handle": "johnleguizamo",
     "featured_film_slug": "do-the-right-thing"
+  },
+  {
+    "name": "Camila Mendes",
+    "slug": "camila-mendes",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/pZAWRHdJtJlDcWuQHlgIwX12s02.jpg",
+    "youtube_video_id": "pwAJ1djDXws",
+    "youtube_video_url": "https://www.youtube.com/watch?v=pwAJ1djDXws",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/982-camila-mendes-s-closet-picks",
+    "pick_count": 5,
+    "threads_handle": "camimendes",
+    "featured_film_slug": "the-great-beauty"
   }
 ]

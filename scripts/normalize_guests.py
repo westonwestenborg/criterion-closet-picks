@@ -136,6 +136,7 @@ KNOWN_VIDEO_IDS = {
     "david-tennant": {"youtube_video_id": "RoXYGX-tM7c"},
     "finneas": {"youtube_video_id": "uJqqkVAgCcc"},
     "john-leguizamo": {"youtube_video_id": "VyE1nBqRNIQ"},
+    "camila-mendes": {"youtube_video_id": "pwAJ1djDXws"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -200,6 +201,7 @@ KNOWN_CRITERION_URLS = {
     "david-tennant": "https://www.criterion.com/shop/collection/979-david-tennant-s-closet-picks",
     "finneas": "https://www.criterion.com/shop/collection/980-finneas-s-closet-picks",
     "john-leguizamo": "https://www.criterion.com/shop/collection/981-john-leguizamo-s-closet-picks",
+    "camila-mendes": "https://www.criterion.com/shop/collection/982-camila-mendes-s-closet-picks",
 }
 
 # Name cleanup
