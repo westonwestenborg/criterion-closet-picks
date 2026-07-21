@@ -5173,6 +5173,22 @@
     "featured_film_slug": "do-the-right-thing"
   },
   {
+    "name": "Mindy Kaling",
+    "slug": "mindy-kaling",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/m4veWEp9TEDallTZRobb7MLkd9K.jpg",
+    "youtube_video_id": "9Rauz_wHSXQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=9Rauz_wHSXQ",
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/983-mindy-kaling-s-closet-picks",
+    "pick_count": 7,
+    "x_handle": "mindykaling",
+    "threads_handle": "mindykaling",
+    "featured_film_slug": "the-shape-of-water"
+  },
+  {
     "name": "Camila Mendes",
     "slug": "camila-mendes",
     "profession": "actor",
