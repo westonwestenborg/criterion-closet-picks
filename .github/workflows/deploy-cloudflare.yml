@@ -35,4 +35,10 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Must match the pinned wrangler devDependency. The action shells out to
+          # `bun run wrangler --version` and downloads wrangler itself when the
+          # version does not match, which is a fresh tarball fetch on every deploy
+          # — that fetch failed mid-extract on 2026-07-24 and broke the deploy.
+          # Pinning both means the lockfile install satisfies the check instead.
+          wranglerVersion: "3.90.0"
           command: pages deploy dist --project-name=criterion-closet-picks --branch=main
