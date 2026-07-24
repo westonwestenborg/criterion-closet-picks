@@ -27,7 +27,7 @@ export const GET: APIRoute = async ({ params }) => {
       { slug: guest.slug, name: guest.name, profession: guest.profession, photo_url: guest.photo_url, youtube_video_id: guest.youtube_video_id, pick_count: picks.length, top_films: picks.filter(p => p.film?.poster_url && !p.box_set_film_count).slice(0, 6).map(p => p.film!.poster_url) },
       () => guestCard(guest, picks, avatarDataUri),
     );
-    return new Response(png, { headers: { 'Content-Type': 'image/png' } });
+    return new Response(png, { headers: { 'Content-Type': 'image/jpeg' } });
   } catch {
     const { genericCard } = await import('../../../lib/og/generic-card.js');
     const png = await renderCached(
@@ -35,6 +35,6 @@ export const GET: APIRoute = async ({ params }) => {
       { slug: guest.slug, name: guest.name },
       () => genericCard({ title: guest.name, subtitle: guest.profession }),
     );
-    return new Response(png, { headers: { 'Content-Type': 'image/png' } });
+    return new Response(png, { headers: { 'Content-Type': 'image/jpeg' } });
   }
 };

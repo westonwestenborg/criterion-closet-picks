@@ -21,7 +21,7 @@ const {
   structuredData,
 } = Astro.props;
 const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`;
-const ogImage = new URL(ogImageProp || '/og-image.png', Astro.site).href;
+const ogImage = new URL(ogImageProp || '/og-image.jpg', Astro.site).href;
 const jsonLd = (Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [])
   .map((data) => JSON.stringify(data).replace(/</g, '\\u003c'));
 ---

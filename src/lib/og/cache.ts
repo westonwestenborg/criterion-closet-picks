@@ -9,7 +9,7 @@ function hashData(data: unknown): string {
 }
 
 function cachePath(key: string): string {
-  return join(CACHE_DIR, `${key}.png`);
+  return join(CACHE_DIR, `${key}.jpg`);
 }
 
 function hashPath(key: string): string {
@@ -17,22 +17,22 @@ function hashPath(key: string): string {
 }
 
 export function getCached(key: string, dataHash: string): Buffer | null {
-  const png = cachePath(key);
+  const image = cachePath(key);
   const hash = hashPath(key);
-  if (!existsSync(png) || !existsSync(hash)) return null;
+  if (!existsSync(image) || !existsSync(hash)) return null;
   try {
     const stored = readFileSync(hash, 'utf-8').trim();
-    if (stored === dataHash) return readFileSync(png);
+    if (stored === dataHash) return readFileSync(image);
   } catch {
     return null;
   }
   return null;
 }
 
-export function setCache(key: string, dataHash: string, png: Buffer): void {
-  const pngFile = cachePath(key);
-  mkdirSync(dirname(pngFile), { recursive: true });
-  writeFileSync(pngFile, png);
+export function setCache(key: string, dataHash: string, image: Buffer): void {
+  const imageFile = cachePath(key);
+  mkdirSync(dirname(imageFile), { recursive: true });
+  writeFileSync(imageFile, image);
   writeFileSync(hashPath(key), dataHash);
 }
 

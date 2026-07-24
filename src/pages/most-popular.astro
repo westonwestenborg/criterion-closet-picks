@@ -5,7 +5,7 @@ import { getFilmsSortedByPickCount } from '../lib/data';
 const films = getFilmsSortedByPickCount();
 const topNames = films.slice(0, 3).map(f => f.title).join(', ');
 ---
-<BaseLayout title="Most Popular" description={`All ${films.length} most-picked films from the Criterion Closet, ranked by guests — from ${topNames}, and more.`} ogImage="/og/most-popular.png">
+<BaseLayout title="Most Popular" description={`All ${films.length} most-picked films from the Criterion Closet, ranked by guests — from ${topNames}, and more.`} ogImage="/og/most-popular.jpg">
   <h1>Most Popular</h1>
   <p>
     Films ranked by how many Closet Picks guests chose them. The ultimate peer-reviewed film recommendations.

@@ -17,5 +17,5 @@ export const GET: APIRoute = async () => {
         posters,
       }),
   );
-  return new Response(png, { headers: { 'Content-Type': 'image/png' } });
+  return new Response(png, { headers: { 'Content-Type': 'image/jpeg' } });
 };

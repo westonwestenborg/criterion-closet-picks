@@ -48,7 +48,15 @@ export async function renderOgImage(markup: any): Promise<Buffer> {
     height: HEIGHT,
     fonts: getFonts() as any,
   });
-  return await sharp(Buffer.from(svg)).png().toBuffer();
+  // JPEG, not PNG: these cards are mostly poster photography, which PNG stores
+  // terribly — the same card is ~650KB as PNG and ~134KB here. Flatten first
+  // because JPEG has no alpha and would otherwise composite onto black.
+  // 4:4:4 keeps full chroma resolution, which matters for the card's text; the
+  // cheaper 4:2:0 saves ~30KB and smears coloured edges.
+  return await sharp(Buffer.from(svg))
+    .flatten({ background: BG })
+    .jpeg({ quality: 88, chromaSubsampling: '4:4:4', progressive: true, mozjpeg: true })
+    .toBuffer();
 }
 
 export async function renderCached(

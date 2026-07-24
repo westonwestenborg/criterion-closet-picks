@@ -23,5 +23,5 @@ export const GET: APIRoute = async () => {
         avatarDataUris,
       }),
   );
-  return new Response(png, { headers: { 'Content-Type': 'image/png' } });
+  return new Response(png, { headers: { 'Content-Type': 'image/jpeg' } });
 };
