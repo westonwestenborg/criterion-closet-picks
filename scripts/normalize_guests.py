@@ -138,6 +138,7 @@ KNOWN_VIDEO_IDS = {
     "john-leguizamo": {"youtube_video_id": "VyE1nBqRNIQ"},
     "camila-mendes": {"youtube_video_id": "pwAJ1djDXws"},
     "mindy-kaling": {"youtube_video_id": "9Rauz_wHSXQ"},
+    "christopher-nolan": {"youtube_video_id": "t9fgFt-Ibik"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -204,6 +205,7 @@ KNOWN_CRITERION_URLS = {
     "john-leguizamo": "https://www.criterion.com/shop/collection/981-john-leguizamo-s-closet-picks",
     "camila-mendes": "https://www.criterion.com/shop/collection/982-camila-mendes-s-closet-picks",
     "mindy-kaling": "https://www.criterion.com/shop/collection/983-mindy-kaling-s-closet-picks",
+    "christopher-nolan": "https://www.criterion.com/shop/collection/984-christopher-nolan-s-closet-picks",
 }
 
 # Name cleanup

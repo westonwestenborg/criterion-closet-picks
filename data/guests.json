@@ -5097,7 +5097,7 @@
     "youtube_video_id": "lxM1ic5nX7o",
     "youtube_video_url": "https://www.youtube.com/watch?v=lxM1ic5nX7o",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-06-26",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/976-carla-simon-s-closet-picks",
     "pick_count": 8
@@ -5110,7 +5110,7 @@
     "youtube_video_id": "9GRs6AfiH-E",
     "youtube_video_url": "https://www.youtube.com/watch?v=9GRs6AfiH-E",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-06-29",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/977-billy-eichner-s-closet-picks",
     "pick_count": 6
@@ -5123,7 +5123,7 @@
     "youtube_video_id": "QqzRI0d_5TA",
     "youtube_video_url": "https://www.youtube.com/watch?v=QqzRI0d_5TA",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/978-geena-davis-s-closet-picks",
     "pick_count": 5
@@ -5136,7 +5136,7 @@
     "youtube_video_id": "RoXYGX-tM7c",
     "youtube_video_url": "https://www.youtube.com/watch?v=RoXYGX-tM7c",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-06",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/979-david-tennant-s-closet-picks",
     "pick_count": 6
@@ -5149,7 +5149,7 @@
     "youtube_video_id": "uJqqkVAgCcc",
     "youtube_video_url": "https://www.youtube.com/watch?v=uJqqkVAgCcc",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-10",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/980-finneas-s-closet-picks",
     "pick_count": 6,
@@ -5164,7 +5164,7 @@
     "youtube_video_id": "VyE1nBqRNIQ",
     "youtube_video_url": "https://www.youtube.com/watch?v=VyE1nBqRNIQ",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-14",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/981-john-leguizamo-s-closet-picks",
     "pick_count": 6,
@@ -5180,7 +5180,7 @@
     "youtube_video_id": "9Rauz_wHSXQ",
     "youtube_video_url": "https://www.youtube.com/watch?v=9Rauz_wHSXQ",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-20",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/983-mindy-kaling-s-closet-picks",
     "pick_count": 7,
@@ -5196,11 +5196,24 @@
     "youtube_video_id": "pwAJ1djDXws",
     "youtube_video_url": "https://www.youtube.com/watch?v=pwAJ1djDXws",
     "vimeo_video_id": null,
-    "episode_date": null,
+    "episode_date": "2026-07-17",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/982-camila-mendes-s-closet-picks",
     "pick_count": 5,
     "threads_handle": "camimendes",
     "featured_film_slug": "the-great-beauty"
+  },
+  {
+    "name": "Christopher Nolan",
+    "slug": "christopher-nolan",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/xuAIuYSmsUzKlUMBFGVZaWsY3DZ.jpg",
+    "youtube_video_id": "t9fgFt-Ibik",
+    "youtube_video_url": "https://www.youtube.com/watch?v=t9fgFt-Ibik",
+    "vimeo_video_id": null,
+    "episode_date": "2026-07-24",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/984-christopher-nolan-s-closet-picks",
+    "pick_count": 16
   }
 ]
