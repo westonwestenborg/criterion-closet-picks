@@ -130,6 +130,47 @@ def fuzzy_match_score(text1: str, text2: str) -> int:
     return fuzz.token_sort_ratio(text1.lower().strip(), text2.lower().strip())
 
 
+# Standalone volume numbers: Arabic digits, or Roman numerals of two or more
+# characters. Bare "I" is excluded on purpose — it is far more often a pronoun or
+# article in a film title ("I Vitelloni", "I Knew Her Well") than a volume number.
+_VOLUME_TOKEN_RE = re.compile(r"\b(\d+|[IVXLC]{2,})\b")
+_ROMAN_VALUES = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+
+
+def _volume_numbers(title: str) -> set[int]:
+    """Extract standalone volume/sequel numbers from a title."""
+    numbers = set()
+    for token in _VOLUME_TOKEN_RE.findall(title):
+        if token.isdigit():
+            numbers.add(int(token))
+            continue
+        # Roman numeral: subtractive notation (IV, IX) as well as additive.
+        total = 0
+        for i, char in enumerate(token):
+            value = _ROMAN_VALUES[char]
+            following = (_ROMAN_VALUES[c] for c in token[i + 1:])
+            total += -value if any(v > value for v in following) else value
+        numbers.add(total)
+    return numbers
+
+
+def titles_conflict_on_volume(title1: str, title2: str) -> bool:
+    """True when two titles carry *different* volume numbers.
+
+    "World Cinema Project No. 3" and "...No. 5" differ by a single character and
+    score 98 on token-sort ratio, so a fuzzy threshold alone happily conflates a
+    box set with its sibling volume. A volume number is decisive, not incidental:
+    when both titles number themselves and the numbers differ, they are different
+    releases however close the surrounding text is.
+
+    Only fires when *both* titles are numbered. Criterion routinely omits a
+    volume suffix that the other source carries ("After the Curfew" vs "After the
+    Curfew (World Cinema Project No. 3)"), and those are genuine matches.
+    """
+    v1, v2 = _volume_numbers(title1), _volume_numbers(title2)
+    return bool(v1) and bool(v2) and v1 != v2
+
+
 # ---------------------------------------------------------------------------
 # Environment
 # ---------------------------------------------------------------------------

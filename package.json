@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "validate": "python scripts/test_data.py",
+    "validate": ".venv/bin/python scripts/test_data.py",
     "test": "vitest run"
   },
   "dependencies": {

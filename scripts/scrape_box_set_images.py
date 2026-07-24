@@ -97,6 +97,9 @@ def main():
 
             if image_url:
                 entry["poster_url"] = image_url
+                # These come off the Criterion product page, so record the origin
+                # the same way scrape_criterion_images.py does.
+                entry["poster_source"] = "criterion"
                 found += 1
                 log(f"    Found: {image_url[:80]}...")
             else:

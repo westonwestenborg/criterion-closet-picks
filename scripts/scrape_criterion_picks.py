@@ -41,6 +41,7 @@ from scripts.utils import (
     make_film_id,
     fuzzy_match_score,
     fuzzy_match_name,
+    titles_conflict_on_volume,
 )
 
 CRITERION_BASE = "https://www.criterion.com"
@@ -632,10 +633,14 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
         if matched:
             continue
 
-        # 3. Fuzzy title match
+        # 3. Fuzzy title match. Titles that number themselves differently are
+        # never the same release — "World Cinema Project No. 3" scores 98 against
+        # "...No. 5" — so a volume conflict disqualifies the candidate outright.
         best_score = 0
         best_match = None
         for cat in catalog:
+            if titles_conflict_on_volume(title, cat["title"]):
+                continue
             score = fuzzy_match_score(title, cat["title"])
             if score > best_score and score >= 75:
                 best_score = score

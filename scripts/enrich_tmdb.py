@@ -35,6 +35,7 @@ from scripts.utils import (
     log,
     get_env,
     slugify,
+    titles_conflict_on_volume,
 )
 
 
@@ -75,6 +76,9 @@ TMDB_TV_IDS = {
     "dekalog": 42699,
     "tanner-88": 1804,
     "the-underground-railroad": 80039,
+    # John Lurie's 1991 series. The movie namespace has no entry for it, so the
+    # old title search landed on an unrelated 2000 TV movie.
+    "fishing-with-john": 61820,
 }
 
 # Manual TMDB ID overrides for films that auto-search matches incorrectly
@@ -283,6 +287,35 @@ class TMDBClient:
             self._genre_cache = {g["id"]: g["name"] for g in data.get("genres", [])}
         return self._genre_cache
 
+    # A candidate below this similarity floor is a search artifact, not a match.
+    # Calibrated by replaying every already-matched catalog entry (1,673 of them)
+    # through this gate: 65 is the lowest score reached by a legitimate alternate
+    # or translated title ("A Story from Chikamatsu" -> "Chikamatsu Monogatari"),
+    # and every entry it rejects at that floor was verified to be a genuinely
+    # wrong match. Genuine divergences that score below it — "1984" vs "Nineteen
+    # Eighty-Four" — belong in data/tmdb_corrections.json, which bypasses search
+    # entirely.
+    TITLE_MATCH_FLOOR = 65
+
+    def _title_is_plausible(self, query: str, result: dict) -> bool:
+        """Whether a search result's title actually resembles what we asked for."""
+        # Compare with and without a trailing parenthetical: Criterion carries
+        # suffixes TMDB does not ("After the Curfew (World Cinema Project No. 3)").
+        variants = {query, re.sub(r"\s+\([^)]*\)$", "", query).strip()}
+        for candidate in (result.get("title"), result.get("original_title")):
+            if not candidate:
+                continue
+            for variant in variants:
+                if not variant or titles_conflict_on_volume(variant, candidate):
+                    continue
+                a, b = variant.lower(), candidate.lower()
+                # Deliberately not token_set_ratio: it scores on the shared token
+                # subset, so boilerplate both titles happen to carry ("box set")
+                # alone clears the floor.
+                if max(fuzz.ratio(a, b), fuzz.partial_ratio(a, b)) >= self.TITLE_MATCH_FLOOR:
+                    return True
+        return False
+
     def search_movie(self, title: str, year: int = None, director: str = None) -> dict | None:
         """Search for a movie by title, optionally filtering by year and scoring by director."""
         params = {"query": title}
@@ -316,6 +349,16 @@ class TMDBClient:
                             results = data["results"]
                             break
 
+        if not results:
+            return None
+
+        # TMDB's search ranking is lexical and returns *something* even when
+        # nothing resembles the query — every Criterion title ending in
+        # "(box set)" used to land on "Metallica: Master of Puppets (Deluxe Box
+        # Set)", and "Dekalog" on "Yongary, Monster from the Deep". Nothing
+        # downstream re-checks the title, so drop implausible candidates here,
+        # before either return path can hand one back.
+        results = [r for r in results if self._title_is_plausible(title, r)]
         if not results:
             return None
 
