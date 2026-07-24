@@ -16,11 +16,12 @@ const { platform, videoId, title } = Astro.props;
       aria-label={`Play video: ${title}`}
     >
       <img
-        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+        src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+        onerror={`this.onerror=null;this.src='https://i.ytimg.com/vi/${videoId}/hqdefault.jpg';this.classList.add('is-letterboxed');`}
         alt=""
         loading="lazy"
-        width="480"
-        height="360"
+        width="1280"
+        height="720"
         class="video-facade-poster"
       />
       <span class="video-facade-play" aria-hidden="true"></span>
@@ -56,7 +57,11 @@ const { platform, videoId, title } = Astro.props;
     height: 100%;
     object-fit: cover;
     display: block;
-    /* hqdefault has black letterbox bars; a slight scale hides them */
+  }
+
+  /* hqdefault (the fallback when maxres is missing) has black letterbox bars;
+     a slight scale hides them */
+  .video-facade-poster.is-letterboxed {
     transform: scale(1.35);
   }
 

@@ -786,7 +786,7 @@ blockquote p {
 }
 
 .film-poster-thumb {
-  width: 60px;
+  width: 96px;
   height: auto;
   aspect-ratio: 2 / 3;
   object-fit: cover;
@@ -794,8 +794,8 @@ blockquote p {
 }
 
 .spine-placeholder-thumb {
-  width: 60px;
-  height: 90px;
+  width: 96px;
+  height: 144px;
   background: #111;
   color: #fffff8;
   display: flex;
@@ -1172,6 +1172,15 @@ blockquote p {
 
   .film-poster-large {
     width: 120px;
+  }
+
+  .film-poster-thumb {
+    width: 76px;
+  }
+
+  .spine-placeholder-thumb {
+    width: 76px;
+    height: 114px;
   }
 }
 
