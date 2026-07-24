@@ -82,7 +82,21 @@
       "che": "Criterion's Che is a two-part feature; the previous single TMDB ID was only a making-of documentary, so no single TMDB movie ID is accepted without a richer multi-part model.",
       "science-is-fiction-23-films-by-jean-painleve": "Multi-short collection; no single locally verified TMDB entity is accepted without a richer contained-films model.",
       "symbiopsychotaxiplasm-two-takes": "Two-film release; no single locally verified TMDB entity is accepted without a richer contained-films model.",
-      "the-complete-mr-arkadin": "Multi-version release; no single locally verified TMDB entity is accepted without a richer contained-versions model."
+      "the-complete-mr-arkadin": "Multi-version release; no single locally verified TMDB entity is accepted without a richer contained-versions model.",
+      "monsters-and-madmen": "Criterion box set of Richard Gordon/Boris Karloff horror features; TMDB's same-titled entry is an unrelated 2026 documentary, so no single TMDB movie ID is accepted without a richer contained-films model.",
+      "martin-scorseses-world-cinema-project-box-set": "Box set of six restorations; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "martin-scorseses-world-cinema-project-no-2-box-set": "Box set of six restorations; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "martin-scorseses-world-cinema-project-no-3-box-set": "Box set of six restorations; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "martin-scorseses-world-cinema-project-no-4-box-set": "Box set of six restorations; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "martin-scorseses-world-cinema-project-no-5": "Box set of six restorations; no single TMDB movie corresponds to it.",
+      "dietrich-von-sternberg-in-hollywood-box-set": "Six-film box set; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "bruce-lee-his-greatest-hits-box-set": "Five-film box set; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "jackie-chan-emergence-of-a-superstar-box-set": "Box set; matched TMDB's 'Metallica: Master of Puppets (Deluxe Box Set)' on the shared 'box set' tokens.",
+      "six-moral-tales": "Rohmer six-film collection; the old match was its member film La Collectionneuse.",
+      "the-kennedy-films-of-robert-drew-associates": "Documentary collection; the old match was its member film Adventures on the New Frontier.",
+      "trilogy-of-life": "Pasolini three-film collection; was wrongly matched to an unrelated 2018 documentary.",
+      "the-emigrants-jan-troell-double-feature": "Double feature (The Emigrants + The New Land); no single TMDB movie corresponds to it.",
+      "pan-1": "No verified Criterion release behind this catalog row (no spine, no Criterion URL); the old match was an unrelated 2020 documentary."
     },
     "film_missing_imdb_id": {
       "a-hollis-frampton-odyssey": "Multi-film collection; TMDB has no verified single IMDb ID to backfill locally.",

@@ -138,5 +138,29 @@
   "weekend-1967": {
     "tmdb_id": 8075,
     "note": "Jean-Luc Godard 1967, was wrongly matched to David McNeil short (651058)"
+  },
+  "a-woman-is-a-woman": {
+    "tmdb_id": 31522,
+    "note": "Godard 1961 (Une femme est une femme), was wrongly matched to The Old Woman with the Knife (1247002)"
+  },
+  "redes-world-cinema-project": {
+    "tmdb_id": 195522,
+    "note": "Zinnemann/Gomez Muriel 1936 (Redes, aka The Wave), was wrongly matched to Melies's The Man with the Rubber Head (49279)"
+  },
+  "revenge-world-cinema-project-no-2": {
+    "tmdb_id": 216046,
+    "note": "Yermek Shinarbayev 1990 (Mest'), was wrongly matched to Rachid Bouchareb's London River (39358)"
+  },
+  "1984": {
+    "tmdb_id": 9314,
+    "note": "Michael Radford 1984; TMDB titles it 'Nineteen Eighty-Four', which scores below the title floor"
+  },
+  "apur-sansar-apu-trilogy": {
+    "tmdb_id": 896,
+    "note": "Satyajit Ray 1959; TMDB titles it 'The World of Apu', which scores below the title floor"
+  },
+  "oh-sun": {
+    "tmdb_id": 195841,
+    "note": "Med Hondo 1973; TMDB titles it 'Soleil O', which scores below the title floor"
   }
 }

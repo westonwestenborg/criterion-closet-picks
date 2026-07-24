@@ -3589,74 +3589,74 @@
     "film_id": "fishing-with-john",
     "title": "Fishing with John",
     "spine_number": 42,
-    "director": "David Burton Morris",
-    "year": 2000,
+    "director": "John Lurie",
+    "year": 1992,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/580-fishing-with-john",
-    "imdb_id": "tt0206750",
-    "tmdb_id": 21378,
+    "imdb_id": "tt0139776",
+    "tmdb_id": 61820,
+    "tmdb_type": "tv",
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/05815711c1681a5fa7e58e8626fec57c/K8GuiqhVu0BHF5MJFCwUkBnLLg5hED_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "Drama",
-      "Romance",
-      "TV Movie"
+      "Comedy",
+      "Documentary"
     ],
     "credits": {
       "directors": [
         {
-          "name": "David Burton Morris",
-          "tmdb_id": 150971
+          "name": "John Lurie",
+          "tmdb_id": 6394
         }
       ],
-      "writers": [],
-      "cinematographers": [
+      "writers": [
         {
-          "name": "Eric Van Haren Noman",
-          "tmdb_id": 69049
+          "name": "John Lurie",
+          "tmdb_id": 6394
         }
       ],
+      "cinematographers": [],
       "editors": [],
       "cast": [
         {
-          "name": "Jaclyn Smith",
-          "tmdb_id": 55635,
-          "character": "Edith Iglauer"
+          "name": "John Lurie",
+          "tmdb_id": 6394,
+          "character": ""
         },
         {
-          "name": "Tim Matheson",
-          "tmdb_id": 21561,
-          "character": "John Daly"
+          "name": "Robb Webb",
+          "tmdb_id": 1409822,
+          "character": ""
         },
         {
-          "name": "David Andrews",
-          "tmdb_id": 7219,
-          "character": "William Sanders"
+          "name": "Dennis Hopper",
+          "tmdb_id": 2778,
+          "character": ""
         },
         {
-          "name": "Tantoo Cardinal",
-          "tmdb_id": 7863,
-          "character": "Mary"
+          "name": "Jim Jarmusch",
+          "tmdb_id": 4429,
+          "character": ""
         },
         {
-          "name": "Lynda Boyd",
-          "tmdb_id": 20188,
-          "character": "Cara Lieb"
+          "name": "Tom Waits",
+          "tmdb_id": 2887,
+          "character": ""
         },
         {
-          "name": "Stephen Dimopoulos",
-          "tmdb_id": 27121,
-          "character": "Howie"
+          "name": "Matt Dillon",
+          "tmdb_id": 2876,
+          "character": ""
         },
         {
-          "name": "Kevin McNulty",
-          "tmdb_id": 27111,
-          "character": "Jack Stanton"
+          "name": "Willem Dafoe",
+          "tmdb_id": 5293,
+          "character": ""
         },
         {
-          "name": "Rob Freeman",
-          "tmdb_id": 121724,
-          "character": "Jamie Potts"
+          "name": "Leon Mordacai",
+          "tmdb_id": 2969934,
+          "character": ""
         }
       ]
     }
@@ -11053,7 +11053,7 @@
     "director": "Werner Klingler",
     "year": 1962,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/721-the-testament-of-dr-mabuse",
     "imdb_id": "tt0056573",
     "tmdb_id": 10444,
     "poster_url": "https://image.tmdb.org/t/p/w185/wZvTHZkd5LLRR5xUztsXAWpPGpT.jpg",
@@ -11729,84 +11729,82 @@
     "film_id": "a-woman-is-a-woman",
     "title": "A Woman Is a Woman",
     "spine_number": 238,
-    "director": "Min Kyu-dong",
-    "year": 2025,
+    "director": "Jean-Luc Godard",
+    "year": 1961,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/854-a-woman-is-a-woman",
-    "imdb_id": "tt34509472",
-    "tmdb_id": 1247002,
-    "poster_url": "https://s3.amazonaws.com/criterion-production/films/20f3fdea9cf490583cfd19fdc9de1b1f/jrKmVo0VtptSRY47ruB9RuryLnZZLA_original.jpg",
+    "imdb_id": "tt0055572",
+    "tmdb_id": 31522,
     "poster_source": "criterion",
-    "genres": [
-      "Action",
-      "Mystery",
-      "Drama"
-    ],
     "credits": {
       "directors": [
         {
-          "name": "Min Kyu-dong",
-          "tmdb_id": 150150
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776
         }
       ],
       "writers": [
         {
-          "name": "Min Kyu-dong",
-          "tmdb_id": 150150
+          "name": "Jean-Luc Godard",
+          "tmdb_id": 3776
         }
       ],
       "cinematographers": [
         {
-          "name": "Lee Jae-woo",
-          "tmdb_id": 2424989
+          "name": "Raoul Coutard",
+          "tmdb_id": 3540
         }
       ],
       "editors": [
         {
-          "name": "Jung Ji-eun",
-          "tmdb_id": 2355647
+          "name": "Agnès Guillemot",
+          "tmdb_id": 3526
+        },
+        {
+          "name": "Lila Herman",
+          "tmdb_id": 3839
         }
       ],
       "cast": [
         {
-          "name": "Lee Hye-young",
-          "tmdb_id": 588209,
-          "character": "Hornclaw"
+          "name": "Anna Karina",
+          "tmdb_id": 18197,
+          "character": "Angela"
         },
         {
-          "name": "Kim Sung-cheol",
-          "tmdb_id": 1916087,
-          "character": "Bullfight"
+          "name": "Jean-Claude Brialy",
+          "tmdb_id": 24299,
+          "character": "Émile Récamier"
         },
         {
-          "name": "Yeon Woo-jin",
-          "tmdb_id": 1346848,
-          "character": "Dr. Kang"
+          "name": "Jean-Paul Belmondo",
+          "tmdb_id": 3829,
+          "character": "Alfred Lubitsch"
         },
         {
-          "name": "Kim Moo-yul",
-          "tmdb_id": 84788,
-          "character": "Ryu"
+          "name": "Henri Attal",
+          "tmdb_id": 23480,
+          "character": "Fake Blind #2 (uncredited)"
         },
         {
-          "name": "Shin Sia",
-          "tmdb_id": 2896274,
-          "character": "Young Hornclaw"
+          "name": "Karyn Balm",
+          "tmdb_id": 584484,
+          "character": "(uncredited)"
         },
         {
-          "name": "Kim Kang-woo",
-          "tmdb_id": 84751,
-          "character": "Director Sohn"
+          "name": "Dorothée Blanck",
+          "tmdb_id": 1151713,
+          "character": "Prostitute 3 / 'L'Opera Mouffe' shown on TV screen (uncredited)"
         },
         {
-          "name": "Choi Moo-seong",
-          "tmdb_id": 240081,
-          "character": "Jang-bi"
+          "name": "Catherine Demongeot",
+          "tmdb_id": 25957,
+          "character": "Magazine Girl (uncredited)"
         },
         {
-          "name": "Ok Ja-yeon",
-          "tmdb_id": 2133924,
-          "character": "Cho-yeop"
+          "name": "Marie Dubois",
+          "tmdb_id": 18218,
+          "character": "Angela's Friend (uncredited)"
         }
       ]
     }
@@ -20256,82 +20254,15 @@
     "year": 1967,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/417-six-moral-tales",
-    "imdb_id": "tt0061495",
-    "tmdb_id": 4837,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1875-4d5d5e2c0c2e29fa19513f6dc62869f6/uCMcMymA2Obfiryf0OHp2HPNItUlPx_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Drama",
       "Romance"
     ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Éric Rohmer",
-          "tmdb_id": 28615
-        }
-      ],
-      "writers": [
-        {
-          "name": "Éric Rohmer",
-          "tmdb_id": 28615
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "Néstor Almendros",
-          "tmdb_id": 3569
-        }
-      ],
-      "editors": [
-        {
-          "name": "Jackie Raynal",
-          "tmdb_id": 1160008
-        }
-      ],
-      "cast": [
-        {
-          "name": "Patrick Bauchau",
-          "tmdb_id": 5274,
-          "character": "Adrien"
-        },
-        {
-          "name": "Haydée Politoff",
-          "tmdb_id": 39672,
-          "character": "Haydée"
-        },
-        {
-          "name": "Daniel Pommereulle",
-          "tmdb_id": 39673,
-          "character": "Daniel"
-        },
-        {
-          "name": "Alain Jouffroy",
-          "tmdb_id": 39674,
-          "character": "Writer"
-        },
-        {
-          "name": "Mijanou Bardot",
-          "tmdb_id": 39675,
-          "character": "Carole"
-        },
-        {
-          "name": "Annik Morice",
-          "tmdb_id": 39676,
-          "character": "Carole's Friend"
-        },
-        {
-          "name": "Dennis Berry",
-          "tmdb_id": 39677,
-          "character": "Charlie"
-        },
-        {
-          "name": "Seymour Hertzberg",
-          "tmdb_id": 1372849,
-          "character": "Sam"
-        }
-      ]
-    },
+    "credits": null,
     "is_box_set": true,
     "description": "The multifaceted, deeply personal work of Eric Rohmer has had an effect on cinema unlike any other. One of the founding critics of the history-makingCahiers du cinéma,Rohmer began translating his written manifestos to film in the 1960s, standing apart from his New Wave contemporaries with his patented brand of gently existential, hyperarticulate character studies set against vivid seasonal landscapes. This near genre unto itself was established with the audacious and wildly influential series Six Moral Tales. A succession of encounters between fragile men and the women who tempt them, Six Moral Tales unleashed on the film world a new voice, one that was at once sexy, philosophical, modern, daring, nonjudgmental, and liberating.",
     "included_films": [
@@ -44008,34 +43939,16 @@
     "film_id": "trilogy-of-life",
     "title": "Trilogy of Life",
     "spine_number": 631,
-    "director": "Nicolás Pereda",
-    "year": 2018,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/916-trilogy-of-life",
     "imdb_id": null,
-    "tmdb_id": 872647,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1839-b0e33c60c0fef04ebd79f8b275c00439/0z4n2qVrtfnIckCIIHgJmQHaXzQR5g_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nicolás Pereda",
-          "tmdb_id": 1021436
-        }
-      ],
-      "writers": [
-        {
-          "name": "Nicolás Pereda",
-          "tmdb_id": 1021436
-        }
-      ],
-      "cinematographers": [],
-      "editors": [],
-      "cast": []
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "In the early 1970s, the great Italian poet, philosopher, and filmmaker Pier Paolo Pasolini brought to the screen a trio of masterpieces of medieval literature—Giovanni Boccaccio’sThe Decameron,Geoffrey Chaucer’sThe Canterbury Tales,andThe Thousand and One Nights(often known asThe Arabian Nights)—and in doing so created his most uninhibited and extravagant work. In this brazen and bawdy triptych, the director set out to challenge modern consumer culture and celebrate the uncorrupted human body, while commenting on contemporary sexual and religious mores and hypocrisies. Filled with scatological humor and a rough-hewn sensuality that leave all modern standards of decency behind, these are carnal, provocative, and wildly entertaining films, all extraordinarily designed by Dante Ferretti and featuring evocative music by Ennio Morricone.",
     "included_films": [
@@ -48703,50 +48616,16 @@
     "film_id": "martin-scorseses-world-cinema-project-box-set",
     "title": "Martin Scorsese’s World Cinema Project (box set)",
     "spine_number": 684,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "",
     "imdb_id": null,
-    "tmdb_id": 628403,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zNWJhNOdMRMsJXqgsSBnznr7Fz6.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    }
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
+    "genres": [],
+    "credits": null
   },
   {
     "film_id": "touki-bouki-world-cinema-project",
@@ -48828,29 +48707,75 @@
     "film_id": "redes-world-cinema-project",
     "title": "Redes (World Cinema Project)",
     "spine_number": 686,
-    "director": "Georges Méliès",
+    "director": "Fred Zinnemann",
     "year": null,
     "country": "",
     "criterion_url": "",
-    "imdb_id": "tt0000359",
-    "tmdb_id": 49279,
-    "poster_url": null,
-    "genres": [],
+    "imdb_id": "tt0028165",
+    "tmdb_id": 195522,
     "credits": {
       "directors": [
         {
-          "name": "Georges Méliès",
-          "tmdb_id": 11523
+          "name": "Fred Zinnemann",
+          "tmdb_id": 4065
+        },
+        {
+          "name": "Emilio Gómez Muriel",
+          "tmdb_id": 102303
         }
       ],
       "writers": [],
-      "cinematographers": [],
-      "editors": [],
+      "cinematographers": [
+        {
+          "name": "Paul Strand",
+          "tmdb_id": 131470
+        }
+      ],
+      "editors": [
+        {
+          "name": "Gunther von Fritsch",
+          "tmdb_id": 33414
+        },
+        {
+          "name": "Emilio Gómez Muriel",
+          "tmdb_id": 102303
+        }
+      ],
       "cast": [
         {
-          "name": "Georges Méliès",
-          "tmdb_id": 11523,
-          "character": "The Chemist / The India Rubber Head"
+          "name": "Silvio Hernández",
+          "tmdb_id": 1175905,
+          "character": "Miro"
+        },
+        {
+          "name": "Antonio Lara",
+          "tmdb_id": 1175908,
+          "character": "El Zurdo"
+        },
+        {
+          "name": "Miguel Figueroa",
+          "tmdb_id": 1175909,
+          "character": "Miguel"
+        },
+        {
+          "name": "Rafael Hinojosa",
+          "tmdb_id": 1175907,
+          "character": "El Candidato"
+        },
+        {
+          "name": "Felipe Rojas",
+          "tmdb_id": 2062476,
+          "character": "Mingo"
+        },
+        {
+          "name": "David Valle González",
+          "tmdb_id": 1175906,
+          "character": "Don Anselmo"
+        },
+        {
+          "name": "Susana Ortiz Cobos",
+          "tmdb_id": 4500663,
+          "character": "Miro's Wife"
         }
       ]
     }
@@ -50146,7 +50071,7 @@
     "director": "Paolo Sorrentino",
     "year": 2013,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/28604-the-great-beauty",
     "imdb_id": "tt2358891",
     "tmdb_id": 179144,
     "poster_url": "https://image.tmdb.org/t/p/w185/1cmOc3ZPkuCTOTqHEsRr3Pk81Um.jpg",
@@ -58172,16 +58097,10 @@
     "country": "",
     "criterion_url": "",
     "imdb_id": null,
-    "tmdb_id": 263181,
+    "tmdb_id": null,
     "poster_url": null,
     "genres": [],
-    "credits": {
-      "directors": [],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": []
-    }
+    "credits": null
   },
   {
     "film_id": "the-new-land-jan-troell-double-feature",
@@ -59112,96 +59031,15 @@
     "year": 1961,
     "country": "",
     "criterion_url": "",
-    "imdb_id": "tt0950780",
-    "tmdb_id": 379895,
-    "poster_url": "https://image.tmdb.org/t/p/w185/dNLfaxKFBxwCPvHvowbEjkkf5JG.jpg",
-    "poster_source": "tmdb",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
     "genres": [
       "Documentary",
       "TV Movie"
     ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Richard Leacock",
-          "tmdb_id": 1342919
-        },
-        {
-          "name": "Albert Maysles",
-          "tmdb_id": 1418
-        },
-        {
-          "name": "D. A. Pennebaker",
-          "tmdb_id": 21113
-        },
-        {
-          "name": "Kenneth Stilson",
-          "tmdb_id": 1612496
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [
-        {
-          "name": "Robert Farren",
-          "tmdb_id": 1425
-        },
-        {
-          "name": "Peggy Lawson",
-          "tmdb_id": 1003999
-        },
-        {
-          "name": "Larry Moyer",
-          "tmdb_id": 1095461
-        },
-        {
-          "name": "Anita Posner",
-          "tmdb_id": 1612497
-        }
-      ],
-      "cast": [
-        {
-          "name": "Joseph Julian",
-          "tmdb_id": 1612504,
-          "character": "Narrator (voice)"
-        },
-        {
-          "name": "John F. Kennedy",
-          "tmdb_id": 21111,
-          "character": "Self"
-        },
-        {
-          "name": "Jacqueline Kennedy",
-          "tmdb_id": 1050881,
-          "character": "Self"
-        },
-        {
-          "name": "Hubert H. Humphrey",
-          "tmdb_id": 21112,
-          "character": "Self"
-        },
-        {
-          "name": "Robert F. Kennedy",
-          "tmdb_id": 932497,
-          "character": "Self"
-        },
-        {
-          "name": "McGeorge Bundy",
-          "tmdb_id": 1301759,
-          "character": "Self"
-        },
-        {
-          "name": "Paul B. Fay Jr.",
-          "tmdb_id": 1612498,
-          "character": "Self"
-        },
-        {
-          "name": "John Kenneth Galbraith",
-          "tmdb_id": 1612499,
-          "character": "Self"
-        }
-      ]
-    }
+    "credits": null
   },
   {
     "film_id": "phoenix",
@@ -64621,50 +64459,16 @@
     "film_id": "martin-scorseses-world-cinema-project-no-2-box-set",
     "title": "Martin Scorsese's World Cinema Project No. 2 (box set)",
     "spine_number": 873,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "",
     "imdb_id": null,
-    "tmdb_id": 628403,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zNWJhNOdMRMsJXqgsSBnznr7Fz6.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    }
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
+    "genres": [],
+    "credits": null
   },
   {
     "film_id": "insiang-world-cinema-project-no-2",
@@ -64852,87 +64656,72 @@
     "film_id": "revenge-world-cinema-project-no-2",
     "title": "Revenge (World Cinema Project No. 2)",
     "spine_number": 876,
-    "director": "Rachid Bouchareb",
+    "director": "Yermek Shinarbayev",
     "year": null,
     "country": "",
     "criterion_url": "",
-    "imdb_id": "tt1227787",
-    "tmdb_id": 39358,
-    "poster_url": null,
-    "genres": [],
+    "imdb_id": "tt0102497",
+    "tmdb_id": 216046,
     "credits": {
       "directors": [
         {
-          "name": "Rachid Bouchareb",
-          "tmdb_id": 20665
+          "name": "Yermek Shinarbayev",
+          "tmdb_id": 1200685
         }
       ],
       "writers": [
         {
-          "name": "Zoé Galeron",
-          "tmdb_id": 125968
-        },
-        {
-          "name": "Rachid Bouchareb",
-          "tmdb_id": 20665
-        },
-        {
-          "name": "Olivier Lorelle",
-          "tmdb_id": 96290
+          "name": "Anatoli Kim",
+          "tmdb_id": 1200686
         }
       ],
       "cinematographers": [
         {
-          "name": "Jérôme Alméras",
-          "tmdb_id": 54287
+          "name": "Sergei Kosmanev",
+          "tmdb_id": 1684922
         }
       ],
-      "editors": [
-        {
-          "name": "Yannick Kergoat",
-          "tmdb_id": 19379
-        }
-      ],
+      "editors": [],
       "cast": [
         {
-          "name": "Brenda Blethyn",
-          "tmdb_id": 4154,
-          "character": "Elisabeth"
+          "name": "Aleksandr Pan",
+          "tmdb_id": 2672981,
+          "character": "Sungu Tsai/ The Poet"
         },
         {
-          "name": "Sotigui Kouyaté",
-          "tmdb_id": 125970,
-          "character": "Ousmane"
+          "name": "Valentina Tyo",
+          "tmdb_id": 2522218,
+          "character": "Wife of Yan Ge"
         },
         {
-          "name": "Sami Bouajila",
-          "tmdb_id": 20667,
-          "character": "Imam"
+          "name": "Kasym Zhakibayev",
+          "tmdb_id": 1200687,
+          "character": "Caj"
         },
         {
-          "name": "Roschdy Zem",
-          "tmdb_id": 20442,
-          "character": "Le Boucher"
+          "name": "Lyubov Germanova",
+          "tmdb_id": 238475,
+          "character": "Elza"
         },
         {
-          "name": "Francis Magee",
-          "tmdb_id": 39661,
-          "character": "Inspecteur anglais"
+          "name": "Oleg Lee",
+          "tmdb_id": 1200688,
+          "character": "Old king/ Old monk"
         },
         {
-          "name": "Bernard Blancan",
-          "tmdb_id": 20668,
-          "character": "Ouvrier Forestier"
+          "name": "Juozas Budraitis",
+          "tmdb_id": 93543,
+          "character": "Tall dumb man"
         },
         {
-          "name": "Marc Baylis",
-          "tmdb_id": 1215211,
-          "character": "Edward"
+          "name": "Zinaida Em",
+          "tmdb_id": 2672983,
+          "character": "Nemaja"
         },
         {
-          "name": "Gareth Randall",
-          "tmdb_id": 1630987,
-          "character": "Pasteur"
+          "name": "Maksim Munzuk",
+          "tmdb_id": 58989,
+          "character": "Old Yan Ge"
         }
       ]
     }
@@ -69287,50 +69076,16 @@
     "film_id": "dietrich-von-sternberg-in-hollywood-box-set",
     "title": "Dietrich & Von Sternberg in Hollywood (box set)",
     "spine_number": 930,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1329-dietrich-von-sternberg-in-hollywood",
     "imdb_id": null,
-    "tmdb_id": 628403,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1913-aa161a0f125c18e184c759f4e6fa4d86/ne8EBMDiHqGQ5vJDvaBUV6wzuwbT3d_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "Tasked by studio executives with finding the next great screen siren, visionary Hollywood director Josef von Sternberg joined forces with rising German actor Marlene Dietrich, kicking off what would become one of the most legendary partnerships in cinema history. Over the course of six films produced by Paramount in the 1930s, the pair refined their shared fantasy of pleasure, beauty, and excess. Dietrich’s coolly transgressive mystique was a perfect match for the provocative roles von Sternberg cast her in—including a sultry chanteuse, a cunning spy, and the hedonistic Catherine the Great—and the filmmaker captured her allure with chiaroscuro lighting and opulent design, conjuring fever-dream visions of exotic settings from Morocco to Shanghai. Suffused with frank sexuality and worldly irony, these deliriously entertaining masterpieces are landmarks of cinematic artifice.",
     "included_films": [
@@ -77849,50 +77604,16 @@
     "film_id": "bruce-lee-his-greatest-hits-box-set",
     "title": "Bruce Lee: His Greatest Hits (box set)",
     "spine_number": 1036,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
     "imdb_id": null,
-    "tmdb_id": 628403,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1957-f90d4c48a2f932ffe7df386499f9477e/73k4EkSiXEfsdi097fieFBGdb39vlg_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "In the early 1970s, a kung-fu dynamo named Bruce Lee side-kicked his way onto the screen and straight into pop-culture immortality. With his magnetic screen presence, tightly coiled intensity, and superhuman martial-arts prowess, Lee was an icon who conquered both Hong Kong and Hollywood cinema and transformed the art of the action film in the process. This collection brings together the five films that define the Lee legend: furiously exciting fist-fliers propelled by his innovative choreography, unique martial-arts philosophy, and whirlwind fighting style. Though he completed only a handful of films while at the peak of his stardom before his untimely death at age thirty-two, Lee left behind a monumental legacy as both a consummate entertainer and a supremely disciplined artist who made Hong Kong action cinema a sensation the world over.",
     "included_films": [
@@ -78564,50 +78285,16 @@
     "film_id": "martin-scorseses-world-cinema-project-no-3-box-set",
     "title": "Martin Scorsese’s World Cinema Project No. 3 (Box set)",
     "spine_number": 1044,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "",
     "imdb_id": null,
-    "tmdb_id": 628403,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zNWJhNOdMRMsJXqgsSBnznr7Fz6.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    }
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
+    "genres": [],
+    "credits": null
   },
   {
     "film_id": "lucia-world-cinema-project-no-3",
@@ -86938,50 +86625,16 @@
     "film_id": "martin-scorseses-world-cinema-project-no-4-box-set",
     "title": "Martin Scorsese’s World Cinema Project No. 4 (Box set)",
     "spine_number": 1142,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "",
     "imdb_id": null,
-    "tmdb_id": 628403,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zNWJhNOdMRMsJXqgsSBnznr7Fz6.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    }
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
+    "genres": [],
+    "credits": null
   },
   {
     "film_id": "sambizanga-world-cinema-project-no-4",
@@ -89581,7 +89234,7 @@
     "director": "Ruben Östlund",
     "year": 2022,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/33532-triangle-of-sadness",
     "imdb_id": "tt7322224",
     "tmdb_id": 497828,
     "poster_url": "https://image.tmdb.org/t/p/w185/k9eLozCgCed5FGTSdHu0bBElAV8.jpg",
@@ -91051,50 +90704,16 @@
     "film_id": "jackie-chan-emergence-of-a-superstar-box-set",
     "title": "Jackie Chan: Emergence of a Superstar (box set)",
     "spine_number": 1197,
-    "director": "Nick Wickham",
-    "year": 2010,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
     "imdb_id": null,
-    "tmdb_id": 628403,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2035-00397dc6a40239b317f24adf0c86b430/55pTNrIGtsH7uG8kEDAoe9PZu76jZu_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Music"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Nick Wickham",
-          "tmdb_id": 22404
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "James Hetfield",
-          "tmdb_id": 57637,
-          "character": "Self"
-        },
-        {
-          "name": "Kirk Hammett",
-          "tmdb_id": 69231,
-          "character": "Self"
-        },
-        {
-          "name": "Cliff Burton",
-          "tmdb_id": 80735,
-          "character": "Self"
-        },
-        {
-          "name": "Lars Ulrich",
-          "tmdb_id": 69230,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "Originally tapped as a potential successor to Bruce Lee, Hong Kong martial-arts phenom Jackie Chan soon established his own unique screen persona, blending goofball slapstick and bone-crunching kung fu into intricate feats of supercharged athleticism. Tracing his rise from breakout star to full-fledged auteur, these six unabashedly silly, unstoppably entertaining early-career highlights find Chan refining the lovably mischievous image that would make him a global icon, while also assuming greater creative control over his projects—first as his own martial-arts choreographer, and later as a writer-director who set a thrilling new standard for daredevil action comedy.",
     "included_films": [
@@ -94669,7 +94288,7 @@
     "director": "Guillermo del Toro",
     "year": 2017,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/34338-the-shape-of-water",
     "imdb_id": "tt5580390",
     "tmdb_id": 399055,
     "poster_url": "https://image.tmdb.org/t/p/w185/9zfwPffUXpBrEP26yp0q1ckXDcj.jpg",
@@ -99346,47 +98965,14 @@
     "director": "",
     "year": 2007,
     "country": "",
-    "criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3",
+    "criterion_url": "https://www.criterion.com/boxsets/8451-martin-scorsese-s-world-cinema-project-no-5",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1961-3b7b159a9ae3d500459e38e69c96a917/9P9MeXzolFQyY5OhK2XcwZ02e0Y0ZC_original.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2109-ab677d7fb198eb0cd393ce95b8c0751d/2RSRQxWw1lOtbCdNmwx9J06CgL2YLX_large.jpg",
     "poster_source": "criterion",
     "genres": [],
-    "is_box_set": true,
-    "description": "Established by Martin Scorsese in 2007, The Film Foundation’s World Cinema Project has maintained a fierce commitment to preserving and presenting masterpieces from around the globe, with a growing roster of more than three dozen restorations that have introduced movie lovers to often-overlooked areas of cinema history. Presenting passionate stories of revolution, identity, agency, forgiveness, and exclusion, this collector’s set gathers six of those important works, from Brazil (Pixote), Cuba (Lucía), Indonesia (After the Curfew), Iran (Downpour), Mauritania (Soleil Ô), and Mexico (Dos monjes). Each title is a pathbreaking contribution to the art form and a window onto a filmmaking tradition that international audiences previously had limited opportunities to experience.",
-    "included_films": [
-      {
-        "criterion_url": "https://www.criterion.com/films/30298-lucia",
-        "title": "Lucía",
-        "year": 1968
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/30304-after-the-curfew",
-        "title": "After the Curfew",
-        "year": 1954
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/30307-pixote",
-        "title": "Pixote",
-        "year": 1980
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/30306-dos-monjes",
-        "title": "Dos monjes",
-        "year": 1934
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/30299-soleil-o",
-        "title": "Soleil Ô",
-        "year": 1970
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/28601-downpour",
-        "title": "Downpour",
-        "year": 1972
-      }
-    ],
-    "box_set_film_count": 6
+    "credits": null,
+    "is_box_set": true
   },
   {
     "film_id": "captain-blood",
@@ -122422,82 +122008,16 @@
     "film_id": "pan-1",
     "title": "Pan 1",
     "spine_number": null,
-    "director": "Phil Furey",
-    "year": 2020,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "",
-    "imdb_id": "tt2142887",
-    "tmdb_id": 680271,
-    "poster_url": "https://image.tmdb.org/t/p/w185/ww2YNZPZfPJMygHnU3HsKrMAqYN.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Documentary",
-      "Drama",
-      "History"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Phil Furey",
-          "tmdb_id": 4466968
-        }
-      ],
-      "writers": [
-        {
-          "name": "Phil Furey",
-          "tmdb_id": 4466968
-        }
-      ],
-      "cinematographers": [],
-      "editors": [
-        {
-          "name": "Spencer Averick",
-          "tmdb_id": 1066326
-        }
-      ],
-      "cast": [
-        {
-          "name": "Suse Lowenstein",
-          "tmdb_id": 4466987,
-          "character": "Self - Victim's Mother / Dark Elegy Creator"
-        },
-        {
-          "name": "Alexander Lowenstein",
-          "tmdb_id": 4466991,
-          "character": "Self - Victim of Pan Am Flight 103"
-        },
-        {
-          "name": "Peter Lowenstein",
-          "tmdb_id": 4466992,
-          "character": "Self - Victim's Father"
-        },
-        {
-          "name": "Peter Tsairis",
-          "tmdb_id": 4466994,
-          "character": "Self - Victim's Father / Alexia Foundation Creator"
-        },
-        {
-          "name": "Aphrodite Tsairis",
-          "tmdb_id": 4466995,
-          "character": "Self - Victim's Mother / Alexia Foundation Creator"
-        },
-        {
-          "name": "Alexia Tsairis",
-          "tmdb_id": 4466996,
-          "character": "Self - Victim of Pam Am Flight 103"
-        },
-        {
-          "name": "Theodora \"Theo\" Cohen",
-          "tmdb_id": 4466999,
-          "character": "Self - Victim of Pam Am Flight 103"
-        },
-        {
-          "name": "Daniel Cohen",
-          "tmdb_id": 4467000,
-          "character": "Self - Victim's Father"
-        }
-      ]
-    }
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": null,
+    "poster_source": null,
+    "genres": [],
+    "credits": null
   },
   {
     "film_id": "pan-2",
@@ -141768,6 +141288,23 @@
     "imdb_id": null,
     "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1885-cda9f785b9487d302fc633c8d281e52d/n5E4qB3SG4k1Sbtq4c1XXEtIoKKZ9z_large.jpg",
+    "poster_source": "criterion",
+    "genres": [],
+    "credits": null,
+    "is_box_set": true
+  },
+  {
+    "film_id": "martin-scorseses-world-cinema-project-no-3",
+    "title": "Martin Scorsese’s World Cinema Project No. 3",
+    "spine_number": null,
+    "director": "",
+    "year": 2007,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1961-3b7b159a9ae3d500459e38e69c96a917/9P9MeXzolFQyY5OhK2XcwZ02e0Y0ZC_large.jpg",
+    "poster_source": "criterion",
     "genres": [],
     "credits": null,
     "is_box_set": true
