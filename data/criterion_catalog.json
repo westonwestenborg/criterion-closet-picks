@@ -10696,8 +10696,8 @@
     "criterion_url": "https://www.criterion.com/films/684-le-corbeau",
     "imdb_id": "tt0035753",
     "tmdb_id": 29084,
-    "poster_url": "https://image.tmdb.org/t/p/w185/6Oh4hCD2nni5JJpGGIhD3CutfNI.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/e2d247a9f02067c4e7b009ebaf3dc897/oXrM969Vjj2LmW7zYSjDilZ5BVNGAX_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Mystery",
       "Drama",
@@ -11056,8 +11056,8 @@
     "criterion_url": "https://www.criterion.com/films/721-the-testament-of-dr-mabuse",
     "imdb_id": "tt0056573",
     "tmdb_id": 10444,
-    "poster_url": "https://image.tmdb.org/t/p/w185/wZvTHZkd5LLRR5xUztsXAWpPGpT.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/54c721d65e42f080484dba5bb409daf0/j2sPOa4CCiMyJefg5DNy4uJraAbCCe_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Mystery"
@@ -11735,6 +11735,7 @@
     "criterion_url": "https://www.criterion.com/films/854-a-woman-is-a-woman",
     "imdb_id": "tt0055572",
     "tmdb_id": 31522,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/20f3fdea9cf490583cfd19fdc9de1b1f/jrKmVo0VtptSRY47ruB9RuryLnZZLA_original.jpg",
     "poster_source": "criterion",
     "credits": {
       "directors": [
@@ -14616,8 +14617,8 @@
     "criterion_url": "https://www.criterion.com/films/933-night-and-the-city",
     "imdb_id": "tt0042788",
     "tmdb_id": 19119,
-    "poster_url": "https://image.tmdb.org/t/p/w185/2NBmzm8z5fd283eWeECkPrkwta8.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/a63636bfe82dedb841b144e5221b32cc/gj7In0EN9jtRSyM6OKI4t1RsZuE6Yu_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Crime"
@@ -30811,8 +30812,8 @@
     "criterion_url": "https://www.criterion.com/films/1285-the-hit",
     "imdb_id": "tt0087414",
     "tmdb_id": 19621,
-    "poster_url": "https://image.tmdb.org/t/p/w185/hKNIz9iids9uPyEpmJjLFM96KXI.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/caeee2c666793a23cd9f2c4f29fd4bb8/LgodjHWt1FgiEQnm9q4aKgwjl9Mf8Q_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Thriller",
@@ -42564,8 +42565,8 @@
     "criterion_url": "https://www.criterion.com/films/27565-the-gold-rush",
     "imdb_id": "tt0015864",
     "tmdb_id": 962,
-    "poster_url": "https://image.tmdb.org/t/p/w185/eQRFo1qwRREYwj47Yoe1PisgOle.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/fdadf1be688a6bdb002a4f755a2f1e8a/c9HthNBy69Dc9QXCAIQZPsgQx7jKRt_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Adventure",
       "Comedy",
@@ -45642,8 +45643,8 @@
     "criterion_url": "https://www.criterion.com/films/27574-monsieur-verdoux",
     "imdb_id": "tt0039631",
     "tmdb_id": 30588,
-    "poster_url": "https://image.tmdb.org/t/p/w185/mUPXIinTQsBdLlDaWiSl7GwQXVs.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/441caaad467950ef83c88bdc1b9badcb/yL1YbMO1jXLnbQqg6oOyri2mB2kdj9_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Crime",
@@ -50074,8 +50075,8 @@
     "criterion_url": "https://www.criterion.com/films/28604-the-great-beauty",
     "imdb_id": "tt2358891",
     "tmdb_id": 179144,
-    "poster_url": "https://image.tmdb.org/t/p/w185/1cmOc3ZPkuCTOTqHEsRr3Pk81Um.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/b25a8a700e4c33e76eb53578bc5de7d6/0g1hKjX8xWZ1L1jAfhGJFvGaNrMG7O_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -56453,8 +56454,8 @@
     "criterion_url": "https://www.criterion.com/films/28439-the-brood",
     "imdb_id": "tt0078908",
     "tmdb_id": 28942,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zSEt4QXRI4Gypd9xvzvucOmPNl5.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/67117ef4c14c1b171cf20186e13bfea3/tYorJIGBw69oRh3kTdEFeihVzDUy7M_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Horror",
       "Science Fiction"
@@ -70186,8 +70187,8 @@
     "criterion_url": "https://www.criterion.com/films/29385-cold-water",
     "imdb_id": "tt23121352",
     "tmdb_id": 1135546,
-    "poster_url": "https://image.tmdb.org/t/p/w185/fba5hSv5tqNeFZYK2VgANby5mGU.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7dc2053676e3548a6a4e024bc46a509d/s6RMaPtpFDn6RCemQ507uIvhkmRm6v_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Comedy"
@@ -72785,8 +72786,8 @@
     "criterion_url": "https://www.criterion.com/films/28986-the-heiress",
     "imdb_id": "tt26898027",
     "tmdb_id": 1233210,
-    "poster_url": "https://image.tmdb.org/t/p/w185/3kmA9yg7stNPz9eZXhegR6Y6gvh.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/cfd2f1ff16cf137afa82f1ca3a69396a/9sz3vbRXkTqk8NwSzvyuOZpuDaZ60k_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Horror"
     ],
@@ -87433,8 +87434,8 @@
     "criterion_url": "https://www.criterion.com/films/29005-arsenic-and-old-lace",
     "imdb_id": "tt0036613",
     "tmdb_id": 212,
-    "poster_url": "https://image.tmdb.org/t/p/w185/xG1GEEQGgExKl0WT5sRo1Arst5D.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/bc834199ef177e83604b93c31a1ad1a4/bWEA41YCQNEKPfVmws5oTnDP3FYcpa_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Crime"
@@ -87693,8 +87694,8 @@
     "criterion_url": "https://www.criterion.com/films/33103-la-llorona",
     "imdb_id": "tt1828224",
     "tmdb_id": 116322,
-    "poster_url": "https://image.tmdb.org/t/p/w185/vBiqoYfDIWKKzZTiQScqgCO09UD.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/41abb831067e341a676996ea3079b3ab/Ao5oLiXSWNpxqSHeftscr5xQjHRItR_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Animation",
       "Family",
@@ -89237,8 +89238,8 @@
     "criterion_url": "https://www.criterion.com/films/33532-triangle-of-sadness",
     "imdb_id": "tt7322224",
     "tmdb_id": 497828,
-    "poster_url": "https://image.tmdb.org/t/p/w185/k9eLozCgCed5FGTSdHu0bBElAV8.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/0b13673e143c52ba9b7bfccbb3f7306e/enpaRbdTR7ca7Oauyj5csdrWC13qZL_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Drama"
@@ -90336,8 +90337,8 @@
     "criterion_url": "https://www.criterion.com/films/33621-moonage-daydream",
     "imdb_id": "tt9883832",
     "tmdb_id": 957457,
-    "poster_url": "https://image.tmdb.org/t/p/w185/tJCZI1tO0sYIV0mGo0Awcr996vm.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/a6cdc56ee62d42493c8b4f4458e71ec2/IonvshUYAMoLhc1c7VPZHhOiNQKbgP_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Documentary",
       "Music"
@@ -94291,8 +94292,8 @@
     "criterion_url": "https://www.criterion.com/films/34338-the-shape-of-water",
     "imdb_id": "tt5580390",
     "tmdb_id": 399055,
-    "poster_url": "https://image.tmdb.org/t/p/w185/9zfwPffUXpBrEP26yp0q1ckXDcj.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7707103eaecb08c80525123f33892502/wJO3sw9WhwPAzOiuzWXm7VRzqw1g1H_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Fantasy",
@@ -96257,8 +96258,8 @@
     "criterion_url": "https://www.criterion.com/films/33810-the-wiz",
     "imdb_id": "tt0078504",
     "tmdb_id": 24961,
-    "poster_url": "https://image.tmdb.org/t/p/w185/rgfB8hBRSwbEb0SK7pt9mW9jsyP.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/c3c7b01a9b84c39358ee98a6f300eb03/znHOrGISaKkveuuGKCekUZhkffUZa3_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Fantasy",
       "Family",
@@ -96683,8 +96684,8 @@
     "criterion_url": "https://www.criterion.com/films/29681-the-big-heat",
     "imdb_id": "tt0045555",
     "tmdb_id": 14580,
-    "poster_url": "https://image.tmdb.org/t/p/w185/ezt6fb4JbghGKmaMzzuMtxpz0Kb.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/77edab25c660e44496453b55efb07631/Ql4AFMpGQ0rNtgrzx7ynfcVvev7fyz_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Thriller"
@@ -97993,8 +97994,8 @@
     "criterion_url": "https://www.criterion.com/films/1201-deep-crimson",
     "imdb_id": "tt0117394",
     "tmdb_id": 47007,
-    "poster_url": "https://image.tmdb.org/t/p/w185/wxfwz8uObOEUyd5ECMAGl9aFYUj.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/bf679d1577df6318caafd12487244794/7jccvEVNtlzLgjiUwZ1i9P5UgziMbS_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Drama"
@@ -98450,8 +98451,8 @@
     "criterion_url": "https://www.criterion.com/films/34534-eyes-wide-shut",
     "imdb_id": "tt0120663",
     "tmdb_id": 345,
-    "poster_url": "https://image.tmdb.org/t/p/w185/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/27140a04660a58a51853cd0ed737ea45/c02MbWEBL7iEkRemwYGAYCUFw8odq8_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Thriller",
@@ -98699,8 +98700,8 @@
     "criterion_url": "https://www.criterion.com/films/34870-pee-wee-s-big-adventure",
     "imdb_id": "tt0089791",
     "tmdb_id": 5683,
-    "poster_url": "https://image.tmdb.org/t/p/w185/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/6d0e3bf55737c1dc4730ed4cb1f4cdb2/OspFX3tv8xSGGTvQe9FWdfsucxs3yy_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Adventure",
@@ -99602,8 +99603,8 @@
     "criterion_url": "https://www.criterion.com/films/34966-a-man-and-a-woman",
     "imdb_id": "tt5700648",
     "tmdb_id": 384127,
-    "poster_url": "https://image.tmdb.org/t/p/w185/x93ztF4GtswxGZbHjIg9vjUaaz.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/057c83bc678a412dc66fde4482cbd404/17m0JKFd50LKtMfG5gy83RnIfoUMrZ_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Romance"
