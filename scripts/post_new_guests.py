@@ -17,10 +17,18 @@ Usage:
     # Platform-specific
     python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --twitter-only
     python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --threads-only
+
+    # Reply to someone else's post instead of posting standalone (e.g. Criterion's
+    # own announcement) to reach an audience already reading about that guest.
+    # X takes a URL; Threads takes a numeric post ID (see extract_threads_id).
+    python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --text "..." \\
+        --reply-to-x https://x.com/Criterion/status/1234567890123456789 \\
+        --reply-to-threads 18110558251950025
 """
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 import time
@@ -234,8 +242,21 @@ def compose_post(guest: dict, picks: list[dict], char_limit: int, platform: str)
 # Posting: X/Twitter
 # ---------------------------------------------------------------------------
 
-def post_to_twitter(text: str) -> str | None:
-    """Post a tweet via tweepy. Returns tweet URL or None on failure."""
+def extract_tweet_id(value: str) -> str:
+    """Accept a tweet URL or a bare numeric ID; return the numeric ID."""
+    if value.isdigit():
+        return value
+    match = re.search(r"/status/(\d+)", value)
+    if not match:
+        raise ValueError(f"Cannot parse a tweet ID from: {value}")
+    return match.group(1)
+
+
+def post_to_twitter(text: str, reply_to: str | None = None) -> str | None:
+    """Post a tweet via tweepy. Returns tweet URL or None on failure.
+
+    Pass reply_to (a tweet URL or ID) to post as a reply rather than standalone.
+    """
     try:
         import tweepy
     except ImportError:
@@ -249,13 +270,18 @@ def post_to_twitter(text: str) -> str | None:
         access_token_secret=get_env("TWITTER_ACCESS_SECRET"),
     )
 
-    response = client.create_tweet(text=text)
+    if reply_to:
+        response = client.create_tweet(
+            text=text, in_reply_to_tweet_id=extract_tweet_id(reply_to)
+        )
+    else:
+        response = client.create_tweet(text=text)
     tweet_id = response.data["id"]
     # Get username for URL
     me = client.get_me()
     username = me.data.username
     url = f"https://x.com/{username}/status/{tweet_id}"
-    log(f"Posted to X: {url}")
+    log(f"Posted to X{' (reply)' if reply_to else ''}: {url}")
     return url
 
 
@@ -296,7 +322,6 @@ def maybe_refresh_threads_token() -> None:
     env_text = env_path.read_text()
     today = date.today().isoformat()
 
-    import re
     env_text = re.sub(
         r"^THREADS_ACCESS_TOKEN=.*$",
         f"THREADS_ACCESS_TOKEN={new_token}",
@@ -311,8 +336,32 @@ def maybe_refresh_threads_token() -> None:
     log(f"Threads token refreshed — new expiry ~{today} + 60 days")
 
 
-def post_to_threads(text: str, link_url: str | None = None) -> str | None:
-    """Post to Threads via Graph API (two-step: create container, publish)."""
+def extract_threads_id(value: str) -> str:
+    """Accept a bare numeric Threads post ID; return it.
+
+    Unlike X, a Threads URL cannot be converted into the ID the Graph API wants.
+    The shortcode in a permalink encodes a different (Instagram-style media) ID
+    than the one the API addresses posts by -- verified against a real post,
+    where permalink shortcode "DbUq2P1oJ-K" decodes to 3950971218921824138 while
+    the API ID was 18110558251950025. Decoding the URL would therefore reply to
+    the wrong post, so we require the numeric ID and reject URLs outright.
+    """
+    if value.isdigit():
+        return value
+    raise ValueError(
+        f"Need a numeric Threads post ID, got: {value}\n"
+        "A Threads URL cannot be resolved to one -- the permalink shortcode "
+        "encodes a different ID than the Graph API uses."
+    )
+
+
+def post_to_threads(
+    text: str, link_url: str | None = None, reply_to: str | None = None
+) -> str | None:
+    """Post to Threads via Graph API (two-step: create container, publish).
+
+    Pass reply_to (a Threads post URL or ID) to reply rather than post standalone.
+    """
     import requests
 
     maybe_refresh_threads_token()
@@ -328,6 +377,8 @@ def post_to_threads(text: str, link_url: str | None = None) -> str | None:
     }
     if link_url:
         params["link_attachment"] = link_url
+    if reply_to:
+        params["reply_to_id"] = extract_threads_id(reply_to)
 
     resp = requests.post(
         f"https://graph.threads.net/v1.0/{user_id}/threads",
@@ -351,7 +402,7 @@ def post_to_threads(text: str, link_url: str | None = None) -> str | None:
     post_id = resp.json()["id"]
 
     url = f"https://www.threads.net/@user/post/{post_id}"
-    log(f"Posted to Threads (ID: {post_id})")
+    log(f"Posted to Threads{' (reply)' if reply_to else ''} (ID: {post_id})")
     return url
 
 
@@ -366,7 +417,24 @@ def main():
     parser.add_argument("--text", help="Use custom post text (bypass template)")
     parser.add_argument("--twitter-only", action="store_true", help="Post to X/Twitter only")
     parser.add_argument("--threads-only", action="store_true", help="Post to Threads only")
+    parser.add_argument(
+        "--reply-to-x",
+        help="Reply to this tweet (URL or ID) instead of posting standalone",
+    )
+    parser.add_argument(
+        "--reply-to-threads",
+        help="Reply to this Threads post (numeric ID, not a URL) instead of posting standalone",
+    )
     args = parser.parse_args()
+
+    # Fail before posting anywhere if a reply target is unparseable, so we never
+    # land a standalone post on one platform and error out on the other.
+    for value, extract in (
+        (args.reply_to_x, extract_tweet_id),
+        (args.reply_to_threads, extract_threads_id),
+    ):
+        if value:
+            extract(value)
 
     # Determine which guests to post about
     if args.guest_slug:
@@ -401,12 +469,20 @@ def main():
 
         # Show X post
         if not args.threads_only:
-            print(f"\n--- X/Twitter ({len(x_text)}/{X_CHAR_LIMIT} chars) ---")
+            reply_note = (
+                f" — REPLY to {extract_tweet_id(args.reply_to_x)}"
+                if args.reply_to_x else ""
+            )
+            print(f"\n--- X/Twitter ({len(x_text)}/{X_CHAR_LIMIT} chars){reply_note} ---")
             print(x_text)
 
         # Show Threads post
         if not args.twitter_only:
-            print(f"\n--- Threads ({len(threads_text)}/{THREADS_CHAR_LIMIT} chars) ---")
+            reply_note = (
+                f" — REPLY to {extract_threads_id(args.reply_to_threads)}"
+                if args.reply_to_threads else ""
+            )
+            print(f"\n--- Threads ({len(threads_text)}/{THREADS_CHAR_LIMIT} chars){reply_note} ---")
             print(threads_text)
 
         if args.dry_run and not args.text:
@@ -429,7 +505,7 @@ def main():
         # Post to X
         if not args.threads_only:
             if has_twitter_creds():
-                post_to_twitter(x_text)
+                post_to_twitter(x_text, reply_to=args.reply_to_x)
             else:
                 log("X/Twitter: skipped (no credentials)")
 
@@ -437,7 +513,11 @@ def main():
         guest_url = f"https://{SITE_URL}/guests/{guest['slug']}/"
         if not args.twitter_only:
             if has_threads_creds():
-                post_to_threads(threads_text, link_url=guest_url)
+                post_to_threads(
+                    threads_text,
+                    link_url=guest_url,
+                    reply_to=args.reply_to_threads,
+                )
             else:
                 log("Threads: skipped (no credentials)")
 

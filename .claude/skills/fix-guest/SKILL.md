@@ -163,6 +163,25 @@ Or, only if the dry-run's auto-trimmed draft is already good, approve it as-is:
 Skip this step if the user is fixing an existing guest (not adding a new one),
 or if no X/Twitter or Threads credentials are configured in `.env`.
 
+**Optionally also reply to Criterion's own announcement.** The standalone post
+stays primary — it's the canonical, reshareable artifact that gets full
+algorithmic treatment. But people reading Criterion's thread for that guest are
+the highest-intent audience there is, so a reply is worth a second, separate
+placement. Don't quote-post instead: that embeds Criterion's video card and
+subordinates our quotes to the asset we don't own.
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "..." \
+    --reply-to-x https://x.com/Criterion/status/1234567890123456789 \
+    --reply-to-threads 18110558251950025
+```
+
+`--reply-to-x` takes a tweet URL or ID. `--reply-to-threads` takes a **numeric
+post ID only** — a Threads permalink's shortcode encodes a different ID than the
+Graph API addresses posts by, so URLs are rejected rather than silently
+mis-resolved. Either flag can be used alone. Both are validated before anything
+is sent, so a bad target can't leave a standalone post on one platform.
+
 ### 7. Correct a guest's profession / descriptor
 
 `profession` is auto-set by `enrich_tmdb.py` from TMDB's `known_for_department`
