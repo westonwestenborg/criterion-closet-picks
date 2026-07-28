@@ -18,12 +18,12 @@ Usage:
     python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --twitter-only
     python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --threads-only
 
-    # Reply to someone else's post instead of posting standalone (e.g. Criterion's
-    # own announcement) to reach an audience already reading about that guest.
-    # X takes a URL; Threads takes a numeric post ID (see extract_threads_id).
+    # Reply rather than post standalone. X takes a URL or ID; Threads takes a
+    # numeric post ID (see extract_threads_id). NOTE: our X API tier only allows
+    # replying to posts we authored or are mentioned in -- replying to a third
+    # party such as Criterion 403s, and has to be pasted by hand instead.
     python scripts/post_new_guests.py --guest-slug shinichiro-watanabe --text "..." \\
-        --reply-to-x https://x.com/Criterion/status/1234567890123456789 \\
-        --reply-to-threads 18110558251950025
+        --reply-to-x https://x.com/weston_w/status/1234567890123456789
 """
 
 import argparse
@@ -306,9 +306,22 @@ def post_to_twitter(text: str, reply_to: str | None = None) -> str | None:
     )
 
     if reply_to:
-        response = client.create_tweet(
-            text=text, in_reply_to_tweet_id=extract_tweet_id(reply_to)
-        )
+        try:
+            response = client.create_tweet(
+                text=text, in_reply_to_tweet_id=extract_tweet_id(reply_to)
+            )
+        except tweepy.Forbidden as exc:
+            # Our API access level only permits replying to our own posts or
+            # ones that mention us, so replying to e.g. Criterion's own
+            # announcement 403s. Nothing was posted; say so and hand the text
+            # back rather than dying in a traceback.
+            log(f"X refused the reply: {exc}")
+            log(
+                "Nothing was posted. Our API tier only allows replying to posts "
+                "we authored or are mentioned in, so this one has to go up by "
+                "hand. Paste this as a reply to " + reply_to + ":\n\n" + text
+            )
+            return None
     else:
         response = client.create_tweet(text=text)
     tweet_id = response.data["id"]

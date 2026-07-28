@@ -163,24 +163,38 @@ Or, only if the dry-run's auto-trimmed draft is already good, approve it as-is:
 Skip this step if the user is fixing an existing guest (not adding a new one),
 or if no X/Twitter or Threads credentials are configured in `.env`.
 
-**Optionally also reply to Criterion's own announcement.** The standalone post
-stays primary — it's the canonical, reshareable artifact that gets full
-algorithmic treatment. But people reading Criterion's thread for that guest are
-the highest-intent audience there is, so a reply is worth a second, separate
-placement. Don't quote-post instead: that embeds Criterion's video card and
-subordinates our quotes to the asset we don't own.
+**Optionally also reply to Criterion's own announcement — but this one is
+manual.** The standalone post stays primary either way: it's the canonical,
+reshareable artifact that gets full algorithmic treatment. But people reading
+Criterion's thread for that guest are the highest-intent audience there is, so a
+reply is worth a second, separate placement. Don't quote-post instead — that
+embeds Criterion's video card and subordinates our quotes to the asset we don't
+own.
+
+**Our X API tier cannot post this reply.** Replying to a third party 403s with
+"You can only reply to or quote posts where you are mentioned or are the
+author" (confirmed 2026-07-27 against Criterion's Matt Damon post). Draft the
+text here, then hand it to the user to paste in the X app. The same tier can't
+read timelines either (401), so find Criterion's post URL by web search and
+sanity-check it before trusting it — decode the snowflake ID
+(`timestamp_ms = (id >> 22) + 1288834974657`) and confirm the post-time matches
+the episode's air date. A wrong ID puts our reply in a stranger's thread.
+
+The `--reply-to-x` / `--reply-to-threads` flags exist and work for the cases the
+tier does allow — replying to our **own** posts (threading) or to posts that
+mention us:
 
 ```bash
 .venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "..." \
-    --reply-to-x https://x.com/Criterion/status/1234567890123456789 \
-    --reply-to-threads 18110558251950025
+    --reply-to-x https://x.com/weston_w/status/1234567890123456789
 ```
 
 `--reply-to-x` takes a tweet URL or ID. `--reply-to-threads` takes a **numeric
 post ID only** — a Threads permalink's shortcode encodes a different ID than the
 Graph API addresses posts by, so URLs are rejected rather than silently
-mis-resolved. Either flag can be used alone. Both are validated before anything
-is sent, so a bad target can't leave a standalone post on one platform.
+mis-resolved. In practice that ID is only obtainable for our own posts, which is
+the same constraint. Either flag can be used alone. Both are validated before
+anything is sent, so a bad target can't leave a standalone post on one platform.
 
 ### 7. Correct a guest's profession / descriptor
 
