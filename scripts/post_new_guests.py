@@ -42,6 +42,39 @@ SITE_URL = "closetpicks.westenb.org"
 X_CHAR_LIMIT = 280
 THREADS_CHAR_LIMIT = 500
 
+# X measures a post by "weighted length", not raw characters (twitter-text
+# config v3). Two rules matter here: every URL costs a flat 23 -- its t.co
+# length -- however long it actually is, and code points outside the mostly
+# Latin ranges below cost 2 rather than 1. Curly quotes and em dashes fall
+# inside the ranges and so cost 1; an ellipsis (U+2026) and emoji do not, and
+# cost 2. Threads has no such weighting, so it keeps a plain len().
+X_URL_WEIGHT = 23
+X_SINGLE_WEIGHT_RANGES = ((0, 4351), (8192, 8205), (8208, 8223), (8242, 8247))
+
+# Matches links the way X autolinks them: with a scheme, or a bare domain
+# ending in a real TLD (so "e.g." and "Mr. Ripley" are not mistaken for links).
+X_URL_PATTERN = re.compile(
+    r"https?://\S+"
+    r"|(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+"
+    r"(?:com|org|net|edu|gov|io|dev|co|tv|me|app|info|xyz)\b"
+    r"(?:/\S*)?"
+)
+
+
+def x_weighted_length(text: str) -> int:
+    """Return the length X will actually measure this post at."""
+    total = X_URL_WEIGHT * len(X_URL_PATTERN.findall(text))
+    for char in X_URL_PATTERN.sub("", text):
+        code = ord(char)
+        single = any(lo <= code <= hi for lo, hi in X_SINGLE_WEIGHT_RANGES)
+        total += 1 if single else 2
+    return total
+
+
+def post_length(text: str, platform: str) -> int:
+    """Measure a post the way the target platform will."""
+    return x_weighted_length(text) if platform == "x" else len(text)
+
 
 # ---------------------------------------------------------------------------
 # Credential checks
@@ -172,7 +205,7 @@ def trim_quote(text: str, budget: int) -> str:
     text = " ".join(text.split())
     if len(text) <= budget:
         return text
-    window = text[: max(0, budget - 1)]  # reserve a char for the ellipsis
+    window = text[: max(0, budget - 2)]  # reserve for the ellipsis, which X weighs 2
     boundary = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
     if boundary >= budget // 2:
         return text[: boundary + 1]  # keep the punctuation, drop trailing space
@@ -196,7 +229,9 @@ def compose_post(guest: dict, picks: list[dict], char_limit: int, platform: str)
         top = best[0]
         film = top.get("film_title") or top.get("title") or ""
         header = f"{token} on {film}:\n\n"
-        available = char_limit - len(header) - len(cta) - 2  # 2 for the quote marks
+        # Measure the fixed parts together, so the URL inside the CTA is costed
+        # once by the platform's own rule rather than by raw character count.
+        available = char_limit - post_length(header + cta, platform) - 2  # 2 for quote marks
         quote = trim_quote(top["quote"], available)
         return f'{header}"{quote}"{cta}'
 
@@ -205,7 +240,7 @@ def compose_post(guest: dict, picks: list[dict], char_limit: int, platform: str)
     footer = f"\n\nAll picks + quotes: {SITE_URL}/guests/{slug}/"
 
     # Calculate space for film list
-    available = char_limit - len(header) - len(footer)
+    available = char_limit - post_length(header + footer, platform)
 
     # Build film list, truncating if needed
     film_titles = []
@@ -473,7 +508,9 @@ def main():
                 f" — REPLY to {extract_tweet_id(args.reply_to_x)}"
                 if args.reply_to_x else ""
             )
-            print(f"\n--- X/Twitter ({len(x_text)}/{X_CHAR_LIMIT} chars){reply_note} ---")
+            x_len = x_weighted_length(x_text)
+            over = " — OVER LIMIT" if x_len > X_CHAR_LIMIT else ""
+            print(f"\n--- X/Twitter ({x_len}/{X_CHAR_LIMIT} chars){reply_note}{over} ---")
             print(x_text)
 
         # Show Threads post
@@ -482,7 +519,8 @@ def main():
                 f" — REPLY to {extract_threads_id(args.reply_to_threads)}"
                 if args.reply_to_threads else ""
             )
-            print(f"\n--- Threads ({len(threads_text)}/{THREADS_CHAR_LIMIT} chars){reply_note} ---")
+            over = " — OVER LIMIT" if len(threads_text) > THREADS_CHAR_LIMIT else ""
+            print(f"\n--- Threads ({len(threads_text)}/{THREADS_CHAR_LIMIT} chars){reply_note}{over} ---")
             print(threads_text)
 
         if args.dry_run and not args.text:
