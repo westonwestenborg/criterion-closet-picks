@@ -5215,5 +5215,19 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/984-christopher-nolan-s-closet-picks",
     "pick_count": 16
+  },
+  {
+    "name": "Matt Damon",
+    "slug": "matt-damon",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg",
+    "youtube_video_id": "ZCxYGx6ueNM",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ZCxYGx6ueNM",
+    "vimeo_video_id": null,
+    "episode_date": "2026-07-27",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/985-matt-damon-s-closet-picks",
+    "pick_count": 11,
+    "featured_film_slug": "purple-noon"
   }
 ]
