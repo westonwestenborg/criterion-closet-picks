@@ -141309,5 +141309,93 @@
     "genres": [],
     "credits": null,
     "is_box_set": true
+  },
+  {
+    "film_id": "hud",
+    "title": "Hud",
+    "spine_number": null,
+    "director": "Martin Ritt",
+    "year": 1963,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/30203-hud",
+    "imdb_id": "tt0057163",
+    "tmdb_id": 24748,
+    "poster_url": "https://image.tmdb.org/t/p/w185/A168bF52vmAIGkC2Qafj7M2EmaE.jpg",
+    "genres": [
+      "Drama",
+      "Western"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Martin Ritt",
+          "tmdb_id": 18854
+        }
+      ],
+      "writers": [
+        {
+          "name": "Irving Ravetch",
+          "tmdb_id": 46620
+        },
+        {
+          "name": "Harriet Frank Jr.",
+          "tmdb_id": 46621
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "James Wong Howe",
+          "tmdb_id": 14569
+        }
+      ],
+      "editors": [
+        {
+          "name": "Frank Bracht",
+          "tmdb_id": 16751
+        }
+      ],
+      "cast": [
+        {
+          "name": "Paul Newman",
+          "tmdb_id": 3636,
+          "character": "Hud Bannon"
+        },
+        {
+          "name": "Melvyn Douglas",
+          "tmdb_id": 19550,
+          "character": "Homer Bannon"
+        },
+        {
+          "name": "Patricia Neal",
+          "tmdb_id": 1934,
+          "character": "Alma Brown"
+        },
+        {
+          "name": "Brandon De Wilde",
+          "tmdb_id": 30511,
+          "character": "Lon 'Lonnie' Bannon"
+        },
+        {
+          "name": "Whit Bissell",
+          "tmdb_id": 13786,
+          "character": "Mr. Burris"
+        },
+        {
+          "name": "Crahan Denton",
+          "tmdb_id": 13787,
+          "character": "Jesse"
+        },
+        {
+          "name": "John Ashley",
+          "tmdb_id": 8331,
+          "character": "Hermy"
+        },
+        {
+          "name": "Val Avery",
+          "tmdb_id": 3014,
+          "character": "Jose"
+        }
+      ]
+    }
   }
 ]

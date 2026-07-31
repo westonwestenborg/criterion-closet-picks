@@ -5229,5 +5229,19 @@
     "criterion_page_url": "https://www.criterion.com/shop/collection/985-matt-damon-s-closet-picks",
     "pick_count": 11,
     "featured_film_slug": "purple-noon"
+  },
+  {
+    "name": "Cooper Hoffman",
+    "slug": "cooper-hoffman",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/6VY3YOg5o2k8CTldr8lYLijGnsN.jpg",
+    "youtube_video_id": "6UCSuaFuwrY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=6UCSuaFuwrY",
+    "vimeo_video_id": null,
+    "episode_date": "2026-07-31",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/986-cooper-hoffman-s-closet-picks",
+    "pick_count": 10,
+    "featured_film_slug": "hud"
   }
 ]
