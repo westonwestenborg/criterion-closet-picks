@@ -118,12 +118,16 @@ def parse_guest_name_from_video_title(title: str) -> str:
       - "Criterion Closet Picks: Barry Jenkins"
       - "Barry Jenkins | Closet Picks"
       - "Bong Joon Ho's DVD Picks"
+      - "Fred Armisen and Carrie Brownstein's Criterion Mobile Closet Picks"
     """
     title = title.strip()
 
     # Pattern 1 (most specific): "Name's Closet/DVD Picks" (possessive with smart or regular apostrophe)
+    # "Mobile" covers episodes shot at the travelling closet, which are still
+    # single-guest episodes (unlike the multi-guest Mobile Closet event videos,
+    # which are filtered out via EXCLUDED_VIDEO_IDS).
     m = re.match(
-        r"^(.+?)(?:'s|'s|\u2019s)\s+(?:Criterion\s+)?(?:Closet\s+|DVD\s+)?(?:Picks?|Favorites?)",
+        r"^(.+?)(?:'s|'s|\u2019s)\s+(?:Criterion\s+)?(?:Mobile\s+)?(?:Closet\s+|DVD\s+)?(?:Picks?|Favorites?)",
         title,
         re.IGNORECASE,
     )
