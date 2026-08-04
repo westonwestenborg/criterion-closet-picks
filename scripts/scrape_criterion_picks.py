@@ -52,6 +52,18 @@ CHECKPOINT_FILE = DATA_DIR / ".criterion_scrape_progress.json"
 REQUEST_DELAY = 1.5
 
 
+class CollectionUnavailable(Exception):
+    """
+    A collection page did not resolve to its own listing.
+
+    Criterion sometimes links a closet-picks collection from the index before the
+    collection page is live (and occasionally un-publishes a live one). Those URLs
+    200 but redirect to /shop/browse, whose first page is the alphabetical head of
+    the whole catalog -- so scraping it silently yields ~24 bogus "picks". Treated
+    as a retryable failure so the URL is not checkpointed as done.
+    """
+
+
 # ---------------------------------------------------------------------------
 # Scraper setup
 # ---------------------------------------------------------------------------
@@ -393,6 +405,12 @@ def scrape_collection_page(scraper, collection_url: str) -> tuple[list[dict], di
         except Exception as e:
             log(f"    Error fetching {url}: {e}")
             break
+
+        # A collection that redirects off /shop/collection/ is not live yet. Its
+        # landing page (/shop/browse) lists the whole catalog, so parsing it would
+        # attribute the catalog's first page to this guest.
+        if not re.search(r"/shop/collection/\d+-", resp.url):
+            raise CollectionUnavailable(f"{collection_url} redirected to {resp.url}")
 
         soup = BeautifulSoup(resp.text, "lxml")
 
@@ -789,7 +807,13 @@ def scrape_all_collections(
 
         log(f"  Scraping: {coll['name']} ({url})")
 
-        films, video_ids = scrape_collection_page(scraper, url)
+        try:
+            films, video_ids = scrape_collection_page(scraper, url)
+        except CollectionUnavailable as e:
+            # Not checkpointed: retry on the next run, once Criterion publishes it.
+            log(f"    SKIP (collection not live): {e}")
+            time.sleep(REQUEST_DELAY)
+            continue
         log(f"    Found {len(films)} films")
 
         if not films:
