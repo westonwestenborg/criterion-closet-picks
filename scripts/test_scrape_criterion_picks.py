@@ -30,16 +30,20 @@ COLLECTION_HTML = """
 class FakeScraper:
     """Stands in for CriterionBrowser, returning a canned FetchResult."""
 
-    def __init__(self, html, final_url):
+    def __init__(self, html, final_url, status_code=200, raises=None):
         self.html = html
         self.final_url = final_url
+        self.status_code = status_code
+        self.raises = raises
         self.fetched = []
 
     def fetch(self, url, timeout=30):
         self.fetched.append(url)
+        if self.raises:
+            raise self.raises
 
         class Result:
-            status_code = 200
+            status_code = self.status_code
             text = self.html
             url = self.final_url
 
@@ -59,6 +63,22 @@ class ScrapeCollectionPageTest(unittest.TestCase):
         films, _video_ids = scrape_collection_page(scraper, COLLECTION_URL)
 
         self.assertEqual([f["title"] for f in films], ["Purple Noon"])
+
+    def test_fetch_exception_raises_instead_of_reporting_an_empty_collection(self):
+        # An empty return would be checkpointed as done, skipping a real
+        # collection permanently after one transient timeout.
+        scraper = FakeScraper(
+            COLLECTION_HTML, COLLECTION_URL, raises=TimeoutError("Timeout 30000ms exceeded")
+        )
+
+        with self.assertRaises(CollectionUnavailable):
+            scrape_collection_page(scraper, COLLECTION_URL)
+
+    def test_non_200_raises_instead_of_reporting_an_empty_collection(self):
+        scraper = FakeScraper(COLLECTION_HTML, COLLECTION_URL, status_code=503)
+
+        with self.assertRaises(CollectionUnavailable):
+            scrape_collection_page(scraper, COLLECTION_URL)
 
 
 if __name__ == "__main__":

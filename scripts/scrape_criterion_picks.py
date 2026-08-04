@@ -395,16 +395,20 @@ def scrape_collection_page(scraper, collection_url: str) -> tuple[list[dict], di
             separator = "&" if "?" in collection_url else "?"
             url = f"{collection_url}{separator}page={page}"
 
+        # Fetch failures are retryable, so they must not fall through to the
+        # "no films" path below, which checkpoints the URL as done forever. A
+        # page > 1 is only requested after a next-page link was seen, so failing
+        # there is a real error too -- raising discards the partial films rather
+        # than checkpointing a truncated collection.
         try:
             resp = scraper.fetch(url, timeout=30)
-            if resp.status_code != 200:
-                if page > 1:
-                    break
-                log(f"    HTTP {resp.status_code} for {url}")
-                break
         except Exception as e:
-            log(f"    Error fetching {url}: {e}")
-            break
+            raise CollectionUnavailable(f"{collection_url} page {page}: {e}") from e
+
+        if resp.status_code != 200:
+            raise CollectionUnavailable(
+                f"{collection_url} page {page}: HTTP {resp.status_code}"
+            )
 
         # A collection that redirects off /shop/collection/ is not live yet. Its
         # landing page (/shop/browse) lists the whole catalog, so parsing it would
