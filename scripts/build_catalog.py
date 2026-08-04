@@ -302,10 +302,20 @@ def main():
         log(f"Digital Bits failed: {e}")
         import traceback
         traceback.print_exc()
-        sys.exit(1)
 
     if not catalog:
-        log("ERROR: No catalog entries scraped")
+        # Digital Bits has served HTTP 403 behind a Cloudflare Managed Challenge
+        # since 2026-08, so an empty scrape is the steady state rather than an
+        # anomaly. The committed catalog is self-sustaining without it --
+        # backfill_films.py creates an entry for any picked film missing from it --
+        # and process_all.py halts on the first failing step, so exiting non-zero
+        # here would block quote extraction and TMDB enrichment for no reason.
+        existing = load_json(CATALOG_FILE)
+        if existing:
+            log(f"WARNING: scraped no catalog entries; leaving the existing "
+                f"{len(existing)} entries unchanged")
+            return
+        log("ERROR: No catalog entries scraped and no existing catalog to fall back on")
         sys.exit(1)
 
     # Deduplicate

@@ -167,5 +167,35 @@ class TestCatalogMerge(unittest.TestCase):
                          "verified spines already applied; re-apply must not churn")
 
 
+class TestCatalogScrapeFallback(unittest.TestCase):
+    """Digital Bits sits behind a Cloudflare challenge, so an empty scrape is the
+    steady state. It must not halt process_all.py, which stops on first failure."""
+
+    def _run_main(self, scraped, existing):
+        from unittest import mock
+        import scripts.build_catalog as bc
+
+        saved = []
+        with mock.patch.object(bc, "scrape_digitalbits", return_value=scraped), \
+             mock.patch.object(bc, "load_json", return_value=existing), \
+             mock.patch.object(bc, "save_json", side_effect=lambda *a: saved.append(a)), \
+             mock.patch.object(sys, "argv", ["build_catalog.py"]):
+            bc.main()
+        return saved
+
+    def test_empty_scrape_keeps_existing_catalog_and_exits_zero(self):
+        existing = [{"spine_number": 1, "film_id": "x", "tmdb_id": 999}]
+
+        saved = self._run_main([], existing)
+
+        # Returning normally is the assertion: SystemExit would fail the test.
+        self.assertEqual(saved, [], "must not rewrite the catalog from an empty scrape")
+
+    def test_empty_scrape_with_no_existing_catalog_still_fails(self):
+        with self.assertRaises(SystemExit) as cm:
+            self._run_main([], [])
+        self.assertEqual(cm.exception.code, 1)
+
+
 if __name__ == "__main__":
     unittest.main()
