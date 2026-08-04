@@ -5243,5 +5243,18 @@
     "criterion_page_url": "https://www.criterion.com/shop/collection/986-cooper-hoffman-s-closet-picks",
     "pick_count": 10,
     "featured_film_slug": "hud"
+  },
+  {
+    "name": "Fred Armisen and Carrie Brownstein",
+    "slug": "fred-armisen-and-carrie-brownstein",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/rhPN8Zx6nrtNiQN2JwPkJ3ZFJ9z.jpg",
+    "youtube_video_id": "uy3FoDjNR-k",
+    "youtube_video_url": "https://www.youtube.com/watch?v=uy3FoDjNR-k",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-03",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/989-fred-armisen-and-carrie-brownstein-s-closet-picks",
+    "pick_count": 8
   }
 ]
