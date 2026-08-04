@@ -11,7 +11,7 @@
         {
           "film_id": "le-salaire-de-la-peur",
           "title": "Le Salaire de la peur",
-          "spine_number": null
+          "spine_number": 36
         }
       ]
     },
@@ -20,8 +20,8 @@
       "films": [
         {
           "film_id": "fa-yeung-nin-wa",
-          "title": "Fa yeung nin wa",
-          "spine_number": null
+          "title": "In the Mood for Love",
+          "spine_number": 147
         },
         {
           "film_id": "in-the-mood-for-love",
@@ -96,7 +96,7 @@
         {
           "film_id": "withnail-and-i",
           "title": "Withnail and I",
-          "spine_number": null
+          "spine_number": 119
         },
         {
           "film_id": "withnail-i",
@@ -161,7 +161,7 @@
         {
           "film_id": "the-tree-of-wooden-clogs",
           "title": "The Tree of Wooden Clogs",
-          "spine_number": null
+          "spine_number": 854
         }
       ]
     },
@@ -191,7 +191,7 @@
         {
           "film_id": "the-shooting",
           "title": "The Shooting",
-          "spine_number": null
+          "spine_number": 734
         }
       ]
     },
@@ -216,7 +216,7 @@
         {
           "film_id": "i-fidanzati",
           "title": "I fidanzati",
-          "spine_number": null
+          "spine_number": 195
         },
         {
           "film_id": "the-fiances",
@@ -236,7 +236,7 @@
         {
           "film_id": "touki-bouki",
           "title": "Touki Bouki",
-          "spine_number": null
+          "spine_number": 685
         }
       ]
     },
@@ -331,6 +331,21 @@
       ]
     },
     {
+      "tmdb_id": 195522,
+      "films": [
+        {
+          "film_id": "redes-world-cinema-project",
+          "title": "Redes (World Cinema Project)",
+          "spine_number": 686
+        },
+        {
+          "film_id": "redes",
+          "title": "Redes",
+          "spine_number": null
+        }
+      ]
+    },
+    {
       "tmdb_id": 195841,
       "films": [
         {
@@ -372,46 +387,6 @@
           "film_id": "trances",
           "title": "Trances",
           "spine_number": null
-        }
-      ]
-    },
-    {
-      "tmdb_id": 379895,
-      "films": [
-        {
-          "film_id": "the-kennedy-films-of-robert-drew-associates",
-          "title": "The Kennedy Films of Robert Drew & Associates",
-          "spine_number": 808
-        },
-        {
-          "film_id": "adventures-on-the-new-frontier",
-          "title": "Adventures on the New Frontier",
-          "spine_number": null
-        }
-      ]
-    },
-    {
-      "tmdb_id": 628403,
-      "films": [
-        {
-          "film_id": "martin-scorseses-world-cinema-project-box-set",
-          "title": "Martin Scorsese’s World Cinema Project (box set)",
-          "spine_number": 684
-        },
-        {
-          "film_id": "martin-scorseses-world-cinema-project-no-2-box-set",
-          "title": "Martin Scorsese's World Cinema Project No. 2 (box set)",
-          "spine_number": 873
-        },
-        {
-          "film_id": "martin-scorseses-world-cinema-project-no-3-box-set",
-          "title": "Martin Scorsese’s World Cinema Project No. 3 (Box set)",
-          "spine_number": 1044
-        },
-        {
-          "film_id": "martin-scorseses-world-cinema-project-no-4-box-set",
-          "title": "Martin Scorsese’s World Cinema Project No. 4 (Box set)",
-          "spine_number": 1142
         }
       ]
     },
@@ -461,13 +436,18 @@
       "film_id": "science-is-fiction-23-films-by-jean-painleve",
       "title": "Science is Fiction: 23 Films by Jean Painlevé",
       "criterion_url": "https://www.criterion.com/films/1286-science-is-fiction-23-films-by-jean-painleve"
+    },
+    {
+      "film_id": "che",
+      "title": "Che",
+      "criterion_url": "https://www.criterion.com/films/20987-che"
     }
   ],
   "missing_posters": [],
   "director_mismatches": [],
   "summary": {
-    "duplicate_tmdb_ids": 29,
-    "missing_tmdb_id": 3,
+    "duplicate_tmdb_ids": 28,
+    "missing_tmdb_id": 4,
     "missing_posters": 0,
     "director_mismatches": 0,
     "full_audit": false
