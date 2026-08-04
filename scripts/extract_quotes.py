@@ -93,22 +93,45 @@ GUIDELINES:
 Return ONLY the JSON array, no other text."""
 
 
+class GeminiModel:
+    """
+    Thin adapter over the google-genai client.
+
+    The new SDK has no model handle -- the model name is an argument to each
+    call -- while this module threads one around. Binding the name and config
+    here keeps that shape, so callers still say model.generate_content(...).
+    """
+
+    def __init__(self, client, model_name: str, config):
+        self._client = client
+        self._model_name = model_name
+        self._config = config
+
+    def generate_content(self, contents):
+        return self._client.models.generate_content(
+            model=self._model_name,
+            contents=contents,
+            config=self._config,
+        )
+
+    def upload_file(self, path: str):
+        return self._client.files.upload(file=path)
+
+
 def get_gemini_model():
     """Initialize Gemini model."""
-    import google.generativeai as genai
+    from google import genai
+    from google.genai import types
 
     api_key = get_env("GEMINI_API_KEY")
-    genai.configure(api_key=api_key)
+    client = genai.Client(api_key=api_key)
 
-    model = genai.GenerativeModel(
-        "gemini-3-flash-preview",
-        generation_config={
-            "temperature": 0.1,
-            "response_mime_type": "application/json",
-            "max_output_tokens": 65536,
-        },
+    config = types.GenerateContentConfig(
+        temperature=0.1,
+        response_mime_type="application/json",
+        max_output_tokens=65536,
     )
-    return model
+    return GeminiModel(client, "gemini-3-flash-preview", config)
 
 
 def format_transcript(segments: list[dict]) -> str:
@@ -302,7 +325,6 @@ def extract_quotes_from_audio(
     """
     import subprocess
     import tempfile
-    import google.generativeai as genai
 
     guest_name = guest["name"]
     picks_list = format_picks_list(picks)
@@ -341,7 +363,7 @@ def extract_quotes_from_audio(
 
         # Upload to Gemini
         try:
-            audio_file = genai.upload_file(audio_path)
+            audio_file = model.upload_file(audio_path)
             log(f"  Uploaded audio to Gemini")
         except Exception as e:
             log(f"  Gemini upload error: {e}")
