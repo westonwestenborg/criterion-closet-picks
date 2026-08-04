@@ -166,6 +166,7 @@ def validate_picks(picks: list[dict], guests: list[dict], catalog: list[dict]) -
         "with_timestamp": 0,
         "with_youtube_url": 0,
         "with_catalog_spine": 0,
+        "with_resolved_film_id": 0,
         "confidence_high": 0,
         "confidence_medium": 0,
         "confidence_low": 0,
@@ -176,6 +177,7 @@ def validate_picks(picks: list[dict], guests: list[dict], catalog: list[dict]) -
 
     guest_slugs = {g["slug"] for g in guests}
     catalog_spines = {c["spine_number"] for c in catalog}
+    catalog_film_ids = {c.get("film_id") for c in catalog if c.get("film_id")}
     seen_guest_slugs = set()
     seen_films = set()
 
@@ -194,6 +196,21 @@ def validate_picks(picks: list[dict], guests: list[dict], catalog: list[dict]) -
                 "type": "unknown_guest_slug",
                 "slug": guest_slug,
                 "film": film_title,
+            })
+
+        # Whether the pick resolves to a catalog entry at all. This -- not
+        # catalog_spine -- is the invariant the frontend depends on: an
+        # unresolved film_id renders a broken film page, while a missing spine
+        # number only omits display metadata.
+        film_id = pick.get("film_id")
+        if film_id and film_id in catalog_film_ids:
+            stats["with_resolved_film_id"] += 1
+        else:
+            issues.append({
+                "type": "unresolved_film_id",
+                "film_id": film_id,
+                "film": film_title,
+                "slug": guest_slug,
             })
 
         # Check catalog reference
@@ -297,7 +314,19 @@ def generate_per_guest_report(
         low = sum(1 for p in guest_picks if p.get("extraction_confidence") == "low")
         none = sum(1 for p in guest_picks if p.get("extraction_confidence") in ("none", None))
         with_quote = sum(1 for p in guest_picks if p.get("quote"))
-        matched = sum(1 for p in guest_raw if p.get("catalog_spine"))
+        # Box sets are reported as their own population. Many are spine-numbered
+        # releases (Fanny and Alexander is 261, Six Moral Tales is 342), but the
+        # curated sets -- Essential Fellini, The Complete Films of Agnes Varda --
+        # carry no spine at all, so the two groups have genuinely different
+        # ceilings and averaging them hides regressions in the individual films.
+        box_sets = sum(1 for p in guest_raw if p.get("is_box_set"))
+        box_sets_matched = sum(
+            1 for p in guest_raw if p.get("is_box_set") and p.get("catalog_spine")
+        )
+        spineable = len(guest_raw) - box_sets
+        matched = sum(
+            1 for p in guest_raw if p.get("catalog_spine") and not p.get("is_box_set")
+        )
 
         has_video = bool(guest.get("youtube_video_id"))
         video_id = guest.get("youtube_video_id")
@@ -315,8 +344,11 @@ def generate_per_guest_report(
             "has_video": has_video,
             "has_transcript": has_transcript,
             "raw_picks": len(guest_raw),
+            "box_set_picks": box_sets,
+            "box_set_matched": box_sets_matched,
+            "spineable_picks": spineable,
             "catalog_matched": matched,
-            "catalog_match_rate_pct": round(matched / len(guest_raw) * 100, 1) if guest_raw else 0,
+            "catalog_match_rate_pct": round(matched / spineable * 100, 1) if spineable else 0,
             "enriched_picks": total,
             "with_quote": with_quote,
             "confidence_high": high,
@@ -424,22 +456,38 @@ def print_report(
     overall_high_pct = data_high / data_total * 100 if data_total else 0
     print(f"  High confidence rate (guests with transcripts): {overall_high_pct:.1f}% (target: >70%)")
 
-    # Film matching rate
-    total_raw = sum(g["raw_picks"] for g in per_guest)
+    # Film matching rate over individual films. Box sets are a separate
+    # population with a different ceiling (curated sets carry no spine at all),
+    # so blending them capped the combined figure near 93% and left nine points
+    # of headroom in which a real regression could hide.
+    total_box_sets = sum(g["box_set_picks"] for g in per_guest)
+    total_box_matched = sum(g["box_set_matched"] for g in per_guest)
+    total_spineable = sum(g["spineable_picks"] for g in per_guest)
     total_matched = sum(g["catalog_matched"] for g in per_guest)
-    match_pct = total_matched / total_raw * 100 if total_raw else 0
+    match_pct = total_matched / total_spineable * 100 if total_spineable else 0
+    box_pct = total_box_matched / total_box_sets * 100 if total_box_sets else 0
     print(f"  Film matching rate: {match_pct:.1f}% (target: >90%)")
+    print(f"    individual films: {total_matched}/{total_spineable}")
+    print(f"    box sets:         {total_box_matched}/{total_box_sets} ({box_pct:.1f}%, informational)")
+
+    # Film-id resolution: the invariant that actually protects the frontend.
+    resolved = picks_result["stats"].get("with_resolved_film_id", 0)
+    picks_total = picks_result["stats"].get("total", 0)
+    resolution_pct = resolved / picks_total * 100 if picks_total else 0
+    print(f"  Film-id resolution: {resolution_pct:.1f}% (target: 100%)")
 
     # Pass/fail
     pass_video = processed >= 8
     pass_confidence = overall_high_pct >= 70
     pass_matching = match_pct >= 90
+    pass_resolution = resolved == picks_total
 
     print(f"\n  {'PASS' if pass_video else 'FAIL'}: Video processing (>= 8/10)")
     print(f"  {'PASS' if pass_confidence else 'FAIL'}: Quote confidence (>= 70%)")
     print(f"  {'PASS' if pass_matching else 'FAIL'}: Film matching (>= 90%)")
+    print(f"  {'PASS' if pass_resolution else 'FAIL'}: Film-id resolution (100%)")
 
-    all_pass = pass_video and pass_confidence and pass_matching
+    all_pass = pass_video and pass_confidence and pass_matching and pass_resolution
     print(f"\n  Overall: {'ALL CRITERIA MET' if all_pass else 'SOME CRITERIA NOT MET'}")
     print("=" * 70 + "\n")
 
