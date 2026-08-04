@@ -8,6 +8,7 @@ import os
 import re
 import time
 import unicodedata
+from collections import defaultdict
 from pathlib import Path
 from functools import wraps
 
@@ -169,6 +170,31 @@ def titles_conflict_on_volume(title1: str, title2: str) -> bool:
     """
     v1, v2 = _volume_numbers(title1), _volume_numbers(title2)
     return bool(v1) and bool(v2) and v1 != v2
+
+
+# ---------------------------------------------------------------------------
+# Picks
+# ---------------------------------------------------------------------------
+
+def backfill_pick_order(rows: list[dict]) -> int:
+    """
+    Number each guest visit's picks 1..N in file order, returning how many changed.
+
+    pick_order is scoped to a (guest_slug, visit_index) group, not to the guest:
+    a second visit restarts at 1. Shared by the pipeline and the repair layer so
+    the two cannot drift.
+    """
+    groups: dict[tuple[str, object], list[dict]] = defaultdict(list)
+    for pick in rows:
+        groups[(str(pick.get("guest_slug") or ""), pick.get("visit_index"))].append(pick)
+
+    changed = 0
+    for group_rows in groups.values():
+        for index, pick in enumerate(group_rows, start=1):
+            if pick.get("pick_order") != index:
+                pick["pick_order"] = index
+                changed += 1
+    return changed
 
 
 # ---------------------------------------------------------------------------

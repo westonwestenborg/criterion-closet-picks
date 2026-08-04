@@ -23,7 +23,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from scripts.utils import GUESTS_FILE, PICKS_FILE, PICKS_RAW_FILE, load_json, save_json, log
+from scripts.utils import (
+    GUESTS_FILE,
+    PICKS_FILE,
+    PICKS_RAW_FILE,
+    backfill_pick_order,
+    load_json,
+    save_json,
+    log,
+)
 from scripts.schema import Guest, Pick
 
 
@@ -380,7 +388,15 @@ def main():
     n = backfill_visit_index_raw(picks_raw, picks, guests)
     log(f"Visit index backfill (picks_raw): {n} entries updated")
 
-    # 6. Update pick_count to reflect displayable picks
+    # 6. Number picks within each visit, now that visit_index is settled.
+    #    Without this the pipeline never sets pick_order and only the repair
+    #    layer did, so every newly scraped guest landed with it null.
+    n = backfill_pick_order(picks)
+    log(f"Pick order backfill (picks): {n} entries updated")
+    n = backfill_pick_order(picks_raw)
+    log(f"Pick order backfill (picks_raw): {n} entries updated")
+
+    # 7. Update pick_count to reflect displayable picks
     #    Display rule: source === 'criterion' OR has a quote
     n = update_pick_counts(guests, picks, picks_raw)
     log(f"Pick count updates: {n} guests updated")

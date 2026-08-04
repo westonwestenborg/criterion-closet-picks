@@ -33,6 +33,7 @@ from scripts.utils import (
     load_json,
     save_json,
 )
+from scripts.utils import backfill_pick_order as utils_backfill_pick_order
 
 
 REPAIR_SCHEMA_VERSION = 1
@@ -463,15 +464,10 @@ def backfill_pick_order(
     file_name: str,
     changes: Counter[str],
 ) -> None:
-    groups: dict[tuple[str, Any], list[dict[str, Any]]] = defaultdict(list)
-    for pick in rows:
-        groups[(str(pick.get("guest_slug") or ""), pick.get("visit_index"))].append(pick)
-
-    for group_rows in groups.values():
-        for index, pick in enumerate(group_rows, start=1):
-            if pick.get("pick_order") != index:
-                pick["pick_order"] = index
-                changes[f"{file_name}:pick_order_from_file_order"] += 1
+    # Implementation lives in utils so migrate_source_visit applies the same rule.
+    changed = utils_backfill_pick_order(rows)
+    if changed:
+        changes[f"{file_name}:pick_order_from_file_order"] += changed
 
 
 def repair_box_set_member_titles(
