@@ -72,7 +72,10 @@ def run_step(name: str, cmd: list[str], step_num: int, total_steps: int) -> bool
 def main():
     parser = argparse.ArgumentParser(description="Run the full data pipeline")
     parser.add_argument("--pilot", action="store_true", help="Only process 10 pilot guests")
-    parser.add_argument("--skip-catalog", action="store_true", help="Skip catalog rebuild")
+    parser.add_argument("--skip-catalog", action="store_true",
+                        help="Deprecated: the catalog rebuild is skipped by default")
+    parser.add_argument("--with-catalog", action="store_true",
+                        help="Run the catalog rebuild (its Digital Bits source is down)")
     parser.add_argument("--skip-criterion", action="store_true", help="Skip Criterion.com scraping")
     parser.add_argument("--skip-youtube", action="store_true", help="Skip YouTube matching")
     parser.add_argument("--skip-quotes", action="store_true", help="Skip quote extraction")
@@ -97,9 +100,13 @@ def main():
     steps = []
     step_num = 0
 
-    # Step 1: Build catalog
+    # Step 1: Build catalog. Opt-in: its Digital Bits source has served 403 behind
+    # a Cloudflare challenge since 2026-08, and the catalog does not need it to
+    # grow -- backfill_films.py creates an entry for any picked film missing from
+    # it, and the ~9 films still wanting a spine are handled by
+    # data/validation/verified_spine_backfill.json.
     step_num += 1
-    if not args.skip_catalog and args.from_step <= step_num:
+    if args.with_catalog and args.from_step <= step_num:
         steps.append((
             "Build Criterion Catalog",
             [python, str(SCRIPTS_DIR / "build_catalog.py")],

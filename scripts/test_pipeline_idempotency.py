@@ -167,6 +167,45 @@ class TestCatalogMerge(unittest.TestCase):
                          "verified spines already applied; re-apply must not churn")
 
 
+class TestCatalogMergeFilmIdCollision(unittest.TestCase):
+    """A spineless catalog row that later gains a spine must be recognised, not
+    appended again under a film_id the catalog already uses."""
+
+    def test_spineless_row_gaining_a_spine_is_updated_not_duplicated(self):
+        from scripts.build_catalog import merge_into_existing
+        existing = [{"spine_number": None, "film_id": "eo", "title": "EO", "tmdb_id": 7}]
+        scraped = [{"spine_number": 1234, "film_id": "eo", "title": "EO"}]
+
+        merged, n_new, _ = merge_into_existing(existing, scraped)
+
+        self.assertEqual(n_new, 0)
+        self.assertEqual([e["film_id"] for e in merged], ["eo"])
+        self.assertEqual(merged[0]["spine_number"], 1234)
+        self.assertEqual(merged[0]["tmdb_id"], 7, "enrichment must survive")
+
+    def test_genuinely_new_film_is_still_appended(self):
+        from scripts.build_catalog import merge_into_existing
+        existing = [{"spine_number": None, "film_id": "eo", "title": "EO"}]
+        scraped = [{"spine_number": 1234, "film_id": "vermiglio", "title": "Vermiglio"}]
+
+        merged, n_new, _ = merge_into_existing(existing, scraped)
+
+        self.assertEqual(n_new, 1)
+        self.assertEqual(len({e["film_id"] for e in merged}), 2)
+
+    def test_existing_spine_still_wins_over_film_id(self):
+        # A retitled row keeps its spine match; film_id lookup must not override.
+        from scripts.build_catalog import merge_into_existing
+        existing = [{"spine_number": 5, "film_id": "old-title", "criterion_url": ""}]
+        scraped = [{"spine_number": 5, "film_id": "new-title",
+                    "criterion_url": "https://criterion.com/x"}]
+
+        merged, n_new, n_filled = merge_into_existing(existing, scraped)
+
+        self.assertEqual((n_new, n_filled), (0, 1))
+        self.assertEqual(merged[0]["film_id"], "old-title")
+
+
 class TestCatalogScrapeFallback(unittest.TestCase):
     """Digital Bits sits behind a Cloudflare challenge, so an empty scrape is the
     steady state. It must not halt process_all.py, which stops on first failure."""

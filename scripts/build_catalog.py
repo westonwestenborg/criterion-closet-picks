@@ -7,6 +7,19 @@ Each sub-page contains <li> elements with spine entries in the format:
   <li><span>1301      The Man Who Wasn't There</span></li>
 
 Output: data/criterion_catalog.json
+
+DEPRECATED (2026-08): thedigitalbits.com serves 403 behind a Cloudflare Managed
+Challenge, so this scrapes nothing. process_all.py no longer runs it by default;
+pass --with-catalog to opt in. Kept because the merge path is still correct if
+the source returns.
+
+Retiring it costs little. Its one unique contribution is spine numbers, and the
+catalog grows without it: backfill_films.py creates an entry for any picked film
+missing from the catalog. Of 1,793 catalog entries only 940 are picked (the rest
+never render -- src/lib/data.ts filters to picked films above 500 entries), and
+just 19 individual films lack a spine, 10 of them already confirmed spineless in
+data/validation/verified_spine_backfill.json. That manual layer is the right size
+for the remaining handful.
 """
 
 import argparse
@@ -260,10 +273,22 @@ def merge_into_existing(existing: list[dict], scraped: list[dict]) -> tuple[list
     Returns (merged_catalog, num_new, num_filled).
     """
     by_spine = {e["spine_number"]: e for e in existing if e.get("spine_number") is not None}
+    # Spine alone is not enough to recognise a row we already have. A film can sit
+    # in the catalog with spine_number None -- backfill_films.py adds picked films
+    # that way, and recent releases often have no spine yet -- and get one later.
+    # Matching on spine only, that row looks new, so it would be appended under a
+    # film_id the catalog already uses, splitting the film's picks across two
+    # entries and failing TestNoDuplicateFilmIds.
+    by_film_id = {e["film_id"]: e for e in existing if e.get("film_id")}
     new_entries: list[dict] = []
     filled = 0
     for sc in scraped:
         ex = by_spine.get(sc.get("spine_number"))
+        if ex is None:
+            ex = by_film_id.get(sc.get("film_id"))
+            if ex is not None and ex.get("spine_number") is None:
+                # Same film, now spined: record it rather than adding a duplicate.
+                ex["spine_number"] = sc.get("spine_number")
         if ex is None:
             new_entries.append(sc)
             continue

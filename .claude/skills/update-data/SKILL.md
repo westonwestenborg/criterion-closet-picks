@@ -67,8 +67,12 @@ If no new videos, stop here and tell the user.
 If new videos were found, run the full pipeline (incremental — merges into existing data):
 
 ```bash
-.venv/bin/python scripts/process_all.py --skip-catalog
+.venv/bin/python scripts/process_all.py
 ```
+
+(The catalog rebuild is skipped by default since 2026-08 — its Digital Bits
+source is behind a Cloudflare challenge. The old `--skip-catalog` flag still
+works but does nothing.)
 
 This will:
 1. Scrape Criterion.com for new collection pages (+ extract video IDs, handles multi-visit guests)
