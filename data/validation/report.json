@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T15:25:19",
+  "generated_at": "2026-08-05T10:30:34",
   "catalog": {
     "stats": {
       "total": 1793,
@@ -514,8 +514,6 @@
         6,
         null,
         734,
-        null,
-        null,
         null,
         null,
         null,
@@ -6669,25 +6667,13 @@
       },
       {
         "type": "missing_spine",
-        "film": "High Art"
-      },
-      {
-        "type": "duplicate_spine",
-        "spine": null,
-        "titles": [
-          "Ryuichi Sakamoto | Opus",
-          "High Art"
-        ]
-      },
-      {
-        "type": "missing_spine",
         "film": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco"
       },
       {
         "type": "duplicate_spine",
         "spine": null,
         "titles": [
-          "High Art",
+          "Ryuichi Sakamoto | Opus",
           "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco"
         ]
       },
@@ -6725,18 +6711,6 @@
         "titles": [
           "Olivier’s Shakespeare",
           "Martin Scorsese’s World Cinema Project No. 3"
-        ]
-      },
-      {
-        "type": "missing_spine",
-        "film": "Hud"
-      },
-      {
-        "type": "duplicate_spine",
-        "spine": null,
-        "titles": [
-          "Martin Scorsese’s World Cinema Project No. 3",
-          "Hud"
         ]
       }
     ]
@@ -6954,7 +6928,7 @@
       "with_quote": 3141,
       "with_timestamp": 3142,
       "with_youtube_url": 3094,
-      "with_catalog_spine": 3064,
+      "with_catalog_spine": 3066,
       "with_resolved_film_id": 3273,
       "confidence_high": 3093,
       "confidence_medium": 46,
@@ -6968,7 +6942,7 @@
   "picks_raw": {
     "stats": {
       "total": 3273,
-      "with_catalog_spine": 3064,
+      "with_catalog_spine": 3066,
       "match_methods": {
         "criterion_url": 2787,
         "fuzzy_83": 7,
@@ -7380,7 +7354,7 @@
         "fred-armisen-and-carrie-brownstein": 8
       },
       "unique_guests": 390,
-      "catalog_match_rate_pct": 93.6
+      "catalog_match_rate_pct": 93.7
     },
     "issues": []
   },
@@ -14915,8 +14889,8 @@
       "box_set_picks": 1,
       "box_set_matched": 0,
       "spineable_picks": 10,
-      "catalog_matched": 9,
-      "catalog_match_rate_pct": 90.0,
+      "catalog_matched": 10,
+      "catalog_match_rate_pct": 100.0,
       "enriched_picks": 11,
       "with_quote": 11,
       "confidence_high": 11,
@@ -15155,8 +15129,8 @@
       "box_set_picks": 1,
       "box_set_matched": 1,
       "spineable_picks": 9,
-      "catalog_matched": 8,
-      "catalog_match_rate_pct": 88.9,
+      "catalog_matched": 9,
+      "catalog_match_rate_pct": 100.0,
       "enriched_picks": 10,
       "with_quote": 10,
       "confidence_high": 10,

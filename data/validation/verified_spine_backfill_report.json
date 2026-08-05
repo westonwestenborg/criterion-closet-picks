@@ -6,7 +6,9 @@
     "unchanged": 55,
     "no_spine_visible": 12,
     "review_items": 0,
-    "invalid_records": 0
+    "invalid_records": 0,
+    "pick_spines_synced": 0,
+    "raw_pick_spines_synced": 0
   },
   "changes": [],
   "no_spine_visible": [
