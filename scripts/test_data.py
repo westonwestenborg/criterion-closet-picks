@@ -85,6 +85,32 @@ class TestFilmCoverage(unittest.TestCase):
         self.assertEqual(missing, [], f"Picks reference missing catalog spines:\n" + "\n".join(missing))
 
 
+class TestPickSpinesMatchCatalog(unittest.TestCase):
+    """catalog_spine on a pick is a copy of its catalog entry's spine_number."""
+
+    def test_pick_catalog_spine_matches_catalog_entry(self):
+        """A spine added to the catalog after match time must reach the picks.
+
+        catalog_spine is written once, when the pick is matched, so a spine that
+        arrives later -- via apply_verified_spines, or build_catalog picking one
+        up -- used to land only on the catalog. validate.py measures the film
+        matching rate from this field, so a stale copy under-reports it.
+        """
+        spine_by_film_id = {
+            f["film_id"]: f.get("spine_number") for f in catalog if f.get("film_id")
+        }
+        stale = [
+            f"{p.get('film_title', '?')}: pick={p.get('catalog_spine')} "
+            f"catalog={spine_by_film_id[p['film_id']]}"
+            for p in picks
+            if p.get("film_id") in spine_by_film_id
+            and p.get("catalog_spine") != spine_by_film_id[p["film_id"]]
+        ]
+        self.assertEqual(
+            stale, [], "Picks disagree with the catalog on spine:\n" + "\n".join(stale)
+        )
+
+
 class TestNoZeroDecade(unittest.TestCase):
     """No film should have year=0."""
 

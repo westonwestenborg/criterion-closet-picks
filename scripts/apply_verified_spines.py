@@ -18,7 +18,14 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.utils import CATALOG_FILE, VALIDATION_DIR, load_json, save_json
+from scripts.utils import (
+    CATALOG_FILE,
+    PICKS_FILE,
+    PICKS_RAW_FILE,
+    VALIDATION_DIR,
+    load_json,
+    save_json,
+)
 
 
 BACKFILL_SCHEMA_VERSION = 1
@@ -288,6 +295,30 @@ def render_markdown(report: dict[str, Any], max_items: int = 200) -> str:
     return "\n".join(lines) + "\n"
 
 
+def sync_pick_spines(rows: list[dict[str, Any]], catalog: list[dict[str, Any]]) -> int:
+    """Align each pick's catalog_spine with the catalog entry it references.
+
+    catalog_spine is a denormalized copy written once, when the pick is matched.
+    A spine that arrives later -- from this script, or from build_catalog picking
+    one up -- lands only on the catalog, leaving the picks that reference the film
+    disagreeing with it. Nothing in the frontend reads catalog_spine, but
+    validate.py measures the matching rate from it, so stale copies make that
+    number under-report.
+
+    Returns the number of picks changed.
+    """
+    spine_by_film_id = {c["film_id"]: c.get("spine_number") for c in catalog if c.get("film_id")}
+    changed = 0
+    for pick in rows:
+        film_id = pick.get("film_id")
+        if film_id not in spine_by_film_id:
+            continue
+        if pick.get("catalog_spine") != spine_by_film_id[film_id]:
+            pick["catalog_spine"] = spine_by_film_id[film_id]
+            changed += 1
+    return changed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Apply verified Criterion spine backfills")
     parser.add_argument("--dry-run", action="store_true", help="Report changes without writing data")
@@ -302,8 +333,17 @@ def main() -> int:
     repaired_catalog, report = apply_verified_spines(catalog, records)
     markdown = render_markdown(report, max_items=args.max_markdown_items)
 
+    picks = load_json(PICKS_FILE)
+    picks_raw = load_json(PICKS_RAW_FILE)
+    picks_synced = sync_pick_spines(picks, repaired_catalog)
+    picks_raw_synced = sync_pick_spines(picks_raw, repaired_catalog)
+    report["summary"]["pick_spines_synced"] = picks_synced
+    report["summary"]["raw_pick_spines_synced"] = picks_raw_synced
+
     if not args.dry_run:
         save_json(CATALOG_FILE, repaired_catalog)
+        save_json(PICKS_FILE, picks)
+        save_json(PICKS_RAW_FILE, picks_raw)
         save_json(args.report_json, report)
         args.report_markdown.parent.mkdir(parents=True, exist_ok=True)
         args.report_markdown.write_text(markdown, encoding="utf-8")
@@ -312,6 +352,7 @@ def main() -> int:
     print("=======================")
     print(f"Verification records: {report['summary']['records']}")
     print(f"Catalog spines updated: {report['summary']['spines_updated']}")
+    print(f"Pick spines synced: {picks_synced} picks, {picks_raw_synced} raw picks")
     print(f"No public spine visible: {report['summary']['no_spine_visible']}")
     print(f"Review items: {report['summary']['review_items']}")
     print(f"Invalid records: {report['summary']['invalid_records']}")
