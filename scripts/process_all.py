@@ -83,7 +83,7 @@ def main():
     parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
     parser.add_argument("--fresh", action="store_true", help="Start fresh (pass --primary to scraper, clearing existing data)")
-    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-13)")
+    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-14)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
 
@@ -170,7 +170,20 @@ def main():
             step_num,
         ))
 
-    # Step 8: Group box set films
+    # Step 8: Re-assert the manual spine layer. Runs after backfill_films, whose
+    # synthetic entries for newly picked films start with no spine. build_catalog
+    # used to be the only caller, so retiring it left this layer applying only
+    # when run by hand; adding a record now takes effect on the next pipeline run.
+    # Idempotent -- re-applying an already-applied record is a no-op.
+    step_num += 1
+    if args.from_step <= step_num:
+        steps.append((
+            "Apply Verified Spines",
+            [python, str(SCRIPTS_DIR / "apply_verified_spines.py")],
+            step_num,
+        ))
+
+    # Step 9: Group box set films
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -179,7 +192,7 @@ def main():
             step_num,
         ))
 
-    # Step 9: Scrape box set images (only for entries missing posters)
+    # Step 10: Scrape box set images (only for entries missing posters)
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -188,7 +201,7 @@ def main():
             step_num,
         ))
 
-    # Step 10: Migrate source/visit metadata
+    # Step 11: Migrate source/visit metadata
     step_num += 1
     if args.from_step <= step_num:
         steps.append((
@@ -197,7 +210,7 @@ def main():
             step_num,
         ))
 
-    # Step 11: Enrich via TMDB
+    # Step 12: Enrich via TMDB
     step_num += 1
     if not args.skip_enrich and args.from_step <= step_num:
         steps.append((
@@ -206,7 +219,7 @@ def main():
             step_num,
         ))
 
-    # Step 12: Normalize guest data (second pass - after enrichment)
+    # Step 13: Normalize guest data (second pass - after enrichment)
     step_num += 1
     if not args.skip_normalize and args.from_step <= step_num:
         steps.append((
@@ -215,7 +228,7 @@ def main():
             step_num,
         ))
 
-    # Step 13: Validate
+    # Step 14: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((
