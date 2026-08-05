@@ -4,10 +4,10 @@ Applies only checked-in records marked `verified_spine`; records marked `no_spin
 
 ## Summary
 
-- Verification records: 63
+- Verification records: 67
 - Catalog spines updated: 0
-- Already correct: 53
-- No public spine visible: 10
+- Already correct: 55
+- No public spine visible: 12
 - Review items: 0
 - Invalid records: 0
 
@@ -26,7 +26,9 @@ Applies only checked-in records marked `verified_spine`; records marked `no_spin
 | godland | Godland | https://www.criterion.com/films/33485-godland |
 | lynchoz | Lynch/Oz | https://www.criterion.com/films/33490-lynch-oz |
 | no-bears | No Bears | https://www.criterion.com/films/33531-no-bears |
+| the-innocent | The Innocent | https://www.criterion.com/films/33649-the-innocent |
 | the-killers | The Killers | https://www.criterion.com/films/725-the-killers |
 | the-shrouds | The Shrouds | https://www.criterion.com/films/34881-the-shrouds |
 | totem | Tótem | https://www.criterion.com/films/33900-totem |
+| vermiglio | Vermiglio | https://www.criterion.com/films/34803-vermiglio |
 | wooden-crosses | Wooden Crosses | https://www.criterion.com/films/880-wooden-crosses |

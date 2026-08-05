@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-06-13",
+  "verified_at": "2026-08-05",
   "source_note": "Criterion film pages inspected via browser/web text. Records marked verified_spine had a visible Spine # label; records marked no_spine_visible did not expose a visible Spine # label on the Criterion film page.",
   "records": [
     {
@@ -433,6 +433,32 @@
       "status": "verified_spine",
       "spine_number": 491,
       "evidence": "Spine #491"
+    },
+    {
+      "film_id": "hud",
+      "criterion_url": "https://www.criterion.com/films/30203-hud",
+      "status": "verified_spine",
+      "spine_number": 1319,
+      "evidence": "Spine #1319"
+    },
+    {
+      "film_id": "high-art",
+      "criterion_url": "https://www.criterion.com/films/32507-high-art",
+      "status": "verified_spine",
+      "spine_number": 1314,
+      "evidence": "Spine #1314"
+    },
+    {
+      "film_id": "the-innocent",
+      "criterion_url": "https://www.criterion.com/films/33649-the-innocent",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
+    },
+    {
+      "film_id": "vermiglio",
+      "criterion_url": "https://www.criterion.com/films/34803-vermiglio",
+      "status": "no_spine_visible",
+      "note": "No visible Spine # label on the Criterion film page."
     }
   ]
 }

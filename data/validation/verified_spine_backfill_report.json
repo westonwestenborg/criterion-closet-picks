@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "summary": {
-    "records": 63,
+    "records": 67,
     "spines_updated": 0,
-    "unchanged": 53,
-    "no_spine_visible": 10,
+    "unchanged": 55,
+    "no_spine_visible": 12,
     "review_items": 0,
     "invalid_records": 0
   },
@@ -66,6 +66,15 @@
     },
     {
       "action": "no_spine_visible",
+      "film_id": "the-innocent",
+      "title": "The Innocent",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/33649-the-innocent",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
       "film_id": "the-killers",
       "title": "The Killers",
       "evidence": {
@@ -88,6 +97,15 @@
       "title": "Tótem",
       "evidence": {
         "criterion_url": "https://www.criterion.com/films/33900-totem",
+        "note": "No visible Spine # label on the Criterion film page."
+      }
+    },
+    {
+      "action": "no_spine_visible",
+      "film_id": "vermiglio",
+      "title": "Vermiglio",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/34803-vermiglio",
         "note": "No visible Spine # label on the Criterion film page."
       }
     },
