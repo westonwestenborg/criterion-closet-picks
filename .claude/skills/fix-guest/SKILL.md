@@ -56,6 +56,29 @@ Fixes involve these config dicts:
 
 For a specific visit: add `--visit 2`
 
+**If the guest picked a box set, follow it with `group_box_sets.py`:**
+
+```bash
+.venv/bin/python scripts/group_box_sets.py
+```
+
+`extract_quotes.py` rebuilds each pick record and knows nothing about box sets —
+`box_set_criterion_url` and `box_set_film_count` are added later in the pipeline
+by `group_box_sets.py`. Re-extracting on its own therefore drops those fields,
+and `box_set_name` reverts to the raw scraped spelling. Nothing errors and
+`bun run validate` still passes, so the loss is only visible in a `git diff`.
+Re-running `group_box_sets.py` restores them.
+
+Check first with:
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json
+print([p['film_title'] for p in load_json('data/picks.json')
+       if p['guest_slug']=='SLUG' and p.get('is_box_set')])"
+```
+
 ### 4. Scrape picks from a new Criterion collection page
 
 1. Add URL to `data/visit_criterion_urls.json`
