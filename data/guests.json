@@ -3048,7 +3048,7 @@
     "name": "John Dwyer",
     "slug": "john-dwyer",
     "profession": "actor",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/islXc6yXkxjOFrLxGRNGfSWrdts.jpg",
     "youtube_video_id": "g_sFEPf61_g",
     "youtube_video_url": "https://www.youtube.com/watch?v=g_sFEPf61_g",
     "vimeo_video_id": null,
@@ -5255,6 +5255,34 @@
     "episode_date": "2026-08-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/989-fred-armisen-and-carrie-brownstein-s-closet-picks",
+    "pick_count": 8
+  },
+  {
+    "name": "Eric André",
+    "slug": "eric-andre",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/e9XlcFnZQiBSQ1vISQVyTOrkIaq.jpg",
+    "youtube_video_id": "kJqymGEIMt0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=kJqymGEIMt0",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-10",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/991-eric-andre-s-closet-picks",
+    "pick_count": 12,
+    "x_handle": "ericandre",
+    "threads_handle": "ericfuckingandre"
+  },
+  {
+    "name": "Thomas Bangalter",
+    "slug": "thomas-bangalter",
+    "profession": "musician",
+    "photo_url": "https://image.tmdb.org/t/p/w185/yCO75S2sAdi9QXUGEkXky7VpbIL.jpg",
+    "youtube_video_id": "uaajhIBkE-g",
+    "youtube_video_url": "https://www.youtube.com/watch?v=uaajhIBkE-g",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-07",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/990-thomas-bangalter-s-closet-picks",
     "pick_count": 8
   }
 ]

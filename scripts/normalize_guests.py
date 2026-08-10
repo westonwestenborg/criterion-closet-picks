@@ -141,6 +141,8 @@ KNOWN_VIDEO_IDS = {
     "christopher-nolan": {"youtube_video_id": "t9fgFt-Ibik"},
     "matt-damon": {"youtube_video_id": "ZCxYGx6ueNM"},
     "cooper-hoffman": {"youtube_video_id": "6UCSuaFuwrY"},
+    "thomas-bangalter": {"youtube_video_id": "uaajhIBkE-g"},
+    "eric-andre": {"youtube_video_id": "kJqymGEIMt0"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -210,6 +212,8 @@ KNOWN_CRITERION_URLS = {
     "christopher-nolan": "https://www.criterion.com/shop/collection/984-christopher-nolan-s-closet-picks",
     "matt-damon": "https://www.criterion.com/shop/collection/985-matt-damon-s-closet-picks",
     "cooper-hoffman": "https://www.criterion.com/shop/collection/986-cooper-hoffman-s-closet-picks",
+    "thomas-bangalter": "https://www.criterion.com/shop/collection/990-thomas-bangalter-s-closet-picks",
+    "eric-andre": "https://www.criterion.com/shop/collection/991-eric-andre-s-closet-picks",
 }
 
 # Name cleanup
