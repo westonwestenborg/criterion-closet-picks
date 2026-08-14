@@ -143,6 +143,7 @@ KNOWN_VIDEO_IDS = {
     "cooper-hoffman": {"youtube_video_id": "6UCSuaFuwrY"},
     "thomas-bangalter": {"youtube_video_id": "uaajhIBkE-g"},
     "eric-andre": {"youtube_video_id": "kJqymGEIMt0"},
+    "colman-domingo": {"youtube_video_id": "LB5fjskhpao"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -214,6 +215,7 @@ KNOWN_CRITERION_URLS = {
     "cooper-hoffman": "https://www.criterion.com/shop/collection/986-cooper-hoffman-s-closet-picks",
     "thomas-bangalter": "https://www.criterion.com/shop/collection/990-thomas-bangalter-s-closet-picks",
     "eric-andre": "https://www.criterion.com/shop/collection/991-eric-andre-s-closet-picks",
+    "colman-domingo": "https://www.criterion.com/shop/collection/992-colman-domingo-s-closet-picks",
 }
 
 # Name cleanup

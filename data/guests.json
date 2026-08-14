@@ -3887,7 +3887,7 @@
     "name": "Christian Petzold",
     "slug": "christian-petzold",
     "profession": "producer",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/p7r94AH2IrDa9P4hgyHUhR3Fd2v.jpg",
     "youtube_video_id": "qnz4FmBO2RY",
     "youtube_video_url": "https://www.youtube.com/watch?v=qnz4FmBO2RY",
     "vimeo_video_id": null,
@@ -5284,5 +5284,21 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/990-thomas-bangalter-s-closet-picks",
     "pick_count": 8
+  },
+  {
+    "name": "Colman Domingo",
+    "slug": "colman-domingo",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
+    "youtube_video_id": "LB5fjskhpao",
+    "youtube_video_url": "https://www.youtube.com/watch?v=LB5fjskhpao",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-14",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/992-colman-domingo-s-closet-picks",
+    "pick_count": 8,
+    "x_handle": "colmandomingo",
+    "threads_handle": "kingofbingo",
+    "featured_film_slug": "claudine"
   }
 ]
