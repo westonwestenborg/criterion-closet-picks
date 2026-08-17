@@ -5300,5 +5300,18 @@
     "x_handle": "colmandomingo",
     "threads_handle": "kingofbingo",
     "featured_film_slug": "claudine"
+  },
+  {
+    "name": "Danny McBride",
+    "slug": "danny-mcbride",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/sVFPzl2t5QlGudQKWAszIWZCXZv.jpg",
+    "youtube_video_id": "3lFsnL7N5sA",
+    "youtube_video_url": "https://www.youtube.com/watch?v=3lFsnL7N5sA",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-17",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/993-danny-mcbride-s-closet-picks",
+    "pick_count": 10
   }
 ]
