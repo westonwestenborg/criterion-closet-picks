@@ -1801,7 +1801,7 @@
     "imdb_id": "tt0048673",
     "tmdb_id": 50363,
     "poster_url": "https://image.tmdb.org/t/p/w185/3mlLfrbP9oYkSXvUPJhk24VdYM8.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "Romance"
@@ -7675,7 +7675,7 @@
     "imdb_id": "tt0058279",
     "tmdb_id": 30959,
     "poster_url": "https://image.tmdb.org/t/p/w185/t9UMfViYl47SdZZatKQ1JKjjCgs.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Horror",
       "Fantasy",
@@ -8120,7 +8120,7 @@
     "criterion_url": "https://www.criterion.com/films/635-all-that-heaven-allows",
     "imdb_id": "tt0047811",
     "tmdb_id": 43316,
-    "poster_url": "https://image.tmdb.org/t/p/w185/9BZRrJK3iMILX0KP8eLb2E4sPqs.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/ef45f7fd0ccef1e881abc80c6b24ff60/GgZDqyYrxCYlRn5FxwXi15SB4qyUTU_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Drama",
@@ -8854,14 +8854,15 @@
     "title": "The BRD Trilogy",
     "spine_number": 203,
     "director": "",
-    "year": 1977,
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/138-the-brd-trilogy",
     "imdb_id": null,
-    "tmdb_id": 1712202,
-    "poster_url": "https://image.tmdb.org/t/p/w185/adrAJTZnoen35xgQMRDba8nEeYO.jpg",
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1945-23da7bdafe273dbec66ce60e6dd58658/V5oY4ZalkXBF5sf9sEHmGPVjlZjmps_large.jpg",
     "poster_source": "criterion",
     "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "In 1977, German director Rainer Werner Fassbinder was thirty-two years old and had already directed more than twenty-five feature films. That summer, he embarked on a project to trace the postwar history of West Germany in a series of ﬁlms told from the perspectives of three remarkable women. Fassbinder’sThe Marriage of Maria Braun,Veronika Voss,andLola—The BRD Trilogy,which takes its title from the Bundesrepublik Deutschland—would garner him his greatest commercial success, both at home and abroad, and cement his position as one of the foremost figures of the New German Cinema.",
     "included_films": [
@@ -9555,7 +9556,7 @@
     "imdb_id": "tt0049674",
     "tmdb_id": 43323,
     "poster_url": "https://image.tmdb.org/t/p/w185/3zp2Kg5bvlFkKmWiQLmuWQAIEgG.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "History"
@@ -11250,7 +11251,7 @@
     "imdb_id": "tt0041699",
     "tmdb_id": 30368,
     "poster_url": "https://image.tmdb.org/t/p/w185/riBzUgeYawBDi2q9PjARjHrQM7Z.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Crime",
       "Drama",
@@ -11345,7 +11346,7 @@
     "imdb_id": "tt0067800",
     "tmdb_id": 994,
     "poster_url": "https://image.tmdb.org/t/p/w185/yigkfHE1OhkxPPrjrV78Y9ibGEk.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Thriller",
       "Drama",
@@ -13478,7 +13479,7 @@
     "tmdb_id": 1804,
     "tmdb_type": "tv",
     "poster_url": "https://image.tmdb.org/t/p/w185/u28Q2dj1O1ir26hqxNclQViJ6Qa.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy",
       "War & Politics"
@@ -24052,91 +24053,16 @@
     "film_id": "la-jetee-sans-soleil",
     "title": "La jetée / Sans Soleil",
     "spine_number": 387,
-    "director": "Chris Marker",
-    "year": 1962,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/77-la-jetee-sans-soleil",
-    "imdb_id": "tt0056119",
-    "tmdb_id": 662,
-    "poster_url": "https://image.tmdb.org/t/p/w185/elGidsRHXkk8UyrtLbcMhaptDyp.jpg",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1863-d6916651f0f3ead148ffd869331459b7/oQoeqXYr3XiuO5vvu3J6PphWl19PlW_large.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Science Fiction"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Chris Marker",
-          "tmdb_id": 9956
-        }
-      ],
-      "writers": [
-        {
-          "name": "Chris Marker",
-          "tmdb_id": 9956
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "Jean Chiabaut",
-          "tmdb_id": 9957
-        },
-        {
-          "name": "Chris Marker",
-          "tmdb_id": 9956
-        }
-      ],
-      "editors": [
-        {
-          "name": "Jean Ravel",
-          "tmdb_id": 9958
-        }
-      ],
-      "cast": [
-        {
-          "name": "Jean Négroni",
-          "tmdb_id": 9960,
-          "character": "Narrator (voice)"
-        },
-        {
-          "name": "Hélène Chatelain",
-          "tmdb_id": 9961,
-          "character": ""
-        },
-        {
-          "name": "Davos Hanich",
-          "tmdb_id": 9962,
-          "character": ""
-        },
-        {
-          "name": "Jacques Ledoux",
-          "tmdb_id": 9963,
-          "character": ""
-        },
-        {
-          "name": "André Heinrich",
-          "tmdb_id": 1167681,
-          "character": ""
-        },
-        {
-          "name": "Jacques Branchu",
-          "tmdb_id": 1167682,
-          "character": ""
-        },
-        {
-          "name": "Pierre Joffroy",
-          "tmdb_id": 1167683,
-          "character": ""
-        },
-        {
-          "name": "Étienne Becker",
-          "tmdb_id": 24854,
-          "character": ""
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "One of the most influential, radical science-fiction films ever made and a mind-bending free-form travelogue:La JetéeandSans Soleilcouldn’t seem more different—but they’re the twin pillars of an unparalleled and uncompromising career in cinema. A filmmaker, poet, novelist, photographer, editor, and now videographer and digital multimedia artist, Chris Marker has been challenging moviegoers, philosophers, and himself for years with his investigations of time, memory, and the rapid advancement of life on this planet. These two films—a tale of time travel told in still images and a journey to Africa and Japan—remain his best-loved and most widely seen.",
     "included_films": [
@@ -25127,7 +25053,7 @@
     "imdb_id": "tt0088184",
     "tmdb_id": 469,
     "poster_url": "https://image.tmdb.org/t/p/w185/Q9wdlNjBOti4JhAjAQXphzShw3.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy",
       "Drama"
@@ -26224,7 +26150,7 @@
     "imdb_id": "tt0067893",
     "tmdb_id": 27236,
     "poster_url": "https://image.tmdb.org/t/p/w185/8GSjw941Maq4oDvbYqbyc6UM8WH.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama"
     ],
@@ -28289,7 +28215,7 @@
     "imdb_id": "tt0181865",
     "tmdb_id": 1900,
     "poster_url": "https://image.tmdb.org/t/p/w185/jbccmnqE4oAPI67bApgt2JiRPz8.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Thriller",
       "Drama",
@@ -32879,7 +32805,7 @@
     "imdb_id": "tt0929425",
     "tmdb_id": 8882,
     "poster_url": "https://image.tmdb.org/t/p/w185/3XcCTqSovFZE5GRebJmh1kHwziw.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "Crime"
@@ -38166,7 +38092,7 @@
     "imdb_id": "tt0151568",
     "tmdb_id": 46435,
     "poster_url": "https://image.tmdb.org/t/p/w185/nxHjVAVOFgWbD2RptBBCLVO6SIR.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "Music",
@@ -38507,7 +38433,7 @@
     "criterion_url": "https://www.criterion.com/films/27561-blow-out",
     "imdb_id": "tt0082085",
     "tmdb_id": 11644,
-    "poster_url": "https://image.tmdb.org/t/p/w185/uFzMscVLDrTaYd6KXOXlr6dly7w.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/caad22922a50c784f749348ff20f886b/HSoTnpeX9dNMoVr7cuSwyc9b518AaO_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Crime",
@@ -39616,7 +39542,7 @@
     "criterion_url": "https://www.criterion.com/films/27658-cul-de-sac",
     "imdb_id": "tt0060268",
     "tmdb_id": 4772,
-    "poster_url": "https://image.tmdb.org/t/p/w185/jxNATC8t1rmrVMCMVMEAp41bgVm.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/9466ce24b77e3fa3a9ade373aac1fa2a/yNmDmRc9rtQN79bkL8PcRrpb8OjiKO_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Thriller",
@@ -40446,14 +40372,17 @@
     "film_id": "the-three-colors-trilogy",
     "title": "The Three Colors Trilogy",
     "spine_number": 587,
-    "director": "",
+    "director": "Krzysztof Kieślowski",
     "year": null,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/boxsets/844-three-colors",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": null,
-    "genres": []
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1841-3ab3e39d4fbbf677631b93028f6045ea/jFU59ZGM56ObO24vNH29PZRGa1EBzM_large.jpg",
+    "poster_source": "criterion",
+    "genres": [],
+    "is_box_set": true,
+    "box_set_film_count": 3
   },
   {
     "film_id": "three-colors-blue",
@@ -40640,7 +40569,7 @@
     "director": "Krzysztof Kieślowski",
     "year": 1994,
     "country": "",
-    "criterion_url": "https://www.criterion.com/boxsets/844-three-colors",
+    "criterion_url": "",
     "imdb_id": "tt0111495",
     "tmdb_id": 110,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1841-3ab3e39d4fbbf677631b93028f6045ea/jFU59ZGM56ObO24vNH29PZRGa1EBzM_original.jpg",
@@ -42320,7 +42249,7 @@
     "criterion_url": "https://www.criterion.com/films/27612-the-organizer",
     "imdb_id": "tt0056945",
     "tmdb_id": 51092,
-    "poster_url": "https://image.tmdb.org/t/p/w185/4DSOr6HnkfgIH62alfH09YDkW2Q.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/a90c0d0249e4b0669520f8338edf52ff/KhWjvv7SR4ccx10syh2rFGWy8bgrxH_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Drama",
@@ -43320,7 +43249,7 @@
     "criterion_url": "https://www.criterion.com/films/28441-weekend",
     "imdb_id": "tt0062480",
     "tmdb_id": 8075,
-    "poster_url": "https://image.tmdb.org/t/p/w185/e9p8VdsAKXz1GoVXD36Lg5e3YKo.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/ad43e347d1ff9502e3e9caafce14ed66/XaXYsmpqtQywCJyVTO4AaZADcLp6xv_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Comedy"
@@ -46065,80 +45994,16 @@
     "film_id": "pierre-etaix",
     "title": "Pierre Étaix",
     "spine_number": 655,
-    "director": "Odile Étaix",
-    "year": 2011,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/947-pierre-etaix",
-    "imdb_id": "tt2877038",
-    "tmdb_id": 388062,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1887-fa0c93e5085aced998c1f1409d6a8d99/mCOcYWmctVf2mOlNC1TZseoFc7zbTH_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Odile Étaix",
-          "tmdb_id": 1591886
-        }
-      ],
-      "writers": [],
-      "cinematographers": [
-        {
-          "name": "Pierre Boffety",
-          "tmdb_id": 1071415
-        }
-      ],
-      "editors": [
-        {
-          "name": "Camille Cotte",
-          "tmdb_id": 1036648
-        }
-      ],
-      "cast": [
-        {
-          "name": "Pierre Étaix",
-          "tmdb_id": 548816,
-          "character": "Self"
-        },
-        {
-          "name": "Jean-Claude Carrière",
-          "tmdb_id": 9747,
-          "character": "Self"
-        },
-        {
-          "name": "Nicole Calfan",
-          "tmdb_id": 93430,
-          "character": "Self"
-        },
-        {
-          "name": "Jerry Lewis",
-          "tmdb_id": 3663,
-          "character": "Self"
-        },
-        {
-          "name": "Michèle Brabo",
-          "tmdb_id": 228213,
-          "character": "Self"
-        },
-        {
-          "name": "Henri Lanoë",
-          "tmdb_id": 54359,
-          "character": "Self"
-        },
-        {
-          "name": "Jean Paillaud",
-          "tmdb_id": 1161227,
-          "character": "Self"
-        },
-        {
-          "name": "Roger Trapp",
-          "tmdb_id": 3523,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "A French comedy master whose films went unseen for decades as a result of legal tangles, director-actor Pierre Etaix is a treasure the cinematic world has rediscovered and embraced with relish. His work can be placed on the spectrum of classic physical comedy with that of Jacques Tati and Jerry Lewis, but it also stands alone in its good-natured delicacy. These films, influenced by Etaix’s experiences as a circus acrobat and clown and by the silent film comedies he adored, are elegantly deadpan, but as an on-screen presence, Etaix radiates warmth. This collection includes all of his films, five features,The Suitor,Yoyo, As Long as You’ve Got Your Health, Le grand amour,andLand of Milk and Honey—most of them collaborations with the great screenwriter Jean-Claude Carrière—and three shorts,Rupture,the Oscar-winningHappy Anniversary,andFeeling Good.Not one of these is anything less than a bracing and witty delight.",
     "included_films": [
@@ -46528,7 +46393,7 @@
     "criterion_url": "https://www.criterion.com/films/27552-things-to-come",
     "imdb_id": "tt0028358",
     "tmdb_id": 3596,
-    "poster_url": "https://image.tmdb.org/t/p/w185/5mjLuKluuMzBiCKTA28Qa8TR1wc.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/8acc91247738186c941d26d985dd25d1/Tq53ScFvzrnFOqKLNLZfExM0t52C7k_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Drama",
@@ -48187,91 +48052,16 @@
     "film_id": "zatoichi-the-blind-swordsman",
     "title": "Zatoichi: The Blind Swordsman",
     "spine_number": 679,
-    "director": "Takeshi Kitano",
-    "year": 2003,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1012-zatoichi-the-blind-swordsman",
-    "imdb_id": "tt0363226",
-    "tmdb_id": 246,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1829-e54c495813226f69d09f05ddc914b0e2/0VeHCin2ALFJtf0af05BebTL2pamd4_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Action"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Takeshi Kitano",
-          "tmdb_id": 3317
-        }
-      ],
-      "writers": [
-        {
-          "name": "Takeshi Kitano",
-          "tmdb_id": 3317
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "Katsumi Yanagijima",
-          "tmdb_id": 4998
-        }
-      ],
-      "editors": [
-        {
-          "name": "Takeshi Kitano",
-          "tmdb_id": 3317
-        },
-        {
-          "name": "Yoshinori Ota",
-          "tmdb_id": 4999
-        }
-      ],
-      "cast": [
-        {
-          "name": "Takeshi Kitano",
-          "tmdb_id": 3317,
-          "character": "Zatoichi / Ichi"
-        },
-        {
-          "name": "Tadanobu Asano",
-          "tmdb_id": 13275,
-          "character": "Hattori Genosuke"
-        },
-        {
-          "name": "Michiyo Yasuda",
-          "tmdb_id": 13276,
-          "character": "Tante Oume"
-        },
-        {
-          "name": "Yui Natsukawa",
-          "tmdb_id": 13280,
-          "character": "Oshino"
-        },
-        {
-          "name": "Guadalcanal Taka",
-          "tmdb_id": 13277,
-          "character": "Shinkichi"
-        },
-        {
-          "name": "Daigorô Tachibana",
-          "tmdb_id": 13278,
-          "character": "Geisha Seitaro O-Sei Naruto"
-        },
-        {
-          "name": "Yuko Daike",
-          "tmdb_id": 13257,
-          "character": "Geisha Okinu Naruto"
-        },
-        {
-          "name": "Ittoku Kishibe",
-          "tmdb_id": 13281,
-          "character": "Boss Inosuke Ginzo"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "The colossally popular Zatoichi films make up the longest-running action series in Japanese history and created one of the screen’s great heroes: an itinerant blind masseur who also happens to be a lightning-fast swordsman. As this iconic figure, the charismatic and earthy Shintaro Katsu became an instant superstar, lending a larger-than-life presence to the thrilling adventures of a man who lives staunchly by a code of honor and delivers justice in every town and village he enters. The films that feature him are variously pulse-pounding, hilarious, stirring, and completely off-the-wall. This deluxe set features the string of twenty-five Zatoichi films made between 1962 and 1973, collected in one package for the first time.",
     "included_films": [
@@ -50603,7 +50393,7 @@
     "imdb_id": "tt0015768",
     "tmdb_id": 55589,
     "poster_url": "https://image.tmdb.org/t/p/w185/iRxogRnql0tmHRhuH8XsV1pOSFr.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama"
     ],
@@ -52417,7 +52207,7 @@
     "imdb_id": "tt0055018",
     "tmdb_id": 16372,
     "poster_url": "https://image.tmdb.org/t/p/w185/idqvLBmlEHUITMnQ0EJ6Yb5TpVw.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Horror",
       "Mystery",
@@ -52507,7 +52297,7 @@
     "imdb_id": "tt19841734",
     "tmdb_id": 919573,
     "poster_url": "https://image.tmdb.org/t/p/w185/4nQ7hBCfr8mS0NAzDj0dg5Atq1t.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy",
       "Crime",
@@ -53256,7 +53046,7 @@
     "imdb_id": "tt0025316",
     "tmdb_id": 3078,
     "poster_url": "https://image.tmdb.org/t/p/w185/2PNUGWAflH6UUumas0POMmokHlc.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy",
       "Romance"
@@ -53869,7 +53659,7 @@
     "imdb_id": "tt0079854",
     "tmdb_id": 113479,
     "poster_url": "https://image.tmdb.org/t/p/w185/hA69SHZQ3jixYq2wykoTlH2VgjI.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama"
     ],
@@ -56028,7 +55818,7 @@
     "criterion_url": "https://www.criterion.com/films/28698-day-for-night",
     "imdb_id": "tt0070460",
     "tmdb_id": 1675,
-    "poster_url": "https://image.tmdb.org/t/p/w185/e5xDrSx6zDEUlMe2dWKGhv88PDZ.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7667c4229e57db415f4b05c81d07da43/AnZ260N6qfjN3t5vWZvfLYZv2PcaoB_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Comedy",
@@ -57189,40 +56979,16 @@
     "film_id": "the-apu-trilogy",
     "title": "The Apu Trilogy",
     "spine_number": 782,
-    "director": "Kogonada",
-    "year": 2015,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1145-the-apu-trilogy",
-    "imdb_id": "tt7956990",
-    "tmdb_id": 648672,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2043-f4da3d5006f2a970282f17be8c294db3/bDrfYcPsmq9yU7aO2Z9xg2HUGie1lG_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Kogonada",
-          "tmdb_id": 1555636
-        }
-      ],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "Mira Nair",
-          "tmdb_id": 6495,
-          "character": "Self"
-        },
-        {
-          "name": "Davide Pozzi",
-          "tmdb_id": 2244558,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "A breathtaking milestone that broughtIndia into the golden age of international art-house film, Satyajit Ray’sThe Apu Trilogyfollows one indelible character, a free-spirited child in rural Bengal whomatures into an adolescent urban student and, finally, a sensitive man of the world. Ray’s delicate masterworks—Pather Panchali(Song of the Little Road),Aparajito(The Unvanquished), andApur Sansar(The World of Apu)—based on two books by Bibhutibhusan Banerjee, were shot over the course of five years, and each stands on its own as a tender, visually radiant journey. These films—whichhave risen from the ashes in meticulously reconstructed restorations, after the original negatives were burned in a fire—are among the most achingly beautiful, richly humane movies ever made.",
     "included_films": [
@@ -57507,7 +57273,7 @@
     "criterion_url": "https://www.criterion.com/films/28655-dont-look-back",
     "imdb_id": "tt0061589",
     "tmdb_id": 135,
-    "poster_url": "https://image.tmdb.org/t/p/w185/2kd5XfH2MhFlChq7DkjxWBLoYPF.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/520ccec1451bbeade3175c32ff46b736/SgNPHBjYshUm7a8TzlMLbbK0525KTN_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Documentary",
@@ -58390,20 +58156,6 @@
         }
       ]
     }
-  },
-  {
-    "film_id": "the-emigrants-jan-troell-double-feature",
-    "title": "The Emigrants (Jan Troell double feature)",
-    "spine_number": 796,
-    "director": "",
-    "year": null,
-    "country": "",
-    "criterion_url": "",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "poster_url": null,
-    "genres": [],
-    "credits": null
   },
   {
     "film_id": "the-new-land-jan-troell-double-feature",
@@ -61892,7 +61644,7 @@
     "imdb_id": "tt0057643",
     "tmdb_id": 4498,
     "poster_url": "https://image.tmdb.org/t/p/w185/z7U7XZWeRmsxqMtVahHHYQYIxlY.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Comedy",
       "Drama"
@@ -75802,7 +75554,7 @@
     "imdb_id": "tt0101458",
     "tmdb_id": 10341,
     "poster_url": "https://image.tmdb.org/t/p/w185/sDpYWgYkBlrVnpySXQNsxVvDAAG.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "Science Fiction",
@@ -76996,7 +76748,7 @@
     "imdb_id": "tt0063633",
     "tmdb_id": 18352,
     "poster_url": "https://image.tmdb.org/t/p/w185/9or2Jzw9HOE4gp9niwXBkZdpTVx.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Horror",
       "Drama",
@@ -82173,7 +81925,7 @@
     "imdb_id": "tt0072443",
     "tmdb_id": 1396,
     "poster_url": "https://image.tmdb.org/t/p/w185/AttDP5OEsMxtHPPN7Z92p2Ntnmd.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "History"
@@ -84217,7 +83969,7 @@
     "imdb_id": "tt0154420",
     "tmdb_id": 309,
     "poster_url": "https://image.tmdb.org/t/p/w185/2LRzNq41yrY8EjCnD1S8sCCPvKk.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama"
     ],
@@ -93468,7 +93220,7 @@
     "tmdb_id": 80039,
     "tmdb_type": "tv",
     "poster_url": "https://image.tmdb.org/t/p/w185/CrrTqw7LHafnbdH9UcK60aOZSm.jpg",
-    "poster_source": "criterion",
+    "poster_source": "tmdb",
     "genres": [
       "Drama",
       "Sci-Fi & Fantasy"
@@ -114498,85 +114250,16 @@
     "film_id": "i-am-curious",
     "title": "I Am Curious",
     "spine_number": 179,
-    "director": "Stig Björkman",
-    "year": 1995,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/338-i-am-curious",
-    "imdb_id": "tt0314190",
-    "tmdb_id": 498376,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2065-02c52fb3b0a913a373594c5951bdea2a/ZjKFYEG4OMTkWccm5qfmSP8rzfQLVZ_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Stig Björkman",
-          "tmdb_id": 557222
-        }
-      ],
-      "writers": [
-        {
-          "name": "Stig Björkman",
-          "tmdb_id": 557222
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "Stefan Kullänger",
-          "tmdb_id": 1264207
-        }
-      ],
-      "editors": [
-        {
-          "name": "Berit Ljungstedt",
-          "tmdb_id": 4042818
-        }
-      ],
-      "cast": [
-        {
-          "name": "Lena Nyman",
-          "tmdb_id": 3854,
-          "character": "The Guide"
-        },
-        {
-          "name": "Lars von Trier",
-          "tmdb_id": 42,
-          "character": "Self"
-        },
-        {
-          "name": "Aki Kaurismäki",
-          "tmdb_id": 16767,
-          "character": "Self"
-        },
-        {
-          "name": "Fridrik Thor Fridriksson",
-          "tmdb_id": 6759,
-          "character": "Self"
-        },
-        {
-          "name": "Erland Josephson",
-          "tmdb_id": 38127,
-          "character": "Self"
-        },
-        {
-          "name": "Sven Nykvist",
-          "tmdb_id": 11905,
-          "character": "Self"
-        },
-        {
-          "name": "Liv Ullmann",
-          "tmdb_id": 11916,
-          "character": "Self"
-        },
-        {
-          "name": "Stefan Jarl",
-          "tmdb_id": 224419,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "Seized by customs upon entry to the United States, subject of a heated court battle, banned in cities across the United States, Vilgot Sjöman’sI Am Curious—Yellowis one of the most controversial films of all time. This landmark document of Swedish society during the sexual revolution has been declared both obscene and revolutionary. It tells the story of Lena (Lena Nyman), a searching and rebellious young woman, and her personal quest to understand the social and political conditions in 1960s Sweden, as well as her bold exploration of her own sexual identity. Shattering taboos as it freely traverses the lines between fact and fiction,I Am Curious—Yellowis presented here for the first time with its companion pieceI Am Curious—Blue,a parallel film featuring the same characters and in which the lines between documentary and fiction are even further blurred.",
     "included_films": [
@@ -115613,70 +115296,16 @@
     "film_id": "ingmar-bergmans-cinema",
     "title": "Ingmar Bergman’s Cinema",
     "spine_number": null,
-    "director": "Katja Raganelli",
-    "year": 1993,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "imdb_id": "tt1080651",
-    "tmdb_id": 622389,
-    "poster_url": "https://image.tmdb.org/t/p/w185/kYMYCmqUSZd4XX8EIQEcFKyIr98.jpg",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1929-4d592bff5abc636d45619dfd6d997edd/tKFKOgGoH5bF64n2r7YLfezGOkZBvO_large.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Katja Raganelli",
-          "tmdb_id": 1177860
-        }
-      ],
-      "writers": [],
-      "cinematographers": [
-        {
-          "name": "Konrad Wickler",
-          "tmdb_id": 2195338
-        }
-      ],
-      "editors": [
-        {
-          "name": "Camilla Bernetti",
-          "tmdb_id": 2384596
-        }
-      ],
-      "cast": [
-        {
-          "name": "Bibi Andersson",
-          "tmdb_id": 6657,
-          "character": "Self"
-        },
-        {
-          "name": "Harriet Andersson",
-          "tmdb_id": 7569,
-          "character": "Self"
-        },
-        {
-          "name": "Eva Dahlbeck",
-          "tmdb_id": 70276,
-          "character": "Self"
-        },
-        {
-          "name": "Gunnel Lindblom",
-          "tmdb_id": 6662,
-          "character": "Self"
-        },
-        {
-          "name": "Ingrid Thulin",
-          "tmdb_id": 8742,
-          "character": "Self"
-        },
-        {
-          "name": "Liv Ullmann",
-          "tmdb_id": 11916,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "In honor of Ingmar Bergman’s one hundredth birthday, the Criterion Collection is proud to present the most comprehensive collection of his films ever released on home video. One of the most revelatory voices to emerge from the postwar explosion of international art-house cinema, Bergman was a master storyteller who startled the world with his stark intensity and naked pursuit of the most profound metaphysical and spiritual questions. The struggles of faith and morality, the nature of dreams, and the agonies and ecstasies of human relationships—Bergman explored these subjects in films ranging from comedies whose lightness and complexity belie their brooding hearts to groundbreaking formal experiments and excruciatingly intimate explorations of family life.",
     "included_films": [
@@ -119836,7 +119465,7 @@
     "criterion_url": "https://www.criterion.com/films/648-mona-lisa",
     "imdb_id": "tt0091538",
     "tmdb_id": 10002,
-    "poster_url": "https://image.tmdb.org/t/p/w185/geBGfbhkgKHld8rM9XuLfzPGZ6I.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/3596a424aaf2fbfcecb1acdaefff5aa9/J2myVyWD48oCQfQa7yHRkDMHwtv9Ob_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Crime",
@@ -122045,7 +121674,7 @@
     "criterion_url": "",
     "imdb_id": "tt0062285",
     "tmdb_id": 195841,
-    "poster_url": "https://image.tmdb.org/t/p/w185/7M2tN7WYcFbB15I3UcOmdM854uJ.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/w185/l23NdXYuqkhFiXZHAES3XJkfBkN.jpg",
     "poster_source": "tmdb",
     "genres": [
       "Drama"
@@ -124093,103 +123722,16 @@
     "film_id": "police-story-police-story-2",
     "title": "Police Story / Police Story 2",
     "spine_number": null,
-    "director": "Jackie Chan",
-    "year": 1988,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1554-police-story-police-story-2",
-    "imdb_id": "tt0095403",
-    "tmdb_id": 10753,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1937-aff2f45a419934209b08d3a4845d45be/tRxqeUPiDPindtwZmutJ5SCGXzezgX_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Jackie Chan",
-          "tmdb_id": 18897
-        }
-      ],
-      "writers": [
-        {
-          "name": "Jackie Chan",
-          "tmdb_id": 18897
-        },
-        {
-          "name": "Edward Tang",
-          "tmdb_id": 46318
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "Cheung Yiu-Cho",
-          "tmdb_id": 56832
-        },
-        {
-          "name": "Danny Lee Yau-Tong",
-          "tmdb_id": 550950
-        }
-      ],
-      "editors": [
-        {
-          "name": "Peter Cheung Yiu-Chung",
-          "tmdb_id": 46326
-        },
-        {
-          "name": "Keung Chuen-Tak",
-          "tmdb_id": 213442
-        },
-        {
-          "name": "Sek Chi-Kong",
-          "tmdb_id": 3868738
-        }
-      ],
-      "cast": [
-        {
-          "name": "Jackie Chan",
-          "tmdb_id": 18897,
-          "character": "Sergeant Chan Ka-Kui"
-        },
-        {
-          "name": "Bill Tung Biu",
-          "tmdb_id": 44922,
-          "character": "Inspector \"Uncle\" Bill Chou"
-        },
-        {
-          "name": "Maggie Cheung",
-          "tmdb_id": 1338,
-          "character": "May"
-        },
-        {
-          "name": "Lam Kwok-Hung",
-          "tmdb_id": 1346975,
-          "character": "Superintendent Raymond Li"
-        },
-        {
-          "name": "Mars",
-          "tmdb_id": 119454,
-          "character": "Kim"
-        },
-        {
-          "name": "Benny Lai Keung-Kuen",
-          "tmdb_id": 1121128,
-          "character": "Mute Blackmailer"
-        },
-        {
-          "name": "Kenny Ho Kar-King",
-          "tmdb_id": 109506,
-          "character": "Policeman 12674"
-        },
-        {
-          "name": "Johnny Cheung Wa",
-          "tmdb_id": 1346978,
-          "character": "Policeman"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "The jaw-dropping set pieces fly fast and furious in Jackie Chan’s breathtakingly inventive action comedies, two smash hits that made him a worldwide icon of daredevil spectacle. The director/star/one-man stunt machine plays Ka-kui, a Hong Kong police inspector whose methods are, ahem, unorthodox; the phenomenal Maggie Cheung, in a star-making role, plays his much-put-upon girlfriend, May. Packed wall-to-wall with astoundingly acrobatic fight choreography, epic explosions, charmingly goofball slapstick, and awesomely 1980s electro soundtracks,Police StoryandPolice Story 2set a new standard for rock-’em, sock-’em mayhem that established Chan as a performer of unparalleled grace and daring and would influence a generation of filmmakers, from Hong Kong to Hollywood.",
     "included_films": [
@@ -126991,17 +126533,11 @@
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/6517-small-axe",
     "imdb_id": null,
-    "tmdb_id": 1533099,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2018-d520eca5b1cb982d9024d513aa2b9923/wcCz67EYijqwFUBu5e6pd5HyimhqwC_original.jpg",
     "poster_source": "criterion",
     "genres": [],
-    "credits": {
-      "directors": [],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": []
-    },
+    "credits": null,
     "is_box_set": true,
     "description": "With the five films that make up hisSmall Axeanthology (Mangrove; Lovers Rock; Red, White and Blue; Alex Wheatle;andEducation), director Steve McQueen offers a richly evocative panorama of West Indian life in London from the late 1960s through the early ’80s—a time defined for the community by the terror of police violence, the empowering awakening of political consciousness, and the ecstatic escape of a vibrant reggae scene. Ranging in tone from tenderly impressionistic to devastatingly clear-eyed, these powerfully performed portraits of Black resistance, joy, creativity, and collective action—all sumptuously shot by Shabier Kirchner—form a revolutionary counterhistory of mid-twentieth-century Britain at a transformational moment.",
     "included_films": [
@@ -129606,34 +129142,15 @@
     "title": "The Emigrants/The New Land",
     "spine_number": null,
     "director": "",
-    "year": 2016,
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/1165-the-emigrants-the-new-land",
-    "imdb_id": "tt5965688",
-    "tmdb_id": 574800,
+    "imdb_id": null,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1862-a6d27bb1690cceebe0e316b9d42ad371/Mk6tOX6R5Dhlgj3yJMCixqZ8WNp7XK_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Documentary"
-    ],
-    "credits": {
-      "directors": [],
-      "writers": [],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "Jan Troell",
-          "tmdb_id": 27014,
-          "character": "Self"
-        },
-        {
-          "name": "Peter Cowie",
-          "tmdb_id": 1435511,
-          "character": "Self"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "This monumental mid-nineteenth-century epic from Jan Troell charts, over the course of two films, a Swedish farming family’s voyage to America and their efforts to put down roots in this beautiful but forbidding new world. Movie legends Max von Sydow and Liv Ullmann give remarkably authentic performances as Karl Oskar and Kristina, a couple who meet with one physical and emotional trial after another on their arduous journey. The precise, minute detail with which Troell depicts the couple’s story—which is also that of countless other people who sought better lives across the Atlantic—is a wonder to behold. Engrossing at every step of the way, the duo ofThe EmigrantsandThe New Landmakes for perhaps the greatest screen drama about the settling of America.",
     "included_films": [
@@ -131226,87 +130743,16 @@
     "film_id": "the-infernal-affairs-trilogy",
     "title": "The Infernal Affairs Trilogy",
     "spine_number": 1159,
-    "director": "Andrew Lau Wai-Keung",
-    "year": 2004,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/6276-the-infernal-affairs-trilogy",
     "imdb_id": null,
-    "tmdb_id": 1599219,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2023-66e92c73c080113a04de1b72873758a8/G3H3cU3lGSU9KYkzOeqWCA1hGgUvzu_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Drama",
-      "Action",
-      "Thriller",
-      "Crime",
-      "Mystery"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Andrew Lau Wai-Keung",
-          "tmdb_id": 65994
-        },
-        {
-          "name": "Alan Mak Siu-Fai",
-          "tmdb_id": 66718
-        }
-      ],
-      "writers": [
-        {
-          "name": "Felix Chong Man-Keung",
-          "tmdb_id": 66719
-        },
-        {
-          "name": "Alan Mak Siu-Fai",
-          "tmdb_id": 66718
-        }
-      ],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
-        {
-          "name": "Andy Lau",
-          "tmdb_id": 25246,
-          "character": "Lau Kin Ming"
-        },
-        {
-          "name": "Tony Leung Chiu-wai",
-          "tmdb_id": 1337,
-          "character": "Chan Wing Yan"
-        },
-        {
-          "name": "Anthony Wong Chau-Sang",
-          "tmdb_id": 66717,
-          "character": "Wong Chi Shing"
-        },
-        {
-          "name": "Eric Tsang Chi-Wai",
-          "tmdb_id": 26724,
-          "character": "Hon Sam"
-        },
-        {
-          "name": "Shawn Yue",
-          "tmdb_id": 78869,
-          "character": "Young Chan Wing Yan"
-        },
-        {
-          "name": "Edison Chen",
-          "tmdb_id": 20372,
-          "character": "Young Lau Kin Ming"
-        },
-        {
-          "name": "Francis Ng Chun-Yu",
-          "tmdb_id": 63584,
-          "character": "Ngai Wing Hau"
-        },
-        {
-          "name": "Kelly Chen",
-          "tmdb_id": 72730,
-          "character": "Lee Sum Yee"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "The Hong Kong crime drama was jolted to new life with the release of theInfernal Affairstrilogy, a bracing, explosively stylish critical and commercial triumph that introduced a dazzling level of narrative and thematic complexity to the genre with its gripping saga of two rival moles—played by superstars Tony Leung Chiu-wai and Andy Lau Tak-wah—who navigate slippery moral choices as they move between the intersecting territories of Hong Kong’s police force and its criminal underworld. Set during the uncertainty of the city-state’s handover from Britain to China and steeped in Buddhist philosophy, these ingeniously crafted tales of self-deception and betrayal mirror Hong Kong’s own fractured identity and the psychic schisms of life in a postcolonial purgatory.",
     "included_films": [
@@ -134142,76 +133588,16 @@
     "film_id": "the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
     "title": "The Three Musketeers / The Four Musketeers: Two Films by Richard Lester",
     "spine_number": 1263,
-    "director": "Pierre Aknine",
-    "year": 2005,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/7974-the-three-musketeers-the-four-musketeers-two-films-by-richard-lester",
-    "imdb_id": "tt0425945",
-    "tmdb_id": 119900,
-    "poster_url": "https://image.tmdb.org/t/p/w185/uwk8yMUe5XbvbejiBJ6CQNNDUTr.jpg",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2085-51259520a591e486478292d7c44d25ed/vTjIL84GfnnUQPTOxsv6pDReCUHiCH_large.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Adventure",
-      "Action"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Pierre Aknine",
-          "tmdb_id": 1071332
-        }
-      ],
-      "writers": [],
-      "cinematographers": [
-        {
-          "name": "Allen Smith",
-          "tmdb_id": 1194062
-        }
-      ],
-      "editors": [],
-      "cast": [
-        {
-          "name": "Emmanuelle Béart",
-          "tmdb_id": 4885,
-          "character": "Milady Winter"
-        },
-        {
-          "name": "Vincent Elbaz",
-          "tmdb_id": 54918,
-          "character": "D'Artagnan"
-        },
-        {
-          "name": "Tchéky Karyo",
-          "tmdb_id": 10698,
-          "character": "Le cardinal de Richelieu"
-        },
-        {
-          "name": "Heino Ferch",
-          "tmdb_id": 1086,
-          "character": "Athos"
-        },
-        {
-          "name": "Grégori Derangère",
-          "tmdb_id": 23670,
-          "character": "Aramis"
-        },
-        {
-          "name": "Grégory Gadebois",
-          "tmdb_id": 223532,
-          "character": "Porthos"
-        },
-        {
-          "name": "Stefania Rocca",
-          "tmdb_id": 15917,
-          "character": "Anne D'Autriche"
-        },
-        {
-          "name": "Diana Amft",
-          "tmdb_id": 57361,
-          "character": "Constance Bonacieux"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true,
     "description": "Alexandre Dumas’s immortal tale of adventure and camaraderie received perhaps the finest of its numerous screen adaptations with this two-part swashbuckling spectacular fromA Hard Day’sNightdirector Richard Lester. Featuring Michael York, OliverReed, Frank Finlay, and Richard Chamberlain as the swaggering swordsmen, who thrust and parry their way through courtly intrigue in seventeenth-century France,The Three MusketeersandThe Four Musketeersare also graced with an all-star supporting cast that includes Raquel Welch, Faye Dunaway, Geraldine Chaplin, and Charlton Heston. Lester’s exuberant epic breathes new life into an oft-told classic through its boisterous slapstick invention, its meticulous attention to period detail, and a sense of pure, unbridled bravado that is thrilling to behold.",
     "included_films": [
@@ -135682,7 +135068,7 @@
     "criterion_url": "https://www.criterion.com/films/735-throne-of-blood",
     "imdb_id": "tt0050613",
     "tmdb_id": 3777,
-    "poster_url": "https://image.tmdb.org/t/p/w185/zaZFMNxJST0TtPd68yF7fNt1he8.jpg",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/98b05e1d3fcf11d6017dc8f992628702/Ik644p20t9hnsvAgVJGckMGPIXVmBG_original.jpg",
     "poster_source": "criterion",
     "genres": [
       "Drama",
@@ -141429,79 +140815,16 @@
     "film_id": "the-killers",
     "title": "The Killers",
     "spine_number": null,
-    "director": "Tanya Hamilton",
-    "year": 1995,
+    "director": "",
+    "year": null,
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/334-the-killers",
     "imdb_id": null,
-    "tmdb_id": 1274350,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1859-5a1d456ec7733e9205b555242f30548d/QydMAqke3toeG4h4BOBYwNcOHf6z3W_original.jpg",
     "poster_source": "criterion",
-    "genres": [
-      "Drama"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Tanya Hamilton",
-          "tmdb_id": 141172
-        }
-      ],
-      "writers": [
-        {
-          "name": "Tanya Hamilton",
-          "tmdb_id": 141172
-        }
-      ],
-      "cinematographers": [
-        {
-          "name": "J.D. Ligier",
-          "tmdb_id": 1404153
-        },
-        {
-          "name": "Jeff Baustert",
-          "tmdb_id": 1378433
-        }
-      ],
-      "editors": [
-        {
-          "name": "Tanya Hamilton",
-          "tmdb_id": 141172
-        }
-      ],
-      "cast": [
-        {
-          "name": "Mike Butters",
-          "tmdb_id": 2134,
-          "character": ""
-        },
-        {
-          "name": "Lindsay Edwards",
-          "tmdb_id": 3529431,
-          "character": "Biebel"
-        },
-        {
-          "name": "Tani Grey",
-          "tmdb_id": 4652336,
-          "character": "Marti"
-        },
-        {
-          "name": "Dianah Lilvera",
-          "tmdb_id": 4652337,
-          "character": "Blaustein"
-        },
-        {
-          "name": "Dorothy Cunningham",
-          "tmdb_id": 1867283,
-          "character": "Mama"
-        },
-        {
-          "name": "Fitz Weir",
-          "tmdb_id": 1599591,
-          "character": "Papa"
-        }
-      ]
-    },
+    "genres": [],
+    "credits": null,
     "is_box_set": true
   },
   {
@@ -141513,7 +140836,7 @@
     "country": "",
     "criterion_url": "https://www.criterion.com/boxsets/2363-the-koker-trilogy",
     "imdb_id": null,
-    "tmdb_id": 1679625,
+    "tmdb_id": null,
     "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1947-6cf8d8f140a25cd8f62e087c268b4643/XbFH2LD6d9MtdOVyA3AOMBjMl5QY4V_original.jpg",
     "poster_source": "criterion",
     "genres": [],

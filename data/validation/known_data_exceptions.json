@@ -95,8 +95,21 @@
       "six-moral-tales": "Rohmer six-film collection; the old match was its member film La Collectionneuse.",
       "the-kennedy-films-of-robert-drew-associates": "Documentary collection; the old match was its member film Adventures on the New Frontier.",
       "trilogy-of-life": "Pasolini three-film collection; was wrongly matched to an unrelated 2018 documentary.",
-      "the-emigrants-jan-troell-double-feature": "Double feature (The Emigrants + The New Land); no single TMDB movie corresponds to it.",
-      "pan-1": "No verified Criterion release behind this catalog row (no spine, no Criterion URL); the old match was an unrelated 2020 documentary."
+      "pan-1": "No verified Criterion release behind this catalog row (no spine, no Criterion URL); the old match was an unrelated 2020 documentary.",
+      "ingmar-bergmans-cinema": "Thirty-nine-film Bergman retrospective; the old match was Katja Raganelli's 1993 documentary Die Frauen in Ingmar Bergmans Filmen (622389).",
+      "la-jetee-sans-soleil": "Two-film Chris Marker release; the old match was its member film La Jetee (662), which the standalone la-jetee row already carries.",
+      "the-koker-trilogy": "Three-film Kiarostami collection; the old id 1679625 no longer resolves on TMDB.",
+      "the-apu-trilogy": "Three-film Satyajit Ray collection; the old match was the thirteen-minute supplement Restoring the Apu Trilogy (648672).",
+      "police-story-police-story-2": "Two-film Jackie Chan release; the old match was its member film Police Story 2 (10753), which the standalone police-story-2 row already carries.",
+      "the-killers": "Two-film release pairing Siodmak's 1946 and Siegel's 1964 The Killers; the old match was Tanya Hamilton's unrelated 1995 short (1274350).",
+      "the-brd-trilogy": "Three-film Fassbinder collection; the old id 1712202 no longer resolves on TMDB.",
+      "pierre-etaix": "Five-film Pierre Etaix collection; the old match was Odile Etaix's 2011 documentary about him, Pierre Etaix, un destin anime (388062).",
+      "the-three-musketeers-the-four-musketeers-two-films-by-richard-lester": "Two Richard Lester films from 1973 and 1974; the old match was Pierre Aknine's unrelated 2005 French TV film D'Artagnan et les Trois Mousquetaires (119900).",
+      "small-axe": "Five-film Steve McQueen anthology; the old match was the unrelated Big Plane Small Axe - the mistrial of Mary Kelly (1533099).",
+      "i-am-curious": "Two-film Vilgot Sjoman release (Yellow and Blue); the old match was Stig Bjorkman's 1995 documentary I Am Curious, Film (498376).",
+      "zatoichi-the-blind-swordsman": "Twenty-five-film Zatoichi series box set; the old match was Takeshi Kitano's unrelated 2003 Zatoichi (246).",
+      "the-infernal-affairs-trilogy": "Three-film Infernal Affairs collection; the old id 1599219 no longer resolves on TMDB.",
+      "the-emigrantsthe-new-land": "Jan Troell double feature; the old match was the interview supplement Coming to America: Jan Troell on 'The Emigrants' and 'The New Land' (574800). Twin of the already-accepted the-emigrants-jan-troell-double-feature row."
     },
     "film_missing_imdb_id": {
       "a-hollis-frampton-odyssey": "Multi-film collection; TMDB has no verified single IMDb ID to backfill locally.",
