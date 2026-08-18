@@ -90,7 +90,7 @@ describe('film normalization', () => {
 });
 
 describe('pick-count rules', () => {
-  it('counts criterion-sourced quoteless picks but not other quoteless picks or aggregates', () => {
+  it('counts criterion-sourced quoteless picks but not other quoteless picks', () => {
     cleanup = makeFixtureDir({
       picks: [
         // counted: has a quote
@@ -99,13 +99,29 @@ describe('pick-count rules', () => {
         { guest_slug: 'g2', film_id: 'film-a', source: 'criterion' },
         // not counted: quoteless and not criterion-sourced
         { guest_slug: 'g3', film_id: 'film-a' },
-        // not counted: box set aggregate
-        { guest_slug: 'g4', film_id: 'film-a', quote: 'set quote', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'Set' },
+        // not counted here: the aggregate names the box set, not film-a
+        { guest_slug: 'g4', film_id: 'set-a', quote: 'set quote', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'Set' },
       ],
       guests: [guest({ slug: 'g1' }), guest({ slug: 'g2' }), guest({ slug: 'g3' }), guest({ slug: 'g4' })],
       catalog: [{ film_id: 'film-a', title: 'Film A' }],
     });
     expect(getFilms().find((f) => f.slug === 'film-a')!.pick_count).toBe(2);
+  });
+
+  it('counts a box set\'s own aggregates when it also appears as an individual film', () => {
+    // The Apu Trilogy / The Killers shape: one individual pick puts the box set
+    // into getFilms(), and its page then lists the aggregate guests too. The
+    // header must count everyone shown, not just the individual pick.
+    cleanup = makeFixtureDir({
+      picks: [
+        { guest_slug: 'g1', film_id: 'set-a', quote: 'as a film', extraction_confidence: 'high' },
+        { guest_slug: 'g2', film_id: 'set-a', quote: 'the set', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'Set A' },
+        { guest_slug: 'g3', film_id: 'set-a', quote: 'also the set', extraction_confidence: 'high', box_set_film_count: 3, box_set_name: 'Set A' },
+      ],
+      guests: [guest({ slug: 'g1' }), guest({ slug: 'g2' }), guest({ slug: 'g3' })],
+      catalog: [{ film_id: 'set-a', title: 'Set A' }],
+    });
+    expect(getFilms().find((f) => f.slug === 'set-a')!.pick_count).toBe(3);
   });
 
   it('prefers an explicit pick_count on the catalog entry', () => {

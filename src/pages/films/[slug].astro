@@ -46,7 +46,12 @@ const pageDescription = film
       const namesStr = guestNames.length > 0 ? ` including ${guestNames.join(', ')}` : '';
       const genre = film.genres[0] || 'film';
       const article = /^[aeiou]/i.test(genre) ? 'an' : 'a';
-      return `${film.title} (${film.year}) by ${film.director} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
+      // Box-set catalog rows carry no single year or director, so only include
+      // the parts we actually have rather than printing "(null) by ".
+      const credit = [film.year ? `(${film.year})` : '', film.director ? `by ${film.director}` : '']
+        .filter(Boolean)
+        .join(' ');
+      return `${film.title}${credit ? ` ${credit}` : ''} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
     })()
   : (() => {
       const names = bsPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);

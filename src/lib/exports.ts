@@ -93,7 +93,12 @@ export function buildMarkdownExport(): string {
         const spine = film.criterion_spine_number ? ` - Spine #${film.criterion_spine_number}` : '';
         const criterion = film.criterion_url ? ` - [Criterion](${film.criterion_url})` : '';
         const imdb = film.imdb_url ? ` - [IMDB](${film.imdb_url})` : '';
-        lines.push(`- **${film.title}** (${film.year}) - ${film.director}${spine}${criterion}${imdb}`);
+        // Box-set rows carry no single year or director, so emit only the
+        // parts we have rather than "(null) -  -".
+        const credit = [film.year ? `(${film.year})` : '', film.director || '']
+          .filter(Boolean)
+          .join(' - ');
+        lines.push(`- **${film.title}**${credit ? ` ${credit}` : ''}${spine}${criterion}${imdb}`);
       }
 
       if (pick.quote) lines.push(`  > "${pick.quote}"`);

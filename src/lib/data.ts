@@ -208,8 +208,11 @@ export function getFilms(): Film[] {
   for (const p of picks) {
     // Only count picks with actual quotes
     if (p.source !== 'criterion' && (!p.quote || p.extraction_confidence === 'none')) continue;
-    // Skip box set aggregate entries (they count toward the box set, not individual films)
-    if (p.box_set_film_count) continue;
+    // An aggregate pick names the box set itself, never a member film, so counting
+    // it here can only ever credit its own entry. A handful of box sets also appear
+    // in getFilms() because they were picked as an individual film too (The Apu
+    // Trilogy, The Killers); their page lists both kinds of pick, so both must count
+    // or the header undercounts the guests actually shown.
     pickCounts.set(p.film_slug, (pickCounts.get(p.film_slug) || 0) + 1);
   }
 
