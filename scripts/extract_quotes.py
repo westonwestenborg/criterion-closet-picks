@@ -411,6 +411,7 @@ def _process_transcript_guest(
     existing_pick_index: dict,
     checkpoint: dict,
     lock: threading.Lock | None = None,
+    visit_index: int = 1,
 ) -> bool:
     """
     Extract quotes for one guest from a text transcript and merge the results
@@ -451,9 +452,11 @@ def _process_transcript_guest(
                 pick["quote"] = quote_match["quote"]
                 pick["start_timestamp"] = quote_match["start_timestamp"]
                 pick["extraction_confidence"] = quote_match["confidence"]
-                # Tag with visit_index 1 (primary pass = first visit)
-                pick["visit_index"] = 1
-                if video_id and quote_match["start_timestamp"]:
+                # Primary pass is the first visit unless --visit targeted another.
+                pick["visit_index"] = visit_index
+                # `is not None`, not truthiness: a pick discussed at 0:00 has a
+                # timestamp of 0, which is falsy and would silently lose its link.
+                if video_id and quote_match["start_timestamp"] is not None:
                     if video_source == "vimeo":
                         pick["vimeo_timestamp_url"] = (
                             f"https://vimeo.com/{video_id}#t={quote_match['start_timestamp']}s"
@@ -542,8 +545,16 @@ def main():
     audio_candidates = []
     for guest in guests:
         slug = guest["slug"]
-        video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
-        video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
+        source_visit = guest
+        # --visit N filters the picks to visit N, so the transcript has to come
+        # from THAT visit's video. Reading the guest's primary (visit-1) video
+        # here would score visit-1 speech against visit-N films.
+        if args.visit is not None:
+            match = [v for v in guest.get("visits", []) if v.get("visit_index") == args.visit]
+            if match:
+                source_visit = match[0]
+        video_id = source_visit.get("youtube_video_id") or source_visit.get("vimeo_video_id")
+        video_source = "youtube" if source_visit.get("youtube_video_id") else "vimeo"
         guest_picks = picks_by_guest.get(slug, [])
 
         if not video_id:
@@ -596,7 +607,8 @@ def main():
         for guest, guest_picks, transcript_path in tqdm(guests_to_process, desc="Extracting quotes"):
             log(f"  Processing {guest['name']} ({len(guest_picks)} picks)")
             if _process_transcript_guest(
-                model, guest, guest_picks, transcript_path, existing_pick_index, checkpoint
+                model, guest, guest_picks, transcript_path, existing_pick_index, checkpoint,
+                visit_index=args.visit if args.visit is not None else 1,
             ):
                 processed += 1
                 time.sleep(6)  # Rate limit: ~10 RPM for Gemini
@@ -618,6 +630,7 @@ def main():
                 return _process_transcript_guest(
                     thread_local.model, guest, guest_picks, transcript_path,
                     existing_pick_index, checkpoint, lock=state_lock,
+                    visit_index=args.visit if args.visit is not None else 1,
                 )
             except Exception as e:
                 log(f"  Error: {guest['name']}: {e}")
@@ -663,7 +676,9 @@ def main():
                     pick["start_timestamp"] = quote_match["start_timestamp"]
                     pick["extraction_confidence"] = quote_match["confidence"]
                     pick["visit_index"] = 1
-                    if video_id and quote_match["start_timestamp"]:
+                    # `is not None`, not truthiness: a pick discussed at 0:00 has a
+                    # timestamp of 0, which is falsy and would silently lose its link.
+                    if video_id and quote_match["start_timestamp"] is not None:
                         pick["youtube_timestamp_url"] = (
                             f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
                         )
@@ -746,7 +761,9 @@ def main():
                             pick["extraction_confidence"] = quote_match["confidence"]
                             # Tag with visit_index (1-based: visit_idx 1 = visit 2)
                             pick["visit_index"] = visit_idx + 1
-                            if visit_video_id and quote_match["start_timestamp"]:
+                            # `is not None`, not truthiness: a pick discussed at 0:00 has a
+                            # timestamp of 0, which is falsy and would silently lose its link.
+                            if visit_video_id and quote_match["start_timestamp"] is not None:
                                 if visit_video_source == "vimeo":
                                     pick["vimeo_timestamp_url"] = (
                                         f"https://vimeo.com/{visit_video_id}#t={quote_match['start_timestamp']}s"

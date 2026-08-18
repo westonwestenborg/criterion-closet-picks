@@ -54,7 +54,18 @@ Fixes involve these config dicts:
 .venv/bin/python scripts/extract_quotes.py --guest-slug SLUG --force
 ```
 
-For a specific visit: add `--visit 2`
+For a specific visit: add `--visit 2`. That reads **that visit's own video
+transcript** and tags the results with that `visit_index`. Before 2026-08-18 it
+read the guest's primary (visit-1) transcript and tagged everything
+`visit_index: 1`, which scored visit-1 speech against visit-2 films and created
+duplicate visit-1 pick records — if you see a guest with two picks sharing a
+`pick_order`, that is the fingerprint. `picks_raw.json` is authoritative for
+which (visit, film) pairs should exist; anything in `picks.json` that is not in
+it is spurious.
+
+A multi-visit guest whose **visit 1 has no transcript** (e.g. Bill Hader's 2011
+episode) routes to the audio fallback and processes no visit-2 picks in the
+default run — those need the explicit `--visit 2`
 
 **If the guest picked a box set, follow it with `group_box_sets.py`:**
 
@@ -272,6 +283,48 @@ save_json(GUESTS_FILE, g)"
 
 Purely editorial — it never affects data integrity, only which quote leads on
 the home page. Rebuild after the change.
+
+### 9. Correct a pick that Criterion's own page gets wrong
+
+Criterion.com is the sole primary source for picks, so this is the one workflow
+that deliberately contradicts it. The bar is evidence from the video itself —
+a transcript line naming the film, or naming something only that film has (a
+writer, a director, a plot detail). "The video looks like a different film" is
+not enough on its own.
+
+Corrections live in `data/pick_overrides.json`, keyed by guest slug:
+
+```json
+"slavoj-zizek": [
+  {
+    "from_criterion_url": "https://www.criterion.com/films/252-stranger-than-paradise",
+    "to_criterion_url":   "https://www.criterion.com/films/336-the-ice-storm",
+    "to_film_id": "the-ice-storm",
+    "to_title": "The Ice Storm",
+    "note": "Why Criterion is wrong, with the transcript evidence."
+  }
+]
+```
+
+`scrape_criterion_picks.py` re-applies them after every scrape (via
+`apply_pick_overrides()` in `utils.py`), so a re-scrape cannot silently revert
+the correction. The override clears the quote, because the quote that was there
+belonged to the film being replaced — re-extract afterwards:
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json, save_json, PICKS_FILE, PICKS_RAW_FILE, apply_pick_overrides
+for f in (PICKS_FILE, PICKS_RAW_FILE):
+    d = load_json(f); n = apply_pick_overrides(d); save_json(f, d)
+    print(f.name, n)"
+.venv/bin/python scripts/extract_quotes.py --guest-slug SLUG --force
+.venv/bin/python scripts/group_box_sets.py
+```
+
+The `note` field is the whole point of the file — it is the only record of why
+we disagree with the primary source. Write it for someone who will read it in a
+year with no memory of the episode.
 
 ## Key Details
 

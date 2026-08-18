@@ -34,6 +34,7 @@ from scripts.utils import (
     GUESTS_FILE,
     PICKS_RAW_FILE,
     VISIT_CRITERION_URLS,
+    apply_pick_overrides,
     load_json,
     save_json,
     log,
@@ -1054,6 +1055,13 @@ def main():
             guest_filter=args.guest,
             resume=not args.no_resume,
         )
+
+        # Criterion is the primary source, but a handful of its collection pages
+        # disagree with the video. Re-apply those corrections before saving so a
+        # re-scrape cannot silently revert them.
+        overridden = apply_pick_overrides(existing_picks)
+        if overridden:
+            log(f"Applied {overridden} pick override(s) from data/pick_overrides.json")
 
         # Final save (redundant with incremental but ensures clean state)
         save_json(GUESTS_FILE, existing_guests)

@@ -261,6 +261,41 @@ EXCLUDED_VIDEO_IDS: set[str] = {
     vid for vid in load_json(DATA_DIR / "excluded_video_ids.json") if not vid.startswith("_")
 }
 
+# Deliberate corrections to what a Criterion collection page lists, keyed by
+# guest_slug. Criterion is the sole primary source for picks, so every entry
+# here contradicts it on purpose and carries its evidence in a "note".
+PICK_OVERRIDES: dict[str, list[dict]] = {
+    slug: entries
+    for slug, entries in load_json(DATA_DIR / "pick_overrides.json").items()
+    if not slug.startswith("_")
+}
+
+
+def apply_pick_overrides(picks: list[dict]) -> int:
+    """Rewrite scraped picks that PICK_OVERRIDES says Criterion got wrong.
+
+    Matches on (guest_slug, from_criterion_url) and returns the number of picks
+    rewritten. Safe to call repeatedly: once a pick carries the replacement URL
+    it no longer matches, so a second pass is a no-op.
+    """
+    applied = 0
+    for pick in picks:
+        for rule in PICK_OVERRIDES.get(pick.get("guest_slug", ""), []):
+            if pick.get("criterion_film_url") != rule["from_criterion_url"]:
+                continue
+            pick["criterion_film_url"] = rule["to_criterion_url"]
+            pick["film_id"] = rule["to_film_id"]
+            pick["film_title"] = rule["to_title"]
+            if "film_slug" in pick:
+                pick["film_slug"] = rule["to_film_id"]
+            # The quote belonged to the film we just replaced, so drop it and
+            # let extract_quotes.py re-derive one for the film now in the slot.
+            pick["quote"] = ""
+            pick["extraction_confidence"] = "none"
+            applied += 1
+            break
+    return applied
+
 
 # ---------------------------------------------------------------------------
 # Pilot guest list (used by --pilot flags)

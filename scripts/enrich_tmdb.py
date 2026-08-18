@@ -79,6 +79,11 @@ TMDB_TV_IDS = {
     # John Lurie's 1991 series. The movie namespace has no entry for it, so the
     # old title search landed on an unrelated 2000 TV movie.
     "fishing-with-john": 61820,
+    # Both Fassbinder miniseries live only in the TV namespace. Movie search sent
+    # "Berlin Alexanderplatz" to a making-of documentary and "Eight Hours" to a
+    # 2017 short by its restoration supervisor.
+    "berlin-alexanderplatz": 43189,
+    "eight-hours-dont-make-a-day": 39837,
 }
 
 # Manual TMDB ID overrides for films that auto-search matches incorrectly
@@ -395,6 +400,10 @@ class TMDBClient:
         scored.sort(key=lambda x: x[0], reverse=True)
         return scored[0][1]
 
+    def get_movie_details(self, tmdb_id: int) -> dict | None:
+        """Get movie details (release_date, genres, poster)."""
+        return self._get(f"/movie/{tmdb_id}")
+
     def get_movie_external_ids(self, tmdb_id: int) -> dict | None:
         """Get external IDs (IMDB) for a movie."""
         return self._get(f"/movie/{tmdb_id}/external_ids")
@@ -462,9 +471,12 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
             log(f"  Overriding TMDB ID for '{title}': {tmdb_id} -> {correct_id}")
             tmdb_id = correct_id
             film["tmdb_id"] = tmdb_id
-            # Clear stale data so it gets re-fetched below
-            for key in ("poster_url", "genres", "imdb_id", "credits", "director"):
+            # Clear stale data so it gets re-fetched below. "year" is included
+            # because an override usually means we had the wrong film entirely,
+            # so the year we carried belongs to that wrong film.
+            for key in ("poster_url", "genres", "imdb_id", "credits", "director", "year"):
                 film.pop(key, None)
+            year = None
 
     # Skip if already fully enriched (including credits)
     if film.get("tmdb_id") and film.get("poster_url") and film.get("credits"):
@@ -526,6 +538,23 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
         poster_path = result.get("poster_path")
         if poster_path:
             film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{poster_path}"
+
+    # Year, genres and poster for an override-supplied ID. The search branch above
+    # sets these from its search hit, but an override skips that branch entirely,
+    # so without this the film keeps the wrong film's year and loses the rest.
+    if tmdb_id and not is_tv and (
+        not film.get("year") or not film.get("genres") or not film.get("poster_url")
+    ):
+        details = client.get_movie_details(tmdb_id)
+        if details:
+            release_date = details.get("release_date", "")
+            if not film.get("year") and len(release_date) >= 4:
+                film["year"] = int(release_date[:4])
+            if not film.get("genres"):
+                film["genres"] = [g["name"] for g in details.get("genres", [])]
+            if not film.get("poster_url") and details.get("poster_path"):
+                film["poster_url"] = f"{TMDB_IMAGE_BASE}/w185{details['poster_path']}"
+                film["poster_source"] = "tmdb"
 
     # IMDB ID
     if tmdb_id and not film.get("imdb_id"):
