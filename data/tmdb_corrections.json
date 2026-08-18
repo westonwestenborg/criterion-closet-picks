@@ -162,5 +162,321 @@
   "oh-sun": {
     "tmdb_id": 195841,
     "note": "Med Hondo 1973; TMDB titles it 'Soleil O', which scores below the title floor"
+  },
+  "trouble-in-paradise": {
+    "tmdb_id": 195,
+    "note": "Ernst Lubitsch 1932 (Criterion spine 170), was wrongly matched to Di Drew's 1989 Australian TV film (321241)"
+  },
+  "great-expectations": {
+    "tmdb_id": 14320,
+    "note": "David Lean 1946 (Criterion spine 31), was wrongly matched to Mike Newell's 2012 film (121674)"
+  },
+  "m": {
+    "tmdb_id": 832,
+    "note": "Fritz Lang 1931 (Criterion page: 1931 Fritz Lang), was wrongly matched to 1931 Alexander Korda (301282)"
+  },
+  "oliver-twist": {
+    "tmdb_id": 10949,
+    "note": "David Lean 1948 (Criterion page: 1948 David Lean), was wrongly matched to 1919 Márton Garas (1353104)"
+  },
+  "diabolique": {
+    "tmdb_id": 827,
+    "note": "Henri-Georges Clouzot 1955 (Criterion page: 1955 Henri-Georges Clouzot), was wrongly matched to 1996 Jeremiah S. Chechik (10988)"
+  },
+  "lord-of-the-flies": {
+    "tmdb_id": 9960,
+    "note": "Peter Brook 1963 (Criterion page: 1963 Peter Brook), was wrongly matched to 1990 Harry Hook (10847)"
+  },
+  "the-39-steps": {
+    "tmdb_id": 260,
+    "note": "Alfred Hitchcock 1935 (Criterion page: 1935 Alfred Hitchcock), was wrongly matched to 2008 James Hawes (16877)"
+  },
+  "peeping-tom": {
+    "tmdb_id": 11167,
+    "note": "Michael Powell 1960 (Criterion page: 1960 Michael Powell), was wrongly matched to 2008 Yoshihiro Fukagawa (439914)"
+  },
+  "hamlet": {
+    "tmdb_id": 23383,
+    "note": "Laurence Olivier 1948 (Criterion page: 1948 Laurence Olivier), was wrongly matched to 1996 Kenneth Branagh (10549)"
+  },
+  "the-testament-of-dr-mabuse": {
+    "tmdb_id": 12206,
+    "note": "Fritz Lang 1933 (Criterion page: 1933 Fritz Lang), was wrongly matched to 1962 Werner Klingler (10444)"
+  },
+  "shadows": {
+    "tmdb_id": 15484,
+    "note": "John Cassavetes 1960 (Criterion page: 1959 John Cassavetes), was wrongly matched to 2025 Larry Yang (1419406)"
+  },
+  "heaven-can-wait": {
+    "tmdb_id": 18727,
+    "note": "Ernst Lubitsch 1943 (Criterion page: 1943 Ernst Lubitsch), was wrongly matched to 1978 Warren Beatty (12185)"
+  },
+  "jigoku": {
+    "tmdb_id": 50173,
+    "note": "Nobuo Nakagawa 1960 (Criterion page: 1960 Nobuo Nakagawa), was wrongly matched to 1957 Daisuke Itō (530308)"
+  },
+  "vengeance-is-mine": {
+    "tmdb_id": 42170,
+    "note": "Shōhei Imamura 1979 (Criterion page: 1979 Shohei Imamura), was wrongly matched to 2021 Hadi Hajaig (876684)"
+  },
+  "walker": {
+    "tmdb_id": 28448,
+    "note": "Alex Cox 1987 (Criterion page: 1987 Alex Cox), was wrongly matched to 2025 Lawrence Fajardo (1325234)"
+  },
+  "the-thief-of-bagdad": {
+    "tmdb_id": 12232,
+    "note": "Ludwig Berger 1940 (Criterion page: 1940 Ludwig Berger), was wrongly matched to 1924 Raoul Walsh (28963)"
+  },
+  "patriotism": {
+    "tmdb_id": 71827,
+    "note": "Yukio Mishima 1966 (Criterion page: 1966 Yukio Mishima), was wrongly matched to 1918 Raymond B. West (379985)"
+  },
+  "the-furies": {
+    "tmdb_id": 28304,
+    "note": "Anthony Mann 1950 (Criterion page: 1950 Anthony Mann), was wrongly matched to 2019 Tony D'Aquino (528091)"
+  },
+  "stagecoach": {
+    "tmdb_id": 995,
+    "note": "John Ford 1939 (Criterion page: 1939 John Ford), was wrongly matched to 1986 Ted Post (33410)"
+  },
+  "red-desert": {
+    "tmdb_id": 26638,
+    "note": "Michelangelo Antonioni 1964 (Criterion page: 1964 Michelangelo Antonioni), was wrongly matched to 1949 Ford Beebe (388933)"
+  },
+  "the-magician": {
+    "tmdb_id": 29453,
+    "note": "Ingmar Bergman 1958 (Criterion page: 1958 Ingmar Bergman), was wrongly matched to 1926 Rex Ingram (29466)"
+  },
+  "house": {
+    "tmdb_id": 25623,
+    "note": "Nobuhiko Obayashi 1977 (Criterion page: 1977 Nobuhiko Obayashi), was wrongly matched to 1977 Sergio Citti (56379)"
+  },
+  "easy-rider": {
+    "tmdb_id": 624,
+    "note": "Dennis Hopper 1969 (Criterion page: 1969 Dennis Hopper), was wrongly matched to 2012 James Benning (217642)"
+  },
+  "people-on-sunday": {
+    "tmdb_id": 347,
+    "note": "Robert Siodmak 1930 (Criterion page: 1930 Robert Siodmak), was wrongly matched to 2020 Tulapop Saenjaroen (668272)"
+  },
+  "the-phantom-carriage": {
+    "tmdb_id": 58129,
+    "note": "Victor Sjöström 1921 (Criterion page: 1921 Victor Sjöström), was wrongly matched to 1958 Arne Mattsson (107383)"
+  },
+  "island-of-lost-souls": {
+    "tmdb_id": 3031,
+    "note": "Erle C. Kenton 1932 (Criterion page: 1932 Erle C. Kenton), was wrongly matched to 1974 René Cardona (373986)"
+  },
+  "shallow-grave": {
+    "tmdb_id": 9905,
+    "note": "Danny Boyle 1994 (Criterion page: 1994 Danny Boyle), was wrongly matched to 1988 Kenneth Bowser (170391)"
+  },
+  "the-ballad-of-narayama": {
+    "tmdb_id": 116690,
+    "note": "Keisuke Kinoshita 1958 (Criterion page: 1958 Keisuke Kinoshita), was wrongly matched to 1983 Shōhei Imamura (42113)"
+  },
+  "310-to-yuma": {
+    "tmdb_id": 14168,
+    "note": "Delmer Daves 1957 (Criterion page: 1957 Delmer Daves), was wrongly matched to 2007 James Mangold (5176)"
+  },
+  "la-cage-aux-folles": {
+    "tmdb_id": 4484,
+    "note": "Édouard Molinaro 1978 (Criterion page: 1978 Edouard Molinaro), was wrongly matched to 1985 Georges Lautner (78159)"
+  },
+  "the-uninvited": {
+    "tmdb_id": 16373,
+    "note": "Lewis Allen 1944 (Criterion page: 1944 Lewis Allen), was wrongly matched to 2009 Thomas Guard (14254)"
+  },
+  "red-river": {
+    "tmdb_id": 3089,
+    "note": "Howard Hawks 1948 (Criterion page: 1948 Howard Hawks), was wrongly matched to 1988 Richard Michaels (281444)"
+  },
+  "judex": {
+    "tmdb_id": 56800,
+    "note": "Georges Franju 1963 (Criterion page: 1963 Georges Franju), was wrongly matched to 1916 Louis Feuillade (56801)"
+  },
+  "the-thin-blue-line": {
+    "tmdb_id": 14285,
+    "note": "Errol Morris 1988 (Criterion page: 1988 Errol Morris), was wrongly matched to 1966 William Friedkin (545938)"
+  },
+  "the-confession": {
+    "tmdb_id": 60859,
+    "note": "Costa-Gavras 1970 (Criterion page: 1970 Costa-Gavras), was wrongly matched to 2026 Will Canon (1454741)"
+  },
+  "state-of-siege": {
+    "tmdb_id": 91487,
+    "note": "Costa-Gavras 1972 (Criterion page: 1972 Costa-Gavras), was wrongly matched to 1978 Vincent Ward (355092)"
+  },
+  "a-room-with-a-view": {
+    "tmdb_id": 11257,
+    "note": "James Ivory 1986 (Criterion page: 1986 James Ivory), was wrongly matched to 2007 Nicholas Renton (13361)"
+  },
+  "the-kid": {
+    "tmdb_id": 10098,
+    "note": "Charlie Chaplin 1921 (Criterion page: 1921 Charles Chaplin), was wrongly matched to 2010 Nick Moran (28987)"
+  },
+  "phoenix": {
+    "tmdb_id": 254578,
+    "note": "Christian Petzold 2014 (Criterion page: 2014 Christian Petzold), was wrongly matched to 2023 Daniel Zirilli (1016342)"
+  },
+  "the-in-laws": {
+    "tmdb_id": 19827,
+    "note": "Arthur Hiller 1979 (Criterion page: 1979 Arthur Hiller), was wrongly matched to 2003 Andrew Fleming (5146)"
+  },
+  "the-new-world": {
+    "tmdb_id": 11400,
+    "note": "Terrence Malick 2005 (Criterion page: 2005 Terrence Malick), was wrongly matched to 2016 Shinsuke Sato (382272)"
+  },
+  "the-breaking-point": {
+    "tmdb_id": 37954,
+    "note": "Michael Curtiz 1950 (Criterion page: 1950 Michael Curtiz), was wrongly matched to 1961 Lance Comfort (381788)"
+  },
+  "the-hero": {
+    "tmdb_id": 112999,
+    "note": "Satyajit Ray 1966 (Criterion page: 1966 Satyajit Ray), was wrongly matched to 1966 František Filip (777753)"
+  },
+  "an-actors-revenge": {
+    "tmdb_id": 27197,
+    "note": "Kon Ichikawa 1963 (Criterion page: 1963 Kon Ichikawa), was wrongly matched to 1959 Masahiro Makino (405459)"
+  },
+  "graduation": {
+    "tmdb_id": 374458,
+    "note": "Cristian Mungiu 2016 (Criterion page: 2016 Cristian Mungiu), was wrongly matched to 2016 Eiichiro Hasumi (359628)"
+  },
+  "cold-water": {
+    "tmdb_id": 64901,
+    "note": "Olivier Assayas 1994 (Criterion page: 1994 Olivier Assayas), was wrongly matched to 2023 Jay Perry (1135546)"
+  },
+  "a-raisin-in-the-sun": {
+    "tmdb_id": 29478,
+    "note": "Daniel Petrie 1961 (Criterion page: 1961 Daniel Petrie), was wrongly matched to 1989 Bill Duke (564550)"
+  },
+  "shame": {
+    "tmdb_id": 26372,
+    "note": "Ingmar Bergman 1968 (Criterion page: 1968 Ingmar Bergman), was wrongly matched to 2011 Steve McQueen (76025)"
+  },
+  "death-in-venice": {
+    "tmdb_id": 6619,
+    "note": "Luchino Visconti 1971 (Criterion page: 1971 Luchino Visconti), was wrongly matched to 2008 Willy Decker (1093096)"
+  },
+  "the-kid-brother": {
+    "tmdb_id": 16661,
+    "note": "Ted Wilde 1927 (Criterion page: 1927 Ted Wilde), was wrongly matched to 1987 Claude Gagnon (261098)"
+  },
+  "detour": {
+    "tmdb_id": 20367,
+    "note": "Edgar G. Ulmer 1945 (Criterion page: 1945 Edgar G. Ulmer), was wrongly matched to 2009 Sylvain Guy (68393)"
+  },
+  "japon": {
+    "tmdb_id": 36211,
+    "note": "Carlos Reygadas 2003 (Criterion page: 2002 Carlos Reygadas), was wrongly matched to 2019 Álvaro Díaz Lorenzo (529209)"
+  },
+  "the-heiress": {
+    "tmdb_id": 28571,
+    "note": "William Wyler 1949 (Criterion page: 1949 William Wyler), was wrongly matched to 2023 Joe Lujan (1233210)"
+  },
+  "the-circus": {
+    "tmdb_id": 28978,
+    "note": "Charlie Chaplin 1928 (Criterion page: 1928 Charles Chaplin), was wrongly matched to 2018 Sharon Grimberg (616027)"
+  },
+  "holiday": {
+    "tmdb_id": 16274,
+    "note": "George Cukor 1938 (Criterion page: 1938 George Cukor), was wrongly matched to 2019 Michiel Dhont (759600)"
+  },
+  "fail-safe": {
+    "tmdb_id": 502,
+    "note": "Sidney Lumet 1964 (Criterion page: 1964 Sidney Lumet), was wrongly matched to 2000 Stephen Frears (31067)"
+  },
+  "the-ascent": {
+    "tmdb_id": 50183,
+    "note": "Larisa Shepitko 1977 (Criterion page: 1977 Larisa Shepitko), was wrongly matched to 2019 Tom Paton (614208)"
+  },
+  "the-damned": {
+    "tmdb_id": 41876,
+    "note": "Luchino Visconti 1969 (Criterion page: 1969 Luchino Visconti), was wrongly matched to 2025 Thordur Palsson (850439)"
+  },
+  "devi": {
+    "tmdb_id": 43031,
+    "note": "Satyajit Ray 1960 (Criterion page: 1960 Satyajit Ray), was wrongly matched to 1999 Kodi Ramakrishna (417291)"
+  },
+  "the-flight-of-the-phoenix": {
+    "tmdb_id": 10243,
+    "note": "Robert Aldrich 1965 (Criterion page: 1965 Robert Aldrich), was wrongly matched to 2004 John Moore (11866)"
+  },
+  "rouge": {
+    "tmdb_id": 68883,
+    "note": "Stanley Kwan Kam-Pang 1987 (Criterion page: 1987 Stanley Kwan), was wrongly matched to 2021 Farid Bentoumi (712120)"
+  },
+  "shaft": {
+    "tmdb_id": 482,
+    "note": "Gordon Parks 1971 (Criterion page: 1971 Gordon Parks), was wrongly matched to 2000 John Singleton (479)"
+  },
+  "la-llorona": {
+    "tmdb_id": 617708,
+    "note": "Jayro Bustamante 2019 (Criterion page: 2019 Jayro Bustamante), was wrongly matched to 2011 Alberto Rodríguez (116322)"
+  },
+  "daisies": {
+    "tmdb_id": 46919,
+    "note": "Věra Chytilová 1966 (Criterion page: 1966 Věra Chytilová), was wrongly matched to 2013 Lauren Watson (1404004)"
+  },
+  "to-die-for": {
+    "tmdb_id": 577,
+    "note": "Gus Van Sant 1995 (Criterion page: 1995 Gus Van Sant), was wrongly matched to 1997 Roberta Torre (57799)"
+  },
+  "risky-business": {
+    "tmdb_id": 9346,
+    "note": "Paul Brickman 1983 (Criterion page: 1983 Paul Brickman), was wrongly matched to 1926 Alan Hale (273625)"
+  },
+  "demon-pond": {
+    "tmdb_id": 117215,
+    "note": "Masahiro Shinoda 1979 (Criterion page: 1979 Masahiro Shinoda), was wrongly matched to 2005 Takashi Miike (25622)"
+  },
+  "flow": {
+    "tmdb_id": 823219,
+    "note": "Gints Zilbalodis 2024 (Criterion page: 2024 Gints Zilbalodis), was wrongly matched to 2024 Adriaan Lokman (1281775)"
+  },
+  "a-man-and-a-woman": {
+    "tmdb_id": 42726,
+    "note": "Claude Lelouch 1966 (Criterion page: 1966 Claude Lelouch), was wrongly matched to 2016 Lee Yoon-ki (384127)"
+  },
+  "a-matter-of-life-and-death": {
+    "tmdb_id": 28162,
+    "note": "Emeric Pressburger 1946 (Criterion page: 1946 Michael Powell), was wrongly matched to 1981 Russ Mayberry (727178)"
+  },
+  "contempt": {
+    "tmdb_id": 266,
+    "note": "Jean-Luc Godard 1963 (Criterion page: 1963 Jean-Luc Godard), was wrongly matched to 2019 Cole Daniel Hills (970630)"
+  },
+  "coup-de-grace": {
+    "tmdb_id": 42226,
+    "note": "Volker Schlöndorff 1976 (Criterion page: 1976 Volker Schlöndorff), was wrongly matched to 2017 Salomé Lamas (443303)"
+  },
+  "eo": {
+    "tmdb_id": 785398,
+    "note": "Jerzy Skolimowski 2022 (Criterion page: 2022 Jerzy Skolimowski), was wrongly matched to 2022 Kam Ka-Wai (1006423)"
+  },
+  "jubilee": {
+    "tmdb_id": 41426,
+    "note": "Derek Jarman 1978 (Criterion page: 1978 Derek Jarman), was wrongly matched to 2009 Doug Rao (794834)"
+  },
+  "the-hidden-fortress": {
+    "tmdb_id": 1059,
+    "note": "Akira Kurosawa 1958 (Criterion page: 1958 Akira Kurosawa), was wrongly matched to 2002 Yoshinari Okamoto (523627)"
+  },
+  "the-vanishing": {
+    "tmdb_id": 8740,
+    "note": "George Sluizer 1988 (Criterion page: 1988 George Sluizer), was wrongly matched to 1993 George Sluizer (1644)"
+  },
+  "totem": {
+    "tmdb_id": 958186,
+    "note": "Lila Avilés 2023 (Criterion page: 2023 Lila Avilés), was wrongly matched to 2022 Sander Burger (1029864)"
+  },
+  "a-day-in-the-country": {
+    "tmdb_id": 43878,
+    "note": "Jean Renoir 1936 (Partie de campagne), was wrongly matched to Karzan Kardozi 2008"
+  },
+  "take-out": {
+    "tmdb_id": 37736,
+    "note": "Sean Baker / Shih-Ching Tsou 2004, was wrongly matched to Manolo Marceno 2021"
   }
 }

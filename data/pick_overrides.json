@@ -1,0 +1,13 @@
+{
+  "_comment": "Per-guest corrections to what Criterion's collection page lists. Criterion.com is the sole primary source for picks, so an entry here is a deliberate decision to contradict it, and needs evidence from the video itself. Keyed by guest_slug; each entry replaces the pick at from_criterion_url with the film at to_criterion_url. Applied by scrape_criterion_picks.py after every scrape, so the correction survives a re-scrape.",
+
+  "slavoj-zizek": [
+    {
+      "from_criterion_url": "https://www.criterion.com/films/252-stranger-than-paradise",
+      "to_criterion_url": "https://www.criterion.com/films/336-the-ice-storm",
+      "to_film_id": "the-ice-storm",
+      "to_title": "The Ice Storm",
+      "note": "Criterion's page lists Stranger Than Paradise at slot 6, but the video has The Ice Storm there. At 1:17 Zizek says 'I have a perfect personal attachment to this film. When James Schamus was writing the scenario he told me that he was reading a book of mine.' Schamus wrote The Ice Storm; Jarmusch wrote Stranger Than Paradise himself in 1984. The transcript never says 'Stranger', 'Paradise' (outside Trouble in Paradise at 0:00) or 'Jarmusch', and all 12 slots align 1:1 between video and page except this one."
+    }
+  ]
+}
