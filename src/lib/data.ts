@@ -386,10 +386,20 @@ export interface BoxSetInfo {
 export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
   const allPicks = getSupportedPicks();
 
+  // A few box sets are also picked as an individual film, so they appear here
+  // with picks that name themselves. Without this they list themselves as their
+  // own parent ("The Apu Trilogy — part of The Apu Trilogy"). Real member films
+  // are only ever tagged by individual picks, never by an aggregate.
+  const ownUrl = getBoxSetFilms().find((f) => f.slug === filmSlug)?.criterion_url
+    || getFilms().find((f) => f.slug === filmSlug)?.criterion_url
+    || '';
+
   // Find box set names that contain this film
   const boxSetNames = new Set<string>();
   const boxSetUrls = new Map<string, string>();
   for (const p of allPicks) {
+    if (p.box_set_film_count) continue;
+    if (ownUrl && p.box_set_criterion_url === ownUrl) continue;
     if (p.film_slug === filmSlug && p.is_box_set && p.box_set_name) {
       boxSetNames.add(p.box_set_name);
       if (!boxSetUrls.has(p.box_set_name) && p.box_set_criterion_url) {
