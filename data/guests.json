@@ -28,7 +28,7 @@
   {
     "name": "Charli XCX",
     "slug": "charli-xcx",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/9lX1p6OiTG8HglGezrrodAozFqV.jpg",
     "youtube_video_id": "-93R-4Dqzd0",
     "youtube_video_url": "https://www.youtube.com/watch?v=-93R-4Dqzd0",
@@ -197,7 +197,7 @@
   {
     "name": "Florence Welch",
     "slug": "florence-welch",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/6xAE8whD71ByVYCrGp435l1MO8d.jpg",
     "youtube_video_id": "p4g1Tz4F8Vo",
     "youtube_video_url": "https://www.youtube.com/watch?v=p4g1Tz4F8Vo",
@@ -294,7 +294,7 @@
   {
     "name": "Tom Rothman",
     "slug": "tom-rothman",
-    "profession": "actor",
+    "profession": "producer",
     "photo_url": "https://image.tmdb.org/t/p/w185/7AK7FBWwGRY6mVWaCuz1u4O5SW2.jpg",
     "youtube_video_id": "9za40HYRkcE",
     "youtube_video_url": "https://www.youtube.com/watch?v=9za40HYRkcE",
@@ -572,7 +572,7 @@
   {
     "name": "Ethel Cain",
     "slug": "ethel-cain",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/1A0ytFRYD0gzH25nProAn8NWdnA.jpg",
     "youtube_video_id": "ld19PMXUyqg",
     "youtube_video_url": "https://www.youtube.com/watch?v=ld19PMXUyqg",
@@ -598,7 +598,7 @@
   {
     "name": "ANOHNI",
     "slug": "anohni",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/4khr8l29Hwoe1tKQMpwydax8o9Q.jpg",
     "youtube_video_id": "ty13anJtnV4",
     "youtube_video_url": "https://www.youtube.com/watch?v=ty13anJtnV4",
@@ -676,7 +676,7 @@
   {
     "name": "Wyclef Jean",
     "slug": "wyclef-jean",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/1J0Q23bdPlKrMY8dDksVJaJXxYL.jpg",
     "youtube_video_id": "TDnpV7uUR1U",
     "youtube_video_url": "https://www.youtube.com/watch?v=TDnpV7uUR1U",
@@ -689,7 +689,7 @@
   {
     "name": "David Byrne",
     "slug": "david-byrne",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/iyD9S1hvyWjtiAedZAACDcWKuaf.jpg",
     "youtube_video_id": "Hp2jZ7epT6s",
     "youtube_video_url": "https://www.youtube.com/watch?v=Hp2jZ7epT6s",
@@ -754,7 +754,7 @@
   {
     "name": "Betsey Johnson",
     "slug": "betsey-johnson",
-    "profession": "actor",
+    "profession": "other",
     "photo_url": null,
     "youtube_video_id": "BlsETid3hSw",
     "youtube_video_url": "https://www.youtube.com/watch?v=BlsETid3hSw",
@@ -793,7 +793,7 @@
   {
     "name": "Peter Wolf",
     "slug": "peter-wolf",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "rib1VHrBTdk",
     "youtube_video_url": "https://www.youtube.com/watch?v=rib1VHrBTdk",
@@ -832,7 +832,7 @@
   {
     "name": "Ronan Farrow",
     "slug": "ronan-farrow",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": "https://image.tmdb.org/t/p/w185/tdSLGZiheXduV2XNvqMsojVdgrs.jpg",
     "youtube_video_id": "9rWNIjNh3sE",
     "youtube_video_url": "https://www.youtube.com/watch?v=9rWNIjNh3sE",
@@ -942,7 +942,7 @@
   {
     "name": "Dick Cavett",
     "slug": "dick-cavett",
-    "profession": "actor",
+    "profession": "other",
     "photo_url": "https://image.tmdb.org/t/p/w185/7g5J47vQY2k4GzGhlJr6KdYm04P.jpg",
     "youtube_video_id": "9FqyB5edf38",
     "youtube_video_url": "https://www.youtube.com/watch?v=9FqyB5edf38",
@@ -1046,7 +1046,7 @@
   {
     "name": "Questlove",
     "slug": "questlove",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/7ddqJfilLpabZ9XLQRkfhcQzkmS.jpg",
     "youtube_video_id": "xFuN-Qi-FW4",
     "youtube_video_url": "https://www.youtube.com/watch?v=xFuN-Qi-FW4",
@@ -1111,7 +1111,7 @@
   {
     "name": "Michelle Zauner",
     "slug": "michelle-zauner",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "gmeWU8oqy-A",
     "youtube_video_url": "https://www.youtube.com/watch?v=gmeWU8oqy-A",
@@ -1410,7 +1410,7 @@
   {
     "name": "Edward Berger",
     "slug": "edward-berger",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/st8iwTbaPHmX0lOiyGFC4sIcA8H.jpg",
     "youtube_video_id": "-zlyJmf-2MM",
     "youtube_video_url": "https://www.youtube.com/watch?v=-zlyJmf-2MM",
@@ -1605,7 +1605,7 @@
   {
     "name": "Jarvis Cocker",
     "slug": "jarvis-cocker",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/tfm8rmIHoZGvJeufpJBw3AwR6BG.jpg",
     "youtube_video_id": "B-F7GT82izA",
     "youtube_video_url": "https://www.youtube.com/watch?v=B-F7GT82izA",
@@ -1683,7 +1683,7 @@
   {
     "name": "Amelia Dimoldenberg",
     "slug": "amelia-dimoldenberg",
-    "profession": "actor",
+    "profession": "other",
     "photo_url": "https://image.tmdb.org/t/p/w185/yQgnspeZZPq6ZHtzBbBUulgjeM6.jpg",
     "youtube_video_id": "fIvSlhjmbxc",
     "youtube_video_url": "https://www.youtube.com/watch?v=fIvSlhjmbxc",
@@ -1787,7 +1787,7 @@
   {
     "name": "JR",
     "slug": "jr",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/tH0nuznGbG4SkPt5C9OMcBqLunD.jpg",
     "youtube_video_id": "h5R5ydQZEPA",
     "youtube_video_url": "https://www.youtube.com/watch?v=h5R5ydQZEPA",
@@ -2040,7 +2040,7 @@
   {
     "name": "Greg Gonzalez",
     "slug": "greg-gonzalez",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/61YpBBPzjBAOFcuEu79HqJbOGig.jpg",
     "youtube_video_id": "1DvQjLLIFEE",
     "youtube_video_url": "https://www.youtube.com/watch?v=1DvQjLLIFEE",
@@ -2129,7 +2129,7 @@
     "pick_count": 8
   },
   {
-    "name": "John Waters’",
+    "name": "John Waters",
     "slug": "john-waters",
     "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/4foU1kJ24CJwz2RVZgyc7oxMs4i.jpg",
@@ -2410,7 +2410,7 @@
   {
     "name": "St. Vincent",
     "slug": "st-vincent",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/5nkFOGxb1pVU81cnBxJWt35wKe4.jpg",
     "youtube_video_id": "JPQG0BKNVqY",
     "youtube_video_url": "https://www.youtube.com/watch?v=JPQG0BKNVqY",
@@ -2501,7 +2501,7 @@
   {
     "name": "Matteo Garrone",
     "slug": "matteo-garrone",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/bszKQINwwZKe9Ybwdaz8G5a6H7S.jpg",
     "youtube_video_id": "0EqzFc4YC50",
     "youtube_video_url": "https://www.youtube.com/watch?v=0EqzFc4YC50",
@@ -2527,7 +2527,7 @@
   {
     "name": "Rebecca Miller",
     "slug": "rebecca-miller",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/s0jjPvcX4i8yd7IiBuvnrJ7FbT3.jpg",
     "youtube_video_id": "FcyNcbgapbE",
     "youtube_video_url": "https://www.youtube.com/watch?v=FcyNcbgapbE",
@@ -2616,7 +2616,7 @@
     "pick_count": 9
   },
   {
-    "name": "Daniels’",
+    "name": "Daniels",
     "slug": "daniels",
     "profession": "actor",
     "photo_url": "https://image.tmdb.org/t/p/w185/1SCR6im2maiASfTD5h7r0g9dU78.jpg",
@@ -2761,7 +2761,7 @@
   {
     "name": "Tyler Mitchell",
     "slug": "tyler-mitchell",
-    "profession": "actor",
+    "profession": "other",
     "photo_url": null,
     "youtube_video_id": "Xupq6TR3Q9Y",
     "youtube_video_url": "https://www.youtube.com/watch?v=Xupq6TR3Q9Y",
@@ -2774,7 +2774,7 @@
   {
     "name": "Rickie Lee Jones",
     "slug": "rickie-lee-jones",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/zSP2YJaBLijaRJmS6rrAKJTVFmf.jpg",
     "youtube_video_id": "Ru_7YGRLoG8",
     "youtube_video_url": "https://www.youtube.com/watch?v=Ru_7YGRLoG8",
@@ -2800,7 +2800,7 @@
   {
     "name": "Susanna Hoffs",
     "slug": "susanna-hoffs",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/u37F6v8q40IKW42Zd8aLFGnrDhb.jpg",
     "youtube_video_id": "CUu3VsxUMsw",
     "youtube_video_url": "https://www.youtube.com/watch?v=CUu3VsxUMsw",
@@ -2865,7 +2865,7 @@
   {
     "name": "Yo La Tengo",
     "slug": "yo-la-tengo",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "IhICyf1kUUw",
     "youtube_video_url": "https://www.youtube.com/watch?v=IhICyf1kUUw",
@@ -2917,7 +2917,7 @@
   {
     "name": "John Darnielle",
     "slug": "john-darnielle",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/kPaA37XKUwzpgVXXXgNmoHYGLuo.jpg",
     "youtube_video_id": "8xngHLBEXnE",
     "youtube_video_url": "https://www.youtube.com/watch?v=8xngHLBEXnE",
@@ -2969,7 +2969,7 @@
   {
     "name": "Wilco",
     "slug": "wilco",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "jhkXwYOwU5g",
     "youtube_video_url": "https://www.youtube.com/watch?v=jhkXwYOwU5g",
@@ -3008,7 +3008,7 @@
   {
     "name": "Elvis Mitchell",
     "slug": "elvis-mitchell",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": "https://image.tmdb.org/t/p/w185/pvBT0ZqswYgjgwSMfwIizsa8KpP.jpg",
     "youtube_video_id": "eF2QMmh_l1M",
     "youtube_video_url": "https://www.youtube.com/watch?v=eF2QMmh_l1M",
@@ -3047,7 +3047,7 @@
   {
     "name": "John Dwyer",
     "slug": "john-dwyer",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/islXc6yXkxjOFrLxGRNGfSWrdts.jpg",
     "youtube_video_id": "g_sFEPf61_g",
     "youtube_video_url": "https://www.youtube.com/watch?v=g_sFEPf61_g",
@@ -3071,9 +3071,9 @@
     "pick_count": 11
   },
   {
-    "name": "Claire Denis’",
+    "name": "Claire Denis",
     "slug": "claire-denis",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/GAQ2QlfhskTqXzgLMfPOTlPEbu.jpg",
     "youtube_video_id": "60ANFzjSnLo",
     "youtube_video_url": "https://www.youtube.com/watch?v=60ANFzjSnLo",
@@ -3138,7 +3138,7 @@
   {
     "name": "Alicia Malone",
     "slug": "alicia-malone",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": null,
     "youtube_video_id": "7QT96iMk0Kw",
     "youtube_video_url": "https://www.youtube.com/watch?v=7QT96iMk0Kw",
@@ -3188,7 +3188,7 @@
     "pick_count": 6
   },
   {
-    "name": "Five Comics’",
+    "name": "Five Comics",
     "slug": "five-comics",
     "profession": "other",
     "photo_url": null,
@@ -3268,7 +3268,7 @@
   {
     "name": "Alexander Payne",
     "slug": "alexander-payne",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/d8mwLxuCMxMxcE8Qys9sdUb7UZg.jpg",
     "youtube_video_id": "vMypwNZ2JBI",
     "youtube_video_url": "https://www.youtube.com/watch?v=vMypwNZ2JBI",
@@ -3359,7 +3359,7 @@
   {
     "name": "Rodrigo Prieto",
     "slug": "rodrigo-prieto",
-    "profession": "actor",
+    "profession": "cinematographer",
     "photo_url": "https://image.tmdb.org/t/p/w185/h05yRvGOoLk0s9RTwOQL9pVuU23.jpg",
     "youtube_video_id": "YQ8h7cyDr1Q",
     "youtube_video_url": "https://www.youtube.com/watch?v=YQ8h7cyDr1Q",
@@ -3385,7 +3385,7 @@
   {
     "name": "Floyd Norman",
     "slug": "floyd-norman",
-    "profession": "actor",
+    "profession": "other",
     "photo_url": "https://image.tmdb.org/t/p/w185/7E3WRAAUHJGwaQijSVYdXlQy0Nj.jpg",
     "youtube_video_id": "mSuVyxoy6Hw",
     "youtube_video_url": "https://www.youtube.com/watch?v=mSuVyxoy6Hw",
@@ -3411,7 +3411,7 @@
   {
     "name": "Raven Jackson",
     "slug": "raven-jackson",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/vCsgsNdCCYq2VeVBzhW14mr7ARB.jpg",
     "youtube_video_id": "pDr2Ptl1ce8",
     "youtube_video_url": "https://www.youtube.com/watch?v=pDr2Ptl1ce8",
@@ -3450,7 +3450,7 @@
   {
     "name": "Benjamin Millepied",
     "slug": "benjamin-millepied",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/dUolMP3dmuks23usx3sRfB8qKqx.jpg",
     "youtube_video_id": "uF970Ynyb3U",
     "youtube_video_url": "https://www.youtube.com/watch?v=uF970Ynyb3U",
@@ -3513,7 +3513,7 @@
     "pick_count": 12
   },
   {
-    "name": "The Quay Brothers’",
+    "name": "The Quay Brothers",
     "slug": "the-quay-brothers",
     "profession": "director",
     "photo_url": null,
@@ -3541,7 +3541,7 @@
   {
     "name": "Laurie Anderson",
     "slug": "laurie-anderson",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/qzYxlXRWKJSa8Qbwt4bcaaUVtle.jpg",
     "youtube_video_id": "Kc9_lqHmNsg",
     "youtube_video_url": "https://www.youtube.com/watch?v=Kc9_lqHmNsg",
@@ -3899,7 +3899,7 @@
   {
     "name": "Neal Brennan",
     "slug": "neal-brennan",
-    "profession": "actor",
+    "profession": "director",
     "photo_url": "https://image.tmdb.org/t/p/w185/dc7A11efmuX8DEVRnGTCcShuIyo.jpg",
     "youtube_video_id": null,
     "youtube_video_url": null,
@@ -3925,7 +3925,7 @@
   {
     "name": "David Remnick",
     "slug": "david-remnick",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": "https://image.tmdb.org/t/p/w185/zaXwSzoPQJCiFPZqzJIQjTnPG7J.jpg",
     "youtube_video_id": "xmtYGTtOQww",
     "youtube_video_url": "https://www.youtube.com/watch?v=xmtYGTtOQww",
@@ -3951,7 +3951,7 @@
   {
     "name": "Seth Meyers",
     "slug": "seth-meyers",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": "https://image.tmdb.org/t/p/w185/nCcvpJFHWYHfu5oPxTOyA1uSdqA.jpg",
     "youtube_video_id": "-pfZlhfY4JM",
     "youtube_video_url": "https://www.youtube.com/watch?v=-pfZlhfY4JM",
@@ -4003,7 +4003,7 @@
   {
     "name": "Nick Lowe",
     "slug": "nick-lowe",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/rc3zKwSCdJS6E4gsRSRLAm2DyHZ.jpg",
     "youtube_video_id": "4d1HdrVMr1k",
     "youtube_video_url": "https://www.youtube.com/watch?v=4d1HdrVMr1k",
@@ -4224,7 +4224,7 @@
   {
     "name": "Adrian Utley",
     "slug": "adrian-utley",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": null,
     "youtube_video_id": "ZqNSY5xz_r8",
     "youtube_video_url": "https://www.youtube.com/watch?v=ZqNSY5xz_r8",
@@ -4367,7 +4367,7 @@
   {
     "name": "Karina Longworth",
     "slug": "karina-longworth",
-    "profession": "actor",
+    "profession": "writer",
     "photo_url": "https://images.squarespace-cdn.com/content/v1/532b4541e4b078ca803911d1/1535045643029-ACS7JG21CL52RZML0FQM/090916LONGWORTH278+%281%29.jpg",
     "youtube_video_id": "AHUyj4kFmF4",
     "youtube_video_url": "https://www.youtube.com/watch?v=AHUyj4kFmF4",
@@ -4588,7 +4588,7 @@
   {
     "name": "Franklin Leonard",
     "slug": "franklin-leonard",
-    "profession": "actor",
+    "profession": "producer",
     "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Franklin_Leonard_for_Mercer.jpg/500px-Franklin_Leonard_for_Mercer.jpg",
     "youtube_video_id": "5YfyrBaAWpE",
     "youtube_video_url": "https://www.youtube.com/watch?v=5YfyrBaAWpE",
@@ -4832,7 +4832,7 @@
   {
     "name": "Jack Harlow",
     "slug": "jack-harlow",
-    "profession": "actor",
+    "profession": "musician",
     "photo_url": "https://image.tmdb.org/t/p/w185/kwyfajrPMpQYa9qBBZo3uK1LjAT.jpg",
     "youtube_video_id": "2GEOljy1JKg",
     "youtube_video_url": "https://www.youtube.com/watch?v=2GEOljy1JKg",

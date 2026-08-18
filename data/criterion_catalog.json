@@ -1800,8 +1800,8 @@
     "criterion_url": "https://www.criterion.com/films/368-summertime",
     "imdb_id": "tt0048673",
     "tmdb_id": 50363,
-    "poster_url": "https://image.tmdb.org/t/p/w185/3mlLfrbP9oYkSXvUPJhk24VdYM8.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/cdd0fc5b34476753807d7c423b976674/WHpCHlfjGYzlTxCPSG7Ba8kZsQ2GT1_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Romance"
@@ -7674,8 +7674,8 @@
     "criterion_url": "https://www.criterion.com/films/629-kwaidan",
     "imdb_id": "tt0058279",
     "tmdb_id": 30959,
-    "poster_url": "https://image.tmdb.org/t/p/w185/t9UMfViYl47SdZZatKQ1JKjjCgs.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/46814ce3abeb4b2311fb8543f8cccfc9/RxLBoxAZHDluyMr4dol7kupZYOuvpz_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Horror",
       "Fantasy",
@@ -9555,8 +9555,8 @@
     "criterion_url": "https://www.criterion.com/films/366-richard-iii",
     "imdb_id": "tt0049674",
     "tmdb_id": 43323,
-    "poster_url": "https://image.tmdb.org/t/p/w185/3zp2Kg5bvlFkKmWiQLmuWQAIEgG.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/32d0f143682b34732d0fdd3ed8e0e7bb/fBklqTm33Jg32mLL79K5I4cZHSt9cE_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "History"
@@ -11250,8 +11250,8 @@
     "criterion_url": "https://www.criterion.com/films/788-stray-dog",
     "imdb_id": "tt0041699",
     "tmdb_id": 30368,
-    "poster_url": "https://image.tmdb.org/t/p/w185/riBzUgeYawBDi2q9PjARjHrQM7Z.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7b8b9ea8d10ea058af2ac18adf283103/KOWZwdsJ5f6efRTOgqxE35apq340e7_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Crime",
       "Drama",
@@ -11345,8 +11345,8 @@
     "criterion_url": "https://www.criterion.com/films/730-straw-dogs",
     "imdb_id": "tt0067800",
     "tmdb_id": 994,
-    "poster_url": "https://image.tmdb.org/t/p/w185/yigkfHE1OhkxPPrjrV78Y9ibGEk.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/beca22ceb97188c09bd8ef6090c6bca7/XQmMDjG2VLEmmHY6Y6TslMJBOi1w2p_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Thriller",
       "Drama",
@@ -13478,8 +13478,8 @@
     "imdb_id": "tt0094562",
     "tmdb_id": 1804,
     "tmdb_type": "tv",
-    "poster_url": "https://image.tmdb.org/t/p/w185/u28Q2dj1O1ir26hqxNclQViJ6Qa.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/737b414279e7a0df660ac086e87c64ae/kEmt8wcBIShHoV7oEBzALnZY2uYuim_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "War & Politics"
@@ -25052,8 +25052,8 @@
     "criterion_url": "https://www.criterion.com/films/252-stranger-than-paradise",
     "imdb_id": "tt0088184",
     "tmdb_id": 469,
-    "poster_url": "https://image.tmdb.org/t/p/w185/Q9wdlNjBOti4JhAjAQXphzShw3.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7da214a5a5d94a222785c8dd5c257e57/85da9M3NwHvtnIvj6oK2ovJjtYOTX8_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Drama"
@@ -26149,8 +26149,8 @@
     "criterion_url": "https://www.criterion.com/films/847-two-lane-blacktop",
     "imdb_id": "tt0067893",
     "tmdb_id": 27236,
-    "poster_url": "https://image.tmdb.org/t/p/w185/8GSjw941Maq4oDvbYqbyc6UM8WH.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/f2abc1a7be5b54ca95c85cba8ea0dec5/B54vSU2FueuGdEg0nrnhNaAlZcXU9P_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -28214,8 +28214,8 @@
     "criterion_url": "https://www.criterion.com/films/381-traffic",
     "imdb_id": "tt0181865",
     "tmdb_id": 1900,
-    "poster_url": "https://image.tmdb.org/t/p/w185/jbccmnqE4oAPI67bApgt2JiRPz8.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/fe948d1c0e152d619e8990e06db65666/U2SnL5KyczaI0mvvbHXiIyJnamNcn1_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Thriller",
       "Drama",
@@ -32804,8 +32804,8 @@
     "criterion_url": "https://www.criterion.com/films/1590-gomorrah",
     "imdb_id": "tt0929425",
     "tmdb_id": 8882,
-    "poster_url": "https://image.tmdb.org/t/p/w185/3XcCTqSovFZE5GRebJmh1kHwziw.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/d44e5fe193d826c1402ee5f1298f6b80/zSEPmdinwC1ua22Jrvrq3yZ5ZhYrxa_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Crime"
@@ -38091,8 +38091,8 @@
     "criterion_url": "https://www.criterion.com/films/27550-topsy-turvy",
     "imdb_id": "tt0151568",
     "tmdb_id": 46435,
-    "poster_url": "https://image.tmdb.org/t/p/w185/nxHjVAVOFgWbD2RptBBCLVO6SIR.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/cc2db5ec02179454a9f96fe4c952f854/6fy9Xe9dVwqYaI29eIEHcREi5ym9Dl_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Music",
@@ -50392,8 +50392,8 @@
     "criterion_url": "https://www.criterion.com/films/27804-master-of-the-house",
     "imdb_id": "tt0015768",
     "tmdb_id": 55589,
-    "poster_url": "https://image.tmdb.org/t/p/w185/iRxogRnql0tmHRhuH8XsV1pOSFr.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/55bfdb7f62206db7e4500dcdb850d17c/NxmCfGvMqbizxJmkBDsYwkUfjgJAV7_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -52206,8 +52206,8 @@
     "criterion_url": "https://www.criterion.com/films/28569-the-innocents",
     "imdb_id": "tt0055018",
     "tmdb_id": 16372,
-    "poster_url": "https://image.tmdb.org/t/p/w185/idqvLBmlEHUITMnQ0EJ6Yb5TpVw.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/cb71f0ecbf1e21a6bea74906ef9555e0/pY4NBEc6ajSTJ4ULmKN6wPgIPOqGiP_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Horror",
       "Mystery",
@@ -52296,8 +52296,8 @@
     "criterion_url": "https://www.criterion.com/films/33649-the-innocent",
     "imdb_id": "tt19841734",
     "tmdb_id": 919573,
-    "poster_url": "https://image.tmdb.org/t/p/w185/4nQ7hBCfr8mS0NAzDj0dg5Atq1t.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/303e9f38f9bfbd8553006af0f8a02201/A1BOQLhJEJfs2iOBh6B18fMXpuKanW_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Crime",
@@ -53045,8 +53045,8 @@
     "criterion_url": "https://www.criterion.com/films/27900-it-happened-one-night",
     "imdb_id": "tt0025316",
     "tmdb_id": 3078,
-    "poster_url": "https://image.tmdb.org/t/p/w185/2PNUGWAflH6UUumas0POMmokHlc.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/c2dde679e36dd0dd23fd23cdf5d35bce/K48iXCNe4D2noqgK0VAWIIXZIuJShg_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Romance"
@@ -53658,8 +53658,8 @@
     "criterion_url": "https://www.criterion.com/films/28549-every-man-for-himself",
     "imdb_id": "tt0079854",
     "tmdb_id": 113479,
-    "poster_url": "https://image.tmdb.org/t/p/w185/hA69SHZQ3jixYq2wykoTlH2VgjI.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/7d4a70d2c5219845114b619aca4beada/kwLi80oyUdMtsoTL22F673KR9zTSvu_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -61643,8 +61643,8 @@
     "criterion_url": "https://www.criterion.com/films/28980-the-executioner",
     "imdb_id": "tt0057643",
     "tmdb_id": 4498,
-    "poster_url": "https://image.tmdb.org/t/p/w185/z7U7XZWeRmsxqMtVahHHYQYIxlY.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/31c83f5d0b777c57c928236102cc1f8b/pFf5JOnCFkVDsc5hQGHCwODxzgaUy4_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Comedy",
       "Drama"
@@ -75553,8 +75553,8 @@
     "criterion_url": "https://www.criterion.com/films/28767-until-the-end-of-the-world",
     "imdb_id": "tt0101458",
     "tmdb_id": 10341,
-    "poster_url": "https://image.tmdb.org/t/p/w185/sDpYWgYkBlrVnpySXQNsxVvDAAG.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/b3f96aa9a8f3b101c3b15d898e927e77/e4OaI1MBzo1RV7HiR5L3cIkTK7gdjY_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Science Fiction",
@@ -76747,8 +76747,8 @@
     "criterion_url": "https://www.criterion.com/films/27853-the-cremator",
     "imdb_id": "tt0063633",
     "tmdb_id": 18352,
-    "poster_url": "https://image.tmdb.org/t/p/w185/9or2Jzw9HOE4gp9niwXBkZdpTVx.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/5246b76aa8e94e9971d99fcab8997538/OI5kIjaVjnBkyEOTh31eosI8bio5yq_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Horror",
       "Drama",
@@ -81924,8 +81924,8 @@
     "criterion_url": "https://www.criterion.com/films/28894-mirror",
     "imdb_id": "tt0072443",
     "tmdb_id": 1396,
-    "poster_url": "https://image.tmdb.org/t/p/w185/AttDP5OEsMxtHPPN7Z92p2Ntnmd.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/729ba8bd7f066bab750d2fe963d37a77/AkLHyvTrDxSGVlvGaZdkHkuH9fSd0x_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "History"
@@ -83968,8 +83968,8 @@
     "criterion_url": "https://www.criterion.com/films/28059-the-celebration",
     "imdb_id": "tt0154420",
     "tmdb_id": 309,
-    "poster_url": "https://image.tmdb.org/t/p/w185/2LRzNq41yrY8EjCnD1S8sCCPvKk.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/e56120a376fa7c47fb6254133f773b91/YeEKXYwuxhG1Ilu2LC3hXEOTmyzSjj_original.png",
+    "poster_source": "criterion",
     "genres": [
       "Drama"
     ],
@@ -93219,8 +93219,8 @@
     "imdb_id": "tt6704972",
     "tmdb_id": 80039,
     "tmdb_type": "tv",
-    "poster_url": "https://image.tmdb.org/t/p/w185/CrrTqw7LHafnbdH9UcK60aOZSm.jpg",
-    "poster_source": "tmdb",
+    "poster_url": "https://s3.amazonaws.com/criterion-production/films/4eb58c6206e7e890b267b36c5d54ef06/PaQEKFaspUcS4ED1ZlhBiKzP5gdAOM_original.jpg",
+    "poster_source": "criterion",
     "genres": [
       "Drama",
       "Sci-Fi & Fantasy"
@@ -124755,88 +124755,6 @@
           "name": "Debbie Osborne",
           "tmdb_id": 101969,
           "character": "Self (uncredited)"
-        }
-      ]
-    }
-  },
-  {
-    "film_id": "redes",
-    "title": "Redes",
-    "spine_number": null,
-    "director": "Fred Zinnemann",
-    "year": 1936,
-    "country": "",
-    "criterion_url": "",
-    "imdb_id": "tt0028165",
-    "tmdb_id": 195522,
-    "poster_url": "https://image.tmdb.org/t/p/w185/8eFVC382rOiJ8C4Tv8myGwAnESx.jpg",
-    "poster_source": "tmdb",
-    "genres": [
-      "Drama"
-    ],
-    "credits": {
-      "directors": [
-        {
-          "name": "Fred Zinnemann",
-          "tmdb_id": 4065
-        },
-        {
-          "name": "Emilio Gómez Muriel",
-          "tmdb_id": 102303
-        }
-      ],
-      "writers": [],
-      "cinematographers": [
-        {
-          "name": "Paul Strand",
-          "tmdb_id": 131470
-        }
-      ],
-      "editors": [
-        {
-          "name": "Emilio Gómez Muriel",
-          "tmdb_id": 102303
-        },
-        {
-          "name": "Gunther von Fritsch",
-          "tmdb_id": 33414
-        }
-      ],
-      "cast": [
-        {
-          "name": "Silvio Hernández",
-          "tmdb_id": 1175905,
-          "character": "Miro"
-        },
-        {
-          "name": "Antonio Lara",
-          "tmdb_id": 1175908,
-          "character": "El Zurdo"
-        },
-        {
-          "name": "Miguel Figueroa",
-          "tmdb_id": 1175909,
-          "character": "Miguel"
-        },
-        {
-          "name": "Rafael Hinojosa",
-          "tmdb_id": 1175907,
-          "character": "El Candidato"
-        },
-        {
-          "name": "Felipe Rojas",
-          "tmdb_id": 2062476,
-          "character": "Mingo"
-        },
-        {
-          "name": "David Valle González",
-          "tmdb_id": 1175906,
-          "character": "Don Anselmo"
-        },
-        {
-          "name": "Susana Ortiz Cobos",
-          "tmdb_id": 4500663,
-          "character": "Miro's Wife"
         }
       ]
     }

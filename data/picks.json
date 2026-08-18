@@ -7855,7 +7855,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "tampopo",
     "film_title": "Tampopo",
     "film_year": null,
@@ -7876,7 +7876,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "malcolm-x",
     "film_title": "Malcolm X",
     "film_year": null,
@@ -7897,7 +7897,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "repo-man",
     "film_title": "Repo Man",
     "film_year": null,
@@ -7918,7 +7918,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "police-story-police-story-2",
     "film_title": "Police Story / Police Story 2",
     "film_year": null,
@@ -7941,7 +7941,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "godzilla-the-showa-era-films-19541975",
     "film_title": "Godzilla: The Showa-Era Films, 1954–1975",
     "film_year": null,
@@ -7964,7 +7964,7 @@
   },
   {
     "guest_slug": "daniels",
-    "guest_name": "Daniels’",
+    "guest_name": "Daniels",
     "film_id": "the-before-trilogy",
     "film_slug": "the-before-trilogy",
     "film_title": "The Before Trilogy",
@@ -27219,7 +27219,7 @@
   },
   {
     "guest_slug": "john-waters",
-    "guest_name": "John Waters’",
+    "guest_name": "John Waters",
     "film_id": "812",
     "film_title": "8½",
     "film_year": null,
@@ -27240,7 +27240,7 @@
   },
   {
     "guest_slug": "john-waters",
-    "guest_name": "John Waters’",
+    "guest_name": "John Waters",
     "film_id": "the-honeymoon-killers",
     "film_title": "The Honeymoon Killers",
     "film_year": null,
@@ -27261,7 +27261,7 @@
   },
   {
     "guest_slug": "john-waters",
-    "guest_name": "John Waters’",
+    "guest_name": "John Waters",
     "film_id": "the-blob",
     "film_title": "The Blob",
     "film_year": null,
@@ -27282,7 +27282,7 @@
   },
   {
     "guest_slug": "john-waters",
-    "guest_name": "John Waters’",
+    "guest_name": "John Waters",
     "film_id": "beyond-the-valley-of-the-dolls",
     "film_title": "Beyond the Valley of the Dolls",
     "film_year": null,
@@ -27303,7 +27303,7 @@
   },
   {
     "guest_slug": "john-waters",
-    "guest_name": "John Waters’",
+    "guest_name": "John Waters",
     "film_id": "twin-peaks-fire-walk-with-me",
     "film_title": "Twin Peaks: Fire Walk with Me",
     "film_year": null,
@@ -41907,7 +41907,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "ordet",
     "film_title": "Ordet",
     "film_year": null,
@@ -41928,7 +41928,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "day-of-wrath",
     "film_title": "Day of Wrath",
     "film_year": null,
@@ -41949,7 +41949,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "gertrud",
     "film_title": "Gertrud",
     "film_year": null,
@@ -41970,7 +41970,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "gate-of-flesh",
     "film_title": "Gate of Flesh",
     "film_year": null,
@@ -41991,7 +41991,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "tout-va-bien",
     "film_title": "Tout va bien",
     "film_year": null,
@@ -42012,7 +42012,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "summer-with-monika",
     "film_title": "Summer with Monika",
     "film_year": null,
@@ -42033,7 +42033,7 @@
   },
   {
     "guest_slug": "claire-denis",
-    "guest_name": "Claire Denis’",
+    "guest_name": "Claire Denis",
     "film_id": "his-girl-friday",
     "film_title": "His Girl Friday",
     "film_year": null,
@@ -58337,8 +58337,8 @@
     "start_timestamp": 98,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=kGZvmngLfBI&t=98",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Three Colors"
+    "is_box_set": null,
+    "box_set_name": null
   },
   {
     "guest_slug": "johnnie-to",
@@ -58703,7 +58703,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "good-morning",
     "film_title": "Good Morning",
     "film_year": null,
@@ -58724,7 +58724,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "yojimbo",
     "film_title": "Yojimbo",
     "film_year": null,
@@ -58745,7 +58745,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "frances-ha",
     "film_title": "Frances Ha",
     "film_year": null,
@@ -58766,7 +58766,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "beastie-boys-video-anthology",
     "film_title": "Beastie Boys Video Anthology",
     "film_year": null,
@@ -58787,7 +58787,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "some-like-it-hot",
     "film_title": "Some Like It Hot",
     "film_year": null,
@@ -58808,7 +58808,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "rosemarys-baby",
     "film_title": "Rosemary’s Baby",
     "film_year": null,
@@ -58829,7 +58829,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "night-of-the-living-dead",
     "film_title": "Night of the Living Dead",
     "film_year": null,
@@ -58850,7 +58850,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "sunday-bloody-sunday",
     "film_title": "Sunday Bloody Sunday",
     "film_year": null,
@@ -58871,7 +58871,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "pans-labyrinth",
     "film_title": "Pan’s Labyrinth",
     "film_year": null,
@@ -58892,7 +58892,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "crumb",
     "film_title": "Crumb",
     "film_year": null,
@@ -58913,7 +58913,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "true-stories",
     "film_title": "True Stories",
     "film_year": null,
@@ -58934,7 +58934,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "24-frames",
     "film_title": "24 Frames",
     "film_year": null,
@@ -58955,7 +58955,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "made-in-usa",
     "film_title": "Made In USA",
     "film_year": null,
@@ -58976,7 +58976,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "man-bites-dog",
     "film_title": "Man Bites Dog",
     "film_year": null,
@@ -58997,7 +58997,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "sex-lies-and-videotape",
     "film_title": "Sex, Lies, and Videotape",
     "film_year": null,
@@ -59018,7 +59018,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "ikiru",
     "film_title": "Ikiru",
     "film_year": null,
@@ -59039,7 +59039,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "the-big-chill",
     "film_title": "The Big Chill",
     "film_year": null,
@@ -59060,7 +59060,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "shampoo",
     "film_title": "Shampoo",
     "film_year": null,
@@ -59081,7 +59081,7 @@
   },
   {
     "guest_slug": "five-comics",
-    "guest_name": "Five Comics’",
+    "guest_name": "Five Comics",
     "film_id": "the-complete-jacques-tati",
     "film_title": "The Complete Jacques Tati",
     "film_year": null,
@@ -59104,7 +59104,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "vampyr",
     "film_title": "Vampyr",
     "film_year": null,
@@ -59126,7 +59126,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "the-children-are-watching-us",
     "film_title": "The Children Are Watching Us",
     "film_year": null,
@@ -59148,7 +59148,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "the-human-condition",
     "film_title": "The Human Condition",
     "film_year": null,
@@ -59170,7 +59170,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "le-havre",
     "film_title": "Le Havre",
     "film_year": null,
@@ -59192,7 +59192,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "eclipse-series-2-the-documentaries-of-louis-malle",
     "film_title": "Eclipse Series 2: The Documentaries of Louis Malle",
     "film_year": null,
@@ -59216,7 +59216,7 @@
   },
   {
     "guest_slug": "the-quay-brothers",
-    "guest_name": "The Quay Brothers’",
+    "guest_name": "The Quay Brothers",
     "film_id": "eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
     "film_title": "Eclipse Series 12: Aki Kaurismäki’s Proletariat Trilogy",
     "film_year": null,
@@ -59454,8 +59454,8 @@
     "youtube_timestamp_url": "",
     "vimeo_timestamp_url": "https://vimeo.com/922549736#t=33s",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "A Story of Floating Weeds / Floating Weeds: Two Films by Yasujiro Ozu"
+    "is_box_set": null,
+    "box_set_name": null
   },
   {
     "guest_slug": "wim-wenders",
@@ -64342,8 +64342,8 @@
     "start_timestamp": 23,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=_SDB919kWLo&t=23",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Jackie Chan: Emergence of a Superstar"
+    "is_box_set": null,
+    "box_set_name": null
   },
   {
     "guest_slug": "bob-odenkirk",
@@ -64363,8 +64363,8 @@
     "start_timestamp": 46,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=_SDB919kWLo&t=46",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Bruce Lee: His Greatest Hits"
+    "is_box_set": null,
+    "box_set_name": null
   },
   {
     "guest_slug": "bob-odenkirk",
@@ -65595,8 +65595,8 @@
     "start_timestamp": 225,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=zMUzKUMyNeQ&t=225",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Fanny and Alexander"
+    "is_box_set": null,
+    "box_set_name": null
   },
   {
     "guest_slug": "thierry-fremaux",
