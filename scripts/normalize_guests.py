@@ -441,6 +441,16 @@ def normalize(dry_run: bool = False):
             log(f"  Name fix: '{old_name}' -> '{g['name']}'")
             stats["name_fixes"] += 1
 
+        # "Claire Denis' Closet Picks" leaves a dangling possessive apostrophe on
+        # the name. Strip it generically: Criterion writes the curly ’ and the
+        # straight ' interchangeably, so literal NAME_FIXES entries kept missing
+        # (the existing "Claire Denis'" and "Five Comics'" keys never matched).
+        stripped = g["name"].rstrip().rstrip("'\u2019").rstrip()
+        if stripped and stripped != g["name"]:
+            log(f"  Name fix: '{g['name']}' -> '{stripped}' (trailing possessive)")
+            g["name"] = stripped
+            stats["name_fixes"] += 1
+
     # --- 2. Build visits arrays for multi-visit guests ---
     for slug, urls in VISIT_CRITERION_URLS.items():
         g = guest_by_slug(guests, slug)
