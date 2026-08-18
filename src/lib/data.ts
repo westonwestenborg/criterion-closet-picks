@@ -68,6 +68,7 @@ export interface Pick {
   extraction_confidence: 'high' | 'medium' | 'low' | 'none';
   source?: 'criterion' | 'letterboxd';
   visit_index?: number;
+  pick_order?: number;
   is_box_set?: boolean;
   box_set_name?: string;
   box_set_film_count?: number;
@@ -108,6 +109,7 @@ function normalizePicks(raw: any[]): Pick[] {
     extraction_confidence: p.extraction_confidence ?? 'none',
     source: p.source ?? undefined,
     visit_index: p.visit_index ?? undefined,
+    pick_order: p.pick_order ?? undefined,
     is_box_set: p.is_box_set ?? false,
     box_set_name: p.box_set_name ?? undefined,
     box_set_film_count: p.box_set_film_count ?? undefined,
@@ -291,6 +293,13 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
   const boxSetFilms = getBoxSetFilms();
   return getPicks()
     .filter(p => p.guest_slug === guestSlug)
+    // pick_order is 1..N per visit in the order the guest pulled them off the
+    // shelf, so it is the order the video and the Criterion page both use.
+    // Picks without one sort last rather than jumping to the front.
+    .sort((a, b) =>
+      (a.visit_index ?? 1) - (b.visit_index ?? 1) ||
+      (a.pick_order ?? Number.MAX_SAFE_INTEGER) - (b.pick_order ?? Number.MAX_SAFE_INTEGER)
+    )
     .map(p => {
       let film: Film | undefined;
       // For box set aggregate picks, look up the box set catalog entry (for poster/metadata)
@@ -350,7 +359,7 @@ export function getPicksForFilm(filmSlug: string): (Pick & { guest: Guest | unde
   }));
 }
 
-export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string; source?: 'criterion' | 'letterboxd'; visit_index?: number }[] {
+export function getRawPicksForGuest(guestSlug: string): { film_slug: string; film_title: string; guest_slug: string; source?: 'criterion' | 'letterboxd'; visit_index?: number; pick_order?: number }[] {
   const raw = loadRawJSON('picks_raw.json');
   return raw
     .filter((p: any) => p.guest_slug === guestSlug)
@@ -360,6 +369,7 @@ export function getRawPicksForGuest(guestSlug: string): { film_slug: string; fil
       guest_slug: p.guest_slug,
       source: p.source ?? undefined,
       visit_index: p.visit_index ?? undefined,
+      pick_order: p.pick_order ?? undefined,
     }));
 }
 
@@ -547,9 +557,16 @@ export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: 
     extraction_confidence: 'none' as const,
     source: rp.source,
     visit_index: rp.visit_index,
+    pick_order: rp.pick_order,
   }));
 
-  const allPicks = [...processedPicks, ...rawAsPicks];
+  // pick_order is 1..N per visit in the order the guest pulled them off the
+  // shelf, so it is the order the video and the Criterion page both use.
+  // Picks without one sort last rather than jumping to the front.
+  const allPicks = [...processedPicks, ...rawAsPicks].sort((a, b) =>
+    (a.visit_index ?? 1) - (b.visit_index ?? 1) ||
+    (a.pick_order ?? Number.MAX_SAFE_INTEGER) - (b.pick_order ?? Number.MAX_SAFE_INTEGER)
+  );
 
   // Filter to displayable: source === 'criterion' OR has a quote
   const displayable = allPicks.filter(p => {
