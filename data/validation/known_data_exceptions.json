@@ -63,7 +63,8 @@
       "the-innocent": "Criterion /films/ page was checked on 2026-06-16 and did not expose a visible public Spine # label.",
       "the-shrouds": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
       "totem": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
-      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "vermiglio": "Criterion /films/34803-vermiglio was checked on 2026-08-19 and exposes no public spine number; the 2024 release is not in the numbered series."
     },
     "pick_regular_film_missing_spine": {
       "34102-ryuichi-sakamoto-opus": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
@@ -76,7 +77,8 @@
       "the-shrouds": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
       "the-killers": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label; the catalog entry is represented as a box set.",
       "totem": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
-      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+      "wooden-crosses": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label.",
+      "vermiglio": "Criterion /films/34803-vermiglio was checked on 2026-08-19 and exposes no public spine number; the 2024 release is not in the numbered series."
     },
     "film_missing_tmdb_id": {
       "che": "Criterion's Che is a two-part feature; the previous single TMDB ID was only a making-of documentary, so no single TMDB movie ID is accepted without a richer multi-part model.",
