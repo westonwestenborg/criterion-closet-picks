@@ -60,6 +60,10 @@ TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p"
 # misrepresent how a guest is known; to override, edit profession directly in
 # data/guests.json (this script never overwrites an already-set profession).
 # See the fix-guest skill, Workflow 7.
+# TMDB has twelve departments; anything absent here falls through to "other",
+# which is how two Oscar-winning costume designers ended up unlabelled.
+# Visual Effects / Crew / Lighting are left off on purpose — no guest has come
+# from them yet, and guessing a one-word label now would likely be wrong.
 DEPARTMENT_MAP = {
     "Directing": "director",
     "Acting": "actor",
@@ -68,6 +72,8 @@ DEPARTMENT_MAP = {
     "Production": "producer",
     "Camera": "cinematographer",
     "Editing": "editor",
+    "Costume & Make-Up": "designer",
+    "Art": "designer",
 }
 
 # Films that are TV series on TMDB (use /tv/ endpoints instead of /movie/)

@@ -283,14 +283,25 @@ anything is sent, so a bad target can't leave a standalone post on one platform.
 ### 7. Correct a guest's profession / descriptor
 
 `profession` is auto-set by `enrich_tmdb.py` from TMDB's `known_for_department`
-via `DEPARTMENT_MAP`. It is a **single-word controlled vocabulary** — only these
-values are used site-wide: `actor`, `director`, `writer`, `musician`, `producer`,
-`cinematographer`, `editor`, `philosopher`, `other`.
+via `DEPARTMENT_MAP`. It must be a **single word** — the guest-page label and the
+social-post template both assume one. Do **not** invent multi-role labels like
+"writer-director" or "filmmaker".
 
-`philosopher` has no TMDB department behind it, so it is manual-only — nothing
-auto-assigns it. The guests index builds its filter buttons from whatever values
-the data actually contains, so a new single-word value needs no frontend change,
-and a value held by one guest is fine (`editor` has exactly one). Do **not** invent multi-role labels like
+Beyond that, be as precise as the person deserves. The value set is open:
+`actor`, `director`, `writer`, `musician`, `producer`, `cinematographer`,
+`editor`, `designer`, `host`, `photographer`, `animator`, `philosopher`, `other`
+are in use, and adding one needs no frontend change. A profession only earns a
+filter chip once `PROFESSION_FACET_MIN` guests share it (5, in `src/lib/data.ts`);
+below that the guests index folds it into the **other** chip while the guest's own
+page still shows the precise label. So a one-guest label costs nothing — it never
+becomes a dead-end filter button. A deep link (`?profession=photographer`) keeps
+working either way, because each row carries both its own value and `other`.
+
+Reserve `other` for guests who genuinely have no single profession — the group
+entries like Five Comics and The Wolfpack. It renders literally as "other" under
+the name, so never use it as a shrug for someone whose job simply isn't mapped:
+`Costume & Make-Up` and `Art` were missing from `DEPARTMENT_MAP` for a long time,
+which is how two Oscar-winning costume designers came out unlabelled. Do **not** invent multi-role labels like
 "writer-director" or "filmmaker"; they break the existing pattern (and the social
 post template + guest-page display assume a single word).
 
