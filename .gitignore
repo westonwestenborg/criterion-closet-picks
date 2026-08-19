@@ -38,6 +38,12 @@ docs/
 # Claude Code local settings (private)
 .claude/settings.local.json
 
+# Impeccable design tool (local-only; re-install with `npx impeccable install`).
+# No trailing slash: the skill is a symlink to another repo, and git treats a
+# symlink as a file, so a directory-only pattern would never match it.
+.claude/skills/impeccable
+.impeccable/
+
 # OG image build cache
 .cache/og/
 
