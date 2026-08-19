@@ -1,174 +1,27 @@
 # Criterion Closet Picks
 
-A searchable static web app that aggregates data from the Criterion Collection's "Closet Picks" YouTube series (400+ episodes). It combines pick lists scraped from Criterion.com collection pages, verbatim quotes extracted from YouTube transcripts via Gemini Flash, and film metadata from TMDB to create a unified, searchable database. The site lives at closetpicks.westenb.org.
+Astro static site (`src/`) + Python data pipeline (`scripts/`) that aggregates the Criterion Collection "Closet Picks" YouTube series into a searchable database at closetpicks.westenb.org.
 
-## Architecture
+## Data & pipeline
 
-### Stack
+- **The pipeline runs locally, never in CI.** CI only builds the committed `data/*.json` into the site. To ship data changes: run the pipeline locally, commit the updated JSON, push.
+- **Run the pipeline via the `update-data` skill** (new-episode check / full refresh); it prefers `process_all.py` over invoking steps by hand. For single-guest corrections (video match, Criterion URL, re-extract quotes) use the `fix-guest` skill.
+- **Picks provenance:** Criterion.com /closet-picks collection pages are the sole primary source (Letterboxd was dropped Feb 2025). Transcripts are used only for quotes/timestamps.
+- **Do NOT hand-add `NAME_FIXES` entries to restore an accent.** Diacritics are restored from TMDB automatically and synced onto picks by `slug` every run, so a manual accent edit gets clobbered; slugs stay ASCII on purpose. `NAME_FIXES` is only for genuine non-accent corrections (real typos, garbled overlay text).
+- **`picks.guest_name` is a denormalized copy, never a source.** The guest record in `guests.json` owns the display name and the frontend joins by `slug`; `normalize_guests.py` (step 8b) NFC-normalizes that name and syncs it onto every pick by slug on every run, so the two cannot drift. `catalog_spine` works the same way — the catalog owns it, picks carry a synced copy, and `test_data.py` fails if the two disagree.
+- **`backfill_films.py` creates catalog entries for films that appear in picks but not in the catalog**, and propagates canonical Criterion URLs from `picks_raw` into the catalog. It leaves `year` empty on purpose: `enrich_tmdb.py` fills that from the film's own Criterion page, which is authoritative.
+- `data/*.json` is committed and read directly by the build; `data/transcripts/` is gitignored and regenerable. Keep generated JSON stable and human-reviewable (minimal diffs).
 
-| Layer | Technology |
-|-------|-----------|
-| Static site generator | Astro |
-| Search | Pagefind (client-side, built at deploy time) |
-| Styling | Custom CSS (Tufte-inspired, matching westenb.org) |
-| Client-side interactivity | Vanilla JS via Astro islands |
-| Data pipeline | Python scripts |
-| LLM extraction | Gemini 2.0 Flash |
-| Film metadata | TMDB API |
-| Hosting | GitHub Pages |
-| CI/CD | GitHub Actions |
+## Deploy
 
-### Data Flow
+Pushes to `main` deploy to **Cloudflare Pages** via GitHub Actions (`.github/workflows/deploy-cloudflare.yml`). Custom domain: closetpicks.westenb.org.
 
-```
-Criterion.com (catalog) --> data/criterion_catalog.json
-Criterion.com /closet-picks collections (guest picks) --> data/guests.json, data/picks_raw.json
-YouTube transcripts --> data/transcripts/ (gitignored)
-Gemini Flash (quote extraction) --> data/picks.json
-TMDB API (enrichment) --> updates catalog + guests with posters, genres, IMDB IDs
-```
+The workflow runs `bun run test` → `bun run build` → `bunx pagefind --site dist`. **Pagefind indexes after the Astro build, not as part of it**, so a bare `bun run build` gives you a site with no search — run `bunx pagefind --site dist` too when testing search locally.
 
-All data files in `data/` (except `transcripts/`) are committed to the repo. The Astro build reads these JSON files to generate static pages.
+## Conventions
 
-## Build Instructions
-
-### Frontend (Astro site)
-
-```bash
-bun install
-bun run dev        # Local dev server (usually http://localhost:4321)
-bun run build      # Production build to dist/
-bun run preview    # Preview production build locally
-```
-
-After building, generate the search index:
-
-```bash
-bunx pagefind --site dist
-```
-
-### Data Pipeline (Python)
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r scripts/requirements.txt
-```
-
-#### Environment Variables
-
-Copy `.env.example` to `.env` and fill in your keys:
-
-```bash
-TMDB_READ_ACCESS_TOKEN=<your-tmdb-read-access-token>
-TMDB_API_KEY=<your-tmdb-api-key>
-GEMINI_API_KEY=<your-gemini-api-key>
-```
-
-#### Running the Pipeline
-
-Scripts are run in order. Each writes to `data/`:
-
-```bash
-python scripts/build_catalog.py           # Step 1: Build Criterion catalog reference
-python scripts/scrape_criterion_picks.py  # Step 2: Scrape guest picks from Criterion.com
-python scripts/normalize_guests.py        # Step 3: Normalize guest data
-python scripts/match_youtube.py           # Step 4: Match YouTube videos + pull transcripts
-python scripts/backfill_dates.py          # Step 5: Backfill episode dates from YouTube API
-python scripts/extract_quotes.py          # Step 6: LLM quote extraction via Gemini Flash
-python scripts/backfill_films.py          # Step 7: Backfill missing films + propagate Criterion URLs
-python scripts/group_box_sets.py          # Step 8: Group box set films
-python scripts/scrape_box_set_images.py   # Step 9: Scrape box set images
-python scripts/migrate_source_visit.py    # Step 10: Migrate source/visit metadata
-python scripts/enrich_tmdb.py             # Step 11: TMDB enrichment (genres, posters, IMDB IDs)
-python scripts/normalize_guests.py        # Step 12: Normalize guest data (second pass)
-python scripts/validate.py                # Step 13: Validate data and generate reports
-python scripts/test_data.py               # Run data integrity tests (also: bun run validate)
-```
-
-`process_all.py` runs these same steps in order; prefer it over invoking steps manually.
-
-For processing a single new video:
-
-```bash
-python scripts/process_video.py --youtube-url "https://www.youtube.com/watch?v=..."
-```
-
-For batch processing:
-
-```bash
-python scripts/process_all.py --limit 10   # Pilot: first 10 videos
-python scripts/process_all.py               # Full run: all videos
-```
-
-## Deployment
-
-The site is deployed to GitHub Pages via GitHub Actions on every push to `main`.
-
-- **Custom domain:** closetpicks.westenb.org
-- **DNS:** CNAME record pointing `closetpicks` to `westonwestenborg.github.io`
-- **Workflow:** `.github/workflows/deploy.yml` handles checkout, build, Pagefind indexing, and deployment
-- **Data pipeline runs locally**, not in CI. Commit updated data JSON files and push to trigger a rebuild.
-
-## Directory Structure
-
-```
-criterion-closet-picks/
-├── .github/workflows/deploy.yml   # GitHub Actions: build + deploy to Pages
-├── data/                           # JSON data files (committed to repo)
-│   ├── criterion_catalog.json      # All Criterion titles with metadata (+ backfilled non-catalog films)
-│   ├── guests.json                 # All guests with metadata
-│   ├── picks.json                  # All picks with quotes + timestamps
-│   ├── picks_raw.json              # Raw picks from Criterion.com (no quotes)
-│   ├── transcripts/                # Raw transcripts (gitignored, regenerable)
-│   └── validation/                 # Validation reports
-├── scripts/                        # Python data pipeline
-│   ├── requirements.txt
-│   ├── build_catalog.py            # Criterion catalog scraper
-│   ├── scrape_criterion_picks.py   # Criterion.com collection page scraper
-│   ├── normalize_guests.py         # Guest name/slug/visit normalization
-│   ├── match_youtube.py            # YouTube video matching + transcripts
-│   ├── extract_quotes.py           # Gemini Flash quote extraction
-│   ├── backfill_films.py           # Backfill missing films + propagate Criterion URLs
-│   ├── enrich_tmdb.py              # TMDB API enrichment
-│   ├── process_video.py            # Single video processing workflow
-│   ├── process_all.py              # Batch processing workflow
-│   ├── validate.py                 # Data validation + reporting
-│   └── test_data.py                # Data integrity tests (unittest)
-├── src/                            # Astro site source
-│   ├── layouts/BaseLayout.astro
-│   ├── pages/
-│   │   ├── index.astro             # Home
-│   │   ├── guests/index.astro      # Browse by guest
-│   │   ├── guests/[slug].astro     # Guest detail
-│   │   ├── films/index.astro       # Browse by film
-│   │   ├── films/[slug].astro      # Film detail
-│   │   ├── most-popular.astro      # Most popular ranking
-│   │   └── llm-export.astro        # Markdown export for LLMs
-│   ├── components/                 # Reusable Astro components
-│   └── styles/global.css           # Tufte-inspired global styles
-├── public/
-│   ├── CNAME                       # Custom domain for GitHub Pages
-│   └── tmdb-logo.svg               # TMDB attribution logo
-├── .env.example                    # Template for API keys
-├── astro.config.mjs                # Astro configuration
-├── package.json
-└── CLAUDE.md                       # This file
-```
-
-## Key Conventions
-
-- **Data source of truth for picks:** Criterion.com /closet-picks collection pages (sole primary source; Letterboxd was dropped Feb 2025). Transcripts are used only for quotes/timestamps.
-- **Static site:** Everything is pre-rendered at build time. No server-side code in production.
-- **Pagefind search:** Client-side static search, index generated post-build.
-- **TMDB attribution required:** Footer must include TMDB logo and disclaimer per API terms.
-- **Tufte-inspired design:** Typography-forward, et-book serif font, off-white (#fffff8) background, generous whitespace.
-- **Data pipeline is manual:** Run scripts locally, commit JSON data files, push to trigger rebuild.
-- **Transcripts are gitignored:** Large and regenerable. Only processed quote data in `picks.json` is committed.
-- **Film matching uses fuzzy search:** `thefuzz` library handles title variations between sources.
-- **Data integrity tests:** Run `python scripts/test_data.py` (or `bun run validate`) to verify data quality after pipeline runs. Tests check film coverage, URL validity, box set structure, guest coverage, and year validity.
-- **Backfill step:** `backfill_films.py` creates catalog entries for films that appear in picks but not in the Criterion catalog, and propagates canonical Criterion URLs from picks_raw into the catalog.
-- **Guests without videos:** Guests who have picks but no YouTube video/transcript get their picks from `picks_raw.json` as a fallback (displayed without quotes).
-- **Guest names (accents & canonicalization):** The guest record in `guests.json` is the single source of truth for a guest's display name; the frontend always joins by `slug` and renders that name. `slug` is intentionally ASCII (`slugify()` folds diacritics) so URLs and join keys stay stable. Accents live only in the display name, and are handled automatically — do **not** hand-add `NAME_FIXES` entries just to restore an accent:
-  - `enrich_tmdb.py` restores proper diacritics from TMDB when the matched person ASCII-folds to the same name (e.g. scraped "Carla Simon" → "Carla Simón"). An ASCII-fold guard prevents it from ever replacing a pair ("Sofia Coppola & Marc Jacobs") or stage name with one person.
-  - `normalize_guests.py` (step 8b) NFC-normalizes each guest name, strips stray zero-width chars, and **syncs the canonical name onto every pick by slug**. `picks.guest_name` / `picks_raw.guest_name` are denormalized copies that must never disagree with the guest record — the sync makes them authoritative every run (idempotent). `NAME_FIXES` remains only for genuine non-accent corrections (typos like "Oscar Issac", garbled overlay text).
+- **Everything is pre-rendered at build time — no server-side code in production.** Pages are static HTML served by Cloudflare Pages, and search is a client-side Pagefind index. Anything needing a request-time server does not belong here.
+- **The Tufte-inspired design is deliberate, not incidental:** et-book serif, off-white `#fffff8` background, generous whitespace, typography-forward. Don't trade it away for a component library.
+- **TMDB attribution is a legal requirement** — the footer TMDB logo + disclaimer must stay, per the API terms.
+- Verify after changes: `bun run validate` (Python data-integrity tests) after touching `data/` or pipeline scripts; `bun run build` after frontend changes.
+- Commits: short imperative subject, often with guest + pick count (`Add Bob Odenkirk's Closet Picks (13 films)`); keep data, pipeline, and UI changes in separate commits.
