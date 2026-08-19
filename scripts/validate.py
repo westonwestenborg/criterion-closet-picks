@@ -187,8 +187,7 @@ def validate_picks(picks: list[dict], guests: list[dict], catalog: list[dict]) -
 
         # Track coverage
         seen_guest_slugs.add(guest_slug)
-        film_key = f"{film_title}|{pick.get('film_year', '')}"
-        seen_films.add(film_key)
+        seen_films.add(film_title)
 
         # Check guest reference
         if guest_slug and guest_slug not in guest_slugs:

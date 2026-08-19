@@ -47,7 +47,6 @@ def build_film_info(picks: list[dict], picks_raw: list[dict]) -> dict[str, dict]
             continue
         info[fid] = {
             "film_title": p.get("film_title") or p.get("catalog_title"),
-            "film_year": p.get("film_year"),
             "catalog_spine": p.get("catalog_spine"),
             "catalog_title": p.get("catalog_title"),
             "criterion_film_url": p.get("criterion_film_url", ""),
@@ -61,8 +60,7 @@ def build_film_info(picks: list[dict], picks_raw: list[dict]) -> dict[str, dict]
         if fid not in info:
             info[fid] = {
                 "film_title": p.get("film_title") or p.get("catalog_title"),
-                "film_year": p.get("film_year"),
-                "catalog_spine": p.get("catalog_spine"),
+                    "catalog_spine": p.get("catalog_spine"),
                 "catalog_title": p.get("catalog_title"),
                 "criterion_film_url": "",
             }
@@ -71,8 +69,6 @@ def build_film_info(picks: list[dict], picks_raw: list[dict]) -> dict[str, dict]
             existing = info[fid]
             if not existing["film_title"]:
                 existing["film_title"] = p.get("film_title") or p.get("catalog_title")
-            if not existing["film_year"]:
-                existing["film_year"] = p.get("film_year")
             if not existing["catalog_spine"]:
                 existing["catalog_spine"] = p.get("catalog_spine")
 
@@ -87,7 +83,10 @@ def make_synthetic_entry(film_id: str, meta: dict) -> dict:
         "spine_number": meta.get("catalog_spine"),
         "title": title,
         "director": "",
-        "year": meta.get("film_year"),
+        # Left empty on purpose: enrich_tmdb.py fills year from the film's own
+        # Criterion page, which is authoritative. Picks never carried a reliable
+        # year of their own.
+        "year": None,
         "country": "",
         "criterion_url": url,
         "film_id": film_id,

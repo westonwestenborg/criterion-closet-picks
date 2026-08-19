@@ -38,7 +38,6 @@ def pick_row(**overrides):
         "guest_slug": "guest",
         "guest_name": "Guest",
         "film_title": "Movie",
-        "film_year": None,
         "film_id": "movie",
         "catalog_spine": 1,
         "catalog_title": "Movie",

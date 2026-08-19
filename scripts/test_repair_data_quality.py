@@ -15,7 +15,6 @@ def base_pick(**overrides):
         "guest_slug": "guest",
         "guest_name": "Guest",
         "film_title": "Movie",
-        "film_year": None,
         "film_id": "movie",
         "catalog_spine": None,
         "catalog_title": None,

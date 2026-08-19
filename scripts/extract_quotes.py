@@ -150,9 +150,7 @@ def format_picks_list(picks: list[dict]) -> str:
     lines = []
     for i, pick in enumerate(picks, 1):
         title = pick.get("film_title", "Unknown")
-        year = pick.get("film_year", "")
-        year_str = f" ({year})" if year else ""
-        lines.append(f"{i}. {title}{year_str}")
+        lines.append(f"{i}. {title}")
     return "\n".join(lines)
 
 

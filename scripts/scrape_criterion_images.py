@@ -18,6 +18,7 @@ Usage:
 
 import argparse
 import sys
+import time
 
 from tqdm import tqdm
 
@@ -28,7 +29,16 @@ from scripts.utils import (
     save_json,
     log,
 )
-from scripts.enrich_tmdb import get_metadata_from_criterion_url
+from scripts.enrich_tmdb import (
+    _criterion_metadata_cache,
+    get_metadata_from_criterion_url,
+)
+
+# A miss is almost always a Cloudflare challenge or a timeout, not a page
+# without box art: a run that reported "22 failed" recovered all 22 on a plain
+# re-run. Without a retry those films silently keep a TMDB fallback poster.
+MAX_ATTEMPTS = 3
+RETRY_BACKOFF_SECONDS = 3
 
 
 def main():
@@ -82,8 +92,20 @@ def main():
     found = 0
     failed = 0
 
+    retried = 0
     for entry in tqdm(to_scrape, desc="Scraping", disable=not sys.stdout.isatty()):
-        metadata = get_metadata_from_criterion_url(entry["criterion_url"])
+        url = entry["criterion_url"]
+        metadata = None
+        for attempt in range(MAX_ATTEMPTS):
+            metadata = get_metadata_from_criterion_url(url)
+            if metadata and metadata.get("image_url"):
+                break
+            if attempt < MAX_ATTEMPTS - 1:
+                # The failed lookup is memoised, so drop it or the retry just
+                # re-reads the miss.
+                _criterion_metadata_cache.pop(url, None)
+                time.sleep(RETRY_BACKOFF_SECONDS * (attempt + 1))
+                retried += 1
 
         if metadata and metadata.get("image_url"):
             entry["poster_url"] = metadata["image_url"]
@@ -92,7 +114,7 @@ def main():
         else:
             failed += 1
 
-    log(f"\nDone: {found} images found, {failed} failed")
+    log(f"\nDone: {found} images found, {failed} failed" + (f" ({retried} retries)" if retried else ""))
     if tagged_count:
         log(f"  Tagged {tagged_count} existing posters as tmdb")
 

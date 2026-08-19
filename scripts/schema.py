@@ -109,7 +109,6 @@ class Pick(TypedDict, total=False):
     film_id: str  # matches CatalogFilm.film_id; frontend `film_slug`
     film_slug: str  # duplicate of film_id on some records
     film_title: str  # title as scraped from the source page
-    film_year: int | None
     catalog_title: str | None  # matched Criterion catalog title
     catalog_spine: int | None
     criterion_film_url: str

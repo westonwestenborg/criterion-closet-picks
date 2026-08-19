@@ -905,7 +905,6 @@ def scrape_all_collections(
                 "guest_slug": guest_slug,
                 "guest_name": guest_name,
                 "film_title": film["title"],
-                "film_year": None,
                 "film_id": film_id,
                 "catalog_spine": film.get("catalog_spine"),
                 "catalog_title": film.get("catalog_title"),

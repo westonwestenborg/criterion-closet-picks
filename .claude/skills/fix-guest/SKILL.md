@@ -107,6 +107,46 @@ print([p['film_title'] for p in load_json('data/picks.json')
    .venv/bin/python scripts/normalize_guests.py
    ```
 
+For a **brand-new guest** the scrape is only the first half. The guest lands
+with `youtube_video_id: null`, and quote extraction reads a transcript file that
+nothing has written yet, so it silently produces no quotes. Continue:
+
+4. Add the video ID to `KNOWN_VIDEO_IDS` and the collection URL to
+   `KNOWN_CRITERION_URLS` in `normalize_guests.py` (keyed by the slug the scrape
+   just created), then re-run `normalize_guests.py`.
+5. Fetch the transcript to disk — `extract_quotes.py` reads
+   `data/transcripts/{video_id}.json` and never fetches it:
+   ```bash
+   .venv/bin/python -c "
+   import sys, json; sys.path.insert(0,'scripts')
+   from match_youtube import fetch_transcript
+   from pathlib import Path
+   vid, name = 'VIDEO_ID', 'Guest Name'
+   segs = fetch_transcript(vid)
+   print(vid, '->', len(segs) if segs else 0, 'segments')
+   if segs:
+       Path('data/transcripts', f'{vid}.json').write_text(
+           json.dumps({'video_id': vid, 'guest_name': name, 'segments': segs}, indent=2))"
+   ```
+   If it returns 0 segments the guest is non-English — leave **no** file on disk
+   and let `extract_quotes.py` route to its audio fallback (see Key Details).
+6. Run the rest of the pipeline tail, in this order:
+   ```bash
+   .venv/bin/python scripts/backfill_dates.py
+   .venv/bin/python scripts/extract_quotes.py --guest-slug SLUG --force
+   .venv/bin/python scripts/backfill_films.py
+   .venv/bin/python scripts/group_box_sets.py
+   .venv/bin/python scripts/scrape_box_set_images.py
+   .venv/bin/python scripts/migrate_source_visit.py
+   .venv/bin/python scripts/enrich_tmdb.py
+   .venv/bin/python scripts/normalize_guests.py
+   bun run validate
+   ```
+   If validate fails on a non-canonical `film_title` — common when a guest picks
+   a box set whose catalog title carries a ` (box set)` suffix the collection
+   page omits — run `scripts/dedupe_film_ids.py --dry-run`, confirm the scope is
+   just the new picks, then run it for real.
+
 ### 5. Exclude a non-guest YouTube video
 
 Add to `data/excluded_video_ids.json` as `"video_id": "descriptive note"`.
@@ -176,9 +216,19 @@ Recommend one to the user with your reasoning, then post the approved text:
 .venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "FINAL TEXT HERE"
 ```
 
-`--text` posts the same text to both platforms; guest @handles resolve
-case-insensitively on X and Threads, so a single tag works for both. Keep the
-shape used for John Leguizamo:
+`--text` posts the same text to both platforms. That is only safe when the
+guest's `x_handle` and `threads_handle` are the **same string** — handles
+resolve case-insensitively, but nothing more. When they differ, one `--text`
+run tags a nonexistent account on one of the two platforms. Eric André is
+`ericandre` on X and `ericfuckingandre` on Threads, so he needed two runs:
+
+```bash
+.venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --twitter-only --text "... (@x_handle) ..."
+.venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --threads-only --text "... (@threads_handle) ..."
+```
+
+Check the two handles against each other before choosing one run or two. Keep
+the shape used for John Leguizamo:
 
 ```
 {Name} (@{handle}) on {Film}:
@@ -235,7 +285,12 @@ anything is sent, so a bad target can't leave a standalone post on one platform.
 `profession` is auto-set by `enrich_tmdb.py` from TMDB's `known_for_department`
 via `DEPARTMENT_MAP`. It is a **single-word controlled vocabulary** — only these
 values are used site-wide: `actor`, `director`, `writer`, `musician`, `producer`,
-`cinematographer`, `editor`, `other`. Do **not** invent multi-role labels like
+`cinematographer`, `editor`, `philosopher`, `other`.
+
+`philosopher` has no TMDB department behind it, so it is manual-only — nothing
+auto-assigns it. The guests index builds its filter buttons from whatever values
+the data actually contains, so a new single-word value needs no frontend change,
+and a value held by one guest is fine (`editor` has exactly one). Do **not** invent multi-role labels like
 "writer-director" or "filmmaker"; they break the existing pattern (and the social
 post template + guest-page display assume a single word).
 
@@ -335,6 +390,7 @@ year with no memory of the episode.
   ID, fetch the transcript before extracting quotes — `extract_quotes.py` reads
   `data/transcripts/{video_id}.json` and does not fetch it. Use
   `match_youtube.fetch_transcript(video_id)` and save `{video_id, guest_name, segments}`.
+  Workflow 4 has the full new-guest sequence; do not stop at the scrape.
 - Non-English guest (only a foreign-language transcript, e.g. a Spanish-speaking
   director): `fetch_transcript` returns nothing (it only tries English), so **leave
   no transcript file on disk** — `extract_quotes.py --guest-slug SLUG --force` then
