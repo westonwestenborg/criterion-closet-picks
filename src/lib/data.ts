@@ -614,9 +614,46 @@ export function getFilmsSortedByPickCount(): Film[] {
   return [...getFilms()].sort((a, b) => b.pick_count - a.pick_count);
 }
 
+/**
+ * A profession needs this many guests to earn its own filter chip. Below it, the
+ * chip would be a dead end — you can already see that one guest in the full
+ * list. Their pages still show the precise label; only the filter collapses
+ * them into "other", so the vocabulary can be as specific as it likes without
+ * the filter row turning into a wall of one-result buttons.
+ */
+const PROFESSION_FACET_MIN = 5;
+
+function professionCounts(): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const g of getPublishableGuests()) {
+    if (!g.profession) continue;
+    counts.set(g.profession, (counts.get(g.profession) || 0) + 1);
+  }
+  return counts;
+}
+
 export function getAllProfessions(): string[] {
-  const professions = new Set(getPublishableGuests().map(g => g.profession).filter(Boolean));
-  return [...professions].sort();
+  const counts = professionCounts();
+  const kept = [...counts.entries()]
+    .filter(([name, n]) => n >= PROFESSION_FACET_MIN && name !== 'other')
+    .map(([name]) => name)
+    .sort();
+  const collapsed = [...counts.entries()].some(
+    ([name, n]) => n < PROFESSION_FACET_MIN || name === 'other'
+  );
+  return collapsed ? [...kept, 'other'] : kept;
+}
+
+/**
+ * The filter values a guest's row should carry. Items match on a comma-separated
+ * list, so a collapsed profession keeps its own value too — a deep link like
+ * ?profession=photographer still works without a chip existing for it.
+ */
+export function professionFilterValues(profession: string | undefined): string {
+  if (!profession) return '';
+  const n = professionCounts().get(profession) || 0;
+  if (profession !== 'other' && n >= PROFESSION_FACET_MIN) return profession;
+  return profession === 'other' ? 'other' : `${profession},other`;
 }
 
 export function getAllDecades(): string[] {

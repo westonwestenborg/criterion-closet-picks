@@ -75,7 +75,7 @@ function readStateFromUrl(controls: HTMLElement): BrowseState {
   };
 }
 
-function updateFilterButtons(controls: HTMLElement, state: BrowseState) {
+function updateFilterButtons(controls: HTMLElement, state: BrowseState, grid?: HTMLElement) {
   controls.querySelectorAll<HTMLElement>('[data-filter-key]').forEach((group) => {
     const key = group.dataset.filterKey;
     if (!key) return;
@@ -89,6 +89,16 @@ function updateFilterButtons(controls: HTMLElement, state: BrowseState) {
       button.setAttribute('aria-pressed', String(isActive));
       if (isActive) matched = true;
     });
+
+    // A value can be real without having a chip: professions below the facet
+    // threshold are folded into "other" in the filter row, yet items still carry
+    // their own value. Honour ?profession=photographer in that case instead of
+    // silently resetting; only fall back to All when nothing carries the value.
+    if (!matched && grid && value !== 'all') {
+      matched = getItems(grid).some((item) =>
+        normalize(item.dataset[key]).split(',').map((part) => part.trim()).includes(value)
+      );
+    }
 
     if (!matched) {
       const allButton = group.querySelector<HTMLButtonElement>('[data-filter-value="all"]');
@@ -244,7 +254,7 @@ function applyBrowseState(grid: HTMLElement, controls: HTMLElement, state: Brows
     search.value = state.query;
   }
 
-  updateFilterButtons(controls, state);
+  updateFilterButtons(controls, state, grid);
   syncFilterOverflow(controls);
   const grouping = layoutGrid(grid, controls, state, defaults);
   updateSortButtons(controls, state);

@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestRow from '../../components/GuestRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
-import { getPublishableGuests, getAllProfessions } from '../../lib/data';
+import { getPublishableGuests, getAllProfessions, professionFilterValues } from '../../lib/data';
 
 const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const professions = getAllProfessions();
@@ -49,7 +49,7 @@ const letters = [...groups.keys()];
       <>
         <div class="idx-letter" id={`ltr-${letter}`} data-browse-divider data-letter={letter} aria-hidden="true">{letter}</div>
         {group.map((guest) => (
-          <div data-browse-item data-letter={letter} data-profession={guest.profession} data-search={guest.name.toLowerCase()}>
+          <div data-browse-item data-letter={letter} data-profession={professionFilterValues(guest.profession)} data-search={guest.name.toLowerCase()}>
             <GuestRow
               name={guest.name}
               slug={guest.slug}
