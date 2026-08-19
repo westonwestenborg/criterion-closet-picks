@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-05T10:30:34",
+  "generated_at": "2026-08-19T11:14:20",
   "catalog": {
     "stats": {
       "total": 1793,
-      "with_tmdb_id": 1671,
-      "with_poster": 1675,
-      "with_imdb_id": 1640,
-      "with_genres": 1549,
-      "with_year": 1627,
-      "with_director": 1666,
-      "poster_source_criterion": 949,
-      "poster_source_tmdb": 729,
-      "poster_source_none": 115,
+      "with_tmdb_id": 1658,
+      "with_poster": 1745,
+      "with_imdb_id": 1632,
+      "with_genres": 1605,
+      "with_year": 1680,
+      "with_director": 1658,
+      "poster_source_criterion": 955,
+      "poster_source_tmdb": 790,
+      "poster_source_none": 48,
       "duplicate_spines": [
         null,
         null,
@@ -250,7 +250,6 @@
         null,
         null,
         1163,
-        null,
         null,
         null,
         null,
@@ -4135,25 +4134,13 @@
       },
       {
         "type": "missing_spine",
-        "film": "Redes"
-      },
-      {
-        "type": "duplicate_spine",
-        "spine": null,
-        "titles": [
-          "Red, White and Blue",
-          "Redes"
-        ]
-      },
-      {
-        "type": "missing_spine",
         "film": "\"...\" Reel 5"
       },
       {
         "type": "duplicate_spine",
         "spine": null,
         "titles": [
-          "Redes",
+          "Red, White and Blue",
           "\"...\" Reel 5"
         ]
       },
@@ -6717,13 +6704,13 @@
   },
   "guests": {
     "stats": {
-      "total": 390,
-      "with_youtube_video": 384,
-      "with_transcript": 350,
-      "with_profession": 390,
-      "with_photo": 369,
+      "total": 394,
+      "with_youtube_video": 388,
+      "with_transcript": 354,
+      "with_profession": 394,
+      "with_photo": 375,
       "with_letterboxd_url": 0,
-      "with_episode_date": 390
+      "with_episode_date": 394
     },
     "issues": [
       {
@@ -6771,7 +6758,7 @@
       },
       {
         "type": "no_youtube_video",
-        "guest": "The Quay Brothers’"
+        "guest": "The Quay Brothers"
       },
       {
         "type": "no_youtube_video",
@@ -6924,32 +6911,31 @@
   },
   "picks": {
     "stats": {
-      "total": 3273,
-      "with_quote": 3141,
-      "with_timestamp": 3142,
-      "with_youtube_url": 3094,
-      "with_catalog_spine": 3066,
-      "with_resolved_film_id": 3273,
-      "confidence_high": 3093,
-      "confidence_medium": 46,
+      "total": 3311,
+      "with_quote": 3211,
+      "with_timestamp": 3211,
+      "with_youtube_url": 3187,
+      "with_catalog_spine": 3102,
+      "with_resolved_film_id": 3311,
+      "confidence_high": 3162,
+      "confidence_medium": 47,
       "confidence_low": 1,
-      "confidence_none": 133,
-      "guests_represented": 390,
-      "unique_films": 969
+      "confidence_none": 101,
+      "guests_represented": 394,
+      "unique_films": 940
     },
     "issues": []
   },
   "picks_raw": {
     "stats": {
-      "total": 3273,
-      "with_catalog_spine": 3066,
+      "total": 3311,
+      "with_catalog_spine": 3102,
       "match_methods": {
-        "criterion_url": 2787,
+        "criterion_url": 2828,
         "fuzzy_83": 7,
-        "exact": 410,
+        "exact": 415,
         "fuzzy_100": 21,
-        "null": 9,
-        "fuzzy_90": 10,
+        "fuzzy_90": 11,
         "fuzzy_87": 9,
         "fuzzy_85": 2,
         "fuzzy_77": 2,
@@ -7351,9 +7337,13 @@
         "christopher-nolan": 16,
         "matt-damon": 11,
         "cooper-hoffman": 10,
-        "fred-armisen-and-carrie-brownstein": 8
+        "fred-armisen-and-carrie-brownstein": 8,
+        "eric-andre": 12,
+        "thomas-bangalter": 8,
+        "colman-domingo": 8,
+        "danny-mcbride": 10
       },
-      "unique_guests": 390,
+      "unique_guests": 394,
       "catalog_match_rate_pct": 93.7
     },
     "issues": []
@@ -7402,7 +7392,7 @@
     {
       "name": "Charli XCX",
       "slug": "charli-xcx",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 4,
@@ -7662,7 +7652,7 @@
     {
       "name": "Florence Welch",
       "slug": "florence-welch",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 8,
@@ -7692,12 +7682,12 @@
       "catalog_matched": 16,
       "catalog_match_rate_pct": 100.0,
       "enriched_picks": 17,
-      "with_quote": 9,
-      "confidence_high": 9,
+      "with_quote": 17,
+      "confidence_high": 17,
       "confidence_medium": 0,
       "confidence_low": 0,
-      "confidence_none": 8,
-      "high_confidence_rate_pct": 52.9
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
     },
     {
       "name": "Lucy Liu",
@@ -7782,7 +7772,7 @@
     {
       "name": "Tom Rothman",
       "slug": "tom-rothman",
-      "profession": "actor",
+      "profession": "producer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 8,
@@ -7812,12 +7802,12 @@
       "catalog_matched": 18,
       "catalog_match_rate_pct": 100.0,
       "enriched_picks": 19,
-      "with_quote": 6,
-      "confidence_high": 6,
-      "confidence_medium": 0,
+      "with_quote": 19,
+      "confidence_high": 17,
+      "confidence_medium": 2,
       "confidence_low": 0,
-      "confidence_none": 13,
-      "high_confidence_rate_pct": 31.6
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 89.5
     },
     {
       "name": "Nia DaCosta",
@@ -7912,12 +7902,12 @@
       "catalog_matched": 8,
       "catalog_match_rate_pct": 100.0,
       "enriched_picks": 11,
-      "with_quote": 7,
-      "confidence_high": 7,
+      "with_quote": 11,
+      "confidence_high": 11,
       "confidence_medium": 0,
       "confidence_low": 0,
-      "confidence_none": 4,
-      "high_confidence_rate_pct": 63.6
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
     },
     {
       "name": "Kathryn Bigelow",
@@ -8122,7 +8112,7 @@
     {
       "name": "Ethel Cain",
       "slug": "ethel-cain",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -8162,7 +8152,7 @@
     {
       "name": "ANOHNI",
       "slug": "anohni",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -8282,7 +8272,7 @@
     {
       "name": "Wyclef Jean",
       "slug": "wyclef-jean",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -8302,7 +8292,7 @@
     {
       "name": "David Byrne",
       "slug": "david-byrne",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -8402,7 +8392,7 @@
     {
       "name": "Betsey Johnson",
       "slug": "betsey-johnson",
-      "profession": "actor",
+      "profession": "other",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -8462,7 +8452,7 @@
     {
       "name": "Peter Wolf",
       "slug": "peter-wolf",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -8522,7 +8512,7 @@
     {
       "name": "Ronan Farrow",
       "slug": "ronan-farrow",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -8662,7 +8652,7 @@
     {
       "name": "Dick Cavett",
       "slug": "dick-cavett",
-      "profession": "actor",
+      "profession": "other",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -8822,7 +8812,7 @@
     {
       "name": "Questlove",
       "slug": "questlove",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -8922,7 +8912,7 @@
     {
       "name": "Michelle Zauner",
       "slug": "michelle-zauner",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -9382,7 +9372,7 @@
     {
       "name": "Edward Berger",
       "slug": "edward-berger",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -9682,7 +9672,7 @@
     {
       "name": "Jarvis Cocker",
       "slug": "jarvis-cocker",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -9802,7 +9792,7 @@
     {
       "name": "Amelia Dimoldenberg",
       "slug": "amelia-dimoldenberg",
-      "profession": "actor",
+      "profession": "other",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 8,
@@ -9962,7 +9952,7 @@
     {
       "name": "JR",
       "slug": "jr",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -10322,7 +10312,7 @@
     {
       "name": "Greg Gonzalez",
       "slug": "greg-gonzalez",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -10460,7 +10450,7 @@
       "high_confidence_rate_pct": 100.0
     },
     {
-      "name": "John Waters’",
+      "name": "John Waters",
       "slug": "john-waters",
       "profession": "director",
       "has_video": true,
@@ -10862,7 +10852,7 @@
     {
       "name": "St. Vincent",
       "slug": "st-vincent",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 8,
@@ -11002,7 +10992,7 @@
     {
       "name": "Matteo Garrone",
       "slug": "matteo-garrone",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -11042,7 +11032,7 @@
     {
       "name": "Rebecca Miller",
       "slug": "rebecca-miller",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -11122,7 +11112,7 @@
     {
       "name": "Lina Rodriguez",
       "slug": "lina-rodriguez",
-      "profession": "other",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -11180,7 +11170,7 @@
       "high_confidence_rate_pct": 100.0
     },
     {
-      "name": "Daniels’",
+      "name": "Daniels",
       "slug": "daniels",
       "profession": "actor",
       "has_video": true,
@@ -11302,7 +11292,7 @@
     {
       "name": "Roger & James Deakins",
       "slug": "roger-james-deakins",
-      "profession": "other",
+      "profession": "cinematographer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 13,
@@ -11402,7 +11392,7 @@
     {
       "name": "Tyler Mitchell",
       "slug": "tyler-mitchell",
-      "profession": "actor",
+      "profession": "other",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 13,
@@ -11422,7 +11412,7 @@
     {
       "name": "Rickie Lee Jones",
       "slug": "rickie-lee-jones",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -11462,7 +11452,7 @@
     {
       "name": "Susanna Hoffs",
       "slug": "susanna-hoffs",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -11562,7 +11552,7 @@
     {
       "name": "Yo La Tengo",
       "slug": "yo-la-tengo",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 10,
@@ -11642,7 +11632,7 @@
     {
       "name": "John Darnielle",
       "slug": "john-darnielle",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -11722,7 +11712,7 @@
     {
       "name": "Wilco",
       "slug": "wilco",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 10,
@@ -11782,7 +11772,7 @@
     {
       "name": "Elvis Mitchell",
       "slug": "elvis-mitchell",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -11842,7 +11832,7 @@
     {
       "name": "John Dwyer",
       "slug": "john-dwyer",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -11880,9 +11870,9 @@
       "high_confidence_rate_pct": 81.8
     },
     {
-      "name": "Claire Denis’",
+      "name": "Claire Denis",
       "slug": "claire-denis",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 7,
@@ -11982,7 +11972,7 @@
     {
       "name": "Alicia Malone",
       "slug": "alicia-malone",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 8,
@@ -12060,7 +12050,7 @@
       "high_confidence_rate_pct": 100.0
     },
     {
-      "name": "Five Comics’",
+      "name": "Five Comics",
       "slug": "five-comics",
       "profession": "other",
       "has_video": true,
@@ -12182,7 +12172,7 @@
     {
       "name": "Alexander Payne",
       "slug": "alexander-payne",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 11,
@@ -12322,7 +12312,7 @@
     {
       "name": "Rodrigo Prieto",
       "slug": "rodrigo-prieto",
-      "profession": "actor",
+      "profession": "cinematographer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -12362,7 +12352,7 @@
     {
       "name": "Floyd Norman",
       "slug": "floyd-norman",
-      "profession": "actor",
+      "profession": "other",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -12402,7 +12392,7 @@
     {
       "name": "Raven Jackson",
       "slug": "raven-jackson",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 10,
@@ -12462,7 +12452,7 @@
     {
       "name": "Benjamin Millepied",
       "slug": "benjamin-millepied",
-      "profession": "actor",
+      "profession": "director",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 6,
@@ -12560,7 +12550,7 @@
       "high_confidence_rate_pct": 100.0
     },
     {
-      "name": "The Quay Brothers’",
+      "name": "The Quay Brothers",
       "slug": "the-quay-brothers",
       "profession": "director",
       "has_video": false,
@@ -12602,7 +12592,7 @@
     {
       "name": "Laurie Anderson",
       "slug": "laurie-anderson",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -12812,12 +12802,12 @@
       "catalog_matched": 16,
       "catalog_match_rate_pct": 100.0,
       "enriched_picks": 17,
-      "with_quote": 12,
-      "confidence_high": 8,
-      "confidence_medium": 4,
+      "with_quote": 17,
+      "confidence_high": 14,
+      "confidence_medium": 3,
       "confidence_low": 0,
-      "confidence_none": 5,
-      "high_confidence_rate_pct": 47.1
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 82.4
     },
     {
       "name": "The Wolfpack",
@@ -12922,7 +12912,7 @@
     {
       "name": "Slavoj Žižek",
       "slug": "slavoj-zizek",
-      "profession": "actor",
+      "profession": "philosopher",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 12,
@@ -12932,12 +12922,12 @@
       "catalog_matched": 9,
       "catalog_match_rate_pct": 100.0,
       "enriched_picks": 12,
-      "with_quote": 10,
-      "confidence_high": 10,
+      "with_quote": 12,
+      "confidence_high": 12,
       "confidence_medium": 0,
       "confidence_low": 0,
-      "confidence_none": 2,
-      "high_confidence_rate_pct": 83.3
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
     },
     {
       "name": "Lee Unkrich",
@@ -13122,7 +13112,7 @@
     {
       "name": "Neal Brennan",
       "slug": "neal-brennan",
-      "profession": "actor",
+      "profession": "director",
       "has_video": false,
       "has_transcript": false,
       "raw_picks": 8,
@@ -13162,7 +13152,7 @@
     {
       "name": "David Remnick",
       "slug": "david-remnick",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -13202,7 +13192,7 @@
     {
       "name": "Seth Meyers",
       "slug": "seth-meyers",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -13282,7 +13272,7 @@
     {
       "name": "Nick Lowe",
       "slug": "nick-lowe",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 4,
@@ -13622,7 +13612,7 @@
     {
       "name": "Adrian Utley",
       "slug": "adrian-utley",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 5,
@@ -13842,7 +13832,7 @@
     {
       "name": "Karina Longworth",
       "slug": "karina-longworth",
-      "profession": "actor",
+      "profession": "writer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 10,
@@ -14182,7 +14172,7 @@
     {
       "name": "Franklin Leonard",
       "slug": "franklin-leonard",
-      "profession": "actor",
+      "profession": "producer",
       "has_video": true,
       "has_transcript": true,
       "raw_picks": 9,
@@ -14522,7 +14512,7 @@
     {
       "name": "Jack Harlow",
       "slug": "jack-harlow",
-      "profession": "actor",
+      "profession": "musician",
       "has_video": true,
       "has_transcript": false,
       "raw_picks": 10,
@@ -15154,6 +15144,86 @@
       "enriched_picks": 8,
       "with_quote": 8,
       "confidence_high": 8,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Eric André",
+      "slug": "eric-andre",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 12,
+      "box_set_picks": 3,
+      "box_set_matched": 2,
+      "spineable_picks": 9,
+      "catalog_matched": 9,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 12,
+      "with_quote": 12,
+      "confidence_high": 12,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Thomas Bangalter",
+      "slug": "thomas-bangalter",
+      "profession": "musician",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 8,
+      "box_set_picks": 1,
+      "box_set_matched": 1,
+      "spineable_picks": 7,
+      "catalog_matched": 7,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 8,
+      "with_quote": 8,
+      "confidence_high": 8,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Colman Domingo",
+      "slug": "colman-domingo",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 8,
+      "box_set_picks": 1,
+      "box_set_matched": 0,
+      "spineable_picks": 7,
+      "catalog_matched": 7,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 8,
+      "with_quote": 8,
+      "confidence_high": 8,
+      "confidence_medium": 0,
+      "confidence_low": 0,
+      "confidence_none": 0,
+      "high_confidence_rate_pct": 100.0
+    },
+    {
+      "name": "Danny McBride",
+      "slug": "danny-mcbride",
+      "profession": "actor",
+      "has_video": true,
+      "has_transcript": true,
+      "raw_picks": 10,
+      "box_set_picks": 0,
+      "box_set_matched": 0,
+      "spineable_picks": 10,
+      "catalog_matched": 10,
+      "catalog_match_rate_pct": 100.0,
+      "enriched_picks": 10,
+      "with_quote": 10,
+      "confidence_high": 10,
       "confidence_medium": 0,
       "confidence_low": 0,
       "confidence_none": 0,

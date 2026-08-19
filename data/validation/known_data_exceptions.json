@@ -111,7 +111,13 @@
       "i-am-curious": "Two-film Vilgot Sjoman release (Yellow and Blue); the old match was Stig Bjorkman's 1995 documentary I Am Curious, Film (498376).",
       "zatoichi-the-blind-swordsman": "Twenty-five-film Zatoichi series box set; the old match was Takeshi Kitano's unrelated 2003 Zatoichi (246).",
       "the-infernal-affairs-trilogy": "Three-film Infernal Affairs collection; the old id 1599219 no longer resolves on TMDB.",
-      "the-emigrantsthe-new-land": "Jan Troell double feature; the old match was the interview supplement Coming to America: Jan Troell on 'The Emigrants' and 'The New Land' (574800). Twin of the already-accepted the-emigrants-jan-troell-double-feature row."
+      "the-emigrantsthe-new-land": "Jan Troell double feature; the old match was the interview supplement Coming to America: Jan Troell on 'The Emigrants' and 'The New Land' (574800). Twin of the already-accepted the-emigrants-jan-troell-double-feature row.",
+      "a-story-of-floating-weeds-floating-weeds": "Ozu double feature: the 1934 silent and his 1959 colour remake. No single TMDB film covers both.",
+      "the-qatsi-trilogy": "Koyaanisqatsi 1982 / Powaqqatsi 1988 / Naqoyqatsi 2002 — three films, no single TMDB id.",
+      "tiny-the-life-of-erin-blackwell": "Criterion's Streetwise / Tiny double feature (1984 + 2016), not the 2016 documentary alone.",
+      "america-lost-and-found-the-bbs-story": "Seven-film BBS box set, 1968-1972. No single TMDB id.",
+      "the-complete-monterey-pop-festival": "Monterey Pop plus two companion concert films. No single TMDB id.",
+      "carl-theodor-dreyer": "Four-film Dreyer box set. No single TMDB id."
     },
     "film_missing_imdb_id": {
       "a-hollis-frampton-odyssey": "Multi-film collection; TMDB has no verified single IMDb ID to backfill locally.",
