@@ -5313,5 +5313,20 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/993-danny-mcbride-s-closet-picks",
     "pick_count": 10
+  },
+  {
+    "name": "Matthew McConaughey",
+    "slug": "matthew-mcconaughey",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/lCySuYjhXix3FzQdS4oceDDrXKI.jpg",
+    "youtube_video_id": "G5BIhjXCJOY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=G5BIhjXCJOY",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-21",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/995-matthew-mcconaughey-s-closet-picks",
+    "pick_count": 14,
+    "x_handle": "McConaughey",
+    "threads_handle": "officiallymcconaughey"
   }
 ]
