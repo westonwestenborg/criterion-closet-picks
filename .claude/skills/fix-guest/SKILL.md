@@ -216,6 +216,14 @@ Recommend one to the user with your reasoning, then post the approved text:
 .venv/bin/python scripts/post_new_guests.py --guest-slug SLUG --text "FINAL TEXT HERE"
 ```
 
+**Write the post text inline, never `--text "$(cat somefile)"`.** Command
+substitution hides the payload from the permission classifier, which blocks the
+call rather than approve a send whose contents it cannot read (seen 2026-08-21
+on the McConaughey post; the identical inline command went through with no
+prompt). Passing the text literally also means the exact thing being published
+is visible in the command and in the transcript, which is what you want for
+something that posts publicly.
+
 `--text` posts the same text to both platforms. That is only safe when the
 guest's `x_handle` and `threads_handle` are the **same string** — handles
 resolve case-insensitively, but nothing more. When they differ, one `--text`
