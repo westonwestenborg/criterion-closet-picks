@@ -202,7 +202,8 @@ def group_picks_for_guest(
     box_set_groups: dict[str, list[dict]] = defaultdict(list)
     standalone_picks: list[dict] = []
 
-    for pick in guest_picks:
+    for position, pick in enumerate(guest_picks):
+        pick["_source_position"] = position
         box_set_name = detect_box_set_for_pick(pick, catalog_map, known_title_map)
         ft = normalize_smart_quotes(pick.get("film_title", ""))
 
@@ -241,8 +242,13 @@ def group_picks_for_guest(
             standalone_picks.append(pick)
 
     # Create aggregate entries for grouped films
+    aggregate_picks: list[dict] = []
     for box_set_name, grouped_picks in box_set_groups.items():
         if len(grouped_picks) < 2:
+            # A lone quote-less box set film is not collapsed, so it stays an
+            # ordinary pick and has to go back in its original slot. Appending it
+            # here would make it the guest's last pick, because migrate_source_visit
+            # recomputes pick_order from file order.
             standalone_picks.extend(grouped_picks)
             continue
 
@@ -283,7 +289,15 @@ def group_picks_for_guest(
         if url:
             template["box_set_criterion_url"] = url
 
-        standalone_picks.append(template)
+        aggregate_picks.append(template)
+
+    # Restore the guest's original film order, then let the collapsed box sets
+    # follow as a block -- an aggregate stands in for several picks, so it has no
+    # single position of its own.
+    standalone_picks.sort(key=lambda p: p["_source_position"])
+    standalone_picks.extend(aggregate_picks)
+    for pick in standalone_picks:
+        pick.pop("_source_position", None)
 
     # Merge duplicate box set entries (unit pick + collapsed aggregate for same set)
     seen_box_sets: dict[str, int] = {}
