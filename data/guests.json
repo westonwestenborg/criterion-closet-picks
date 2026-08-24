@@ -5328,5 +5328,18 @@
     "pick_count": 14,
     "x_handle": "McConaughey",
     "threads_handle": "officiallymcconaughey"
+  },
+  {
+    "name": "Terry Zwigoff",
+    "slug": "terry-zwigoff",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/g71UdeCOUCQylL7TFCULkbxKsDT.jpg",
+    "youtube_video_id": "DtVGSdIq0bQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=DtVGSdIq0bQ",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-24",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/996-terry-zwigoff-s-closet-picks",
+    "pick_count": 5
   }
 ]

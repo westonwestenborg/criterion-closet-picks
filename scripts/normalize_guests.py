@@ -146,6 +146,7 @@ KNOWN_VIDEO_IDS = {
     "colman-domingo": {"youtube_video_id": "LB5fjskhpao"},
     "danny-mcbride": {"youtube_video_id": "3lFsnL7N5sA"},
     "matthew-mcconaughey": {"youtube_video_id": "G5BIhjXCJOY"},
+    "terry-zwigoff": {"youtube_video_id": "DtVGSdIq0bQ"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -220,6 +221,7 @@ KNOWN_CRITERION_URLS = {
     "colman-domingo": "https://www.criterion.com/shop/collection/992-colman-domingo-s-closet-picks",
     "danny-mcbride": "https://www.criterion.com/shop/collection/993-danny-mcbride-s-closet-picks",
     "matthew-mcconaughey": "https://www.criterion.com/shop/collection/995-matthew-mcconaughey-s-closet-picks",
+    "terry-zwigoff": "https://www.criterion.com/shop/collection/996-terry-zwigoff-s-closet-picks",
 }
 
 # Name cleanup
