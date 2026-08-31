@@ -331,21 +331,6 @@
       ]
     },
     {
-      "tmdb_id": 195522,
-      "films": [
-        {
-          "film_id": "redes-world-cinema-project",
-          "title": "Redes (World Cinema Project)",
-          "spine_number": 686
-        },
-        {
-          "film_id": "redes",
-          "title": "Redes",
-          "spine_number": null
-        }
-      ]
-    },
-    {
       "tmdb_id": 195841,
       "films": [
         {
@@ -446,7 +431,7 @@
   "missing_posters": [],
   "director_mismatches": [],
   "summary": {
-    "duplicate_tmdb_ids": 28,
+    "duplicate_tmdb_ids": 27,
     "missing_tmdb_id": 4,
     "missing_posters": 0,
     "director_mismatches": 0,
