@@ -148,6 +148,7 @@ KNOWN_VIDEO_IDS = {
     "matthew-mcconaughey": {"youtube_video_id": "G5BIhjXCJOY"},
     "terry-zwigoff": {"youtube_video_id": "DtVGSdIq0bQ"},
     "joan-chen": {"youtube_video_id": "u9aapMjogSc"},
+    "adam-scott": {"youtube_video_id": "uzH9Fjb2x4w"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -224,6 +225,7 @@ KNOWN_CRITERION_URLS = {
     "matthew-mcconaughey": "https://www.criterion.com/shop/collection/995-matthew-mcconaughey-s-closet-picks",
     "terry-zwigoff": "https://www.criterion.com/shop/collection/996-terry-zwigoff-s-closet-picks",
     "joan-chen": "https://www.criterion.com/shop/collection/1000-joan-chen-s-closet-picks",
+    "adam-scott": "https://www.criterion.com/shop/collection/998-adam-scott-s-closet-picks",
 }
 
 # Name cleanup
