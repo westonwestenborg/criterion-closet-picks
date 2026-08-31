@@ -23,6 +23,8 @@ if (!film && !boxSet) {
 }
 
 // --- Film view data (only when rendering a film) ---
+const hasQuote = (p: { quote?: string; extraction_confidence?: string }) =>
+  !!(p.quote && p.quote.trim() !== '' && p.extraction_confidence !== 'none');
 const allPicks = film ? getPicksForFilm(film.slug) : [];
 // An aggregate pick for THIS box set goes in the main list, not under "Also
 // mentioned as part of" -- the guest picked this set, same as the picks beside
@@ -30,13 +32,17 @@ const allPicks = film ? getPicksForFilm(film.slug) : [];
 // dropped entirely whenever getBoxSetInfoForFilm returned nothing.
 const isOwnSetPick = (p: (typeof allPicks)[number]) =>
   isPickOfBoxSetItself(p, film?.criterion_url);
-const directPicks = allPicks.filter(p => !p.box_set_film_count || isOwnSetPick(p));
+// Lead with the guests who actually said something. getPicksForFilm admits
+// criterion-sourced picks with no quote, and appends aggregates after directs,
+// so without this a "Picked without comment" row can sit above several real
+// quotes. getPicksForBoxSet already sorts this way, so the two views match.
+const directPicks = allPicks
+  .filter(p => !p.box_set_film_count || isOwnSetPick(p))
+  .sort((a, b) => Number(hasQuote(b)) - Number(hasQuote(a)));
 const boxSetPicks = allPicks.filter(p => p.box_set_film_count && !isOwnSetPick(p));
 const boxSetInfo = film ? getBoxSetInfoForFilm(film.slug) : [];
 
 // --- Box set view data (only when rendering a box set) ---
-const hasQuote = (p: { quote?: string; extraction_confidence?: string }) =>
-  !!(p.quote && p.quote.trim() !== '' && p.extraction_confidence !== 'none');
 const bsPicks = boxSet ? getPicksForBoxSet(boxSet.slug) : [];
 const bsQuotedPicks = bsPicks.filter(hasQuote);
 const bsNoQuoteGuests = bsPicks.filter(p => !hasQuote(p)).map(p => p.guest).filter(Boolean);
