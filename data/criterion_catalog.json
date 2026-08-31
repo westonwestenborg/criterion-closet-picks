@@ -141757,5 +141757,89 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "body-heat",
+    "title": "Body Heat",
+    "spine_number": null,
+    "director": "Lawrence Kasdan",
+    "year": 1981,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/32141-body-heat",
+    "imdb_id": "tt0082089",
+    "tmdb_id": 14412,
+    "poster_url": "https://image.tmdb.org/t/p/w185/5LipPcaW1J9IjAP7TOTesw8OcMS.jpg",
+    "genres": [
+      "Thriller",
+      "Crime"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Lawrence Kasdan",
+          "tmdb_id": 8844
+        }
+      ],
+      "writers": [
+        {
+          "name": "Lawrence Kasdan",
+          "tmdb_id": 8844
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Richard H. Kline",
+          "tmdb_id": 1762
+        }
+      ],
+      "editors": [
+        {
+          "name": "Carol Littleton",
+          "tmdb_id": 9966
+        }
+      ],
+      "cast": [
+        {
+          "name": "William Hurt",
+          "tmdb_id": 227,
+          "character": "Ned Racine"
+        },
+        {
+          "name": "Kathleen Turner",
+          "tmdb_id": 3391,
+          "character": "Matty Walker"
+        },
+        {
+          "name": "Richard Crenna",
+          "tmdb_id": 16554,
+          "character": "Edmund Walker"
+        },
+        {
+          "name": "Ted Danson",
+          "tmdb_id": 12836,
+          "character": "Peter Lowenstein"
+        },
+        {
+          "name": "J.A. Preston",
+          "tmdb_id": 1352413,
+          "character": "Oscar Grace"
+        },
+        {
+          "name": "Mickey Rourke",
+          "tmdb_id": 2295,
+          "character": "Teddy Lewis"
+        },
+        {
+          "name": "Kim Zimmer",
+          "tmdb_id": 156237,
+          "character": "Mary Ann"
+        },
+        {
+          "name": "Jane Hallaren",
+          "tmdb_id": 184793,
+          "character": "Stella"
+        }
+      ]
+    }
   }
 ]

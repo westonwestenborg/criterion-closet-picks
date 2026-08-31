@@ -5341,5 +5341,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/996-terry-zwigoff-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "Joan Chen",
+    "slug": "joan-chen",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/jTu4mVKj8sQpgYnuaKchslor585.jpg",
+    "youtube_video_id": "u9aapMjogSc",
+    "youtube_video_url": "https://www.youtube.com/watch?v=u9aapMjogSc",
+    "vimeo_video_id": null,
+    "episode_date": "2026-08-31",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1000-joan-chen-s-closet-picks",
+    "pick_count": 5
   }
 ]
