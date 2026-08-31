@@ -12,6 +12,7 @@ Output: data/picks.json
 """
 
 import argparse
+import difflib
 import json
 import re
 import sys
@@ -155,6 +156,47 @@ def format_picks_list(picks: list[dict]) -> str:
 
 
 BATCH_SIZE = 20  # Max picks per API call to avoid output truncation
+
+def pick_has_quote(pick: dict) -> bool:
+    """A pick counts as quoted only if it has text AND a confidence we trust."""
+    return bool((pick.get("quote") or "").strip()) and pick.get(
+        "extraction_confidence"
+    ) not in (None, "", "none")
+
+
+def _normalize_quote(text: str) -> str:
+    return " ".join((text or "").lower().split())
+
+
+def duplicates_existing_quote(
+    candidate: str, existing: list[str], threshold: float = 0.75
+) -> bool:
+    """
+    True when candidate is essentially a quote the guest already has elsewhere.
+
+    Uses a similarity ratio rather than a prefix key: the real case that made
+    this necessary put Breathless's words under Rashomon at 0.99 similarity,
+    but the two texts were 200 and 203 characters and diverged partway, so any
+    fixed-length prefix key missed it.
+
+    The threshold errs toward blocking. When the model cannot find a real quote
+    for a pick it tends to re-serve a neighbouring one lightly reworded -- Barry
+    Jenkins's line about Weekend came back for The Apu Trilogy at 0.77, "movie"
+    swapped for "series", still ending on getting Andrew Haigh to sign it. A
+    pick left unquoted is the status quo; a pick given another film's words is a
+    new error.
+    """
+    cand = _normalize_quote(candidate)
+    if not cand:
+        return False
+    for other in existing:
+        prior = _normalize_quote(other)
+        if not prior:
+            continue
+        if difflib.SequenceMatcher(None, cand, prior).ratio() >= threshold:
+            return True
+    return False
+
 
 def pick_index_key(pick: dict) -> tuple:
     """Stable key for merging enriched quote data without collapsing duplicate titles."""
@@ -410,11 +452,17 @@ def _process_transcript_guest(
     checkpoint: dict,
     lock: threading.Lock | None = None,
     visit_index: int = 1,
+    fill_missing_only: bool = False,
 ) -> bool:
     """
     Extract quotes for one guest from a text transcript and merge the results
     into existing_pick_index + checkpoint. Returns True on success.
     Pass a lock to make the shared-state updates thread-safe.
+
+    With fill_missing_only, a pick that already has a quote is left exactly as
+    it was. A whole-guest re-extraction is not safe once a guest has good
+    quotes: on Barry Jenkins it recovered nothing, moved his Breathless quote
+    onto Rashomon, and degraded another, so filling the gaps has to be additive.
     """
     slug = guest["slug"]
     video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
@@ -441,10 +489,76 @@ def _process_transcript_guest(
     # Merge quotes into picks, matching by film_title
     quotes_by_title = {q["film_title"].lower(): q for q in quotes}
 
+    # guest_picks comes from picks_raw.json, where every quote is empty -- the
+    # quotes we already have live in existing_pick_index, loaded from
+    # picks.json. So both checks below must consult the prior record, not the
+    # raw pick, or fill_missing_only silently overwrites everything.
+    prior_by_key = {
+        key: existing_pick_index.get(key)
+        for key in (pick_index_key(p) for p in guest_picks)
+    }
+    # Quotes the guest already has, so a re-run cannot copy one onto a second
+    # pick -- the failure that put Breathless's words under Rashomon.
+    existing_quotes = [
+        prior.get("quote", "")
+        for prior in prior_by_key.values()
+        if prior is not None and pick_has_quote(prior)
+    ]
+    # Timestamps already spoken for. Two picks sharing a start_timestamp are two
+    # slices of one utterance, which is how The Apu Trilogy -- a film the
+    # transcript never even names -- came back holding Barry Jenkins's line
+    # about Weekend, both at t=7.
+    existing_timestamps = {
+        prior.get("start_timestamp")
+        for prior in prior_by_key.values()
+        if prior is not None
+        and pick_has_quote(prior)
+        and prior.get("start_timestamp") is not None
+    }
+
     with lock if lock is not None else nullcontext():
         for pick in guest_picks:
             title = pick["film_title"]
             quote_match = quotes_by_title.get(title.lower())
+            key = pick_index_key(pick)
+            prior = prior_by_key.get(key)
+
+            if fill_missing_only and prior is not None and pick_has_quote(prior):
+                # Keep the whole prior record: quote, timestamp and link alike.
+                existing_pick_index[key] = prior
+                continue
+
+            if quote_match and fill_missing_only:
+                # The model returns a row per pick whether or not it found
+                # anything; an empty or "none"-confidence row is not a fill, and
+                # writing it resets a good start_timestamp to 0.
+                if not (quote_match.get("quote") or "").strip() or quote_match.get(
+                    "confidence"
+                ) in (None, "", "none"):
+                    quote_match = None
+
+            if quote_match and fill_missing_only:
+                ts = quote_match.get("start_timestamp")
+                if ts is not None and ts in existing_timestamps:
+                    log(
+                        f"    Skipping {title}: same timestamp ({ts}s) as a quote"
+                        f" already on another {guest['name']} pick"
+                    )
+                    quote_match = None
+                elif duplicates_existing_quote(quote_match["quote"], existing_quotes):
+                    log(
+                        f"    Skipping {title}: text duplicates a quote already on"
+                        f" another {guest['name']} pick"
+                    )
+                    quote_match = None
+
+            if fill_missing_only and not quote_match and prior is not None:
+                # Nothing to add, so leave the record exactly as it is. Falling
+                # through would replace the enriched picks.json entry with the
+                # bare picks_raw one and drop fields the later pipeline steps
+                # added (box-set URLs, pick_order, timestamp links).
+                existing_pick_index[key] = prior
+                continue
 
             if quote_match:
                 pick["quote"] = quote_match["quote"]
@@ -464,7 +578,15 @@ def _process_transcript_guest(
                             f"https://www.youtube.com/watch?v={video_id}&t={quote_match['start_timestamp']}"
                         )
 
-            existing_pick_index[pick_index_key(pick)] = pick
+            if fill_missing_only and prior is not None:
+                # pick comes from picks_raw and lacks fields the pipeline adds
+                # later -- film_slug, box-set URLs, pick_order. Writing it whole
+                # nulls them, so layer the new quote over the record we have.
+                merged = dict(prior)
+                merged.update({k: v for k, v in pick.items() if v is not None})
+                existing_pick_index[key] = merged
+            else:
+                existing_pick_index[pick_index_key(pick)] = pick
 
         checkpoint[slug] = {
             "processed_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -482,6 +604,12 @@ def main():
     parser.add_argument("--limit", type=int, default=0, help="Limit guests to process")
     parser.add_argument("--guest-slug", type=str, help="Process only this guest")
     parser.add_argument("--force", action="store_true", help="Re-extract even if already done")
+    parser.add_argument(
+        "--fill-missing",
+        action="store_true",
+        help="Only write quotes to picks that have none; never touch an existing quote. "
+             "Implies --force, since the guests needing this are already checkpointed.",
+    )
     parser.add_argument("--visit", type=int, default=None,
                         help="Extract only this visit number (1-indexed)")
     parser.add_argument("--workers", type=int, default=1,
@@ -508,6 +636,20 @@ def main():
     log("Gemini model initialized")
 
     # Filter guests
+    # The guests with gaps are all marked done, so this would otherwise no-op.
+    if args.fill_missing:
+        args.force = True
+        if not args.guest_slug:
+            # Only guests that actually have a gap; the rest would be 350+
+            # pointless model calls that can only leave their picks unchanged.
+            gap_slugs = {
+                p["guest_slug"]
+                for p in existing_picks
+                if not pick_has_quote(p)
+            }
+            guests = [g for g in guests if g["slug"] in gap_slugs]
+            log(f"--fill-missing: {len(guests)} guests have at least one unquoted pick")
+
     if args.pilot:
         target_slugs = {slugify(n) for n in PILOT_GUESTS}
         guests = [g for g in guests if g["slug"] in target_slugs]
@@ -607,6 +749,7 @@ def main():
             if _process_transcript_guest(
                 model, guest, guest_picks, transcript_path, existing_pick_index, checkpoint,
                 visit_index=args.visit if args.visit is not None else 1,
+                fill_missing_only=args.fill_missing,
             ):
                 processed += 1
                 time.sleep(6)  # Rate limit: ~10 RPM for Gemini
@@ -629,6 +772,7 @@ def main():
                     thread_local.model, guest, guest_picks, transcript_path,
                     existing_pick_index, checkpoint, lock=state_lock,
                     visit_index=args.visit if args.visit is not None else 1,
+                    fill_missing_only=args.fill_missing,
                 )
             except Exception as e:
                 log(f"  Error: {guest['name']}: {e}")
@@ -737,8 +881,15 @@ def main():
 
                 # Get the raw picks for this guest (for the prompt)
                 guest_raw_picks = picks_by_guest.get(slug, [])
-                # Only send picks that have no quote yet
-                none_picks = [p for p in guest_raw_picks if p.get("extraction_confidence") in ("none", None) or not p.get("quote")]
+                # Only send picks that have no quote yet. picks_raw carries no
+                # quotes at all, so testing the raw pick selects every pick the
+                # guest has: that is how a visit-2 pass rewrote seven of Bill
+                # Hader's visit-1 quotes. The live state is in existing_pick_index.
+                none_picks = []
+                for raw_pick in guest_raw_picks:
+                    current = existing_pick_index.get(pick_index_key(raw_pick))
+                    if current is None or not pick_has_quote(current):
+                        none_picks.append(raw_pick)
                 if not none_picks:
                     continue
 
@@ -754,11 +905,17 @@ def main():
                         title = pick["film_title"]
                         quote_match = quotes_by_title.get(title.lower())
                         if quote_match and quote_match.get("quote") and quote_match["confidence"] != "none":
+                            # visit_index is part of pick_index_key, so retagging
+                            # a pick without dropping its old entry inserts a
+                            # second record instead of moving the one that exists.
+                            old_key = pick_index_key(pick)
                             pick["quote"] = quote_match["quote"]
                             pick["start_timestamp"] = quote_match["start_timestamp"]
                             pick["extraction_confidence"] = quote_match["confidence"]
                             # Tag with visit_index (1-based: visit_idx 1 = visit 2)
                             pick["visit_index"] = visit_idx + 1
+                            if pick_index_key(pick) != old_key:
+                                existing_pick_index.pop(old_key, None)
                             # `is not None`, not truthiness: a pick discussed at 0:00 has a
                             # timestamp of 0, which is falsy and would silently lose its link.
                             if visit_video_id and quote_match["start_timestamp"] is not None:
