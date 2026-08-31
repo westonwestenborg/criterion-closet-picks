@@ -230,10 +230,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 12,
-    "quote": "",
-    "start_timestamp": 162,
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=R7HLpe65fHY&t=162",
-    "extraction_confidence": "none",
+    "quote": "I'm only taking one more.",
+    "start_timestamp": 186,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=R7HLpe65fHY&t=186",
+    "extraction_confidence": "low",
     "is_box_set": false,
     "box_set_name": null
   },
@@ -320,7 +320,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "barry-jenkins",
@@ -342,7 +342,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "guillermo-del-toro",
@@ -977,10 +977,10 @@
     "source": "criterion",
     "visit_index": 2,
     "pick_order": 8,
-    "quote": "",
-    "start_timestamp": 0,
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=348qOuXOAXo&t=0",
-    "extraction_confidence": "none",
+    "quote": "Last time I was here it was 2009 and I said that this movie was a good date movie. Salvatore Giuliano. My favorite part of this movie is when... And then the guy, he goes into a room and he finds his plate of... It is not a good date movie, just want to clear that up.",
+    "start_timestamp": 40,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=y2TK8IHWIcY&t=40",
+    "extraction_confidence": "high",
     "is_box_set": false,
     "box_set_name": null
   },
@@ -1084,7 +1084,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "bill-hader",
@@ -1106,7 +1106,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 24: The Actuality Dramas of Allan King",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "denis-villeneuve",
@@ -2030,7 +2030,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "jodie-foster",
@@ -2197,7 +2197,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "atom-egoyan",
@@ -2219,7 +2219,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 39
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "stellan-skarsgard",
@@ -2544,7 +2544,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "lav-diaz",
@@ -2566,7 +2566,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 38
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "lav-diaz",
@@ -3089,7 +3089,7 @@
     "is_box_set": true,
     "box_set_name": "Jackie Chan: Emergence of a Superstar",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "lucy-liu",
@@ -3111,7 +3111,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "tom-rothman",
@@ -3449,7 +3449,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "derek-cianfrance",
@@ -3471,7 +3471,7 @@
     "is_box_set": true,
     "box_set_name": "By Brakhage: An Anthology, Volumes One and Two",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/722-by-brakhage-an-anthology-volumes-one-and-two",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "nia-dacosta",
@@ -3653,7 +3653,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "rachel-sennott",
@@ -4046,10 +4046,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 7,
-    "quote": "",
-    "start_timestamp": null,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "And in the same collection… Scorsese knows. He knows shit. He chose a film that no one really knows outside… and even in Brazil, it’s a film directed by Mário Peixoto, called Limite. It’s 1931. And this film is– I’ve never seen anything like this film. It’s experimental and beautiful and touching and crazily well shot. Everybody that knows about movies and that loves films in Brazil and elsewhere cultivates this film as a classic. Amazing, amazing.",
+    "start_timestamp": 162,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=hvOnBK-L-zg&t=162",
+    "extraction_confidence": "high",
     "is_box_set": true,
     "box_set_name": "Martin Scorsese's World Cinema Project No. 2",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1258-martin-scorsese-s-world-cinema-project-no-2",
@@ -4795,7 +4795,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "diane-kruger",
@@ -4897,7 +4897,7 @@
     "is_box_set": true,
     "box_set_name": "Dietrich & von Sternberg in Hollywood",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1329-dietrich-von-sternberg-in-hollywood",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "cillian-murphy",
@@ -5405,7 +5405,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "alicia-silverstone",
@@ -6024,7 +6024,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "matt-dillon",
@@ -6164,7 +6164,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "betsey-johnson",
@@ -6618,7 +6618,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "rza",
@@ -6640,7 +6640,7 @@
     "is_box_set": true,
     "box_set_name": "Once Upon a Time in China: The Complete Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/5026-once-upon-a-time-in-china-the-complete-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "rza",
@@ -6685,7 +6685,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "harris-dickinson",
@@ -6990,7 +6990,7 @@
     "is_box_set": true,
     "box_set_name": "By Brakhage: An Anthology, Volumes One and Two",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/722-by-brakhage-an-anthology-volumes-one-and-two",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "tunde-adebimpe",
@@ -7012,7 +7012,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "bowen-yang",
@@ -7176,7 +7176,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "bowen-yang",
@@ -7198,7 +7198,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "joel-kim-booster",
@@ -7340,7 +7340,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "gina-gershon",
@@ -7480,7 +7480,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "daniels",
@@ -7584,7 +7584,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "daniels",
@@ -7949,7 +7949,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 33: Up All Night with Robert Downey Sr.",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/887-eclipse-series-33-up-all-night-with-robert-downey-sr",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "danny-boyle",
@@ -8676,7 +8676,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 38
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "dick-cavett",
@@ -8819,7 +8819,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "charles-burnett",
@@ -8957,7 +8957,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "charles-burnett",
@@ -9001,7 +9001,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 35
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "rob-delaney",
@@ -9324,7 +9324,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "michelle-zauner",
@@ -9681,7 +9681,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jean Vigo",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/819-the-complete-jean-vigo",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "natasha-lyonne",
@@ -10207,7 +10207,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Monterey Pop Festival",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/326-the-complete-monterey-pop-festival",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "ben-affleck",
@@ -10605,7 +10605,7 @@
     "is_box_set": true,
     "box_set_name": "I Am Curious",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/338-i-am-curious",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "rosamund-pike",
@@ -10627,7 +10627,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "rosanna-arquette",
@@ -10809,7 +10809,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "kevin-bacon",
@@ -11247,7 +11247,7 @@
     "is_box_set": true,
     "box_set_name": "Jackie Chan: Emergence of a Superstar",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "seth-rogen-evan-goldberg",
@@ -11291,7 +11291,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "seth-rogen-evan-goldberg",
@@ -11513,7 +11513,7 @@
     "is_box_set": true,
     "box_set_name": "Small Axe",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6517-small-axe",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "carrie-coon",
@@ -11757,7 +11757,7 @@
     "is_box_set": true,
     "box_set_name": "Eric Rohmer's Tales of the Four Seasons",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7154-eric-rohmer-s-tales-of-the-four-seasons",
-    "box_set_film_count": 1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "karyn-kusama",
@@ -11901,7 +11901,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 3: Late Ozu",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "karyn-kusama",
@@ -12408,7 +12408,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "brady-corbet",
@@ -12430,7 +12430,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "maura-tierney",
@@ -12732,7 +12732,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "pamela-anderson",
@@ -12934,7 +12934,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 38
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "pamela-anderson",
@@ -13077,7 +13077,7 @@
     "is_box_set": true,
     "box_set_name": "The Signifyin' Works of Marlon Riggs",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4431-the-signifyin-works-of-marlon-riggs",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "mikey-madison",
@@ -13491,7 +13491,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "winona-ryder",
@@ -14896,7 +14896,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 23: The First Films of Akira Kurosawa",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/743-eclipse-series-23-the-first-films-of-akira-kurosawa",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "marianne-jean-baptiste-mike-leigh",
@@ -15234,7 +15234,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "christian-petzold",
@@ -15896,7 +15896,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 3: Late Ozu",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -15996,7 +15996,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -16018,7 +16018,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "paul-b-preciado",
@@ -16534,7 +16534,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "lina-rodriguez",
@@ -16674,7 +16674,7 @@
     "is_box_set": true,
     "box_set_name": "Bo Widerberg's New Swedish Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6737-bo-widerberg-s-new-swedish-cinema",
-    "box_set_film_count": 1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "brit-marling-and-zal-batmanglij",
@@ -17252,7 +17252,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "paul-giamatti",
@@ -17414,7 +17414,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 11: Larisa Shepitko",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/75-eclipse-series-11-larisa-shepitko",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "chelsea-peretti",
@@ -18455,7 +18455,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "greg-gonzalez",
@@ -18577,7 +18577,7 @@
     "is_box_set": true,
     "box_set_name": "Eric Rohmer's Tales of the Four Seasons",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7154-eric-rohmer-s-tales-of-the-four-seasons",
-    "box_set_film_count": 1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "lee-daniels",
@@ -18768,7 +18768,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "dylan-baker",
@@ -19084,7 +19084,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "jr",
@@ -19229,7 +19229,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 35
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "edward-berger",
@@ -19347,10 +19347,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 6,
-    "quote": "",
-    "start_timestamp": null,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "But I'm kind of torn because it is Germany Year Zero, it's in the War Trilogy. I think I'm going to take that, the War Trilogy, because sometimes I live in Berlin and I walk through the city a lot thinking, 'God, look at that, look at how beautiful it could have been and this is what happened.' A country that's self-destructed basically gave into its sort of destructive impulses. This movie captures that incredibly. He went to Germany right after the war made this film.",
+    "start_timestamp": 121,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=-zlyJmf-2MM&t=121",
+    "extraction_confidence": "high",
     "is_box_set": true,
     "box_set_name": "Roberto Rossellini's War Trilogy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/689-roberto-rossellini-s-war-trilogy",
@@ -19376,7 +19376,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "jennifer-kent",
@@ -19656,7 +19656,7 @@
     "is_box_set": true,
     "box_set_name": "Chantal Akerman Masterpieces, 1968–1978",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7045-chantal-akerman-masterpieces-1968-1978",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "cheryl-dunye",
@@ -19722,7 +19722,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "tim-blake-nelson",
@@ -20022,7 +20022,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "molly-ringwald",
@@ -20164,7 +20164,7 @@
     "is_box_set": true,
     "box_set_name": "Dietrich & von Sternberg in Hollywood",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1329-dietrich-von-sternberg-in-hollywood",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "molly-ringwald",
@@ -20186,7 +20186,7 @@
     "is_box_set": true,
     "box_set_name": "Eric Rohmer's Tales of the Four Seasons",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7154-eric-rohmer-s-tales-of-the-four-seasons",
-    "box_set_film_count": 1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "molly-ringwald",
@@ -20208,7 +20208,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 8: Lubitsch Musicals",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/517-eclipse-series-8-lubitsch-musicals",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "molly-ringwald",
@@ -20230,7 +20230,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "molly-ringwald",
@@ -20751,7 +20751,7 @@
     "is_box_set": true,
     "box_set_name": "Chantal Akerman Masterpieces, 1968–1978",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7045-chantal-akerman-masterpieces-1968-1978",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "gregg-araki",
@@ -21452,7 +21452,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 30: Sabu!",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/847-eclipse-series-30-sabu",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "amir-naderi",
@@ -22014,7 +22014,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Monterey Pop Festival",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/326-the-complete-monterey-pop-festival",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "sara-dosa",
@@ -22154,7 +22154,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "charlie-day",
@@ -22339,7 +22339,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "carl-franklin",
@@ -23392,7 +23392,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 23: The First Films of Akira Kurosawa",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/743-eclipse-series-23-the-first-films-of-akira-kurosawa",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "benjamin-millepied",
@@ -23676,7 +23676,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "ethan-hawke-and-jonathan-marc-sherman",
@@ -23842,7 +23842,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "mary-harron",
@@ -24363,7 +24363,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "john-darnielle",
@@ -24488,7 +24488,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "philip-kaufman",
@@ -24634,7 +24634,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "kim-cattrall",
@@ -24854,7 +24854,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "kim-cattrall",
@@ -24876,7 +24876,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "cauleen-smith",
@@ -25096,7 +25096,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 31: Three Popular Films by Jean-Pierre Gorin",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/855-eclipse-series-31-three-popular-films-by-jean-pierre-gorin",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "minnie-driver",
@@ -25400,7 +25400,7 @@
     "is_box_set": true,
     "box_set_name": "Pierre Etaix",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/947-pierre-etaix",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "garrett-bradley",
@@ -25644,7 +25644,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "garrett-bradley",
@@ -25790,7 +25790,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "peter-sarsgaard",
@@ -25949,8 +25949,8 @@
     "start_timestamp": 27,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=std013XVxSk&t=27",
     "extraction_confidence": "high",
-    "is_box_set": false,
-    "box_set_name": null
+    "is_box_set": true,
+    "box_set_name": "Essential Fellini"
   },
   {
     "guest_slug": "john-waters",
@@ -26192,7 +26192,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "richard-e-grant",
@@ -27066,7 +27066,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 3: Late Ozu",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "laura-albert-jeff-feuerzeig",
@@ -27589,7 +27589,7 @@
     "is_box_set": true,
     "box_set_name": "Zatoichi: The Blind Swordsman",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1012-zatoichi-the-blind-swordsman",
-    "box_set_film_count": -1
+    "box_set_film_count": 25
   },
   {
     "guest_slug": "nicolas-winding-refn",
@@ -27809,7 +27809,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 24: The Actuality Dramas of Allan King",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "michael-cera",
@@ -27971,7 +27971,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "michael-cera",
@@ -29906,7 +29906,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 19: Chantal Akerman in the Seventies",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/691-eclipse-series-19-chantal-akerman-in-the-seventies",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "joachim-trier",
@@ -30130,7 +30130,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "joachim-trier",
@@ -30676,7 +30676,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 19: Chantal Akerman in the Seventies",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/691-eclipse-series-19-chantal-akerman-in-the-seventies",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "sean-baker",
@@ -31285,7 +31285,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "edgar-wright",
@@ -32295,7 +32295,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "jay-duplass",
@@ -32500,7 +32500,7 @@
     "is_box_set": true,
     "box_set_name": "Chantal Akerman Masterpieces, 1968–1978",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7045-chantal-akerman-masterpieces-1968-1978",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "mark-duplass",
@@ -32827,7 +32827,7 @@
     "is_box_set": true,
     "box_set_name": "Chantal Akerman Masterpieces, 1968–1978",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7045-chantal-akerman-masterpieces-1968-1978",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "jamie-lee-curtis",
@@ -33169,7 +33169,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "joseph-kosinski",
@@ -33774,7 +33774,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "diego-luna",
@@ -34360,7 +34360,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "zeinabu-irene-davis",
@@ -34547,7 +34547,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "francis-ford-coppola",
@@ -34609,7 +34609,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "francis-ford-coppola",
@@ -34632,7 +34632,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "payal-kapadia",
@@ -34752,14 +34752,14 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 6,
-    "quote": "",
-    "start_timestamp": null,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "I really wanted to have Kaurismäki because he’s a director I really, really admire a lot. And one of his really fun films is Leningrad Cowboys, which is just really funny and audacious. I love this film so much.",
+    "start_timestamp": 70,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=CzKnRQkPXdg&t=70",
+    "extraction_confidence": "high",
     "is_box_set": true,
     "box_set_name": "Eclipse Series 29: Aki Kaurismäki's Leningrad Cowboys",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/835-eclipse-series-29-aki-kaurismaki-s-leningrad-cowboys",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "payal-kapadia",
@@ -34781,7 +34781,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "payal-kapadia",
@@ -35046,7 +35046,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "ramell-ross",
@@ -35112,7 +35112,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "gints-zilbalodis",
@@ -35376,7 +35376,7 @@
     "is_box_set": true,
     "box_set_name": "Small Axe",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6517-small-axe",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "janelle-monae",
@@ -36222,7 +36222,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "kyle-maclachlan",
@@ -36788,7 +36788,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "jeremy-o-harris",
@@ -37010,7 +37010,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "nuri-bilge-ceylan",
@@ -37092,7 +37092,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": 1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "nuri-bilge-ceylan",
@@ -37301,7 +37301,7 @@
     "is_box_set": true,
     "box_set_name": "Pierre Etaix",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/947-pierre-etaix",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "julio-torres",
@@ -37740,10 +37740,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 7,
-    "quote": "",
-    "start_timestamp": null,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "One of the most funny directors that we need in our lives, Aki Kaurismäki. The Match Factory Girl, so important for me. Also in my journey with The Chambermaid, Aki keeps being with that strange, funny filmmaking spirit. Total anarchist.",
+    "start_timestamp": 58,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=0PMTo4SK__s&t=58",
+    "extraction_confidence": "high",
     "is_box_set": true,
     "box_set_name": "Eclipse Series 12: Aki Kaurismäki's Proletariat Trilogy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/564-eclipse-series-12-aki-kaurismaki-s-proletariat-trilogy",
@@ -38329,7 +38329,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Monterey Pop Festival",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/326-the-complete-monterey-pop-festival",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "susanna-hoffs",
@@ -38631,7 +38631,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "frederick-wiseman",
@@ -39156,7 +39156,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "wilco",
@@ -39178,7 +39178,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 9: The Delirious Fictions of William Klein",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/521-eclipse-series-9-the-delirious-fictions-of-william-klein",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "kemp-powers",
@@ -39600,7 +39600,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "isabel-sandoval",
@@ -39785,7 +39785,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "john-dwyer",
@@ -40330,7 +40330,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 24: The Actuality Dramas of Allan King",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "tim-robbins",
@@ -41601,7 +41601,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "ira-sachs",
@@ -41804,7 +41804,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "charlotte-wells",
@@ -41827,7 +41827,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 19: Chantal Akerman in the Seventies",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/691-eclipse-series-19-chantal-akerman-in-the-seventies",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "barbara-sukowa",
@@ -42089,7 +42089,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 24: The Actuality Dramas of Allan King",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "alden-ehrenreich",
@@ -42237,7 +42237,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "ron-shelton",
@@ -42759,7 +42759,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 32: Pearls of the Czech New Wave",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/870-eclipse-series-32-pearls-of-the-czech-new-wave",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "slavoj-zizek",
@@ -42781,7 +42781,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 14: Rossellini's History Films—Renaissance and Enlightenment",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/582-eclipse-series-14-rossellini-s-history-films-renaissance-and-enlightenment",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "slavoj-zizek",
@@ -42803,7 +42803,7 @@
     "is_box_set": true,
     "box_set_name": "Carl Theodor Dreyer",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/254-carl-theodor-dreyer",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "jack-garfein",
@@ -42872,7 +42872,7 @@
     "is_box_set": true,
     "box_set_name": "Carl Theodor Dreyer",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/254-carl-theodor-dreyer",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "jack-garfein",
@@ -42895,7 +42895,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "neal-brennan",
@@ -43529,14 +43529,14 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 11,
-    "quote": "",
-    "start_timestamp": 211,
-    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qBgZQCkUp7E&t=211",
-    "extraction_confidence": "none",
+    "quote": "Oshima's Outlaw Sixties.",
+    "start_timestamp": 1,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=qBgZQCkUp7E&t=1",
+    "extraction_confidence": "medium",
     "is_box_set": true,
     "box_set_name": "Eclipse Series 21: Oshima's Outlaw Sixties",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/720-eclipse-series-21-oshima-s-outlaw-sixties",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "jafar-panahi",
@@ -43656,7 +43656,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "agnes-b",
@@ -43796,7 +43796,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "marco-bellocchio",
@@ -44195,7 +44195,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "matteo-garrone",
@@ -44918,7 +44918,7 @@
     "is_box_set": true,
     "box_set_name": "Fanny and Alexander",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "laura-dern",
@@ -44940,7 +44940,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "laura-dern",
@@ -44963,7 +44963,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "mary-bronstein",
@@ -45105,7 +45105,7 @@
     "is_box_set": true,
     "box_set_name": "Chantal Akerman Masterpieces, 1968–1978",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/7045-chantal-akerman-masterpieces-1968-1978",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "mary-bronstein",
@@ -45269,7 +45269,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45291,7 +45291,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45314,7 +45314,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 23: The First Films of Akira Kurosawa",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/743-eclipse-series-23-the-first-films-of-akira-kurosawa",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45336,7 +45336,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 3: Late Ozu",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45358,7 +45358,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 5: The First Films of Samuel Fuller",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/499-eclipse-series-5-the-first-films-of-samuel-fuller",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45380,7 +45380,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45403,7 +45403,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 26: Silent Naruse",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/789-eclipse-series-26-silent-naruse",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "juliette-binoche-and-ralph-fiennes",
@@ -45426,7 +45426,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 25: Basil Dearden's London Underground",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/776-eclipse-series-25-basil-dearden-s-london-underground",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "zoe-kravitz-and-channing-tatum",
@@ -45991,7 +45991,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": -1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "cate-blanchett-and-todd-field",
@@ -46013,7 +46013,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "annie-baker-and-lucian-johnston",
@@ -46135,7 +46135,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "devo-gerald-casale-and-mark-mothersbaugh",
@@ -46197,7 +46197,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "devo-gerald-casale-and-mark-mothersbaugh",
@@ -46219,7 +46219,7 @@
     "is_box_set": true,
     "box_set_name": "Monsters and Madmen",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/434-monsters-and-madmen",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "ben-gibbards",
@@ -46363,7 +46363,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Monterey Pop Festival",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/326-the-complete-monterey-pop-festival",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "ben-gibbards",
@@ -46674,7 +46674,7 @@
     "is_box_set": true,
     "box_set_name": "Dietrich & von Sternberg in Hollywood",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1329-dietrich-von-sternberg-in-hollywood",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "alessandro-borghi-felix-van-groeningen-and-charlotte-vandermeersch",
@@ -46696,7 +46696,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "jacqueline-novak-and-john-early",
@@ -47200,7 +47200,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 31: Three Popular Films by Jean-Pierre Gorin",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/855-eclipse-series-31-three-popular-films-by-jean-pierre-gorin",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "vince-staples",
@@ -47222,7 +47222,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "ted-danson-mary-steenburgen",
@@ -47624,7 +47624,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "john-david-washington-and-malcolm-washington",
@@ -47646,7 +47646,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "john-david-washington-and-malcolm-washington",
@@ -47668,7 +47668,7 @@
     "is_box_set": true,
     "box_set_name": "Jackie Chan: Emergence of a Superstar",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "roger-james-deakins",
@@ -48870,7 +48870,7 @@
     "is_box_set": true,
     "box_set_name": "Pierre Etaix",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/947-pierre-etaix",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "louis-garrel",
@@ -48892,7 +48892,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "louis-garrel",
@@ -48914,7 +48914,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 31: Three Popular Films by Jean-Pierre Gorin",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/855-eclipse-series-31-three-popular-films-by-jean-pierre-gorin",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "louis-garrel",
@@ -48929,10 +48929,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 11,
-    "quote": "",
-    "start_timestamp": 0,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "Well this, because if you don't take it you're a stupid guy because I think he is more than a filmmaker, he is also I think a light to follow sometimes.",
+    "start_timestamp": 88,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=c2Xf_iXTjXg&t=88",
+    "extraction_confidence": "medium",
     "is_box_set": true,
     "box_set_name": "3 Films by Roberto Rossellini Starring Ingrid Bergman",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/982-3-films-by-roberto-rossellini-starring-ingrid-bergman",
@@ -49078,7 +49078,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": -1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "matthew-broderick",
@@ -49221,7 +49221,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "steve-coogan",
@@ -49623,7 +49623,7 @@
     "is_box_set": true,
     "box_set_name": "I Am Curious",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/338-i-am-curious",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "mark-bridges",
@@ -50773,7 +50773,7 @@
     "is_box_set": true,
     "box_set_name": "Dietrich & von Sternberg in Hollywood",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1329-dietrich-von-sternberg-in-hollywood",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "jerry-schatzberg",
@@ -50795,7 +50795,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "charlotte-rampling-and-andrew-haigh",
@@ -51421,7 +51421,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "matthew-modine",
@@ -51624,7 +51624,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "robert-downey-sr",
@@ -53001,7 +53001,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "reginald-hudlin",
@@ -53023,7 +53023,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "reginald-hudlin",
@@ -53045,7 +53045,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "david-remnick",
@@ -53207,7 +53207,7 @@
     "is_box_set": true,
     "box_set_name": "By Brakhage: An Anthology, Volumes One and Two",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/722-by-brakhage-an-anthology-volumes-one-and-two",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "david-remnick",
@@ -53351,7 +53351,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "robert-eggers",
@@ -53495,7 +53495,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "pablo-larrain",
@@ -53704,7 +53704,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "justine-triet",
@@ -53849,7 +53849,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 24: The Actuality Dramas of Allan King",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/752-eclipse-series-24-the-actuality-dramas-of-allan-king",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "agnes-varda",
@@ -54093,7 +54093,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "terry-gilliam",
@@ -54115,7 +54115,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": -1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "joel-potrykus",
@@ -54842,7 +54842,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jean Vigo",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/819-the-complete-jean-vigo",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "alfonso-cuaron-and-pawel-pawlikowski",
@@ -54864,7 +54864,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 11: Larisa Shepitko",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/75-eclipse-series-11-larisa-shepitko",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "aubrey-plaza-and-jeff-baena",
@@ -54999,10 +54999,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 7,
-    "quote": "",
-    "start_timestamp": 0,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "The Squid and the Whale.",
+    "start_timestamp": 49,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=b78bW2EoXeM&t=49",
+    "extraction_confidence": "medium",
     "is_box_set": false,
     "box_set_name": null
   },
@@ -55220,14 +55220,14 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 18,
-    "quote": "",
-    "start_timestamp": 0,
-    "youtube_timestamp_url": "",
-    "extraction_confidence": "none",
+    "quote": "Five Easy Pieces, some of the best.",
+    "start_timestamp": 30,
+    "youtube_timestamp_url": "https://www.youtube.com/watch?v=b78bW2EoXeM&t=30",
+    "extraction_confidence": "high",
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "bi-gan",
@@ -55329,7 +55329,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "jia-zhangke",
@@ -55933,7 +55933,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 3: Late Ozu",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "five-comics",
@@ -55968,10 +55968,10 @@
     "source": "criterion",
     "visit_index": 1,
     "pick_order": 2,
-    "quote": "",
+    "quote": "I got this, never actually seen this. I heard it's good.",
     "start_timestamp": 47,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=d7zuU2a_Tt4&t=47",
-    "extraction_confidence": "none",
+    "extraction_confidence": "medium",
     "is_box_set": false,
     "box_set_name": null
   },
@@ -56315,7 +56315,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "the-quay-brothers",
@@ -56422,7 +56422,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 2: The Documentaries of Louis Malle",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/275-eclipse-series-2-the-documentaries-of-louis-malle",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "the-quay-brothers",
@@ -56677,7 +56677,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "ryusuke-hamaguchi",
@@ -56985,7 +56985,7 @@
     "is_box_set": true,
     "box_set_name": "The Essential Jacques Demy",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1055-the-essential-jacques-demy",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "diego-calva",
@@ -58198,7 +58198,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "halle-berry",
@@ -58500,7 +58500,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "christoph-waltz",
@@ -58522,7 +58522,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": -1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "cameron-crowe",
@@ -58644,7 +58644,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Monterey Pop Festival",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/326-the-complete-monterey-pop-festival",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "cameron-crowe",
@@ -58990,7 +58990,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Jacques Tati",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1069-the-complete-jacques-tati",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "shinichiro-watanabe",
@@ -59012,7 +59012,7 @@
     "is_box_set": true,
     "box_set_name": "Bruce Lee: His Greatest Hits",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
-    "box_set_film_count": -1
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "jim-jarmusch",
@@ -59174,7 +59174,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "mitski",
@@ -59378,7 +59378,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 11: Larisa Shepitko",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/75-eclipse-series-11-larisa-shepitko",
-    "box_set_film_count": -1
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "sergei-loznitsa",
@@ -59400,7 +59400,7 @@
     "is_box_set": true,
     "box_set_name": "Eclipse Series 29: Aki Kaurismäki's Leningrad Cowboys",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/835-eclipse-series-29-aki-kaurismaki-s-leningrad-cowboys",
-    "box_set_film_count": -1
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "sergei-loznitsa",
@@ -61110,7 +61110,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "bob-odenkirk",
@@ -61374,7 +61374,7 @@
     "is_box_set": true,
     "box_set_name": "America Lost and Found: The BBS Story",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/769-america-lost-and-found-the-bbs-story",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "oscar-isaac",
@@ -62362,7 +62362,7 @@
     "is_box_set": true,
     "box_set_name": "Melvin Van Peebles: Essential Films",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "boots-riley",
@@ -62406,7 +62406,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "eiza-gonzalez",
@@ -62672,7 +62672,7 @@
     "is_box_set": true,
     "box_set_name": "Godzilla: The Showa-Era Films, 1954–1975",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/2648-godzilla-the-showa-era-films-1954-1975",
-    "box_set_film_count": -1
+    "box_set_film_count": 15
   },
   {
     "guest_slug": "robert-de-niro",
@@ -62754,7 +62754,7 @@
     "is_box_set": true,
     "box_set_name": "The Complete Films of Agnès Varda",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda",
-    "box_set_film_count": -1
+    "box_set_film_count": 22
   },
   {
     "guest_slug": "robert-de-niro",
@@ -62776,7 +62776,7 @@
     "is_box_set": true,
     "box_set_name": "Essential Fellini",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/3626-essential-fellini",
-    "box_set_film_count": -1
+    "box_set_film_count": 14
   },
   {
     "guest_slug": "paul-rudd",
@@ -63262,7 +63262,7 @@
     "is_box_set": true,
     "box_set_name": "Pasolini 101",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6588-pasolini-101",
-    "box_set_film_count": -1
+    "box_set_film_count": 9
   },
   {
     "guest_slug": "lisa-kudrow",
@@ -64712,7 +64712,7 @@
     "is_box_set": true,
     "box_set_name": "David Lean Directs Noël Coward",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/861-david-lean-directs-noel-coward",
-    "box_set_film_count": -1
+    "box_set_film_count": 4
   },
   {
     "guest_slug": "david-tennant",
@@ -66130,7 +66130,7 @@
     "is_box_set": true,
     "box_set_name": "Ingmar Bergman's Cinema",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema",
-    "box_set_film_count": -1
+    "box_set_film_count": 40
   },
   {
     "guest_slug": "thomas-bangalter",
@@ -66538,7 +66538,7 @@
     "is_box_set": true,
     "box_set_name": "Jackie Chan: Emergence of a Superstar",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
-    "box_set_film_count": -1
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "colman-domingo",
@@ -66700,7 +66700,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "danny-mcbride",
@@ -67386,7 +67386,7 @@
     "is_box_set": true,
     "box_set_name": "World of Wong Kar Wai",
     "box_set_criterion_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai",
-    "box_set_film_count": -1
+    "box_set_film_count": 7
   },
   {
     "guest_slug": "adam-scott",
