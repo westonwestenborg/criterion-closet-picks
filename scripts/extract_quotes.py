@@ -798,7 +798,7 @@ def main():
     for pick in all_picks:
         if pick.get("quote"):
             original = pick["quote"]
-            pick["quote"] = clean_quote(original, title_map)
+            pick["quote"] = clean_quote(original, title_map, pick.get("film_title"))
             if pick["quote"] != original:
                 cleaned_count += 1
     log(f"Cleaned {cleaned_count} quotes")

@@ -19,7 +19,30 @@ import re
 import sys
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
-from scripts.utils import PICKS_FILE, CATALOG_FILE, load_json, save_json, log
+from scripts.utils import DATA_DIR, PICKS_FILE, CATALOG_FILE, load_json, save_json, log
+
+AMBIGUOUS_TITLES_FILE = DATA_DIR / "ambiguous_film_titles.json"
+
+
+_AMBIGUOUS_CACHE: set[str] | None = None
+
+
+def load_ambiguous_titles() -> set[str]:
+    """
+    Catalog titles that are also ordinary English words (House, Mother,
+    Performance, Festival...). fix_film_titles matches a title anywhere in a
+    quote, so for these it is as likely to hit the common noun as the film --
+    which is how quotes ended up reading "my Mother on the stage" and "at that
+    friend's House". Substituting them is only safe when the guest is naming
+    their own pick, so they are skipped otherwise.
+    """
+    global _AMBIGUOUS_CACHE
+    if _AMBIGUOUS_CACHE is None:
+        try:
+            _AMBIGUOUS_CACHE = {t.lower() for t in load_json(AMBIGUOUS_TITLES_FILE)}
+        except FileNotFoundError:
+            _AMBIGUOUS_CACHE = set()
+    return _AMBIGUOUS_CACHE
 
 
 # Filler patterns to remove (with word boundaries)
@@ -119,15 +142,25 @@ def _title_pattern(lower_title: str) -> re.Pattern:
     return pattern
 
 
-def fix_film_titles(text: str, title_map: dict[str, str]) -> str:
+def fix_film_titles(
+    text: str, title_map: dict[str, str], own_title: str | None = None
+) -> str:
     """
     Fix known film title capitalization in quotes.
     Uses word boundaries to avoid false substring matches (e.g. "Birth" inside "birthday").
+
+    A title listed in ambiguous_film_titles.json is only substituted when it is
+    the guest's own pick (own_title), because otherwise the match is far more
+    likely to be the ordinary English word than a reference to the film.
     """
+    ambiguous = load_ambiguous_titles()
+    own_low = (own_title or "").lower()
     low = text.lower()
     for lower_title, correct_title in title_map.items():
         if len(lower_title) < 5:
             continue  # Skip very short titles to avoid false matches
+        if lower_title in ambiguous and lower_title not in own_low:
+            continue
         # A \b...\b match requires the literal substring to be present, so skip
         # titles that can't possibly match before paying for the regex.
         if lower_title not in low:
@@ -161,14 +194,16 @@ def add_trailing_ellipsis(text: str) -> str:
     return text
 
 
-def clean_quote(text: str, title_map: dict[str, str]) -> str:
+def clean_quote(
+    text: str, title_map: dict[str, str], own_title: str | None = None
+) -> str:
     """Apply all cleaning steps to a single quote."""
     if not text or not text.strip():
         return ""
 
     text = remove_fillers(text)
     text = deduplicate_words(text)
-    text = fix_film_titles(text, title_map)
+    text = fix_film_titles(text, title_map, own_title)
     text = fix_capitalization(text)
     text = normalize_whitespace(text)
     text = add_trailing_ellipsis(text)
@@ -207,7 +242,7 @@ def main():
         if not original:
             continue
 
-        cleaned = clean_quote(original, title_map)
+        cleaned = clean_quote(original, title_map, pick.get("film_title"))
         cleaned_count += 1
 
         if cleaned != original:
