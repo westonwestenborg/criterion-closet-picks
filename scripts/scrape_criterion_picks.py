@@ -605,9 +605,10 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
     """
     Match scraped Criterion films to our catalog.
     Strategy:
-      1. Match by Criterion film URL (if catalog has criterion_url)
-      2. Exact title match
-      3. Fuzzy title match
+      1. Exact Criterion URL match (the only step that resolves box sets)
+      2. Match by Criterion film ID extracted from the URL (films only)
+      3. Exact title match
+      4. Fuzzy title match
     """
     # Build a lookup by criterion URL for fast matching
     url_lookup = {}
@@ -633,7 +634,24 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
         crit_id = film.get("criterion_film_id", "")
         title = film["title"]
 
-        # 1. Match by criterion film ID (extracted from URL)
+        # 1. Exact criterion_url match. This is the only step that can resolve a
+        # box set: its /boxsets/NNN URL carries an ID from a different namespace
+        # than the /films/NNN IDs slug_lookup is keyed on, so box sets used to
+        # fall through to title matching, which drifts as the catalog is
+        # retitled. A guest who picks the "Three Colors" box set scores 86
+        # against the individual film "Three Colors: Red" and only 67 against
+        # "The Three Colors Trilogy", so fuzzy matching sends the pick to Red.
+        # The box set's own URL is already on the pick and on exactly one
+        # catalog entry, so match it directly and skip the guessing.
+        if crit_url and crit_url in url_lookup:
+            cat = url_lookup[crit_url]
+            film["catalog_spine"] = cat["spine_number"]
+            film["catalog_title"] = cat["title"]
+            film["match_method"] = "criterion_url"
+            film["film_id"] = cat["film_id"]
+            continue
+
+        # 2. Match by criterion film ID (extracted from URL)
         # Skip for box sets — /boxsets/ IDs are a different namespace than /films/ IDs
         if crit_id and crit_id in slug_lookup and not film.get("is_box_set"):
             cat = slug_lookup[crit_id]
@@ -643,7 +661,7 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
             film["film_id"] = cat["film_id"]
             continue
 
-        # 2. Exact title match
+        # 3. Exact title match
         matched = False
         for cat in catalog:
             if cat["title"].lower() == title.lower():
@@ -656,7 +674,7 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
         if matched:
             continue
 
-        # 3. Fuzzy title match. Titles that number themselves differently are
+        # 4. Fuzzy title match. Titles that number themselves differently are
         # never the same release — "World Cinema Project No. 3" scores 98 against
         # "...No. 5" — so a volume conflict disqualifies the candidate outright.
         best_score = 0
