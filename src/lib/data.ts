@@ -383,6 +383,27 @@ export interface BoxSetInfo {
   guest_slugs: string[];
 }
 
+/**
+ * True when an aggregate pick is for the box set whose page we are on.
+ *
+ * A box-set entry reaches the film view when some pick names it directly, and
+ * that page then carries two kinds of record for the same act: picks tagged
+ * with box_set metadata and picks without it. On every such page the two carry
+ * the identical film_title -- everyone picked the same set -- so the split is
+ * an artifact of which scrape era wrote the record, not a difference in what
+ * the guest did. Callers use this to keep both kinds in one list instead of
+ * filing these under "Also mentioned as part of", which is for member films of
+ * some OTHER set and silently dropped 47 guest mentions across 9 pages.
+ */
+export function isPickOfBoxSetItself(
+  pick: { box_set_film_count?: number; box_set_criterion_url?: string },
+  filmCriterionUrl: string | undefined | null,
+): boolean {
+  if (!pick.box_set_film_count) return false;
+  if (!pick.box_set_criterion_url || !filmCriterionUrl) return false;
+  return pick.box_set_criterion_url === filmCriterionUrl;
+}
+
 export function getBoxSetInfoForFilm(filmSlug: string): BoxSetInfo[] {
   const allPicks = getSupportedPicks();
 

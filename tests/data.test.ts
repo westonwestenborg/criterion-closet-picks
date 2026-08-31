@@ -9,6 +9,7 @@ import {
   getPublishableGuests,
   getRecentGuests,
   isGuestPublishable,
+  isPickOfBoxSetItself,
 } from '../src/lib/data';
 import type { Guest } from '../src/lib/data';
 
@@ -373,5 +374,46 @@ describe('getRecentGuests', () => {
     });
     expect(getRecentGuests(2).map((g) => g.slug)).toEqual(['new', 'mid']);
     expect(getRecentGuests(10).map((g) => g.slug)).toEqual(['new', 'mid', 'old']);
+  });
+});
+
+describe('box-set picks on the box set\'s own page', () => {
+  const SET_URL = 'https://www.criterion.com/boxsets/844-three-colors';
+
+  it('counts an aggregate pick for this very set as one of its own picks', () => {
+    // These used to be filed under "Also mentioned as part of ...", a section
+    // meant for member films of some OTHER set, so they vanished whenever
+    // getBoxSetInfoForFilm returned nothing -- 47 guest mentions across 9 pages.
+    expect(
+      isPickOfBoxSetItself(
+        { box_set_film_count: 3, box_set_criterion_url: SET_URL },
+        SET_URL,
+      ),
+    ).toBe(true);
+  });
+
+  it('does not claim an aggregate pick for a different box set', () => {
+    expect(
+      isPickOfBoxSetItself(
+        { box_set_film_count: 3, box_set_criterion_url: SET_URL },
+        'https://www.criterion.com/boxsets/1145-the-apu-trilogy',
+      ),
+    ).toBe(false);
+  });
+
+  it('ignores picks that are not aggregates', () => {
+    expect(
+      isPickOfBoxSetItself({ box_set_criterion_url: SET_URL }, SET_URL),
+    ).toBe(false);
+  });
+
+  it('is false when either url is missing rather than matching on empty', () => {
+    expect(isPickOfBoxSetItself({ box_set_film_count: 3 }, SET_URL)).toBe(false);
+    expect(
+      isPickOfBoxSetItself(
+        { box_set_film_count: 3, box_set_criterion_url: SET_URL },
+        undefined,
+      ),
+    ).toBe(false);
   });
 });

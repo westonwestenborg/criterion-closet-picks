@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestPickItem from '../../components/GuestPickItem.astro';
-import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug, getPickedBoxSets, getBoxSetBySlug, getPicksForBoxSet, getBoxSetMemberFilms } from '../../lib/data';
+import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug, getPickedBoxSets, getBoxSetBySlug, getPicksForBoxSet, getBoxSetMemberFilms, isPickOfBoxSetItself } from '../../lib/data';
 
 export function getStaticPaths() {
   const slugs = new Set<string>();
@@ -24,8 +24,14 @@ if (!film && !boxSet) {
 
 // --- Film view data (only when rendering a film) ---
 const allPicks = film ? getPicksForFilm(film.slug) : [];
-const directPicks = allPicks.filter(p => !p.box_set_film_count);
-const boxSetPicks = allPicks.filter(p => p.box_set_film_count);
+// An aggregate pick for THIS box set goes in the main list, not under "Also
+// mentioned as part of" -- the guest picked this set, same as the picks beside
+// it, and only the box_set metadata differs. Filing them below meant they were
+// dropped entirely whenever getBoxSetInfoForFilm returned nothing.
+const isOwnSetPick = (p: (typeof allPicks)[number]) =>
+  isPickOfBoxSetItself(p, film?.criterion_url);
+const directPicks = allPicks.filter(p => !p.box_set_film_count || isOwnSetPick(p));
+const boxSetPicks = allPicks.filter(p => p.box_set_film_count && !isOwnSetPick(p));
 const boxSetInfo = film ? getBoxSetInfoForFilm(film.slug) : [];
 
 // --- Box set view data (only when rendering a box set) ---
