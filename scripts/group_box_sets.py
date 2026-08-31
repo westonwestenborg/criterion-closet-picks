@@ -87,6 +87,20 @@ def normalize_smart_quotes(text: str) -> str:
     )
 
 
+def film_count_from_catalog(url: str, catalog_by_url: dict[str, dict]) -> int | None:
+    """
+    Film count from the box set's own catalog entry.
+
+    Criterion's box-set pages list their contents, and build_catalog stores that
+    as included_films, so 45 of the 53 sets that were falling back to -1 already
+    knew their own size -- the two were just never joined up.
+    """
+    entry = catalog_by_url.get(url or "")
+    if not entry:
+        return None
+    return len(entry.get("included_films") or []) or None
+
+
 def infer_film_count_from_name(name: str) -> int | None:
     """Try to infer film count from box set name patterns."""
     lower = name.lower()
@@ -193,12 +207,14 @@ def group_picks_for_guest(
     known_title_map: dict[str, str],
     url_map: dict[str, str],
     catalog_by_id: dict[str, dict],
+    catalog_by_url: dict[str, dict] | None = None,
 ) -> list[dict]:
     """
     Group a guest's picks, collapsing box set films into single entries.
     Films with high/medium confidence quotes stay as separate entries.
     Unit picks (film_title == box_set_name) become aggregates with quotes preserved.
     """
+    catalog_by_url = catalog_by_url or {}
     box_set_groups: dict[str, list[dict]] = defaultdict(list)
     standalone_picks: list[dict] = []
 
@@ -226,6 +242,19 @@ def group_picks_for_guest(
                             url = cat_url
                 if url:
                     pick["box_set_criterion_url"] = url
+            # The URL is only settled now, so the catalog lookup comes last:
+            # -1 means "unknown", and the box set's own entry usually knows.
+            # A count of 1 is not a box set count -- it is a stale value from an
+            # earlier run counting how many of the set's films the guest picked.
+            # Ingmar Bergman's Cinema carried None, -1, 1, 35, 38 and 39 across
+            # its own picks; the catalog says 40 and is the only authority.
+            if (pick.get("box_set_film_count") or 0) <= 1 or pick.get(
+                "box_set_film_count"
+            ) in (None, -1):
+                from_catalog = film_count_from_catalog(
+                    pick.get("box_set_criterion_url", ""), catalog_by_url
+                )
+                pick["box_set_film_count"] = from_catalog or -1
             # Quote is preserved (not cleared)
             standalone_picks.append(pick)
             continue
@@ -257,7 +286,13 @@ def group_picks_for_guest(
         template = grouped_picks[0].copy()
         template["is_box_set"] = True
         template["box_set_name"] = box_set_name
-        template["box_set_film_count"] = len(grouped_picks)
+        # len(grouped_picks) counts how many of the set's films THIS guest took,
+        # not how big the set is, so guests of Ingmar Bergman's Cinema reported
+        # 35, 38 and 39 films for the same 40-film set. The catalog knows.
+        template["box_set_film_count"] = (
+            film_count_from_catalog(url_map.get(box_set_name, ""), catalog_by_url)
+            or len(grouped_picks)
+        )
         template["box_set_film_titles"] = film_titles
         template["film_title"] = box_set_name
 
@@ -440,6 +475,7 @@ def main():
 
     catalog_map = build_catalog_box_set_map(catalog)
     catalog_by_id = {c["film_id"]: c for c in catalog}
+    catalog_by_url = {c["criterion_url"]: c for c in catalog if c.get("criterion_url")}
     known_title_map = build_known_box_set_map()
     url_map = build_url_map(picks_raw)
     log(f"Catalog-annotated: {len(catalog_map)} films, Known box sets: {len(known_title_map)} films")
@@ -455,7 +491,9 @@ def main():
 
     for guest_slug, guest_picks in picks_by_guest.items():
         before_count = len(guest_picks)
-        grouped = group_picks_for_guest(guest_picks, catalog_map, known_title_map, url_map, catalog_by_id)
+        grouped = group_picks_for_guest(
+            guest_picks, catalog_map, known_title_map, url_map, catalog_by_id, catalog_by_url
+        )
         after_count = len(grouped)
         collapsed = before_count - after_count
 
@@ -476,6 +514,27 @@ def main():
 
     # Infer box set membership for untagged no-quote picks
     infer_box_set_membership(all_grouped)
+
+    # Normalize film counts against the catalog. Aggregates built by earlier runs
+    # kept whatever len(grouped_picks) was at the time, so the same set could
+    # report a different size for each guest -- Ingmar Bergman's Cinema carried
+    # 35, 38, 39 and 40. Only picks whose set the catalog actually describes are
+    # touched; the rest keep what they have.
+    renormalized = 0
+    for pick in all_grouped:
+        url = pick.get("box_set_criterion_url")
+        if not url or not pick.get("box_set_name"):
+            continue
+        # A set that states its own size wins: "John Cassavetes: Five Films"
+        # has six catalog entries because the sixth is a bonus documentary, and
+        # labelling it "6 films" would contradict its own title.
+        named_count = infer_film_count_from_name(pick["box_set_name"])
+        true_count = named_count or film_count_from_catalog(url, catalog_by_url)
+        if true_count and pick.get("box_set_film_count") != true_count:
+            pick["box_set_film_count"] = true_count
+            renormalized += 1
+    if renormalized:
+        log(f"Film counts renormalized from the catalog: {renormalized} picks")
 
     if not args.dry_run:
         save_json(PICKS_FILE, all_grouped)
