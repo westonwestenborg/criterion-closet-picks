@@ -40650,27 +40650,7 @@
           "character": "Record Dealer"
         }
       ]
-    },
-    "is_box_set": true,
-    "description": "This boldly cinematic trio of stories about love and loss, from Krzysztof Kieślowski, was a defining event of the art-house boom of the 1990s. The films are named for the colors of the French flag and stand for the tenets of the French Revolution—liberty, equality, and fraternity—but that hardly begins to explain their enigmatic beauty and rich humanity. Set in Paris, Warsaw, and Geneva, and ranging from tragedy to comedy,Blue, White,andRed(Kieślowski’s final film) examine with artistic clarity a group of ambiguously interconnected people experiencing profound personal disruptions. Marked by intoxicating cinematography and stirring performances by Juliette Binoche, Julie Delpy, Irène Jacob, and Jean-Louis Trintignant, Kieślowski’s Three Colors is a benchmark of contemporary cinema.",
-    "included_films": [
-      {
-        "criterion_url": "https://www.criterion.com/films/27731-three-colors-blue",
-        "title": "Three Colors: Blue",
-        "year": 1993
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/27732-three-colors-white",
-        "title": "Three Colors: White",
-        "year": 1994
-      },
-      {
-        "criterion_url": "https://www.criterion.com/films/27733-three-colors-red",
-        "title": "Three Colors: Red",
-        "year": 1994
-      }
-    ],
-    "box_set_film_count": 3
+    }
   },
   {
     "film_id": "12-angry-men",
