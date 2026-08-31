@@ -22,6 +22,11 @@ const {
     autocomplete="off"
     data-pagefind-search
   />
+  <div class="filter-group" id="pagefind-filters" role="group" aria-label="Filter results by type" hidden>
+    <button type="button" class="filter-chip active" data-filter-type="">All</button>
+    <button type="button" class="filter-chip" data-filter-type="Guest">Guests</button>
+    <button type="button" class="filter-chip" data-filter-type="Film">Films</button>
+  </div>
   <p class="search-status" id="pagefind-search-status" role="status" aria-live="polite"></p>
   <div id="pagefind-results" class="pagefind-results" role="list"></div>
 </div>
@@ -109,6 +114,31 @@ const {
       const pagefind = await import('/pagefind/pagefind.js');
       await pagefind.init();
 
+      const filterBar = document.getElementById('pagefind-filters');
+      let activeType = params.get('type') || '';
+
+      function setTypeParam(type) {
+        const url = new URL(window.location.href);
+        if (type) url.searchParams.set('type', type);
+        else url.searchParams.delete('type');
+        window.history.replaceState({}, '', url);
+      }
+
+      if (filterBar) {
+        filterBar.hidden = false;
+        filterBar.querySelectorAll('[data-filter-type]').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.filterType === activeType);
+          btn.addEventListener('click', async function() {
+            activeType = btn.dataset.filterType || '';
+            filterBar.querySelectorAll('[data-filter-type]').forEach(function(b) {
+              b.classList.toggle('active', b === btn);
+            });
+            setTypeParam(activeType);
+            await runSearch(input.value.trim());
+          });
+        });
+      }
+
       async function runSearch(query) {
         if (!query) {
           clearResults('');
@@ -118,7 +148,10 @@ const {
 
         status.textContent = `Searching for "${query}"...`;
         setQueryParam(query, 'replace');
-        const search = await pagefind.search(query);
+        // The type filter is emitted by BaseLayout on guest and film pages via
+        // its searchType prop; omitting the option searches everything.
+        const options = activeType ? { filters: { type: activeType } } : undefined;
+        const search = await pagefind.search(query, options);
         const items = await Promise.all(
           search.results.slice(0, 8).map(function(r) { return r.data(); })
         );

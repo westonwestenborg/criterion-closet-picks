@@ -10,6 +10,8 @@ interface Props {
   ogType?: string;
   noindex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  /** Emits a Pagefind filter so search can be narrowed to one kind of page. */
+  searchType?: 'Guest' | 'Film';
 }
 
 const {
@@ -18,6 +20,7 @@ const {
   ogImage: ogImageProp,
   ogType = 'website',
   noindex = false,
+  searchType,
   structuredData,
 } = Astro.props;
 const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`;
@@ -53,7 +56,7 @@ const jsonLd = (Array.isArray(structuredData) ? structuredData : structuredData 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   <Header />
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" data-pagefind-filter={searchType ? `type:${searchType}` : undefined}>
     <slot />
   </main>
   <Footer />

@@ -109,7 +109,7 @@ const structuredData = [
   },
 ];
 ---
-<BaseLayout title={pageTitle} description={pageDescription} ogImage={film ? `/og/films/${slug}.jpg` : undefined} ogType={film ? 'video.movie' : 'website'} structuredData={structuredData}>
+<BaseLayout title={pageTitle} description={pageDescription} ogImage={film ? `/og/films/${slug}.jpg` : undefined} ogType={film ? 'video.movie' : 'website'} structuredData={structuredData} searchType="Film">
   {film && (
   <div class="detail-page">
     <div class="detail-header">
