@@ -5354,5 +5354,18 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/1000-joan-chen-s-closet-picks",
     "pick_count": 5
+  },
+  {
+    "name": "Adam Scott",
+    "slug": "adam-scott",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/b82C29R6fGiPoqIglQ4lzS6q2YX.jpg",
+    "youtube_video_id": null,
+    "youtube_video_url": null,
+    "vimeo_video_id": null,
+    "episode_date": null,
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/998-adam-scott-s-closet-picks",
+    "pick_count": 11
   }
 ]
