@@ -6,7 +6,12 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from scripts.extract_quotes import GeminiModel, pick_index_key
+from scripts.extract_quotes import (
+    GeminiModel,
+    duplicates_existing_quote,
+    pick_has_quote,
+    pick_index_key,
+)
 
 
 class FakeModels:
@@ -106,6 +111,49 @@ class ExtractQuotesTest(unittest.TestCase):
         }
 
         self.assertEqual(pick_index_key(existing), pick_index_key(raw))
+
+
+class DuplicateQuoteDetectionTest(unittest.TestCase):
+    # A real pair from Bill Hader's picks: the same utterance reaching two picks,
+    # once from the video transcript and once from the audio fallback. difflib's
+    # autojunk heuristic switches on above 200 characters and made ratio()
+    # asymmetric, so the guard's verdict depended on which argument came first.
+    A = (
+        "Last time I was here it was 2009 and I said that this movie was a good "
+        "date movie. Salvatore Giuliano. My favorite part of this movie is when..."
+        " And then the guy, he goes into a room and he finds his plate of... It is"
+        " not a good date movie, just want to clear that up."
+    )
+    B = (
+        "Said that this movie was a good date movie solo my favorite part of this "
+        "movie is when and then the guy he goes into a room and he finds his plate"
+        " of it is not a good date movie just want to clear that up..."
+    )
+
+    def test_detects_the_pair_in_both_directions(self):
+        self.assertTrue(duplicates_existing_quote(self.A, [self.B]))
+        self.assertTrue(duplicates_existing_quote(self.B, [self.A]))
+
+    def test_leaves_unrelated_quotes_alone(self):
+        self.assertFalse(
+            duplicates_existing_quote("A completely different remark.", [self.A])
+        )
+
+    def test_empty_candidate_is_never_a_duplicate(self):
+        self.assertFalse(duplicates_existing_quote("", [self.A]))
+
+
+class PickHasQuoteTest(unittest.TestCase):
+    def test_none_confidence_does_not_count_as_quoted(self):
+        # picks_raw carries empty quotes and "none" confidence; treating those as
+        # quoted is what let fill-missing overwrite real ones.
+        self.assertFalse(
+            pick_has_quote({"quote": "something", "extraction_confidence": "none"})
+        )
+        self.assertFalse(pick_has_quote({"quote": "", "extraction_confidence": "high"}))
+        self.assertTrue(
+            pick_has_quote({"quote": "something", "extraction_confidence": "high"})
+        )
 
 
 if __name__ == "__main__":

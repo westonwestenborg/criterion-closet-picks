@@ -16,6 +16,7 @@ import difflib
 import json
 import re
 import sys
+from pathlib import Path
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -193,7 +194,14 @@ def duplicates_existing_quote(
         prior = _normalize_quote(other)
         if not prior:
             continue
-        if difflib.SequenceMatcher(None, cand, prior).ratio() >= threshold:
+        # autojunk must stay off. Above 200 characters difflib treats popular
+        # elements as junk, which makes ratio() asymmetric: the pair that put A
+        # Man Escaped's words on Salvatore Giuliano scored 0.92 one way round
+        # and 0.36 the other, so the guard's verdict depended on argument order.
+        if (
+            difflib.SequenceMatcher(None, cand, prior, autojunk=False).ratio()
+            >= threshold
+        ):
             return True
     return False
 
@@ -372,8 +380,14 @@ def extract_quotes_from_audio(
     # Download audio to temp file
     with tempfile.TemporaryDirectory() as tmpdir:
         audio_path = f"{tmpdir}/{video_id}.mp3"
+        # Prefer the venv's yt-dlp over whatever is on PATH. YouTube changes
+        # often enough that yt-dlp warns once a release is 90 days old and then
+        # starts failing; the venv is what the project pins and updates, while
+        # PATH here resolved to a Homebrew copy seven months behind, which is
+        # why Bill Hader's audio fallback returned no quotes.
+        ytdlp = Path(sys.executable).parent / "yt-dlp"
         cmd = [
-            "yt-dlp",
+            str(ytdlp) if ytdlp.exists() else "yt-dlp",
             "-x", "--audio-format", "mp3",
             "--audio-quality", "5",
             "-o", audio_path,
@@ -813,6 +827,18 @@ def main():
             for pick in guest_picks:
                 title = pick["film_title"]
                 quote_match = quotes_by_title.get(title.lower())
+                # Same rule as the transcript path: under --fill-missing this may
+                # only add. guest_picks comes from picks_raw and carries no
+                # quotes, so the live record has to be consulted instead.
+                audio_prior = existing_pick_index.get(pick_index_key(pick))
+                if args.fill_missing and audio_prior is not None and pick_has_quote(
+                    audio_prior
+                ):
+                    existing_pick_index[pick_index_key(audio_prior)] = audio_prior
+                    continue
+                if args.fill_missing and not quote_match and audio_prior is not None:
+                    existing_pick_index[pick_index_key(audio_prior)] = audio_prior
+                    continue
                 if quote_match:
                     pick["quote"] = quote_match["quote"]
                     pick["start_timestamp"] = quote_match["start_timestamp"]
@@ -901,9 +927,41 @@ def main():
                     quotes_by_title = {q["film_title"].lower(): q for q in quotes}
                     new_quotes_found = 0
 
+                    # Same duplicate rules as the transcript path. Without them
+                    # this pass gave A Man Escaped the words already sitting on
+                    # Salvatore Giuliano, at 0.93 similarity.
+                    guest_existing = [
+                        p2.get("quote", "")
+                        for p2 in existing_pick_index.values()
+                        if p2.get("guest_slug") == slug and pick_has_quote(p2)
+                    ]
+                    guest_timestamps = {
+                        p2.get("start_timestamp")
+                        for p2 in existing_pick_index.values()
+                        if p2.get("guest_slug") == slug
+                        and pick_has_quote(p2)
+                        and p2.get("start_timestamp") is not None
+                    }
+
                     for pick in none_picks:
                         title = pick["film_title"]
                         quote_match = quotes_by_title.get(title.lower())
+                        if quote_match:
+                            ts = quote_match.get("start_timestamp")
+                            if ts is not None and ts in guest_timestamps:
+                                log(
+                                    f"    Skipping {title}: same timestamp ({ts}s)"
+                                    f" as an existing {guest['name']} quote"
+                                )
+                                quote_match = None
+                            elif duplicates_existing_quote(
+                                quote_match.get("quote", ""), guest_existing
+                            ):
+                                log(
+                                    f"    Skipping {title}: text duplicates an"
+                                    f" existing {guest['name']} quote"
+                                )
+                                quote_match = None
                         if quote_match and quote_match.get("quote") and quote_match["confidence"] != "none":
                             # visit_index is part of pick_index_key, so retagging
                             # a pick without dropping its old entry inserts a
@@ -916,6 +974,9 @@ def main():
                             pick["visit_index"] = visit_idx + 1
                             if pick_index_key(pick) != old_key:
                                 existing_pick_index.pop(old_key, None)
+                            guest_existing.append(pick["quote"])
+                            if pick.get("start_timestamp") is not None:
+                                guest_timestamps.add(pick["start_timestamp"])
                             # `is not None`, not truthiness: a pick discussed at 0:00 has a
                             # timestamp of 0, which is falsy and would silently lose its link.
                             if visit_video_id and quote_match["start_timestamp"] is not None:
