@@ -1021,6 +1021,13 @@ def main():
                 cleaned_count += 1
     log(f"Cleaned {cleaned_count} quotes")
 
+    # Re-apply quote corrections last, so a re-extraction cannot silently revert
+    # a documented fix. Mirrors apply_pick_overrides in the scraper.
+    from scripts.utils import apply_quote_overrides
+    overridden = apply_quote_overrides(all_picks)
+    if overridden:
+        log(f"Quote overrides applied: {overridden}")
+
     save_json(PICKS_FILE, all_picks)
     log(f"Saved {len(all_picks)} picks to {PICKS_FILE}")
 

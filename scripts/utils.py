@@ -271,6 +271,60 @@ PICK_OVERRIDES: dict[str, list[dict]] = {
 }
 
 
+# Deliberate corrections to extracted quotes, keyed by guest_slug then film_id.
+# Quotes come from an LLM pass, so every entry here contradicts it on purpose and
+# carries its transcript evidence in a "note".
+QUOTE_OVERRIDES: dict[str, dict[str, dict]] = {
+    slug: entries
+    for slug, entries in load_json(DATA_DIR / "quote_overrides.json").items()
+    if not slug.startswith("_")
+}
+
+
+def apply_quote_overrides(picks: list[dict]) -> int:
+    """
+    Rewrite quotes the extraction attributed to the wrong film.
+
+    A quote of None clears the pick, for the case where the words belong to a
+    different pick that already carries them. Returns the number changed. Safe to
+    call repeatedly: a pick already matching its override is left alone.
+    """
+    applied = 0
+    for pick in picks:
+        rule = QUOTE_OVERRIDES.get(pick.get("guest_slug", ""), {}).get(
+            pick.get("film_id") or pick.get("film_slug") or ""
+        )
+        if rule is None:
+            continue
+
+        wanted = rule.get("quote")
+        if wanted is None:
+            if not (pick.get("quote") or "").strip():
+                continue
+            pick["quote"] = ""
+            pick["extraction_confidence"] = "none"
+            pick["start_timestamp"] = None
+            pick["youtube_timestamp_url"] = ""
+            applied += 1
+            continue
+
+        if pick.get("quote") == wanted:
+            continue
+        pick["quote"] = wanted
+        pick["extraction_confidence"] = "high"
+        if rule.get("start_timestamp") is not None:
+            pick["start_timestamp"] = rule["start_timestamp"]
+            # Keep the deep link pointing at the passage we just corrected.
+            for field in ("youtube_timestamp_url", "vimeo_timestamp_url"):
+                url = pick.get(field)
+                if url:
+                    pick[field] = re.sub(
+                        r"([?&#]t=)\d+", rf"\g<1>{rule['start_timestamp']}", url
+                    )
+        applied += 1
+    return applied
+
+
 def apply_pick_overrides(picks: list[dict]) -> int:
     """Rewrite scraped picks that PICK_OVERRIDES says Criterion got wrong.
 

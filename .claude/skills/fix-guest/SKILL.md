@@ -400,6 +400,83 @@ The `note` field is the whole point of the file — it is the only record of why
 we disagree with the primary source. Write it for someone who will read it in a
 year with no memory of the episode.
 
+### 10. Two picks carrying the same quote
+
+Run this to find them. Note `autojunk=False` -- without it `difflib` treats
+common elements as junk above 200 characters and `ratio()` stops being
+symmetric, scoring one real pair 0.06 one way round and 0.86 the other:
+
+```bash
+.venv/bin/python -c "
+import json, difflib, collections
+picks=json.load(open('data/picks.json'))
+byg=collections.defaultdict(list)
+for p in picks:
+    if (p.get('quote') or '').strip(): byg[p['guest_slug']].append(p)
+for slug, ps in byg.items():
+    for i, x in enumerate(ps):
+        for y in ps[i+1:]:
+            r=difflib.SequenceMatcher(None,x['quote'].lower(),y['quote'].lower(),autojunk=False).ratio()
+            if r>=0.75: print(round(r,2), slug, x['film_id'], '<->', y['film_id'])"
+```
+
+**Most of these are correct and must be left alone.** Guests routinely pull two
+or three films off the shelf and say one thing about all of them, and the
+pipeline attaches that utterance to each pick. Of 23 pairs found in August 2026,
+21 were this and only 2 were errors.
+
+**The test is the quote text, not the similarity score.** Read it:
+
+- It names both films, or names the thing that binds them -- "These I'm taking
+  for Dad, Notorious and Rebecca", "Flesh for Frankenstein and Blood for
+  Dracula... in honor of the great Udo Kier", "the two of Jane Campion". That is
+  one real utterance about both picks. **Leave it.**
+- It is about one film only, or reads as a garbled restatement of a neighbouring
+  quote. **That is the error.** Confirm against the guest's transcript before
+  touching anything, because the model will happily insert a film's name into a
+  passage to make it fit the pick it was asked about.
+
+Two worked examples, both from the August 2026 pass:
+
+- Both `roma-1972` (Fellini) and `roma-2018` (Cuaron) held one quote, and it was
+  entirely about Cuaron's: "Alfonso had been talking about making this movie."
+  The transcript had del Toro on Fellini's Roma from 193s -- frescoes in the
+  subway, the fashion show for Cardinals -- before saying at 227s "Oh, I found
+  another Roma that I like." Fellini's entry got its own passage back.
+- `salvatore-giuliano` held Salo's words. The transcript reads "a good date
+  movie uh **solo** my favorite part" -- the captioner mishearing "Salo" -- and
+  the man who finds his plate of excrement is Salo. The model had replaced
+  "solo" with "Salvatore Giuliano." to fit its pick.
+
+Corrections live in `data/quote_overrides.json`, keyed by guest slug then
+film_id, and `extract_quotes.py` re-applies them after every run so a
+re-extraction cannot revert them:
+
+```json
+"guillermo-del-toro": {
+  "roma-1972": {
+    "quote": "Now, Fellini. I love Amarcord...",
+    "start_timestamp": 193,
+    "note": "Why the extraction was wrong, with the transcript evidence."
+  }
+}
+```
+
+Set `"quote": null` to clear a pick whose words belong to another pick that
+already carries them. The `quote` must be verbatim from that guest's own
+transcript -- this file corrects attribution, it does not author copy. The
+`note` is the only record of why we disagree with the extraction; write it for
+someone reading it in a year with no memory of the episode.
+
+Apply without a full re-extraction:
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json, save_json, PICKS_FILE, apply_quote_overrides
+d=load_json(PICKS_FILE); print('applied', apply_quote_overrides(d)); save_json(PICKS_FILE, d)"
+```
+
 ## Key Details
 
 - Fix application order: `WRONG_VIDEO_FIXES` -> `KNOWN_VIDEO_IDS` -> `KNOWN_CRITERION_URLS`
