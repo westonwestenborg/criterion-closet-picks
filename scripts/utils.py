@@ -94,6 +94,43 @@ def make_film_id(title: str, year: int | None) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Criterion collection identity
+# ---------------------------------------------------------------------------
+
+def collection_id(url: str | None) -> str | None:
+    """
+    The numeric id in a Criterion collection URL, or None if there isn't one.
+
+    Criterion serves /shop/collection/{id}-{slug} off the id alone and ignores
+    the slug, so it can rename a collection at any time and both the old and the
+    new URL keep returning the same page. Collection 911 is the worked example:
+    it became .../911-guillermo-del-toro-s-mobile-closet-picks, and
+    .../911-guillermo-del-toro-s-closet-picks still resolves.
+
+    That makes whole-URL comparison unsafe. A renamed URL matches no stored
+    visit and no configured URL, so the scraper reads one collection as two:
+    it scrapes the page twice and, worse, cannot tell which visit the second
+    copy belongs to, so a multi-visit guest's picks fall back to visit_index 1
+    and collapse into visit 1. Compare ids instead of URLs.
+    """
+    if not url:
+        return None
+    m = re.search(r"/shop/collection/(\d+)", url)
+    return m.group(1) if m else None
+
+
+def collection_ids(urls) -> set[str]:
+    """The collection ids of an iterable of URLs, skipping any that have none."""
+    return {cid for cid in (collection_id(u) for u in urls or ()) if cid}
+
+
+def same_collection(url1: str | None, url2: str | None) -> bool:
+    """Whether two URLs address the same Criterion collection, ignoring slugs."""
+    cid1 = collection_id(url1)
+    return cid1 is not None and cid1 == collection_id(url2)
+
+
+# ---------------------------------------------------------------------------
 # Fuzzy Matching
 # ---------------------------------------------------------------------------
 

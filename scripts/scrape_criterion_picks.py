@@ -35,6 +35,8 @@ from scripts.utils import (
     PICKS_RAW_FILE,
     VISIT_CRITERION_URLS,
     apply_pick_overrides,
+    collection_id,
+    collection_ids,
     load_json,
     save_json,
     log,
@@ -300,6 +302,9 @@ SKIP_COLLECTION_URLS = {
     "https://www.criterion.com/shop/collection/498-4k-discs",
 }
 
+# Matched by collection id, so renaming one of these cannot defeat the skip.
+SKIP_COLLECTION_IDS = collection_ids(SKIP_COLLECTION_URLS)
+
 
 def scrape_index(scraper) -> list[dict]:
     """
@@ -307,7 +312,7 @@ def scrape_index(scraper) -> list[dict]:
     Returns list of {name, slug, collection_url, collection_path}.
     """
     collections = []
-    seen_paths = set()
+    seen_ids = set()
 
     log("Scraping Criterion closet-picks index...")
     try:
@@ -331,14 +336,16 @@ def scrape_index(scraper) -> list[dict]:
         if path.startswith("http"):
             path = re.sub(r"^https?://[^/]+", "", path)
 
-        # Skip duplicates
-        if path in seen_paths:
-            continue
-        seen_paths.add(path)
-
         # Must match the collection URL pattern
         if not re.match(r"/shop/collection/\d+-", path):
             continue
+
+        # Skip duplicates. Keyed on the collection id: the same collection can
+        # appear under more than one slug once Criterion renames it.
+        coll_id = collection_id(path)
+        if coll_id in seen_ids:
+            continue
+        seen_ids.add(coll_id)
 
         # If link text is empty (e.g., older visit links with just "Watch & shop"),
         # extract guest name from URL slug
@@ -355,14 +362,14 @@ def scrape_index(scraper) -> list[dict]:
 
         full_url = f"{CRITERION_BASE}{path}" if not href.startswith("http") else href
 
-        if full_url in SKIP_COLLECTION_URLS:
+        if coll_id in SKIP_COLLECTION_IDS:
             continue
 
         # Resolve canonical slug via VISIT_CRITERION_URLS for multi-visit guests
         # (e.g., "yorgos-lanthimos-ariane-labed" -> "yorgos-lanthimos")
         coll_slug = slugify(guest_name)
         for canonical_slug, urls in VISIT_CRITERION_URLS.items():
-            if full_url in urls:
+            if coll_id in collection_ids(urls):
                 coll_slug = canonical_slug
                 break
 
@@ -707,6 +714,38 @@ def match_films_to_catalog(films: list[dict], catalog: list[dict]) -> list[dict]
 # Guest matching and merging
 # ---------------------------------------------------------------------------
 
+def _resolve_visit_index(guest: dict, guest_slug: str, coll_id: str | None) -> int:
+    """
+    Which visit of this guest the given collection is, 1-based.
+
+    Prefers the guest's own visits array and falls back to
+    VISIT_CRITERION_URLS for a guest whose visits have not been built yet.
+    Both are matched on collection id rather than the whole URL, because
+    Criterion renames collection slugs and serves both spellings; see
+    utils.collection_id.
+
+    Returns 1 when the collection matches nothing, which is right for the
+    single-visit guests that are the overwhelming majority. For a guest who
+    already has more than one visit it is a guess, so say so in the log --
+    silently defaulting to 1 is what collapsed collection 911 into visit 1.
+    """
+    for i, visit in enumerate(guest.get("visits") or []):
+        if coll_id is not None and coll_id == collection_id(visit.get("criterion_page_url")):
+            return i + 1
+
+    slug_urls = VISIT_CRITERION_URLS.get(guest_slug, [])
+    for i, url in enumerate(slug_urls):
+        if coll_id is not None and coll_id == collection_id(url):
+            return i + 1
+
+    known = len(guest.get("visits") or []) or len(slug_urls)
+    if known > 1:
+        log(f"    WARNING: collection {coll_id} matches none of {guest_slug}'s "
+            f"{known} known visits -- assigning visit 1. Add its URL to "
+            f"data/visit_criterion_urls.json.")
+    return 1
+
+
 def find_existing_guest(guest_name: str, guest_slug: str, existing_guests: list[dict]) -> dict | None:
     """Find an existing guest by slug or fuzzy name match."""
     # Exact slug match
@@ -796,6 +835,10 @@ def scrape_all_collections(
     # Load checkpoint for resuming
     checkpoint = load_checkpoint() if resume else {"completed_urls": []}
     completed_urls = set(checkpoint.get("completed_urls", []))
+    # The checkpoint stores URLs so it stays readable, but membership is tested
+    # by collection id: a renamed collection is the same collection, and
+    # re-scraping it under its new URL would double-count it.
+    completed_ids = collection_ids(completed_urls)
 
     # Filter collections if --guest flag is used
     if guest_filter:
@@ -819,17 +862,20 @@ def scrape_all_collections(
 
     # Always re-scrape multi-visit URLs together so visit_index is assigned correctly
     multi_visit_slugs = {slug for slug, urls in VISIT_CRITERION_URLS.items() if len(urls) >= 2}
-    multi_visit_urls = {url for urls in VISIT_CRITERION_URLS.values() if len(urls) >= 2 for url in urls}
-    completed_urls -= multi_visit_urls
+    multi_visit_ids = {cid for urls in VISIT_CRITERION_URLS.values() if len(urls) >= 2
+                       for cid in collection_ids(urls)}
+    completed_urls = {u for u in completed_urls if collection_id(u) not in multi_visit_ids}
+    completed_ids -= multi_visit_ids
     for p in existing_picks:
         if p["guest_slug"] in multi_visit_slugs:
             p["visit_index"] = None
 
     for coll in tqdm(collections, desc="Scraping Criterion collections"):
         url = coll["collection_url"]
+        coll_id = collection_id(url)
 
         # Skip already-completed collections (resume support)
-        if url in completed_urls:
+        if coll_id in completed_ids:
             continue
 
         log(f"  Scraping: {coll['name']} ({url})")
@@ -846,6 +892,7 @@ def scrape_all_collections(
         if not films:
             # Mark as completed even if empty (don't retry empty pages)
             completed_urls.add(url)
+            completed_ids.add(coll_id)
             save_checkpoint({"completed_urls": list(completed_urls)})
             time.sleep(REQUEST_DELAY)
             continue
@@ -871,17 +918,11 @@ def scrape_all_collections(
             guest_slug = existing_guest["slug"]
             guest_name = existing_guest["name"]
 
-            # Determine visit_index from collection URL for multi-visit guests
-            visit_index = 1
-            for i, visit in enumerate(existing_guest.get("visits", [])):
-                if visit.get("criterion_page_url") == url:
-                    visit_index = i + 1
-                    break
-            else:
-                # Fallback: check VISIT_CRITERION_URLS when visits array doesn't exist yet
-                slug_urls = VISIT_CRITERION_URLS.get(guest_slug, [])
-                if url in slug_urls:
-                    visit_index = slug_urls.index(url) + 1
+            # Determine visit_index from the collection this page belongs to.
+            # Matched on collection id, never the whole URL: Criterion renames
+            # collection slugs, and a renamed URL that matches nothing lands
+            # every pick on visit 1 and collapses the guest's visits together.
+            visit_index = _resolve_visit_index(existing_guest, guest_slug, coll_id)
         else:
             # New guest (not in Letterboxd data)
             visit_index = 1
@@ -953,6 +994,7 @@ def scrape_all_collections(
 
         # Save progress incrementally
         completed_urls.add(url)
+        completed_ids.add(coll_id)
         save_checkpoint({"completed_urls": list(completed_urls)})
 
         # Save data after each collection (so interrupted runs keep progress)
@@ -1035,19 +1077,31 @@ def main():
         else:
             log(f"Discovered {len(collections)} collections")
 
-        # Inject any VISIT_CRITERION_URLS not discovered from the index
-        discovered_urls = {c["collection_url"] for c in collections}
+        # Inject any VISIT_CRITERION_URLS not discovered from the index.
+        # Keyed on collection id: when Criterion has renamed a collection the
+        # index carries it under the new slug, and comparing whole URLs would
+        # inject our stale spelling as a second copy of the same collection.
+        discovered = {collection_id(c["collection_url"]): c["collection_url"]
+                      for c in collections}
         for slug, urls in VISIT_CRITERION_URLS.items():
             for url in urls:
-                if url not in discovered_urls:
-                    name = slug.replace("-", " ").title()
-                    collections.append({
-                        "name": name,
-                        "slug": slug,
-                        "collection_url": url,
-                        "collection_path": url.replace(CRITERION_BASE, ""),
-                    })
-                    log(f"  Injected missing collection: {name} ({url})")
+                coll_id = collection_id(url)
+                if coll_id in discovered:
+                    live_url = discovered[coll_id]
+                    if live_url != url:
+                        log(f"  NOTE: collection {coll_id} was renamed by Criterion. "
+                            f"Ours: {url}  Live: {live_url}. Both resolve, so this "
+                            f"run is correct; update data/visit_criterion_urls.json "
+                            f"to keep the config current.")
+                    continue
+                name = slug.replace("-", " ").title()
+                collections.append({
+                    "name": name,
+                    "slug": slug,
+                    "collection_url": url,
+                    "collection_path": url.replace(CRITERION_BASE, ""),
+                })
+                log(f"  Injected missing collection: {name} ({url})")
 
         # Index-only mode: just update criterion_page_url and exit
         if args.index_only:

@@ -28,6 +28,7 @@ from scripts.utils import (
     PICKS_FILE,
     PICKS_RAW_FILE,
     backfill_pick_order,
+    collection_ids,
     load_json,
     save_json,
     log,
@@ -181,7 +182,9 @@ def override_visit_from_criterion(picks: list[dict], picks_raw: list[dict], gues
     guests_with_multi_criterion = set()
     for g in guests:
         visits = g.get("visits", [])
-        criterion_urls = {v.get("criterion_page_url") for v in visits if v.get("criterion_page_url")}
+        # Counted by collection id, not URL: Criterion renames collection
+        # slugs and serves both spellings, so two URLs can be one collection.
+        criterion_urls = collection_ids(v.get("criterion_page_url") for v in visits)
         if len(criterion_urls) >= 2:
             guests_with_multi_criterion.add(g["slug"])
 

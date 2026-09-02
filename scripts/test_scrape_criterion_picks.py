@@ -9,9 +9,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.scrape_criterion_picks import (
     CollectionUnavailable,
+    _resolve_visit_index,
     match_films_to_catalog,
+    parse_guest_name_from_link_text,
     scrape_collection_page,
 )
+from scripts.utils import collection_id, collection_ids, same_collection
 
 COLLECTION_URL = "https://www.criterion.com/shop/collection/989-a-guest-s-closet-picks"
 
@@ -149,6 +152,101 @@ class MatchFilmsToCatalogTest(unittest.TestCase):
 
         self.assertEqual(film["film_id"], "three-colors-red")
         self.assertEqual(film["match_method"], "exact")
+
+
+BASE = "https://www.criterion.com/shop/collection/"
+
+
+class CollectionIdentityTest(unittest.TestCase):
+    """
+    Criterion serves a collection off the numeric id and ignores the slug, so
+    it can rename one and keep serving both spellings. Collection 911 really
+    was renamed to ...-s-mobile-closet-picks while the old URL kept resolving.
+    """
+
+    def test_id_comes_from_the_number_not_the_slug(self):
+        self.assertEqual(collection_id(BASE + "911-guillermo-del-toro-s-closet-picks"), "911")
+        self.assertEqual(
+            collection_id(BASE + "911-guillermo-del-toro-s-mobile-closet-picks"), "911"
+        )
+        self.assertEqual(collection_id(BASE + "1001-wes-anderson-s-mobile-closet-picks"), "1001")
+
+    def test_non_collection_urls_have_no_id(self):
+        self.assertIsNone(collection_id(None))
+        self.assertIsNone(collection_id(""))
+        self.assertIsNone(collection_id("https://www.criterion.com/films/234-the-39-steps"))
+
+    def test_renamed_urls_are_the_same_collection(self):
+        self.assertTrue(
+            same_collection(BASE + "911-a-s-closet-picks", BASE + "911-a-s-mobile-closet-picks")
+        )
+        self.assertFalse(same_collection(BASE + "911-a", BASE + "645-a"))
+
+    def test_two_missing_urls_are_not_the_same_collection(self):
+        # Otherwise every guest with no Criterion page would match every other.
+        self.assertFalse(same_collection(None, None))
+
+    def test_collection_ids_skips_urls_without_one(self):
+        self.assertEqual(collection_ids([BASE + "645-x", BASE + "911-y", "junk", None]), {"645", "911"})
+
+
+class ResolveVisitIndexTest(unittest.TestCase):
+    """
+    Regression cover for the collapse this replaced: a renamed collection URL
+    matched no stored visit, fell through to visit 1, and merged a two-visit
+    guest's picks into one visit.
+    """
+
+    GUEST = {
+        "slug": "guillermo-del-toro",
+        "visits": [
+            {"visit_index": 1, "criterion_page_url": BASE + "645-guillermo-del-toro-s-closet-picks"},
+            {"visit_index": 2, "criterion_page_url": BASE + "911-guillermo-del-toro-s-closet-picks"},
+        ],
+    }
+
+    def test_matches_the_visit_it_belongs_to(self):
+        self.assertEqual(_resolve_visit_index(self.GUEST, "guillermo-del-toro", "645"), 1)
+        self.assertEqual(_resolve_visit_index(self.GUEST, "guillermo-del-toro", "911"), 2)
+
+    def test_renamed_collection_still_resolves_to_its_own_visit(self):
+        # The stored URL says 911-...-s-closet-picks and the live index says
+        # 911-...-s-mobile-closet-picks. Same id, so still visit 2.
+        live = BASE + "911-guillermo-del-toro-s-mobile-closet-picks"
+        self.assertEqual(
+            _resolve_visit_index(self.GUEST, "guillermo-del-toro", collection_id(live)), 2
+        )
+
+    def test_single_visit_guest_is_visit_one(self):
+        guest = {"slug": "wes-anderson", "visits": []}
+        self.assertEqual(_resolve_visit_index(guest, "wes-anderson", "1001"), 1)
+
+    def test_unmatched_collection_falls_back_to_visit_one(self):
+        self.assertEqual(_resolve_visit_index(self.GUEST, "guillermo-del-toro", "999"), 1)
+
+    def test_no_collection_id_falls_back_to_visit_one(self):
+        self.assertEqual(_resolve_visit_index(self.GUEST, "guillermo-del-toro", None), 1)
+
+
+class ParseGuestNameTest(unittest.TestCase):
+    """Criterion's collection titles carry qualifiers that are not part of the name."""
+
+    def test_plain_and_qualified_titles(self):
+        cases = {
+            "Charli XCX\u2019s Closet Picks": "Charli XCX",
+            "Martin Scorsese\u2019s Second Closet Picks": "Martin Scorsese",
+            "Wes Anderson\u2019s Mobile Closet Picks": "Wes Anderson",
+            "Guillermo del Toro\u2019s Mobile Closet Picks": "Guillermo del Toro",
+            "Cate Blanchett and Todd Field\u2019s Closet Picks": "Cate Blanchett and Todd Field",
+            "Ari Aster\u2019s Closet Picks 2023": "Ari Aster",
+            "Watch & shopCharli XCX\u2019s Closet Picks": "Charli XCX",
+        }
+        for text, expected in cases.items():
+            with self.subTest(text=text):
+                self.assertEqual(parse_guest_name_from_link_text(text), expected)
+
+    def test_non_guest_collections_yield_no_name(self):
+        self.assertEqual(parse_guest_name_from_link_text("4K Discs 30% Off"), "")
 
 
 if __name__ == "__main__":

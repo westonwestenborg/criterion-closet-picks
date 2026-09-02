@@ -17,6 +17,7 @@ from scripts.utils import (
     GUESTS_FILE,
     PICKS_FILE,
     PICKS_RAW_FILE,
+    collection_id,
     load_json,
 )
 from scripts.schema import CatalogFilm, Guest, Pick
@@ -513,6 +514,59 @@ class TestMultiVisitVisitIndex(unittest.TestCase):
         self.assertEqual(
             bad, [],
             f"multi-visit guests need contiguous 1..N visit_index: {bad}",
+        )
+
+    def test_every_declared_visit_has_picks(self):
+        """
+        A guest who declares N visits should have picks on each of them.
+
+        This is the tell for a collapse: when a collection URL matches no
+        stored visit, its picks fall back to visit_index 1, and a two-visit
+        guest ends up with everything on visit 1 and nothing on visit 2. That
+        happened to Guillermo del Toro when Criterion renamed collection 911,
+        and it passed every other check in this file.
+        """
+        by_guest = {}
+        for p in picks:
+            if p.get("visit_index"):
+                by_guest.setdefault(p["guest_slug"], set()).add(p["visit_index"])
+
+        bad = []
+        for g in guests:
+            visits = g.get("visits") or []
+            if len(visits) < 2:
+                continue
+            declared = {v.get("visit_index") for v in visits}
+            found = by_guest.get(g["slug"], set())
+            missing = sorted(v for v in declared - found if v)
+            if missing:
+                bad.append(f"{g['slug']}: no picks on visit {missing} (has {sorted(found)})")
+        self.assertEqual(
+            bad, [],
+            "every declared visit needs picks; a visit with none usually means "
+            f"its collection URL matched nothing and collapsed onto visit 1: {bad}",
+        )
+
+    def test_visits_do_not_share_a_collection(self):
+        """
+        Two visits must not point at the same Criterion collection.
+
+        Criterion serves /shop/collection/{id}-{slug} off the id and ignores
+        the slug, so the same collection under two spellings looks like two
+        visits. See utils.collection_id.
+        """
+        bad = []
+        for g in guests:
+            visits = g.get("visits") or []
+            if len(visits) < 2:
+                continue
+            ids = [collection_id(v.get("criterion_page_url")) for v in visits]
+            present = [i for i in ids if i]
+            if len(present) != len(set(present)):
+                bad.append(f"{g['slug']}: {ids}")
+        self.assertEqual(
+            bad, [],
+            f"each visit needs its own Criterion collection: {bad}",
         )
 
 
