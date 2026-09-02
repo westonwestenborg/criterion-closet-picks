@@ -235,7 +235,7 @@
         "youtube_video_url": "https://www.youtube.com/watch?v=CcscEY2KoS8",
         "vimeo_video_id": null,
         "episode_date": "2026-01-24",
-        "criterion_page_url": "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks"
+        "criterion_page_url": "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-mobile-closet-picks"
       }
     ]
   },
@@ -5371,5 +5371,18 @@
     "pick_count": 11,
     "x_handle": "mradamscott",
     "threads_handle": "mradamscott"
+  },
+  {
+    "name": "Wes Anderson",
+    "slug": "wes-anderson",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/s03CeUeC5yAXyB1acqP0zGNo2SC.jpg",
+    "youtube_video_id": "oJXKHJeVav0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=oJXKHJeVav0",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-02",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1001-wes-anderson-s-mobile-closet-picks",
+    "pick_count": 9
   }
 ]

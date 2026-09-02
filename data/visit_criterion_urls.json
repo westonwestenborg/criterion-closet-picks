@@ -47,7 +47,7 @@
   ],
   "guillermo-del-toro": [
     "https://www.criterion.com/shop/collection/645-guillermo-del-toro-s-closet-picks",
-    "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-closet-picks"
+    "https://www.criterion.com/shop/collection/911-guillermo-del-toro-s-mobile-closet-picks"
   ],
   "ari-aster": [
     "https://www.criterion.com/shop/collection/544-ari-aster-s-closet-picks-2023",
@@ -219,5 +219,8 @@
   ],
   "adam-scott": [
     "https://www.criterion.com/shop/collection/998-adam-scott-s-closet-picks"
+  ],
+  "wes-anderson": [
+    "https://www.criterion.com/shop/collection/1001-wes-anderson-s-mobile-closet-picks"
   ]
 }
