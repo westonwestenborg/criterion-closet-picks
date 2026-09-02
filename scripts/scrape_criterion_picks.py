@@ -265,13 +265,17 @@ def parse_guest_name_from_link_text(text: str) -> str:
       "Cate Blanchett and Todd Field's Closet Picks" -> "Cate Blanchett and Todd Field"
       "Martin Scorsese's Closet Picks" -> "Martin Scorsese"
       "Watch & shopCharli XCX's Closet Picks" -> "Charli XCX"
+      "Wes Anderson's Mobile Closet Picks" -> "Wes Anderson"
     """
     # Clean overlay text first
     text = _clean_link_text(text)
 
-    # Pattern: "Name's Closet Picks" (smart or straight apostrophe)
+    # Pattern: "Name's Closet Picks" (smart or straight apostrophe).
+    # "Mobile" covers collections for episodes shot at the travelling closet;
+    # they are ordinary single-guest visits, so the qualifier is dropped from
+    # the name (match_youtube.py does the same for the video titles).
     m = re.match(
-        r"^(.+?)(?:['\u2019]s)\s+(?:Second\s+)?Closet\s+Picks?",
+        r"^(.+?)(?:['\u2019]s)\s+(?:Second\s+)?(?:Mobile\s+)?Closet\s+Picks?",
         text,
         re.IGNORECASE,
     )
@@ -279,7 +283,7 @@ def parse_guest_name_from_link_text(text: str) -> str:
         return m.group(1).strip()
 
     # Pattern: "Name Closet Picks" (no possessive -- rare)
-    m = re.match(r"^(.+?)\s+Closet\s+Picks?", text, re.IGNORECASE)
+    m = re.match(r"^(.+?)\s+(?:Mobile\s+)?Closet\s+Picks?", text, re.IGNORECASE)
     if m:
         name = m.group(1).strip()
         # Avoid capturing random words
