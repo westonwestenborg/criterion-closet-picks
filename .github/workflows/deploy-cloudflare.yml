@@ -27,6 +27,25 @@ jobs:
       - name: Run tests
         run: bun run test
 
+      # The 1,258 OG social cards are ~99% of build time when rendered from
+      # scratch: satori lays out an SVG per card and sharp encodes it through
+      # mozjpeg, which took 763s of a 782s run before this cache existed. The
+      # site's actual HTML builds in about 6 seconds.
+      #
+      # restore-keys makes this incremental rather than all-or-nothing. Nearly
+      # every push changes data/*.json, so the exact key misses, the newest
+      # og- cache is restored anyway, and only the cards whose own signature
+      # changed get re-rendered. The new cache is then saved under the new key.
+      # Cards are also keyed on a fingerprint of the renderers and fonts (see
+      # src/lib/og/cache.ts), so restoring an older cache cannot ship a stale
+      # design.
+      - name: Cache OG images
+        uses: actions/cache@v4
+        with:
+          path: .cache/og
+          key: og-${{ hashFiles('data/*.json', 'src/lib/og/**', 'src/assets/fonts/**') }}
+          restore-keys: og-
+
       - name: Build Astro site
         run: bun run build
 
