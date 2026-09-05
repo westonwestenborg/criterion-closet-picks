@@ -5385,5 +5385,19 @@
     "criterion_page_url": "https://www.criterion.com/shop/collection/1001-wes-anderson-s-mobile-closet-picks",
     "pick_count": 9,
     "featured_film_slug": "charulata"
+  },
+  {
+    "name": "Jason Sudeikis",
+    "slug": "jason-sudeikis",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/uuacnP9DOHMsmj8FhBi0cWWDgrn.jpg",
+    "youtube_video_id": "Sc6UrpZR3Z4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=Sc6UrpZR3Z4",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-04",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1002-jason-sudeikis-s-closet-picks",
+    "pick_count": 13,
+    "featured_film_slug": "citizen-kane"
   }
 ]
