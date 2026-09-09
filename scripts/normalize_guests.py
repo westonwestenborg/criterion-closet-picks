@@ -151,6 +151,7 @@ KNOWN_VIDEO_IDS = {
     "adam-scott": {"youtube_video_id": "uzH9Fjb2x4w"},
     "wes-anderson": {"youtube_video_id": "oJXKHJeVav0"},
     "jason-sudeikis": {"youtube_video_id": "Sc6UrpZR3Z4"},
+    "jack-coyne": {"youtube_video_id": "cba7ycKIAy8"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -230,6 +231,7 @@ KNOWN_CRITERION_URLS = {
     "adam-scott": "https://www.criterion.com/shop/collection/998-adam-scott-s-closet-picks",
     "wes-anderson": "https://www.criterion.com/shop/collection/1001-wes-anderson-s-mobile-closet-picks",
     "jason-sudeikis": "https://www.criterion.com/shop/collection/1002-jason-sudeikis-s-closet-picks",
+    "jack-coyne": "https://www.criterion.com/shop/collection/1003-jack-coyne-s-closet-picks",
 }
 
 # Name cleanup

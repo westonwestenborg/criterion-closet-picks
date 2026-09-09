@@ -5399,5 +5399,21 @@
     "criterion_page_url": "https://www.criterion.com/shop/collection/1002-jason-sudeikis-s-closet-picks",
     "pick_count": 13,
     "featured_film_slug": "citizen-kane"
+  },
+  {
+    "name": "Jack Coyne",
+    "slug": "jack-coyne",
+    "profession": "host",
+    "photo_url": null,
+    "youtube_video_id": "cba7ycKIAy8",
+    "youtube_video_url": "https://www.youtube.com/watch?v=cba7ycKIAy8",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-08",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1003-jack-coyne-s-closet-picks",
+    "pick_count": 11,
+    "x_handle": "jackycoyne",
+    "threads_handle": "jackycoyne",
+    "featured_film_slug": "the-celebration"
   }
 ]
