@@ -316,6 +316,35 @@ describe('getDisplayablePicksForGuest', () => {
     expect(picks.find((p) => p.film_slug === 'other-box')!.film?.poster_url).toBe('other.jpg');
   });
 
+  it('shows "Part of X" only when the guest took that box set on that visit', () => {
+    cleanup = makeFixtureDir({
+      picks: [
+        // took the box and singled out a film in it, same visit -> labelled
+        { guest_slug: 'test-guest-alpha', film_id: 'persona', quote: 'q', extraction_confidence: 'high', visit_index: 1, is_box_set: true, box_set_name: 'Bergman' },
+        { guest_slug: 'test-guest-alpha', film_id: 'bergman-box', source: 'criterion', visit_index: 1, box_set_film_count: 40, box_set_name: 'Bergman' },
+        // same box, but the guest took it on a different visit -> not labelled
+        { guest_slug: 'test-guest-alpha', film_id: 'amarcord', quote: 'q', extraction_confidence: 'high', visit_index: 2, is_box_set: true, box_set_name: 'Fellini' },
+        { guest_slug: 'test-guest-alpha', film_id: 'fellini-box', source: 'criterion', visit_index: 1, box_set_film_count: 14, box_set_name: 'Fellini' },
+        // film is sold in a box the guest never took -> not labelled
+        { guest_slug: 'test-guest-alpha', film_id: 'woman', quote: 'q', extraction_confidence: 'high', visit_index: 1, is_box_set: true, box_set_name: 'Cassavetes' },
+      ],
+      guests: [guest({ slug: 'test-guest-alpha' })],
+      catalog: [
+        { film_id: 'persona', title: 'Persona' },
+        { film_id: 'amarcord', title: 'Amarcord' },
+        { film_id: 'woman', title: 'A Woman Under the Influence' },
+        { film_id: 'bergman-box', title: 'Bergman', is_box_set: true },
+        { film_id: 'fellini-box', title: 'Fellini', is_box_set: true },
+      ],
+    });
+    const by = new Map(getDisplayablePicksForGuest('test-guest-alpha').map((p) => [p.film_slug, p]));
+    expect(by.get('persona')!.show_box_set_label).toBe(true);
+    expect(by.get('amarcord')!.show_box_set_label).toBe(false);
+    expect(by.get('woman')!.show_box_set_label).toBe(false);
+    // the aggregates themselves are never labelled -- they render as box sets
+    expect(by.get('bergman-box')!.show_box_set_label).toBe(false);
+  });
+
   it('preserves visit_index through normalization and raw fallback', () => {
     cleanup = makeFixtureDir({
       picks: [

@@ -288,14 +288,42 @@ function getBoxSetFilms(): Film[] {
   return _boxSetFilms;
 }
 
-export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
+// "Part of X" is only worth saying when this guest actually took box set X on
+// this visit and then singled out one film inside it -- Lav Diaz picked the
+// Bergman box and Persona in one sitting, and said "I have the Bergman
+// collection, but Persona...". Almost every other film we tag has its own
+// spine number, so the guest took the standalone disc and the box set is just
+// another shelf that film sits on; saying so answers a question nobody asked.
+// Same visit matters: Bill Hader picked Amarcord in 2011 and the Fellini box
+// in 2023, twelve years apart, so the box says nothing about the 2011 pick.
+function boxSetsTakenPerVisit(picks: Pick[]): Set<string> {
+  const taken = new Set<string>();
+  for (const p of picks) {
+    if (!p.box_set_film_count) continue;
+    const name = (p.box_set_name || '').trim();
+    if (name) taken.add(`${p.visit_index ?? 1}::${name}`);
+  }
+  return taken;
+}
+
+function showsBoxSetLabel(p: Pick, taken: Set<string>): boolean {
+  if (p.box_set_film_count || !p.is_box_set || !p.box_set_name) return false;
+  return taken.has(`${p.visit_index ?? 1}::${p.box_set_name.trim()}`);
+}
+
+export function getPicksForGuest(
+  guestSlug: string
+): (Pick & { film: Film | undefined; show_box_set_label?: boolean })[] {
   const guest = getGuestBySlug(guestSlug);
   if (!guest || !isGuestPublishable(guest)) return [];
 
   const films = getFilms();
   const boxSetFilms = getBoxSetFilms();
-  return getPicks()
-    .filter(p => p.guest_slug === guestSlug)
+  const guestPicks = getPicks().filter(p => p.guest_slug === guestSlug);
+
+  const boxesTaken = boxSetsTakenPerVisit(guestPicks);
+
+  return guestPicks
     // pick_order is 1..N per visit in the order the guest pulled them off the
     // shelf, so it is the order the video and the Criterion page both use.
     // Picks without one sort last rather than jumping to the front.
@@ -316,7 +344,7 @@ export function getPicksForGuest(guestSlug: string): (Pick & { film: Film | unde
       } else {
         film = films.find(f => f.slug === p.film_slug);
       }
-      return { ...p, film };
+      return { ...p, film, show_box_set_label: showsBoxSetLabel(p, boxesTaken) };
     });
 }
 
@@ -568,7 +596,9 @@ export function getBoxSetMemberFilms(slug: string): { title: string; film: Film 
  * Get all displayable picks for a guest, merging picks.json and picks_raw.json.
  * Display rule: show if source === 'criterion' OR pick has a quote.
  */
-export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: Film | undefined })[] {
+export function getDisplayablePicksForGuest(
+  guestSlug: string
+): (Pick & { film: Film | undefined; show_box_set_label?: boolean })[] {
   const guest = getGuestBySlug(guestSlug);
   if (!guest || !isGuestPublishable(guest)) return [];
 
@@ -614,6 +644,11 @@ export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: 
     return false;
   });
 
+  // Whether a pick shows "Part of X" is decided against every pick the guest
+  // made, not just the displayable ones, so hiding a quoteless box set film
+  // cannot change the label on the ones that remain.
+  const boxesTaken = boxSetsTakenPerVisit(allPicks);
+
   // Attach film metadata
   return displayable.map(p => {
     let film: Film | undefined;
@@ -627,7 +662,7 @@ export function getDisplayablePicksForGuest(guestSlug: string): (Pick & { film: 
     } else {
       film = films.find(f => f.slug === p.film_slug);
     }
-    return { ...p, film };
+    return { ...p, film, show_box_set_label: showsBoxSetLabel(p, boxesTaken) };
   });
 }
 

@@ -100,7 +100,7 @@ const boxSetHref = boxSetInternal ? `/films/${pick.film_slug}/` : undefined;
               )}
             </span>
           )}
-          {pick.is_box_set && pick.box_set_name && (
+          {pick.show_box_set_label && pick.box_set_name && (
             <span class="box-set-tag">Part of {pick.box_set_name}</span>
           )}
         </div>
