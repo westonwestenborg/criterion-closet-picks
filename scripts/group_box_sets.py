@@ -134,6 +134,24 @@ def infer_film_count_from_name(name: str) -> int | None:
     return None
 
 
+def build_raw_box_set_names(picks_raw: list[dict]) -> dict[tuple[str, str], str]:
+    """Map (guest_slug, film_id) -> box_set_name as the scraper recorded it.
+
+    extract_quotes.py rebuilds pick records from scratch and drops box set
+    fields, so a re-extraction leaves picks.json without the box_set_name the
+    scraper captured. picks_raw.json still has it, and is authoritative.
+    Without this the pick falls through to the catalog annotation, which is a
+    weaker guess about a fact we already scraped correctly.
+    """
+    names: dict[tuple[str, str], str] = {}
+    for p in picks_raw:
+        name = p.get("box_set_name")
+        key = (p.get("guest_slug", ""), p.get("film_id", ""))
+        if name and all(key):
+            names[key] = normalize_smart_quotes(name)
+    return names
+
+
 def build_url_map(picks_raw: list[dict]) -> dict[str, str]:
     """Build box_set_name -> criterion URL map from picks_raw.json."""
     url_map: dict[str, str] = {}
@@ -146,11 +164,18 @@ def build_url_map(picks_raw: list[dict]) -> dict[str, str]:
     return url_map
 
 
+# A trailing "(box set)" in a catalog title says what the entry *is*, not which
+# set it belongs to. Returning it as a name renders the pick "Part of box set".
+GENERIC_BOX_MARKERS = {"box set", "boxset", "box-set", "box", "set"}
+
+
 def extract_box_set_name(catalog_title: str) -> str | None:
     """Extract box set name from parenthetical annotation in catalog title."""
     m = re.search(r"\(([^)]+)\)$", catalog_title)
     if m:
         name = m.group(1)
+        if name.strip().lower() in GENERIC_BOX_MARKERS:
+            return None
         box_keywords = ["trilogy", "box", "set", "double feature", "cinema project", "films"]
         if any(kw in name.lower() for kw in box_keywords):
             return normalize_smart_quotes(name)
@@ -182,11 +207,21 @@ def detect_box_set_for_pick(
     pick: dict,
     catalog_map: dict[str, str],
     known_title_map: dict[str, str],
+    raw_names: dict[tuple[str, str], str] | None = None,
 ) -> str | None:
     """Determine if a pick belongs to a box set. Returns box set name or None."""
-    # Already tagged by scrapers
-    if pick.get("is_box_set") and pick.get("box_set_name"):
-        return normalize_smart_quotes(pick["box_set_name"])
+    # Already tagged by scrapers -- but never trust a generic marker that an
+    # earlier run wrote into picks.json, or the bad value survives every rerun.
+    tagged = normalize_smart_quotes(pick.get("box_set_name") or "")
+    if pick.get("is_box_set") and tagged and tagged.lower() not in GENERIC_BOX_MARKERS:
+        return tagged
+
+    # Scraped name from picks_raw, in case a quote re-extraction dropped it
+    raw_name = (raw_names or {}).get(
+        (pick.get("guest_slug", ""), pick.get("film_id", ""))
+    )
+    if raw_name:
+        return raw_name
 
     # Catalog annotation
     film_id = pick.get("film_id", "")
@@ -208,6 +243,7 @@ def group_picks_for_guest(
     url_map: dict[str, str],
     catalog_by_id: dict[str, dict],
     catalog_by_url: dict[str, dict] | None = None,
+    raw_names: dict[tuple[str, str], str] | None = None,
 ) -> list[dict]:
     """
     Group a guest's picks, collapsing box set films into single entries.
@@ -220,13 +256,24 @@ def group_picks_for_guest(
 
     for position, pick in enumerate(guest_picks):
         pick["_source_position"] = position
-        box_set_name = detect_box_set_for_pick(pick, catalog_map, known_title_map)
+        box_set_name = detect_box_set_for_pick(pick, catalog_map, known_title_map, raw_names)
         ft = normalize_smart_quotes(pick.get("film_title", ""))
 
+        # A pick whose own Criterion link is a /boxsets/ page IS the whole box,
+        # whatever the title says. Criterion's own URL is the authority, and it
+        # catches the titles the name match misses: "Bruce Lee: His Greatest
+        # Hits (box set)" (suffixed) and "The Three Colors Trilogy" (no name
+        # annotation anywhere), both of which rendered as ordinary films.
+        own_url = pick.get("criterion_film_url", "") or ""
+        is_own_box_set = "/boxsets/" in own_url
+
         # Unit pick: guest picked the whole box set
-        if box_set_name and ft == box_set_name:
+        if (box_set_name and ft == box_set_name) or is_own_box_set:
+            box_set_name = box_set_name or ft
             pick["is_box_set"] = True
             pick["box_set_name"] = box_set_name
+            if is_own_box_set and not pick.get("box_set_criterion_url"):
+                pick["box_set_criterion_url"] = own_url
             # Already an aggregate or convert to one
             if not pick.get("box_set_film_count"):
                 count = infer_film_count_from_name(box_set_name)
@@ -478,8 +525,10 @@ def main():
     catalog_by_url = {c["criterion_url"]: c for c in catalog if c.get("criterion_url")}
     known_title_map = build_known_box_set_map()
     url_map = build_url_map(picks_raw)
+    raw_names = build_raw_box_set_names(picks_raw)
     log(f"Catalog-annotated: {len(catalog_map)} films, Known box sets: {len(known_title_map)} films")
     log(f"URL map: {len(url_map)} box set URLs from picks_raw")
+    log(f"Name map: {len(raw_names)} box set names from picks_raw")
 
     # Group by guest
     picks_by_guest = defaultdict(list)
@@ -492,7 +541,8 @@ def main():
     for guest_slug, guest_picks in picks_by_guest.items():
         before_count = len(guest_picks)
         grouped = group_picks_for_guest(
-            guest_picks, catalog_map, known_title_map, url_map, catalog_by_id, catalog_by_url
+            guest_picks, catalog_map, known_title_map, url_map, catalog_by_id,
+            catalog_by_url, raw_names
         )
         after_count = len(grouped)
         collapsed = before_count - after_count
