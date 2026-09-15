@@ -298,7 +298,11 @@
     "quote": "",
     "start_timestamp": 0,
     "youtube_timestamp_url": "",
-    "extraction_confidence": "none"
+    "extraction_confidence": "none",
+    "is_box_set": true,
+    "box_set_name": "Three Colors",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/844-three-colors",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "barry-jenkins",
@@ -26668,7 +26672,11 @@
     "quote": "Something that I have never seen that I feel very guilty about which is the three colours trilogy my friend Andrew Stanton loves these films and he's been trying to get me to watch them for years and I have it so I'm gonna fix that now...",
     "start_timestamp": 11,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=WnO5_ZfUDoM&t=11",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "is_box_set": true,
+    "box_set_name": "Three Colors",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/844-three-colors",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "alexander-payne",
@@ -55588,8 +55596,10 @@
     "start_timestamp": 98,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=kGZvmngLfBI&t=98",
     "extraction_confidence": "high",
-    "is_box_set": null,
-    "box_set_name": null
+    "is_box_set": true,
+    "box_set_name": "Three Colors",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/844-three-colors",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "johnnie-to",
@@ -56653,8 +56663,10 @@
     "youtube_timestamp_url": "",
     "vimeo_timestamp_url": "https://vimeo.com/922549736#t=33s",
     "extraction_confidence": "high",
-    "is_box_set": null,
-    "box_set_name": null
+    "is_box_set": true,
+    "box_set_name": "A Story of Floating Weeds / Floating Weeds: Two Films by Yasujiro Ozu",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/369-a-story-of-floating-weeds-floating-weeds-two-films-by-yasujiro-ozu",
+    "box_set_film_count": 2
   },
   {
     "guest_slug": "wim-wenders",
@@ -59420,7 +59432,9 @@
     "youtube_timestamp_url": "",
     "extraction_confidence": "manual",
     "is_box_set": true,
-    "box_set_name": null
+    "box_set_name": "Three Films by Luis Buñuel",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3900-three-films-by-luis-bunuel",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "cary-elwes",
@@ -59726,7 +59740,11 @@
     "quote": "Oh, yeah this one I love these, The Apu Trilogy. I think I've seen the first one and the last one. It's the same character through his life and he starts as a little boy and then him as an adult. You want to take it? Yes.",
     "start_timestamp": 135,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=135",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "is_box_set": true,
+    "box_set_name": "The Apu Trilogy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/1145-the-apu-trilogy",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -59793,7 +59811,11 @@
     "quote": "Did you ever see all of these? It's Totally F***ed Up, Doom Generation, and Nowhere. I've only seen Doom Generation. Should I see the rest of them? Yeah. I thought it was so interesting and cool and strong, wild. And Nowhere was really good. It's funny those are like period movies now. I know, I know. Oh I love the era.",
     "start_timestamp": 211,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=qLH-ZyrEBn8&t=211",
-    "extraction_confidence": "high"
+    "extraction_confidence": "high",
+    "is_box_set": true,
+    "box_set_name": "Gregg Araki's Teen Apocalypse Trilogy",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/7581-gregg-araki-s-teen-apocalypse-trilogy",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "sofia-coppola-marc-jacobs",
@@ -61332,7 +61354,9 @@
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=_SDB919kWLo&t=23",
     "extraction_confidence": "high",
     "is_box_set": true,
-    "box_set_name": "box set"
+    "box_set_name": "Jackie Chan: Emergence of a Superstar",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/6970-jackie-chan-emergence-of-a-superstar",
+    "box_set_film_count": 6
   },
   {
     "guest_slug": "bob-odenkirk",
@@ -61352,7 +61376,9 @@
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=_SDB919kWLo&t=46",
     "extraction_confidence": "high",
     "is_box_set": true,
-    "box_set_name": "box set"
+    "box_set_name": "Bruce Lee: His Greatest Hits",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/3205-bruce-lee-his-greatest-hits",
+    "box_set_film_count": 5
   },
   {
     "guest_slug": "bob-odenkirk",
@@ -62525,8 +62551,10 @@
     "start_timestamp": 225,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=zMUzKUMyNeQ&t=225",
     "extraction_confidence": "high",
-    "is_box_set": null,
-    "box_set_name": null
+    "is_box_set": true,
+    "box_set_name": "Fanny and Alexander",
+    "box_set_criterion_url": "https://www.criterion.com/boxsets/206-fanny-and-alexander",
+    "box_set_film_count": 3
   },
   {
     "guest_slug": "thierry-fremaux",
