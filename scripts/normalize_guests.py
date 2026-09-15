@@ -152,6 +152,8 @@ KNOWN_VIDEO_IDS = {
     "wes-anderson": {"youtube_video_id": "oJXKHJeVav0"},
     "jason-sudeikis": {"youtube_video_id": "Sc6UrpZR3Z4"},
     "jack-coyne": {"youtube_video_id": "cba7ycKIAy8"},
+    "dakota-fanning": {"youtube_video_id": "N5Lc0mkzy10"},
+    "vincent-donofrio": {"youtube_video_id": "_ue56onqyr8"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -232,6 +234,8 @@ KNOWN_CRITERION_URLS = {
     "wes-anderson": "https://www.criterion.com/shop/collection/1001-wes-anderson-s-mobile-closet-picks",
     "jason-sudeikis": "https://www.criterion.com/shop/collection/1002-jason-sudeikis-s-closet-picks",
     "jack-coyne": "https://www.criterion.com/shop/collection/1003-jack-coyne-s-closet-picks",
+    "dakota-fanning": "https://www.criterion.com/shop/collection/1004-dakota-fanning-s-closet-picks",
+    "vincent-donofrio": "https://www.criterion.com/shop/collection/1005-vincent-d-onofrio-s-closet-picks",
 }
 
 # Name cleanup

@@ -141821,5 +141821,177 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "sentimental-value",
+    "title": "Sentimental Value",
+    "spine_number": null,
+    "director": "Joachim Trier",
+    "year": 2025,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/35497-sentimental-value",
+    "imdb_id": "tt27714581",
+    "tmdb_id": 1124566,
+    "poster_url": "https://image.tmdb.org/t/p/w185/pz9NCWxxOk3o0W3v1Zkhawrwb4i.jpg",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Joachim Trier",
+          "tmdb_id": 71609
+        }
+      ],
+      "writers": [
+        {
+          "name": "Joachim Trier",
+          "tmdb_id": 71609
+        },
+        {
+          "name": "Eskil Vogt",
+          "tmdb_id": 444892
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Kasper Tuxen",
+          "tmdb_id": 236606
+        }
+      ],
+      "editors": [
+        {
+          "name": "Olivier Bugge Coutté",
+          "tmdb_id": 71622
+        }
+      ],
+      "cast": [
+        {
+          "name": "Renate Reinsve",
+          "tmdb_id": 1576786,
+          "character": "Nora Borg"
+        },
+        {
+          "name": "Stellan Skarsgård",
+          "tmdb_id": 1640,
+          "character": "Gustav Borg"
+        },
+        {
+          "name": "Inga Ibsdotter Lilleaas",
+          "tmdb_id": 1421850,
+          "character": "Agnes Borg Pettersen"
+        },
+        {
+          "name": "Elle Fanning",
+          "tmdb_id": 18050,
+          "character": "Rachel Kemp"
+        },
+        {
+          "name": "Anders Danielsen Lie",
+          "tmdb_id": 71610,
+          "character": "Jakob"
+        },
+        {
+          "name": "Jesper Christensen",
+          "tmdb_id": 2244,
+          "character": "Michael"
+        },
+        {
+          "name": "Lena Endre",
+          "tmdb_id": 79196,
+          "character": "Ingrid Berger"
+        },
+        {
+          "name": "Cory Michael Smith",
+          "tmdb_id": 1367617,
+          "character": "Sam"
+        }
+      ]
+    }
+  },
+  {
+    "film_id": "the-ruling-class",
+    "title": "The Ruling Class",
+    "spine_number": null,
+    "director": "Peter Medak",
+    "year": 1972,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/678-the-ruling-class",
+    "imdb_id": "tt0069198",
+    "tmdb_id": 30892,
+    "poster_url": "https://image.tmdb.org/t/p/w185/7BxYz9eS31gMRSx1iZF48s9Wsqt.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Peter Medak",
+          "tmdb_id": 21377
+        }
+      ],
+      "writers": [
+        {
+          "name": "Peter Barnes",
+          "tmdb_id": 81506
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Ken Hodges",
+          "tmdb_id": 558444
+        }
+      ],
+      "editors": [
+        {
+          "name": "Ray Lovejoy",
+          "tmdb_id": 244
+        }
+      ],
+      "cast": [
+        {
+          "name": "Peter O'Toole",
+          "tmdb_id": 11390,
+          "character": "Jack 14th Earl of Gurney"
+        },
+        {
+          "name": "Alastair Sim",
+          "tmdb_id": 20394,
+          "character": "Bishop Lampton"
+        },
+        {
+          "name": "Arthur Lowe",
+          "tmdb_id": 39024,
+          "character": "Tucker"
+        },
+        {
+          "name": "Harry Andrews",
+          "tmdb_id": 19463,
+          "character": "13th Earl of Gurney"
+        },
+        {
+          "name": "Coral Browne",
+          "tmdb_id": 87513,
+          "character": "Lady Claire Gurney"
+        },
+        {
+          "name": "Michael Bryant",
+          "tmdb_id": 106612,
+          "character": "Dr. Herder"
+        },
+        {
+          "name": "Nigel Green",
+          "tmdb_id": 29909,
+          "character": "McKyle"
+        },
+        {
+          "name": "William Mervyn",
+          "tmdb_id": 47391,
+          "character": "Sir Charles Gurney"
+        }
+      ]
+    }
   }
 ]

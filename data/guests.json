@@ -5415,5 +5415,31 @@
     "x_handle": "jackycoyne",
     "threads_handle": "jackycoyne",
     "featured_film_slug": "the-celebration"
+  },
+  {
+    "name": "Dakota Fanning",
+    "slug": "dakota-fanning",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg",
+    "youtube_video_id": "N5Lc0mkzy10",
+    "youtube_video_url": "https://www.youtube.com/watch?v=N5Lc0mkzy10",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-12",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1004-dakota-fanning-s-closet-picks",
+    "pick_count": 5
+  },
+  {
+    "name": "Vincent D’Onofrio",
+    "slug": "vincent-donofrio",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg",
+    "youtube_video_id": "_ue56onqyr8",
+    "youtube_video_url": "https://www.youtube.com/watch?v=_ue56onqyr8",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-14",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1005-vincent-d-onofrio-s-closet-picks",
+    "pick_count": 7
   }
 ]
