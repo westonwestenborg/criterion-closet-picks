@@ -5459,5 +5459,21 @@
     "x_handle": "KarenO",
     "threads_handle": "ko",
     "featured_film_slug": "the-woman-in-the-dunes"
+  },
+  {
+    "name": "Isaac Mizrahi",
+    "slug": "isaac-mizrahi",
+    "profession": "designer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/oP2Ebh9mDaDeFgzAGd6VuiLsDVb.jpg",
+    "youtube_video_id": "rKKqZhrYPMw",
+    "youtube_video_url": "https://www.youtube.com/watch?v=rKKqZhrYPMw",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-21",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1008-isaac-mizrahi-s-closet-picks",
+    "pick_count": 16,
+    "x_handle": "IsaacMizrahi",
+    "threads_handle": "imisaacmizrahi",
+    "featured_film_slug": "claudine"
   }
 ]
