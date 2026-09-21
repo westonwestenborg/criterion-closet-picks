@@ -29,6 +29,15 @@ export interface Guest {
    * a heuristic. Set this in guests.json to curate a guest's home-page quote.
    */
   featured_film_slug?: string | null;
+  /**
+   * Optional editorial pull-quote for the home page, used in place of the
+   * pick's own quote. The home page trims a quote to ~165 characters, so a
+   * pick whose best line sits past that cut cannot surface it; this carries a
+   * hand-cut version instead. Verbatim fragments only, joined by an ellipsis.
+   * Requires featured_film_slug, and applies only to that pick — the guest and
+   * film pages still show the full stored quote.
+   */
+  featured_quote?: string | null;
 }
 
 export interface Film {
@@ -756,7 +765,8 @@ const CONFIDENCE_RANK: Record<string, number> = { high: 3, medium: 2, low: 1, no
 
 /**
  * Select a guest's strongest quote for surfacing (e.g. the home page).
- * Prefers the editorial override (guest.featured_film_slug); otherwise a
+ * Prefers the editorial overrides (guest.featured_film_slug, and
+ * guest.featured_quote for the text itself); otherwise a
  * heuristic: highest extraction confidence, then a quote length near ~200
  * characters. Returns null when the guest has no usable quote.
  */
@@ -778,7 +788,11 @@ export function getBestPickForGuest(guestSlug: string): (Pick & { film: Film | u
 
   const best = [...candidates].sort((a, b) => score(b) - score(a))[0];
   const films = getFilms();
-  return { ...best, film: films.find((f) => f.slug === best.film_slug) };
+  // The editorial pull-quote only stands in for the pick it was written for,
+  // so a stale featured_film_slug can't paste it onto whatever the heuristic
+  // picked instead.
+  const quote = override && best.film_slug === override && guest.featured_quote ? guest.featured_quote : best.quote;
+  return { ...best, quote, film: films.find((f) => f.slug === best.film_slug) };
 }
 
 /**

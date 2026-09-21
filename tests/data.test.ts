@@ -8,6 +8,7 @@ import {
   getPicksForFilm,
   getPublishableGuests,
   getRecentGuests,
+  getBestPickForGuest,
   isGuestPublishable,
   isPickOfBoxSetItself,
 } from '../src/lib/data';
@@ -444,5 +445,65 @@ describe('box-set picks on the box set\'s own page', () => {
         undefined,
       ),
     ).toBe(false);
+  });
+});
+
+describe('getBestPickForGuest', () => {
+  const guests = [
+    guest({
+      slug: 'curated',
+      criterion_page_url: 'https://www.criterion.com/shop/collection/1-curated',
+      featured_film_slug: 'the-red-shoes',
+      featured_quote: 'the hand-cut line',
+    }),
+  ];
+  const catalog = [
+    { film_id: 'the-red-shoes', title: 'The Red Shoes' },
+    { film_id: 'now-voyager', title: 'Now, Voyager' },
+  ];
+  const picks = [
+    {
+      guest_slug: 'curated',
+      film_id: 'the-red-shoes',
+      quote: 'a stored quote long enough to clear the sixty-character floor the selector applies',
+      extraction_confidence: 'high',
+    },
+    {
+      guest_slug: 'curated',
+      film_id: 'now-voyager',
+      quote: 'another stored quote long enough to clear that same sixty-character floor here',
+      extraction_confidence: 'high',
+    },
+  ];
+
+  it('substitutes the editorial pull-quote for the featured pick', () => {
+    cleanup = makeFixtureDir({ guests, catalog, picks });
+    const best = getBestPickForGuest('curated');
+    expect(best?.film_slug).toBe('the-red-shoes');
+    expect(best?.quote).toBe('the hand-cut line');
+  });
+
+  it('keeps the stored quote when the featured pick is not the one chosen', () => {
+    cleanup = makeFixtureDir({
+      guests: [{ ...guests[0], featured_film_slug: 'a-film-with-no-pick' }],
+      catalog,
+      picks,
+    });
+    const best = getBestPickForGuest('curated');
+    expect(best?.quote).not.toBe('the hand-cut line');
+    expect(best?.quote).toContain('quote');
+  });
+
+  it('falls back to the stored quote when no pull-quote is set', () => {
+    cleanup = makeFixtureDir({
+      guests: [{ ...guests[0], featured_quote: undefined }],
+      catalog,
+      picks,
+    });
+    const best = getBestPickForGuest('curated');
+    expect(best?.film_slug).toBe('the-red-shoes');
+    expect(best?.quote).toBe(
+      'a stored quote long enough to clear the sixty-character floor the selector applies',
+    );
   });
 });
