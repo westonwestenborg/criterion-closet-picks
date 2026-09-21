@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "summary": {
-    "total": 499,
+    "total": 548,
     "open": 0,
-    "accepted": 499,
+    "accepted": 548,
     "by_severity": {
-      "P1": 40,
-      "P2": 11,
-      "P3": 448
+      "P1": 45,
+      "P2": 10,
+      "P3": 493
     },
     "open_by_severity": {},
     "by_category": {
-      "box_set": 404,
+      "box_set": 451,
       "film_metadata": 17,
-      "guest_media": 7,
-      "identity": 71
+      "guest_media": 6,
+      "identity": 74
     },
     "open_by_category": {},
     "data_counts": {
-      "catalog": 1787,
-      "guests": 376,
-      "picks": 3150,
-      "picks_raw": 3150
+      "catalog": 1796,
+      "guests": 405,
+      "picks": 3415,
+      "picks_raw": 3415
     }
   },
   "issues": [
@@ -179,6 +179,23 @@
       "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
     },
     {
+      "id": "catalog_regular_film_missing_spine:data/criterion_catalog.json:vermiglio",
+      "type": "catalog_regular_film_missing_spine",
+      "severity": "P1",
+      "category": "identity",
+      "file": "data/criterion_catalog.json",
+      "record_key": "vermiglio",
+      "title": "Vermiglio",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/films/34803-vermiglio",
+        "spine_number": null
+      },
+      "confidence": "high",
+      "suggested_action": "Backfill the Criterion spine from the canonical film page.",
+      "status": "accepted",
+      "exception_note": "Criterion /films/34803-vermiglio was checked on 2026-08-19 and exposes no public spine number; the 2024 release is not in the numbered series."
+    },
+    {
       "id": "catalog_regular_film_missing_spine:data/criterion_catalog.json:wooden-crosses",
       "type": "catalog_regular_film_missing_spine",
       "severity": "P1",
@@ -245,6 +262,40 @@
       "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
       "status": "accepted",
       "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+    },
+    {
+      "id": "pick_regular_film_missing_spine:data/picks.json:camila-mendes|1|totem",
+      "type": "pick_regular_film_missing_spine",
+      "severity": "P1",
+      "category": "identity",
+      "file": "data/picks.json",
+      "record_key": "camila-mendes|1|totem",
+      "title": "Tótem",
+      "evidence": {
+        "film_id": "totem",
+        "criterion_film_url": "https://www.criterion.com/films/33900-totem"
+      },
+      "confidence": "high",
+      "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
+      "status": "accepted",
+      "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+    },
+    {
+      "id": "pick_regular_film_missing_spine:data/picks.json:carla-simon|1|vermiglio",
+      "type": "pick_regular_film_missing_spine",
+      "severity": "P1",
+      "category": "identity",
+      "file": "data/picks.json",
+      "record_key": "carla-simon|1|vermiglio",
+      "title": "Vermiglio",
+      "evidence": {
+        "film_id": "vermiglio",
+        "criterion_film_url": "https://www.criterion.com/films/34803-vermiglio"
+      },
+      "confidence": "high",
+      "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
+      "status": "accepted",
+      "exception_note": "Criterion /films/34803-vermiglio was checked on 2026-08-19 and exposes no public spine number; the 2024 release is not in the numbered series."
     },
     {
       "id": "pick_regular_film_missing_spine:data/picks.json:cate-blanchett-and-todd-field|1|wooden-crosses",
@@ -502,6 +553,40 @@
       "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
     },
     {
+      "id": "pick_regular_film_missing_spine:data/picks_raw.json:camila-mendes|1|totem",
+      "type": "pick_regular_film_missing_spine",
+      "severity": "P1",
+      "category": "identity",
+      "file": "data/picks_raw.json",
+      "record_key": "camila-mendes|1|totem",
+      "title": "Tótem",
+      "evidence": {
+        "film_id": "totem",
+        "criterion_film_url": "https://www.criterion.com/films/33900-totem"
+      },
+      "confidence": "high",
+      "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
+      "status": "accepted",
+      "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
+    },
+    {
+      "id": "pick_regular_film_missing_spine:data/picks_raw.json:carla-simon|1|vermiglio",
+      "type": "pick_regular_film_missing_spine",
+      "severity": "P1",
+      "category": "identity",
+      "file": "data/picks_raw.json",
+      "record_key": "carla-simon|1|vermiglio",
+      "title": "Vermiglio",
+      "evidence": {
+        "film_id": "vermiglio",
+        "criterion_film_url": "https://www.criterion.com/films/34803-vermiglio"
+      },
+      "confidence": "high",
+      "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
+      "status": "accepted",
+      "exception_note": "Criterion /films/34803-vermiglio was checked on 2026-08-19 and exposes no public spine number; the 2024 release is not in the numbered series."
+    },
+    {
       "id": "pick_regular_film_missing_spine:data/picks_raw.json:cate-blanchett-and-todd-field|1|wooden-crosses",
       "type": "pick_regular_film_missing_spine",
       "severity": "P1",
@@ -704,26 +789,6 @@
       "suggested_action": "Backfill catalog_spine for the picked Criterion film.",
       "status": "accepted",
       "exception_note": "Criterion /films/ page was checked on 2026-06-13 and did not expose a visible public Spine # label."
-    },
-    {
-      "id": "guest_incomplete_quote_coverage:data/picks.json:bill-hader|youtube:348qOuXOAXo",
-      "type": "guest_incomplete_quote_coverage",
-      "severity": "P2",
-      "category": "guest_media",
-      "file": "data/picks.json",
-      "record_key": "bill-hader|youtube:348qOuXOAXo",
-      "title": "Bill Hader",
-      "evidence": {
-        "guest_slug": "bill-hader",
-        "video_source": "youtube",
-        "youtube_video_id": "348qOuXOAXo",
-        "pick_count": 12,
-        "quoted_count": 6
-      },
-      "confidence": "high",
-      "suggested_action": "Review unquoted picks for this video and extract or accept missing quotes.",
-      "status": "accepted",
-      "exception_note": "Audio fallback checked on 2026-06-15; remaining unquoted visit-1 picks appear to be silent pickups rather than verbal mentions."
     },
     {
       "id": "film_missing_director:data/criterion_catalog.json:the-golden-age-of-television",
@@ -990,7 +1055,7 @@
           {
             "film_id": "insiang-world-cinema-project-no-2",
             "title": "Insiang (World Cinema Project No. 2)",
-            "year": null,
+            "year": 1976,
             "director": "Lino Brocka",
             "spine_number": 874
           }
@@ -1022,7 +1087,7 @@
           {
             "film_id": "downpour-world-cinema-project-no-3",
             "title": "Downpour (World Cinema Project No. 3)",
-            "year": null,
+            "year": 2011,
             "director": "Claire Dix",
             "spine_number": 1050
           }
@@ -1086,7 +1151,7 @@
           {
             "film_id": "lucia-world-cinema-project-no-3",
             "title": "Lucía (World Cinema Project No. 3)",
-            "year": null,
+            "year": 2001,
             "director": "Julio Medem",
             "spine_number": 1045
           }
@@ -1118,7 +1183,7 @@
           {
             "film_id": "the-housemaid-world-cinema-project",
             "title": "The Housemaid (World Cinema Project)",
-            "year": null,
+            "year": 2025,
             "director": "Paul Feig",
             "spine_number": 690
           }
@@ -1143,7 +1208,7 @@
           {
             "film_id": "dos-monjes-world-cinema-project-no-3",
             "title": "Dos monjes (World Cinema Project No. 3)",
-            "year": null,
+            "year": 1934,
             "director": "Juan Bustillo Oro",
             "spine_number": 1048
           },
@@ -1182,7 +1247,7 @@
           {
             "film_id": "after-the-curfew-world-cinema-project-no-3",
             "title": "After the Curfew (World Cinema Project No. 3)",
-            "year": null,
+            "year": 1954,
             "director": "Usmar Ismail",
             "spine_number": 1046
           }
@@ -1214,7 +1279,7 @@
           {
             "film_id": "soleil-o-world-cinema-project-no-3",
             "title": "Soleil Ô (World Cinema Project No. 3)",
-            "year": null,
+            "year": 1973,
             "director": "Med Hondo",
             "spine_number": 1049
           }
@@ -1246,7 +1311,7 @@
           {
             "film_id": "law-of-the-border-world-cinema-project-no-2",
             "title": "Law of the Border (World Cinema Project No. 2)",
-            "year": null,
+            "year": 1966,
             "director": "Lütfi Akad",
             "spine_number": 878
           }
@@ -1310,7 +1375,7 @@
           {
             "film_id": "trances-world-cinema-project",
             "title": "Trances (World Cinema Project)",
-            "year": null,
+            "year": 1982,
             "director": "Ahmed El Maânouni",
             "spine_number": 689
           }
@@ -1438,7 +1503,7 @@
           {
             "film_id": "the-tree-of-wooden-clogs-originally-announced-as-841-but-delayed",
             "title": "The Tree of Wooden Clogs (originally announced as 841 but delayed)",
-            "year": null,
+            "year": 1978,
             "director": "Ermanno Olmi",
             "spine_number": 854
           }
@@ -1448,38 +1513,6 @@
       "suggested_action": "Review whether these are legitimate alternate entries or a wrong TMDB match.",
       "status": "accepted",
       "exception_note": "Reviewed on 2026-06-16; Criterion-backed The Tree of Wooden Clogs has picks, while the delayed-announcement row is an unpicked legacy catalog alias."
-    },
-    {
-      "id": "duplicate_tmdb_id:data/criterion_catalog.json:379895",
-      "type": "duplicate_tmdb_id",
-      "severity": "P3",
-      "category": "identity",
-      "file": "data/criterion_catalog.json",
-      "record_key": "379895",
-      "title": "TMDB 379895",
-      "evidence": {
-        "tmdb_id": 379895,
-        "films": [
-          {
-            "film_id": "adventures-on-the-new-frontier",
-            "title": "Adventures on the New Frontier",
-            "year": 1961,
-            "director": "Richard Leacock",
-            "spine_number": null
-          },
-          {
-            "film_id": "the-kennedy-films-of-robert-drew-associates",
-            "title": "The Kennedy Films of Robert Drew & Associates",
-            "year": 1961,
-            "director": "Richard Leacock",
-            "spine_number": 808
-          }
-        ]
-      },
-      "confidence": "medium",
-      "suggested_action": "Review whether these are legitimate alternate entries or a wrong TMDB match.",
-      "status": "accepted",
-      "exception_note": "Reviewed on 2026-06-16; Adventures on the New Frontier is contained in the Kennedy Films release, so the duplicate is a contained-film modeling artifact."
     },
     {
       "id": "duplicate_tmdb_id:data/criterion_catalog.json:40641",
@@ -1502,7 +1535,7 @@
           {
             "film_id": "lola-jacques-demy-box",
             "title": "Lola (Jacques Demy box)",
-            "year": null,
+            "year": 1961,
             "director": "Jacques Demy",
             "spine_number": 714
           }
@@ -1534,7 +1567,7 @@
           {
             "film_id": "the-shooting-monte-hellman-set",
             "title": "The Shooting (Monte Hellman set)",
-            "year": null,
+            "year": 1966,
             "director": "Monte Hellman",
             "spine_number": 734
           }
@@ -1576,52 +1609,6 @@
       "suggested_action": "Review whether these are legitimate alternate entries or a wrong TMDB match.",
       "status": "accepted",
       "exception_note": "Reviewed on 2026-06-16; Criterion-backed Cria cuervos has picks, while Cria! is an unpicked alternate-title alias."
-    },
-    {
-      "id": "duplicate_tmdb_id:data/criterion_catalog.json:628403",
-      "type": "duplicate_tmdb_id",
-      "severity": "P3",
-      "category": "identity",
-      "file": "data/criterion_catalog.json",
-      "record_key": "628403",
-      "title": "TMDB 628403",
-      "evidence": {
-        "tmdb_id": 628403,
-        "films": [
-          {
-            "film_id": "martin-scorseses-world-cinema-project-box-set",
-            "title": "Martin Scorsese’s World Cinema Project (box set)",
-            "year": 2010,
-            "director": "Nick Wickham",
-            "spine_number": 684
-          },
-          {
-            "film_id": "martin-scorseses-world-cinema-project-no-2-box-set",
-            "title": "Martin Scorsese's World Cinema Project No. 2 (box set)",
-            "year": 2010,
-            "director": "Nick Wickham",
-            "spine_number": 873
-          },
-          {
-            "film_id": "martin-scorseses-world-cinema-project-no-3-box-set",
-            "title": "Martin Scorsese’s World Cinema Project No. 3 (Box set)",
-            "year": 2010,
-            "director": "Nick Wickham",
-            "spine_number": 1044
-          },
-          {
-            "film_id": "martin-scorseses-world-cinema-project-no-4-box-set",
-            "title": "Martin Scorsese’s World Cinema Project No. 4 (Box set)",
-            "year": 2010,
-            "director": "Nick Wickham",
-            "spine_number": 1142
-          }
-        ]
-      },
-      "confidence": "medium",
-      "suggested_action": "Review whether these are legitimate alternate entries or a wrong TMDB match.",
-      "status": "accepted",
-      "exception_note": "Reviewed on 2026-06-16; World Cinema Project volume rows share an aggregate TMDB reference until box-set modeling is richer."
     },
     {
       "id": "duplicate_tmdb_id:data/criterion_catalog.json:66180",
@@ -1676,7 +1663,7 @@
           {
             "film_id": "taipei-story-world-cinema-project-no-2",
             "title": "Taipei Story (World Cinema Project No. 2)",
-            "year": null,
+            "year": 2020,
             "director": "KEFF",
             "spine_number": 879
           }
@@ -1708,7 +1695,7 @@
           {
             "film_id": "touki-bouki-world-cinema-project",
             "title": "Touki bouki (World Cinema Project)",
-            "year": null,
+            "year": 1973,
             "director": "Djibril Diop Mambéty",
             "spine_number": 685
           }
@@ -1772,7 +1759,7 @@
           {
             "film_id": "pixote-world-cinema-project-no-3",
             "title": "Pixote (World Cinema Project No. 3)",
-            "year": null,
+            "year": 1996,
             "director": "José Joffily",
             "spine_number": 1047
           }
@@ -1836,7 +1823,7 @@
           {
             "film_id": "a-river-called-titas-world-cinema-project",
             "title": "A River Called Titas (World Cinema Project)",
-            "year": null,
+            "year": 1973,
             "director": "Ritwik Ghatak",
             "spine_number": 687
           }
@@ -1868,7 +1855,7 @@
           {
             "film_id": "mysterious-object-at-noon-world-cinema-project-no-2",
             "title": "Mysterious Object at Noon (World Cinema Project No. 2)",
-            "year": null,
+            "year": 2000,
             "director": "Apichatpong Weerasethakul",
             "spine_number": 875
           }
@@ -2093,6 +2080,23 @@
       "suggested_action": "Backfill IMDb id when available.",
       "status": "accepted",
       "exception_note": "Multi-version release; no single locally verified IMDb ID is accepted without a richer contained-versions model."
+    },
+    {
+      "id": "catalog_box_set_missing_spine:data/criterion_catalog.json:a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "type": "catalog_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/criterion_catalog.json",
+      "record_key": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i",
+        "spine_number": null
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a public spine.",
+      "status": "accepted",
+      "exception_note": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable."
     },
     {
       "id": "catalog_box_set_missing_spine:data/criterion_catalog.json:america-lost-and-found-the-bbs-story",
@@ -2588,6 +2592,23 @@
       "exception_note": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "catalog_box_set_missing_spine:data/criterion_catalog.json:martin-scorseses-world-cinema-project-no-3",
+      "type": "catalog_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/criterion_catalog.json",
+      "record_key": "martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3",
+        "spine_number": null
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a public spine.",
+      "status": "accepted",
+      "exception_note": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "catalog_box_set_missing_spine:data/criterion_catalog.json:melvin-van-peebles-essential-films",
       "type": "catalog_box_set_missing_spine",
       "severity": "P3",
@@ -2597,6 +2618,23 @@
       "title": "Melvin Van Peebles: Essential Films",
       "evidence": {
         "criterion_url": "https://www.criterion.com/boxsets/4787-melvin-van-peebles-essential-films",
+        "spine_number": null
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a public spine.",
+      "status": "accepted",
+      "exception_note": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "catalog_box_set_missing_spine:data/criterion_catalog.json:oliviers-shakespeare",
+      "type": "catalog_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/criterion_catalog.json",
+      "record_key": "oliviers-shakespeare",
+      "title": "Olivier’s Shakespeare",
+      "evidence": {
+        "criterion_url": "https://www.criterion.com/boxsets/577-olivier-s-shakespeare",
         "spine_number": null
       },
       "confidence": "medium",
@@ -2732,7 +2770,7 @@
       "record_key": "the-killers",
       "title": "The Killers",
       "evidence": {
-        "criterion_url": "https://www.criterion.com/boxsets/176-the-killers",
+        "criterion_url": "https://www.criterion.com/boxsets/334-the-killers",
         "spine_number": null
       },
       "confidence": "medium",
@@ -2875,6 +2913,40 @@
       "suggested_action": "Review only if this box set should carry a public spine.",
       "status": "accepted",
       "exception_note": "Criterion box set pages do not always map to a standalone public spine in the catalog data; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:adam-scott|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "adam-scott|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:adam-scott|1|the-wes-anderson-archive-ten-films-twenty-five-years",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "adam-scott|1|the-wes-anderson-archive-ten-films-twenty-five-years",
+      "title": "The Wes Anderson Archive: Ten Films, Twenty-Five Years",
+      "evidence": {
+        "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
+        "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
       "id": "pick_box_set_missing_spine:data/picks.json:agnes-b|1|the-complete-films-of-agnes-varda",
@@ -3251,12 +3323,12 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
-      "id": "pick_box_set_missing_spine:data/picks.json:bill-hader|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "id": "pick_box_set_missing_spine:data/picks.json:bill-hader|2|eclipse-series-24-the-actuality-dramas-of-allan-king",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
       "category": "box_set",
       "file": "data/picks.json",
-      "record_key": "bill-hader|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "record_key": "bill-hader|2|eclipse-series-24-the-actuality-dramas-of-allan-king",
       "title": "Eclipse Series 24: The Actuality Dramas of Allan King",
       "evidence": {
         "film_id": "eclipse-series-24-the-actuality-dramas-of-allan-king",
@@ -3278,6 +3350,23 @@
       "evidence": {
         "film_id": "essential-fellini",
         "criterion_film_url": "https://www.criterion.com/boxsets/3626-essential-fellini"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:billy-eichner|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "billy-eichner|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+      "evidence": {
+        "film_id": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -3465,6 +3554,40 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:camila-mendes|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "camila-mendes|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:carl-franklin|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "carl-franklin|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -3676,6 +3799,40 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:christopher-nolan|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "christopher-nolan|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:christopher-nolan|1|the-killers",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "christopher-nolan|1|the-killers",
+      "title": "The Killers",
+      "evidence": {
+        "film_id": "the-killers",
+        "criterion_film_url": "https://www.criterion.com/boxsets/334-the-killers"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:cillian-murphy|1|the-wes-anderson-archive-ten-films-twenty-five-years",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -3686,6 +3843,23 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:colman-domingo|1|world-of-wong-kar-wai",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "colman-domingo|1|world-of-wong-kar-wai",
+      "title": "World of Wong Kar Wai",
+      "evidence": {
+        "film_id": "world-of-wong-kar-wai",
+        "criterion_film_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -3754,6 +3928,23 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:david-tennant|1|oliviers-shakespeare",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "david-tennant|1|oliviers-shakespeare",
+      "title": "Olivier’s Shakespeare",
+      "evidence": {
+        "film_id": "oliviers-shakespeare",
+        "criterion_film_url": "https://www.criterion.com/boxsets/577-olivier-s-shakespeare"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -3880,6 +4071,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:eric-andre|1|police-story-police-story-2",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "eric-andre|1|police-story-police-story-2",
+      "title": "Police Story / Police Story 2",
+      "evidence": {
+        "film_id": "police-story-police-story-2",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1554-police-story-police-story-2"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:ethan-hawke-and-jonathan-marc-sherman|1|the-before-trilogy",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -3941,6 +4149,23 @@
       "evidence": {
         "film_id": "paul-robeson-portraits-of-the-artist",
         "criterion_film_url": "https://www.criterion.com/boxsets/443-paul-robeson-portraits-of-the-artist"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:fred-armisen-and-carrie-brownstein|1|ingmar-bergmans-cinema",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "fred-armisen-and-carrie-brownstein|1|ingmar-bergmans-cinema",
+      "title": "Ingmar Bergman’s Cinema",
+      "evidence": {
+        "film_id": "ingmar-bergmans-cinema",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -4033,6 +4258,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:hannah-einbinder|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "hannah-einbinder|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:harris-dickinson|1|martin-scorsese-s-world-cinema-project-no-2",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -4067,6 +4309,40 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:isaac-mizrahi|1|essential-fellini",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "isaac-mizrahi|1|essential-fellini",
+      "title": "Essential Fellini",
+      "evidence": {
+        "film_id": "essential-fellini",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3626-essential-fellini"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:isaac-mizrahi|1|pasolini-101",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "isaac-mizrahi|1|pasolini-101",
+      "title": "Pasolini 101",
+      "evidence": {
+        "film_id": "pasolini-101",
+        "criterion_film_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:isabel-sandoval|1|the-complete-films-of-agnes-varda",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -4094,6 +4370,23 @@
       "evidence": {
         "film_id": "eclipse-series-3-late-ozu",
         "criterion_film_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:jack-coyne|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "jack-coyne|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+      "title": "Eclipse Series 12: Aki Kaurismäki’s Proletariat Trilogy",
+      "evidence": {
+        "film_id": "eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/564-eclipse-series-12-aki-kaurismaki-s-proletariat-trilogy"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -4145,6 +4438,23 @@
       "evidence": {
         "film_id": "pasolini-101",
         "criterion_film_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:jason-sudeikis|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "jason-sudeikis|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -4247,6 +4557,23 @@
       "evidence": {
         "film_id": "the-emigrantsthe-new-land",
         "criterion_film_url": "https://www.criterion.com/boxsets/1165-the-emigrants-the-new-land"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:joan-chen|1|world-of-wong-kar-wai",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "joan-chen|1|world-of-wong-kar-wai",
+      "title": "World of Wong Kar Wai",
+      "evidence": {
+        "film_id": "world-of-wong-kar-wai",
+        "criterion_film_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -4679,6 +5006,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:kleber-mendonca-filho|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "kleber-mendonca-filho|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:kleber-mendonca-filho|1|the-complete-films-of-agnes-varda",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -5046,6 +5390,23 @@
       "evidence": {
         "film_id": "the-complete-films-of-agnes-varda",
         "criterion_film_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:noah-wyle|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "noah-wyle|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+      "evidence": {
+        "film_id": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -5682,6 +6043,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:terry-zwigoff|1|the-killers",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "terry-zwigoff|1|the-killers",
+      "title": "The Killers",
+      "evidence": {
+        "film_id": "the-killers",
+        "criterion_film_url": "https://www.criterion.com/boxsets/334-the-killers"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:the-quay-brothers|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -5818,6 +6196,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks.json:vincent-donofrio|1|ingmar-bergmans-cinema",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "vincent-donofrio|1|ingmar-bergmans-cinema",
+      "title": "Ingmar Bergman’s Cinema",
+      "evidence": {
+        "film_id": "ingmar-bergmans-cinema",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks.json:wagner-moura|1|martin-scorsese-s-world-cinema-project-no-2",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -5828,6 +6223,23 @@
       "evidence": {
         "film_id": "martin-scorsese-s-world-cinema-project-no-2",
         "criterion_film_url": "https://www.criterion.com/boxsets/1258-martin-scorsese-s-world-cinema-project-no-2"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks.json:wagner-moura|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks.json",
+      "record_key": "wagner-moura|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -5913,6 +6325,40 @@
       "evidence": {
         "film_id": "the-koker-trilogy",
         "criterion_film_url": "https://www.criterion.com/boxsets/2363-the-koker-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:adam-scott|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "adam-scott|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:adam-scott|1|the-wes-anderson-archive-ten-films-twenty-five-years",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "adam-scott|1|the-wes-anderson-archive-ten-films-twenty-five-years",
+      "title": "The Wes Anderson Archive: Ten Films, Twenty-Five Years",
+      "evidence": {
+        "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
+        "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -6294,12 +6740,12 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
-      "id": "pick_box_set_missing_spine:data/picks_raw.json:bill-hader|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:bill-hader|2|eclipse-series-24-the-actuality-dramas-of-allan-king",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
       "category": "box_set",
       "file": "data/picks_raw.json",
-      "record_key": "bill-hader|1|eclipse-series-24-the-actuality-dramas-of-allan-king",
+      "record_key": "bill-hader|2|eclipse-series-24-the-actuality-dramas-of-allan-king",
       "title": "Eclipse Series 24: The Actuality Dramas of Allan King",
       "evidence": {
         "film_id": "eclipse-series-24-the-actuality-dramas-of-allan-king",
@@ -6321,6 +6767,23 @@
       "evidence": {
         "film_id": "essential-fellini",
         "criterion_film_url": "https://www.criterion.com/boxsets/3626-essential-fellini"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:billy-eichner|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "billy-eichner|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+      "evidence": {
+        "film_id": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -6508,6 +6971,40 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:camila-mendes|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "camila-mendes|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:carl-franklin|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "carl-franklin|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -6719,6 +7216,40 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:christopher-nolan|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "christopher-nolan|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:christopher-nolan|1|the-killers",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "christopher-nolan|1|the-killers",
+      "title": "The Killers",
+      "evidence": {
+        "film_id": "the-killers",
+        "criterion_film_url": "https://www.criterion.com/boxsets/334-the-killers"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:cillian-murphy|1|the-wes-anderson-archive-ten-films-twenty-five-years",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -6729,6 +7260,23 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:colman-domingo|1|world-of-wong-kar-wai",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "colman-domingo|1|world-of-wong-kar-wai",
+      "title": "World of Wong Kar Wai",
+      "evidence": {
+        "film_id": "world-of-wong-kar-wai",
+        "criterion_film_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -6797,6 +7345,23 @@
       "evidence": {
         "film_id": "the-wes-anderson-archive-ten-films-twenty-five-years",
         "criterion_film_url": "https://www.criterion.com/boxsets/8208-the-wes-anderson-archive-ten-films-twenty-five-years"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:david-tennant|1|oliviers-shakespeare",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "david-tennant|1|oliviers-shakespeare",
+      "title": "Olivier’s Shakespeare",
+      "evidence": {
+        "film_id": "oliviers-shakespeare",
+        "criterion_film_url": "https://www.criterion.com/boxsets/577-olivier-s-shakespeare"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -6923,6 +7488,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:eric-andre|1|police-story-police-story-2",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "eric-andre|1|police-story-police-story-2",
+      "title": "Police Story / Police Story 2",
+      "evidence": {
+        "film_id": "police-story-police-story-2",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1554-police-story-police-story-2"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:ethan-hawke-and-jonathan-marc-sherman|1|the-before-trilogy",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -6984,6 +7566,23 @@
       "evidence": {
         "film_id": "paul-robeson-portraits-of-the-artist",
         "criterion_film_url": "https://www.criterion.com/boxsets/443-paul-robeson-portraits-of-the-artist"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:fred-armisen-and-carrie-brownstein|1|ingmar-bergmans-cinema",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "fred-armisen-and-carrie-brownstein|1|ingmar-bergmans-cinema",
+      "title": "Ingmar Bergman’s Cinema",
+      "evidence": {
+        "film_id": "ingmar-bergmans-cinema",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -7076,6 +7675,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:hannah-einbinder|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "hannah-einbinder|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:harris-dickinson|1|martin-scorsese-s-world-cinema-project-no-2",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -7110,6 +7726,40 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:isaac-mizrahi|1|essential-fellini",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "isaac-mizrahi|1|essential-fellini",
+      "title": "Essential Fellini",
+      "evidence": {
+        "film_id": "essential-fellini",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3626-essential-fellini"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:isaac-mizrahi|1|pasolini-101",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "isaac-mizrahi|1|pasolini-101",
+      "title": "Pasolini 101",
+      "evidence": {
+        "film_id": "pasolini-101",
+        "criterion_film_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:isabel-sandoval|1|the-complete-films-of-agnes-varda",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -7137,6 +7787,23 @@
       "evidence": {
         "film_id": "eclipse-series-3-late-ozu",
         "criterion_film_url": "https://www.criterion.com/boxsets/427-eclipse-series-3-late-ozu"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:jack-coyne|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "jack-coyne|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+      "title": "Eclipse Series 12: Aki Kaurismäki’s Proletariat Trilogy",
+      "evidence": {
+        "film_id": "eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/564-eclipse-series-12-aki-kaurismaki-s-proletariat-trilogy"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -7188,6 +7855,23 @@
       "evidence": {
         "film_id": "pasolini-101",
         "criterion_film_url": "https://www.criterion.com/boxsets/6588-pasolini-101"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:jason-sudeikis|1|the-before-trilogy",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "jason-sudeikis|1|the-before-trilogy",
+      "title": "The Before Trilogy",
+      "evidence": {
+        "film_id": "the-before-trilogy",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1237-the-before-trilogy"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -7290,6 +7974,23 @@
       "evidence": {
         "film_id": "the-emigrantsthe-new-land",
         "criterion_film_url": "https://www.criterion.com/boxsets/1165-the-emigrants-the-new-land"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:joan-chen|1|world-of-wong-kar-wai",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "joan-chen|1|world-of-wong-kar-wai",
+      "title": "World of Wong Kar Wai",
+      "evidence": {
+        "film_id": "world-of-wong-kar-wai",
+        "criterion_film_url": "https://www.criterion.com/boxsets/4117-world-of-wong-kar-wai"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -7722,6 +8423,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:kleber-mendonca-filho|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "kleber-mendonca-filho|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:kleber-mendonca-filho|1|the-complete-films-of-agnes-varda",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -8089,6 +8807,23 @@
       "evidence": {
         "film_id": "the-complete-films-of-agnes-varda",
         "criterion_film_url": "https://www.criterion.com/boxsets/3432-the-complete-films-of-agnes-varda"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:noah-wyle|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "noah-wyle|1|a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+      "title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+      "evidence": {
+        "film_id": "a-whit-stillman-trilogy-metropolitan-barcelona-the-last-days-of-disco",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1179-a-whit-stillman-trilogy-i-metropolitan-barcelona-the-last-days-of-disco-i"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
@@ -8725,6 +9460,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:terry-zwigoff|1|the-killers",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "terry-zwigoff|1|the-killers",
+      "title": "The Killers",
+      "evidence": {
+        "film_id": "the-killers",
+        "criterion_film_url": "https://www.criterion.com/boxsets/334-the-killers"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:the-quay-brothers|1|eclipse-series-12-aki-kaurismakis-proletariat-trilogy",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -8861,6 +9613,23 @@
       "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
     },
     {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:vincent-donofrio|1|ingmar-bergmans-cinema",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "vincent-donofrio|1|ingmar-bergmans-cinema",
+      "title": "Ingmar Bergman’s Cinema",
+      "evidence": {
+        "film_id": "ingmar-bergmans-cinema",
+        "criterion_film_url": "https://www.criterion.com/boxsets/1427-ingmar-bergman-s-cinema"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
       "id": "pick_box_set_missing_spine:data/picks_raw.json:wagner-moura|1|martin-scorsese-s-world-cinema-project-no-2",
       "type": "pick_box_set_missing_spine",
       "severity": "P3",
@@ -8871,6 +9640,23 @@
       "evidence": {
         "film_id": "martin-scorsese-s-world-cinema-project-no-2",
         "criterion_film_url": "https://www.criterion.com/boxsets/1258-martin-scorsese-s-world-cinema-project-no-2"
+      },
+      "confidence": "medium",
+      "suggested_action": "Review only if this box set should carry a pick-level spine.",
+      "status": "accepted",
+      "exception_note": "Box set picks can intentionally carry a /boxsets/ URL without a pick-level catalog_spine; regular /films/ spine gaps remain actionable."
+    },
+    {
+      "id": "pick_box_set_missing_spine:data/picks_raw.json:wagner-moura|1|martin-scorseses-world-cinema-project-no-3",
+      "type": "pick_box_set_missing_spine",
+      "severity": "P3",
+      "category": "box_set",
+      "file": "data/picks_raw.json",
+      "record_key": "wagner-moura|1|martin-scorseses-world-cinema-project-no-3",
+      "title": "Martin Scorsese’s World Cinema Project No. 3",
+      "evidence": {
+        "film_id": "martin-scorseses-world-cinema-project-no-3",
+        "criterion_film_url": "https://www.criterion.com/boxsets/3506-martin-scorsese-s-world-cinema-project-no-3"
       },
       "confidence": "medium",
       "suggested_action": "Review only if this box set should carry a pick-level spine.",
