@@ -5168,9 +5168,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/981-john-leguizamo-s-closet-picks",
     "pick_count": 6,
+    "featured_film_slug": "do-the-right-thing",
     "x_handle": "JohnLeguizamo",
-    "threads_handle": "johnleguizamo",
-    "featured_film_slug": "do-the-right-thing"
+    "threads_handle": "johnleguizamo"
   },
   {
     "name": "Mindy Kaling",
@@ -5184,9 +5184,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/983-mindy-kaling-s-closet-picks",
     "pick_count": 7,
+    "featured_film_slug": "the-shape-of-water",
     "x_handle": "mindykaling",
-    "threads_handle": "mindykaling",
-    "featured_film_slug": "the-shape-of-water"
+    "threads_handle": "mindykaling"
   },
   {
     "name": "Camila Mendes",
@@ -5200,8 +5200,8 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/982-camila-mendes-s-closet-picks",
     "pick_count": 5,
-    "threads_handle": "camimendes",
-    "featured_film_slug": "the-great-beauty"
+    "featured_film_slug": "the-great-beauty",
+    "threads_handle": "camimendes"
   },
   {
     "name": "Christopher Nolan",
@@ -5297,9 +5297,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/992-colman-domingo-s-closet-picks",
     "pick_count": 8,
+    "featured_film_slug": "claudine",
     "x_handle": "colmandomingo",
-    "threads_handle": "kingofbingo",
-    "featured_film_slug": "claudine"
+    "threads_handle": "kingofbingo"
   },
   {
     "name": "Danny McBride",
@@ -5412,9 +5412,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/1003-jack-coyne-s-closet-picks",
     "pick_count": 11,
+    "featured_film_slug": "the-celebration",
     "x_handle": "jackycoyne",
-    "threads_handle": "jackycoyne",
-    "featured_film_slug": "the-celebration"
+    "threads_handle": "jackycoyne"
   },
   {
     "name": "Dakota Fanning",
@@ -5456,9 +5456,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/1006-karen-o-and-barnaby-clay-s-closet-picks",
     "pick_count": 8,
+    "featured_film_slug": "the-woman-in-the-dunes",
     "x_handle": "KarenO",
-    "threads_handle": "ko",
-    "featured_film_slug": "the-woman-in-the-dunes"
+    "threads_handle": "ko"
   },
   {
     "name": "Isaac Mizrahi",
@@ -5472,8 +5472,9 @@
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/1008-isaac-mizrahi-s-closet-picks",
     "pick_count": 16,
+    "featured_film_slug": "the-red-shoes",
+    "featured_quote": "Everyone who is an artist has to see this movie… it’s all about how scary it is to be an artist.",
     "x_handle": "IsaacMizrahi",
-    "threads_handle": "imisaacmizrahi",
-    "featured_film_slug": "claudine"
+    "threads_handle": "imisaacmizrahi"
   }
 ]
