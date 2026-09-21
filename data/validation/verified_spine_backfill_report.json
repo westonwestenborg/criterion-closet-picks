@@ -1,16 +1,50 @@
 {
   "schema_version": 1,
   "summary": {
-    "records": 67,
-    "spines_updated": 0,
+    "records": 70,
+    "spines_updated": 3,
     "unchanged": 55,
     "no_spine_visible": 12,
     "review_items": 0,
     "invalid_records": 0,
-    "pick_spines_synced": 0,
-    "raw_pick_spines_synced": 0
+    "pick_spines_synced": 3,
+    "raw_pick_spines_synced": 3
   },
-  "changes": [],
+  "changes": [
+    {
+      "action": "spine_updated",
+      "film_id": "body-heat",
+      "title": "Body Heat",
+      "evidence": {
+        "previous_spine_number": null,
+        "spine_number": 1308,
+        "criterion_url": "https://www.criterion.com/films/32141-body-heat",
+        "evidence": "Spine #1308"
+      }
+    },
+    {
+      "action": "spine_updated",
+      "film_id": "sentimental-value",
+      "title": "Sentimental Value",
+      "evidence": {
+        "previous_spine_number": null,
+        "spine_number": 1311,
+        "criterion_url": "https://www.criterion.com/films/35497-sentimental-value",
+        "evidence": "Spine #1311"
+      }
+    },
+    {
+      "action": "spine_updated",
+      "film_id": "the-ruling-class",
+      "title": "The Ruling Class",
+      "evidence": {
+        "previous_spine_number": null,
+        "spine_number": 132,
+        "criterion_url": "https://www.criterion.com/films/678-the-ruling-class",
+        "evidence": "Spine #132"
+      }
+    }
+  ],
   "no_spine_visible": [
     {
       "action": "no_spine_visible",

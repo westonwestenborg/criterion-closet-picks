@@ -4,8 +4,8 @@ Applies only checked-in records marked `verified_spine`; records marked `no_spin
 
 ## Summary
 
-- Verification records: 67
-- Catalog spines updated: 0
+- Verification records: 70
+- Catalog spines updated: 3
 - Already correct: 55
 - No public spine visible: 12
 - Review items: 0
@@ -15,6 +15,9 @@ Applies only checked-in records marked `verified_spine`; records marked `no_spin
 
 | Film ID | Title | Previous | New | Criterion URL |
 |---|---|---:|---:|---|
+| body-heat | Body Heat | None | 1308 | https://www.criterion.com/films/32141-body-heat |
+| sentimental-value | Sentimental Value | None | 1311 | https://www.criterion.com/films/35497-sentimental-value |
+| the-ruling-class | The Ruling Class | None | 132 | https://www.criterion.com/films/678-the-ruling-class |
 
 ## No Public Spine Visible
 
