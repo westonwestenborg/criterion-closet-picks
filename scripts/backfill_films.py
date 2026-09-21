@@ -2,13 +2,16 @@
 """
 Backfill missing films into criterion_catalog.json and propagate Criterion URLs.
 
-Two tasks:
+Four tasks:
 1. Films referenced in picks.json that have no catalog entry get synthetic entries
    created from the best available data (picks.json + picks_raw.json).
 2. criterion_film_url values from picks_raw.json are propagated to matching
    catalog entries (which currently all have empty criterion_url).
+3. Catalog entries whose URL points at /boxsets/ are flagged is_box_set.
+4. Picks left unmatched by the scrape because task 1 had not run yet get their
+   catalog_title / catalog_spine / match_method filled in.
 
-Output: data/criterion_catalog.json (updated in place)
+Output: data/criterion_catalog.json, and data/picks*.json when task 4 changes one
 """
 
 import sys
@@ -146,9 +149,40 @@ def main() -> None:
     if flagged:
         log(f"Flagged {flagged} catalog entries as is_box_set")
 
+    # --- Task 4: Re-resolve picks whose film was missing from the catalog ---
+    # scrape_criterion_picks.py resolves each pick against the catalog and leaves
+    # catalog_title / catalog_spine / match_method null when nothing matches. A
+    # film Criterion had not shelved yet -- Body Heat, spine 1308 -- therefore
+    # scraped as unmatched, and task 1 above then built its catalog entry out of
+    # that very pick. The URL match the scrape tried now succeeds, so run it
+    # again here rather than leave the pick reading as unmatched forever.
+    # Only a pick whose own criterion_film_url equals the entry's counts: film_id
+    # alone would let a synthetic entry vouch for a link nothing established.
+    resolved = 0
+    for rows in (picks, picks_raw):
+        for pick in rows:
+            if pick.get("match_method"):
+                continue
+            entry = catalog_by_id.get(pick.get("film_id"))
+            if entry is None:
+                continue
+            url = pick.get("criterion_film_url") or ""
+            if not url or url != entry.get("criterion_url"):
+                continue
+            pick["catalog_title"] = entry.get("title")
+            pick["catalog_spine"] = entry.get("spine_number")
+            pick["match_method"] = "criterion_url"
+            resolved += 1
+
+    log(f"Re-resolved match markers on {resolved} picks")
+
     # --- Save ---
     save_json(CATALOG_FILE, catalog)
     log(f"Saved {len(catalog)} catalog entries to {CATALOG_FILE}")
+    if resolved:
+        save_json(PICKS_FILE, picks)
+        save_json(PICKS_RAW_FILE, picks_raw)
+        log(f"Saved picks to {PICKS_FILE} and {PICKS_RAW_FILE}")
 
 
 if __name__ == "__main__":
