@@ -156,12 +156,14 @@ KNOWN_VIDEO_IDS = {
     "vincent-donofrio": {"youtube_video_id": "_ue56onqyr8"},
     "karen-o-and-barnaby-clay": {"youtube_video_id": "-itcLi0Uxf8"},
     "isaac-mizrahi": {"youtube_video_id": "rKKqZhrYPMw"},
+    "ben-mankiewicz": {"youtube_video_id": "KMg3nwN9ntE"},
 }
 
 # Known Criterion page URLs for guests missing them
 KNOWN_CRITERION_URLS = {
     "karen-o-and-barnaby-clay": "https://www.criterion.com/shop/collection/1006-karen-o-and-barnaby-clay-s-closet-picks",
     "isaac-mizrahi": "https://www.criterion.com/shop/collection/1008-isaac-mizrahi-s-closet-picks",
+    "ben-mankiewicz": "https://www.criterion.com/shop/collection/1007-ben-mankiewicz-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",

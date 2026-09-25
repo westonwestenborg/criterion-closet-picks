@@ -141994,5 +141994,89 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "alice-doesnt-live-here-anymore",
+    "title": "Alice Doesn’t Live Here Anymore",
+    "spine_number": null,
+    "director": "Martin Scorsese",
+    "year": 1974,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/29004-alice-doesn-t-live-here-anymore",
+    "imdb_id": "tt0071115",
+    "tmdb_id": 16153,
+    "poster_url": "https://image.tmdb.org/t/p/w185/A99yzz1W3NCG6zR2HXSwn2kWlse.jpg",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "Martin Scorsese",
+          "tmdb_id": 1032
+        }
+      ],
+      "writers": [
+        {
+          "name": "Robert Getchell",
+          "tmdb_id": 53810
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Kent L. Wakeford",
+          "tmdb_id": 2583
+        }
+      ],
+      "editors": [
+        {
+          "name": "Marcia Lucas",
+          "tmdb_id": 2551
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ellen Burstyn",
+          "tmdb_id": 9560,
+          "character": "Alice Hyatt"
+        },
+        {
+          "name": "Alfred Lutter",
+          "tmdb_id": 90170,
+          "character": "Tommy"
+        },
+        {
+          "name": "Kris Kristofferson",
+          "tmdb_id": 10823,
+          "character": "David"
+        },
+        {
+          "name": "Harvey Keitel",
+          "tmdb_id": 1037,
+          "character": "Ben Eberhardt"
+        },
+        {
+          "name": "Diane Ladd",
+          "tmdb_id": 6587,
+          "character": "Flo"
+        },
+        {
+          "name": "Lelia Goldoni",
+          "tmdb_id": 41284,
+          "character": "Bea"
+        },
+        {
+          "name": "Billy Green Bush",
+          "tmdb_id": 35090,
+          "character": "Donald Hyatt"
+        },
+        {
+          "name": "Jodie Foster",
+          "tmdb_id": 1038,
+          "character": "Audrey"
+        }
+      ]
+    }
   }
 ]
