@@ -118806,7 +118806,9 @@
     "imdb_id": "tt2186935",
     "tmdb_id": 166712,
     "poster_url": null,
-    "genres": [],
+    "genres": [
+      "Animation"
+    ],
     "credits": {
       "directors": [
         {

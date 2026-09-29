@@ -5493,5 +5493,21 @@
     "featured_quote": "My grandfather was a screenwriter, Herman Mankiewicz. He wrote a film called Citizen Kane. I wasn’t going to include it because I talk about it a lot.",
     "x_handle": "BenMank77",
     "threads_handle": "benmankiewicz"
+  },
+  {
+    "name": "Mahershala Ali",
+    "slug": "mahershala-ali",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/9ZmSejm5lnUVY5IJ1iNx2QEjnHb.jpg",
+    "youtube_video_id": "16ljyPH6xd4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=16ljyPH6xd4",
+    "vimeo_video_id": null,
+    "episode_date": "2026-09-28",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1010-mahershala-ali-s-closet-picks",
+    "pick_count": 6,
+    "featured_film_slug": "hollywood-shuffle",
+    "featured_quote": "There were so many things that were funny to me in this film before I started acting that are so much funnier now, and also a little painful, too.",
+    "threads_handle": "mahershalaali"
   }
 ]
