@@ -39,7 +39,11 @@ class CriterionBrowser:
     def __enter__(self):
         self._pw_cm = self._stealth.use_sync(sync_playwright())
         self._pw = self._pw_cm.__enter__()
+        # Installed Google Chrome, not Playwright's bundled Chromium: since
+        # 2026-09 Cloudflare holds the bundled build on "Just a moment..."
+        # indefinitely (headless or headed), while Chrome passes first try.
         self._browser = self._pw.chromium.launch(
+            channel="chrome",
             headless=True,
             args=["--disable-blink-features=AutomationControlled"],
         )
