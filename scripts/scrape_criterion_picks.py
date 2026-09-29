@@ -67,6 +67,16 @@ class CollectionUnavailable(Exception):
     """
 
 
+class CriterionBlocked(CollectionUnavailable):
+    """
+    Cloudflare served its challenge page instead of the one asked for.
+
+    Says nothing about the collection: every later request in the run would hit
+    the same wall. So the run stops here and exits non-zero, rather than logging
+    each page as not live and looking like a week with no new episodes.
+    """
+
+
 # ---------------------------------------------------------------------------
 # Scraper setup
 # ---------------------------------------------------------------------------
@@ -317,11 +327,13 @@ def scrape_index(scraper) -> list[dict]:
     log("Scraping Criterion closet-picks index...")
     try:
         resp = scraper.fetch(CLOSET_PICKS_INDEX, timeout=30)
-        if resp.status_code != 200:
-            log(f"  HTTP {resp.status_code} for index page")
-            return []
     except Exception as e:
         log(f"  Error fetching index: {e}")
+        return []
+    if resp.blocked:
+        raise CriterionBlocked(f"index page: Cloudflare challenge (HTTP {resp.status_code})")
+    if resp.status_code != 200:
+        log(f"  HTTP {resp.status_code} for index page")
         return []
 
     soup = BeautifulSoup(resp.text, "lxml")
@@ -417,6 +429,10 @@ def scrape_collection_page(scraper, collection_url: str) -> tuple[list[dict], di
         except Exception as e:
             raise CollectionUnavailable(f"{collection_url} page {page}: {e}") from e
 
+        if resp.blocked:
+            raise CriterionBlocked(
+                f"{collection_url} page {page}: Cloudflare challenge (HTTP {resp.status_code})"
+            )
         if resp.status_code != 200:
             raise CollectionUnavailable(
                 f"{collection_url} page {page}: HTTP {resp.status_code}"
@@ -823,14 +839,18 @@ def scrape_all_collections(
     limit: int = 0,
     guest_filter: str | None = None,
     resume: bool = True,
-) -> tuple[list[dict], list[dict]]:
+) -> tuple[list[dict], list[dict], CriterionBlocked | None]:
     """
     Scrape film picks from Criterion collection pages.
     Merges into existing guests and picks data.
     Saves progress incrementally.
+
+    Stops at the first Cloudflare block and returns it as the third value
+    (None when the run was not blocked).
     """
     new_guests = []
     new_picks = []
+    blocked = None
 
     # Load checkpoint for resuming
     checkpoint = load_checkpoint() if resume else {"completed_urls": []}
@@ -848,7 +868,7 @@ def scrape_all_collections(
         ]
         if not collections:
             log(f"No collection found matching guest '{guest_filter}'")
-            return [], []
+            return [], [], None
         log(f"Filtered to {len(collections)} collection(s) matching '{guest_filter}'")
 
     if limit:
@@ -866,9 +886,13 @@ def scrape_all_collections(
                        for cid in collection_ids(urls)}
     completed_urls = {u for u in completed_urls if collection_id(u) not in multi_visit_ids}
     completed_ids -= multi_visit_ids
-    for p in existing_picks:
+    # Keep the old values: a guest whose pages don't all re-scrape gets them back.
+    prior_visit_index: dict[int, int | None] = {}
+    for i, p in enumerate(existing_picks):
         if p["guest_slug"] in multi_visit_slugs:
+            prior_visit_index[i] = p["visit_index"]
             p["visit_index"] = None
+    rescraped_ids: set[str] = set()
 
     for coll in tqdm(collections, desc="Scraping Criterion collections"):
         url = coll["collection_url"]
@@ -882,6 +906,10 @@ def scrape_all_collections(
 
         try:
             films, video_ids = scrape_collection_page(scraper, url)
+        except CriterionBlocked as e:
+            log(f"    BLOCKED by Cloudflare: {e}")
+            blocked = e
+            break
         except CollectionUnavailable as e:
             # Not checkpointed: retry on the next run, once Criterion publishes it.
             log(f"    SKIP (collection not live): {e}")
@@ -995,6 +1023,7 @@ def scrape_all_collections(
         # Save progress incrementally
         completed_urls.add(url)
         completed_ids.add(coll_id)
+        rescraped_ids.add(coll_id)
         save_checkpoint({"completed_urls": list(completed_urls)})
 
         # Save data after each collection (so interrupted runs keep progress)
@@ -1003,7 +1032,35 @@ def scrape_all_collections(
 
         time.sleep(REQUEST_DELAY)
 
-    return new_guests, new_picks
+    restored = restore_unscraped_visit_indexes(existing_picks, prior_visit_index, rescraped_ids)
+    if restored:
+        log(f"Restored visit_index on {restored} picks of guests not fully re-scraped this run")
+        save_json(PICKS_RAW_FILE, existing_picks)
+
+    return new_guests, new_picks, blocked
+
+
+def restore_unscraped_visit_indexes(
+    picks: list[dict], prior: dict[int, int | None], rescraped_ids: set[str]
+) -> int:
+    """
+    Put back visit_index for multi-visit guests whose pages were not all re-scraped.
+
+    scrape_all_collections blanks every multi-visit guest's visit_index up front
+    and rebuilds it from their collection pages. A guest missed by the run -- a
+    Cloudflare block, a --guest filter, a page that errored -- would otherwise
+    keep the blanks, which is how 154 picks lost their visit on 2026-09-29.
+    `prior` maps pick index to its old value. Returns the number of picks restored.
+    """
+    restored = 0
+    for i, value in prior.items():
+        pick = picks[i]
+        if collection_ids(VISIT_CRITERION_URLS.get(pick["guest_slug"], [])) <= rescraped_ids:
+            continue
+        if pick["visit_index"] != value:
+            pick["visit_index"] = value
+            restored += 1
+    return restored
 
 
 # ---------------------------------------------------------------------------
@@ -1070,7 +1127,12 @@ def main():
     with create_scraper() as scraper:
 
         # Step 1: Scrape the index to discover all collections
-        collections = scrape_index(scraper)
+        try:
+            collections = scrape_index(scraper)
+        except CriterionBlocked as e:
+            log(f"ERROR: Cloudflare blocked the scrape at the {e}. Nothing was scraped "
+                f"or saved; re-run once the block clears.")
+            sys.exit(1)
         if not collections:
             log("WARNING: No collections found on Criterion index page, using VISIT_CRITERION_URLS only")
             collections = []
@@ -1120,7 +1182,7 @@ def main():
             return
 
         # Step 2: Scrape collection pages for film picks
-        new_guests, new_picks = scrape_all_collections(
+        new_guests, new_picks, blocked = scrape_all_collections(
             scraper=scraper,
             catalog=catalog,
             collections=collections,
@@ -1158,6 +1220,12 @@ def main():
             box_sets = sum(1 for p in new_picks if p.get("is_box_set"))
             if box_sets:
                 log(f"  Box sets found: {box_sets}")
+
+        if blocked:
+            log(f"\nERROR: Cloudflare blocked the scrape at {blocked}. Collections "
+                f"before it are saved; re-run once the block clears and the "
+                f"checkpoint picks up from there.")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

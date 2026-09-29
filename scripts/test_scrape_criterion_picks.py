@@ -4,15 +4,22 @@
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+import scripts.scrape_criterion_picks as scrape_mod
+from scripts.browser_utils import FetchResult
 from scripts.scrape_criterion_picks import (
     CollectionUnavailable,
+    CriterionBlocked,
     _resolve_visit_index,
     match_films_to_catalog,
     parse_guest_name_from_link_text,
+    restore_unscraped_visit_indexes,
+    scrape_all_collections,
     scrape_collection_page,
+    scrape_index,
 )
 from scripts.utils import collection_id, collection_ids, same_collection
 
@@ -33,6 +40,11 @@ COLLECTION_HTML = """
 </body></html>
 """
 
+# What Cloudflare serves in place of the page while it holds a browser.
+CHALLENGE_HTML = """
+<html><head><title>Just a moment...</title></head><body></body></html>
+"""
+
 
 class FakeScraper:
     """Stands in for CriterionBrowser, returning a canned FetchResult."""
@@ -48,13 +60,7 @@ class FakeScraper:
         self.fetched.append(url)
         if self.raises:
             raise self.raises
-
-        class Result:
-            status_code = self.status_code
-            text = self.html
-            url = self.final_url
-
-        return Result()
+        return FetchResult(status_code=self.status_code, text=self.html, url=self.final_url)
 
 
 class ScrapeCollectionPageTest(unittest.TestCase):
@@ -86,6 +92,32 @@ class ScrapeCollectionPageTest(unittest.TestCase):
 
         with self.assertRaises(CollectionUnavailable):
             scrape_collection_page(scraper, COLLECTION_URL)
+
+    def test_cloudflare_challenge_raises_blocked_not_just_unavailable(self):
+        # Before CriterionBlocked, a challenge was logged as "collection not
+        # live", so a run blocked on every page read as a quiet week.
+        scraper = FakeScraper(CHALLENGE_HTML, COLLECTION_URL, status_code=403)
+
+        with self.assertRaises(CriterionBlocked):
+            scrape_collection_page(scraper, COLLECTION_URL)
+
+    def test_blocked_index_raises_instead_of_returning_no_collections(self):
+        scraper = FakeScraper(CHALLENGE_HTML, "https://www.criterion.com/closet-picks", status_code=403)
+
+        with self.assertRaises(CriterionBlocked):
+            scrape_index(scraper)
+
+
+class FetchResultBlockedTest(unittest.TestCase):
+    def test_403_is_blocked(self):
+        self.assertTrue(FetchResult(403, "", COLLECTION_URL).blocked)
+
+    def test_challenge_title_is_blocked_whatever_the_status(self):
+        self.assertTrue(FetchResult(200, CHALLENGE_HTML, COLLECTION_URL).blocked)
+
+    def test_real_pages_are_not_blocked(self):
+        self.assertFalse(FetchResult(200, COLLECTION_HTML, COLLECTION_URL).blocked)
+        self.assertFalse(FetchResult(503, COLLECTION_HTML, COLLECTION_URL).blocked)
 
 
 # A box set and one of its member films. Criterion's collection page names the set
@@ -226,6 +258,75 @@ class ResolveVisitIndexTest(unittest.TestCase):
 
     def test_no_collection_id_falls_back_to_visit_one(self):
         self.assertEqual(_resolve_visit_index(self.GUEST, "guillermo-del-toro", None), 1)
+
+
+DEL_TORO_URLS = [
+    BASE + "645-guillermo-del-toro-s-closet-picks",
+    BASE + "911-guillermo-del-toro-s-closet-picks",
+]
+
+
+def _del_toro_picks():
+    return [
+        {"guest_slug": "guillermo-del-toro", "film_id": "cronos", "visit_index": 1},
+        {"guest_slug": "guillermo-del-toro", "film_id": "the-devils-backbone", "visit_index": 2},
+    ]
+
+
+class RestoreVisitIndexTest(unittest.TestCase):
+    """
+    The scrape blanks multi-visit guests' visit_index before re-scraping them.
+    On 2026-09-29 a Cloudflare block stopped every re-scrape and 154 picks
+    stayed blank.
+    """
+
+    def setUp(self):
+        patcher = patch.dict(
+            scrape_mod.VISIT_CRITERION_URLS, {"guillermo-del-toro": DEL_TORO_URLS}, clear=True
+        )
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_guest_with_a_page_not_re_scraped_gets_its_old_values_back(self):
+        picks = _del_toro_picks()
+        prior = {0: 1, 1: 2}
+        picks[0]["visit_index"] = 1  # re-scraped from 645
+        picks[1]["visit_index"] = None  # 911 never came back
+
+        restored = restore_unscraped_visit_indexes(picks, prior, rescraped_ids={"645"})
+
+        self.assertEqual([p["visit_index"] for p in picks], [1, 2])
+        self.assertEqual(restored, 1)
+
+    def test_fully_re_scraped_guest_keeps_the_new_values(self):
+        picks = _del_toro_picks()
+        picks[1]["visit_index"] = 1  # the re-scrape moved it, and that stands
+
+        restored = restore_unscraped_visit_indexes(
+            picks, {0: 1, 1: 2}, rescraped_ids={"645", "911"}
+        )
+
+        self.assertEqual([p["visit_index"] for p in picks], [1, 1])
+        self.assertEqual(restored, 0)
+
+    def test_blocked_run_stops_at_the_block_and_leaves_visits_intact(self):
+        picks = _del_toro_picks()
+        collections = [
+            {"name": "Guillermo Del Toro", "slug": "guillermo-del-toro", "collection_url": url}
+            for url in DEL_TORO_URLS
+        ]
+        scraper = FakeScraper(CHALLENGE_HTML, DEL_TORO_URLS[0], status_code=403)
+
+        with patch.object(scrape_mod, "save_json"), patch.object(scrape_mod, "save_checkpoint"):
+            _guests, new_picks, blocked = scrape_all_collections(
+                scraper, catalog=[], collections=collections,
+                existing_guests=[], existing_picks=picks, resume=False,
+            )
+
+        self.assertIsInstance(blocked, CriterionBlocked)
+        self.assertEqual(new_picks, [])
+        self.assertEqual(len(scraper.fetched), 1)
+        self.assertEqual([p["visit_index"] for p in picks], [1, 2])
 
 
 class ParseGuestNameTest(unittest.TestCase):
