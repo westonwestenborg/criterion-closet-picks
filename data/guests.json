@@ -5509,5 +5509,22 @@
     "featured_film_slug": "hollywood-shuffle",
     "featured_quote": "There were so many things that were funny to me in this film before I started acting that are so much funnier now, and also a little painful, too.",
     "threads_handle": "mahershalaali"
+  },
+  {
+    "name": "Sharon Horgan",
+    "slug": "sharon-horgan",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/mNTtNGqdL8CzOBjCYCjOLRosOTM.jpg",
+    "youtube_video_id": "jAGUJQWv5kk",
+    "youtube_video_url": "https://www.youtube.com/watch?v=jAGUJQWv5kk",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-02",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1011-sharon-horgan-s-closet-picks",
+    "pick_count": 8,
+    "featured_film_slug": "kes",
+    "featured_quote": "I watched it on the big screen… to say I was destroyed afterwards is an understatement. I couldn’t… I couldn’t speak.",
+    "x_handle": "SharonHorgan",
+    "threads_handle": "sharonhorgan"
   }
 ]
