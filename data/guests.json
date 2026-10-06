@@ -5526,5 +5526,21 @@
     "featured_quote": "I watched it on the big screen… to say I was destroyed afterwards is an understatement. I couldn’t… I couldn’t speak.",
     "x_handle": "SharonHorgan",
     "threads_handle": "sharonhorgan"
+  },
+  {
+    "name": "Glenn Close",
+    "slug": "glenn-close",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/4VHZ1GfLwN7MUgApy0LCBzdDF9L.jpg",
+    "youtube_video_id": "LTppX52e1aQ",
+    "youtube_video_url": "https://www.youtube.com/watch?v=LTppX52e1aQ",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-05",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1012-glenn-close-s-closet-picks",
+    "pick_count": 8,
+    "featured_film_slug": "in-the-heat-of-the-night",
+    "featured_quote": "When Sidney Poitier gets back on the train and he looks back at Steiger, he smiles. And when I last saw it, I thought, 'He shouldn’t have smiled.'",
+    "threads_handle": "glennclose"
   }
 ]
