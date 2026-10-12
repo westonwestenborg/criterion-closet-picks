@@ -794,7 +794,7 @@
     "name": "Peter Wolf",
     "slug": "peter-wolf",
     "profession": "musician",
-    "photo_url": null,
+    "photo_url": "https://image.tmdb.org/t/p/w185/b04DEBW3EvSktxWC2XuIvgjOi9P.jpg",
     "youtube_video_id": "rib1VHrBTdk",
     "youtube_video_url": "https://www.youtube.com/watch?v=rib1VHrBTdk",
     "vimeo_video_id": null,
@@ -5542,5 +5542,20 @@
     "featured_film_slug": "in-the-heat-of-the-night",
     "featured_quote": "When Sidney Poitier gets back on the train and he looks back at Steiger, he smiles. And when I last saw it, I thought, 'He shouldn’t have smiled.'",
     "threads_handle": "glennclose"
+  },
+  {
+    "name": "Aaron Sorkin",
+    "slug": "aaron-sorkin",
+    "profession": "writer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/hGkusztbd1rb23QFAjvpJxKSTAU.jpg",
+    "youtube_video_id": "O30O0wZA9wY",
+    "youtube_video_url": "https://www.youtube.com/watch?v=O30O0wZA9wY",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-09",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1013-aaron-sorkin-s-closet-picks",
+    "pick_count": 5,
+    "featured_film_slug": "broadcast-news",
+    "featured_quote": "I was a young playwright sitting in a movie theater watching this movie and saying, ‘Jeez, I wish I had written that.’"
   }
 ]
