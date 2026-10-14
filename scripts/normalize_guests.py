@@ -161,6 +161,7 @@ KNOWN_VIDEO_IDS = {
     "sharon-horgan": {"youtube_video_id": "jAGUJQWv5kk"},
     "glenn-close": {"youtube_video_id": "LTppX52e1aQ"},
     "aaron-sorkin": {"youtube_video_id": "O30O0wZA9wY"},
+    "sebastian-stan": {"youtube_video_id": "imlsabY7xyw"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -172,6 +173,7 @@ KNOWN_CRITERION_URLS = {
     "sharon-horgan": "https://www.criterion.com/shop/collection/1011-sharon-horgan-s-closet-picks",
     "glenn-close": "https://www.criterion.com/shop/collection/1012-glenn-close-s-closet-picks",
     "aaron-sorkin": "https://www.criterion.com/shop/collection/1013-aaron-sorkin-s-closet-picks",
+    "sebastian-stan": "https://www.criterion.com/shop/collection/1014-sebastian-stan-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",

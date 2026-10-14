@@ -5557,5 +5557,21 @@
     "pick_count": 5,
     "featured_film_slug": "broadcast-news",
     "featured_quote": "I was a young playwright sitting in a movie theater watching this movie and saying, ‘Jeez, I wish I had written that.’"
+  },
+  {
+    "name": "Sebastian Stan",
+    "slug": "sebastian-stan",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/v20RLWst39klatsqUgSrwHxhwee.jpg",
+    "youtube_video_id": "imlsabY7xyw",
+    "youtube_video_url": "https://www.youtube.com/watch?v=imlsabY7xyw",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-12",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1014-sebastian-stan-s-closet-picks",
+    "pick_count": 8,
+    "featured_film_slug": "moonstruck",
+    "featured_quote": "Cher was so beautiful in the movie. And the moon, and then you have the streetlamps, and her father’s walking the dog, and shouldn’t life really just be like that?",
+    "threads_handle": "imsebastianstan"
   }
 ]
