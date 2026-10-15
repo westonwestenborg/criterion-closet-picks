@@ -11,13 +11,14 @@ from scripts.clean_quotes import fix_film_titles
 
 # A catalog holding the two kinds of single-word title that matter here: one that
 # is an ordinary English word ("House", "Mother", "Performance") and one that is
-# not ("Godzilla"), plus a multi-word title.
+# not ("Godzilla"), plus a multi-word title and a multi-word everyday phrase.
 CATALOG_TITLE_MAP = {
     "house": "House",
     "mother": "Mother",
     "performance": "Performance",
     "godzilla": "Godzilla",
     "do the right thing": "Do the Right Thing",
+    "the most beautiful": "The Most Beautiful",
 }
 
 
@@ -51,6 +52,14 @@ class FixFilmTitlesTest(unittest.TestCase):
             fix_film_titles(text, CATALOG_TITLE_MAP, "Sex, Lies, and Videotape"),
             "this and Do the Right Thing came out the same year",
         )
+
+    def test_multi_word_title_that_is_an_everyday_phrase_is_left_alone(self):
+        # Kurosawa's The Most Beautiful is in the catalog, and multi-word titles
+        # were once assumed safe to substitute anywhere, so 27 quotes read "one
+        # of The Most Beautiful films".
+        text = "it's one of the most beautiful films ever made"
+
+        self.assertEqual(fix_film_titles(text, CATALOG_TITLE_MAP, "Revanche"), text)
 
     def test_single_word_title_that_is_not_an_english_word_is_still_fixed(self):
         text = "I love godzilla so much"

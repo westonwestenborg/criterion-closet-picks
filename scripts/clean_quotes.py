@@ -30,7 +30,8 @@ _AMBIGUOUS_CACHE: set[str] | None = None
 def load_ambiguous_titles() -> set[str]:
     """
     Catalog titles that are also ordinary English words (House, Mother,
-    Performance, Festival...). fix_film_titles matches a title anywhere in a
+    Performance, Festival...) or everyday phrases (The Most Beautiful, Real
+    Life, The Kid). fix_film_titles matches a title anywhere in a
     quote, so for these it is as likely to hit the common noun as the film --
     which is how quotes ended up reading "my Mother on the stage" and "at that
     friend's House". Substituting them is only safe when the guest is naming
