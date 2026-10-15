@@ -43,5 +43,12 @@
       "start_timestamp": 155,
       "note": "The extraction replaced the middle of her sentence with an ellipsis (\"that little hotel room... Is just an extraordinary thing\"), dropping the clause at 185-194s that says what the argument actually is: \"that starts off as lovemaking and just becomes the most violently brutal argument you could have as a married couple\". That clause is the substance of the pick -- it is the scene she says she tried to recreate in her own shows and that inspired Catastrophe, which she co-wrote with Rob Delaney -- and it is the line our October 2026 social post quoted, so the guest page has to carry it. Restored as one unbroken passage from 155s to 199s; every word is verbatim from the jAGUJQWv5kk transcript and nothing is cut."
     }
+  },
+  "ngozi-onwurah": {
+    "do-the-right-thing": {
+      "quote": "I’m going to start with Do the Right Thing. So Spike Lee always had this thing where he said that he never ripped off directors, he paid homage to them. And I have paid homage to this film so many times in so many of my films. His more important film to me, on one level, was actually She’s Gotta Have It, because that was the very first film that I went… very first Black film that I went into a movie theater and bought popcorn and was able to buy popcorn and a soda to watch it. Normally, Black movies, you see them in a university or an educational setting, or you see it in an art house, or you see it in an art museum. This was just a straight-up movie theater. Spike Lee gave birth to so many Black filmmakers you wouldn’t believe it.",
+      "start_timestamp": 7,
+      "note": "The extraction dropped one word that the whole anecdote depends on. She says She’s Gotta Have It was \"the very first film that I went… very first Black film that I went into a movie theater and bought popcorn\" (26-36s), correcting herself mid-sentence, and then explains why that mattered: Black films were normally shown at universities, art houses or museums, and this was \"a straight-up movie theater\" (36-45s). The model kept the uncorrected half and cut the explanation, so the stored quote claimed it was the first film she had ever seen in a cinema. Restored as one unbroken passage from 7s to 50s; every word is verbatim from the _15L5kEGZ_s transcript and nothing is cut."
+    }
   }
 }
