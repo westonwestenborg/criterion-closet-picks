@@ -110,6 +110,11 @@ After the pipeline completes, report:
   each with a "best pick" quote chosen heuristically. Skim those quotes; if the
   auto-picked one for a prominent new guest is weak, offer to curate it via
   `featured_film_slug` — see fix-guest Workflow 8. Optional, editorial only.
+- Read each new guest's quotes against their transcript, and fix what you find
+  before committing. A dropped word that changes the meaning goes in
+  `data/quote_overrides.json`. A wrong capital ("one of The Most Beautiful
+  films", "all of his Secrets") has two possible causes with different fixes;
+  see fix-guest Workflow 11.
 
 Ask the user if they want to commit and push the updated data files.
 

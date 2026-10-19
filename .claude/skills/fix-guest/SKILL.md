@@ -1,6 +1,6 @@
 ---
 name: fix-guest
-description: Targeted fixes for individual Criterion Closet Picks guests without running the full pipeline. Use when user says "fix guest", "assign video", "add criterion url", "re-extract quotes", or needs to update a specific guest's data (video ID, Criterion URL, quotes). Also use when manually linking a YouTube video to a guest, correcting a wrong video match, or adding a Criterion collection page URL.
+description: Targeted fixes for individual Criterion Closet Picks guests without running the full pipeline. Use when user says "fix guest", "assign video", "add criterion url", "re-extract quotes", or needs to update a specific guest's data (video ID, Criterion URL, quotes). Also use when manually linking a YouTube video to a guest, correcting a wrong video match, or adding a Criterion collection page URL, or when a quote has a wrong capital or a dropped word, including one noticed while doing other work.
 ---
 
 # Fix Guest Data
@@ -146,6 +146,16 @@ nothing has written yet, so it silently produces no quotes. Continue:
    a box set whose catalog title carries a ` (box set)` suffix the collection
    page omits — run `scripts/dedupe_film_ids.py --dry-run`, confirm the scope is
    just the new picks, then run it for real.
+7. Read every new quote against the guest's transcript before you commit. Two
+   defects are common, and each needs a fix, not just a mention in the commit
+   message:
+   - **A dropped word that changes the meaning.** Ngozi Onwurah's Do the Right
+     Thing quote lost "Black" from "the very first Black film that I went into
+     a movie theater", so it claimed She's Gotta Have It was the first film she
+     ever saw in a cinema. Restore the passage with an entry in
+     `data/quote_overrides.json` (format in Workflow 10).
+   - **A wrong capital**, such as "one of The Most Beautiful films" or "all of
+     his Secrets". See Workflow 11.
 
 ### 5. Exclude a non-guest YouTube video
 
@@ -476,6 +486,70 @@ import sys; sys.path.insert(0,'scripts')
 from utils import load_json, save_json, PICKS_FILE, apply_quote_overrides
 d=load_json(PICKS_FILE); print('applied', apply_quote_overrides(d)); save_json(PICKS_FILE, d)"
 ```
+
+### 11. Fix a wrong capital in a quote
+
+Fix one whenever you see it: in a new guest's quotes, or in any quote you
+happen to read while doing something else. Don't sweep the whole file for them.
+In October 2026 a hand-checked random sample found that 53 of 60 lone
+mid-sentence capitals were correct (names, titles missing from the catalog,
+"Black" as a style choice, "God"). A sweep means reading hundreds of correct
+capitals to find each wrong one.
+
+First work out where the capital came from, because the fix is different for
+each cause.
+
+**A catalog title used as an everyday word or phrase.** The clean step at the
+end of `extract_quotes.py` (`fix_film_titles` in `scripts/clean_quotes.py`)
+capitalizes any catalog title it finds anywhere in a quote. Kurosawa's *The
+Most Beautiful* is in the catalog, so 27 quotes read "one of The Most Beautiful
+films". The tell is that the capitalized words match a catalog title exactly.
+The clean step reruns over every pick on every extraction, so a hand fix on its
+own won't hold:
+
+1. Add the title to `data/ambiguous_film_titles.json`. From then on the clean
+   step capitalizes it only when it is the guest's own pick.
+2. Add it to `data/quote_repair_words.json` too, unless some guest names that
+   film with a lowercase transcript and no capitalized word beside it, because
+   the script would lowercase that real reference. Ben Sinclair's "I chose
+   Close-Up" (the Kiarostami film) is why Close-Up is not on the list.
+3. Run `.venv/bin/python scripts/repair_quote_capitalization.py --dry-run`,
+   read every change, then run it without `--dry-run`. It lowercases an
+   occurrence only when the guest's transcript has the phrase in lowercase
+   everywhere mid-sentence.
+4. Fix by hand whatever the script can't settle: no transcript on disk, or a
+   transcript that capitalizes the word somewhere else.
+
+**A capital copied from YouTube's auto-captions.** Auto-captions sometimes
+capitalize random words, and the quote copies the transcript faithfully. Pauline
+Chalamet's transcript itself reads "his Secrets" and "frame the Box". The tell
+is that the guest's transcript has the same capital. No list helps with this
+cause, so fix it by hand. A later `extract_quotes.py --guest-slug SLUG --force`
+brings the capital back from the transcript, so recheck after any re-extraction.
+
+To fix one by hand, include enough of the surrounding text that it occurs
+exactly once:
+
+```bash
+.venv/bin/python -c "
+import sys; sys.path.insert(0,'scripts')
+from utils import load_json, save_json, PICKS_FILE
+slug, film, old, new = 'SLUG', 'FILM_ID', 'all of his Secrets he', 'all of his secrets he'
+d=load_json(PICKS_FILE)
+ps=[p for p in d if p['guest_slug']==slug and p['film_id']==film and old in (p.get('quote') or '')]
+assert len(ps)==1 and ps[0]['quote'].count(old)==1, 'old text must occur exactly once'
+ps[0]['quote']=ps[0]['quote'].replace(old, new); save_json(PICKS_FILE, d)"
+```
+
+Either way, check afterwards that the next clean pass won't undo the fix:
+
+```bash
+.venv/bin/python scripts/clean_quotes.py --dry-run
+```
+
+It should report changes only for picks in `data/quote_overrides.json`. Those
+quotes run past the cleaner's 500-character cap, and `extract_quotes.py`
+re-applies them right after cleaning.
 
 ## Key Details
 
