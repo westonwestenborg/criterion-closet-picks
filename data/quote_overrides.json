@@ -50,5 +50,17 @@
       "start_timestamp": 7,
       "note": "The extraction dropped one word that the whole anecdote depends on. She says She’s Gotta Have It was \"the very first film that I went… very first Black film that I went into a movie theater and bought popcorn\" (26-36s), correcting herself mid-sentence, and then explains why that mattered: Black films were normally shown at universities, art houses or museums, and this was \"a straight-up movie theater\" (36-45s). The model kept the uncorrected half and cut the explanation, so the stored quote claimed it was the first film she had ever seen in a cinema. Restored as one unbroken passage from 7s to 50s; every word is verbatim from the _15L5kEGZ_s transcript and nothing is cut."
     }
+  },
+  "zoe-kazan": {
+    "petite-maman": {
+      "quote": "But this is one of my more recent favorites: Petite maman. It’s like a very intense piece of chocolate or something. It packs so much in. And it literally will take you as much time as it takes you to watch the average episode of television. I also read this piece about Céline Sciamma and one of the things that she said is that she makes a list of all the scenes that she needs to tell the story, and then a list of all the sort of, like, inchoate images, songs, moments that she knows that she needs at, like, a psychic level to tell the story, and she sort of does it like a word finder and matches them up afterwards. And then anything that doesn’t have one of those delicious bits attached to it, she just cuts and doesn’t film, or even write, which I find completely fascinating.",
+      "start_timestamp": 78,
+      "note": "The extraction cut the middle of Kazan's account of Celine Sciamma's method, so the quote said Sciamma lists the scenes she needs and then cuts anything without 'one of those delicious bits attached to it', with nothing for 'those delicious bits' to refer to. The transcript (99-131s) has two lists: the scenes she needs, and 'the sort of, like, inchoate images, songs, moments that she knows that she needs at, like, a psychic level', which she matches up afterwards; a scene with no image attached is what she cuts. Restored verbatim, dropping only the stammer 'It's like a... a' and the false start 'which I find...'."
+    },
+    "brief-encounter": {
+      "quote": "All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me. I love these two middle-aged people falling in love. There’s something really quotidian about the way that they love each other, even though they are not allowed, because they’re having an affair, to have anything quotidian between them. They exist only in stolen spaces. There’s no dailyness to their life.",
+      "start_timestamp": 391,
+      "note": "At 391s Kazan says 'All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me.' The extraction cut the other two titles, which left 'Brief Encounter, these are, like, top-five films' with a plural that has nothing to refer to. Restored the full list verbatim. The rest of the quote is unchanged. (See pick_overrides.json for why this pick is Lean's Brief Encounter rather than the Muratova film Criterion's page links.)"
+    }
   }
 }

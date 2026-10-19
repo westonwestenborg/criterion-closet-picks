@@ -5588,5 +5588,22 @@
     "pick_count": 6,
     "featured_film_slug": "do-the-right-thing",
     "featured_quote": "Spike Lee… said that he never ripped off directors, he paid homage to them. And I have paid homage to this film so many times in so many of my films."
+  },
+  {
+    "name": "Zoe Kazan",
+    "slug": "zoe-kazan",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/rCJxFVtkyNUVTVCWYd6chx2Q19g.jpg",
+    "youtube_video_id": "V4B0kfrN32E",
+    "youtube_video_url": "https://www.youtube.com/watch?v=V4B0kfrN32E",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-16",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1016-zoe-kazan-s-closet-picks",
+    "pick_count": 15,
+    "featured_film_slug": "fa-yeung-nin-wa",
+    "featured_quote": "I don’t really care about seeing people kiss on screen. What I care about is people wanting to kiss each other on screen, the moments before people kiss on screen.",
+    "x_handle": "zoeinthecities",
+    "threads_handle": "zoe.kazan"
   }
 ]

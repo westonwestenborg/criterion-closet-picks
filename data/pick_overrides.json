@@ -1,6 +1,5 @@
 {
   "_comment": "Per-guest corrections to what Criterion's collection page lists. Criterion.com is the sole primary source for picks, so an entry here is a deliberate decision to contradict it, and needs evidence from the video itself. Keyed by guest_slug; each entry replaces the pick at from_criterion_url with the film at to_criterion_url. Applied by scrape_criterion_picks.py after every scrape, so the correction survives a re-scrape.",
-
   "slavoj-zizek": [
     {
       "from_criterion_url": "https://www.criterion.com/films/252-stranger-than-paradise",
@@ -8,6 +7,15 @@
       "to_film_id": "the-ice-storm",
       "to_title": "The Ice Storm",
       "note": "Criterion's page lists Stranger Than Paradise at slot 6, but the video has The Ice Storm there. At 1:17 Zizek says 'I have a perfect personal attachment to this film. When James Schamus was writing the scenario he told me that he was reading a book of mine.' Schamus wrote The Ice Storm; Jarmusch wrote Stranger Than Paradise himself in 1984. The transcript never says 'Stranger', 'Paradise' (outside Trouble in Paradise at 0:00) or 'Jarmusch', and all 12 slots align 1:1 between video and page except this one."
+    }
+  ],
+  "zoe-kazan": [
+    {
+      "from_criterion_url": "https://www.criterion.com/films/33328-brief-encounters",
+      "to_criterion_url": "https://www.criterion.com/films/345-brief-encounter",
+      "to_film_id": "brief-encounter",
+      "to_title": "Brief Encounter",
+      "note": "Criterion's page links Kira Muratova's Brief Encounters (1967, from the Brief Encounters/The Long Farewell box set), but the video has David Lean's Brief Encounter (1945). At 6:31 Kazan says 'All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me. I love these two middle-aged people falling in love... because they're having an affair... They exist only in stolen spaces.' That is Lean's film: two married, middle-aged strangers carrying on an affair in a railway cafe. Muratova's is about two women who love the same geologist. The captions are human-written (proper casing, accents) and spell the title singular. The likely cause is a product-search mix-up of singular and plural titles on Criterion's side."
     }
   ]
 }
