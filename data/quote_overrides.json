@@ -62,5 +62,17 @@
       "start_timestamp": 391,
       "note": "At 391s Kazan says 'All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me.' The extraction cut the other two titles, which left 'Brief Encounter, these are, like, top-five films' with a plural that has nothing to refer to. Restored the full list verbatim. The rest of the quote is unchanged. (See pick_overrides.json for why this pick is Lean's Brief Encounter rather than the Muratova film Criterion's page links.)"
     }
+  },
+  "jonathan-anderson": {
+    "salo-or-the-120-days-of-sodom": {
+      "quote": "Salò, I think I… has been a massive inspiration on me. I worked with this woman, Manuela Pavesi, and it was her favorite film. I think the wedding sequence can make you fall in love with irises. A must.",
+      "start_timestamp": 28,
+      "note": "The extraction ran Salò's quote on through 53s and gave Barry Lyndon nothing, although Barry Lyndon is on Criterion's page for this guest. The film is never named aloud, so the transcript alone can't place it. In the video, Anderson holds Salò from 0:28 to about 0:43 (the Manuela Pavesi and irises lines) and then holds Barry Lyndon from 0:44 to 0:53, before picking up The Complete Kubrick at 0:54 with 'And then Kubrick'. 'A must.' at 44s closes Salò, the same way 'This is a must.' closes My Beautiful Laundrette at 26s. Cut Salò's quote at 'A must.'; the rest moves to barry-lyndon."
+    },
+    "barry-lyndon": {
+      "quote": "Every time I talk to Luca Guadagnino, he always tells me about this film, over and over again, and he has made me look at it in a completely different way.",
+      "start_timestamp": 45,
+      "note": "Barry Lyndon is never named aloud. Anderson holds its case from 0:44 to 0:53, between Salò and The Complete Kubrick (see the salo-or-the-120-days-of-sodom note). The video was checked two ways: Gemini read the case titles from the full-resolution video, and the YouTube storyboard thumbnails show him switch cases at about 0:42-0:44. The extraction had attached this passage to Salò."
+    }
   }
 }

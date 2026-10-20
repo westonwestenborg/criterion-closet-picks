@@ -142080,5 +142080,104 @@
         }
       ]
     }
+  },
+  {
+    "film_id": "hairspray",
+    "title": "Hairspray",
+    "spine_number": null,
+    "director": "John Waters",
+    "year": 1988,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/34791-hairspray",
+    "imdb_id": "tt0095270",
+    "tmdb_id": 11054,
+    "poster_url": "https://image.tmdb.org/t/p/w185/n78VVWG1jsEpMCtcye13wy1RiAx.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        }
+      ],
+      "writers": [
+        {
+          "name": "John Waters",
+          "tmdb_id": 10367
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "David Insley",
+          "tmdb_id": 59370
+        }
+      ],
+      "editors": [
+        {
+          "name": "Janice Hampton",
+          "tmdb_id": 16534
+        }
+      ],
+      "cast": [
+        {
+          "name": "Ricki Lake",
+          "tmdb_id": 70233,
+          "character": "Tracy Turnblad"
+        },
+        {
+          "name": "Divine",
+          "tmdb_id": 10369,
+          "character": "Edna Turnblad / Arvin Hodgepile"
+        },
+        {
+          "name": "Debbie Harry",
+          "tmdb_id": 102,
+          "character": "Velma Von Tussle"
+        },
+        {
+          "name": "Vitamin C",
+          "tmdb_id": 62521,
+          "character": "Amber von Tussle"
+        },
+        {
+          "name": "Sonny Bono",
+          "tmdb_id": 67949,
+          "character": "Franklin von Tussle"
+        },
+        {
+          "name": "Leslie Ann Powers",
+          "tmdb_id": 2654399,
+          "character": "Penny Pingleton"
+        },
+        {
+          "name": "Ruth Brown",
+          "tmdb_id": 67950,
+          "character": "Motormouth Maybelle"
+        },
+        {
+          "name": "Jerry Stiller",
+          "tmdb_id": 26042,
+          "character": "Wilbur Turnblad"
+        }
+      ]
+    }
+  },
+  {
+    "film_id": "the-complete-kubrick",
+    "title": "The Complete Kubrick",
+    "spine_number": null,
+    "director": "",
+    "year": null,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/boxsets/9000-the-complete-kubrick",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2135-558f5e4458263b03be8d7f3e990f4619/DkEWk7DhlrVrMT5auXnYOWBdMRW13U_large.jpg",
+    "poster_source": "criterion",
+    "genres": [],
+    "credits": null,
+    "is_box_set": true
   }
 ]
