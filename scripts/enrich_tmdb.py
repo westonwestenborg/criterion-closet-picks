@@ -167,8 +167,14 @@ def get_metadata_from_criterion_url(criterion_url: str) -> dict | None:
                     if m:
                         year = int(m.group(1))
 
+            # Methods 3 and 4 search free text, so skip them for box sets: a box
+            # set has no single year, and the first year-like number in its blurb
+            # is often part of a title (The Complete Kubrick got 2001 from "2001:
+            # A Space Odyssey").
+            is_box_set_page = "/boxsets/" in criterion_url
+
             # Method 3: Look for year in meta description or og tags
-            if not year:
+            if not year and not is_box_set_page:
                 for meta in soup.select('meta[name="description"], meta[property="og:title"]'):
                     content = meta.get("content", "")
                     m = re.search(r"\b(19\d{2}|20\d{2})\b", content)
@@ -177,7 +183,7 @@ def get_metadata_from_criterion_url(criterion_url: str) -> dict | None:
                         break
 
             # Method 4: Look for year in any <p> or <span> near the title area
-            if not year:
+            if not year and not is_box_set_page:
                 for el in soup.select(".film-info, .film-details, .film-meta"):
                     text = el.get_text()
                     m = re.search(r"\b(19\d{2}|20\d{2})\b", text)
