@@ -165,6 +165,7 @@ KNOWN_VIDEO_IDS = {
     "ngozi-onwurah": {"youtube_video_id": "_15L5kEGZ_s"},
     "zoe-kazan": {"youtube_video_id": "V4B0kfrN32E"},
     "jonathan-anderson": {"youtube_video_id": "MNQIocAU01E"},
+    "frederick-elmes": {"youtube_video_id": "8nqIBE6-w_o"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -180,6 +181,7 @@ KNOWN_CRITERION_URLS = {
     "ngozi-onwurah": "https://www.criterion.com/shop/collection/1015-ngozi-onwurah-s-closet-picks",
     "zoe-kazan": "https://www.criterion.com/shop/collection/1016-zoe-kazan-s-closet-picks",
     "jonathan-anderson": "https://www.criterion.com/shop/collection/1017-jonathan-anderson-s-closet-picks",
+    "frederick-elmes": "https://www.criterion.com/shop/collection/1018-frederick-elmes-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",
