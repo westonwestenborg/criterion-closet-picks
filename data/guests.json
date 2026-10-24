@@ -5619,5 +5619,20 @@
     "criterion_page_url": "https://www.criterion.com/shop/collection/1017-jonathan-anderson-s-closet-picks",
     "pick_count": 11,
     "threads_handle": "jonathan.anderson"
+  },
+  {
+    "name": "Frederick Elmes",
+    "slug": "frederick-elmes",
+    "profession": "cinematographer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/v2T7YtZwzYSJvgMCuzVPmZOWjMT.jpg",
+    "youtube_video_id": "8nqIBE6-w_o",
+    "youtube_video_url": "https://www.youtube.com/watch?v=8nqIBE6-w_o",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-23",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1018-frederick-elmes-s-closet-picks",
+    "pick_count": 6,
+    "featured_film_slug": "solaris",
+    "featured_quote": "So there was an audience that saw a version of Solaris like no other that evening because I… I messed up in the projection room."
   }
 ]

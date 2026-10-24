@@ -74,5 +74,37 @@
       "start_timestamp": 45,
       "note": "Barry Lyndon is never named aloud. Anderson holds its case from 0:44 to 0:53, between Salò and The Complete Kubrick (see the salo-or-the-120-days-of-sodom note). The video was checked two ways: Gemini read the case titles from the full-resolution video, and the YouTube storyboard thumbnails show him switch cases at about 0:42-0:44. The extraction had attached this passage to Salò."
     }
+  },
+  "frederick-elmes": {
+    "days-of-heaven": {
+      "quote": "Néstor Almendros was a wonderful, wonderful cinematographer, somebody who really influenced my work over the years. I studied him. He shot many films, for Eric Rohmer, for Truffaut, for Robert Benton. He really got around and, you know, the thing I like is that they all feel different, like Terry Malick’s Days of Heaven is a fabulous tribute to his sense of the light, of the mood of a scene.",
+      "start_timestamp": 17,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 17s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    },
+    "visions-of-eight": {
+      "quote": "Visions of Eight is a wonderful, wonderful film. It’s an interpretation of… of the Olympics through the eyes of eight wonderful and very diverse directors. And there’s some of the most brilliant, brilliant photography, including really ultra-slow-motion studies of athletes.",
+      "start_timestamp": 63,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 63s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    },
+    "mikey-and-nicky": {
+      "quote": "As it happens, I worked on it briefly, just because John Cassavetes actually directed some scenes and I helped him photograph them. And I’ll never forget, they played out their lines and then they walked off screen and the camera operator, you know, cut the camera. And Elaine said, “What did you do that for?” Said, “Well, I cut the camera because they left frame.” And she said, “Well, they might have come back.”",
+      "start_timestamp": 117,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 117s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    },
+    "no-bears": {
+      "quote": "I love the film No Bears. It’s a fabulous study of a small town. It’s just brilliant in the way scenes unfold. And the director and cinematographer are not afraid to just hold and hold and block a scene in such a complicated way that they keep you, the audience, so involved every inch of the way. It’s a great drama.",
+      "start_timestamp": 161,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 161s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    },
+    "solaris": {
+      "quote": "I think accidentally I did a little editing in the projection, because some of the reels I know came up slightly out of order when I rewound them. So there was an audience that saw a version of Solaris like no other that evening because I… I messed up in the projection room.",
+      "start_timestamp": 221,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 221s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    },
+    "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb": {
+      "quote": "Dr. Strangelove is just such a brilliant film. It’s just fabulous. And it makes me laugh and smile every time. You know, I visit these films from the early ’60s, this one stayed with me better than any of the rest, I think. I just love it.",
+      "start_timestamp": 251,
+      "note": "Manually transcribed from the English captions of 8nqIBE6-w_o at 251s after Gemini returned 402 RESOURCE_EXHAUSTED (depleted prepaid credits). Checked against the contiguous transcript passage; only whitespace and punctuation normalized."
+    }
   }
 }
