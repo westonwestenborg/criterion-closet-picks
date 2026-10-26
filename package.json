@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate": ".venv/bin/python scripts/test_data.py",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:seo": "vitest run --config vitest.built.config.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
@@ -21,6 +22,7 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
+    "node-html-parser": "9.0.4",
     "pagefind": "^1.3.0",
     "vitest": "^4.1.8",
     "wrangler": "3.90.0"
