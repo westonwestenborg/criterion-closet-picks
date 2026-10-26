@@ -18,25 +18,6 @@
       "note": "Came from the audio fallback and shipped raw: 'Said that this movie was a good date movie solo my favorite part of this movie is when and then the guy he goes into a room...' -- opening clause missing, no punctuation, and 'solo' where the captioner misheard 'Salo'. Restored to the transcript's own wording with the sentence breaks the clean step would normally add. Nothing is added that he did not say."
     }
   },
-  "wes-anderson": {
-    "charulata": {
-      "quote": "I stole many things for my own movies from Ray… Charulata, they translate it as The Lonely Wife, she spends much of her time looking out from the rooms in her house with binoculars. And for my film Moonrise Kingdom… we’ve got a lot of binocular shots, only because of Satyajit Ray.",
-      "start_timestamp": 106,
-      "note": "The extraction stopped at 118.45s (\"with binoculars\") and dropped the sentence that completes the thought, at 120.12-128s: \"And for my film Moonrise Kingdom, which is out here somewhere, we've got a lot of binocular shots, only because of Satyajit Ray, one of my favorite great masters of cinema.\" Charulata's heroine watches the world through binoculars and Moonrise Kingdom is full of binocular shots -- Anderson is naming a specific thing he took from Ray, and without that sentence the quote is a setup with its payoff cut off. Restored, and trimmed of filler he talks through on the way there (\"Okay, this is a good one to end on\", the \"one of the best... maybe the best\" self-repair, \"and this one, this woman...\", \"which is out here somewhere\"). Every word is verbatim from the oJXKHJeVav0 transcript; ellipses mark the cuts. start_timestamp moved 99 -> 106 to land on the new first words."
-    }
-  },
-  "jason-sudeikis": {
-    "double-indemnity": {
-      "quote": "One of the all-time great film noir movies: Double Indemnity. This movie is based on a real-life story of a woman who… her and her boyfriend killed her husband and then got the insurance claim. That woman was then executed. The New York Daily News ran a photograph of it. A photographer snuck into… the electrocution, had a camera strapped to his ankle and the whole wire coming up his leg… and captured it. Fun fact: the guy that took that photo, named Tom Howard, my great-grandfather.",
-      "start_timestamp": 105,
-      "note": "The extraction cut the middle out of the anecdote and left its payoff dangling: it jumped from \"got the insurance claim\" straight to \"The guy that took that photo\", with no photo anywhere in the quote to refer back to. The transcript has the missing bridge at 131-154s -- \"That woman was then executed. The New York Daily News ran a photograph of it. A photographer snuck into... when they did the electrocution, had a camera strapped to his ankle and the whole wire coming up his leg... and captured it\" -- which is what makes Tom Howard being his great-grandfather land. Restored, with ellipses marking the cuts, and trimmed of the 110-119s Billy Wilder aside to stay within the length other quotes run to. That aside also credits Double Indemnity's screenplay to \"him and William Goldman\", a slip -- Wilder wrote it with Raymond Chandler -- so it is no loss. Every word is verbatim from the Sc6UrpZR3Z4 transcript."
-    },
-    "citizen-kane": {
-      "quote": "When people ask me what my favorite movie is, I genuinely say Citizen Kane. Mr. Zinger showed this at night school. I remember looking around and I’m just riveted, following this movie, looking around, everybody’s asleep. This was the first movie that I feel I saw that I understood it that movies were art, as corny as that may seem. The fact that that guy did all that, at that age. That guy being Orson Welles. It’s so subversive, it’s so clever, it’s so funny, it’s so heartbreaking.",
-      "start_timestamp": 303,
-      "note": "The extraction stopped his night-school memory one segment early, at 333-336s, and left \"I remember looking around\" with nothing to look at: the sentence that answers it is \"looking around, everybody's asleep\", which is the whole picture -- a 17-year-old failing English, riveted by a black-and-white movie while the rest of the class sleeps. Without it the clause is a setup whose payoff was cut, the same defect as the Double Indemnity entry above. Restored verbatim, including the repeated \"looking around\" he actually says. Also restores the second \"that\" in \"The fact that that guy did all that\", which the clean step had dropped as a stutter when it is in fact the correct reading. Every word is verbatim from the Sc6UrpZR3Z4 transcript at 303-355s."
-    }
-  },
   "sharon-horgan": {
     "the-before-trilogy": {
       "quote": "The Before Trilogy. I adore all of these films made by Richard Linklater. But Before Midnight stayed with me the most because there was something about the representation of just a real marriage. And the argument at the end, which I’ve tried to recreate in other shows of mine, actually, but never could. But that argument that they have in that little hotel room, that starts off as lovemaking and just becomes the most violently brutal argument you could have as a married couple, is just an extraordinary thing. And it was quite an inspiration for Catastrophe when Rob and I were writing it.",
@@ -51,18 +32,6 @@
       "note": "The extraction dropped one word that the whole anecdote depends on. She says She’s Gotta Have It was \"the very first film that I went… very first Black film that I went into a movie theater and bought popcorn\" (26-36s), correcting herself mid-sentence, and then explains why that mattered: Black films were normally shown at universities, art houses or museums, and this was \"a straight-up movie theater\" (36-45s). The model kept the uncorrected half and cut the explanation, so the stored quote claimed it was the first film she had ever seen in a cinema. Restored as one unbroken passage from 7s to 50s; every word is verbatim from the _15L5kEGZ_s transcript and nothing is cut."
     }
   },
-  "zoe-kazan": {
-    "petite-maman": {
-      "quote": "But this is one of my more recent favorites: Petite maman. It’s like a very intense piece of chocolate or something. It packs so much in. And it literally will take you as much time as it takes you to watch the average episode of television. I also read this piece about Céline Sciamma and one of the things that she said is that she makes a list of all the scenes that she needs to tell the story, and then a list of all the sort of, like, inchoate images, songs, moments that she knows that she needs at, like, a psychic level to tell the story, and she sort of does it like a word finder and matches them up afterwards. And then anything that doesn’t have one of those delicious bits attached to it, she just cuts and doesn’t film, or even write, which I find completely fascinating.",
-      "start_timestamp": 78,
-      "note": "The extraction cut the middle of Kazan's account of Celine Sciamma's method, so the quote said Sciamma lists the scenes she needs and then cuts anything without 'one of those delicious bits attached to it', with nothing for 'those delicious bits' to refer to. The transcript (99-131s) has two lists: the scenes she needs, and 'the sort of, like, inchoate images, songs, moments that she knows that she needs at, like, a psychic level', which she matches up afterwards; a scene with no image attached is what she cuts. Restored verbatim, dropping only the stammer 'It's like a... a' and the false start 'which I find...'."
-    },
-    "brief-encounter": {
-      "quote": "All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me. I love these two middle-aged people falling in love. There’s something really quotidian about the way that they love each other, even though they are not allowed, because they’re having an affair, to have anything quotidian between them. They exist only in stolen spaces. There’s no dailyness to their life.",
-      "start_timestamp": 391,
-      "note": "At 391s Kazan says 'All That Jazz, Brief Encounter, Notorious, these are, like, top-five films for me.' The extraction cut the other two titles, which left 'Brief Encounter, these are, like, top-five films' with a plural that has nothing to refer to. Restored the full list verbatim. The rest of the quote is unchanged. (See pick_overrides.json for why this pick is Lean's Brief Encounter rather than the Muratova film Criterion's page links.)"
-    }
-  },
   "jonathan-anderson": {
     "salo-or-the-120-days-of-sodom": {
       "quote": "Salò, I think I… has been a massive inspiration on me. I worked with this woman, Manuela Pavesi, and it was her favorite film. I think the wedding sequence can make you fall in love with irises. A must.",
@@ -73,6 +42,31 @@
       "quote": "Every time I talk to Luca Guadagnino, he always tells me about this film, over and over again, and he has made me look at it in a completely different way.",
       "start_timestamp": 45,
       "note": "Barry Lyndon is never named aloud. Anderson holds its case from 0:44 to 0:53, between Salò and The Complete Kubrick (see the salo-or-the-120-days-of-sodom note). The video was checked two ways: Gemini read the case titles from the full-resolution video, and the YouTube storyboard thumbnails show him switch cases at about 0:42-0:44. The extraction had attached this passage to Salò."
+    }
+  },
+  "volker-schlondorff": {
+    "eclipse": {
+      "quote": "L'Eclisse, the, the very first, next to my first movie. L'Eclisse is the one I wanted to have, that's what I came for. And, and as it is sitting next to Young Törless, it makes it even nicer. Isn't it an honor? Michelangelo, he took me to a palazzo once in Venice to watch the parade of the boats. Well, you see, L'Eclisse is really the one what I, why I came for. And isn't it magical that you come in, there hundred, hundreds of them, and the first one I see where I stop is the Eclipse? I might just as well leave right now. But I'm very, very happy with L'Eclisse and All That Jazz.",
+      "start_timestamp": 12,
+      "note": "The October 2026 re-extraction ended this quote before his closing line at 347-354s, 'I'm very very happy with leg clips and all that jazz' in the captions. 'Leg clips' is L'Eclisse and All That Jazz is also his pick, so the line names both films, and the previous extraction carried it here. Kept so a re-run cannot drop it again."
+    }
+  },
+  "todd-haynes": {
+    "beau-travail": {
+      "quote": "Every movie I start to make, I rewatch Beau travail, and I'm ready for the next one.",
+      "start_timestamp": 231,
+      "note": "Captions at 231-236s read 'every movie I start to make I I rewatch but D ey and I'm ready for the next one'; 'but D ey' is Beau Travail. Earlier extractions wrote 'The Long Day Closes' over it. The next sentence, 'I could probably watch it every day of my life', is about To Be or Not to Be: Gemini's read of the video (212-252s) has him holding To Be or Not to Be at about 240s, when he says it and 'Oh, I have it'."
+    },
+    "all-about-eve": {
+      "quote": null,
+      "note": "The October 2026 re-extraction gave this pick 'I could probably watch it every day of my life... Oh, I have it. It's just greedy.' Gemini's read of the video (212-252s) has him holding To Be or Not to Be at that moment, a film he already owns and did not take, so the words are not about All About Eve. Nothing else in the transcript discusses it."
+    }
+  },
+  "matthew-mcconaughey": {
+    "matewan": {
+      "quote": "John Sayles. Yeah. Matewan.",
+      "start_timestamp": 152,
+      "note": "The October 2026 re-extraction gave Matewan his whole Lone Star story as well: the audition with John Sayles, Buddy Deeds, and the call about A Time to Kill on the Lone Star set, ending 'And right next to that we have Lone Star... We already got Matewan of his.' Only the opening 'John Sayles. Yeah. Matewan.' is about Matewan; the story stays on lone-star."
     }
   }
 }
