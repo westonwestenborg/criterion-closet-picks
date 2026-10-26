@@ -5634,5 +5634,19 @@
     "pick_count": 6,
     "featured_film_slug": "solaris",
     "featured_quote": "So there was an audience that saw a version of Solaris like no other that evening because I… I messed up in the projection room."
+  },
+  {
+    "name": "Jeremy Allen White",
+    "slug": "jeremy-allen-white",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/pXRADDRhprgaQ4Bri44NH3bYeu6.jpg",
+    "youtube_video_id": "7Dl3FbSOiz0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=7Dl3FbSOiz0",
+    "vimeo_video_id": null,
+    "episode_date": "2026-10-26",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1019-jeremy-allen-white-s-closet-picks",
+    "pick_count": 8,
+    "threads_handle": "jeremyallenwhitefinally"
   }
 ]
