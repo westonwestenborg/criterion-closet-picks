@@ -132,27 +132,39 @@ def visit_video(guest: dict, visit_index: int) -> str | None:
     return None
 
 
-def check_visit(segments: list[dict], picks: list[dict], min_words: int) -> list[str]:
-    """Lines to print for one visit; empty when every stretch is covered."""
+def flatten(segments: list[dict]) -> tuple[list[str], list[int]]:
+    """Transcript words, and the start second of the segment each one is in."""
     transcript, starts = [], []
     for seg in segments:
         for w in words(seg.get("text", "")):
             transcript.append(w)
             starts.append(int(seg.get("start", 0)))
-    if not transcript:
-        return []
+    return transcript, starts
 
-    owner: dict[int, str] = {}
-    lines = []
+
+def find_gaps(transcript: list[str], picks: list[dict], min_words: int) -> list[dict]:
+    """
+    Stretches of transcript words that no quote holds, as dicts with "kind"
+    ("inside" a quote's span, or "uncovered"), "start" and "end" word indices,
+    and the neighbouring picks. fill_quote_gaps.py works from these.
+    """
+    owner: dict[int, dict] = {}
+    inner_gaps = []
     for pick in picks:
         covered, gaps = quote_span(transcript, words(pick.get("quote", "")))
         for i in covered:
-            owner.setdefault(i, pick["film_title"])
-        for start, end in gaps:
-            text = " ".join(transcript[start:end])
-            lines.append(f"    inside {pick['film_title']} at {starts[start]}s: {text[:200]}")
+            owner.setdefault(i, pick)
+        inner_gaps += [(pick, start, end) for start, end in gaps]
+
+    found = []
+    # Words a quote skips count only if no other quote holds them: del Toro
+    # talks about Notorious in the middle of Black Narcissus, and those words
+    # are Notorious's, not missing.
+    for pick, start, end in inner_gaps:
+        if sum(1 for i in range(start, end) if i not in owner) >= MIN_GAP:
+            found.append({"kind": "inside", "start": start, "end": end, "pick": pick})
     if not owner:
-        return lines
+        return found
 
     # The whole video, not just between the first and last quote: Amy Irving's
     # lost line about bringing pickles for Crossing Delancey came right before
@@ -166,14 +178,28 @@ def check_visit(segments: list[dict], picks: list[dict], min_words: int) -> list
         while j < len(transcript) and j not in owner:
             j += 1
         if j - i >= min_words:
-            before = owner.get(i - 1, "the start")
-            after = owner.get(j, "the end")
-            text = " ".join(transcript[i:j])
+            found.append({"kind": "uncovered", "start": i, "end": j,
+                          "before": owner.get(i - 1), "after": owner.get(j)})
+        i = j
+    return found
+
+
+def check_visit(segments: list[dict], picks: list[dict], min_words: int) -> list[str]:
+    """Lines to print for one visit; empty when every stretch is covered."""
+    transcript, starts = flatten(segments)
+    lines = []
+    for gap in find_gaps(transcript, picks, min_words):
+        text = " ".join(transcript[gap["start"]:gap["end"]])
+        at = starts[gap["start"]]
+        if gap["kind"] == "inside":
+            lines.append(f"    inside {gap['pick']['film_title']} at {at}s: {text[:200]}")
+        else:
+            before = gap["before"]["film_title"] if gap["before"] else "the start"
+            after = gap["after"]["film_title"] if gap["after"] else "the end"
             lines.append(
-                f"    uncovered {starts[i]}-{starts[j - 1]}s, {j - i} words,"
+                f"    uncovered {at}-{starts[gap['end'] - 1]}s, {gap['end'] - gap['start']} words,"
                 f" between {before} and {after}: {text[:300]}"
             )
-        i = j
     return lines
 
 
