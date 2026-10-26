@@ -47,6 +47,9 @@ docs/
 # OG image build cache
 .cache/og/
 
+# Live sitemap saved by `bun tools/seo/cli.ts fetch-previous` during deploys
+.seo-previous/
+
 # Astro generated types
 .astro/
 

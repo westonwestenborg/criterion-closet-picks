@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestPickItem from '../../components/GuestPickItem.astro';
+import { filmHeading, filmDescription, boxSetDescription, hasQuote } from '../../lib/seo';
 import { getFilms, getFilmBySlug, getPicksForFilm, getGuestByName, getBoxSetInfoForFilm, getGuestBySlug, getPickedBoxSets, getBoxSetBySlug, getPicksForBoxSet, getBoxSetMemberFilms, isPickOfBoxSetItself } from '../../lib/data';
 
 export function getStaticPaths() {
@@ -23,8 +24,6 @@ if (!film && !boxSet) {
 }
 
 // --- Film view data (only when rendering a film) ---
-const hasQuote = (p: { quote?: string; extraction_confidence?: string }) =>
-  !!(p.quote && p.quote.trim() !== '' && p.extraction_confidence !== 'none');
 const allPicks = film ? getPicksForFilm(film.slug) : [];
 // An aggregate pick for THIS box set goes in the main list, not under "Also
 // mentioned as part of" -- the guest picked this set, same as the picks beside
@@ -51,30 +50,16 @@ const bsFilmCount = boxSet
   ? (bsPicks.find(p => p.box_set_film_count)?.box_set_film_count ?? bsMembers.length)
   : 0;
 
-const pageTitle = film ? film.title : boxSet!.title;
+// The <title> names the year and director so films that share a title
+// (Roma, 1972 and 2018) stay distinct; the h1 stays the bare title.
+const pageTitle = film ? filmHeading(film) : boxSet!.title;
 const pageDescription = film
-  ? (() => {
-      const guestNames = allPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
-      const namesStr = guestNames.length > 0 ? ` including ${guestNames.join(', ')}` : '';
-      const genre = film.genres[0] || 'film';
-      const article = /^[aeiou]/i.test(genre) ? 'an' : 'a';
-      // Box-set catalog rows carry no single year or director, so only include
-      // the parts we actually have rather than printing "(null) by ".
-      const credit = [film.year ? `(${film.year})` : '', film.director ? `by ${film.director}` : '']
-        .filter(Boolean)
-        .join(' ');
-      return `${film.title}${credit ? ` ${credit}` : ''} — ${article} ${genre} picked by ${film.pick_count} Criterion Closet guests${namesStr}.`;
-    })()
-  : (() => {
-      const names = bsPicks.slice(0, 3).map(p => p.guest?.name).filter(Boolean);
-      const namesStr = names.length > 0 ? ` including ${names.join(', ')}` : '';
-      const countStr = bsFilmCount > 0 ? ` (${bsFilmCount} films)` : '';
-      return `${boxSet!.title}${countStr} — a Criterion box set picked by ${boxSet!.pick_count} Criterion Closet ${boxSet!.pick_count === 1 ? 'guest' : 'guests'}${namesStr}.`;
-    })();
+  ? filmDescription(film, directPicks, film.pick_count)
+  : boxSetDescription(boxSet!, bsFilmCount, bsPicks, boxSet!.pick_count);
 const pageUrl = new URL(`/films/${slug}/`, Astro.site).href;
 const mainEntity = film
   ? {
-      '@type': 'Movie',
+      '@type': film.tmdb_type === 'tv' ? 'TVSeries' : 'Movie',
       name: film.title,
       url: pageUrl,
       ...(film.year ? { dateCreated: String(film.year) } : {}),
@@ -104,7 +89,7 @@ const structuredData = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Closet Picks', item: Astro.site!.href },
       { '@type': 'ListItem', position: 2, name: 'Films', item: new URL('/films/', Astro.site).href },
-      { '@type': 'ListItem', position: 3, name: pageTitle, item: pageUrl },
+      { '@type': 'ListItem', position: 3, name: film ? film.title : boxSet!.title, item: pageUrl },
     ],
   },
 ];

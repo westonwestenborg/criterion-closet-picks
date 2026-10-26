@@ -93,6 +93,8 @@ Note: The pipeline is incremental by default. It only re-scrapes multi-visit gue
 npm run build && npx pagefind --site dist
 ```
 
+New guests and films add pages, so also run the SEO gate, `bun run test:seo`, and fix what it reports before committing (see the SEO section of AGENTS.md).
+
 ### Step 4: Report results
 
 After the pipeline completes, report:

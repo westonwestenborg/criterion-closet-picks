@@ -1,11 +1,16 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_NAME } from '../lib/seo';
 import '../styles/global.css';
 
 interface Props {
+  /** Page subject; the <title> becomes "<title> — Closet Picks". */
   title: string;
-  description?: string;
+  /** Complete <title> text, for pages whose title already names the site. */
+  documentTitle?: string;
+  /** Required: a page-specific summary built from its data. See AGENTS.md → SEO. */
+  description: string;
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
@@ -16,14 +21,15 @@ interface Props {
 
 const {
   title,
-  description = 'A searchable database of every Criterion Closet Pick — with quotes, timestamps, and links.',
+  documentTitle,
+  description,
   ogImage: ogImageProp,
   ogType = 'website',
   noindex = false,
   searchType,
   structuredData,
 } = Astro.props;
-const fullTitle = title === 'Closet Picks' ? title : `${title} — Closet Picks`;
+const fullTitle = documentTitle ?? `${title} — ${SITE_NAME}`;
 const ogImage = new URL(ogImageProp || '/og-image.jpg', Astro.site).href;
 const jsonLd = (Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [])
   .map((data) => JSON.stringify(data).replace(/</g, '\\u003c'));
@@ -35,19 +41,23 @@ const jsonLd = (Array.isArray(structuredData) ? structuredData : structuredData 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   {noindex && <meta name="robots" content="noindex, follow" />}
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={fullTitle} />
   <meta property="og:url" content={Astro.url.href} />
   <meta property="og:type" content={ogType} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={fullTitle} />
   <title>{fullTitle}</title>
-  <link rel="canonical" href={Astro.url.href} />
+  {!noindex && <link rel="canonical" href={Astro.url.href} />}
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="alternate" type="application/rss+xml" title="Closet Picks" href="/feed.xml" />
   <link rel="preload" as="font" type="font/woff2" href="/fonts/et-book-roman-line-figures.woff2" crossorigin />

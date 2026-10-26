@@ -589,4 +589,5 @@ cleaning.
   (typos, garbled overlay text). See CLAUDE.md → Key Conventions → "Guest names".
 - `profession` is a single-word controlled vocabulary (see Workflow 7) — never multi-role
 - Build after fixes: `npm run build && npx pagefind --site dist`
+- A fix that adds or renames a guest or film page must pass the SEO gate: `bun run test:seo` after the build (see the SEO section of AGENTS.md).
 - Use `update-data` skill instead for weekly new-episode checks (full pipeline)

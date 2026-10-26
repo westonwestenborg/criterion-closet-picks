@@ -3,18 +3,28 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+  # Pull requests run the tests, the build and the SEO gate; the deploy and
+  # IndexNow steps are skipped.
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: cf-pages
+  # Pull requests get their own group so they never cancel a deploy.
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'cf-pages' }}
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # The SEO steps read the live sitemap through the Pages alias. It serves
+      # the same production deployment as closetpicks.westenb.org, which
+      # answers GitHub's runners with HTTP 403 (Cloudflare bot protection).
+      SEO_READ_ORIGIN: https://criterion-closet-picks.pages.dev
     steps:
       - uses: actions/checkout@v4
 
@@ -26,6 +36,12 @@ jobs:
 
       - name: Run tests
         run: bun run test
+
+      # Save the sitemap that is live now, before this run can replace it. The
+      # lastmod step carries unchanged pages' dates forward from it, and the
+      # IndexNow step diffs against it. Never fails the job.
+      - name: Fetch the live sitemap
+        run: bun tools/seo/cli.ts fetch-previous
 
       # The 1,258 OG social cards are ~99% of build time when rendered from
       # scratch: satori lays out an SVG per card and sharp encodes it through
@@ -49,10 +65,22 @@ jobs:
       - name: Build Astro site
         run: bun run build
 
+      # Writes <lastmod> into dist/'s sitemap from each page's content, and
+      # dist/sitemap-lastmod.json for the next run. Never fails the job.
+      - name: Set sitemap lastmod
+        run: bun tools/seo/cli.ts lastmod
+
+      # The SEO gate: every sitemap page has a title, description, canonical
+      # and Open Graph tags, titles are unique, every guest and film page is in
+      # the sitemap, and no noindex page is. See the SEO section of AGENTS.md.
+      - name: Check SEO
+        run: bun run test:seo
+
       - name: Generate Pagefind search index
         run: bunx pagefind --site dist
 
       - name: Deploy to Cloudflare Pages
+        if: github.event_name != 'pull_request'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -64,3 +92,12 @@ jobs:
           # Pinning both means the lockfile install satisfies the check instead.
           wranglerVersion: "3.90.0"
           command: pages deploy dist --project-name=criterion-closet-picks --branch=main
+
+      # Tells Bing, Yandex and the other IndexNow engines which pages this
+      # deploy added, changed or removed. Logs a warning on any failure and
+      # never fails the deploy.
+      - name: Submit changed pages to IndexNow
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: bun tools/seo/cli.ts indexnow
