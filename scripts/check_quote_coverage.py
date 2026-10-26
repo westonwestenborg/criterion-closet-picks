@@ -36,7 +36,8 @@ WORD_RE = re.compile(r"[a-z0-9']+")
 FILLERS = {"uh", "um", "hmm", "ah", "ahh"}
 MIN_MATCH = 3  # matched runs shorter than this are coincidence ("and the")
 MIN_GAP = 5  # skipped runs shorter than this are caption fixes and stutters
-MAX_JUMP = 150  # a jump this far means a stray match elsewhere in the video
+MAX_JUMP = 150  # a jump this far starts a separate mention (or a stray match)
+MIN_CLUSTER = 8  # a separate mention needs this many matched words to count
 
 
 def words(text: str) -> list[str]:
@@ -67,14 +68,59 @@ def quote_span(transcript: list[str], quote: list[str]) -> tuple[set[int], list[
         else:
             current.append(b)
     clusters.append(current)
+    # A quote can join two mentions minutes apart (Amy Irving names Crossing
+    # Delancey at 0:10 and again at 4:00), so every cluster with enough matched
+    # words counts. A stray shared phrase stays below MIN_CLUSTER.
     best = max(clusters, key=lambda c: sum(b.size for b in c))
-    covered = {i for b in best for i in range(b.a, b.a + b.size)}
+    kept = [c for c in clusters if c is best or sum(b.size for b in c) >= MIN_CLUSTER]
+    covered = {i for c in kept for b in c for i in range(b.a, b.a + b.size)}
     gaps = [
         (x.a + x.size, y.a)
-        for x, y in zip(best, best[1:])
+        for c in kept
+        for x, y in zip(c, c[1:])
         if y.a - (x.a + x.size) >= MIN_GAP
     ]
     return covered, gaps
+
+
+def dropped_run(transcript: list[str], prior_quote: str, new_quotes: list[str]) -> str:
+    """
+    The longest run of transcript words an existing quote holds that no new
+    quote holds, or "" when there is none of at least MIN_GAP words.
+
+    extract_quotes.py uses this to refuse a re-extraction that would lose
+    words. Words that moved to another pick are held by its new quote, and
+    words not in this transcript (a quote from the wrong video) align to
+    nothing, so neither counts as lost.
+    """
+    held, _ = quote_span(transcript, words(prior_quote))
+    if not held:
+        return ""
+    covered = set()
+    for quote in new_quotes:
+        covered |= quote_span(transcript, words(quote))[0]
+    lost = sorted(held - covered)
+    best, run = [], []
+    for i in lost:
+        run = run + [i] if run and i == run[-1] + 1 else [i]
+        if len(run) > len(best):
+            best = run
+    return " ".join(transcript[i] for i in best) if len(best) >= MIN_GAP else ""
+
+
+def held_by_transcript(transcript: list[str], quote: str) -> bool:
+    """
+    True when nearly all of a quote's words occur, in order, in this transcript.
+
+    Works for a two-word quote ("Tony Richardson.") where quote_span's
+    three-word runs cannot, which is why the never-blank-a-pick rule in
+    extract_quotes.py uses it.
+    """
+    q = words(quote)
+    if not q:
+        return False
+    matched = sum(b.size for b in SequenceMatcher(None, transcript, q, autojunk=False).get_matching_blocks())
+    return matched >= 0.8 * len(q)
 
 
 def visit_video(guest: dict, visit_index: int) -> str | None:
@@ -131,6 +177,29 @@ def check_visit(segments: list[dict], picks: list[dict], min_words: int) -> list
     return lines
 
 
+def coverage_report(guest: dict, picks: list[dict], min_words: int = 15) -> list[str]:
+    """Report lines for one guest, across every visit with a transcript on disk."""
+    by_visit: dict[int, list[dict]] = {}
+    for p in picks:
+        if p["guest_slug"] != guest["slug"]:
+            continue
+        if (p.get("quote") or "").strip() and not p["quote"].startswith("[Translated]"):
+            by_visit.setdefault(p.get("visit_index") or 1, []).append(p)
+    out = []
+    for visit_index, visit_picks in sorted(by_visit.items()):
+        video_id = visit_video(guest, visit_index)
+        path = TRANSCRIPTS_DIR / f"{video_id}.json" if video_id else None
+        if not path or not path.exists():
+            continue
+        data = load_json(path)
+        segments = data["segments"] if isinstance(data, dict) else data
+        lines = check_visit(segments, visit_picks, min_words)
+        if lines:
+            out.append(f"{guest['slug']} (visit {visit_index}):")
+            out.extend(lines)
+    return out
+
+
 def main():
     parser = argparse.ArgumentParser(description="Report transcript words no quote covers")
     parser.add_argument("--guest-slug", help="Check only this guest")
@@ -138,32 +207,21 @@ def main():
                         help="Shortest uncovered stretch to report (default 15)")
     args = parser.parse_args()
 
-    guests = {g["slug"]: g for g in load_json(GUESTS_FILE)}
+    guests = load_json(GUESTS_FILE)
     picks = load_json(PICKS_FILE)
-    if args.guest_slug and args.guest_slug not in guests:
-        log(f"ERROR: no guest with slug {args.guest_slug}")
-        sys.exit(1)
-
-    by_visit: dict[tuple[str, int], list[dict]] = {}
-    for p in picks:
-        if (p.get("quote") or "").strip() and not p["quote"].startswith("[Translated]"):
-            if not args.guest_slug or p["guest_slug"] == args.guest_slug:
-                by_visit.setdefault((p["guest_slug"], p.get("visit_index") or 1), []).append(p)
+    if args.guest_slug:
+        guests = [g for g in guests if g["slug"] == args.guest_slug]
+        if not guests:
+            log(f"ERROR: no guest with slug {args.guest_slug}")
+            sys.exit(1)
 
     reported = 0
-    for (slug, visit_index), visit_picks in sorted(by_visit.items()):
-        video_id = visit_video(guests[slug], visit_index)
-        path = TRANSCRIPTS_DIR / f"{video_id}.json" if video_id else None
-        if not path or not path.exists():
-            continue
-        data = load_json(path)
-        segments = data["segments"] if isinstance(data, dict) else data
-        lines = check_visit(segments, visit_picks, args.min_words)
+    for guest in guests:
+        lines = coverage_report(guest, picks, args.min_words)
         if lines:
             reported += 1
-            print(f"{slug} (visit {visit_index}):")
             print("\n".join(lines))
-    log(f"{reported} visit(s) with words no quote covers")
+    log(f"{reported} guest(s) with words no quote covers")
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.check_quote_coverage import check_visit
+from scripts.check_quote_coverage import check_visit, dropped_run, held_by_transcript, words
 
 # A miniature closet walk: two picks, with a story about the first one in
 # between that an extraction can drop (as it dropped Kim Cattrall's story about
@@ -47,6 +47,33 @@ class CheckVisitTest(unittest.TestCase):
         self.assertEqual(len(lines), 1)
         self.assertIn("inside Heaven Can Wait", lines[0])
         self.assertIn("with my mom", lines[0])
+
+
+class DroppedRunTest(unittest.TestCase):
+    """extract_quotes.py keeps an existing quote when a re-run would lose words."""
+
+    TRANSCRIPT = [w for seg in SEGMENTS for w in words(seg["text"])]
+
+    def test_a_shorter_new_quote_loses_the_story(self):
+        lost = dropped_run(self.TRANSCRIPT, f"{HEAVEN} {STORY}", [HEAVEN, FANNY])
+        self.assertIn("usherette", lost)
+
+    def test_words_that_moved_to_another_pick_are_not_lost(self):
+        # The story is now on Fanny and Alexander's quote: a reattribution, so
+        # the re-run may replace Heaven Can Wait's quote.
+        self.assertEqual(
+            dropped_run(self.TRANSCRIPT, f"{HEAVEN} {STORY}", [HEAVEN, f"{STORY} {FANNY}"]), ""
+        )
+
+    def test_a_quote_from_another_video_is_not_protected(self):
+        # Words that are not in this transcript (the guest had the wrong video)
+        # align to nothing, so the correction goes through.
+        old = "Night of the Hunter is the scariest film I saw as a child, and I still dream of it."
+        self.assertEqual(dropped_run(self.TRANSCRIPT, old, [HEAVEN, FANNY]), "")
+
+    def test_a_two_word_quote_counts_as_held(self):
+        self.assertTrue(held_by_transcript(self.TRANSCRIPT, "Lubitsch, just brilliant."))
+        self.assertFalse(held_by_transcript(self.TRANSCRIPT, "Tony Richardson."))
 
 
 if __name__ == "__main__":

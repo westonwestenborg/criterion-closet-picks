@@ -39,6 +39,7 @@ from scripts.utils import (
     get_env,
     slugify,
 )
+from scripts.check_quote_coverage import coverage_report, dropped_run, held_by_transcript, words as coverage_words
 
 
 EXTRACTION_PROMPT = """You are extracting film commentary from a Criterion Closet Picks video transcript.
@@ -544,6 +545,14 @@ def _process_transcript_guest(
         and pick_has_quote(prior)
         and prior.get("start_timestamp") is not None
     }
+    # A forced re-run replaces every quote the guest has, and the model
+    # sometimes stops early: in October 2026 Argon cut Kim Cattrall's story
+    # about her mother from Heaven Can Wait. So an existing quote holding
+    # transcript words that no new quote holds is kept instead. Words that moved
+    # to another pick, or that are not in this transcript (a quote from the
+    # wrong video), are not lost, so corrections still go through.
+    transcript_words = [w for seg in segments for w in coverage_words(seg.get("text", ""))]
+    new_texts = [q.get("quote", "") or "" for q in quotes]
 
     with lock if lock is not None else nullcontext():
         for pick in guest_picks:
@@ -588,6 +597,20 @@ def _process_transcript_guest(
                 # added (box-set URLs, pick_order, timestamp links).
                 existing_pick_index[key] = prior
                 continue
+
+            if not fill_missing_only and prior is not None and pick_has_quote(prior):
+                lost = dropped_run(transcript_words, prior["quote"], new_texts)
+                # Nor is a quoted pick left with nothing while its words are in
+                # this transcript: Kim Cattrall's Tom Jones lost "Tony Richardson."
+                # to A Taste of Honey, his other film, on a re-run.
+                blanked = not ((quote_match or {}).get("quote") or "").strip() and held_by_transcript(
+                    transcript_words, prior["quote"]
+                )
+                if lost or blanked:
+                    reason = f"the new one drops: \"{lost[:100]}\"" if lost else "the new run left it empty"
+                    log(f"    Keeping {title}'s existing quote; {reason}")
+                    existing_pick_index[key] = prior
+                    continue
 
             if quote_match:
                 pick["quote"] = quote_match["quote"]
@@ -1059,6 +1082,13 @@ def main():
     if total > 0:
         high_pct = (high / total) * 100
         log(f"High confidence rate: {high_pct:.1f}%")
+
+    # The coverage check, so a single-guest run always shows what no quote
+    # holds: the guest's intro, chatter, or a passage the extraction dropped.
+    if args.guest_slug and guests:
+        lines = coverage_report(guests[0], all_picks)
+        log("Transcript stretches no quote covers (read any that are about a film):")
+        print("\n".join(lines) if lines else "    none")
 
 
 if __name__ == "__main__":

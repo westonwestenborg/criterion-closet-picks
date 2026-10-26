@@ -54,6 +54,19 @@ Fixes involve these config dicts:
 .venv/bin/python scripts/extract_quotes.py --guest-slug SLUG --force
 ```
 
+A forced re-run will not lose words. It keeps a pick's existing quote, and
+logs `Keeping X's existing quote`, when the new extraction would drop
+transcript words that no new quote holds, or would leave the pick empty. The
+model sometimes stops early, and without this a later fix to any guest undid
+the October 2026 repairs (Kim Cattrall's Heaven Can Wait lost her story about
+her mother again on a test re-run). Corrections still go through: words that
+moved to another pick are not lost, and a quote from the wrong video aligns to
+nothing in the new transcript. To replace a kept quote on purpose, for example
+a misattribution the model now gets right, write the correction to
+`data/quote_overrides.json` (Workflow 10). Every `--guest-slug` run ends with
+the coverage report (`scripts/check_quote_coverage.py`); read any stretch in it
+that is about a film.
+
 For a specific visit: add `--visit 2`. That reads **that visit's own video
 transcript** and tags the results with that `visit_index`. Before 2026-08-18 it
 read the guest's primary (visit-1) transcript and tagged everything
