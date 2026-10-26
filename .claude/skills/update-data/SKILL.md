@@ -78,7 +78,7 @@ This will:
 1. Scrape Criterion.com for new collection pages (+ extract video IDs, handles multi-visit guests)
 2. Normalize guest data (merge duplicates, fix names, build visits arrays)
 3. Match YouTube videos to guests and fetch transcripts (incl. multi-visit second videos)
-4. Extract quotes via Gemini Flash (parallel, 32 workers for throughput)
+4. Extract quotes via Gemini 4 Argon (parallel, 32 workers for throughput)
 5. Backfill films, group box sets, scrape box set images
 6. Migrate source/visit metadata
 7. Enrich new films/guests via TMDB
@@ -111,7 +111,9 @@ After the pipeline completes, report:
   auto-picked one for a prominent new guest is weak, offer to curate it via
   `featured_film_slug` — see fix-guest Workflow 8. Optional, editorial only.
 - Read each new guest's quotes against their transcript, and fix what you find
-  before committing. A dropped word that changes the meaning goes in
+  before committing. Run `scripts/check_quote_coverage.py --guest-slug SLUG`
+  first: it lists the transcript stretches no quote holds, which is how a
+  dropped passage shows up. A dropped word that changes the meaning goes in
   `data/quote_overrides.json`. A wrong capital ("one of The Most Beautiful
   films", "all of his Secrets") has two possible causes with different fixes;
   see fix-guest Workflow 11.

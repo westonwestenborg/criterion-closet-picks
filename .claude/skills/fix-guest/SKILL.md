@@ -146,9 +146,19 @@ nothing has written yet, so it silently produces no quotes. Continue:
    a box set whose catalog title carries a ` (box set)` suffix the collection
    page omits — run `scripts/dedupe_film_ids.py --dry-run`, confirm the scope is
    just the new picks, then run it for real.
-7. Read every new quote against the guest's transcript before you commit. Two
-   defects are common, and each needs a fix, not just a mention in the commit
-   message:
+7. Read every new quote against the guest's transcript before you commit.
+   Start with the coverage check, which lists every stretch of transcript that
+   no quote holds:
+   ```bash
+   .venv/bin/python scripts/check_quote_coverage.py --guest-slug SLUG
+   ```
+   Expect the guest's intro and some closet chatter. Anything about a film is a
+   dropped passage: Kim Cattrall's whole story about her mother went missing
+   from Heaven Can Wait in the October 2026 re-extraction, and only this kind
+   of check finds it. Re-extract the guest, and if it is still missing, restore
+   it with `data/quote_overrides.json` (Workflow 10). Three defects are common,
+   and each needs a fix, not just a mention in the commit message:
+   - **A dropped passage**, as above.
    - **A dropped word that changes the meaning.** Ngozi Onwurah's Do the Right
      Thing quote lost "Black" from "the very first Black film that I went into
      a movie theater", so it claimed She's Gotta Have It was the first film she
@@ -547,9 +557,9 @@ Either way, check afterwards that the next clean pass won't undo the fix:
 .venv/bin/python scripts/clean_quotes.py --dry-run
 ```
 
-It should report changes only for picks in `data/quote_overrides.json`. Those
-quotes run past the cleaner's 500-character cap, and `extract_quotes.py`
-re-applies them right after cleaning.
+It should report no changes, or changes only for picks in
+`data/quote_overrides.json`, which `extract_quotes.py` re-applies right after
+cleaning.
 
 ## Key Details
 
@@ -562,11 +572,16 @@ re-applies them right after cleaning.
   `match_youtube.fetch_transcript(video_id)` and save `{video_id, guest_name, segments}`.
   Workflow 4 has the full new-guest sequence; do not stop at the scrape.
 - Non-English guest (only a foreign-language transcript, e.g. a Spanish-speaking
-  director): `fetch_transcript` returns nothing (it only tries English), so **leave
-  no transcript file on disk** — `extract_quotes.py --guest-slug SLUG --force` then
+  director): `fetch_transcript` does **not** stop at English. Its last fallback
+  accepts any language and logs `(non-English fallback)`, and saving that file
+  sends the guest down the English text path, so the quotes come out
+  untranslated. Ten guests shipped that way (the fix plan is in the local,
+  gitignored `docs/plans/2026-10-26-foreign-language-guests.md`). So **leave no transcript
+  file on disk** — `extract_quotes.py --guest-slug SLUG --force` then
   auto-routes the guest to its audio fallback (yt-dlp downloads audio → Gemini
   transcribes+translates). Quotes come back prefixed `[Translated]`. Requires
-  `yt-dlp` on PATH. This is the established path for non-English guests.
+  `yt-dlp` on PATH. Criterion burns its own English subtitles into these videos,
+  and reading those is the planned replacement for the audio path.
 - Accented names: do **not** add a `NAME_FIXES` entry just to restore an accent.
   `enrich_tmdb.py` restores diacritics from TMDB (e.g. "Carla Simon" → "Carla
   Simón") and `normalize_guests.py` (step 8b) NFC-normalizes the guest name and

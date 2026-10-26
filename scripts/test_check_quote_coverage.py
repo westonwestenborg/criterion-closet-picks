@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+"""Fixture tests for scripts.check_quote_coverage."""
+
+import sys
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from scripts.check_quote_coverage import check_visit
+
+# A miniature closet walk: two picks, with a story about the first one in
+# between that an extraction can drop (as it dropped Kim Cattrall's story about
+# her mother on Heaven Can Wait).
+SEGMENTS = [
+    {"start": 0, "text": "Heaven Can Wait anything by Lubitsch just brilliant"},
+    {"start": 5, "text": "but it was kind of a time for me to be with my mom"},
+    {"start": 9, "text": "she was an usherette in a theater in Liverpool selling ice creams"},
+    {"start": 14, "text": "Fanny and Alexander this one I watch every Christmas with my family"},
+]
+HEAVEN = "Heaven Can Wait. Anything by Lubitsch, just brilliant."
+STORY = ("But it was kind of a time for me to be with my mom. She was an usherette "
+         "in a theater in Liverpool, selling ice creams.")
+FANNY = "Fanny and Alexander. This one I watch every Christmas with my family."
+
+
+def picks(*quotes):
+    titles = ["Heaven Can Wait", "Fanny and Alexander"]
+    return [{"film_title": t, "quote": q} for t, q in zip(titles, quotes)]
+
+
+class CheckVisitTest(unittest.TestCase):
+    def test_reports_a_dropped_story_between_two_quotes(self):
+        lines = check_visit(SEGMENTS, picks(HEAVEN, FANNY), min_words=10)
+        self.assertEqual(len(lines), 1)
+        self.assertIn("between Heaven Can Wait and Fanny and Alexander", lines[0])
+        self.assertIn("usherette", lines[0])
+
+    def test_reports_nothing_when_the_quotes_cover_the_transcript(self):
+        lines = check_visit(SEGMENTS, picks(f"{HEAVEN} {STORY}", FANNY), min_words=10)
+        self.assertEqual(lines, [])
+
+    def test_reports_words_a_quote_skips_inside_itself(self):
+        # The quote keeps its opening and its last line but drops the middle.
+        skipping = f"{HEAVEN} She was an usherette in a theater in Liverpool, selling ice creams."
+        lines = check_visit(SEGMENTS, picks(skipping, FANNY), min_words=50)
+        self.assertEqual(len(lines), 1)
+        self.assertIn("inside Heaven Can Wait", lines[0])
+        self.assertIn("with my mom", lines[0])
+
+
+if __name__ == "__main__":
+    unittest.main()
