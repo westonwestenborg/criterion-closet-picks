@@ -13,6 +13,12 @@
  * the engines learn about changes on their next crawl instead.
  *
  * Add --dry-run to `indexnow` to print the URLs without sending them.
+ *
+ * Reads from the live site go to SEO_READ_ORIGIN when it is set. The workflow
+ * sets it to the Cloudflare Pages alias (criterion-closet-picks.pages.dev),
+ * which serves the same production deployment as closetpicks.westenb.org.
+ * The custom domain answers GitHub's runners with HTTP 403 (Cloudflare bot
+ * protection on the zone), and the pages.dev alias is outside that zone.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -53,6 +59,23 @@ function siteOrigin(): string {
   return `https://${cname}`;
 }
 
+/** Where to read the live deployment from (see the note at the top). */
+function readOrigin(): string {
+  return (process.env.SEO_READ_ORIGIN || siteOrigin()).replace(/\/$/, '');
+}
+
+/** The same path on the read origin: sitemap indexes name their children on the site's own host. */
+function onReadOrigin(url: string): string {
+  const u = new URL(url);
+  return `${readOrigin()}${u.pathname}${u.search}`;
+}
+
+/** "HTTP 403 (cf-mitigated: challenge)", so a Cloudflare block is recognizable in the log. */
+function statusText(res: Response): string {
+  const mitigated = res.headers.get('cf-mitigated');
+  return `HTTP ${res.status}${mitigated ? ` (cf-mitigated: ${mitigated})` : ''}`;
+}
+
 async function get(url: string): Promise<Response> {
   let lastError: unknown;
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -69,20 +92,20 @@ async function get(url: string): Promise<Response> {
 }
 
 async function fetchPrevious(): Promise<void> {
-  const origin = siteOrigin();
+  const origin = readOrigin();
   const previous: Previous = { sitemap: 'error', entries: [], manifest: null, fetchedAt: new Date().toISOString() };
   try {
     const index = await get(`${origin}/sitemap-index.xml`);
     if (index.status === 404) {
       previous.sitemap = 'missing';
     } else if (!index.ok) {
-      throw new Error(`sitemap-index.xml returned HTTP ${index.status}`);
+      throw new Error(`${origin}/sitemap-index.xml returned ${statusText(index)}`);
     } else {
       const xml = await index.text();
       const children = isSitemapIndex(xml) ? parseSitemapIndex(xml) : [];
       for (const child of children) {
-        const res = await get(child);
-        if (!res.ok) throw new Error(`${child} returned HTTP ${res.status}`);
+        const res = await get(onReadOrigin(child));
+        if (!res.ok) throw new Error(`${onReadOrigin(child)} returned ${statusText(res)}`);
         previous.entries.push(...parseSitemap(await res.text()));
       }
       previous.sitemap = 'ok';
@@ -93,7 +116,7 @@ async function fetchPrevious(): Promise<void> {
   try {
     const res = await get(`${origin}/${MANIFEST_FILE}`);
     if (res.ok) previous.manifest = parseManifest(await res.text());
-    else if (res.status !== 404) warn(`${MANIFEST_FILE} returned HTTP ${res.status}; every page will get a new lastmod`);
+    else if (res.status !== 404) warn(`${origin}/${MANIFEST_FILE} returned ${statusText(res)}; every page will get a new lastmod`);
   } catch (err) {
     warn(`Could not read the live ${MANIFEST_FILE}; every page will get a new lastmod: ${err}`);
   }
@@ -122,13 +145,14 @@ function writeLastmod(): void {
 }
 
 /** Waits until the live site serves this build's sitemap, so engines crawl the new pages. */
-async function waitForDeploy(origin: string): Promise<boolean> {
+async function waitForDeploy(): Promise<boolean> {
+  const origin = readOrigin();
   const expected = readBuiltSitemapFiles(DIST).map(({ xml }) => xml);
   for (let attempt = 1; attempt <= 12; attempt++) {
     try {
       const index = await get(`${origin}/sitemap-index.xml`);
       const children = parseSitemapIndex(await index.text());
-      const live = await Promise.all(children.map(async (c) => (await get(c)).text()));
+      const live = await Promise.all(children.map(async (c) => (await get(onReadOrigin(c))).text()));
       if (live.length === expected.length && live.every((xml, i) => xml === expected[i])) return true;
     } catch {
       // keep waiting
@@ -166,12 +190,13 @@ async function submitIndexNow(dryRun: boolean): Promise<void> {
     return;
   }
 
-  if (!(await waitForDeploy(origin))) {
+  if (!(await waitForDeploy())) {
     warn('The live sitemap still does not match this build after 2 minutes; submitting anyway.');
   }
-  const keyFile = await get(`${origin}/${INDEXNOW_KEY}.txt`);
+  const keyUrl = `${readOrigin()}/${INDEXNOW_KEY}.txt`;
+  const keyFile = await get(keyUrl);
   if (!keyFile.ok || (await keyFile.text()).trim() !== INDEXNOW_KEY) {
-    warn(`Skipping IndexNow: ${origin}/${INDEXNOW_KEY}.txt does not serve the key (HTTP ${keyFile.status}).`);
+    warn(`Skipping IndexNow: ${keyUrl} does not serve the key (${statusText(keyFile)}).`);
     return;
   }
 

@@ -20,6 +20,11 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # The SEO steps read the live sitemap through the Pages alias. It serves
+      # the same production deployment as closetpicks.westenb.org, which
+      # answers GitHub's runners with HTTP 403 (Cloudflare bot protection).
+      SEO_READ_ORIGIN: https://criterion-closet-picks.pages.dev
     steps:
       - uses: actions/checkout@v4
 
