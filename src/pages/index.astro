@@ -3,16 +3,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import HomeGuestPick from '../components/HomeGuestPick.astro';
 import { getStats, getRecentGuestsWithBestPick } from '../lib/data';
+import { SITE_NAME } from '../lib/seo';
 
 const stats = getStats();
 const recent = getRecentGuestsWithBestPick(4);
 const description = `Every pick from ${stats.totalGuests} guests visiting the Criterion Collection Closet — ${stats.totalFilms} films with quotes, timestamps, and links.`;
+const documentTitle = `${SITE_NAME} — Every Criterion Closet Pick, Quoted and Timestamped`;
 const siteUrl = Astro.site!.href;
 const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Closet Picks',
+    name: SITE_NAME,
+    alternateName: 'Criterion Closet Picks',
     url: siteUrl,
     description,
     creator: {
@@ -51,7 +54,7 @@ const structuredData = [
   },
 ];
 ---
-<BaseLayout title="Closet Picks" description={description} ogImage="/og/index.jpg" structuredData={structuredData}>
+<BaseLayout title={SITE_NAME} documentTitle={documentTitle} description={description} ogImage="/og/index.jpg" structuredData={structuredData}>
   <h1>Closet Picks</h1>
   <p>
     A searchable database of every pick from the Criterion Collection's

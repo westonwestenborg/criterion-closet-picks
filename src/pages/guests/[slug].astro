@@ -4,6 +4,7 @@ import PickItem from '../../components/PickItem.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import { getGuestBySlug, getDisplayablePicksForGuest, getPublishableGuests } from '../../lib/data';
 import type { Pick, Film, GuestVisit } from '../../lib/data';
+import { guestTitle, guestDescription } from '../../lib/seo';
 
 export function getStaticPaths() {
   const guests = getPublishableGuests();
@@ -55,9 +56,8 @@ function getVideoEmbed(visit: GuestVisit, label: string, guestName: string) {
   return null;
 }
 
-const filmNames = picks.filter(p => p.film && !p.box_set_film_count).slice(0, 3).map(p => p.film!.title);
-const namesStr = filmNames.length > 0 ? ` — including ${filmNames.join(', ')}` : '';
-const pageDescription = `Hear what ${guest.name} has to say about ${picks.length > 1 ? `${picks.length} picks` : '1 pick'} from the Criterion Closet${namesStr}.`;
+const pageTitle = guestTitle(guest);
+const pageDescription = guestDescription(guest, picks);
 const pageUrl = new URL(`/guests/${slug}/`, Astro.site).href;
 const entityType = guest.guest_type === 'group' ? 'Organization' : guest.guest_type === 'person' || !guest.guest_type ? 'Person' : 'Thing';
 const mainEntity = {
@@ -92,7 +92,7 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
-    name: `${guest.name} — Closet Picks`,
+    name: pageTitle,
     url: pageUrl,
     description: pageDescription,
     mainEntity,
@@ -109,7 +109,7 @@ const structuredData = [
   ...videoSchemas,
 ];
 ---
-<BaseLayout title={guest.name} description={pageDescription} ogImage={`/og/guests/${slug}.jpg`} ogType={entityType === 'Person' ? 'profile' : 'website'} structuredData={structuredData} searchType="Guest">
+<BaseLayout title={guest.name} documentTitle={pageTitle} description={pageDescription} ogImage={`/og/guests/${slug}.jpg`} ogType={entityType === 'Person' ? 'profile' : 'website'} structuredData={structuredData} searchType="Guest">
   <div class="detail-page">
     <div class="detail-header">
       {guest.photo_url ? (

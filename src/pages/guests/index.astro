@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuestRow from '../../components/GuestRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
 import { getPublishableGuests, getAllProfessions, professionFilterValues } from '../../lib/data';
+import { collectionPageData, guestsIndexDescription } from '../../lib/seo';
 
 const guests = getPublishableGuests().sort((a, b) => a.name.localeCompare(b.name));
 const professions = getAllProfessions();
@@ -15,8 +16,18 @@ for (const guest of guests) {
   groups.get(letter)!.push(guest);
 }
 const letters = [...groups.keys()];
+
+const description = guestsIndexDescription(guests);
+const structuredData = collectionPageData({
+  site: Astro.site!,
+  path: '/guests/',
+  name: 'Guests',
+  description,
+  items: guests.map((g) => ({ name: g.name, path: `/guests/${g.slug}/` })),
+  order: 'ascending',
+});
 ---
-<BaseLayout title="Guests" description="Browse all Criterion Closet Picks guests — directors, actors, musicians, and more." ogImage="/og/guests.jpg">
+<BaseLayout title="Every Criterion Closet Guest" description={description} ogImage="/og/guests.jpg" structuredData={structuredData}>
   <h1>Guests</h1>
   <p>
     Every guest who has visited the Criterion Closet, filterable by profession.

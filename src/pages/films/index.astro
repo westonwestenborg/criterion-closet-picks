@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import FilmRow from '../../components/FilmRow.astro';
 import FilterPanel from '../../components/FilterPanel.astro';
 import { getFilms, getAllDecades, getGenresRanked } from '../../lib/data';
+import { collectionPageData, filmsIndexDescription } from '../../lib/seo';
 
 // Sort/group key: strip a leading article so "The Piano" files under P, and the
 // client-side re-sort (which reads data-title) matches this server order.
@@ -20,8 +21,18 @@ for (const film of films) {
   groups.get(letter)!.push(film);
 }
 const letters = [...groups.keys()];
+
+const description = filmsIndexDescription(films);
+const structuredData = collectionPageData({
+  site: Astro.site!,
+  path: '/films/',
+  name: 'Films',
+  description,
+  items: films.map((f) => ({ name: f.title, path: `/films/${f.slug}/` })),
+  order: 'ascending',
+});
 ---
-<BaseLayout title="Films" description="Browse all films from the Criterion Closet Picks series — filterable by decade and genre." ogImage="/og/films.jpg">
+<BaseLayout title="Every Film Picked in the Criterion Closet" description={description} ogImage="/og/films.jpg" structuredData={structuredData}>
   <h1>Films</h1>
   <p>
     Every film picked from the Criterion Closet, filterable by decade and genre.
