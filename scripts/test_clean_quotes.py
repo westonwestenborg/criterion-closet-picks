@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.clean_quotes import fix_film_titles
+from scripts.clean_quotes import add_trailing_ellipsis, clean_quote, deduplicate_words, fix_film_titles
 
 # A catalog holding the two kinds of single-word title that matter here: one that
 # is an ordinary English word ("House", "Mother", "Performance") and one that is
@@ -79,6 +79,44 @@ class FixFilmTitlesTest(unittest.TestCase):
             fix_film_titles(text, CATALOG_TITLE_MAP, "Mother and Son"),
             "Mother is the one I keep coming back to",
         )
+
+
+class FillerAndPunctuationTest(unittest.TestCase):
+    """Gemini 4 Argon keeps the guest's "uh"s; removing one must not leave its commas."""
+
+    def test_filler_between_commas_takes_both_commas(self):
+        self.assertEqual(
+            clean_quote("that amazing, uh, scenery and the set.", {}),
+            "That amazing scenery and the set.",
+        )
+
+    def test_filler_after_a_full_stop_takes_its_comma(self):
+        self.assertEqual(
+            clean_quote("The man, the myth. Uh, I love this movie.", {}),
+            "The man, the myth. I love this movie.",
+        )
+
+    def test_filler_opening_quoted_speech_keeps_the_capital(self):
+        self.assertEqual(
+            clean_quote("He said, “Uh, you have to take Love Streams.”", {}),
+            "He said, “You have to take Love Streams.”",
+        )
+
+    def test_long_quotes_are_not_cut(self):
+        # The 500-character cap is gone: it cut 76 quotes mid-word.
+        long = "I love this film. " * 60
+        self.assertEqual(clean_quote(long, {}), long.strip())
+
+    def test_ellipsis_and_closing_quotes_end_a_sentence(self):
+        self.assertEqual(add_trailing_ellipsis("And if you have Crash…"), "And if you have Crash…")
+        self.assertEqual(add_trailing_ellipsis("He said, “Yes.”"), "He said, “Yes.”")
+        self.assertEqual(add_trailing_ellipsis("He said, “Yes.”..."), "He said, “Yes.”")
+        self.assertEqual(add_trailing_ellipsis("and then he"), "and then he...")
+
+    def test_grammatical_repeats_survive(self):
+        self.assertEqual(deduplicate_words("I had had enough"), "I had had enough")
+        self.assertEqual(deduplicate_words("I think that that is it"), "I think that that is it")
+        self.assertEqual(deduplicate_words("the the movie"), "the movie")
 
 
 if __name__ == "__main__":

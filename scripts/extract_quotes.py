@@ -90,7 +90,9 @@ GUIDELINES:
   - "none": no discussion found in transcript
 - start_timestamp should be the beginning of their discussion of that film
   (in seconds, as an integer)
-- Cap each quote at 500 characters maximum
+- Include the guest's COMPLETE discussion of each film, word for word.
+  Do not shorten, summarize, or skip anything, and never use an ellipsis
+  to stand in for words the guest said. Long quotes are fine.
 
 Return ONLY the JSON array, no other text."""
 
@@ -128,12 +130,16 @@ def get_gemini_model():
     api_key = get_env("GEMINI_API_KEY")
     client = genai.Client(api_key=api_key)
 
+    # Gemini 4 Argon won an October 2026 bake-off against 3.8 Flash, Muse Spark
+    # 1.3, GPT-5 mini and Claude Sonnet 5.5 on uncapped quotes: all known
+    # misattributions right, fewest dropped words, twice Flash's speed.
+    # 32768 is Argon's output ceiling.
     config = types.GenerateContentConfig(
         temperature=0.1,
         response_mime_type="application/json",
-        max_output_tokens=65536,
+        max_output_tokens=32768,
     )
-    return GeminiModel(client, "gemini-3-flash-preview", config)
+    return GeminiModel(client, "gemini-4-argon", config)
 
 
 def format_transcript(segments: list[dict]) -> str:
@@ -265,7 +271,7 @@ def _extract_single_batch(
             cleaned.append({
                 "film_title": q.get("film_title", ""),
                 "start_timestamp": int(q.get("start_timestamp", 0) or 0),
-                "quote": (q.get("quote", "") or "")[:500],
+                "quote": q.get("quote", "") or "",
                 "confidence": q.get("confidence", "none"),
             })
 
@@ -355,7 +361,9 @@ GUIDELINES:
   - "low": uncertain
   - "none": no discussion found
 - start_timestamp should be the beginning of their discussion (seconds, integer)
-- Cap each quote at 500 characters maximum
+- Include the guest's COMPLETE discussion of each film, word for word.
+  Do not shorten, summarize, or skip anything, and never use an ellipsis
+  to stand in for words the guest said. Long quotes are fine.
 
 Return ONLY the JSON array, no other text."""
 
@@ -444,7 +452,7 @@ def extract_quotes_from_audio(
             cleaned.append({
                 "film_title": q.get("film_title", ""),
                 "start_timestamp": int(q.get("start_timestamp", 0) or 0),
-                "quote": (q.get("quote", "") or "")[:500],
+                "quote": q.get("quote", "") or "",
                 "confidence": q.get("confidence", "none"),
             })
         return cleaned
@@ -479,8 +487,15 @@ def _process_transcript_guest(
     onto Rashomon, and degraded another, so filling the gaps has to be additive.
     """
     slug = guest["slug"]
-    video_id = guest.get("youtube_video_id") or guest.get("vimeo_video_id")
-    video_source = "youtube" if guest.get("youtube_video_id") else "vimeo"
+    # Timestamp links must point at the visit being extracted. The guest-level
+    # video is visit 1, so a --visit 2 run built from it linked 29 of Bill
+    # Hader's, del Toro's and Ira Sachs's visit-2 quotes to the wrong episode.
+    source = next(
+        (v for v in guest.get("visits", []) if v.get("visit_index") == visit_index),
+        guest,
+    )
+    video_id = source.get("youtube_video_id") or source.get("vimeo_video_id")
+    video_source = "youtube" if source.get("youtube_video_id") else "vimeo"
 
     transcript_data = load_json(transcript_path)
     if isinstance(transcript_data, list):

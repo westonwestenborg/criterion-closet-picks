@@ -53,9 +53,15 @@ FILLER_PATTERNS = [
     r"\bhmm\b",
     r"\bahh?\b",
 ]
+# The same words as one alternation, for fillers set off by commas.
+FILLER_WORDS = r"(?:uh|um|hmm|ahh?)"
 
 # Repeated word patterns: "like like", "the the", etc.
 REPEATED_WORD_RE = re.compile(r"\b(\w+)\s+\1\b", re.IGNORECASE)
+
+# Words whose doubling is grammar, not a stutter: "I had had enough",
+# "I think that that's the one". Collapsing these drops a word the guest said.
+KEEP_REPEATED = {"had", "that"}
 
 
 def build_title_map(catalog: list[dict]) -> dict[str, str]:
@@ -90,8 +96,34 @@ def build_title_map(catalog: list[dict]) -> dict[str, str]:
 
 def remove_fillers(text: str) -> str:
     """Remove filler words (uh, um, etc.) from text."""
+    # A filler set off by commas takes its commas with it: "amazing, uh,
+    # scenery" -> "amazing scenery", "Uh, great movie" -> "great movie".
+    text = re.sub(rf",\s*\b{FILLER_WORDS}\b\s*,", " ", text, flags=re.IGNORECASE)
+    text = re.sub(rf",\s*\b{FILLER_WORDS}\b(?=\s*[.!?…])", "", text, flags=re.IGNORECASE)
+    # Speech that opens with a filler keeps its capital: '“Uh, you have' ->
+    # '“You have'.
+    text = re.sub(
+        rf"([“\"‘])\s*\b{FILLER_WORDS}\b\s*,\s*(\w)",
+        lambda m: m.group(1) + m.group(2).upper(),
+        text,
+        flags=re.IGNORECASE,
+    )
+    # Anywhere else, the comma after a filler goes too: "the myth. Uh, I love"
+    # -> "the myth. I love", "And uh, I saw" -> "And I saw".
+    text = re.sub(rf"\b{FILLER_WORDS}\b\s*,\s*", "", text, flags=re.IGNORECASE)
     for pattern in FILLER_PATTERNS:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+    # Anything the rules above missed still must not leave ",," behind, or a
+    # comma straight after a full stop, or one at the very start.
+    text = re.sub(r",(\s*,)+", ",", text)
+    text = re.sub(r"([.!?…])\s*,", r"\1", text)
+    text = re.sub(r"^(?:[\s,;]|[.!?](?!\.))+", "", text)
+    # Same for speech that opened with a filler: 'He said, “Uh, you have to'.
+    text = re.sub(
+        r"(^|\s)([“\"‘])\s*,\s*(\w)",
+        lambda m: m.group(1) + m.group(2) + m.group(3).upper(),
+        text,
+    )
     # Clean up resulting double spaces
     text = re.sub(r"\s{2,}", " ", text).strip()
     return text
@@ -99,10 +131,13 @@ def remove_fillers(text: str) -> str:
 
 def deduplicate_words(text: str) -> str:
     """Remove immediately repeated words: 'like like like' -> 'like'."""
+    def collapse(m: re.Match) -> str:
+        return m.group(0) if m.group(1).lower() in KEEP_REPEATED else m.group(1)
+
     prev = None
     while prev != text:
         prev = text
-        text = REPEATED_WORD_RE.sub(r"\1", text)
+        text = REPEATED_WORD_RE.sub(collapse, text)
     return text
 
 
@@ -189,7 +224,10 @@ def add_trailing_ellipsis(text: str) -> str:
     """Add ellipsis if the quote ends mid-sentence (no terminal punctuation)."""
     if not text:
         return text
-    if text[-1] not in ".!?\"'":
+    # "…" and curly closing quotes end a sentence too. A "..." after one is
+    # this function's own earlier mistake, from before it knew that.
+    text = re.sub(r"([…”’])\.\.\.$", r"\1", text)
+    if text[-1] not in ".!?\"'…”’":
         # Looks like it was cut off mid-sentence
         text = text.rstrip(",;: ") + "..."
     return text
@@ -208,10 +246,6 @@ def clean_quote(
     text = fix_capitalization(text)
     text = normalize_whitespace(text)
     text = add_trailing_ellipsis(text)
-
-    # Enforce 500-char limit
-    if len(text) > 500:
-        text = text[:497] + "..."
 
     return text
 
