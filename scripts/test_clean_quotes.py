@@ -118,6 +118,12 @@ class FillerAndPunctuationTest(unittest.TestCase):
         self.assertEqual(deduplicate_words("I think that that is it"), "I think that that is it")
         self.assertEqual(deduplicate_words("the the movie"), "the movie")
 
+    def test_doubled_title_words_survive(self):
+        # Collapsing repeats turned 18 guests' "Yi Yi" into "Yi".
+        titles = {"yi yi": "Yi Yi", "jo jo dancer, your life is calling": "Jo Jo Dancer, Your Life Is Calling"}
+        self.assertEqual(clean_quote("Yi Yi. No explanation needed.", titles), "Yi Yi. No explanation needed.")
+        self.assertEqual(clean_quote("the the movie is Yi Yi.", titles), "The movie is Yi Yi.")
+
 
 if __name__ == "__main__":
     unittest.main()

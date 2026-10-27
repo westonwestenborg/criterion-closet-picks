@@ -129,10 +129,29 @@ def remove_fillers(text: str) -> str:
     return text
 
 
-def deduplicate_words(text: str) -> str:
-    """Remove immediately repeated words: 'like like like' -> 'like'."""
+_DOUBLED_TITLE_WORDS: dict[int, frozenset[str]] = {}
+
+
+def doubled_title_words(title_map: dict[str, str]) -> frozenset[str]:
+    """Words a catalog title doubles ("yi" for Yi Yi, "jo" for Jo Jo Dancer)."""
+    key = id(title_map)
+    if key not in _DOUBLED_TITLE_WORDS:
+        _DOUBLED_TITLE_WORDS[key] = frozenset(
+            m.group(1).lower() for t in title_map for m in REPEATED_WORD_RE.finditer(t)
+        )
+    return _DOUBLED_TITLE_WORDS[key]
+
+
+def deduplicate_words(text: str, keep: frozenset[str] = frozenset()) -> str:
+    """
+    Remove immediately repeated words: 'like like like' -> 'like'.
+
+    Words in keep are left doubled. clean_quote passes the words catalog titles
+    double, since collapsing them turned 18 guests' "Yi Yi" into "Yi".
+    """
     def collapse(m: re.Match) -> str:
-        return m.group(0) if m.group(1).lower() in KEEP_REPEATED else m.group(1)
+        word = m.group(1).lower()
+        return m.group(0) if word in KEEP_REPEATED or word in keep else m.group(1)
 
     prev = None
     while prev != text:
@@ -241,7 +260,7 @@ def clean_quote(
         return ""
 
     text = remove_fillers(text)
-    text = deduplicate_words(text)
+    text = deduplicate_words(text, doubled_title_words(title_map))
     text = fix_film_titles(text, title_map, own_title)
     text = fix_capitalization(text)
     text = normalize_whitespace(text)
