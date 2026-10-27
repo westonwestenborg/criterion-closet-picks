@@ -1145,7 +1145,33 @@
     "episode_date": "2025-05-05",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/809-claude-lelouch-s-closet-picks",
-    "pick_count": 5
+    "pick_count": 5,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "[Translated] I'm thrilled to be in a place where we can dream a little more than usual. So, this is... I'm in heaven. I want to watch all these films.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=mITzH5WIe84&t=0"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 62,
+        "text": "[Translated] And it's true that... All my characters are people I've met in real life. All the dialogue in my films, I heard in cafés or in the street. I report on life. I film men and women that I know well. I film men and women that I'd like to have as friends, that I'd like to take in my arms. I want to make propaganda about the things I love. We live in a world that values the negative over the positive, but I'm on the positive side. Negativity is very successful, it draws big audiences. But I think everything we do in life is about loving or being loved, and all other topics are secondary. Humanity's main topic is love, in all its forms. So that's the subject that has fascinated me all my life, and in my 51 films, I've spoken about men and women... That I've loved a little more than the rest.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=mITzH5WIe84&t=62"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 185,
+        "text": "[Translated] And Italian cinema... I love Italy. They're French people who don't take themselves seriously, and it's great.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=mITzH5WIe84&t=185"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 230,
+        "text": "[Translated] I'm going to create a permanent festival for the most beautiful films in the world. In France. In Trouville. All year, we'll show the most beautiful films in the world. And these will be part of the first selection.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=mITzH5WIe84&t=230"
+      }
+    ]
   },
   {
     "name": "Jia Zhangke",
@@ -1535,7 +1561,15 @@
     "episode_date": "2025-01-06",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/764-jacques-audiard-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 9,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 6,
+        "text": "[Translated] Hello, my name is Jacques Audiard. I'm a French director, and... I feel like this will all close in on me and I'll disappear, which wouldn't be such a bad fate, actually.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=kgkI4ZRJkvU&t=6"
+      }
+    ]
   },
   {
     "name": "Walter Salles",
@@ -2100,7 +2134,21 @@
     "episode_date": "2014-10-03",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/542-william-friedkin-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 9,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "You guys have saved so many of these great films that would otherwise be long gone.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=63VRJQYcNn0&t=0"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 42,
+        "text": "And amazingly, even some of the Blu-rays and digitals that I've seen are not as lovingly prepared as the ones that Criterion makes, most of which are in here, and to tell you the truth, most of which I have.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=63VRJQYcNn0&t=42"
+      }
+    ]
   },
   {
     "name": "Hideo Kojima",
@@ -2113,7 +2161,21 @@
     "episode_date": "2023-09-20",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/579-hideo-kojima-s-closet-picks",
-    "pick_count": 9
+    "pick_count": 9,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 9,
+        "text": "[Translated] In this age of subscription services, there's not all that much available from the '50s or '60s, so I'm very grateful to Criterion for their physical collection. What I'd like to introduce to you today are some Japanese films. The reason is because Japan doesn't have many '50s or '60s films on Blu-ray or DVD, so I usually buy them through Criterion and watch them. Young people in Japan haven't really seen many works by the legends from the '50s and '60s, so I'd like to introduce some of them here today.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=YUou0rghddc&t=9"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 323,
+        "text": "[Translated] I'd love to show you some other Japanese films, but yes, that's nine films I've introduced today. I'd especially love it if the younger people out there go and check out these brilliant Japanese films from the '50s and '60s.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=YUou0rghddc&t=323"
+      }
+    ]
   },
   {
     "name": "Jason Schwartzman",
@@ -4180,7 +4242,27 @@
     "episode_date": "2024-06-28",
     "letterboxd_list_url": null,
     "criterion_page_url": "https://www.criterion.com/shop/collection/664-catherine-breillat-s-closet-picks",
-    "pick_count": 7
+    "pick_count": 7,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 4,
+        "text": "[Translated] For directors, it's like getting into La Pléiade in France, which is the most magisterial editorial collection for books. And films are as necessary as books, because for me, I always say that to know yourself, you have to recognize yourself.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=FXz316FCzyI&t=4"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 92,
+        "text": "[Translated] Anyway, cinema is also something that welcomes you into a family. It's not just recognizing yourself, it's also about a familiarity with one's own dreams, one's own universe. And the proof are the films that stand the test of time.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=FXz316FCzyI&t=92"
+      },
+      {
+        "visit_index": 1,
+        "start_timestamp": 326,
+        "text": "[Translated] I'm going to say goodbye to you, because I'd happily fall asleep here—they'd lock me up in this cave of treasures, but... In spite it all, I still have to leave, to go watch all these films that I carry like a treasure.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=FXz316FCzyI&t=326"
+      }
+    ]
   },
   {
     "name": "Pauline Chalamet",
