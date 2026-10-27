@@ -10,6 +10,15 @@ export interface GuestVisit {
   criterion_page_url: string | null;
 }
 
+/** Something a guest said that is not about any one pick (scripts/extract_remarks.py). */
+export interface GuestRemark {
+  visit_index: number;
+  start_timestamp: number;
+  text: string;
+  youtube_timestamp_url?: string | null;
+  vimeo_timestamp_url?: string | null;
+}
+
 export interface Guest {
   name: string;
   slug: string;
@@ -38,6 +47,8 @@ export interface Guest {
    * film pages still show the full stored quote.
    */
   featured_quote?: string | null;
+  /** Intros, closing thoughts and other words not about one pick; shown under "Also said". */
+  remarks?: GuestRemark[];
 }
 
 export interface Film {

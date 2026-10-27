@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PickItem from '../../components/PickItem.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
+import QuoteBlock from '../../components/QuoteBlock.astro';
 import { getGuestBySlug, getDisplayablePicksForGuest, getPublishableGuests } from '../../lib/data';
 import type { Pick, Film, GuestVisit } from '../../lib/data';
 import { guestTitle, guestDescription } from '../../lib/seo';
@@ -27,6 +28,11 @@ const episodeYear = guest.episode_date ? new Date(guest.episode_date).getFullYea
 // Multi-visit support
 const visits = guest.visits ?? [];
 const isMultiVisit = visits.length >= 2;
+
+// What the guest said that is not about any one pick, in the order they said it.
+const remarks = [...(guest.remarks ?? [])].sort(
+  (a, b) => a.visit_index - b.visit_index || a.start_timestamp - b.start_timestamp
+);
 
 // Group picks by visit_index for multi-visit guests
 type PickWithFilm = Pick & { film: Film | undefined };
@@ -196,6 +202,20 @@ const structuredData = [
           <p class="text-muted">No picks data available for this guest.</p>
         )}
       </Fragment>
+    )}
+
+    {remarks.length > 0 && (
+      <section>
+        <h2 id="also-said">Also said</h2>
+        {remarks.map((remark) => (
+          <QuoteBlock
+            quote={remark.text}
+            timestampUrl={remark.youtube_timestamp_url || remark.vimeo_timestamp_url || undefined}
+            attribution={isMultiVisit ? `Visit ${remark.visit_index}` : undefined}
+            hideAttribution={!isMultiVisit}
+          />
+        ))}
+      </section>
     )}
   </div>
 </BaseLayout>
