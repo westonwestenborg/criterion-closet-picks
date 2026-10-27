@@ -72,6 +72,17 @@ class GuestVisit(TypedDict, total=False):
     criterion_page_url: str | None
 
 
+class GuestRemark(TypedDict, total=False):
+    """Something a guest said that is not about any one pick, shown under
+    "Also said" on the guest page. Written by extract_remarks.py."""
+
+    visit_index: int  # 1-based
+    start_timestamp: int  # seconds into that visit's video
+    text: str  # the transcript's own words; "[Translated] " when Criterion's subtitles
+    youtube_timestamp_url: str | None
+    vimeo_timestamp_url: str | None
+
+
 class Guest(TypedDict, total=False):
     """One entry in guests.json. Written by scrape_criterion_picks.py,
     normalized by normalize_guests.py, enriched by enrich_tmdb.py
@@ -94,6 +105,7 @@ class Guest(TypedDict, total=False):
     x_handle: str | None  # verified X/Twitter handle (no @), for social post tagging
     threads_handle: str | None  # verified Threads handle (no @); = IG handle
     visits: list[GuestVisit]  # only present for multi-visit guests
+    remarks: list[GuestRemark]  # words not about any one pick; extract_remarks.py
     visit_count: int
     source: str
     tmdb_person_id: int | None
