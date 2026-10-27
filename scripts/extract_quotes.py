@@ -40,6 +40,7 @@ from scripts.utils import (
     slugify,
 )
 from scripts.check_quote_coverage import coverage_report, dropped_run, held_by_transcript, words as coverage_words
+from scripts.read_subtitles import save_subtitle_transcript, transcript_is_english
 
 
 EXTRACTION_PROMPT = """You are extracting film commentary from a Criterion Closet Picks video transcript.
@@ -516,6 +517,17 @@ def _process_transcript_guest(
 
     log(f"  Extracted {len(quotes)} quotes for {guest['name']}")
 
+    # Quotes read from Criterion's subtitles are its translation, not the
+    # guest's own words, and say so as the audio path's do.
+    if (
+        isinstance(transcript_data, dict)
+        and transcript_data.get("source") == "burned_in_subtitles"
+        and transcript_data.get("spoken_language") not in (None, "", "en")
+    ):
+        for q in quotes:
+            if (q.get("quote") or "").strip() and not q["quote"].startswith("[Translated]"):
+                q["quote"] = f"[Translated] {q['quote']}"
+
     # Merge quotes into picks, matching by film_title
     quotes_by_title = {q["film_title"].lower(): q for q in quotes}
 
@@ -760,11 +772,23 @@ def main():
             continue
 
         transcript_path = TRANSCRIPTS_DIR / f"{video_id}.json"
-        if not transcript_path.exists():
-            # No text transcript — candidate for audio fallback
+        # A transcript that is not English (YouTube's auto-captions in the
+        # guest's own language) would be quoted untranslated, as ten guests
+        # were until October 2026, so it counts as no transcript at all.
+        non_english = transcript_path.exists() and not transcript_is_english(transcript_path)
+        if non_english:
+            log(f"  {guest['name']}: transcript on disk is not English")
+        if not transcript_path.exists() or non_english:
+            # No usable text transcript: Criterion's burned-in subtitles first,
+            # then the audio fallback.
             if video_source == "youtube":
-                if not args.force and f"{slug}_audio" in checkpoint:
-                    log(f"  {guest['name']}: Audio already processed (use --force)")
+                if not args.force and (f"{slug}_audio" in checkpoint or slug in checkpoint):
+                    log(f"  {guest['name']}: Already processed (use --force)")
+                    skipped += 1
+                elif save_subtitle_transcript(guest, video_id):
+                    guests_to_process.append((guest, guest_picks, transcript_path))
+                elif non_english:
+                    log(f"  {guest['name']}: no English subtitles either; skipping, read it by hand")
                     skipped += 1
                 else:
                     # For multi-visit guests, only send visit-1 picks to audio fallback

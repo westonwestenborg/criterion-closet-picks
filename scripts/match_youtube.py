@@ -384,8 +384,9 @@ def match_second_visit_videos(
 def fetch_transcript(video_id: str) -> list[dict] | None:
     """
     Fetch transcript for a YouTube video using youtube-transcript-api.
-    Tries English first, then auto-generated English variants, then any available language.
-    Returns list of {text, start, duration} or None if unavailable.
+    Tries English first, then auto-generated English variants.
+    Returns list of {text, start, duration}, or None when there is no English
+    track (extract_quotes.py then reads Criterion's burned-in subtitles).
     """
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
@@ -425,20 +426,11 @@ def fetch_transcript(video_id: str) -> list[dict] | None:
     except (NoTranscriptFound, Exception):
         pass
 
-    # Accept any available language
-    try:
-        transcript = ytt_api.fetch(video_id)
-        # Try to detect what language we got
-        lang = "unknown"
-        if hasattr(transcript, 'language'):
-            lang = transcript.language
-        elif hasattr(transcript, '_language'):
-            lang = transcript._language
-        log(f"  Transcript language: {lang} (non-English fallback)")
-        return _to_segments(transcript)
-    except Exception as e:
-        log(f"  Transcript error for {video_id}: {type(e).__name__}: {e}")
-        return None
+    # No English track. This used to accept any language, and saving those
+    # captions sent ten guests' quotes out untranslated (October 2026); for
+    # them extract_quotes.py reads Criterion's burned-in English subtitles.
+    log(f"  No English transcript for {video_id}")
+    return None
 
 
 def main():

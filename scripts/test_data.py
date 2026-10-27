@@ -22,6 +22,7 @@ from scripts.utils import (
 )
 from scripts.schema import CatalogFilm, Guest, Pick
 from scripts.audit_data_quality import load_known_exceptions
+from scripts.read_subtitles import looks_untranslated
 
 # Load data once for all tests
 catalog: list[CatalogFilm] = load_json(CATALOG_FILE)
@@ -248,6 +249,28 @@ class TestNoDuplicateVideoIds(unittest.TestCase):
             dupes, {},
             f"Duplicate youtube_video_id assignments:\n"
             + "\n".join(f"  {vid}: {slugs}" for vid, slugs in dupes.items()),
+        )
+
+
+class TestQuotesAreInEnglish(unittest.TestCase):
+    """Quotes go out in English; a guest who spoke another language gets a translation."""
+
+    def test_no_untranslated_quotes(self):
+        """
+        Until October 2026, 11 guests showed quotes in French, Italian, Spanish
+        or Persian, because their transcripts were YouTube's captions in that
+        language. scripts/read_subtitles.py reads Criterion's English subtitles
+        for them instead.
+        """
+        bad = [
+            f"  {p['guest_slug']}/{p['film_id']}: {p['quote'][:70]}"
+            for p in picks
+            if len(p.get("quote") or "") >= 40 and looks_untranslated(p["quote"])
+        ]
+        self.assertEqual(
+            bad, [],
+            "Quotes that are not in English (run scripts/read_subtitles.py --guest-slug SLUG, "
+            "then extract_quotes.py --guest-slug SLUG --force):\n" + "\n".join(bad),
         )
 
 

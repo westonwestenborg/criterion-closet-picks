@@ -209,7 +209,9 @@ def coverage_report(guest: dict, picks: list[dict], min_words: int = 15) -> list
     for p in picks:
         if p["guest_slug"] != guest["slug"]:
             continue
-        if (p.get("quote") or "").strip() and not p["quote"].startswith("[Translated]"):
+        # Translated quotes count too: a guest whose transcript is Criterion's
+        # subtitles (read_subtitles.py) has quotes that line up with it.
+        if (p.get("quote") or "").strip():
             by_visit.setdefault(p.get("visit_index") or 1, []).append(p)
     out = []
     for visit_index, visit_picks in sorted(by_visit.items()):

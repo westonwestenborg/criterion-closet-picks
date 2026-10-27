@@ -142,7 +142,8 @@ nothing has written yet, so it silently produces no quotes. Continue:
            json.dumps({'video_id': vid, 'guest_name': name, 'segments': segs}, indent=2))"
    ```
    If it returns 0 segments the guest is non-English — leave **no** file on disk
-   and let `extract_quotes.py` route to its audio fallback (see Key Details).
+   and let `extract_quotes.py` read Criterion's burned-in English subtitles
+   for them (see Key Details).
 6. Run the rest of the pipeline tail, in this order:
    ```bash
    .venv/bin/python scripts/backfill_dates.py
@@ -584,17 +585,23 @@ cleaning.
   `data/transcripts/{video_id}.json` and does not fetch it. Use
   `match_youtube.fetch_transcript(video_id)` and save `{video_id, guest_name, segments}`.
   Workflow 4 has the full new-guest sequence; do not stop at the scrape.
-- Non-English guest (only a foreign-language transcript, e.g. a Spanish-speaking
-  director): `fetch_transcript` does **not** stop at English. Its last fallback
-  accepts any language and logs `(non-English fallback)`, and saving that file
-  sends the guest down the English text path, so the quotes come out
-  untranslated. Ten guests shipped that way (the fix plan is in the local,
-  gitignored `docs/plans/2026-10-26-foreign-language-guests.md`). So **leave no transcript
-  file on disk** — `extract_quotes.py --guest-slug SLUG --force` then
-  auto-routes the guest to its audio fallback (yt-dlp downloads audio → Gemini
-  transcribes+translates). Quotes come back prefixed `[Translated]`. Requires
-  `yt-dlp` on PATH. Criterion burns its own English subtitles into these videos,
-  and reading those is the planned replacement for the audio path.
+- Non-English guest (e.g. a Spanish-speaking director): YouTube usually has
+  only an auto-caption track in their language, and Criterion burns its own
+  English subtitles into the picture. `fetch_transcript` returns nothing for
+  them, and `extract_quotes.py --guest-slug SLUG --force` then runs
+  `scripts/read_subtitles.py`: Gemini 4 Argon reads the on-screen subtitles,
+  plus anything the guest says in English (Bong Joon Ho), into
+  `data/transcripts/{id}.json` with `"source": "burned_in_subtitles"`. Quotes
+  come back prefixed `[Translated]`. A transcript on disk that is not English
+  is refused, not quoted; `read_subtitles.py` keeps it as `{id}.{language}.json`.
+  Until October 2026, 11 guests shipped untranslated quotes from those caption
+  files, and `test_data.py` now fails on any quote that is not in English.
+  Only if a video has no English subtitles does extraction fall back to audio
+  (yt-dlp downloads audio → Gemini transcribes and translates; needs `yt-dlp`).
+  Read a few subtitle lines against video frames for any new non-English
+  guest: in October 2026 the reader got all 39 checked lines right, but twice
+  wrote its times as minutes and seconds run together ("401" for 4:01), which
+  `read_subtitles.py` now corrects.
 - Accented names: do **not** add a `NAME_FIXES` entry just to restore an accent.
   `enrich_tmdb.py` restores diacritics from TMDB (e.g. "Carla Simon" → "Carla
   Simón") and `normalize_guests.py` (step 8b) NFC-normalizes the guest name and
