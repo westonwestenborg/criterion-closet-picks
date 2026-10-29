@@ -23,6 +23,7 @@ Usage:
 """
 
 import argparse
+import threading
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
@@ -118,35 +119,74 @@ def remarks_for_visit(guest: dict, visit_index: int, picks: list[dict], model) -
     return remarks, decisions
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Keep what a guest says that is not about any one pick")
-    parser.add_argument("--guest-slug", required=True)
-    parser.add_argument("--apply", action="store_true", help="Write the remarks to guests.json")
-    args = parser.parse_args()
-
+def remarks_for_guest(guest: dict, picks: list[dict], model, verbose: bool) -> list[dict]:
     from scripts.clean_quotes import clean_quote
-    from scripts.extract_quotes import get_gemini_model
-
-    guests = load_json(GUESTS_FILE)
-    guest = next((g for g in guests if g["slug"] == args.guest_slug), None)
-    if not guest:
-        log(f"ERROR: no guest with slug {args.guest_slug}")
-        sys.exit(1)
-    picks = [p for p in load_json(PICKS_FILE) if p["guest_slug"] == guest["slug"]]
-    model = get_gemini_model()
 
     remarks = []
     for visit_index in sorted({p.get("visit_index") or 1 for p in picks}):
         found, decisions = remarks_for_visit(
             guest, visit_index, [p for p in picks if (p.get("visit_index") or 1) == visit_index], model)
-        for d in decisions:
-            print(f"  [{d['kind']:10}] {d['start']}s {d.get('text') or d['stretch'][:110]}")
+        if verbose:
+            for d in decisions:
+                print(f"  [{d['kind']:10}] {d['start']}s {d.get('text') or d['stretch'][:110]}")
         remarks += found
     for r in remarks:
         r["text"] = clean_quote(r["text"], {})
-    log(f"{len(remarks)} remark(s) for {guest['name']}")
+    return remarks
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Keep what a guest says that is not about any one pick")
+    target = parser.add_mutually_exclusive_group(required=True)
+    target.add_argument("--guest-slug")
+    target.add_argument("--all", action="store_true", help="Every guest without remarks yet")
+    parser.add_argument("--apply", action="store_true", help="Write the remarks to guests.json")
+    args = parser.parse_args()
+
+    from scripts.extract_quotes import get_gemini_model
+
+    guests = load_json(GUESTS_FILE)
+    picks = load_json(PICKS_FILE)
+    if args.all:
+        targets = [g for g in guests if "remarks" not in g]
+    else:
+        targets = [g for g in guests if g["slug"] == args.guest_slug]
+        if not targets:
+            log(f"ERROR: no guest with slug {args.guest_slug}")
+            sys.exit(1)
+    model = get_gemini_model()
+
+    # Stop at the first billing error instead of failing every remaining guest
+    # (prepaid credit ran out mid-run in October 2026).
+    stop = threading.Event()
+
+    def run(guest):
+        if stop.is_set():
+            return guest, None
+        try:
+            return guest, remarks_for_guest(
+                guest, [p for p in picks if p["guest_slug"] == guest["slug"]], model, verbose=not args.all)
+        except Exception as e:  # noqa: BLE001
+            if "402" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                stop.set()
+            log(f"  {guest['name']}: {type(e).__name__}: {str(e)[:120]}")
+            return guest, None
+
+    done = failed = total = 0
+    with ThreadPoolExecutor(4) as ex:
+        for guest, remarks in ex.map(run, targets):
+            if remarks is None:
+                failed += 1
+                continue
+            done += 1
+            total += len(remarks)
+            if remarks and args.apply:
+                guest["remarks"] = remarks
+            if not args.all:
+                log(f"{len(remarks)} remark(s) for {guest['name']}")
+    log(f"{done} guest(s) read, {total} remark(s); {failed} failed or skipped"
+        + ("; stopped on a billing error" if stop.is_set() else ""))
     if args.apply:
-        guest["remarks"] = remarks
         save_json(GUESTS_FILE, guests)
         log(f"Saved {GUESTS_FILE}")
 
