@@ -11,8 +11,10 @@ transcript and prints two things for a person to read:
   including before the first quote and after the last
 - inside gaps: transcript words a quote skips between two of its own parts
 
-Most stretches are chatter that belongs to no pick ("I feel like I'm in this
-corner too much"). The ones that are about a film need a fix: re-extract the
+Words in one of the guest's remarks (extract_remarks.py, "Also said" on the
+guest page) count as covered. Most other stretches are chatter that belongs to
+no pick ("I feel like I'm in this corner too much"). The ones that are about a
+film need a fix: re-extract the
 guest, or restore the passage in data/quote_overrides.json (fix-guest
 Workflow 10). A run of two quotes about different films sharing words is
 Workflow 10's job, not this script's.
@@ -142,11 +144,14 @@ def flatten(segments: list[dict]) -> tuple[list[str], list[int]]:
     return transcript, starts
 
 
-def find_gaps(transcript: list[str], picks: list[dict], min_words: int) -> list[dict]:
+def find_gaps(transcript: list[str], picks: list[dict], min_words: int, held: list[str] = ()) -> list[dict]:
     """
     Stretches of transcript words that no quote holds, as dicts with "kind"
     ("inside" a quote's span, or "uncovered"), "start" and "end" word indices,
     and the neighbouring picks. fill_quote_gaps.py works from these.
+
+    held: other texts on the guest page, the guest's remarks, whose words count
+    as covered but belong to no pick.
     """
     owner: dict[int, dict] = {}
     inner_gaps = []
@@ -155,13 +160,16 @@ def find_gaps(transcript: list[str], picks: list[dict], min_words: int) -> list[
         for i in covered:
             owner.setdefault(i, pick)
         inner_gaps += [(pick, start, end) for start, end in gaps]
+    taken = set(owner)
+    for text in held:
+        taken |= quote_span(transcript, words(text))[0]
 
     found = []
     # Words a quote skips count only if no other quote holds them: del Toro
     # talks about Notorious in the middle of Black Narcissus, and those words
     # are Notorious's, not missing.
     for pick, start, end in inner_gaps:
-        if sum(1 for i in range(start, end) if i not in owner) >= MIN_GAP:
+        if sum(1 for i in range(start, end) if i not in taken) >= MIN_GAP:
             found.append({"kind": "inside", "start": start, "end": end, "pick": pick})
     if not owner:
         return found
@@ -171,24 +179,31 @@ def find_gaps(transcript: list[str], picks: list[dict], min_words: int) -> list[
     # her first quote. The intro this also catches is one line to read.
     i = 0
     while i < len(transcript):
-        if i in owner:
+        if i in taken:
             i += 1
             continue
         j = i
-        while j < len(transcript) and j not in owner:
+        while j < len(transcript) and j not in taken:
             j += 1
         if j - i >= min_words:
-            found.append({"kind": "uncovered", "start": i, "end": j,
-                          "before": owner.get(i - 1), "after": owner.get(j)})
+            # The nearest quotes either side, past any remark in between.
+            before = next((owner[k] for k in range(i - 1, -1, -1) if k in owner), None)
+            after = next((owner[k] for k in range(j, len(transcript)) if k in owner), None)
+            found.append({"kind": "uncovered", "start": i, "end": j, "before": before, "after": after})
         i = j
     return found
 
 
-def check_visit(segments: list[dict], picks: list[dict], min_words: int) -> list[str]:
+def visit_remarks(guest: dict, visit_index: int) -> list[str]:
+    """The text of the guest's remarks from one visit (extract_remarks.py)."""
+    return [r["text"] for r in guest.get("remarks") or [] if (r.get("visit_index") or 1) == visit_index]
+
+
+def check_visit(segments: list[dict], picks: list[dict], min_words: int, held: list[str] = ()) -> list[str]:
     """Lines to print for one visit; empty when every stretch is covered."""
     transcript, starts = flatten(segments)
     lines = []
-    for gap in find_gaps(transcript, picks, min_words):
+    for gap in find_gaps(transcript, picks, min_words, held):
         text = " ".join(transcript[gap["start"]:gap["end"]])
         at = starts[gap["start"]]
         if gap["kind"] == "inside":
@@ -221,7 +236,7 @@ def coverage_report(guest: dict, picks: list[dict], min_words: int = 15) -> list
             continue
         data = load_json(path)
         segments = data["segments"] if isinstance(data, dict) else data
-        lines = check_visit(segments, visit_picks, min_words)
+        lines = check_visit(segments, visit_picks, min_words, visit_remarks(guest, visit_index))
         if lines:
             out.append(f"{guest['slug']} (visit {visit_index}):")
             out.extend(lines)

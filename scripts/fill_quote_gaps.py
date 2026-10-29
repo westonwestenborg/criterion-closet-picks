@@ -43,7 +43,7 @@ from difflib import SequenceMatcher
 import requests
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
-from scripts.check_quote_coverage import MIN_MATCH, find_gaps, flatten, visit_video, words
+from scripts.check_quote_coverage import MIN_MATCH, find_gaps, flatten, visit_remarks, visit_video, words
 from scripts.utils import (
     CATALOG_FILE,
     GUESTS_FILE,
@@ -212,7 +212,9 @@ def fill_visit(guest: dict, visit_index: int, picks: list[dict], model, use_vide
     segments = data["segments"] if isinstance(data, dict) else data
     transcript, starts = flatten(segments)
     quoted = [p for p in picks if (p.get("quote") or "").strip()]
-    gaps = [g for g in find_gaps(transcript, quoted, MIN_WORDS) if g["end"] - g["start"] >= MIN_WORDS]
+    # A stretch already kept as one of the guest's remarks is not a gap.
+    gaps = [g for g in find_gaps(transcript, quoted, MIN_WORDS, visit_remarks(guest, visit_index))
+            if g["end"] - g["start"] >= MIN_WORDS]
     if not gaps:
         return []
 
