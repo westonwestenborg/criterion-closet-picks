@@ -41,7 +41,7 @@ class CheckVisitTest(unittest.TestCase):
         self.assertEqual(lines, [])
 
     def test_a_remark_covers_its_stretch(self):
-        # Kept under "Also said" on the guest page, so not a dropped passage.
+        # Kept as one of the guest's remarks, so not a dropped passage.
         lines = check_visit(SEGMENTS, picks(HEAVEN, FANNY), min_words=10, held=[STORY])
         self.assertEqual(lines, [])
 

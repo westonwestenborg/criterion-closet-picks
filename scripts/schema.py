@@ -73,8 +73,9 @@ class GuestVisit(TypedDict, total=False):
 
 
 class GuestRemark(TypedDict, total=False):
-    """Something a guest said that is not about any one pick, shown under
-    "Also said" on the guest page. Written by extract_remarks.py."""
+    """Something a guest said that is not about any one pick. Not shown on the
+    site; the coverage check counts its words as covered. Written by
+    extract_remarks.py."""
 
     visit_index: int  # 1-based
     start_timestamp: int  # seconds into that visit's video

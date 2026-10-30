@@ -11,8 +11,8 @@ transcript and prints two things for a person to read:
   including before the first quote and after the last
 - inside gaps: transcript words a quote skips between two of its own parts
 
-Words in one of the guest's remarks (extract_remarks.py, "Also said" on the
-guest page) count as covered. Most other stretches are chatter that belongs to
+Words in one of the guest's remarks (extract_remarks.py; kept in guests.json,
+not shown on the site) count as covered. Most other stretches are chatter that belongs to
 no pick ("I feel like I'm in this corner too much"). The ones that are about a
 film need a fix: re-extract the
 guest, or restore the passage in data/quote_overrides.json (fix-guest

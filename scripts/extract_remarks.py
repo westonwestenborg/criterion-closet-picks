@@ -9,8 +9,10 @@ Claude Lelouch on hearing all his dialogue in cafes. This reads every
 stretch of transcript no quote holds (check_quote_coverage.find_gaps) and asks
 Gemini 4 Argon what it is:
 - "remark": the guest's own words worth keeping, a reflection, a story, a
-  closing thought; saved to the guest's "remarks" in guests.json and shown on
-  the guest page under "Also said"
+  closing thought; saved to the guest's "remarks" in guests.json. The site
+  does not show them (guest pages dropped their "Also said" section on
+  2026-10-30); they are kept so the coverage check and the second pass count
+  those words as covered
 - "pick": about one of the picks; reported, for fill_quote_gaps.py or a
   person to place, never saved here
 - "logistics": greetings, thanks, talk about the shelves or the bag; dropped

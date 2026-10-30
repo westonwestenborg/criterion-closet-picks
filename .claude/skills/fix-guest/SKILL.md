@@ -160,13 +160,17 @@ nothing has written yet, so it silently produces no quotes. Continue:
    a box set whose catalog title carries a ` (box set)` suffix the collection
    page omits — run `scripts/dedupe_film_ids.py --dry-run`, confirm the scope is
    just the new picks, then run it for real.
-   Once the quotes are final (after step 7), keep what the guest said that is
-   not about one pick, which the guest page shows under "Also said":
+   Once the quotes are final (after step 7), save what the guest said that is
+   not about one pick. The site does not show these remarks, but the coverage
+   check and the second pass count their words as covered, so they are not
+   flagged as dropped lines:
    ```bash
    .venv/bin/python scripts/extract_remarks.py --guest-slug SLUG          # read it
    .venv/bin/python scripts/extract_remarks.py --guest-slug SLUG --apply
    ```
    It reads only the stretches no quote holds, so run it after any quote fix.
+   Read what it saves: a remark that is really about a pick would vanish from
+   the site, so it belongs in that pick's quote.
 7. Read every new quote against the guest's transcript before you commit.
    Start with the coverage check, which lists every stretch of transcript that
    no quote holds:

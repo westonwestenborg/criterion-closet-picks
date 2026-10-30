@@ -119,8 +119,9 @@ After the pipeline completes, report:
   `scripts/fill_quote_gaps.py --guest-slug SLUG`, and apply them only once
   every `[add]` line reads right (fix-guest Workflow 4, step 7, says how and
   why it only suggests). The pipeline has already saved the guest's remarks
-  ("Also said") with `extract_remarks.py`; read them too, and if one is about a
-  pick, it belongs in that pick's quote. A dropped word that changes the meaning goes in
+  with `extract_remarks.py`. The site does not show remarks, so read them: one
+  that is about a pick would vanish from the site, and belongs in that pick's
+  quote. A dropped word that changes the meaning goes in
   `data/quote_overrides.json`. A wrong capital ("one of The Most Beautiful
   films", "all of his Secrets") has two possible causes with different fixes;
   see fix-guest Workflow 11.

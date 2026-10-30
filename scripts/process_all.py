@@ -229,8 +229,8 @@ def main():
             step_num,
         ))
 
-    # Step 14: Keep what new guests said that is not about one pick ("Also said"
-    # on the guest page). --all reads only guests without a remarks field, so
+    # Step 14: Keep what new guests said that is not about one pick. The site
+    # does not show it, but the coverage check counts it as covered. --all reads only guests without a remarks field, so
     # this reaches the guests added since the last run and no others. After the
     # tail, so it reads final quotes.
     step_num += 1
