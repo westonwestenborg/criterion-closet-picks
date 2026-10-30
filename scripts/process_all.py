@@ -18,7 +18,8 @@ Steps:
   10. Migrate source/visit metadata (migrate_source_visit.py)
   11. Enrich via TMDB (enrich_tmdb.py)
   12. Normalize guest data - second pass (normalize_guests.py)
-  13. Validate (validate.py + test_data.py)
+  13. Keep new guests' remarks, words not about one pick (extract_remarks.py --all)
+  14. Validate (validate.py + test_data.py)
 
 Usage:
   python scripts/process_all.py --pilot          # 10-video pilot
@@ -83,7 +84,7 @@ def main():
     parser.add_argument("--skip-normalize", action="store_true", help="Skip guest normalization")
     parser.add_argument("--skip-validate", action="store_true", help="Skip validation")
     parser.add_argument("--fresh", action="store_true", help="Start fresh (pass --primary to scraper, clearing existing data)")
-    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-14)")
+    parser.add_argument("--from-step", type=int, default=1, help="Start from step N (1-15)")
     parser.add_argument("--limit", type=int, default=0, help="Limit items per step")
     args = parser.parse_args()
 
@@ -228,7 +229,19 @@ def main():
             step_num,
         ))
 
-    # Step 14: Validate
+    # Step 14: Keep what new guests said that is not about one pick ("Also said"
+    # on the guest page). --all reads only guests without a remarks field, so
+    # this reaches the guests added since the last run and no others. After the
+    # tail, so it reads final quotes.
+    step_num += 1
+    if not args.skip_quotes and args.from_step <= step_num:
+        steps.append((
+            "Extract Remarks (New Guests)",
+            [python, str(SCRIPTS_DIR / "extract_remarks.py"), "--all", "--apply"],
+            step_num,
+        ))
+
+    # Step 15: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

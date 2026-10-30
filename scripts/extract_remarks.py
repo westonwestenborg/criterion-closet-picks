@@ -16,10 +16,14 @@ Gemini 4 Argon what it is:
 - "logistics": greetings, thanks, talk about the shelves or the bag; dropped
 
 A remark's text must be the transcript's own words (fill_quote_gaps.locate).
+--apply always writes a guest's "remarks", as [] when there are none, so a
+guest without the field has not been read yet. --all reads only those, which
+is how the pipeline (process_all.py) reaches new guests and no others.
 
 Usage:
   python scripts/extract_remarks.py --guest-slug SLUG            # report, change nothing
   python scripts/extract_remarks.py --guest-slug SLUG --apply    # write guests.json
+  python scripts/extract_remarks.py --all --apply                # every guest not read yet
 """
 
 import argparse
@@ -139,7 +143,7 @@ def main():
     parser = argparse.ArgumentParser(description="Keep what a guest says that is not about any one pick")
     target = parser.add_mutually_exclusive_group(required=True)
     target.add_argument("--guest-slug")
-    target.add_argument("--all", action="store_true", help="Every guest without remarks yet")
+    target.add_argument("--all", action="store_true", help="Every guest not read yet (no remarks field)")
     parser.add_argument("--apply", action="store_true", help="Write the remarks to guests.json")
     args = parser.parse_args()
 
@@ -180,7 +184,7 @@ def main():
                 continue
             done += 1
             total += len(remarks)
-            if remarks and args.apply:
+            if args.apply:
                 guest["remarks"] = remarks
             if not args.all:
                 log(f"{len(remarks)} remark(s) for {guest['name']}")

@@ -105,7 +105,7 @@ class Guest(TypedDict, total=False):
     x_handle: str | None  # verified X/Twitter handle (no @), for social post tagging
     threads_handle: str | None  # verified Threads handle (no @); = IG handle
     visits: list[GuestVisit]  # only present for multi-visit guests
-    remarks: list[GuestRemark]  # words not about any one pick; extract_remarks.py
+    remarks: list[GuestRemark]  # words not about any one pick; extract_remarks.py ([] = read, none; absent = not read)
     visit_count: int
     source: str
     tmdb_person_id: int | None

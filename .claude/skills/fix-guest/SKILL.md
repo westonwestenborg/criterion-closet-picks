@@ -177,8 +177,25 @@ nothing has written yet, so it silently produces no quotes. Continue:
    dropped passage: Kim Cattrall's whole story about her mother went missing
    from Heaven Can Wait in the October 2026 re-extraction, and only this kind
    of check finds it. Re-extract the guest, and if it is still missing, restore
-   it with `data/quote_overrides.json` (Workflow 10). Three defects are common,
-   and each needs a fix, not just a mention in the commit message:
+   it with `data/quote_overrides.json` (Workflow 10).
+
+   Then run the second pass. For each uncovered stretch of 20+ words it asks
+   two models, Gemini and Claude, which pick the stretch is about, and
+   suggests adding it to a quote only when both name the same pick:
+   ```bash
+   .venv/bin/python scripts/fill_quote_gaps.py --guest-slug SLUG          # suggestions only
+   .venv/bin/python scripts/fill_quote_gaps.py --guest-slug SLUG --apply  # once every [add] reads right
+   ```
+   It only suggests, because it has not met the bar for running on its own:
+   put back 90% of lost lines and add nothing to the wrong film. On 40
+   episodes it was not tuned on, it put back 2 of 5 and 1 of its 5 additions
+   was doubtful. Read each `[add]` line against the transcript. If all of them
+   read right, run it with `--apply` and check the diff adds exactly those
+   words, since `--apply` asks the models again. If any is wrong, restore the
+   right ones by hand with `data/quote_overrides.json` instead.
+
+   Three defects are common, and each needs a fix, not just a mention in the
+   commit message:
    - **A dropped passage**, as above.
    - **A dropped word that changes the meaning.** Ngozi Onwurah's Do the Right
      Thing quote lost "Black" from "the very first Black film that I went into
