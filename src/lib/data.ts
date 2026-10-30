@@ -47,7 +47,7 @@ export interface Guest {
    * film pages still show the full stored quote.
    */
   featured_quote?: string | null;
-  /** Intros, closing thoughts and other words not about one pick; shown under "Also said". */
+  /** Intros, closing thoughts and other words not about one pick; not shown on the site. */
   remarks?: GuestRemark[];
 }
 
