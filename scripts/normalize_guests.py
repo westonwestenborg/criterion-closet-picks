@@ -167,6 +167,7 @@ KNOWN_VIDEO_IDS = {
     "jonathan-anderson": {"youtube_video_id": "MNQIocAU01E"},
     "frederick-elmes": {"youtube_video_id": "8nqIBE6-w_o"},
     "jeremy-allen-white": {"youtube_video_id": "7Dl3FbSOiz0"},
+    "javier-calvo-and-javier-ambrossi": {"youtube_video_id": "XlbWJFeQsLU"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -184,6 +185,7 @@ KNOWN_CRITERION_URLS = {
     "jonathan-anderson": "https://www.criterion.com/shop/collection/1017-jonathan-anderson-s-closet-picks",
     "frederick-elmes": "https://www.criterion.com/shop/collection/1018-frederick-elmes-s-closet-picks",
     "jeremy-allen-white": "https://www.criterion.com/shop/collection/1019-jeremy-allen-white-s-closet-picks",
+    "javier-calvo-and-javier-ambrossi": "https://www.criterion.com/shop/collection/1021-javier-calvo-and-javier-ambrossi-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",
@@ -278,6 +280,7 @@ NAME_FIXES = {
     "Thierry Fremaux": "Thierry Frémaux",  # Accent stripped from Criterion's URL-derived name
     "Bob The Drag Queen": "Bob the Drag Queen",  # Lowercase "the" in stage name (Criterion title-cases it)
     "Carla Simon": "Carla Simón",  # Accent stripped from slug-derived name
+    "Javier Calvo And Javier Ambrossi": "Javier Calvo and Javier Ambrossi",  # Slug-derived name title-cases "and"
 }
 
 # Import multi-visit URLs from shared config
