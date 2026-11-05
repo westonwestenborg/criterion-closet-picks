@@ -168,6 +168,7 @@ KNOWN_VIDEO_IDS = {
     "frederick-elmes": {"youtube_video_id": "8nqIBE6-w_o"},
     "jeremy-allen-white": {"youtube_video_id": "7Dl3FbSOiz0"},
     "javier-calvo-and-javier-ambrossi": {"youtube_video_id": "XlbWJFeQsLU"},
+    "john-turturro": {"youtube_video_id": "3dv1vVkvS1U"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -186,6 +187,7 @@ KNOWN_CRITERION_URLS = {
     "frederick-elmes": "https://www.criterion.com/shop/collection/1018-frederick-elmes-s-closet-picks",
     "jeremy-allen-white": "https://www.criterion.com/shop/collection/1019-jeremy-allen-white-s-closet-picks",
     "javier-calvo-and-javier-ambrossi": "https://www.criterion.com/shop/collection/1021-javier-calvo-and-javier-ambrossi-s-closet-picks",
+    "john-turturro": "https://www.criterion.com/shop/collection/1023-john-turturro-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",
