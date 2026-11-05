@@ -7836,5 +7836,26 @@
     "x_handle": "javviercalvo",
     "threads_handle": "javviercalvo",
     "remarks": []
+  },
+  {
+    "name": "John Turturro",
+    "slug": "john-turturro",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/6O9W9cJW0kCqMzYeLupV9oH0ftn.jpg",
+    "youtube_video_id": "3dv1vVkvS1U",
+    "youtube_video_url": "https://www.youtube.com/watch?v=3dv1vVkvS1U",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-02",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1023-john-turturro-s-closet-picks",
+    "pick_count": 9,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "I’m John Turturro. I’m in the Criterion Closet. Very tempting for someone like me. I don’t do drugs, but I do movies.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=3dv1vVkvS1U&t=0"
+      }
+    ]
   }
 ]
