@@ -14,6 +14,7 @@ data/transcripts/
 data/.extraction_progress.json
 data/.letterboxd_progress.json
 data/.criterion_scrape_progress.json
+data/.film_match_checks.json
 data/checkpoint_quotes.json
 
 # Backfill CSVs (manual data entry, not committed)

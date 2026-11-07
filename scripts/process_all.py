@@ -19,7 +19,8 @@ Steps:
   11. Enrich via TMDB (enrich_tmdb.py)
   12. Normalize guest data - second pass (normalize_guests.py)
   13. Keep new guests' remarks, words not about one pick (extract_remarks.py --all)
-  14. Validate (validate.py + test_data.py)
+  14. Check films against their own Criterion pages (check_film_matches.py)
+  15. Validate (validate.py + test_data.py)
 
 Usage:
   python scripts/process_all.py --pilot          # 10-video pilot
@@ -241,7 +242,19 @@ def main():
             step_num,
         ))
 
-    # Step 15: Validate
+    # Step 15: Check films against their own Criterion pages. A film matched to
+    # TMDB before anyone picked it was never checked, so its first pick can
+    # publish the wrong film's year and director (The Lovers, 2026-11-06). Only
+    # films not checked before are fetched; a failure stops the pipeline here.
+    step_num += 1
+    if not args.skip_enrich and args.from_step <= step_num:
+        steps.append((
+            "Check Films Against Criterion Pages",
+            [python, str(SCRIPTS_DIR / "check_film_matches.py")],
+            step_num,
+        ))
+
+    # Step 16: Validate
     step_num += 1
     if not args.skip_validate and args.from_step <= step_num:
         steps.append((

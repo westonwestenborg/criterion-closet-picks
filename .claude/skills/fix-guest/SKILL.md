@@ -154,8 +154,17 @@ nothing has written yet, so it silently produces no quotes. Continue:
    .venv/bin/python scripts/migrate_source_visit.py
    .venv/bin/python scripts/enrich_tmdb.py
    .venv/bin/python scripts/normalize_guests.py
+   .venv/bin/python scripts/check_film_matches.py --guest-slug SLUG
    bun run validate
    ```
+   `check_film_matches.py` compares the year, director and TMDB match of every
+   film the guest picked with that film's own Criterion page. A film matched to
+   TMDB before anyone picked it has never been checked, and an exact title
+   match looks fine everywhere else: Parker Posey's The Lovers (Louis Malle,
+   1958) came through as Roland Joffé's 2015 film. For each film it reports,
+   confirm the right one from the Criterion page or the transcript, pin it in
+   `data/tmdb_corrections.json`, and re-run `enrich_tmdb.py`. The report prints
+   what TMDB finds for Criterion's year and director as a starting point.
    If validate fails on a non-canonical `film_title` — common when a guest picks
    a box set whose catalog title carries a ` (box set)` suffix the collection
    page omits — run `scripts/dedupe_film_ids.py --dry-run`, confirm the scope is

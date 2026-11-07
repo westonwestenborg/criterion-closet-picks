@@ -83,7 +83,13 @@ This will:
 6. Migrate source/visit metadata
 7. Enrich new films/guests via TMDB
 8. Normalize guests (second pass), migrate again
-9. Run validation
+9. Check every newly picked film against its own Criterion page (`check_film_matches.py`)
+10. Run validation
+
+If step 9 fails, a film is showing another film's year, director or TMDB data,
+usually because it was matched to TMDB before anyone picked it. Fix it as the
+report says (pin the right TMDB id in `data/tmdb_corrections.json`, re-run
+`enrich_tmdb.py`), then resume with `--from-step` at that step.
 
 Note: The pipeline is incremental by default. It only re-scrapes multi-visit guest URLs (to keep visit_index accurate) and skips already-processed collections. Use `--fresh` flag to start from scratch.
 
