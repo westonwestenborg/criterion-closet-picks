@@ -31515,68 +31515,43 @@
     "credits": {
       "directors": [
         {
-          "name": "Mia Hansen-Løve",
-          "tmdb_id": 222686
+          "name": "Marie Nyreröd",
+          "tmdb_id": 1445738
         }
       ],
       "writers": [
         {
-          "name": "Mia Hansen-Løve",
-          "tmdb_id": 222686
+          "name": "Marie Nyreröd",
+          "tmdb_id": 1445738
         }
       ],
       "cinematographers": [
         {
-          "name": "Denis Lenoir",
-          "tmdb_id": 23464
+          "name": "Arne Carlsson",
+          "tmdb_id": 1152382
         }
       ],
       "editors": [
         {
-          "name": "Marion Monnier",
-          "tmdb_id": 984014
+          "name": "Kurt Bergmark",
+          "tmdb_id": 2658739
         }
       ],
       "cast": [
         {
-          "name": "Vicky Krieps",
-          "tmdb_id": 1080195,
-          "character": "Chris"
+          "name": "Marie Nyreröd",
+          "tmdb_id": 1445738,
+          "character": "Self - Filmmaker / Interviewer"
         },
         {
-          "name": "Tim Roth",
-          "tmdb_id": 3129,
-          "character": "Tony"
+          "name": "Ingmar Bergman",
+          "tmdb_id": 6648,
+          "character": "Self - Filmmaker"
         },
         {
-          "name": "Mia Wasikowska",
-          "tmdb_id": 76070,
-          "character": "Amy"
-        },
-        {
-          "name": "Anders Danielsen Lie",
-          "tmdb_id": 71610,
-          "character": "Joseph / Anders"
-        },
-        {
-          "name": "Hampus Nordenson",
-          "tmdb_id": 3153284,
-          "character": "Hampus"
-        },
-        {
-          "name": "Anki Larsson",
-          "tmdb_id": 990347,
-          "character": "Ase"
-        },
-        {
-          "name": "Kerstin Brunnberg",
-          "tmdb_id": 3153285,
-          "character": "Hedda"
-        },
-        {
-          "name": "Melinda Kinnaman",
-          "tmdb_id": 231318,
-          "character": "Berit"
+          "name": "Erland Josephson",
+          "tmdb_id": 38127,
+          "character": "Self - Actor"
         }
       ]
     }
@@ -76166,72 +76141,72 @@
     "credits": {
       "directors": [
         {
-          "name": "Federico Fellini",
-          "tmdb_id": 4415
+          "name": "Alfonso Cuarón",
+          "tmdb_id": 11218
         }
       ],
       "writers": [
         {
-          "name": "Federico Fellini",
-          "tmdb_id": 4415
-        },
-        {
-          "name": "Bernardino Zapponi",
-          "tmdb_id": 67884
+          "name": "Alfonso Cuarón",
+          "tmdb_id": 11218
         }
       ],
       "cinematographers": [
         {
-          "name": "Giuseppe Rotunno",
-          "tmdb_id": 15131
+          "name": "Alfonso Cuarón",
+          "tmdb_id": 11218
         }
       ],
       "editors": [
         {
-          "name": "Ruggero Mastroianni",
-          "tmdb_id": 32053
+          "name": "Alfonso Cuarón",
+          "tmdb_id": 11218
+        },
+        {
+          "name": "Adam Gough",
+          "tmdb_id": 1775559
         }
       ],
       "cast": [
         {
-          "name": "Peter Gonzales Falcon",
-          "tmdb_id": 67879,
-          "character": "Fellini, Age 18"
+          "name": "Yalitza Aparicio",
+          "tmdb_id": 1775557,
+          "character": "Cleo Gutiérrez"
         },
         {
-          "name": "Fiona Florence",
-          "tmdb_id": 67880,
-          "character": "Dolores - Young Prostitute"
+          "name": "Marina de Tavira",
+          "tmdb_id": 78883,
+          "character": "Sofía"
         },
         {
-          "name": "Pia De Doses",
-          "tmdb_id": 67881,
-          "character": "Princess Domitilla"
+          "name": "Diego Cortina Autrey",
+          "tmdb_id": 2108826,
+          "character": "Toño"
         },
         {
-          "name": "Marne Maitland",
-          "tmdb_id": 67882,
-          "character": "Underground Guide"
+          "name": "Carlos Peralta",
+          "tmdb_id": 2108855,
+          "character": "Paco"
         },
         {
-          "name": "Renato Giovannoli",
-          "tmdb_id": 67883,
-          "character": "Cardinal Ottaviani"
+          "name": "Marco Graf",
+          "tmdb_id": 1775556,
+          "character": "Pepe"
         },
         {
-          "name": "Elisa Mainardi",
-          "tmdb_id": 44421,
-          "character": "Pharmacist's wife / Cinema spectator"
+          "name": "Daniela Demesa",
+          "tmdb_id": 1775558,
+          "character": "Sofi"
         },
         {
-          "name": "Norma Giacchero",
-          "tmdb_id": 1740212,
-          "character": "Reporter Interviewing Fellini"
+          "name": "Nancy García García",
+          "tmdb_id": 2108829,
+          "character": "Adela"
         },
         {
-          "name": "Stefano Mayore",
-          "tmdb_id": 1889600,
-          "character": "Fellini as a Child"
+          "name": "Verónica García",
+          "tmdb_id": 1920669,
+          "character": "Teresa"
         }
       ]
     }
@@ -76550,13 +76525,13 @@
     "film_id": "show-boat",
     "title": "Show Boat",
     "spine_number": 1021,
-    "director": "George Sidney",
-    "year": 1951,
+    "director": "James Whale",
+    "year": 1936,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/29035-show-boat",
-    "imdb_id": "tt0044030",
-    "tmdb_id": 17820,
-    "poster_url": "https://image.tmdb.org/t/p/w185/sk7s574pI9QAi6uVqbTg0bnLEUC.jpg",
+    "imdb_id": "tt0028249",
+    "tmdb_id": 31548,
+    "poster_url": "https://image.tmdb.org/t/p/w185/vFJ1vdOvOJjKVsoi8x7eZUthAJm.jpg",
     "poster_source": "tmdb",
     "genres": [
       "Music",
@@ -76566,68 +76541,72 @@
     "credits": {
       "directors": [
         {
-          "name": "George Sidney",
-          "tmdb_id": 21506
+          "name": "James Whale",
+          "tmdb_id": 2917
         }
       ],
       "writers": [
         {
-          "name": "John Lee Mahin",
-          "tmdb_id": 29618
+          "name": "Oscar Hammerstein II",
+          "tmdb_id": 98751
         }
       ],
       "cinematographers": [
         {
-          "name": "Charles Rosher",
-          "tmdb_id": 9080
+          "name": "John J. Mescall",
+          "tmdb_id": 2940
         }
       ],
       "editors": [
         {
-          "name": "John D. Dunning",
-          "tmdb_id": 10006
+          "name": "Bernard W. Burton",
+          "tmdb_id": 993210
+        },
+        {
+          "name": "Ted J. Kent",
+          "tmdb_id": 2920
         }
       ],
       "cast": [
         {
-          "name": "Kathryn Grayson",
-          "tmdb_id": 82407,
-          "character": "Magnolia Hawks"
+          "name": "Irene Dunne",
+          "tmdb_id": 77158,
+          "character": "Magnolia Hawkes"
         },
         {
-          "name": "Ava Gardner",
-          "tmdb_id": 25787,
-          "character": "Julie LaVerne"
-        },
-        {
-          "name": "Howard Keel",
-          "tmdb_id": 39601,
+          "name": "Allan Jones",
+          "tmdb_id": 10802,
           "character": "Gaylord Ravenal"
         },
         {
-          "name": "Joe E. Brown",
-          "tmdb_id": 3156,
-          "character": "Cap'n Andy Hawks"
+          "name": "Charles Winninger",
+          "tmdb_id": 83474,
+          "character": "Cap'n Andy Hawkes"
         },
         {
-          "name": "Marge Champion",
-          "tmdb_id": 148669,
-          "character": "Ellie May Shipley"
+          "name": "Paul Robeson",
+          "tmdb_id": 98568,
+          "character": "Joe"
         },
         {
-          "name": "Gower Champion",
-          "tmdb_id": 118222,
+          "name": "Helen Morgan",
+          "tmdb_id": 145959,
+          "character": "Julie LaVerne"
+        },
+        {
+          "name": "Helen Westley",
+          "tmdb_id": 108986,
+          "character": "Parthenia \"Parthy\" Hawkes"
+        },
+        {
+          "name": "Queenie Smith",
+          "tmdb_id": 120010,
+          "character": "Ellie May Chipley"
+        },
+        {
+          "name": "Sammy White",
+          "tmdb_id": 110940,
           "character": "Frank Schultz"
-        },
-        {
-          "name": "Robert Sterling",
-          "tmdb_id": 22091,
-          "character": "Steven Baker"
-        },
-        {
-          "name": "Agnes Moorehead",
-          "tmdb_id": 11025,
-          "character": "Parthy Hawks"
         }
       ]
     }
@@ -77380,13 +77359,13 @@
     "film_id": "wildlife",
     "title": "Wildlife",
     "spine_number": 1031,
-    "director": "Ryan Darst",
-    "year": 2014,
+    "director": "Paul Dano",
+    "year": 2018,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/29644-wildlife",
-    "imdb_id": "tt4180978",
-    "tmdb_id": 544977,
-    "poster_url": "https://image.tmdb.org/t/p/w185/hjX7hruHucfuZl7Tvwf6C9WPMuw.jpg",
+    "imdb_id": "tt5929754",
+    "tmdb_id": 417812,
+    "poster_url": "https://image.tmdb.org/t/p/w185/hQSUwjSSRtWCA5EBoY22gGzaE8Y.jpg",
     "poster_source": "tmdb",
     "genres": [
       "Drama"
@@ -77394,68 +77373,76 @@
     "credits": {
       "directors": [
         {
-          "name": "Ryan Darst",
-          "tmdb_id": 1172693
+          "name": "Paul Dano",
+          "tmdb_id": 17142
         }
       ],
       "writers": [
         {
-          "name": "Whit Hertford",
-          "tmdb_id": 166298
+          "name": "Paul Dano",
+          "tmdb_id": 17142
+        },
+        {
+          "name": "Zoe Kazan",
+          "tmdb_id": 35028
         }
       ],
       "cinematographers": [
         {
-          "name": "Denver James Harward",
-          "tmdb_id": 2116494
+          "name": "Diego García",
+          "tmdb_id": 933841
         }
       ],
       "editors": [
         {
-          "name": "Sean Gooley",
-          "tmdb_id": 2116495
+          "name": "Matthew Hannam",
+          "tmdb_id": 989692
+        },
+        {
+          "name": "Louise Ford",
+          "tmdb_id": 1397777
         }
       ],
       "cast": [
         {
-          "name": "Whit Hertford",
-          "tmdb_id": 166298,
-          "character": "Possum Mutz"
+          "name": "Jake Gyllenhaal",
+          "tmdb_id": 131,
+          "character": "Jerry Brinson"
         },
         {
-          "name": "Robert Scott Smith",
-          "tmdb_id": 2116488,
-          "character": "Dwayne Mutz"
+          "name": "Carey Mulligan",
+          "tmdb_id": 36662,
+          "character": "Jeanette Brinson"
         },
         {
-          "name": "Rusty Schwimmer",
-          "tmdb_id": 34407,
-          "character": "Vernita Christiansen"
+          "name": "Ed Oxenbould",
+          "tmdb_id": 1198286,
+          "character": "Joe Brinson"
         },
         {
-          "name": "Lane Richins",
-          "tmdb_id": 2116489,
-          "character": "Fleetwood"
+          "name": "Zoe Colletti",
+          "tmdb_id": 1533987,
+          "character": "Ruth-Ann"
         },
         {
-          "name": "Haeleigh Royall",
-          "tmdb_id": 2116490,
-          "character": "Billie Jean James"
+          "name": "Bill Camp",
+          "tmdb_id": 121718,
+          "character": "Warren Miller"
         },
         {
-          "name": "Lauren Lapkus",
-          "tmdb_id": 591834,
-          "character": "Grace Hinckley"
+          "name": "Travis W Bruyer",
+          "tmdb_id": 1715425,
+          "character": "Forester"
         },
         {
-          "name": "Melanie Stone",
-          "tmdb_id": 1362313,
-          "character": "Spider"
+          "name": "Tom Huston Orr",
+          "tmdb_id": 1663067,
+          "character": "Mr. Cartwright"
         },
         {
-          "name": "Brighton Hertford",
-          "tmdb_id": 161909,
-          "character": "Nazareth Christiansen"
+          "name": "Darryl Cox",
+          "tmdb_id": 97391,
+          "character": "Clarence Snow"
         }
       ]
     }
@@ -84472,13 +84459,13 @@
     "film_id": "love-affair",
     "title": "Love Affair",
     "spine_number": 1114,
-    "director": "Glenn Gordon Caron",
-    "year": 1994,
+    "director": "Leo McCarey",
+    "year": 1939,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/32533-love-affair",
-    "imdb_id": "tt0110391",
-    "tmdb_id": 43742,
-    "poster_url": "https://image.tmdb.org/t/p/w185/uPEh48HZN9qqewkF2Hsi9BD6oz7.jpg",
+    "imdb_id": "tt0031593",
+    "tmdb_id": 43739,
+    "poster_url": "https://image.tmdb.org/t/p/w185/2bKxlYgwKRQidS8S9DSPjpITPlv.jpg",
     "poster_source": "tmdb",
     "genres": [
       "Drama",
@@ -84487,72 +84474,76 @@
     "credits": {
       "directors": [
         {
-          "name": "Glenn Gordon Caron",
-          "tmdb_id": 58463
+          "name": "Leo McCarey",
+          "tmdb_id": 30008
         }
       ],
       "writers": [
         {
-          "name": "Robert Towne",
-          "tmdb_id": 11057
+          "name": "Delmer Daves",
+          "tmdb_id": 76981
         },
         {
-          "name": "Warren Beatty",
-          "tmdb_id": 6449
+          "name": "Donald Ogden Stewart",
+          "tmdb_id": 14676
         }
       ],
       "cinematographers": [
         {
-          "name": "Conrad Hall",
-          "tmdb_id": 8217
+          "name": "Rudolph Maté",
+          "tmdb_id": 11593
         }
       ],
       "editors": [
         {
-          "name": "Robert C. Jones",
-          "tmdb_id": 21012
+          "name": "Edward Dmytryk",
+          "tmdb_id": 64114
+        },
+        {
+          "name": "George Hively",
+          "tmdb_id": 1182098
         }
       ],
       "cast": [
         {
-          "name": "Warren Beatty",
-          "tmdb_id": 6449,
-          "character": "Mike Gambril"
-        },
-        {
-          "name": "Annette Bening",
-          "tmdb_id": 516,
+          "name": "Irene Dunne",
+          "tmdb_id": 77158,
           "character": "Terry McKay"
         },
         {
-          "name": "Katharine Hepburn",
-          "tmdb_id": 6598,
-          "character": "Ginny"
+          "name": "Charles Boyer",
+          "tmdb_id": 29519,
+          "character": "Michel Marnet"
         },
         {
-          "name": "Garry Shandling",
-          "tmdb_id": 52865,
-          "character": "Kip DeMay"
+          "name": "Maria Ouspenskaya",
+          "tmdb_id": 14873,
+          "character": "Grandmother"
         },
         {
-          "name": "Chloe Webb",
-          "tmdb_id": 43476,
-          "character": "Tina Wilson"
+          "name": "Lee Bowman",
+          "tmdb_id": 105505,
+          "character": "Kenneth Bradley"
         },
         {
-          "name": "Pierce Brosnan",
-          "tmdb_id": 517,
-          "character": "Ken Allen"
+          "name": "Astrid Allwyn",
+          "tmdb_id": 119898,
+          "character": "Lois Clarke"
         },
         {
-          "name": "Kate Capshaw",
-          "tmdb_id": 689,
-          "character": "Lynn Weaver"
+          "name": "Maurice Moscovitch",
+          "tmdb_id": 14032,
+          "character": "Maurice Cobert"
         },
         {
-          "name": "Paul Mazursky",
-          "tmdb_id": 47773,
-          "character": "Herb Stillman"
+          "name": "Mary Bayless",
+          "tmdb_id": 1731311,
+          "character": "Theatre Patron (uncredited)"
+        },
+        {
+          "name": "Scotty Beckett",
+          "tmdb_id": 125847,
+          "character": "Boy on Ship (uncredited)"
         }
       ]
     }
@@ -97370,63 +97361,94 @@
     "film_id": "shoeshine",
     "title": "Shoeshine",
     "spine_number": 1272,
-    "director": "Tom Abrams",
-    "year": 1987,
+    "director": "Vittorio De Sica",
+    "year": 1946,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/34329-shoeshine",
-    "imdb_id": "tt0093960",
-    "tmdb_id": 244687,
-    "poster_url": "https://image.tmdb.org/t/p/w185/sAmNpAnPF2jZCi7Vm5BjQdbJqZB.jpg",
+    "imdb_id": "tt0038913",
+    "tmdb_id": 43469,
+    "poster_url": "https://image.tmdb.org/t/p/w185/qhhbo7rzJ1U8y1jW5cpR2j5GhvR.jpg",
     "poster_source": "tmdb",
     "genres": [
-      "Comedy",
       "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Tom Abrams",
-          "tmdb_id": 23712
+          "name": "Vittorio De Sica",
+          "tmdb_id": 12329
         }
       ],
       "writers": [
         {
-          "name": "Tom Abrams",
-          "tmdb_id": 23712
+          "name": "Sergio Amidei",
+          "tmdb_id": 4413
+        },
+        {
+          "name": "Adolfo Franci",
+          "tmdb_id": 1009150
+        },
+        {
+          "name": "Cesare Giulio Viola",
+          "tmdb_id": 233172
+        },
+        {
+          "name": "Cesare Zavattini",
+          "tmdb_id": 12330
         }
       ],
       "cinematographers": [
         {
-          "name": "James Jones",
-          "tmdb_id": 3420460
+          "name": "Anchise Brizzi",
+          "tmdb_id": 69974
         }
       ],
       "editors": [
         {
-          "name": "Joseph Aloysius Becker",
-          "tmdb_id": 3420461
+          "name": "Niccolò Lazzari",
+          "tmdb_id": 33468
         }
       ],
       "cast": [
         {
-          "name": "Jerry Stiller",
-          "tmdb_id": 26042,
-          "character": "Father"
+          "name": "Franco Interlenghi",
+          "tmdb_id": 71140,
+          "character": "Pasquale Maggi"
         },
         {
-          "name": "Ben Stiller",
-          "tmdb_id": 7399,
-          "character": "Son"
+          "name": "Rinaldo Smordoni",
+          "tmdb_id": 550821,
+          "character": "Giuseppe Filippucci"
         },
         {
-          "name": "Bruce Altman",
-          "tmdb_id": 27545,
-          "character": "Grouch"
+          "name": "Annielo Mele",
+          "tmdb_id": 550822,
+          "character": "Raffaele"
         },
         {
-          "name": "Jordan Flash Rose",
-          "tmdb_id": 2114157,
-          "character": ""
+          "name": "Bruno Ortenzi",
+          "tmdb_id": 589221,
+          "character": "Arcangeli"
+        },
+        {
+          "name": "Emilio Cigoli",
+          "tmdb_id": 233174,
+          "character": "Staffera"
+        },
+        {
+          "name": "Gino Saltamerenda",
+          "tmdb_id": 944148,
+          "character": "il Panza (uncredited)"
+        },
+        {
+          "name": "Peppino Spadaro",
+          "tmdb_id": 1274405,
+          "character": "L'avvocato Bonavino (uncredited)"
+        },
+        {
+          "name": "Antonio Nicotra",
+          "tmdb_id": 1385488,
+          "character": "Bartoli, l'assistente sociale (uncredited)"
         }
       ]
     }
@@ -99342,88 +99364,82 @@
     "film_id": "the-dead",
     "title": "The Dead",
     "spine_number": 1295,
-    "director": "Howard J. Ford",
-    "year": 2010,
+    "director": "John Huston",
+    "year": 1987,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/32200-the-dead",
-    "imdb_id": "tt1386925",
-    "tmdb_id": 74471,
+    "imdb_id": "tt0092843",
+    "tmdb_id": 39507,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/4309b334d5431939c08f155425418ce6/hSaxwnaFMZfOZF9xu0U3mGubZaMO0C_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "Horror",
-      "Action",
-      "Thriller",
-      "Science Fiction"
+      "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Howard J. Ford",
-          "tmdb_id": 572295
-        },
-        {
-          "name": "Jonathan Ford",
-          "tmdb_id": 245796
+          "name": "John Huston",
+          "tmdb_id": 6593
         }
       ],
       "writers": [
         {
-          "name": "Howard J. Ford",
-          "tmdb_id": 572295
-        },
-        {
-          "name": "Jonathan Ford",
-          "tmdb_id": 245796
+          "name": "Tony Huston",
+          "tmdb_id": 4031328
         }
       ],
       "cinematographers": [
         {
-          "name": "Jonathan Ford",
-          "tmdb_id": 245796
+          "name": "Fred Murphy",
+          "tmdb_id": 17765
         }
       ],
-      "editors": [],
+      "editors": [
+        {
+          "name": "Roberto Silvi",
+          "tmdb_id": 53687
+        }
+      ],
       "cast": [
         {
-          "name": "Julia Scott-Russell",
-          "tmdb_id": 1127510,
-          "character": "James' Fiance"
+          "name": "Anjelica Huston",
+          "tmdb_id": 5657,
+          "character": "Gretta Conroy"
         },
         {
-          "name": "Rob Freeman",
-          "tmdb_id": 121724,
-          "character": "Lt. Brian Murphy"
+          "name": "Donal McCann",
+          "tmdb_id": 87435,
+          "character": "Gabriel Conroy"
         },
         {
-          "name": "Ben Crowe",
-          "tmdb_id": 1127509,
-          "character": "Mercenary Leader"
+          "name": "Dan O'Herlihy",
+          "tmdb_id": 6836,
+          "character": "Mr. Browne"
         },
         {
-          "name": "Dan Morgan",
-          "tmdb_id": 115672,
-          "character": "James"
+          "name": "Helena Carroll",
+          "tmdb_id": 79745,
+          "character": "Aunt Kate"
         },
         {
-          "name": "Prince David Oseia",
-          "tmdb_id": 1127508,
-          "character": "Sgt. Daniel Dembele"
+          "name": "Cathleen Delany",
+          "tmdb_id": 150229,
+          "character": "Aunt Julia"
         },
         {
-          "name": "David Dontoh",
-          "tmdb_id": 1108607,
-          "character": "The Chief"
+          "name": "Ingrid Craigie",
+          "tmdb_id": 150230,
+          "character": "Mary Jane"
         },
         {
-          "name": "Glenn Salvage",
-          "tmdb_id": 236699,
-          "character": "Mercenary"
+          "name": "Donal Donnelly",
+          "tmdb_id": 168632,
+          "character": "Freddy Malins"
         },
         {
-          "name": "Howard J. Ford",
-          "tmdb_id": 572295,
-          "character": ""
+          "name": "Colm Meaney",
+          "tmdb_id": 17782,
+          "character": "Mr. Bergin"
         }
       ]
     }
@@ -99448,82 +99464,85 @@
     "film_id": "captain-blood",
     "title": "Captain Blood",
     "spine_number": 1297,
-    "director": "David Smith",
-    "year": 1924,
+    "director": "Michael Curtiz",
+    "year": 1935,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/29013-captain-blood",
-    "imdb_id": "tt0014759",
-    "tmdb_id": 327306,
+    "imdb_id": "tt0026174",
+    "tmdb_id": 16905,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/115c766133a5dc7b070c8a147b98255c/f5xb19pcqAaF5jtnqBZd4YfKq6iVJW_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "War",
-      "Action",
-      "Adventure",
-      "Romance"
+      "Adventure"
     ],
     "credits": {
       "directors": [
         {
-          "name": "David Smith",
-          "tmdb_id": 1385250
-        },
-        {
-          "name": "Albert E. Smith",
-          "tmdb_id": 1173774
+          "name": "Michael Curtiz",
+          "tmdb_id": 4109
         }
       ],
       "writers": [
         {
-          "name": "Rafael Sabatini",
-          "tmdb_id": 134865
-        },
-        {
-          "name": "Jay Pilcher",
-          "tmdb_id": 1431721
+          "name": "Casey Robinson",
+          "tmdb_id": 4509
         }
       ],
-      "cinematographers": [],
-      "editors": [],
-      "cast": [
+      "cinematographers": [
         {
-          "name": "J. Warren Kerrigan",
-          "tmdb_id": 1320463,
-          "character": "Capt. Peter Blood"
+          "name": "Ernest Haller",
+          "tmdb_id": 2774
         },
         {
-          "name": "Jean Paige",
-          "tmdb_id": 1431722,
+          "name": "Hal Mohr",
+          "tmdb_id": 14284
+        }
+      ],
+      "editors": [
+        {
+          "name": "George Amy",
+          "tmdb_id": 18800
+        }
+      ],
+      "cast": [
+        {
+          "name": "Errol Flynn",
+          "tmdb_id": 8724,
+          "character": "Dr. Peter Blood"
+        },
+        {
+          "name": "Olivia de Havilland",
+          "tmdb_id": 8725,
           "character": "Arabella Bishop"
         },
         {
-          "name": "Charlotte Merriam",
-          "tmdb_id": 1112942,
-          "character": "Mary Traill"
+          "name": "Lionel Atwill",
+          "tmdb_id": 2495,
+          "character": "Colonel Bishop"
         },
         {
-          "name": "James Morrison",
-          "tmdb_id": 1127308,
+          "name": "Basil Rathbone",
+          "tmdb_id": 8727,
+          "character": "Levasseur"
+        },
+        {
+          "name": "Ross Alexander",
+          "tmdb_id": 134867,
           "character": "Jeremy Pitt"
         },
         {
-          "name": "Allan Forrest",
-          "tmdb_id": 1374600,
-          "character": "Lord Julian Wade"
+          "name": "Guy Kibbee",
+          "tmdb_id": 30002,
+          "character": "Hagthorpe"
         },
         {
-          "name": "Bertram Grassby",
-          "tmdb_id": 592832,
-          "character": "Don Diego"
+          "name": "Henry Stephenson",
+          "tmdb_id": 81934,
+          "character": "Lord Willoughby"
         },
         {
-          "name": "Otis Harlan",
-          "tmdb_id": 5465,
-          "character": "Corliss"
-        },
-        {
-          "name": "Jack Curtis",
-          "tmdb_id": 1307855,
+          "name": "Robert Barrat",
+          "tmdb_id": 88672,
           "character": "Wolverstone"
         }
       ]
@@ -99630,89 +99649,82 @@
     "film_id": "kiss-of-the-spider-woman",
     "title": "Kiss of the Spider Woman",
     "spine_number": 1299,
-    "director": "Bill Condon",
-    "year": 2025,
+    "director": "Héctor Babenco",
+    "year": 1985,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/32177-kiss-of-the-spider-woman",
-    "imdb_id": "tt30400277",
-    "tmdb_id": 1214684,
+    "imdb_id": "tt0089424",
+    "tmdb_id": 11703,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/dc84c9389084da7740beb4d25c4cf269/EZvY5Mz9mDiSmJ68KVT0Fo954SLGo3_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "Romance",
-      "Music",
-      "Drama",
-      "Thriller"
+      "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Bill Condon",
-          "tmdb_id": 15557
+          "name": "Héctor Babenco",
+          "tmdb_id": 40542
         }
       ],
       "writers": [
         {
-          "name": "Bill Condon",
-          "tmdb_id": 15557
-        },
-        {
-          "name": "Fred Ebb",
-          "tmdb_id": 936187
+          "name": "Leonard Schrader",
+          "tmdb_id": 70280
         }
       ],
       "cinematographers": [
         {
-          "name": "Tobias A. Schliessler",
-          "tmdb_id": 15559
+          "name": "Rodolfo Sánchez",
+          "tmdb_id": 70285
         }
       ],
       "editors": [
         {
-          "name": "Brian A. Kates",
-          "tmdb_id": 19759
+          "name": "Mauro Alice",
+          "tmdb_id": 55100
         }
       ],
       "cast": [
         {
-          "name": "Diego Luna",
-          "tmdb_id": 8688,
-          "character": "Valentín Arregui / Armando"
+          "name": "William Hurt",
+          "tmdb_id": 227,
+          "character": "Luis Molina"
         },
         {
-          "name": "Tonatiuh",
-          "tmdb_id": 1594098,
-          "character": "Luis Molina / Kendall Nesbitt"
+          "name": "Raúl Juliá",
+          "tmdb_id": 27888,
+          "character": "Valentin Arregui"
         },
         {
-          "name": "Jennifer Lopez",
-          "tmdb_id": 16866,
-          "character": "Ingrid Luna / Aurora / The Spider Woman"
+          "name": "Sonia Braga",
+          "tmdb_id": 27396,
+          "character": "Leni Lamaison / Marta / Spider Woman"
         },
         {
-          "name": "Bruno Bichir",
-          "tmdb_id": 52745,
-          "character": "Warden Ledesma"
+          "name": "José Lewgoy",
+          "tmdb_id": 57379,
+          "character": "Warden"
         },
         {
-          "name": "Josefina Scaglione",
-          "tmdb_id": 1291703,
-          "character": "Marta"
+          "name": "Milton Gonçalves",
+          "tmdb_id": 42125,
+          "character": "Pedro"
         },
         {
-          "name": "Aline Mayagoitia",
-          "tmdb_id": 3293850,
-          "character": "Paolina Paz"
+          "name": "Miriam Pires",
+          "tmdb_id": 1169647,
+          "character": "Mother"
         },
         {
-          "name": "Driton 'Tony' Dovolani",
-          "tmdb_id": 2003668,
-          "character": "Johnny Desiderio"
+          "name": "Nuno Leal Maia",
+          "tmdb_id": 632525,
+          "character": "Gabriel"
         },
         {
-          "name": "Lucila Gandolfo",
-          "tmdb_id": 1694293,
-          "character": "Señora Molina"
+          "name": "Fernando Torres",
+          "tmdb_id": 559712,
+          "character": "Americo"
         }
       ]
     }
@@ -99805,84 +99817,99 @@
     "film_id": "the-man-who-wasnt-there",
     "title": "The Man Who Wasn’t There",
     "spine_number": 1301,
-    "director": "Bruce Malmuth",
-    "year": 1983,
+    "director": "Joel Coen",
+    "year": 2001,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/34563-the-man-who-wasn-t-there",
-    "imdb_id": "tt0085892",
-    "tmdb_id": 29610,
+    "imdb_id": "tt0243133",
+    "tmdb_id": 10778,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/7d592dc54f641ed8d21fd97154da5253/4G1wdlR0l1eZjxUM9gAkxMXZAuz3yc_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "Action",
-      "Comedy",
-      "Science Fiction"
+      "Crime",
+      "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Bruce Malmuth",
-          "tmdb_id": 58040
+          "name": "Joel Coen",
+          "tmdb_id": 1223
+        },
+        {
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
         }
       ],
       "writers": [
         {
-          "name": "Stanford Sherman",
-          "tmdb_id": 12805
+          "name": "Joel Coen",
+          "tmdb_id": 1223
+        },
+        {
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
         }
       ],
       "cinematographers": [
         {
-          "name": "Frederick Moore",
-          "tmdb_id": 104335
+          "name": "Roger Deakins",
+          "tmdb_id": 151
         }
       ],
       "editors": [
         {
-          "name": "Harry Keller",
-          "tmdb_id": 67349
+          "name": "Ethan Coen",
+          "tmdb_id": 1224
+        },
+        {
+          "name": "Tricia Cooke",
+          "tmdb_id": 1228
+        },
+        {
+          "name": "Joel Coen",
+          "tmdb_id": 1223
         }
       ],
       "cast": [
         {
-          "name": "Steve Guttenberg",
-          "tmdb_id": 26472,
-          "character": "Sam Cooper"
+          "name": "Billy Bob Thornton",
+          "tmdb_id": 879,
+          "character": "Ed Crane"
         },
         {
-          "name": "Lisa Langlois",
-          "tmdb_id": 28246,
-          "character": "Cindy Worth"
+          "name": "Frances McDormand",
+          "tmdb_id": 3910,
+          "character": "Doris Crane"
         },
         {
-          "name": "Jeffrey Tambor",
-          "tmdb_id": 4175,
-          "character": "Boris Potemkin"
+          "name": "Michael Badalucco",
+          "tmdb_id": 1010,
+          "character": "Frank"
         },
         {
-          "name": "Art Hindle",
-          "tmdb_id": 41256,
-          "character": "Ted Durand"
+          "name": "James Gandolfini",
+          "tmdb_id": 4691,
+          "character": "Big Dave Brewster"
         },
         {
-          "name": "Morgan Hart",
-          "tmdb_id": 104336,
-          "character": "Amanda / Ten Duyck"
+          "name": "Katherine Borowitz",
+          "tmdb_id": 171379,
+          "character": "Ann Nirdlinger Brewster"
         },
         {
-          "name": "Bruce Malmuth",
-          "tmdb_id": 58040,
-          "character": "Fireplug Crusher"
+          "name": "Jon Polito",
+          "tmdb_id": 4253,
+          "character": "Creighton Tolliver"
         },
         {
-          "name": "Ivan Naranjo",
-          "tmdb_id": 104338,
-          "character": "Chief Crusher"
+          "name": "Scarlett Johansson",
+          "tmdb_id": 1245,
+          "character": "Birdy Abundas"
         },
         {
-          "name": "Harold Ayer",
-          "tmdb_id": 98527,
-          "character": "Old Ouside Attendant"
+          "name": "Richard Jenkins",
+          "tmdb_id": 28633,
+          "character": "Walter Abundas"
         }
       ]
     }
@@ -100159,86 +100186,95 @@
     "film_id": "the-blade",
     "title": "The Blade",
     "spine_number": 1305,
-    "director": "William Castle",
-    "year": 1954,
+    "director": "Tsui Hark",
+    "year": 1995,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/34862-the-blade",
-    "imdb_id": "tt0047448",
-    "tmdb_id": 365115,
+    "imdb_id": "tt0112800",
+    "tmdb_id": 42845,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/be16105041ce05aa6eacd9c2681a36ef/l0y37PG7bWURxFcZhWBczZEPM4qsnV_original.jpg",
     "poster_source": "criterion",
     "genres": [
+      "Action",
       "Adventure"
     ],
     "credits": {
       "directors": [
         {
-          "name": "William Castle",
-          "tmdb_id": 12011
+          "name": "Tsui Hark",
+          "tmdb_id": 26760
         }
       ],
       "writers": [
         {
-          "name": "George Worthing Yates",
-          "tmdb_id": 30969
+          "name": "Tsui Hark",
+          "tmdb_id": 26760
         },
         {
-          "name": "DeVallon Scott",
-          "tmdb_id": 231227
+          "name": "So Man-sing",
+          "tmdb_id": 66007
+        },
+        {
+          "name": "Koan Hui",
+          "tmdb_id": 57833
         }
       ],
       "cinematographers": [
         {
-          "name": "Henry Freulich",
-          "tmdb_id": 34174
+          "name": "Venus Keung",
+          "tmdb_id": 66772
         }
       ],
       "editors": [
         {
-          "name": "Gene Havlick",
-          "tmdb_id": 30154
+          "name": "Kam Ma",
+          "tmdb_id": 1121513
+        },
+        {
+          "name": "Tsui Hark",
+          "tmdb_id": 26760
         }
       ],
       "cast": [
         {
-          "name": "Ricardo Montalban",
-          "tmdb_id": 1793,
-          "character": "Pietro Donati"
+          "name": "Vincent Zhao Wenzhuo",
+          "tmdb_id": 82400,
+          "character": "Ding On"
         },
         {
-          "name": "Betta St. John",
-          "tmdb_id": 106625,
-          "character": "Lady Iolanthe Rogliano"
+          "name": "Xiong Xinxin",
+          "tmdb_id": 131732,
+          "character": "Fei Lung"
         },
         {
-          "name": "Rick Jason",
-          "tmdb_id": 161559,
-          "character": "Enzio Siniscola"
+          "name": "Sonny Song",
+          "tmdb_id": 1336684,
+          "character": "Siu Ling"
         },
         {
-          "name": "Carolyn Jones",
-          "tmdb_id": 19109,
-          "character": "Elaine of Siniscola"
+          "name": "Austin Wai Tin-chi",
+          "tmdb_id": 1173203,
+          "character": "Siu Ling's Father"
         },
         {
-          "name": "Whitfield Connor",
-          "tmdb_id": 215332,
-          "character": "Frederick II"
+          "name": "Moses Chan Ho",
+          "tmdb_id": 551869,
+          "character": "Iron Head"
         },
         {
-          "name": "Michael Ansara",
-          "tmdb_id": 16074,
-          "character": "Count Alesandro Siniscola"
+          "name": "Chung Bik-Ha",
+          "tmdb_id": 1346469,
+          "character": "Black Head"
         },
         {
-          "name": "Edgar Barrier",
-          "tmdb_id": 78849,
-          "character": "Baron Rogliano"
+          "name": "Michael Tse Tin-wah",
+          "tmdb_id": 21912,
+          "character": "Skull"
         },
         {
-          "name": "Nelson Leigh",
-          "tmdb_id": 1230014,
-          "character": "Isaac"
+          "name": "Jason Chu Wing-tong",
+          "tmdb_id": 225436,
+          "character": "Fei Tien"
         }
       ]
     }
@@ -100247,96 +100283,100 @@
     "film_id": "point-blank",
     "title": "Point Blank",
     "spine_number": 1306,
-    "director": "Matt Earl Beesley",
-    "year": 1998,
+    "director": "John Boorman",
+    "year": 1967,
     "country": "",
     "criterion_url": "https://www.criterion.com/films/32290-point-blank",
-    "imdb_id": "tt0175047",
-    "tmdb_id": 56125,
+    "imdb_id": "tt0062138",
+    "tmdb_id": 26039,
     "poster_url": "https://s3.amazonaws.com/criterion-production/films/5ef10d2c2cc91ce31015744a301a9ff5/y80ZQfUXaw9jRoOS4YzWO7HQzflU8w_original.jpg",
     "poster_source": "criterion",
     "genres": [
-      "Action",
-      "Drama",
-      "Crime"
+      "Crime",
+      "Thriller",
+      "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Matt Earl Beesley",
-          "tmdb_id": 173957
+          "name": "John Boorman",
+          "tmdb_id": 19665
         }
       ],
       "writers": [
         {
-          "name": "James Bannon",
-          "tmdb_id": 232443
+          "name": "Rafe Newhouse",
+          "tmdb_id": 1750058
         },
         {
-          "name": "Cary Solomon",
-          "tmdb_id": 109016
+          "name": "Alexander Jacobs",
+          "tmdb_id": 66918
         },
         {
-          "name": "Daniel Raskov",
-          "tmdb_id": 232444
+          "name": "David Newhouse",
+          "tmdb_id": 1894115
         },
         {
-          "name": "Chuck Konzelman",
-          "tmdb_id": 109017
+          "name": "John Boorman",
+          "tmdb_id": 19665
+        },
+        {
+          "name": "Lee Marvin",
+          "tmdb_id": 18391
         }
       ],
       "cinematographers": [
         {
-          "name": "Keith L. Smith",
-          "tmdb_id": 932145
+          "name": "Philip H. Lathrop",
+          "tmdb_id": 1939
         }
       ],
       "editors": [
         {
-          "name": "Edward R. Abroms",
-          "tmdb_id": 59444
+          "name": "Henry Berman",
+          "tmdb_id": 1174596
         }
       ],
       "cast": [
         {
-          "name": "Mickey Rourke",
-          "tmdb_id": 2295,
-          "character": "Rudy Ray"
+          "name": "Lee Marvin",
+          "tmdb_id": 18391,
+          "character": "Walker"
         },
         {
-          "name": "Danny Trejo",
-          "tmdb_id": 11160,
-          "character": "Wallace"
+          "name": "Angie Dickinson",
+          "tmdb_id": 4301,
+          "character": "Chris"
         },
         {
-          "name": "Kevin Gage",
-          "tmdb_id": 34839,
-          "character": "Joe Ray"
+          "name": "John Vernon",
+          "tmdb_id": 17580,
+          "character": "Mal Reese"
         },
         {
-          "name": "James Gammon",
-          "tmdb_id": 16433,
-          "character": "Dad"
+          "name": "Keenan Wynn",
+          "tmdb_id": 4966,
+          "character": "Yost"
         },
         {
-          "name": "Frederic Forrest",
-          "tmdb_id": 8351,
-          "character": "Mac Bradford"
+          "name": "Carroll O'Connor",
+          "tmdb_id": 26512,
+          "character": "Brewster"
         },
         {
-          "name": "Paul Ben-Victor",
-          "tmdb_id": 85142,
-          "character": "Howard"
+          "name": "Lloyd Bochner",
+          "tmdb_id": 13399,
+          "character": "Frederick Carter"
         },
         {
-          "name": "Werner Schreyer",
-          "tmdb_id": 232446,
-          "character": "Billy"
+          "name": "Michael Strong",
+          "tmdb_id": 15650,
+          "character": "Stegman"
         },
         {
-          "name": "Michael Wright",
-          "tmdb_id": 2248,
-          "character": "Sonny"
+          "name": "Sharon Acker",
+          "tmdb_id": 131274,
+          "character": "Lynne"
         }
       ]
     }

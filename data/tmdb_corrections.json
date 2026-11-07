@@ -482,5 +482,45 @@
   "the-lovers": {
     "tmdb_id": 2574,
     "note": "Louis Malle 1958 (Les Amants, spine 429), was wrongly matched to Roland Joffé 2015 (79698). Parker Posey's pick: \"Louis Malle's film The Lovers.\""
+  },
+  "show-boat": {
+    "tmdb_id": 31548,
+    "note": "James Whale 1936, was wrongly matched to George Sidney's 1951 remake (17820); found by check_film_matches.py, 2026-11-06"
+  },
+  "wildlife": {
+    "tmdb_id": 417812,
+    "note": "Paul Dano 2018, was wrongly matched to Ryan Darst 2014 (544977); found by check_film_matches.py, 2026-11-06"
+  },
+  "love-affair": {
+    "tmdb_id": 43739,
+    "note": "Leo McCarey 1939, was wrongly matched to Glenn Gordon Caron's 1994 remake (43742); found by check_film_matches.py, 2026-11-06"
+  },
+  "shoeshine": {
+    "tmdb_id": 43469,
+    "note": "Vittorio De Sica 1946 (Sciuscià), was wrongly matched to Tom Abrams 1987 (244687); found by check_film_matches.py, 2026-11-06"
+  },
+  "the-dead": {
+    "tmdb_id": 39507,
+    "note": "John Huston 1987, was wrongly matched to the Ford brothers' 2010 film (74471); found by check_film_matches.py, 2026-11-06"
+  },
+  "captain-blood": {
+    "tmdb_id": 16905,
+    "note": "Michael Curtiz 1935, was wrongly matched to David Smith's 1924 version (327306); found by check_film_matches.py, 2026-11-06"
+  },
+  "kiss-of-the-spider-woman": {
+    "tmdb_id": 11703,
+    "note": "Héctor Babenco 1985, was wrongly matched to Bill Condon's 2025 remake (1214684); found by check_film_matches.py, 2026-11-06"
+  },
+  "the-man-who-wasnt-there": {
+    "tmdb_id": 10778,
+    "note": "Joel Coen 2001, was wrongly matched to Bruce Malmuth 1983 (29610); found by check_film_matches.py, 2026-11-06"
+  },
+  "the-blade": {
+    "tmdb_id": 42845,
+    "note": "Tsui Hark 1995, was wrongly matched to William Castle 1954 (365115); found by check_film_matches.py, 2026-11-06"
+  },
+  "point-blank": {
+    "tmdb_id": 26039,
+    "note": "John Boorman 1967, was wrongly matched to Matt Earl Beesley 1998 (56125); found by check_film_matches.py, 2026-11-06"
   }
 }

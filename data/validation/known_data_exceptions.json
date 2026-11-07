@@ -137,6 +137,11 @@
     },
     "film_missing_director": {
       "the-golden-age-of-television": "Anthology release with multiple directors; leave the aggregate director blank until the data model supports contained-film credits."
+    },
+    "film_criterion_mismatch": {
+      "hunger": "Criterion's page credits cinematographer Sean Bobbitt as director; the film is Steve McQueen's 2008 Hunger (TMDB 10360), which is right.",
+      "martha-graham-dance-on-film": "Criterion's page credits producer Nathan Kroll; the three films were directed by Peter Glushanok and Alexander Hammid, as TMDB 1404798 has it.",
+      "the-gold-rush": "Criterion's page dates the release by the 1942 reissue it includes; the film is Chaplin's 1925 original, which is the year we show."
     }
   },
   "notes": {
