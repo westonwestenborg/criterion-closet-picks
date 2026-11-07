@@ -753,7 +753,7 @@ blockquote p {
 /* Film poster */
 /* "auto" keeps each image's own shape once it loads; 4 / 5 only reserves space
    before then. Criterion covers are 4:5 and TMDB posters 2:3, so a fixed ratio
-   stretched one or the other. */
+   stretched or cropped one or the other. .film-poster-thumb works the same way. */
 .film-poster {
   width: 80px;
   height: auto;
@@ -791,8 +791,7 @@ blockquote p {
 .film-poster-thumb {
   width: 96px;
   height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  aspect-ratio: auto 4 / 5;
   flex-shrink: 0;
 }
 
