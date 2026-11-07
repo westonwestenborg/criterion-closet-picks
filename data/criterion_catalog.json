@@ -27382,89 +27382,91 @@
     "film_id": "the-lovers",
     "title": "The Lovers",
     "spine_number": 429,
-    "director": "Roland Joffé",
-    "year": 2015,
+    "director": "Louis Malle",
+    "year": 1958,
     "country": "",
-    "criterion_url": "",
-    "imdb_id": "tt1321869",
-    "tmdb_id": 79698,
-    "poster_url": "https://image.tmdb.org/t/p/w185/6esL8UH2sXXqbfbaV6bFEUBCDOr.jpg",
+    "criterion_url": "https://www.criterion.com/films/539-the-lovers",
+    "imdb_id": "tt0052556",
+    "tmdb_id": 2574,
+    "poster_url": "https://image.tmdb.org/t/p/w185/5WxZp3XpCnK1EQ6D8XASbpCkrzO.jpg",
     "poster_source": "tmdb",
     "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction",
-      "Romance"
+      "Romance",
+      "Drama"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Roland Joffé",
-          "tmdb_id": 8965
+          "name": "Louis Malle",
+          "tmdb_id": 15389
         }
       ],
       "writers": [
         {
-          "name": "Roland Joffé",
-          "tmdb_id": 8965
+          "name": "Louise de Vilmorin",
+          "tmdb_id": 26151
         }
       ],
       "cinematographers": [
         {
-          "name": "Ben Nott",
-          "tmdb_id": 61919
-        },
-        {
-          "name": "Michael Coulter",
-          "tmdb_id": 7021
+          "name": "Henri Decaë",
+          "tmdb_id": 1657
         }
       ],
       "editors": [
         {
-          "name": "John Scott",
-          "tmdb_id": 30461
+          "name": "Léonide Azar",
+          "tmdb_id": 15394
+        },
+        {
+          "name": "Madeleine Bibollet",
+          "tmdb_id": 26188
+        },
+        {
+          "name": "Kenout Peltier",
+          "tmdb_id": 25953
         }
       ],
       "cast": [
         {
-          "name": "Josh Hartnett",
-          "tmdb_id": 2299,
-          "character": "James Stewart / Jay Fennel"
+          "name": "Jeanne Moreau",
+          "tmdb_id": 14812,
+          "character": "Jeanne Tournier"
         },
         {
-          "name": "Simone Kessell",
-          "tmdb_id": 76850,
-          "character": "Clara Coldstream"
+          "name": "Alain Cuny",
+          "tmdb_id": 5964,
+          "character": "Henri Tournier"
         },
         {
-          "name": "Tamsin Egerton",
-          "tmdb_id": 66442,
-          "character": "Laura Fennel"
+          "name": "José Luis de Vilallonga",
+          "tmdb_id": 1942,
+          "character": "Raoul Flores"
         },
         {
-          "name": "Alice Englert",
-          "tmdb_id": 587823,
-          "character": "Dolly"
+          "name": "Jean-Marc Bory",
+          "tmdb_id": 26163,
+          "character": "Bernard Dubois-Lambert"
         },
         {
-          "name": "Bipasha Basu",
-          "tmdb_id": 85035,
-          "character": "Tulaja Naik"
+          "name": "Judith Magre",
+          "tmdb_id": 26165,
+          "character": "Maggy Thiebaut-Leroy"
         },
         {
-          "name": "Abhay Deol",
-          "tmdb_id": 79003,
-          "character": "Udaji"
+          "name": "Gaston Modot",
+          "tmdb_id": 11543,
+          "character": "Coudray"
         },
         {
-          "name": "Tehmina Sunny",
-          "tmdb_id": 587822,
-          "character": "Sonubai"
+          "name": "Michèle Girardon",
+          "tmdb_id": 26166,
+          "character": "Secretary"
         },
         {
-          "name": "Shane Briant",
-          "tmdb_id": 30576,
-          "character": "Governor of Bombay"
+          "name": "Claude Mansard",
+          "tmdb_id": 3834,
+          "character": "Marcelot"
         }
       ]
     }
@@ -66595,11 +66597,13 @@
     "director": "",
     "year": null,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/boxsets/1282-100-years-of-olympic-films",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": null,
-    "genres": []
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/1914-0e690e385d0d5fd8d914620001499b2b/gop9bRfbqR6QQ0bf5p0k35AykGn3Fi_original.jpg",
+    "poster_source": "criterion",
+    "genres": [],
+    "is_box_set": true
   },
   {
     "film_id": "the-philadelphia-story",
@@ -66999,7 +67003,7 @@
     "director": "Ken Loach",
     "year": 2016,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/29357-i-daniel-blake",
     "imdb_id": "tt5168192",
     "tmdb_id": 374473,
     "poster_url": "https://image.tmdb.org/t/p/w185/nu3WVABXz2W85N6JXTZOT1aWS3b.jpg",

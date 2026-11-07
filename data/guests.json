@@ -7857,5 +7857,20 @@
         "youtube_timestamp_url": "https://www.youtube.com/watch?v=3dv1vVkvS1U&t=0"
       }
     ]
+  },
+  {
+    "name": "Parker Posey",
+    "slug": "parker-posey",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/yoFt75JfGUqQ6EV8qN6fckQuElk.jpg",
+    "youtube_video_id": "7Xrml8gDD-M",
+    "youtube_video_url": "https://www.youtube.com/watch?v=7Xrml8gDD-M",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-06",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1024-parker-posey-s-closet-picks",
+    "pick_count": 17,
+    "x_handle": "ParkerPosey",
+    "remarks": []
   }
 ]

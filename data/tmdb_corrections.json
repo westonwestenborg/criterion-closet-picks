@@ -478,5 +478,9 @@
   "take-out": {
     "tmdb_id": 37736,
     "note": "Sean Baker / Shih-Ching Tsou 2004, was wrongly matched to Manolo Marceno 2021"
+  },
+  "the-lovers": {
+    "tmdb_id": 2574,
+    "note": "Louis Malle 1958 (Les Amants, spine 429), was wrongly matched to Roland Joffé 2015 (79698). Parker Posey's pick: \"Louis Malle's film The Lovers.\""
   }
 }
