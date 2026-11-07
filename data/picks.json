@@ -687,8 +687,8 @@
     "start_timestamp": 227,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=CcscEY2KoS8&t=227",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "bill-hader",
@@ -905,8 +905,8 @@
     "start_timestamp": 133,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=y2TK8IHWIcY&t=133",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "bill-hader",
@@ -3010,8 +3010,8 @@
     "start_timestamp": 51,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=NnldiqFIStY&t=51",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "lucy-liu",
@@ -19063,8 +19063,8 @@
     "start_timestamp": 246,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=h5R5ydQZEPA&t=246",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "jr",
@@ -36327,8 +36327,8 @@
     "start_timestamp": 191,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=gzdBFeaNFSA&t=191",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "kyle-maclachlan",
@@ -55353,8 +55353,8 @@
     "start_timestamp": 10,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=m6bQdKaRlsw&t=10",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "jia-zhangke",
@@ -55473,8 +55473,8 @@
     "start_timestamp": 29,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=kGZvmngLfBI&t=29",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "johnnie-to",
@@ -64871,8 +64871,8 @@
     "start_timestamp": 278,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=uJqqkVAgCcc&t=278",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "john-leguizamo",
@@ -64911,8 +64911,8 @@
     "start_timestamp": 107,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=VyE1nBqRNIQ&t=107",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Essential Fellini"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "john-leguizamo",
