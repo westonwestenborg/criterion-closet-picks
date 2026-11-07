@@ -486,8 +486,13 @@ def enrich_film(client: TMDBClient, film: dict, genres: dict, criterion_url_look
             # Clear stale data so it gets re-fetched below. "year" is included
             # because an override usually means we had the wrong film entirely,
             # so the year we carried belongs to that wrong film.
-            for key in ("poster_url", "genres", "imdb_id", "credits", "director", "year"):
+            for key in ("genres", "imdb_id", "credits", "director", "year"):
                 film.pop(key, None)
+            # A cover from the film's own Criterion page does not depend on the
+            # TMDB match, so it stays right when the match changes.
+            poster_url = film.get("poster_url") or ""
+            if film.get("poster_source") != "criterion" or "image.tmdb.org" in poster_url:
+                film.pop("poster_url", None)
             year = None
 
     # Skip if already fully enriched (including credits)
