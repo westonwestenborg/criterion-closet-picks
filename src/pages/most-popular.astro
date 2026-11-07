@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getFilmsSortedByPickCount } from '../lib/data';
+import { getMostPickedFilms } from '../lib/data';
 import { collectionPageData, mostPopularDescription } from '../lib/seo';
 
-const films = getFilmsSortedByPickCount();
+// The top 20, plus any film tied with the 20th.
+const films = getMostPickedFilms(20);
 const description = mostPopularDescription(films);
 const structuredData = collectionPageData({
   site: Astro.site!,
@@ -17,7 +18,8 @@ const structuredData = collectionPageData({
 <BaseLayout title="Most-Picked Films in the Criterion Closet" description={description} ogImage="/og/most-popular.jpg" structuredData={structuredData}>
   <h1>Most Popular</h1>
   <p>
-    Films ranked by how many Closet Picks guests chose them. The ultimate peer-reviewed film recommendations.
+    The {films.length} films Closet Picks guests chose most often. The ultimate peer-reviewed film recommendations.
+    Every other pick is in the <a href="/films/">film index</a>.
   </p>
 
   <div class="ranked-list">

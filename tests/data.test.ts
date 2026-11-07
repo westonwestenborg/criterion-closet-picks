@@ -11,6 +11,7 @@ import {
   getBestPickForGuest,
   isGuestPublishable,
   isPickOfBoxSetItself,
+  topWithTies,
 } from '../src/lib/data';
 import type { Guest } from '../src/lib/data';
 
@@ -404,6 +405,22 @@ describe('getRecentGuests', () => {
     });
     expect(getRecentGuests(2).map((g) => g.slug)).toEqual(['new', 'mid']);
     expect(getRecentGuests(10).map((g) => g.slug)).toEqual(['new', 'mid', 'old']);
+  });
+});
+
+describe('topWithTies', () => {
+  const ranked = [21, 18, 18, 16, 12, 12, 12, 11].map((pick_count, i) => ({ id: i, pick_count }));
+
+  it('keeps every film tied with the nth', () => {
+    expect(topWithTies(ranked, 5).map((f) => f.pick_count)).toEqual([21, 18, 18, 16, 12, 12, 12]);
+  });
+
+  it('stops at n when the nth is not tied with the next', () => {
+    expect(topWithTies(ranked, 4).map((f) => f.pick_count)).toEqual([21, 18, 18, 16]);
+  });
+
+  it('returns the whole list when it is shorter than n', () => {
+    expect(topWithTies(ranked, 20)).toHaveLength(8);
   });
 });
 

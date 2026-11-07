@@ -162,7 +162,7 @@ export function filmsIndexDescription(films: Film[]): string {
 /** `films` sorted by pick count, most picked first. */
 export function mostPopularDescription(films: Film[]): string {
   const top = films.slice(0, 3).map((f) => `${f.title} (${f.pick_count} ${plural(f.pick_count, 'pick')})`);
-  return `The ${films.length} films picked in the Criterion Closet, ranked by how many guests chose each one. The top three: ${joinList(top)}.`;
+  return `The ${films.length} most-picked films in the Criterion Closet, ranked by guest picks. The top three: ${joinList(top)}.`;
 }
 
 // --- Structured data (JSON-LD) ---

@@ -691,6 +691,21 @@ export function getFilmsSortedByPickCount(): Film[] {
 }
 
 /**
+ * The first `n` of a list already sorted by pick count, plus any film tied with
+ * the nth. Cutting inside a tie would keep one 12-pick film and drop another
+ * for no reason the reader can see.
+ */
+export function topWithTies<T extends { pick_count: number }>(sorted: T[], n: number): T[] {
+  if (sorted.length <= n) return sorted;
+  const cutoff = sorted[n - 1].pick_count;
+  return sorted.filter((f) => f.pick_count >= cutoff);
+}
+
+export function getMostPickedFilms(n: number): Film[] {
+  return topWithTies(getFilmsSortedByPickCount(), n);
+}
+
+/**
  * A profession needs this many guests to earn its own filter chip. Below it, the
  * chip would be a dead end — you can already see that one guest in the full
  * list. Their pages still show the precise label; only the filter collapses
