@@ -236,6 +236,30 @@ def detect_box_set_for_pick(
     return None
 
 
+def is_outside_box(
+    pick: dict,
+    box_set_name: str,
+    url_map: dict[str, str],
+    catalog_by_id: dict[str, dict],
+    catalog_by_url: dict[str, dict],
+) -> bool:
+    """
+    True when the box set's Criterion page lists its films and this film is
+    not one of them.
+
+    A title can name two films. Essential Fellini holds Fellini's Roma (1972),
+    and "Roma" in KNOWN_BOX_SETS also caught Alfonso Cuarón's Roma (2018), so
+    nine picks of Cuarón's film said "Part of Essential Fellini" and its page
+    showed other guests' quotes about the Fellini box.
+    """
+    box_url = url_map.get(box_set_name) or pick.get("box_set_criterion_url") or ""
+    box = catalog_by_url.get(box_url) or {}
+    members = {f.get("criterion_url") for f in box.get("included_films") or []}
+    film = catalog_by_id.get(pick.get("film_id", "")) or {}
+    film_url = film.get("criterion_url") or ""
+    return bool(members) and "/films/" in film_url and film_url not in members
+
+
 def group_picks_for_guest(
     guest_picks: list[dict],
     catalog_map: dict[str, str],
@@ -257,6 +281,15 @@ def group_picks_for_guest(
     for position, pick in enumerate(guest_picks):
         pick["_source_position"] = position
         box_set_name = detect_box_set_for_pick(pick, catalog_map, known_title_map, raw_names)
+        if (
+            box_set_name
+            and not pick.get("box_set_film_count")
+            and is_outside_box(pick, box_set_name, url_map, catalog_by_id, catalog_by_url)
+        ):
+            box_set_name = None
+            pick["is_box_set"] = False
+            pick["box_set_name"] = None
+            pick.pop("box_set_criterion_url", None)
         ft = normalize_smart_quotes(pick.get("film_title", ""))
 
         # A pick whose own Criterion link is a /boxsets/ page IS the whole box,
