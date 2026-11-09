@@ -464,8 +464,20 @@ for f in (PICKS_FILE, PICKS_RAW_FILE):
     d = load_json(f); n = apply_pick_overrides(d); save_json(f, d)
     print(f.name, n)"
 .venv/bin/python scripts/extract_quotes.py --guest-slug SLUG --force
+.venv/bin/python scripts/backfill_films.py
 .venv/bin/python scripts/group_box_sets.py
 ```
+
+`backfill_films.py` fills in the new film's `catalog_title` and
+`catalog_spine`, which the override clears. A forced re-extraction can also
+rewrite the guest's other quotes, so read the diff and restore any quote it
+made worse. Flying Lotus's Jellyfish Eyes quote came back as "I did want to
+watch this one" where the transcript says "didn't".
+
+The bar above is about evidence, and a transcript line is not the only kind.
+The cover in the guest's hand counts when you can read it. Flying Lotus only
+says "Boom, Dreams, yeah", but at 1:07 he holds Kurosawa's painted rainbow
+cover, not Bergman's black-and-white one.
 
 The `note` field is the whole point of the file — it is the only record of why
 we disagree with the primary source. Write it for someone who will read it in a

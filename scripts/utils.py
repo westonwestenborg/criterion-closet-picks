@@ -383,6 +383,12 @@ def apply_pick_overrides(picks: list[dict]) -> int:
             # let extract_quotes.py re-derive one for the film now in the slot.
             pick["quote"] = ""
             pick["extraction_confidence"] = "none"
+            # The match markers describe the replaced film too: Flying Lotus's
+            # Kurosawa pick kept Bergman's catalog title and no spine. Clearing
+            # them lets backfill_films.py re-resolve the new film by its URL.
+            pick["match_method"] = None
+            pick["catalog_title"] = None
+            pick["catalog_spine"] = None
             applied += 1
             break
     return applied
