@@ -1,5 +1,14 @@
 {
   "_comment": "Per-guest corrections to what Criterion's collection page lists. Criterion.com is the sole primary source for picks, so an entry here is a deliberate decision to contradict it, and needs evidence from the video itself. Keyed by guest_slug; each entry replaces the pick at from_criterion_url with the film at to_criterion_url. Applied by scrape_criterion_picks.py after every scrape, so the correction survives a re-scrape.",
+  "flying-lotus": [
+    {
+      "from_criterion_url": "https://www.criterion.com/films/28206-dreams",
+      "to_criterion_url": "https://www.criterion.com/films/28700-akira-kurosawa-s-dreams",
+      "to_film_id": "akira-kurosawas-dreams",
+      "to_title": "Akira Kurosawa’s Dreams",
+      "note": "Criterion's page links Ingmar Bergman's Dreams (1955), but the video has Akira Kurosawa's Dreams (1990). The transcript does not settle it: at 1:04 Flying Lotus says only 'Boom, Dreams, yeah.' The cover does. At 1:07 he pulls a white Blu-ray case with a painted landscape across the top and a black brush character below it, which is Kurosawa's Criterion cover (spine 842). Bergman's Dreams cover is a black-and-white photo of two faces. Shown both covers unlabeled next to the clip, Gemini also picked Kurosawa's. The episode is from January 2018, and Criterion's page for Bergman's Dreams lists only Ingmar Bergman's Cinema, which came out in November 2018. Checked 2026-11-09."
+    }
+  ],
   "slavoj-zizek": [
     {
       "from_criterion_url": "https://www.criterion.com/films/252-stranger-than-paradise",

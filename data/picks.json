@@ -42468,11 +42468,11 @@
   {
     "guest_slug": "flying-lotus",
     "guest_name": "Flying Lotus",
-    "film_id": "dreams",
-    "film_title": "Dreams",
-    "catalog_title": "Dreams",
-    "catalog_spine": null,
-    "criterion_film_url": "https://www.criterion.com/films/28206-dreams",
+    "film_id": "akira-kurosawas-dreams",
+    "film_title": "Akira Kurosawa’s Dreams",
+    "catalog_title": "Akira Kurosawa’s Dreams",
+    "catalog_spine": 842,
+    "criterion_film_url": "https://www.criterion.com/films/28700-akira-kurosawa-s-dreams",
     "match_method": "criterion_url",
     "letterboxd_url": "",
     "source": "criterion",
@@ -42482,8 +42482,8 @@
     "start_timestamp": 64,
     "youtube_timestamp_url": "https://www.youtube.com/watch?v=MAysUV9xN6c&t=64",
     "extraction_confidence": "high",
-    "is_box_set": true,
-    "box_set_name": "Ingmar Bergman's Cinema"
+    "is_box_set": false,
+    "box_set_name": null
   },
   {
     "guest_slug": "flying-lotus",
@@ -42650,7 +42650,7 @@
     "guest_name": "Slavoj Žižek",
     "film_id": "the-ice-storm",
     "film_title": "The Ice Storm",
-    "catalog_title": "Stranger Than Paradise",
+    "catalog_title": "The Ice Storm",
     "catalog_spine": 426,
     "criterion_film_url": "https://www.criterion.com/films/336-the-ice-storm",
     "match_method": "criterion_url",
