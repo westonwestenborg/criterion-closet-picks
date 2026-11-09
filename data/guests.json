@@ -7872,5 +7872,26 @@
     "pick_count": 17,
     "x_handle": "ParkerPosey",
     "remarks": []
+  },
+  {
+    "name": "Dustin Hoffman",
+    "slug": "dustin-hoffman",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/yFjTzJHE6AFbwQifOlnNDzmiwlq.jpg",
+    "youtube_video_id": "5I0PrEUlD8I",
+    "youtube_video_url": "https://www.youtube.com/watch?v=5I0PrEUlD8I",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-09",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1025-dustin-hoffman-s-closet-picks",
+    "pick_count": 4,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "My name is Dustin Hoffman, and the truth is I feel very lucky to be in the Closet. These are stories I’m not very happy to recount, but I will.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=5I0PrEUlD8I&t=0"
+      }
+    ]
   }
 ]

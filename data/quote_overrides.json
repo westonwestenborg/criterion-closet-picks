@@ -68,5 +68,12 @@
       "start_timestamp": 152,
       "note": "The October 2026 re-extraction gave Matewan his whole Lone Star story as well: the audition with John Sayles, Buddy Deeds, and the call about A Time to Kill on the Lone Star set, ending 'And right next to that we have Lone Star... We already got Matewan of his.' Only the opening 'John Sayles. Yeah. Matewan.' is about Matewan; the story stays on lone-star."
     }
+  },
+  "dustin-hoffman": {
+    "being-there": {
+      "quote": "Being There. Hal Ashby was my first choice to direct Tootsie, and he said yes. And they wanted to– and I’d never heard the word before, they wanted to impound him, or impound us from making Tootsie, which they threatened to do if we stayed with Hal Ashby. So he had to leave, and I became very close friends with him, and he was the most wonderful man. I have a friend I’ve had for years by the name of Warren Beatty, and Warren is a very bright man who originally wanted to be a doctor. And he said to Hal Ashby, when they were working together or thinking of working together, he looked at Hal’s arms and he said, “Your arms are orange or have an orange tint to them, I think you should go to the doctor to have that looked at.” It was one of the symptoms of having pancreatic cancer. I had a contract with Warner Bros. which allowed me to use their private planes, and I was able to get a private plane and take Hal straight to Johns Hopkins, which was supposed to be the best hospital in the world for pancreatic cancer. And I remember him being in a private room and he said, “Let’s get out of here.” Baltimore, I think, was famous for oysters or something. He said, “Let’s go get some oysters.” He kept saying, “Let’s get out of here.” The last thing I’ll say about him is that he knew, finally, that he was dying, and he had a party. He lived at the beach, at a beach house, and he invited all the people he knew or respected, as a goodbye party. So in that spirit, I’m going to rewatch Being There.",
+      "start_timestamp": 15,
+      "note": "Only the capital is corrected: he says \"a contract with Warner Bros. which allowed me to use their private planes\", one sentence, and the transcript has lowercase \"which\". The cleaner (fix_capitalization in scripts/clean_quotes.py) reads the period in \"Bros.\" as a sentence end and capitalizes \"Which\" on every run, so the fix has to live here to hold."
+    }
   }
 }
