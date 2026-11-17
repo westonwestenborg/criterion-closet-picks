@@ -171,6 +171,7 @@ KNOWN_VIDEO_IDS = {
     "john-turturro": {"youtube_video_id": "3dv1vVkvS1U"},
     "parker-posey": {"youtube_video_id": "7Xrml8gDD-M"},
     "dustin-hoffman": {"youtube_video_id": "5I0PrEUlD8I"},
+    "jessica-chastain": {"youtube_video_id": "Ign29M8zcqg"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -192,6 +193,7 @@ KNOWN_CRITERION_URLS = {
     "john-turturro": "https://www.criterion.com/shop/collection/1023-john-turturro-s-closet-picks",
     "parker-posey": "https://www.criterion.com/shop/collection/1024-parker-posey-s-closet-picks",
     "dustin-hoffman": "https://www.criterion.com/shop/collection/1025-dustin-hoffman-s-closet-picks",
+    "jessica-chastain": "https://www.criterion.com/shop/collection/1026-jessica-chastain-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
     "roger-and-james-deakins": "https://www.criterion.com/shop/collection/566-roger-james-deakins-s-closet-picks",
