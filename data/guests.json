@@ -7893,5 +7893,28 @@
         "youtube_timestamp_url": "https://www.youtube.com/watch?v=5I0PrEUlD8I&t=0"
       }
     ]
+  },
+  {
+    "name": "Jessica Chastain",
+    "slug": "jessica-chastain",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/lodMzLKSdrPcBry6TdoDsMN3Vge.jpg",
+    "youtube_video_id": "Ign29M8zcqg",
+    "youtube_video_url": "https://www.youtube.com/watch?v=Ign29M8zcqg",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-16",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1026-jessica-chastain-s-closet-picks",
+    "pick_count": 9,
+    "x_handle": "jes_chastain",
+    "threads_handle": "jessicachastain",
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "I am Jessica Chastain. I’m in the Criterion Closet, which is very exciting. I am going to look for films today with a focus on the relationship between a director and an actor, probably an actress, and how a collaboration brings forth a phenomenal performance.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=Ign29M8zcqg&t=0"
+      }
+    ]
   }
 ]

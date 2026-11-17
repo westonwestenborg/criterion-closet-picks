@@ -75,5 +75,12 @@
       "start_timestamp": 15,
       "note": "Only the capital is corrected: he says \"a contract with Warner Bros. which allowed me to use their private planes\", one sentence, and the transcript has lowercase \"which\". The cleaner (fix_capitalization in scripts/clean_quotes.py) reads the period in \"Bros.\" as a sentence end and capitalizes \"Which\" on every run, so the fix has to live here to hold."
     }
+  },
+  "jessica-chastain": {
+    "secret-sunshine": {
+      "quote": "Here’s another one of my favorite actresses: Jeon Do-yeon. She is one of the best there is. So this film is Lee Chang-dong. It’s a master class on grief. It goes into all these unexpected places of grief, where you have to kind of fit into ordinary life. What she does, I don’t know that I’ve ever seen grief portrayed like this. And you’ll see a lot, too, in the filmmaking. There’s a lot done with shadows, I remember that the first time I saw it, because I always wonder– I’m like, “Why do they name a film Secret Sunshine?” You know, sometimes someone says the title of a film in a line and you’re like, “Okay.” But this… You see– and there’s a lot of shadows, and even, when you think about it, when exploring grief, this idea of there being secret sunshine, is…",
+      "start_timestamp": 276,
+      "note": "Only the capital is corrected: near the end she says \"when exploring grief, this idea of there being secret sunshine\", talking about the idea rather than naming the film, and the transcript (Criterion's own subtitles) has it lowercase. The cleaner (fix_film_titles in scripts/clean_quotes.py) capitalizes a guest's own pick title wherever it appears, so it writes \"Secret Sunshine\" here on every run, and the fix has to live here to hold. Her earlier \"Why do they name a film Secret Sunshine?\" is the title and keeps its capitals."
+    }
   }
 }
