@@ -94,7 +94,9 @@ def _mid_sentence_spans(text: str, word: str) -> list[re.Match]:
     out = []
     for m in re.finditer(r"\b" + re.escape(word) + r"\b", text, re.IGNORECASE):
         before = text[: m.start()].rstrip()
-        if before and before[-1] in SENTENCE_END:
+        # The start of the text is a sentence start too: Luis Guzman's quote
+        # opens "Dreams come true", and that capital is right.
+        if not before or before[-1] in SENTENCE_END:
             continue
         out.append(m)
     return out
