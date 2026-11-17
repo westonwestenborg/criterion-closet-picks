@@ -102592,11 +102592,17 @@
     "year": null,
     "country": "",
     "criterion_url": "",
-    "imdb_id": null,
-    "tmdb_id": null,
-    "poster_url": null,
+    "imdb_id": "tt10551104",
+    "tmdb_id": 1827522,
+    "poster_url": "https://image.tmdb.org/t/p/w185/95Dy9udfnI119S2WcUNmQY2lS3d.jpg",
     "genres": [],
-    "credits": null
+    "credits": {
+      "directors": [],
+      "writers": [],
+      "cinematographers": [],
+      "editors": [],
+      "cast": []
+    }
   },
   {
     "film_id": "ali-fear-eats-the-soul",
