@@ -7916,5 +7916,20 @@
         "youtube_timestamp_url": "https://www.youtube.com/watch?v=Ign29M8zcqg&t=0"
       }
     ]
+  },
+  {
+    "name": "Jordan Firstman",
+    "slug": "jordan-firstman",
+    "profession": "actor",
+    "photo_url": "https://image.tmdb.org/t/p/w185/6yDqPgPQ26htKIdPFIlezn5mS6X.jpg",
+    "youtube_video_id": "ai43GMWkS3Y",
+    "youtube_video_url": "https://www.youtube.com/watch?v=ai43GMWkS3Y",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-18",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1028-jordan-firstman-s-closet-picks",
+    "pick_count": 7,
+    "threads_handle": "jtfirstman",
+    "remarks": []
   }
 ]
