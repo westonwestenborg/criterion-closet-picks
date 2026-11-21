@@ -7931,5 +7931,26 @@
     "pick_count": 7,
     "threads_handle": "jtfirstman",
     "remarks": []
+  },
+  {
+    "name": "James Gray",
+    "slug": "james-gray",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/41O0InQ9BA1UBaZsA5ezNqLJpv3.jpg",
+    "youtube_video_id": "rMD10CcVjm4",
+    "youtube_video_url": "https://www.youtube.com/watch?v=rMD10CcVjm4",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-20",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1029-james-gray-s-closet-picks",
+    "pick_count": 14,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "I’m James Gray and I’m really nervous. I don’t know why. Because I’m talking into a camera, but I own a lot of these, let me just say, and I’m probably going to pick some that I actually already have because the idea is not getting, like, a free disc, the idea is letting you guys know something’s great, if you don’t know it. And even if you do, remind you that it’s great.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=rMD10CcVjm4&t=0"
+      }
+    ]
   }
 ]

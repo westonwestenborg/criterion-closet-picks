@@ -538,87 +538,84 @@
     "film_id": "a-night-to-remember",
     "title": "A Night to Remember",
     "spine_number": 7,
-    "director": "Richard Wallace",
-    "year": 1942,
+    "director": "Roy Ward Baker",
+    "year": 1958,
     "country": "",
-    "criterion_url": "",
-    "imdb_id": "tt0036203",
-    "tmdb_id": 77121,
-    "poster_url": "https://image.tmdb.org/t/p/w185/mVHxgQk13KUMETPLf7GPgG8sObv.jpg",
+    "criterion_url": "https://www.criterion.com/films/521-a-night-to-remember",
+    "imdb_id": "tt0051994",
+    "tmdb_id": 10971,
+    "poster_url": "https://image.tmdb.org/t/p/w185/6fDhJAz6AuYWj3hAnvUL42Xlxfj.jpg",
     "poster_source": "tmdb",
     "genres": [
-      "Comedy",
-      "Mystery"
+      "Drama",
+      "Action",
+      "History"
     ],
     "credits": {
       "directors": [
         {
-          "name": "Richard Wallace",
-          "tmdb_id": 95723
+          "name": "Roy Ward Baker",
+          "tmdb_id": 26134
         }
       ],
       "writers": [
         {
-          "name": "Richard Flournoy",
-          "tmdb_id": 34171
-        },
-        {
-          "name": "Jack Henley",
-          "tmdb_id": 34426
+          "name": "Eric Ambler",
+          "tmdb_id": 41416
         }
       ],
       "cinematographers": [
         {
-          "name": "Joseph Walker",
-          "tmdb_id": 17761
+          "name": "Geoffrey Unsworth",
+          "tmdb_id": 243
         }
       ],
       "editors": [
         {
-          "name": "Charles Nelson",
-          "tmdb_id": 20601
+          "name": "Sidney Hayers",
+          "tmdb_id": 43792
         }
       ],
       "cast": [
         {
-          "name": "Loretta Young",
-          "tmdb_id": 85848,
-          "character": "Nancy Troy"
+          "name": "Kenneth More",
+          "tmdb_id": 67676,
+          "character": "Second Officer Charles Herbert Lightoller"
         },
         {
-          "name": "Brian Aherne",
-          "tmdb_id": 32923,
-          "character": "Jeff Troy"
+          "name": "Ronald Allen",
+          "tmdb_id": 31297,
+          "character": "Mr. Clarke"
         },
         {
-          "name": "Jeff Donnell",
-          "tmdb_id": 14576,
-          "character": "Anne Carstairs"
+          "name": "Robert Ayres",
+          "tmdb_id": 67677,
+          "character": "Maj. Arthur Peuchen"
         },
         {
-          "name": "William Wright",
-          "tmdb_id": 105794,
-          "character": "Scott Carstairs"
+          "name": "Honor Blackman",
+          "tmdb_id": 9907,
+          "character": "Mrs. Liz Lucas"
         },
         {
-          "name": "Sidney Toler",
-          "tmdb_id": 34747,
-          "character": "Inspector Hankins"
+          "name": "Anthony Bushell",
+          "tmdb_id": 96758,
+          "character": "Capt. Arthur Rostron"
         },
         {
-          "name": "Gale Sondergaard",
-          "tmdb_id": 25173,
-          "character": "Mrs. Devoe"
+          "name": "John Cairney",
+          "tmdb_id": 96759,
+          "character": "Mr. Murphy"
         },
         {
-          "name": "Donald MacBride",
-          "tmdb_id": 34234,
-          "character": "Bolling"
+          "name": "Jill Dixon",
+          "tmdb_id": 96760,
+          "character": "Mrs. Clarke"
         },
         {
-          "name": "Lee Patrick",
-          "tmdb_id": 5740,
-          "character": "Polly Franklin"
+          "name": "Jane Downs",
+          "tmdb_id": 96761,
+          "character": "Mrs. Sylvia Lightoller"
         }
       ]
     }
@@ -21439,7 +21436,7 @@
     "director": "Francesco Rosi",
     "year": 1963,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/films/799-hands-over-the-city",
     "imdb_id": "tt0057286",
     "tmdb_id": 58383,
     "poster_url": "https://image.tmdb.org/t/p/w185/zR9uj0dtm5osrrpM7zwO5ndAtbh.jpg",

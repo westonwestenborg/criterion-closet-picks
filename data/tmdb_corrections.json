@@ -522,5 +522,9 @@
   "point-blank": {
     "tmdb_id": 26039,
     "note": "John Boorman 1967, was wrongly matched to Matt Earl Beesley 1998 (56125); found by check_film_matches.py, 2026-11-06"
+  },
+  "a-night-to-remember": {
+    "tmdb_id": 10971,
+    "note": "Roy Ward Baker 1958 Titanic film, was wrongly matched to Richard Wallace 1942 (77121); found by check_film_matches.py, 2026-11-20"
   }
 }
