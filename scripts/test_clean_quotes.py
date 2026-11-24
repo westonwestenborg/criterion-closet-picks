@@ -80,6 +80,26 @@ class FixFilmTitlesTest(unittest.TestCase):
             "Mother is the one I keep coming back to",
         )
 
+    def test_title_inside_the_guests_own_longer_title_is_left_alone(self):
+        # "The Piano" is inside "Shoot the Piano Player", so the containment test
+        # above treated it as the guest's own pick and Caleb Deschanel's quote
+        # came out "Shoot The Piano Player".
+        title_map = {
+            "the piano": "The Piano",
+            "shoot the piano player": "Shoot the Piano Player",
+        }
+        text = "Then I want to find shoot the piano player, which is right here."
+
+        self.assertEqual(
+            fix_film_titles(text, title_map, "Shoot the Piano Player"),
+            "Then I want to find Shoot the Piano Player, which is right here.",
+        )
+        # Same result whichever title the loop reaches first.
+        self.assertEqual(
+            fix_film_titles(text, dict(reversed(title_map.items())), "Shoot the Piano Player"),
+            "Then I want to find Shoot the Piano Player, which is right here.",
+        )
+
 
 class FillerAndPunctuationTest(unittest.TestCase):
     """Gemini 4 Argon keeps the guest's "uh"s; removing one must not leave its commas."""

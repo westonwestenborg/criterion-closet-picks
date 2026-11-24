@@ -207,6 +207,10 @@ def fix_film_titles(
     A title listed in ambiguous_film_titles.json is only substituted when it is
     the guest's own pick (own_title), because otherwise the match is far more
     likely to be the ordinary English word than a reference to the film.
+
+    When the ambiguous title is only part of the own title, the words inside the
+    own title are left alone: "The Piano" sits inside "Shoot the Piano Player",
+    and substituting it there produced "Shoot The Piano Player".
     """
     ambiguous = load_ambiguous_titles()
     own_low = (own_title or "").lower()
@@ -220,8 +224,20 @@ def fix_film_titles(
         # titles that can't possibly match before paying for the regex.
         if lower_title not in low:
             continue
-        # Use word boundaries to avoid matching inside other words
-        new_text = _title_pattern(lower_title).sub(correct_title, text)
+        pattern = _title_pattern(lower_title)
+        if lower_title in ambiguous and lower_title != own_low:
+            inside_own = [
+                m.span() for m in re.finditer(re.escape(own_low), text, re.IGNORECASE)
+            ]
+            new_text = pattern.sub(
+                lambda m: m.group(0)
+                if any(s <= m.start() and m.end() <= e for s, e in inside_own)
+                else correct_title,
+                text,
+            )
+        else:
+            # Use word boundaries to avoid matching inside other words
+            new_text = pattern.sub(correct_title, text)
         if new_text != text:
             text = new_text
             low = text.lower()  # keep in sync; a correction may change letters
