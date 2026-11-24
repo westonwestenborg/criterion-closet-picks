@@ -7952,5 +7952,26 @@
         "youtube_timestamp_url": "https://www.youtube.com/watch?v=rMD10CcVjm4&t=0"
       }
     ]
+  },
+  {
+    "name": "Caleb Deschanel",
+    "slug": "caleb-deschanel",
+    "profession": "cinematographer",
+    "photo_url": "https://image.tmdb.org/t/p/w185/sY2ZKhy94GRy7CK2xseLtC67QjN.jpg",
+    "youtube_video_id": "HvI220WUu7M",
+    "youtube_video_url": "https://www.youtube.com/watch?v=HvI220WUu7M",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-23",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1030-caleb-deschanel-s-closet-picks",
+    "pick_count": 5,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 271,
+        "text": "All these movies influenced me in so many ways and continue to inspire me.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=HvI220WUu7M&t=271"
+      }
+    ]
   }
 ]
