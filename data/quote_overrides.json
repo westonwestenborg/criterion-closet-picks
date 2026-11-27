@@ -82,5 +82,17 @@
       "start_timestamp": 276,
       "note": "Only the capital is corrected: near the end she says \"when exploring grief, this idea of there being secret sunshine\", talking about the idea rather than naming the film, and the transcript (Criterion's own subtitles) has it lowercase. The cleaner (fix_film_titles in scripts/clean_quotes.py) capitalizes a guest's own pick title wherever it appears, so it writes \"Secret Sunshine\" here on every run, and the fix has to live here to hold. Her earlier \"Why do they name a film Secret Sunshine?\" is the title and keeps its capitals."
     }
+  },
+  "pedro-almodovar": {
+    "little-odessa": {
+      "quote": "[Translated] Little Odessa is a film I've been looking for for a long time, and I've never found it anywhere. So I'm lucky that I can take it back to Madrid and watch it immediately.",
+      "start_timestamp": 43,
+      "note": "Only a dropped word is restored: Criterion's subtitles read \"Little Odessa is a film I've been looking for for a long time\". The cleaner (deduplicate_words in scripts/clean_quotes.py) treats any doubled word as a stutter and collapses \"for for\" to \"for\" on every run, which leaves the line reading like a typo, so the fix has to live here to hold."
+    },
+    "the-furies": {
+      "quote": "[Translated] The Furies. Anthony Mann is a director... who I think doesn't get his due. He's such a versatile director. He worked in every genre. I'm very interested in both his thrillers and his westerns. And since I'm from Spain, as an anecdote, he married a Spanish actress, Sara Montiel. She later returned to Spain and became a star. She was a bit campy, a bit like Mae West.",
+      "start_timestamp": 70,
+      "note": "Only the capital is corrected: the subtitles read \"Anthony Mann is a director...\" then \"who I think doesn't get his due\", one sentence split across two subtitle lines. The cleaner (fix_capitalization in scripts/clean_quotes.py) treats the \".\" in \"...\" as a sentence end and writes \"Who\" on every run, so the fix has to live here to hold."
+    }
   }
 }

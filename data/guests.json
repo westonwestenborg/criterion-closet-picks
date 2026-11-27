@@ -7973,5 +7973,26 @@
         "youtube_timestamp_url": "https://www.youtube.com/watch?v=HvI220WUu7M&t=271"
       }
     ]
+  },
+  {
+    "name": "Pedro Almodóvar",
+    "slug": "pedro-almodovar",
+    "profession": "director",
+    "photo_url": "https://image.tmdb.org/t/p/w185/dKlaXJk3NLcsC1CKMx6xmyW5BZD.jpg",
+    "youtube_video_id": "HEZN5dmG8L0",
+    "youtube_video_url": "https://www.youtube.com/watch?v=HEZN5dmG8L0",
+    "vimeo_video_id": null,
+    "episode_date": "2026-11-25",
+    "letterboxd_list_url": null,
+    "criterion_page_url": "https://www.criterion.com/shop/collection/1031-pedro-almodovar-s-closet-picks",
+    "pick_count": 11,
+    "remarks": [
+      {
+        "visit_index": 1,
+        "start_timestamp": 0,
+        "text": "[Translated] This is one of the happiest moments– the happiest moment, I think, of my week in New York. Because I have access to a lot of films, that in many cases I've been desperately looking for. And here they are.",
+        "youtube_timestamp_url": "https://www.youtube.com/watch?v=HEZN5dmG8L0&t=0"
+      }
+    ]
   }
 ]

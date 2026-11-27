@@ -89248,11 +89248,13 @@
     "director": "",
     "year": null,
     "country": "",
-    "criterion_url": "",
+    "criterion_url": "https://www.criterion.com/boxsets/6412-two-films-by-marguerite-duras",
     "imdb_id": null,
     "tmdb_id": null,
-    "poster_url": null,
-    "genres": []
+    "poster_url": "https://s3.amazonaws.com/criterion-production/product_images/2024-6684dcdb6ffb225a3a34219b7c15edcf/KhIlU3RGGP4OGs6yKAfU6RShSKAZkE_large.jpg",
+    "poster_source": "criterion",
+    "genres": [],
+    "is_box_set": true
   },
   {
     "film_id": "hollywood-shuffle",
@@ -142226,5 +142228,89 @@
     "genres": [],
     "credits": null,
     "is_box_set": true
+  },
+  {
+    "film_id": "little-odessa",
+    "title": "Little Odessa",
+    "spine_number": null,
+    "director": "James Gray",
+    "year": 1994,
+    "country": "",
+    "criterion_url": "https://www.criterion.com/films/33864-little-odessa",
+    "imdb_id": "tt0110365",
+    "tmdb_id": 47504,
+    "poster_url": "https://image.tmdb.org/t/p/w185/f7E3jZVWgjzxONUfrCkJRGQJH0t.jpg",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "credits": {
+      "directors": [
+        {
+          "name": "James Gray",
+          "tmdb_id": 20561
+        }
+      ],
+      "writers": [
+        {
+          "name": "James Gray",
+          "tmdb_id": 20561
+        }
+      ],
+      "cinematographers": [
+        {
+          "name": "Tom Richmond",
+          "tmdb_id": 7034
+        }
+      ],
+      "editors": [
+        {
+          "name": "Dorian Harris",
+          "tmdb_id": 75626
+        }
+      ],
+      "cast": [
+        {
+          "name": "Tim Roth",
+          "tmdb_id": 3129,
+          "character": "Joshua Shapira"
+        },
+        {
+          "name": "Edward Furlong",
+          "tmdb_id": 820,
+          "character": "Reuben Shapira"
+        },
+        {
+          "name": "Moira Kelly",
+          "tmdb_id": 20005,
+          "character": "Alla Shustervich"
+        },
+        {
+          "name": "Vanessa Redgrave",
+          "tmdb_id": 13333,
+          "character": "Irina Shapira"
+        },
+        {
+          "name": "Paul Guilfoyle",
+          "tmdb_id": 925,
+          "character": "Boris Volkoff"
+        },
+        {
+          "name": "Natalya Andreychenko",
+          "tmdb_id": 544626,
+          "character": "Natasha"
+        },
+        {
+          "name": "Maximilian Schell",
+          "tmdb_id": 12150,
+          "character": "Arkady Shapira"
+        },
+        {
+          "name": "David Vadim",
+          "tmdb_id": 37205,
+          "character": "Sasha"
+        }
+      ]
+    }
   }
 ]
