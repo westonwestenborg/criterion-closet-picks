@@ -175,6 +175,7 @@ KNOWN_VIDEO_IDS = {
     "jordan-firstman": {"youtube_video_id": "ai43GMWkS3Y"},
     "james-gray": {"youtube_video_id": "rMD10CcVjm4"},
     "caleb-deschanel": {"youtube_video_id": "HvI220WUu7M"},
+    "pedro-almodovar": {"youtube_video_id": "HEZN5dmG8L0"},
 }
 
 # Known Criterion page URLs for guests missing them
@@ -199,6 +200,7 @@ KNOWN_CRITERION_URLS = {
     "jessica-chastain": "https://www.criterion.com/shop/collection/1026-jessica-chastain-s-closet-picks",
     "james-gray": "https://www.criterion.com/shop/collection/1029-james-gray-s-closet-picks",
     "caleb-deschanel": "https://www.criterion.com/shop/collection/1030-caleb-deschanel-s-closet-picks",
+    "pedro-almodovar": "https://www.criterion.com/shop/collection/1031-pedro-almodovar-s-closet-picks",
     "jordan-firstman": "https://www.criterion.com/shop/collection/1028-jordan-firstman-s-closet-picks",
     "francois-girard": "https://www.criterion.com/shop/collection/838-francois-girard-s-closet-picks",
     "janelle-monae": "https://www.criterion.com/shop/collection/733-janelle-monae-s-closet-picks",
